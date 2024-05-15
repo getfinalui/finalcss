@@ -1,0 +1,44 @@
+//
+// Base styles
+//
+
+.alert {
+  // alert-css-vars
+  --alert-bg-color: transparent;
+  --alert-padding-x: 8px;
+  --alert-padding-y: 12px;
+  --alert-margin-bottom: 12px;
+  --alert-text-color: inherit;
+  --alert-border-color: transparent;
+  --alert-border-radius: 8px;
+
+  position: relative;
+  padding: var(--alert-padding-y) var(--alert-padding-x);
+  margin-bottom: var(--alert-margin-bottom);
+  color: var(--alert-text-color);
+  background-color: var(--alert-bg-color);
+  border: var(--alert-border);
+  border-radius: var(--alert-border-radius);
+}
+
+
+alert-danger{
+  --alert-text-color: var(--text-danger);
+  --alert-bg-color: var(--danger-200);
+}
+
+alert-warning{
+  --alert-text-color: var(--text-warning);
+  --alert-bg-color: var(--warning-200);
+}
+
+alert-success{
+  --alert-text-color: var(--text-success);
+  --alert-bg-color: var(--success-200);
+}
+
+alert-info{
+  --alert-text-color: var(--text-info);
+  --alert-bg-color: var(--info-200);
+}
+

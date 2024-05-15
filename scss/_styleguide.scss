@@ -1,0 +1,66 @@
+// These are global variables
+
+// WE USE VARIABLES DIRECTLY INTO COMPONENTS BY IMPLEMENTING CSS VARIABLE
+
+
+// Border-radius
+// Allows for customizing button radius independently from global border radius
+$border-radius-md:           8px !default;
+$border-radius-sm:           6px !default;
+$border-radius-lg:           16px !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-base:           system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:      SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-code: 			$font-family-monospace;
+
+// $font-size-base affects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                0.875rem !default;
+$font-size-lg:                1.25rem !default;
+$font-size-sub-sup:           .75em !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$text-color-base:             #14181F !default;
+$text-color-muted:            #6F7C8E !default;
+
+//heading texts
+$headings-font-family:        null !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-margin-bottom:	  1rem!default;
+$headings-color:              inherit !default;
+
+$h1-font-size:                2.5rem !default;
+$h2-font-size:                2rem !default;
+$h3-font-size:                1.75rem !default;
+$h4-font-size:                1.5rem !default;
+$h5-font-size:                1.25rem !default;
+$h6-font-size:                1rem !default;
+
+$paragraph-margin-bottom:     1rem !default;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-cell-padding-y:        .5rem !default;
+$table-cell-padding-x:        .5rem !default;
+$table-cell-padding-y-sm:     .25rem !default;
+$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-vertical-align:   top !default;
+$table-th-font-weight: null !default;
+
+

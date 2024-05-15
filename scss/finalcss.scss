@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*!
+ * Final UI (https://finalui.com/)
+ * Copyright 20245 The Finalui Authod Vosidiy M. 
+ * Licensed under MIT
+ */
+
+@import "styleguide";
+
+// Base
+@import "theme";
+@import "reboot";
+@import "grid";
+
+// Components
+@import "components/alert";
+@import "components/buttons";
+@import "components/card";
+@import "components/tables";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+
+// Layouts and Temnplates
+@import "layout/base";

@@ -1,0 +1,100 @@
+//
+// Base styles
+//
+.btn {
+  // scss-docs-start btn-css-vars
+  --btn-padding-x: 8px;
+  --btn-padding-y: 4px;
+  --btn-font-size: 1rem;
+  --btn-font-weight:500;
+  --btn-bg: transparent;
+  --btn-border-color: transparent;
+  --btn-border-radius: 8px;
+  --btn-border-radius-lg: 12px;
+  --btn-size-sm: 32px;
+  --btn-size-md: 40px;
+  --btn-size-lg: 48px;
+  // scss-docs-end btn-css-vars
+
+  height: var(--btn-size-md);
+  display: inline-flex;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration:none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  &:disabled,
+  &.disabled {
+    opacity:0.4;
+  }
+
+  &:hover {
+    background-color: --btn-bg-hover;
+    text-decoration: none;
+  }
+
+}
+
+.btn-lg {
+  height: var(--btn-size-lg)!important;
+}
+
+.btn-sm {
+  height: var(--btn-size-sm)!important;
+}
+
+//
+// Alternate buttons (using method of finalui design system www.finalui.com )
+//
+.btn-intense{ 
+  --btn-bg: var(--neutral-900);
+  --btn-bg-hover: var(--neutral-700);
+}
+
+.btn-primary{
+  --btn-bg: var(--primary-500);
+  --btn-bg-hover: var(--primary-400);
+  --btn-text-color: var(--text-white);
+}
+
+.btn-secondary {
+  --btn-bg: var(--bg-base);
+  --btn-bg-hover: var(--bg-secondary);
+  --btn-text-color: var(--text-base);
+  --btn-border-color: var(--border-default);
+}
+.btn-neutral{
+  --btn-bg: var(--neutral-100);
+  --btn-bg-hover: var(--neutral-200);
+  --btn-text-color: var(--text-base);
+}
+.btn-primary-soft{
+  --btn-bg: var(--primary-200);
+  --btn-bg-hover: var(--primary-300);
+  --btn-text-color: var(--text-primary);
+}
+.btn-danger{
+  --btn-bg: var(--danger-500);
+  --btn-bg-hover: var(--danger-400);
+  --btn-text-color: var(--text-white);
+  --btn-border-color: var(--border-default);
+}
+.btn-danger-soft{
+  --btn-bg: var(bg-base);
+  --btn-bg-hover: var(--bg-secondary);
+  --btn-text-color: var(--text-danger);
+  --btn-border-color: var(--border-default);
+}
+.btn-plain{
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--neutral-200);
+  --btn-text-color: var(--text-base);
+}
+
+
+

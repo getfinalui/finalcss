@@ -1,0 +1,32 @@
+//
+// Base styles
+//
+
+.card {
+  --card-border-radius: 8px;
+  --card-bg: var(--bg-base);
+  --card-padding-x: 24px;
+  --card-padding-y: 24px;
+  // scss-docs-end card-css-vars
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  word-wrap: break-word;
+  background-color: var(--card-bg);
+  background-clip: border-box;
+  border-radius:var(--card-border-radius);
+  
+  > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--card-padding-x) var(--card-padding-y);
+}
+
