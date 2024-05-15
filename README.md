@@ -1,5 +1,5 @@
 # Welcome to Final UI 
-### Design System for Your Digital Project   🌐  finalui.com
+### Design System for Your Digital Project   🌐  https://finalui.com
 #### Made for Figma & HTML/CSS
 This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
 
