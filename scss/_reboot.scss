@@ -27,9 +27,8 @@ body {
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
   line-height: $line-height-base;
-  color: var(--body-text-color);
-  text-align: var(--body-text-align);
-  background-color: var(--body-bg); 
+  color: var(--text-base);
+  background-color: var(--bg-base); 
   -webkit-text-size-adjust: 100%; 
 }
 
@@ -282,8 +281,8 @@ table {
 }
 
 caption {
-  padding-top: $table-cell-padding-y;
-  padding-bottom: $table-cell-padding-y;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   text-align: left;
 }
 

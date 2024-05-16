@@ -1,6 +1,16 @@
 /*!
- * Bootstrap Grid v5.3.3 (https://getbootstrap.com/)
+ * Grid by Bootstrap v5.3.3 (https://getbootstrap.com/)
+ * Documentation: https://getbootstrap.com/docs/5.3/layout/breakpoints/
  */
+ :root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -41,14 +51,6 @@
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
-}
-:root {
-  --bs-breakpoint-xs: 0;
-  --bs-breakpoint-sm: 576px;
-  --bs-breakpoint-md: 768px;
-  --bs-breakpoint-lg: 992px;
-  --bs-breakpoint-xl: 1200px;
-  --bs-breakpoint-xxl: 1400px;
 }
 
 .row {

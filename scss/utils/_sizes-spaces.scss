@@ -1,0 +1,92 @@
+$spacing_nums: 
+0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200,
+210, 220, 230, 240;
+
+// * Generates sizes in px, for ex:
+// .mt-96px{margin-top:96px} or .w-40px{width:40px}
+// MARGINS in px
+
+@each $spacing in $spacing_nums {
+  .m-#{$spacing}px {
+    margin: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .mt-#{$spacing}px {
+    margin-top: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .me-#{$spacing}px {
+    margin-right: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .mb-#{$spacing}px {
+    margin-bottom: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .ms-#{$spacing}px {
+    margin-left: #{$spacing}px;
+  }
+}
+
+
+// PADDINGS
+@each $spacing in $spacing_nums {
+  .p-#{$spacing}px {
+    padding: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .pt-#{$spacing}px {
+    padding-top: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .pe-#{$spacing}px {
+    padding-right: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .pb-#{$spacing}px {
+    padding-bottom: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacing_nums {
+  .ps-#{$spacing}px {
+    padding-left: #{$spacing}px;
+  }
+}
+
+
+// WIDTH
+@each $spacing in $spacing_nums {
+  .w-#{$spacing}px {
+    width: #{$spacing}px;
+  }
+}
+
+// HEIGHT
+@each $spacing in $spacing_nums {
+  .h-#{$spacing}px {
+    width: #{$spacing}px;
+  }
+}
+
+// WITH and HEIGHT
+@each $spacing in $spacing_nums {
+  .size-#{$spacing}px {
+    width: #{$spacing}px;
+    height: #{$spacing}px;
+  }
+}

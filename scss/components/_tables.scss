@@ -4,9 +4,7 @@
 
 .table {
   --table-bg: var(--bg-base);
-  --table-border-color: var(--border-default);
-  --table-active-text-color: var(--text-primary);
-  --table-active-bg: var(--primary-200);
+  --table-border-color: var(--border-base);
   --table-hover-bg: var(--bg-secondary);
   --table-cell-padding-x: .5rem;
   --table-cell-padding-y: .5rem;
@@ -34,13 +32,6 @@
   caption-side: top;
 }
 
-
-.table-sm {
-  // stylelint-disable-next-line selector-max-universal
-  > :not(caption) > * > * {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
-  }
-}
 
 
 // Border versions

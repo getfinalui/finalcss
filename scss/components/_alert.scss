@@ -5,8 +5,8 @@
 .alert {
   // alert-css-vars
   --alert-bg-color: transparent;
-  --alert-padding-x: 8px;
-  --alert-padding-y: 12px;
+  --alert-padding-x: 12px;
+  --alert-padding-y: 8px;
   --alert-margin-bottom: 12px;
   --alert-text-color: inherit;
   --alert-border-color: transparent;
@@ -22,22 +22,22 @@
 }
 
 
-alert-danger{
+.alert-danger{
   --alert-text-color: var(--text-danger);
   --alert-bg-color: var(--danger-200);
 }
 
-alert-warning{
+.alert-warning{
   --alert-text-color: var(--text-warning);
   --alert-bg-color: var(--warning-200);
 }
 
-alert-success{
+.alert-success{
   --alert-text-color: var(--text-success);
   --alert-bg-color: var(--success-200);
 }
 
-alert-info{
+.alert-info{
   --alert-text-color: var(--text-info);
   --alert-bg-color: var(--info-200);
 }

@@ -53,14 +53,7 @@ $h6-font-size:                1rem !default;
 
 $paragraph-margin-bottom:     1rem !default;
 
-// Tables
-//
-// Customizes the `.table` component with basic values, each used across all table variations.
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
-$table-cell-vertical-align:   top !default;
-$table-th-font-weight: null !default;
+$table-th-font-weight:        500;
+
 
 

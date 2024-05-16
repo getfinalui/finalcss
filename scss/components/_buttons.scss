@@ -61,8 +61,8 @@
 //
 .btn-intense{ 
   --btn-bg: var(--neutral-900);
-  --btn-bg-hover: var(--neutral-700);
-  --btn-text-color: var(--text-white);
+  --btn-bg-hover: var(--neutral-800);
+  --btn-text-color: var(--text-invert);
   --btn-border-hover-color: transparent;
 }
 
@@ -96,7 +96,6 @@
   --btn-bg: var(--danger-500);
   --btn-bg-hover: var(--danger-400);
   --btn-text-color: var(--text-white);
-  --btn-border-color: var(--border-base);
   --btn-border-hover-color: transparent;
 }
 .btn-danger-soft{
