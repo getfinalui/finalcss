@@ -1,7 +1,3 @@
-:root{
-  --text-white: #fff;
-}
-
 :root, [data-theme=light] {
   --black: #000;
   --white: #fff;
@@ -50,9 +46,27 @@
   --success-600: #009419;
   --success-700: #0C6E1F;
 
+  --feature-100: #F6EBFF;
+  --feature-200: #F0DBFF;
+  --feature-300: #EACCFF;
+  --feature-400: #AC3DF5;
+  --feature-500: #9F1FF4;
+  --feature-600: #910BE9;
+  --feature-700: #6D12A1;
+
+  --info-100: #D4FCF3;
+  --info-200: #B3F8EB;
+  --info-300: #89EADB;
+  --info-400: #00B8B8;
+  --info-500: #00ABAB;
+  --info-600: #009E9E;
+  --info-700: #09726B;
+ 
+  // alias variables for dark/light
   --bg-base: var(--neutral-0);
   --bg-secondary: var(--neutral-50);
   
+  --border-light: var(--neutral-200);
   --border-base: var(--neutral-400);
   --border-strong: var(--neutral-500);
 
@@ -61,6 +75,11 @@
   --text-muted: var(--neutral-600);
   --text-invert: var(--neutral-0);
 
+  // constant text colors (will not be changed on any theme)
+  --text-black: #000;
+  --text-white: #fff; 
+
+  // alias variables for light (will be override on dark mode)
   --text-primary: var(--primary-500);
   --text-warning: var(--warning-500);
   --text-danger: var(--danger-500);
@@ -115,8 +134,24 @@
   --success-600: #00BD1F;
   --success-700: #6DF383;
 
+  --feature-100: #320849;
+  --feature-200: #46066B;
+  --feature-300: #5A038C;
+  --feature-400: #910BE9;
+  --feature-500: #9F1FF4;
+  --feature-600: #AC3DF5;
+  --feature-700: #D799FF;
+
+  --info-100: #052E2B;
+  --info-200: #07403C;
+  --info-300: #0C565A;
+  --info-400: #009E9E;
+  --info-500: #00ABAB;
+  --info-600: #00B8B8;
+  --info-700: #66DBD1;
+
+   // alias variables for dark text
   --text-invert: var(--neutral-0);
-  
   --text-primary: var(--primary-700);
   --text-warning: var(--warning-700);
   --text-danger: var(--danger-700);

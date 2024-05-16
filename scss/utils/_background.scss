@@ -1,0 +1,52 @@
+
+
+$color_nums: 100, 200, 300, 400, 500, 600, 700 ;
+/// constant colors despite any theme
+
+
+/// theme based colors
+.bg-base{
+  background-color:var(--neutral-0);
+}
+
+@each $num in $color_nums {
+  .bg-neutral-#{$num} {
+    background-color:var(--neutral#{$num} );
+  }
+}
+
+@each $num in $color_nums {
+  .bg-primary-#{$num} {
+    background-color:var(--primary#{$num} );
+  }
+}
+
+@each $num in $color_nums {
+  .bg-success-#{$num} {
+    background-color:var(--success#{$num} );
+  }
+}
+
+@each $num in $color_nums {
+  .bg-danger-#{$num} {
+    background-color:var(--danger#{$num} );
+  }
+}
+
+@each $num in $color_nums {
+  .bg-warning-#{$num} {
+    background-color:var(--warning#{$num} );
+  }
+}
+
+@each $num in $color_nums {
+  .bg-feature-#{$num} {
+    background-color:var(--feature#{$num} );
+  }
+}
+
+@each $num in $color_nums {
+  .bg-info-#{$num} {
+    background-color:var(--info#{$num} );
+  }
+}

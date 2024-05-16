@@ -18,11 +18,14 @@
 @import "components/card";
 @import "components/tables";
 
-// Helpers
+// Helper classes
 @import "helpers";
 
-// Utilities
+// Utility classes
 @import "utils/sizes-spaces";
+@import "utils/type";
+@import "utils/border";
+@import "utils/background";
 
 // Layouts and Temnplates
 @import "layout/base";
