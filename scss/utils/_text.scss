@@ -6,13 +6,13 @@
 
 /// theme based text color
 .text-base{ color: var(--text-base); }
-.text-secondary{ color: var(--text-base);  }
-.text-muted{ color: var(--text-base);  }
-.text-active, .text-primary{ color: var(--text-base); }
-.text-warning{ color: var(--text-base); }
-.text-danger{ color: var(--text-base); }
-.text-success{ color: var(--text-base); }
-.text-info{ color: var(--text-base); }
+.text-secondary{ color: var(--text-secondary);  }
+.text-muted{ color: var(--text-muted);  }
+.text-active, .text-primary{ color: var(--text-primary); }
+.text-warning{ color: var(--text-warning); }
+.text-danger{ color: var(--text-danger); }
+.text-success{ color: var(--text-success); }
+.text-info{ color: var(--text-info); }
 .text-invert{ color: var(--text-invert); }
 
 

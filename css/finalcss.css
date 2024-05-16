@@ -6301,8 +6301,10 @@ progress {
 
 .btn {
   --btn-padding-x: 12px;
-  --btn-padding-y: 4px;
-  --btn-font-size: 1rem;
+  --btn-padding-y: 6px;
+  --btn-font-size-md: 1rem;
+  --btn-font-size-sm: 1rem;
+  --btn-font-size-lg: 1.2rem;
   --btn-font-weight:500;
   --btn-bg: transparent;
   --btn-border-color: transparent;
@@ -6323,7 +6325,7 @@ progress {
           justify-content: center;
   height: var(--btn-size-md);
   padding: var(--btn-padding-y) var(--btn-padding-x);
-  font-size: var(--btn-font-size);
+  font-size: var(--btn-font-size-md);
   font-weight: var(--btn-font-weight);
   background-color: var(--btn-bg);
   border: 1px solid var(--btn-border-color);
@@ -6351,10 +6353,13 @@ progress {
 
 .btn-lg {
   height: var(--btn-size-lg) !important;
+  font-size: var(--btn-font-size-lg) !important;
+  padding: var(--btn-padding-y) calc(var(--btn-padding-x) * 2);
 }
 
 .btn-sm {
   height: var(--btn-size-sm) !important;
+  font-size: var(--btn-font-size-sm) !important;
 }
 
 .btn-intense {
@@ -6489,6 +6494,77 @@ progress {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-family: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-base);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--neutral-0);
+  background-clip: padding-box;
+  border: 1px solid var(--neutral-300);
+  height: 40px;
+  border-radius: 8px;
+}
+.form-control[type=file] {
+  overflow: hidden;
+}
+.form-control[type=file]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+.form-control:focus {
+  color: var(--text-base);
+  background-color: var(--neutral-0);
+  border-color: var(--primary-500);
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 1px blue;
+          box-shadow: 0 0 0 1px blue;
+}
+.form-control:hover {
+  border-color: var(--neutral-500);
+}
+.form-control::-webkit-date-and-time-value {
+  min-width: 85px;
+  margin: 0;
+}
+.form-control::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
+}
+.form-control::-webkit-input-placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.form-control:disabled {
+  color: var(--text-muted);
+  background-color: var(--neutral-200);
+  border-color: var(--neutral-200);
+  opacity: 0.9;
+  cursor: not-allowed;
 }
 
 .m-0px {
@@ -8624,31 +8700,31 @@ progress {
 }
 
 .text-secondary {
-  color: var(--text-base);
+  color: var(--text-secondary);
 }
 
 .text-muted {
-  color: var(--text-base);
+  color: var(--text-muted);
 }
 
 .text-active, .text-primary {
-  color: var(--text-base);
+  color: var(--text-primary);
 }
 
 .text-warning {
-  color: var(--text-base);
+  color: var(--text-warning);
 }
 
 .text-danger {
-  color: var(--text-base);
+  color: var(--text-danger);
 }
 
 .text-success {
-  color: var(--text-base);
+  color: var(--text-success);
 }
 
 .text-info {
-  color: var(--text-base);
+  color: var(--text-info);
 }
 
 .text-invert {
@@ -8788,198 +8864,210 @@ progress {
   background-color: var(--neutral-0);
 }
 
+.bg-secondary {
+  background-color: var(--neutral-50);
+}
+
+.bg-lower {
+  background-color: var(--neutral-50);
+}
+
+.bg-raised {
+  background-color: var(--neutral-0);
+}
+
 .bg-neutral-100 {
-  background-color: var(--neutral100);
+  background-color: var(--neutral-100);
 }
 
 .bg-neutral-200 {
-  background-color: var(--neutral200);
+  background-color: var(--neutral-200);
 }
 
 .bg-neutral-300 {
-  background-color: var(--neutral300);
+  background-color: var(--neutral-300);
 }
 
 .bg-neutral-400 {
-  background-color: var(--neutral400);
+  background-color: var(--neutral-400);
 }
 
 .bg-neutral-500 {
-  background-color: var(--neutral500);
+  background-color: var(--neutral-500);
 }
 
 .bg-neutral-600 {
-  background-color: var(--neutral600);
+  background-color: var(--neutral-600);
 }
 
 .bg-neutral-700 {
-  background-color: var(--neutral700);
+  background-color: var(--neutral-700);
 }
 
 .bg-primary-100 {
-  background-color: var(--primary100);
+  background-color: var(--primary-100);
 }
 
 .bg-primary-200 {
-  background-color: var(--primary200);
+  background-color: var(--primary-200);
 }
 
 .bg-primary-300 {
-  background-color: var(--primary300);
+  background-color: var(--primary-300);
 }
 
 .bg-primary-400 {
-  background-color: var(--primary400);
+  background-color: var(--primary-400);
 }
 
 .bg-primary-500 {
-  background-color: var(--primary500);
+  background-color: var(--primary-500);
 }
 
 .bg-primary-600 {
-  background-color: var(--primary600);
+  background-color: var(--primary-600);
 }
 
 .bg-primary-700 {
-  background-color: var(--primary700);
+  background-color: var(--primary-700);
 }
 
 .bg-success-100 {
-  background-color: var(--success100);
+  background-color: var(--success-100);
 }
 
 .bg-success-200 {
-  background-color: var(--success200);
+  background-color: var(--success-200);
 }
 
 .bg-success-300 {
-  background-color: var(--success300);
+  background-color: var(--success-300);
 }
 
 .bg-success-400 {
-  background-color: var(--success400);
+  background-color: var(--success-400);
 }
 
 .bg-success-500 {
-  background-color: var(--success500);
+  background-color: var(--success-500);
 }
 
 .bg-success-600 {
-  background-color: var(--success600);
+  background-color: var(--success-600);
 }
 
 .bg-success-700 {
-  background-color: var(--success700);
+  background-color: var(--success-700);
 }
 
 .bg-danger-100 {
-  background-color: var(--danger100);
+  background-color: var(--danger-100);
 }
 
 .bg-danger-200 {
-  background-color: var(--danger200);
+  background-color: var(--danger-200);
 }
 
 .bg-danger-300 {
-  background-color: var(--danger300);
+  background-color: var(--danger-300);
 }
 
 .bg-danger-400 {
-  background-color: var(--danger400);
+  background-color: var(--danger-400);
 }
 
 .bg-danger-500 {
-  background-color: var(--danger500);
+  background-color: var(--danger-500);
 }
 
 .bg-danger-600 {
-  background-color: var(--danger600);
+  background-color: var(--danger-600);
 }
 
 .bg-danger-700 {
-  background-color: var(--danger700);
+  background-color: var(--danger-700);
 }
 
 .bg-warning-100 {
-  background-color: var(--warning100);
+  background-color: var(--warning-100);
 }
 
 .bg-warning-200 {
-  background-color: var(--warning200);
+  background-color: var(--warning-200);
 }
 
 .bg-warning-300 {
-  background-color: var(--warning300);
+  background-color: var(--warning-300);
 }
 
 .bg-warning-400 {
-  background-color: var(--warning400);
+  background-color: var(--warning-400);
 }
 
 .bg-warning-500 {
-  background-color: var(--warning500);
+  background-color: var(--warning-500);
 }
 
 .bg-warning-600 {
-  background-color: var(--warning600);
+  background-color: var(--warning-600);
 }
 
 .bg-warning-700 {
-  background-color: var(--warning700);
+  background-color: var(--warning-700);
 }
 
 .bg-feature-100 {
-  background-color: var(--feature100);
+  background-color: var(--feature-100);
 }
 
 .bg-feature-200 {
-  background-color: var(--feature200);
+  background-color: var(--feature-200);
 }
 
 .bg-feature-300 {
-  background-color: var(--feature300);
+  background-color: var(--feature-300);
 }
 
 .bg-feature-400 {
-  background-color: var(--feature400);
+  background-color: var(--feature-400);
 }
 
 .bg-feature-500 {
-  background-color: var(--feature500);
+  background-color: var(--feature-500);
 }
 
 .bg-feature-600 {
-  background-color: var(--feature600);
+  background-color: var(--feature-600);
 }
 
 .bg-feature-700 {
-  background-color: var(--feature700);
+  background-color: var(--feature-700);
 }
 
 .bg-info-100 {
-  background-color: var(--info100);
+  background-color: var(--info-100);
 }
 
 .bg-info-200 {
-  background-color: var(--info200);
+  background-color: var(--info-200);
 }
 
 .bg-info-300 {
-  background-color: var(--info300);
+  background-color: var(--info-300);
 }
 
 .bg-info-400 {
-  background-color: var(--info400);
+  background-color: var(--info-400);
 }
 
 .bg-info-500 {
-  background-color: var(--info500);
+  background-color: var(--info-500);
 }
 
 .bg-info-600 {
-  background-color: var(--info600);
+  background-color: var(--info-600);
 }
 
 .bg-info-700 {
-  background-color: var(--info700);
+  background-color: var(--info-700);
 }
