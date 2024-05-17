@@ -63,26 +63,28 @@
   --info-700: #09726B;
  
   // alias variables for dark/light
-  --bg-base: var(--neutral-0);
-  --bg-secondary: var(--neutral-50);
-  --border-light: var(--neutral-200);
-  --border-base: var(--neutral-400);
-  --border-strong: var(--neutral-500);
-  --text-base: var(--neutral-900);
-  --text-secondary: var(--neutral-700);
-  --text-muted: var(--neutral-600);
-  --text-invert: var(--neutral-0);
+  --bg-color-base: var(--neutral-0);
+  --bg-color-secondary: var(--neutral-50);
 
-  // constant text colors (will not be changed on any theme)
-  --text-black: #000;
-  --text-white: #fff; 
+  --border-color-light: var(--neutral-200);
+  --border-color-base: var(--neutral-300);
+  --border-color-strong: var(--neutral-500);
+
+  --text-color-base: var(--neutral-900);
+  --text-color-secondary: var(--neutral-700);
+  --text-color-muted: var(--neutral-600);
+  --text-color-invert: var(--neutral-0);
 
   // alias variables for light (will be override on dark mode)
-  --text-primary: var(--primary-500);
-  --text-warning: var(--warning-500);
-  --text-danger: var(--danger-500);
-  --text-success: var(--success-500);
-  --text-info: var(--info-500);
+  --text-color-primary: var(--primary-500);
+  --text-color-warning: var(--warning-500);
+  --text-color-danger: var(--danger-500);
+  --text-color-success: var(--success-500);
+  --text-color-info: var(--info-500);
+  
+  // constant text colors (will not be changed on any theme)
+  --text-color-black: #000;
+  --text-color-white: #fff; 
 
 }
 
@@ -148,13 +150,13 @@
   --info-600: #00B8B8;
   --info-700: #66DBD1;
 
-   // alias variables for dark text
-  --text-invert: var(--neutral-0);
-  --text-primary: var(--primary-700);
-  --text-warning: var(--warning-700);
-  --text-danger: var(--danger-700);
-  --text-success: var(--success-700);
-  --text-info: var(--info-700);
+   // we override text color for dark due to accessibility
+  --text-color-invert: var(--neutral-0);
+  --text-color-primary: var(--primary-700);
+  --text-color-warning: var(--warning-700);
+  --text-color-danger: var(--danger-700);
+  --text-color-success: var(--success-700);
+  --text-color-info: var(--info-700);
 }
 
 

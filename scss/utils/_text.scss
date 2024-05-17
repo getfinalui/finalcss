@@ -1,3 +1,87 @@
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+
+%heading {
+  margin-top: 0; // 1
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+}
+
+h1, .h1 {
+  @extend %heading;
+  font-size: $h1-font-size;
+}
+
+h2, .h2 {
+  @extend %heading;
+  font-size: $h2-font-size;
+}
+
+h3, .h3 {
+  @extend %heading;
+  font-size: $h3-font-size;
+}
+
+h4, .h4 {
+  @extend %heading;
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  @extend %heading;
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  @extend %heading;
+  font-size: $h6-font-size;
+}
+
+
+
+.small {
+  @extend small;
+}
+
+
+
+// Type display classes
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
+
+@each $display, $font-size in $display-font-sizes {
+  .display-#{$display} {
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+
+// .lead font-size
+.lead {
+  font-size:$font-size-base;
+  font-weight: 600;
+}
+
+
+
+
+
 
 
 /// constant colors despite any theme
@@ -5,15 +89,15 @@
 .text-white{ color:#fff; }
 
 /// theme based text color
-.text-base{ color: var(--text-base); }
-.text-secondary{ color: var(--text-secondary);  }
-.text-muted{ color: var(--text-muted);  }
-.text-active, .text-primary{ color: var(--text-primary); }
-.text-warning{ color: var(--text-warning); }
-.text-danger{ color: var(--text-danger); }
-.text-success{ color: var(--text-success); }
-.text-info{ color: var(--text-info); }
-.text-invert{ color: var(--text-invert); }
+.text-base{ color: var(--text-color-base); }
+.text-secondary{ color: var(--text-color-secondary);  }
+.text-muted{ color: var(--text-color-muted);  }
+.text-active, .text-primary{ color: var(--text-color-primary); }
+.text-warning{ color: var(--text-color-warning); }
+.text-danger{ color: var(--text-color-danger); }
+.text-success{ color: var(--text-color-success); }
+.text-info{ color: var(--text-color-info); }
+.text-invert{ color: var(--text-color-invert); }
 
 
 /// text utility classes

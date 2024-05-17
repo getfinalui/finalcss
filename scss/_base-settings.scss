@@ -39,12 +39,12 @@ $text-color-muted:            #6F7C8E !default;
 //heading texts
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        600 !default;
 $headings-line-height:        1.2 !default;
-$headings-margin-bottom:	  1rem!default;
+$headings-margin-bottom:	  0.4rem!default;
 $headings-color:              inherit !default;
 
-$h1-font-size:                2.5rem !default;
+$h1-font-size:                2.8rem !default;
 $h2-font-size:                2rem !default;
 $h3-font-size:                1.75rem !default;
 $h4-font-size:                1.5rem !default;
@@ -52,6 +52,7 @@ $h5-font-size:                1.25rem !default;
 $h6-font-size:                1rem !default;
 
 $paragraph-margin-bottom:     1rem !default;
+$small-font-size:             .875em !default;
 
 $table-th-font-weight:        500;
 

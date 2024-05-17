@@ -90,3 +90,144 @@ $spacing_nums:
     height: #{$spacing}px;
   }
 }
+
+
+
+/// GAP SIZES FROM BOOTSTRAP
+.gap-0 {
+  gap: 0 !important;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
+}
+
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.gap-5 {
+  gap: 3rem !important;
+}
+.row-gap-0 {
+  row-gap: 0 !important;
+}
+
+.row-gap-1 {
+  row-gap: 0.25rem !important;
+}
+
+.row-gap-2 {
+  row-gap: 0.5rem !important;
+}
+
+.row-gap-3 {
+  row-gap: 1rem !important;
+}
+
+.row-gap-4 {
+  row-gap: 1.5rem !important;
+}
+
+.row-gap-5 {
+  row-gap: 3rem !important;
+}
+
+.column-gap-0 {
+  column-gap: 0 !important;
+}
+
+.column-gap-1 {
+  column-gap: 0.25rem !important;
+}
+
+.column-gap-2 {
+  column-gap: 0.5rem !important;
+}
+
+.column-gap-3 {
+  column-gap: 1rem !important;
+}
+
+.column-gap-4 {
+  column-gap: 1.5rem !important;
+}
+
+.column-gap-5 {
+  column-gap: 3rem !important;
+}
+
+
+/// small devices 
+@media (min-width: 576px) {
+
+    .gap-sm-0 {
+      gap: 0 !important;
+    }
+    .gap-sm-1 {
+      gap: 0.25rem !important;
+    }
+    .gap-sm-2 {
+      gap: 0.5rem !important;
+    }
+    .gap-sm-3 {
+      gap: 1rem !important;
+    }
+    .gap-sm-4 {
+      gap: 1.5rem !important;
+    }
+    .gap-sm-5 {
+      gap: 3rem !important;
+    }
+    .row-gap-sm-0 {
+      row-gap: 0 !important;
+    }
+    .row-gap-sm-1 {
+      row-gap: 0.25rem !important;
+    }
+    .row-gap-sm-2 {
+      row-gap: 0.5rem !important;
+    }
+    .row-gap-sm-3 {
+      row-gap: 1rem !important;
+    }
+    .row-gap-sm-4 {
+      row-gap: 1.5rem !important;
+    }
+    .row-gap-sm-5 {
+      row-gap: 3rem !important;
+    }
+    .column-gap-sm-0 {
+      -moz-column-gap: 0 !important;
+      column-gap: 0 !important;
+    }
+    .column-gap-sm-1 {
+      -moz-column-gap: 0.25rem !important;
+      column-gap: 0.25rem !important;
+    }
+    .column-gap-sm-2 {
+      -moz-column-gap: 0.5rem !important;
+      column-gap: 0.5rem !important;
+    }
+    .column-gap-sm-3 {
+      -moz-column-gap: 1rem !important;
+      column-gap: 1rem !important;
+    }
+    .column-gap-sm-4 {
+      -moz-column-gap: 1.5rem !important;
+      column-gap: 1.5rem !important;
+    }
+    .column-gap-sm-5 {
+      -moz-column-gap: 3rem !important;
+      column-gap: 3rem !important;
+    }
+
+}

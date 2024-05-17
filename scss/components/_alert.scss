@@ -3,42 +3,38 @@
 //
 
 .alert {
-  // alert-css-vars
+  // variables changed depending on state
   --alert-bg-color: transparent;
-  --alert-padding-x: 12px;
-  --alert-padding-y: 8px;
-  --alert-margin-bottom: 12px;
   --alert-text-color: inherit;
-  --alert-border-color: transparent;
-  --alert-border-radius: 8px;
 
-  position: relative;
-  padding: var(--alert-padding-y) var(--alert-padding-x);
-  margin-bottom: var(--alert-margin-bottom);
   color: var(--alert-text-color);
   background-color: var(--alert-bg-color);
-  border: var(--alert-border);
-  border-radius: var(--alert-border-radius);
+  
+  position: relative;
+  padding: 8px 12px;
+  margin-bottom: 0.5rem;
+  border: transparent;
+  border-radius: 8px;
 }
 
 
 .alert-danger{
-  --alert-text-color: var(--text-danger);
+  --alert-text-color: var(--text-color-danger);
   --alert-bg-color: var(--danger-200);
 }
 
 .alert-warning{
-  --alert-text-color: var(--text-warning);
+  --alert-text-color: var(--text-color-warning);
   --alert-bg-color: var(--warning-200);
 }
 
 .alert-success{
-  --alert-text-color: var(--text-success);
+  --alert-text-color: var(--text-color-success);
   --alert-bg-color: var(--success-200);
 }
 
 .alert-info{
-  --alert-text-color: var(--text-info);
+  --alert-text-color: var(--text-color-info);
   --alert-bg-color: var(--info-200);
 }
 

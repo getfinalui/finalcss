@@ -9,15 +9,16 @@
 
 // Base
 @import "theme";
-@import "reboot";
+@import "reset";
 @import "grid";
 
 // Components
 @import "components/alert";
 @import "components/buttons";
 @import "components/card";
-@import "components/tables";
+@import "components/table";
 @import "components/form-input";
+@import "components/form-check-radio";
 
 // Helper classes
 @import "helpers";
@@ -27,6 +28,7 @@
 @import "utils/text";
 @import "utils/border";
 @import "utils/background";
+@import "utils/positions";
 
 // Layouts and Temnplates
 @import "layout/base";

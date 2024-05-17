@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Website layout sample </title>
+
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', () => {
+		const htmlElement = document.documentElement;
+		const themeSwitcher = document.getElementById('themeSwitcher');
+		// Check localStorage for saved theme
+		const savedTheme = localStorage.getItem('data-theme');
+		if (savedTheme) {
+		    htmlElement.setAttribute('data-theme', savedTheme);
+		}
+		themeSwitcher.addEventListener('click', () => {
+		    const currentTheme = htmlElement.getAttribute('data-theme');
+		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    // Set the new theme on the body element
+		    htmlElement.setAttribute('data-theme', newTheme);          
+		    // Save the new theme in localStorage
+		    localStorage.setItem('data-theme', newTheme);
+		});
+	});
+	</script>
+
+<!-- FinalCSS -->
+<link href="css/finalcss.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+
+<header class="py-5 border-bottom bg-secondary">	
+		<div class="container">
+			<h1 class="text-center my-5">Finalcss showcase by <span class="text-muted">Final UI</span> </h1>
+		</div> <!-- container end.// -->
+
+		<div class="d-flex justify-content-center">
+			<button id="themeSwitcher" class="btn btn-secondary">
+				<div class="d-none dark:d-block">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+					</svg>
+					<span>Make light</span>
+				</div>
+				<div class="dark:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+					</svg>
+					<span>Make dark</span>
+				</div>
+			</button>
+		</div>
+</header> <!-- section-header end.// -->
+
+<!-- ============== SECTION CONTENT  ============== -->
+<section class="py-5">
+<div class="container">
+
+	<article>
+		<div class="row mb-5">
+			<aside class="col-lg-6">
+				<div class="grid" style="--bs-columns: 2;">
+					<article class="card">
+						<div class="card-body">
+							<p class="mb-2">Total Profit</p>
+							<div class="h3">$15,230.82</div>
+							<p class="small text-success mb-3 text-sm">+20.1% from last month</p>
+							<svg width="245" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="30" width="20" height="25" fill="#6575FF"/>
+								<rect x="150" y="28" width="20" height="27" fill="#6575FF"/>
+								<rect x="25" y="36" width="20" height="19" fill="#6575FF"/>
+								<rect x="175" y="15" width="20" height="40" fill="#6575FF"/>
+								<rect x="50" y="15" width="20" height="40" fill="#6575FF"/>
+								<rect x="200" y="23" width="20" height="32" fill="#6575FF"/>
+								<rect x="75" y="23" width="20" height="32" fill="#6575FF"/>
+								<rect x="225" y="30" width="20" height="25" fill="#6575FF"/>
+								<rect x="100" width="20" height="55" fill="#6575FF"/>
+								<rect x="125" width="20" height="55" fill="#6575FF"/>
+							</svg>
+						</div>
+					</article>
+					<article class="card">
+						<div class="card-body">
+							<div class="text-muted">
+								<svg class="float-end size-44px" width="44" height="44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+							    <path d="M19.5 17.5C19.5 18.8807 18.3807 20 17 20C15.6193 20 14.5 18.8807 14.5 17.5C14.5 16.1193 15.6193 15 17 15C18.3807 15 19.5 16.1193 19.5 17.5Z" stroke="currentColor" stroke-width="1.5" />
+							    <path d="M9.5 17.5C9.5 18.8807 8.38071 20 7 20C5.61929 20 4.5 18.8807 4.5 17.5C4.5 16.1193 5.61929 15 7 15C8.38071 15 9.5 16.1193 9.5 17.5Z" stroke="currentColor" stroke-width="1.5" />
+							    <path d="M14.5 17.5H9.5M19.5 17.5H20.2632C20.4831 17.5 20.5931 17.5 20.6855 17.4885C21.3669 17.4036 21.9036 16.8669 21.9885 16.1855C22 16.0931 22 15.9831 22 15.7632V13C22 9.41015 19.0899 6.5 15.5 6.5M15 15.5V7C15 5.58579 15 4.87868 14.5607 4.43934C14.1213 4 13.4142 4 12 4H5C3.58579 4 2.87868 4 2.43934 4.43934C2 4.87868 2 5.58579 2 7V15C2 15.9346 2 16.4019 2.20096 16.75C2.33261 16.978 2.52197 17.1674 2.75 17.299C3.09808 17.5 3.56538 17.5 4.5 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							</div>
+							<p class="mb-2">Orders made</p>
+							<div class="h3">7,120</div>
+							<p class="small text-danger mb-3 text-sm">-10% from last month</p>
+							<div class="border-top pt-3">
+								<a href="#" class="btn btn-neutral" btn-sm>View report</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</aside>
+			<aside class="col-lg-6">
+				
+			<article class="card mb-4">
+				<header class="p-4">
+					<h4>Transactions</h4>
+					<p class="text-muted mb-0">Make your transactions</p>
+				</header>
+				<div class="px-4">
+					<div class="d-flex gap-2 mb-4">
+						<input placeholder="Search emails" type="text" class="form-control" name="">
+						<button class="btn btn-secondary">Columns</button>
+					</div>
+
+					<table class="table table-hover align-middle">
+						<thead>
+							<tr>
+								<th> <input class="form-check-input" type="checkbox" value=""> </th>
+								<th>Transaction ID</th>
+								<th>Status</th>
+								<th class="text-end">Amount</th>
+								<th class="text-end">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> 8362-123 </td>
+								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td class="text-end"> $980.00 </td>
+								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+								</button> </td>
+							</tr>
+							<tr>
+								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> 1982-123 </td>
+								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td class="text-end"> $980.00 </td>
+								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+								</button> </td>
+							</tr>
+							<tr>
+								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> 8362-123 </td>
+								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td class="text-end"> $18.90 </td>
+								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+								</button> </td>
+							</tr>
+							<tr>
+								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> 8362-123 </td>
+								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td class="text-end"> $980.00 </td>
+								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+								</button> </td>
+							</tr>
+							<tr>
+								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> 8362-988 </td>
+								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td class="text-end"> $1,980.00 </td>
+								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+								</button> </td>
+							</tr>
+							<tr>
+								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> 0023-332 </td>
+								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td class="text-end"> $567.99 </td>
+								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+								</button> </td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="text-muted">0 of 5 row(s) selected.</p>
+				</div>
+			</article>
+
+			<article class="card card-body">
+				<h5 class="text-warning">Registration form</h5>
+				<div class="alert alert-danger" role="alert"> Hello, I'm just an aler box for danger  </div>
+					<div class="alert alert-success"> Hello, I'm just an aler box for success  </div>
+			</article>
+			</aside>
+		</div> 
+		<!-- row.// -->
+	<p>Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<a class="btn btn-intense"  href="#"> Go back </a>
+	<a class="btn btn-primary" href="#"> Go back </a>
+	<a class="btn btn-primary-soft" href="#"> Go back </a>
+	<a class="btn btn-neutral" href="#"> Go back </a>
+	<a class="btn btn-danger" href="#"> Go back </a>
+	<a class="btn btn-danger-soft" href="#"> Go back </a>
+	<a class="btn btn-secondary" href="#"> Do something </a>
+
+
+	</article>
+
+	<table class="table table-bordered mt-96px">
+		<th>
+			<td>Name</td>
+			<td>Email</td>
+		</th>
+		<tr>
+			<td>Alex John</td>
+			<td>Alex123@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Vosidiy M.</td>
+			<td>vosidiy@gmail.com</td>
+		</tr>
+	</table>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ============== SECTION CONTENT END// ============== -->
+
+
+<footer class="bg-white border-top">
+	<div class="container">
+	  <hr>
+	  <section class=" d-flex justify-content-lg-between">
+        <p class="mb-0"> © 2024 Final UI. Modern CSS library  </p>  
+        <nav>
+          <a href="https://finalui.com" class="px-2">Go to main </a> 
+          <a href="#" class="px-2">Sample link</a> 
+          <a href="#" class="px-2">Another link</a> 
+        </nav>
+      </section>
+	</div><!-- //container -->
+</footer>
+
+
+
+
+</body>
+</html>

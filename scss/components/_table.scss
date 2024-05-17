@@ -1,0 +1,62 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--border-color-base);
+
+  > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  border-bottom-width: 1px;
+  }
+  > tbody {
+    vertical-align: inherit;
+  }
+  > thead {
+    vertical-align: bottom;
+  }
+
+}
+
+.table  > tbody > tr:has(input[type="checkbox"]:checked) > *{
+  background-color:var(--primary-200)!important;
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: 1px 0;
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 1px;
+}
+
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color:var(--neutral-100);
+}
+
+.table-striped-columns > :not(caption) > tr > :nth-child(even) {
+  background-color:var(--neutral-100);
+}
+
+.table-active {
+  background-color:var(--primary-200);
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color:var(--neutral-50);
+}
+
+// Responsive tables
+.table-responsive{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

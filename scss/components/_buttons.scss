@@ -7,12 +7,11 @@
   --btn-padding-y: 6px;
   --btn-font-size-md: 1rem;
   --btn-font-size-sm: 1rem;
-  --btn-font-size-lg: 1.2rem;
-  --btn-font-weight:500;
+  --btn-font-size-lg: 1.15rem;
+  --btn-font-weight:400;
   --btn-bg: transparent;
   --btn-border-color: transparent;
-  --btn-border-radius: 10px;
-  --btn-border-radius-lg: 12px;
+  --btn-border-radius: 8px;
   --btn-size-sm: 32px;
   --btn-size-md: 40px;
   --btn-size-lg: 48px;
@@ -61,59 +60,72 @@
   font-size: var(--btn-font-size-sm)!important;
 }
 
+.btn-icon{
+  width: var(--btn-size-md);
+  padding-left:0; padding-right:0;
+}
+.btn-lg.btn-icon{
+  width: var(--btn-size-lg);
+  padding-left:0; padding-right:0;
+}
+.btn-sm.btn-icon{
+  width: var(--btn-size-sm);
+  padding-left:0; padding-right:0;
+}
+
 //
 // Alternate buttons (using method of finalui design system www.finalui.com )
 //
 .btn-intense{ 
   --btn-bg: var(--neutral-900);
   --btn-bg-hover: var(--neutral-800);
-  --btn-text-color: var(--text-invert);
+  --btn-text-color: var(--text-color-invert);
   --btn-border-hover-color: transparent;
 }
 
 .btn-primary{
   --btn-bg: var(--primary-500);
   --btn-bg-hover: var(--primary-400);
-  --btn-text-color: var(--text-white);
+  --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
 }
 
 .btn-secondary {
   --btn-bg: var(--bg-base);
   --btn-bg-hover: var(--bg-secondary);
-  --btn-text-color: var(--text-base);
-  --btn-border-color: var(--border-base);
-  --btn-border-hover-color: var(--border-strong);
+  --btn-text-color: var(--text-color-base);
+  --btn-border-color: var(--border-color-base);
+  --btn-border-hover-color: var(--border-color-strong);
 }
 .btn-neutral{
   --btn-bg: var(--neutral-100);
   --btn-bg-hover: var(--neutral-200);
-  --btn-text-color: var(--text-base);
+  --btn-text-color: var(--text-color-base);
   --btn-border-hover-color: transparent;
 }
 .btn-primary-soft{
   --btn-bg: var(--primary-200);
   --btn-bg-hover: var(--primary-300);
-  --btn-text-color: var(--text-primary);
+  --btn-text-color: var(--text-color-primary);
   --btn-border-hover-color: transparent;
 }
 .btn-danger{
   --btn-bg: var(--danger-500);
   --btn-bg-hover: var(--danger-400);
-  --btn-text-color: var(--text-white);
+  --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
 }
 .btn-danger-soft{
   --btn-bg: var(bg-base);
   --btn-bg-hover: var(--bg-secondary);
-  --btn-text-color: var(--text-danger);
-  --btn-border-color: var(--border-base);
-  --btn-border-hover-color: var(--border-strong);
+  --btn-text-color: var(--text-color-danger);
+  --btn-border-color: var(--border-color-base);
+  --btn-border-hover-color: var(--border-color-strong);
 }
 .btn-plain{
   --btn-bg: transparent;
   --btn-bg-hover: var(--neutral-200);
-  --btn-text-color: var(--text-base);
+  --btn-text-color: var(--text-color-base);
   --btn-border-hover-color: transparent;
 }
 
