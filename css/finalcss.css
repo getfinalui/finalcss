@@ -440,6 +440,11 @@ legend + * {
   padding: 0;
 }
 
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
@@ -489,8 +494,8 @@ progress {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
@@ -529,8 +534,8 @@ progress {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
 .row > * {
@@ -540,8 +545,8 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -7857,20 +7862,27 @@ progress {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  position: relative;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  gap: 0.15rem;
 }
 .btn:disabled, .btn.disabled {
   opacity: 0.4;
 }
 .btn:hover {
-  background: rgba(255, 255, 255, 0.1);
   background-color: var(--btn-bg-hover);
   border-color: var(--btn-border-hover-color);
   text-decoration: none;
+}
+.btn:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
+          box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
 }
 
 .btn-lg {
@@ -7907,6 +7919,8 @@ progress {
   --btn-bg-hover: var(--neutral-800);
   --btn-text-color: var(--text-color-invert);
   --btn-border-hover-color: transparent;
+  -webkit-box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+          box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
 }
 
 .btn-primary {
@@ -7914,6 +7928,17 @@ progress {
   --btn-bg-hover: var(--primary-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
+  -webkit-box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+          box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+}
+
+.btn-danger {
+  --btn-bg: var(--danger-500);
+  --btn-bg-hover: var(--danger-400);
+  --btn-text-color: var(--text-color-white);
+  --btn-border-hover-color: transparent;
+  -webkit-box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+          box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
 }
 
 .btn-secondary {
@@ -7922,6 +7947,18 @@ progress {
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--border-color-base);
   --btn-border-hover-color: var(--border-color-strong);
+  -webkit-box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
+          box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
+}
+
+.btn-danger-soft {
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--bg-color-secondary);
+  --btn-text-color: var(--text-color-danger);
+  --btn-border-color: var(--border-color-base);
+  --btn-border-hover-color: var(--border-color-strong);
+  -webkit-box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
+          box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-neutral {
@@ -7936,21 +7973,6 @@ progress {
   --btn-bg-hover: var(--primary-300);
   --btn-text-color: var(--text-color-primary);
   --btn-border-hover-color: transparent;
-}
-
-.btn-danger {
-  --btn-bg: var(--danger-500);
-  --btn-bg-hover: var(--danger-400);
-  --btn-text-color: var(--text-color-white);
-  --btn-border-hover-color: transparent;
-}
-
-.btn-danger-soft {
-  --btn-bg: transparent;
-  --btn-bg-hover: var(--bg-color-secondary);
-  --btn-text-color: var(--text-color-danger);
-  --btn-border-color: var(--border-color-base);
-  --btn-border-hover-color: var(--border-color-strong);
 }
 
 .btn-plain {
@@ -8050,7 +8072,7 @@ progress {
   display: block;
   width: 100%;
   height: 40px;
-  padding: 0.36rem 0.8rem;
+  padding: 0.36rem 0.6rem;
   font-weight: 400;
   line-height: 1.2;
   color: var(--text-color-base);
@@ -8118,7 +8140,7 @@ progress {
   display: block;
   width: 100%;
   height: 40px;
-  padding: 0.36rem 0.8rem;
+  padding: 0.36rem 0.6rem;
   padding-right: 32px;
   font-weight: 400;
   line-height: 1.2;
@@ -8202,7 +8224,6 @@ progress {
   background-size: contain;
   border: 1px solid var(--primary-400);
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
   print-color-adjust: exact;
 }
 

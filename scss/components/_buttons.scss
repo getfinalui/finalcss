@@ -33,20 +33,27 @@
   text-align: center;
   text-decoration:none;
   vertical-align: middle;
+  position: relative;
   cursor: pointer;
   user-select: none;
+  gap:0.15rem;
   &:disabled,
   &.disabled {
     opacity:0.4;
   }
 
-  &:hover {
-    background: rgba(256,256,256,.1);    
+  &:hover {  
     background-color: var(--btn-bg-hover);
     border-color: var(--btn-border-hover-color);
     text-decoration: none;
   }
 
+  &:active {  
+    transform: translateY(1px);
+    box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
+  }
+
+ 
 }
 
 .btn-lg {
@@ -81,6 +88,7 @@
   --btn-bg-hover: var(--neutral-800);
   --btn-text-color: var(--text-color-invert);
   --btn-border-hover-color: transparent;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.12) inset;
 }
 
 .btn-primary{
@@ -88,14 +96,30 @@
   --btn-bg-hover: var(--primary-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
+  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.12) inset;
 }
-
+.btn-danger{
+  --btn-bg: var(--danger-500);
+  --btn-bg-hover: var(--danger-400);
+  --btn-text-color: var(--text-color-white);
+  --btn-border-hover-color: transparent;
+  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.12) inset;
+}
 .btn-secondary {
   --btn-bg: transparent;
   --btn-bg-hover: var(--bg-color-secondary);
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--border-color-base);
   --btn-border-hover-color: var(--border-color-strong);
+  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+}
+.btn-danger-soft{
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--bg-color-secondary);
+  --btn-text-color: var(--text-color-danger);
+  --btn-border-color: var(--border-color-base);
+  --btn-border-hover-color: var(--border-color-strong);
+  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
 }
 .btn-neutral{
   --btn-bg: var(--neutral-100);
@@ -109,19 +133,7 @@
   --btn-text-color: var(--text-color-primary);
   --btn-border-hover-color: transparent;
 }
-.btn-danger{
-  --btn-bg: var(--danger-500);
-  --btn-bg-hover: var(--danger-400);
-  --btn-text-color: var(--text-color-white);
-  --btn-border-hover-color: transparent;
-}
-.btn-danger-soft{
-  --btn-bg: transparent;
-  --btn-bg-hover: var(--bg-color-secondary);
-  --btn-text-color: var(--text-color-danger);
-  --btn-border-color: var(--border-color-base);
-  --btn-border-hover-color: var(--border-color-strong);
-}
+
 .btn-plain{
   --btn-bg: transparent;
   --btn-bg-hover: var(--neutral-200);
