@@ -13,30 +13,38 @@
 //
 // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
 
+html{
+  font-size:$font-size-root;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-// Body
 
 body {
   margin: 0; // 1
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
+  font-optical-sizing: auto;
   line-height: $line-height-base;
   color: var(--text-color-base);
   background-color: var(--bg-color-base); 
   -webkit-text-size-adjust: 100%; 
 }
 
-// Content grouping
-//
-// 1. Reset Firefox's gray color
 
 
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.25;
+}
 
 
 

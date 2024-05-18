@@ -1,0 +1,43 @@
+.form-select {
+  --icon-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0.36rem 0.8rem;
+  padding-right:32px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-color-base);
+  appearance: none;
+  background-color: var(--neutral-0);
+  background-image: var(--icon-arrow);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 8px;
+
+  &:focus {
+      border-color: var(--primary-500);
+      outline: 0;
+      box-shadow: 0 0 0 1px blue;
+  }
+  &:hover {
+      border-color: var(--neutral-500);
+  }
+
+}
+
+
+
+.form-select[multiple], .form-select[size]:not([size="1"]) {
+  padding-right: 0.75rem;
+  background-image: none;
+}
+.form-select:disabled {
+  background-color: var(--neutral-200);
+}
+
+[data-theme=dark] .form-select {
+  --icon-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}

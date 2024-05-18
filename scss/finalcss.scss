@@ -17,9 +17,11 @@
 @import "components/buttons";
 @import "components/card";
 @import "components/table";
+@import "components/form-label";
 @import "components/form-input";
+@import "components/form-select";
 @import "components/form-check-radio";
-
+@import "components/badge";
 // Helper classes
 @import "helpers";
 
@@ -29,6 +31,8 @@
 @import "utils/border";
 @import "utils/background";
 @import "utils/positions";
+@import "utils/shape-round";
+@import "utils/list";
 
 // Layouts and Temnplates
 @import "layout/base";

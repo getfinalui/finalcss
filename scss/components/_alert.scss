@@ -2,7 +2,7 @@
 // Base styles
 //
 
-.alert {
+.alert{
   // variables changed depending on state
   --alert-bg-color: transparent;
   --alert-text-color: inherit;
@@ -12,9 +12,13 @@
   
   position: relative;
   padding: 8px 12px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   border: transparent;
   border-radius: 8px;
+  display:flex; 
+  align-items:center;
+
+  p{ margin-bottom:0}
 }
 
 

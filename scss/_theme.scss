@@ -65,17 +65,17 @@
   // alias variables for dark/light
   --bg-color-base: var(--neutral-0);
   --bg-color-secondary: var(--neutral-50);
+  --bg-color-lower: var(--neutral-50);
+  --bg-color-raised: var(--neutral-0);
 
   --border-color-light: var(--neutral-200);
   --border-color-base: var(--neutral-300);
-  --border-color-strong: var(--neutral-500);
+  --border-color-strong: var(--neutral-400);
 
   --text-color-base: var(--neutral-900);
   --text-color-secondary: var(--neutral-700);
   --text-color-muted: var(--neutral-600);
   --text-color-invert: var(--neutral-0);
-
-  // alias variables for light (will be override on dark mode)
   --text-color-primary: var(--primary-500);
   --text-color-warning: var(--warning-500);
   --text-color-danger: var(--danger-500);
@@ -149,6 +149,10 @@
   --info-500: #00ABAB;
   --info-600: #00B8B8;
   --info-700: #66DBD1;
+
+  // background color slightly changes for dark 
+  --bg-color-lower: var(--neutral-0);
+  --bg-color-raised: var(--neutral-50);
 
    // we override text color for dark due to accessibility
   --text-color-invert: var(--neutral-0);

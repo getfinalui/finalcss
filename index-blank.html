@@ -28,6 +28,7 @@
 	});
 	</script>
 
+
 <!-- FinalCSS -->
 <link href="css/finalcss.css" rel="stylesheet" type="text/css" />
 
@@ -39,6 +40,7 @@
 		<div class="container">
 			<h1 class="text-center my-5">Finalcss showcase by <span class="text-muted">Final UI</span> </h1>
 		</div> <!-- container end.// -->
+		
 
 		<div class="d-flex justify-content-center">
 			<button id="themeSwitcher" class="btn btn-secondary">
@@ -57,14 +59,14 @@
 </header> <!-- section-header end.// -->
 
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="py-5">
+<section class="py-5 bg-lower">
 <div class="container">
 
 	<article>
 		<div class="row mb-5">
 			<aside class="col-lg-6">
-				<div class="grid" style="--bs-columns: 2;">
-					<article class="card">
+				<div class="grid mb-4" style="--bs-columns: 2;">
+					<article class="card bg-raised">
 						<div class="card-body">
 							<p class="mb-2">Total Profit</p>
 							<div class="h3">$15,230.82</div>
@@ -83,7 +85,7 @@
 							</svg>
 						</div>
 					</article>
-					<article class="card">
+					<article class="card bg-raised">
 						<div class="card-body">
 							<div class="text-muted">
 								<svg class="float-end size-44px" width="44" height="44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
@@ -92,14 +94,122 @@
 							    <path d="M14.5 17.5H9.5M19.5 17.5H20.2632C20.4831 17.5 20.5931 17.5 20.6855 17.4885C21.3669 17.4036 21.9036 16.8669 21.9885 16.1855C22 16.0931 22 15.9831 22 15.7632V13C22 9.41015 19.0899 6.5 15.5 6.5M15 15.5V7C15 5.58579 15 4.87868 14.5607 4.43934C14.1213 4 13.4142 4 12 4H5C3.58579 4 2.87868 4 2.43934 4.43934C2 4.87868 2 5.58579 2 7V15C2 15.9346 2 16.4019 2.20096 16.75C2.33261 16.978 2.52197 17.1674 2.75 17.299C3.09808 17.5 3.56538 17.5 4.5 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
 							</div>
-							<p class="mb-2">Orders made</p>
+							<p class="mb-2">Total shipping</p>
 							<div class="h3">7,120</div>
 							<p class="small text-danger mb-3 text-sm">-10% from last month</p>
 							<div class="border-top pt-3">
-								<a href="#" class="btn btn-neutral" btn-sm>View report</a>
+								<a href="#" class="btn btn-secondary" btn-sm>View report</a>
 							</div>
 						</div>
 					</article>
+				</div>
+
+				<article class="card mb-4">
+					<div class="card-body">
+						<h4 class="card-title mb-3">Registration form</h5>
+					
+						
+						<div class="grid gap-2" style="--bs-columns: 2;">
+							<button class="btn btn-secondary">
+							<span class="icon">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.9998 9.81812V14.4654H18.4579C18.1743 15.9599 17.3233 17.2254 16.047 18.0763L19.9415 21.0982C22.2106 19.0037 23.5197 15.9273 23.5197 12.2728C23.5197 11.4219 23.4433 10.6036 23.3015 9.81825L11.9998 9.81812Z" fill="#4285F4"/>
+									<path d="M5.27461 14.284L4.39625 14.9564L1.28711 17.3782C3.26165 21.2945 7.30862 24 11.9995 24C15.2394 24 17.9557 22.9309 19.9412 21.0982L16.0467 18.0764C14.9776 18.7963 13.614 19.2328 11.9995 19.2328C8.87951 19.2328 6.22868 17.1273 5.27952 14.2909L5.27461 14.284Z" fill="#34A853"/>
+									<path d="M1.28718 6.62183C0.469042 8.23631 0 10.0581 0 11.9999C0 13.9417 0.469042 15.7636 1.28718 17.378C1.28718 17.3889 5.27997 14.2799 5.27997 14.2799C5.03998 13.5599 4.89812 12.7963 4.89812 11.9998C4.89812 11.2033 5.03998 10.4398 5.27997 9.71976L1.28718 6.62183Z" fill="#FBBC05"/>
+									<path d="M11.9997 4.77818C13.767 4.77818 15.3379 5.38907 16.5925 6.56727L20.0288 3.13095C17.9452 1.18917 15.2398 0 11.9997 0C7.30887 0 3.26165 2.69454 1.28711 6.62183L5.27978 9.72001C6.22882 6.88362 8.87976 4.77818 11.9997 4.77818Z" fill="#EA4335"/>
+								</svg>
+							</span>
+							<span class="ps-2">Google</span>
+
+							</button>
+							<button class="btn btn-secondary">
+								<span>
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0099 0C5.36875 0 0 5.40833 0 12.0992C0 17.4475 3.43994 21.9748 8.21205 23.5771C8.80869 23.6976 9.02724 23.3168 9.02724 22.9965C9.02724 22.716 9.00757 21.7545 9.00757 20.7527C5.6667 21.474 4.97099 19.3104 4.97099 19.3104C4.43409 17.9082 3.63858 17.5478 3.63858 17.5478C2.54511 16.8066 3.71823 16.8066 3.71823 16.8066C4.93117 16.8868 5.56763 18.0486 5.56763 18.0486C6.64118 19.8913 8.37111 19.3707 9.06706 19.0501C9.16638 18.2688 9.48473 17.728 9.82275 17.4276C7.15817 17.1471 4.35469 16.1055 4.35469 11.458C4.35469 10.1359 4.8316 9.05428 5.58729 8.21304C5.46807 7.91263 5.0504 6.67043 5.70677 5.00787C5.70677 5.00787 6.72083 4.6873 9.00732 6.24981C9.98625 5.98497 10.9958 5.85024 12.0099 5.84911C13.024 5.84911 14.0577 5.98948 15.0123 6.24981C17.299 4.6873 18.3131 5.00787 18.3131 5.00787C18.9695 6.67043 18.5515 7.91263 18.4323 8.21304C19.2079 9.05428 19.6652 10.1359 19.6652 11.458C19.6652 16.1055 16.8617 17.1269 14.1772 17.4276C14.6148 17.8081 14.9924 18.5292 14.9924 19.6711C14.9924 21.2936 14.9727 22.5957 14.9727 22.9962C14.9727 23.3168 15.1915 23.6976 15.7879 23.5774C20.56 21.9745 23.9999 17.4475 23.9999 12.0992C24.0196 5.40833 18.6312 0 12.0099 0Z" fill="#24292F"/>
+									</svg>
+								</span>
+								<span class="ps-2">Github</span>
+							</button>
+						</div>
+
+						<!-- divider-line -->	
+							<div class="position-relative my-4">
+								<div class="d-flex align-items-center inset-0 position-absolute w-100">
+									<hr class="my-0 w-100">	
+								</div>
+								<div class="d-flex position-relative align-items-center justify-content-center">
+									<small class="text-uppercase bg-raised text-muted p-1">OR CONTINUE WITH</small>
+								</div>
+							</div>
+						<!-- divider-line .// -->	
+
+						<form>
+							<div class="alert alert-danger mb-4" role="alert"> 
+								<svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="red"><path d="M4.47 21h15.06c1.54 0 2.5-1.67 1.73-3L13.73 4.99c-.77-1.33-2.69-1.33-3.46 0L2.74 18c-.77 1.33.19 3 1.73 3zM12 14c-.55 0-1-.45-1-1v-2c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1zm1 4h-2v-2h2v2z"/></svg>
+								<p>
+									Warning. I'm just sample alert 
+								</p> 
+							</div>
+
+							<div class="row g-3">
+								<div class="col-lg-6 mb-4">
+					              <label for="firstName" class="form-label">First name</label>
+					              <input type="text" class="form-control" placeholder="Type here" value="" required="">
+					              
+					            </div>
+					            <div class="col-lg-6 mb-4">
+					              <label class="form-label">Last name</label>
+					              <input type="text" class="form-control" placeholder="Type here" value="" required="">
+					            </div>
+							</div>
+							<div class="mb-4">
+							  <label class="form-label">Email address</label>
+							  <input type="email" class="form-control" placeholder="name@example.com">
+							</div>
+							<div class="mb-4">
+							  <label class="form-label">What's your job</label>
+							  <select class="form-select">
+							  	<option>Select</option>
+							  	<option>UX Designer</option>
+							  	<option>Product manager</option>
+							  	<option>Web developer</option>
+							  </select>
+							</div>
+
+							<div class="mb-4">
+							  <label class="form-label">Create password</label>
+							  <input type="password" class="form-control" placeholder="Password">
+							  <p class="text-muted small mt-2">
+								  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+							  </p>
+							</div>
+
+							<div class="form-check mb-4">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+								  <label class="form-check-label" for="flexCheckChecked">
+								    I can't agree with any terms and conditons
+								  </label>
+							</div>
+
+							<div>
+								<button class="btn btn-primary">Continue</button>
+								<button class="btn btn-secondary">Cancel</button>
+							</div>
+						</form>
+					</div>
+				</article>
+
+
+				<div class="card">
+					<div class="card-body">
+						<p>Are you sure to delete</p>
+
+						<div class="d-flex gap-2">
+							<a class="btn btn-danger-soft me-auto" href="#"> Delete </a>
+							<a class="btn btn-primary-soft" href="#"> Cancel </a>
+							<a class="btn btn-primary" href="#"> Save </a>
+						</div>
+					</div>
 				</div>
 			</aside>
 			<aside class="col-lg-6">
@@ -112,7 +222,7 @@
 				<div class="px-4">
 					<div class="d-flex gap-2 mb-4">
 						<input placeholder="Search emails" type="text" class="form-control" name="">
-						<button class="btn btn-secondary">Columns</button>
+						<button class="btn btn-secondary flex-shrink-0">Filter by</button>
 					</div>
 
 					<table class="table table-hover align-middle">
@@ -129,16 +239,16 @@
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-123 </td>
-								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td> <b role="status" class="badge badge-success">Completed</b> </td>
 								<td class="text-end"> $980.00 </td>
 								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
 							<tr>
-								<td> <input class="form-check-input" type="checkbox" value=""> </td>
+								<td> <input class="form-check-input" type="checkbox" checked value=""> </td>
 								<td> 1982-123 </td>
-								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td> <b role="status" class="badge badge-success">Completed</b> </td>
 								<td class="text-end"> $980.00 </td>
 								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
@@ -147,7 +257,7 @@
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-123 </td>
-								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td> <b role="status" class="badge badge-warning">Pending</b> </td>
 								<td class="text-end"> $18.90 </td>
 								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
@@ -156,7 +266,7 @@
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-123 </td>
-								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td> <b role="status" class="badge badge-warning">Pending</b> </td>
 								<td class="text-end"> $980.00 </td>
 								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
@@ -165,7 +275,7 @@
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-988 </td>
-								<td> <b role="status" class="badge badge-success">Success</b> </td>
+								<td> <b role="status" class="badge badge-danger">Cancelled</b> </td>
 								<td class="text-end"> $1,980.00 </td>
 								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
@@ -187,24 +297,96 @@
 				</div>
 			</article>
 
+			<article class="card card-body mb-4">
+				<h5 class="mb-4">Members list</h5>
+				
+				<ul class="list-unstyled">
+					<li class="d-flex align-items-center border-bottom py-2">
+						<div class="flex-grow-0">
+							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" class="rounded-circle size-48px">
+						</div>
+						<div class="flex-grow-1 ps-3">
+							<p class="fw-medium mb-0">Jessica Sarah</p>
+							<p class="text-muted mb-0">jessica1900@example.com</p>
+						</div>
+						<div>
+							<select class="form-select h-32px fw-medium">
+								<option>Can view</option>
+								<option>Can edit</option>
+								<option>Remove</option>
+							</select>
+						</div>
+					</li>
+					<li class="d-flex align-items-center border-bottom py-2">
+						<div class="flex-grow-0">
+							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle size-48px">
+						</div>
+						<div class="flex-grow-1 ps-3">
+							<p class="fw-medium mb-0">Olivia Martin</p>
+							<p class="text-muted mb-0">max990@example.com</p>
+						</div>
+						<div>
+							<select class="form-select h-32px fw-medium">
+								<option>Can view</option>
+								<option>Can edit</option>
+								<option>Remove</option>
+							</select>
+						</div>
+					</li>
+					<li class="d-flex align-items-center border-bottom py-2">
+						<div class="flex-grow-0">
+							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/3.webp" class="rounded-circle size-48px">
+						</div>
+						<div class="flex-grow-1 ps-3">
+							<p class="fw-medium mb-0">Olivia Alexander</p>
+							<p class="text-muted mb-0">alex_alex@example.com</p>
+						</div>
+						<div>
+							<select class="form-select h-32px fw-medium">
+								<option>Can view</option>
+								<option selected>Can edit</option>
+								<option>Remove</option>
+							</select>
+						</div>
+					</li>
+				</ul>
+			</article>
+
+
 			<article class="card card-body">
-				<h5 class="text-warning">Registration form</h5>
-				<div class="alert alert-danger" role="alert"> Hello, I'm just an aler box for danger  </div>
-					<div class="alert alert-success"> Hello, I'm just an aler box for success  </div>
+				<h5 class="mb-4">Choose delivery option</h5>
+				
+				<ul class="d-grid list-unstyled gap-2">
+				    <li>
+				      <label class="card-check w-100 d-block bg-base p-3 rounded">
+				      	<input class="form-check-input float-end" checked name="choose-delivery" type="radio" value="">
+				        <strong class="text-lg fw-semibold">Standart delivery</strong>
+				        <p class="d-block mb-0 text-muted">With support text underneath to add more detail</p>
+				      </label>
+				    </li>
+				    <li>
+				      <label class="card-check w-100 d-block bg-base p-3 rounded">
+				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
+				        <strong class="text-lg fw-semibold">One day shopping</strong>
+				        <p class="d-block mb-0 text-muted">Support text underneath to add more detail</p>
+				      </label>
+				    </li>
+				    <li>
+				      <label class="card-check w-100 d-block bg-base p-3 rounded">
+				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
+				        <strong class="text-lg fw-semibold">I will pickup myself</strong>
+				        <p class="d-block mb-0 text-muted">Text underneath to add more detail</p>
+				      </label>
+				    </li>
+
+				   
+				  </ul>
+
 			</article>
 			</aside>
 		</div> 
 		<!-- row.// -->
-	<p>Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
 
 	<a class="btn btn-intense"  href="#"> Go back </a>
 	<a class="btn btn-primary" href="#"> Go back </a>
