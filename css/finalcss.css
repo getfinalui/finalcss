@@ -7831,8 +7831,8 @@ progress {
   --btn-padding-x: 12px;
   --btn-padding-y: 6px;
   --btn-font-size-md: 1rem;
-  --btn-font-size-sm: 1rem;
-  --btn-font-size-lg: 1.15rem;
+  --btn-font-size-sm: 0.9rem;
+  --btn-font-size-lg: 1.1rem;
   --btn-font-weight:500;
   --btn-bg: transparent;
   --btn-border-color: transparent;
@@ -7888,7 +7888,7 @@ progress {
 .btn-lg {
   height: var(--btn-size-lg) !important;
   font-size: var(--btn-font-size-lg) !important;
-  padding: var(--btn-padding-y) calc(var(--btn-padding-x) * 2);
+  padding: var(--btn-padding-y) calc(var(--btn-padding-x) * 1.2);
 }
 
 .btn-sm {
