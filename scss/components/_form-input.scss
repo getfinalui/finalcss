@@ -8,7 +8,7 @@
   line-height: 1.2;
   color: var(--text-color-base);
   appearance: none; // Fix appearance for date inputs in Safari
-  background-color: var(--neutral-0);
+  background-color: var(--neutral-50);
   background-clip: padding-box;
   border: 1px solid var(--neutral-300);
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
@@ -46,8 +46,6 @@
     margin: 0;
   }
 
-  // Prevent excessive date input height in Webkit
-  // https://github.com/twbs/bootstrap/issues/34433
   &::-webkit-datetime-edit {
     display: block;
     padding: 0;
@@ -61,18 +59,11 @@
   }
 
   // Disabled inputs
-  //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
-  // disabled if the fieldset is disabled. Due to implementation difficulty, we
-  // don't honor that edge case; we style them as disabled anyway.
   &:disabled {
     color: var(--text-color-muted);
     background-color: var(--neutral-200);
     border-color: var(--neutral-200);
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 0.9;
     cursor:not-allowed;
   }
-
-
 }

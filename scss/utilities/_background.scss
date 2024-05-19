@@ -1,9 +1,5 @@
 
 
-$color_nums:100, 200, 300, 400, 500, 600, 700, 800, 900;
-/// constant colors despite any theme
-
-
 /// theme based colors
 .bg-base{
   background-color:var(--neutral-0);
@@ -21,6 +17,10 @@ $color_nums:100, 200, 300, 400, 500, 600, 700, 800, 900;
   background-color:var(--bg-color-raised);
 }
 
+
+// generate classes for background ex. bg-primary-100, bg-neutral-900
+
+$color_nums:100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 @each $num in $color_nums {
   .bg-neutral-#{$num} {

@@ -36,6 +36,36 @@
 }
 
 
+.translate-middle {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.translate-middle-x {
+  -webkit-transform: translateX(-50%) !important;
+          transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
+
+.center-x{
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.center-y{
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.center-xy{
+  top:50%; left:50%;
+  transform: translateY(-50%); transform: translateX(-50%);
+}
 
 
 .position-static {

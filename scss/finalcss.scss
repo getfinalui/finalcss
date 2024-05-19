@@ -22,17 +22,17 @@
 @import "components/form-select";
 @import "components/form-check-radio";
 @import "components/badge";
-// Helper classes
-@import "helpers";
+@import "components/nav";
+@import "components/dropdown-menu";
 
 // Utility classes
-@import "utils/sizes-spaces";
-@import "utils/text";
-@import "utils/border";
-@import "utils/background";
-@import "utils/positions";
-@import "utils/shape-round";
-@import "utils/list";
+@import "utilities/sizes-spaces";
+@import "utilities/text";
+@import "utilities/border";
+@import "utilities/border-round";
+@import "utilities/background";
+@import "utilities/positions";
+@import "utilities/list";
 
 // Layouts and Temnplates
 @import "layout/base";
