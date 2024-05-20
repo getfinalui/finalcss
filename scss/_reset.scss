@@ -154,7 +154,7 @@ sup { top: -.5em; }
 
 a {
   text-decoration:none;
-
+  color:var(--text-color-primary);
   &:hover {
     text-decoration: underline;
   }
