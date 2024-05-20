@@ -24,6 +24,7 @@
 @import "components/badge";
 @import "components/nav";
 @import "components/dropdown-menu";
+@import "components/segmented-control";
 
 // Utility classes
 @import "utilities/sizes-spaces";
@@ -38,7 +39,8 @@
 @import "utilities/opacity";
 @import "utilities/shadow";
 @import "utilities/z-index";
-
+@import "utilities/fixed-sticky";
+@import "utilities/visually-hidden";
 
 // Layouts and Temnplates
 @import "layout/base";

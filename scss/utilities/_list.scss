@@ -1,4 +1,29 @@
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
+.list-bullet{
+  list-style: none; margin-left:0; padding-left:0;  
+  li{ padding-left:24px;  position:relative;  }
+  li::before { 
+      content: " ";
+      position:absolute;  
+      top:50%;
+      transform:translateY(-50%);  
+      left:0;
+      width: 8px; 
+      height: 8px;
+      background:#666;  
+      border-radius:100%;
+  }
+}
+
+.list-check{
+  list-style: none; margin-left:0; padding-left:0;  
+  > li{ padding-left:24px; position:relative; }
+  > li::before {
+  	  font-weight:bold;
+  	  color:green;
+      content: "\2713";
+      position:absolute;  
+      top:50%;
+      transform:translateY(-50%);  
+      left:0;
+	}
 }

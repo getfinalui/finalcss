@@ -2,6 +2,26 @@
   border: 1px solid var(--border-color-base);
 }
 
+.border-primary {
+  border: 1px solid var(--primary-400);
+}
+
+.border-warning {
+  border: 1px solid var(--warning-400);
+}
+
+.border-danger {
+  border: 1px solid var(--danger-400);
+}
+
+.border-success {
+  border: 1px solid var(--success-400);
+}
+
+.border-info {
+  border: 1px solid var(--info-400);
+}
+
 .border-strong {
   border-color: 1px solid var(--border-color-strong) !important;
 }
