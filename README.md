@@ -1,7 +1,7 @@
 # Welcome to Final CSS 
 ### Modern, simple and clean CSS library for your design system by Final UI Design 
-🌐  https://finalui.com
-🌐  https://finalcss.com
+🌐  https://finalui.com (Figma)  
+🌐  https://finalcss.com (CSS) 
 
 #### Made for Figma & HTML/CSS
 This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
