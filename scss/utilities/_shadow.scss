@@ -1,0 +1,19 @@
+.shadow {
+  box-shadow: 0 .5rem 1rem rgba(#000, .12)!important;
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(#000, .075)!important;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 12px rgba(#111, 0.2)!important;
+}
+
+.shadow-inner, .shadow-inset{
+  box-shadow: inset 0 1px 2px rgba(#000, .075);
+}
+
+.shadow-none, .shadow-0 {
+  box-shadow: none !important;
+}

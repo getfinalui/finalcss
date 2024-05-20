@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * Final UI (https://finalui.com/)
- * Copyright 20245 The Finalui Authod Vosidiy M. 
+ * Copyright 2024 The Finalui Authod Vosidiy M. 
  * Licensed under MIT
  */
 
@@ -33,6 +33,12 @@
 @import "utilities/background";
 @import "utilities/positions";
 @import "utilities/list";
+@import "utilities/object-fit";
+@import "utilities/overflow";
+@import "utilities/opacity";
+@import "utilities/shadow";
+@import "utilities/z-index";
+
 
 // Layouts and Temnplates
 @import "layout/base";

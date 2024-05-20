@@ -54,7 +54,7 @@ hr {
 
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: 0;
 }
 
 
@@ -255,7 +255,7 @@ caption {
 // 3. Fix alignment for Safari
 
 th {
-  font-weight: $table-th-font-weight; // 1
+  font-weight: 400; // 1
   text-align: inherit; // 2
   text-align: -webkit-match-parent; // 3
 }
