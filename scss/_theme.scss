@@ -81,6 +81,7 @@
   --text-color-danger: var(--danger-500);
   --text-color-success: var(--success-500);
   --text-color-info: var(--info-500);
+  --text-color-feature: var(--feature-500);
   
   // constant text colors (will not be changed on any theme)
   --text-color-black: #000;
@@ -150,19 +151,25 @@
   --info-600: #00B8B8;
   --info-700: #66DBD1;
 
-  // background color slightly changes for dark 
   --bg-color-base: var(--neutral-50); 
   --bg-color-secondary: var(--neutral-50);
   --bg-color-lower: var(--neutral-0);
   --bg-color-raised: var(--neutral-100);
 
-   // we override text color for dark due to accessibility
+  --border-color-light: var(--neutral-100);
+  --border-color-base: var(--neutral-200);
+  --border-color-strong: var(--neutral-400);
+
+  --text-color-base: var(--neutral-1000);
+  --text-color-secondary: var(--neutral-700);
+  --text-color-muted: var(--neutral-600);
   --text-color-invert: var(--neutral-0);
   --text-color-primary: var(--primary-700);
   --text-color-warning: var(--warning-700);
   --text-color-danger: var(--danger-700);
   --text-color-success: var(--success-700);
   --text-color-info: var(--info-700);
+  --text-color-feature: var(--feature-700);
 }
 
 

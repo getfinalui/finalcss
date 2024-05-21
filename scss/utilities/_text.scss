@@ -44,7 +44,11 @@ h6, .h6 {
 }
 
 
-.text-lg{ font-size:1.12rem}
+.article{ 
+  p{ margin-bottom:0.8rem}
+}
+
+.text-lg{ font-size:1.2rem}
 
 .small, .text-sm {
   @extend small;

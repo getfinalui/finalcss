@@ -24,12 +24,7 @@ $font-size-base:              1rem !default; // Assumes the browser default size
 $font-size-sm:                0.875rem !default;
 $font-size-lg:                1.25rem !default;
 $font-size-sub-sup:           .75em !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+
 
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
@@ -43,7 +38,7 @@ $headings-line-height:        1.2 !default;
 $headings-margin-bottom:	  0.4rem!default;
 $headings-color:              inherit !default;
 
-$h1-font-size:                2.8rem !default;
+$h1-font-size:                3rem !default;
 $h2-font-size:                2rem !default;
 $h3-font-size:                1.75rem !default;
 $h4-font-size:                1.5rem !default;

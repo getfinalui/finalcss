@@ -70,10 +70,16 @@
 .btn-icon{
   width: var(--btn-size-md);
   padding-left:0; padding-right:0;
+  svg{ 
+    width:20px; height:20px;
+  }
 }
 .btn-lg.btn-icon{
   width: var(--btn-size-lg);
   padding-left:0; padding-right:0;
+  svg{ 
+    width:24px; height:24px;
+  }
 }
 .btn-sm.btn-icon{
   width: var(--btn-size-sm);
