@@ -11,3 +11,6 @@ The repo includes an `index.html` file (so it can render a web page), two GitHub
 
 #### Your support matters
 Buy me a coffee https://buymeacoffee.com/vosidiy
+Paypal donate: https://paypal.me/vosidiy/20 
+*** *** ***
+
