@@ -76,7 +76,7 @@
 							<p class="mb-2">Total Profit</p>
 							<div class="h3">$15,230.82</div>
 							<p class="small text-success mb-3 text-sm">+20.1% from last month</p>
-							<svg width="245" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg width="245" class="w-100" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<rect y="30" width="20" height="25" fill="#6575FF"/>
 								<rect x="150" y="28" width="20" height="27" fill="#6575FF"/>
 								<rect x="25" y="36" width="20" height="19" fill="#6575FF"/>
@@ -228,12 +228,38 @@
 				<div class="row row-cols-lg-2 mb-4">
 					<div>
 						
-						<article class="card h-100 mb-4">
-							<div class="card-body">
-								User profile as behance profile sidebar
+						<article class="card overflow-hidden h-100 mb-4">
+							<header class="bg-aurora-2 position-relative h-120px"> 
+								<a href="#" class="position-absolute bottom-0 end-0 m-2 btn btn-sm btn-neutral">Edit</a>
+							</header>
+							
+							<div class="text-center">
 
+								<div class="mx-auto d-flex align-items-center justify-content-center position-relative bg-white size-88px mt-n5 rounded-circle">
+						 			<img src="https://i.pravatar.cc/300" width="80" height="80" class="rounded-circle size-80px d-inline-block bg-neutral-400">
+						 		</div>
 
-								<p>https://demo.tailadmin.com/profile</p>
+						 		<div class="my-3">
+						 			<h5>Alexandra Heilium</h5>
+						 			<p>Digital Designer UX/UI</p>
+						 		</div>
+						 		<!-- summary -->
+						 		<div class="mx-auto mb-2 p-2 row row-cols-3 w-80 rounded border">
+			                      <div class="d-flex flex-column gap-2 p-2 border-end align-items-center justify-content-center">
+			                        <span class="fw-bold">259</span>
+			                        <small class="small">Posts</small>
+			                      </div>
+			                      <div class="d-flex flex-column p-2 gap-2 border-end align-items-center justify-content-center">
+			                        <span class="fw-bold">129K</span>
+			                        <small class="small">Followers</small>
+			                      </div>
+			                      <div class="d-flex flex-column p-2 gap-2 align-items-center justify-content-center">
+			                        <span class="fw-bold">34</span>
+			                        <small class="small">Following</small>
+			                      </div>
+			                    </div>
+			                    <!-- summary .//end -->
+			                    
 							</div>
 						</article>
 
@@ -242,7 +268,7 @@
 						
 						<article class="card h-100">
 							<div class="bg-neutral-300 rounded-top overflow-hidden">
-								<img class="object-fit-cover w-100 h-200px" src="https://picsum.photos/seed/picsum/400/400">
+								<img class="object-fit-cover w-100 h-190px" src="https://picsum.photos/seed/picsum/400/400">
 							</div>
 							<div class="card-body">
 							 	<h5>Marvels of Bali</h5>
@@ -481,31 +507,48 @@
 
 			<div class="grid w-100" style="--bs-columns:5;">
 				<article class="card card-body" style="grid-column: span 3;">
-					<form>
-						<!-- search component -->
-						<div class="d-flex">
-							<!-- search field -->
-							<div class="position-relative flex-grow-1 h-40px">
-								<i class="d-inline-flex position-absolute translate-middle-y ms-8px left-0 top-50">
-									<svg class="size-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
-										<path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-										<path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-								</svg>
-								</i>
-								<input class="form-control rounded-end-0 ps-36px" list="countries" placeholder="Search country" type="text">
-							</div>
-							<!-- search field .//end -->
-							<button class="rounded-start-0 btn btn-primary">Search</button>
+					<!-- input search  -->
+					<div class="d-flex">
+						<!-- search field -->
+						<div class="position-relative flex-grow-1 h-40px">
+							<i class="d-inline-flex position-absolute translate-middle-y ms-8px left-0 top-50">
+								<svg class="size-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+									<path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+							</svg>
+							</i>
+							<input class="form-control rounded-end-0 ps-36px" list="countries" placeholder="Search country" type="text">
 						</div>
-						<!-- search component -->
-						<datalist id="countries">
-							<option value="Uzbekistan">
-							<option value="Pakistan">
-							<option value="India">
-							<option value="United States">
-							<option value="China">
-						</datalist>
-					</form>
+						<!-- search field .//end -->
+						<button class="rounded-start-0 btn btn-primary">Search</button>
+					</div>
+					<datalist id="countries">
+						<option value="Uzbekistan">
+						<option value="Pakistan">
+						<option value="India">
+						<option value="United States">
+						<option value="China">
+					</datalist>
+					<!-- input search .// -->
+					<br>
+					<!-- input field -->
+					<div class="position-relative">
+						<i class="d-inline-flex position-absolute translate-middle-y ms-8px left-0 top-50">
+							<svg class="size-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+							    <path d="M12 16.5V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+							    <path d="M4.26781 18.8447C4.49269 20.515 5.87613 21.8235 7.55966 21.9009C8.97627 21.966 10.4153 22 12 22C13.5847 22 15.0237 21.966 16.4403 21.9009C18.1239 21.8235 19.5073 20.515 19.7322 18.8447C19.879 17.7547 20 16.6376 20 15.5C20 14.3624 19.879 13.2453 19.7322 12.1553C19.5073 10.485 18.1239 9.17649 16.4403 9.09909C15.0237 9.03397 13.5847 9 12 9C10.4153 9 8.97627 9.03397 7.55966 9.09909C5.87613 9.17649 4.49269 10.485 4.26781 12.1553C4.12104 13.2453 4 14.3624 4 15.5C4 16.6376 4.12104 17.7547 4.26781 18.8447Z" stroke="currentColor" stroke-width="2" />
+							    <path d="M7.5 9V6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</i>
+						<input class="form-control ps-36px" placeholder="Password" type="password">
+						<button class="btn btn-icon btn-sm btn-neutral bg-neutral-200 position-absolute translate-middle-y me-1 ms-8px end-0 top-50">
+							<svg class="icon size-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+						    <path d="M21.544 11.045C21.848 11.4713 22 11.6845 22 12C22 12.3155 21.848 12.5287 21.544 12.955C20.1779 14.8706 16.6892 19 12 19C7.31078 19 3.8221 14.8706 2.45604 12.955C2.15201 12.5287 2 12.3155 2 12C2 11.6845 2.15201 11.4713 2.45604 11.045C3.8221 9.12944 7.31078 5 12 5C16.6892 5 20.1779 9.12944 21.544 11.045Z" stroke="currentColor" stroke-width="2" />
+						    <path d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z" stroke="currentColor" stroke-width="2" />
+						</svg>
+						</button>
+					</div>
+					<!-- input field .//end -->
 				</article> <!-- card .//end -->
 				<div class="g-col-5"  style="grid-column: span 2;">
 					<nav class="dropdown-menu">
