@@ -40,30 +40,113 @@
 	Final CSS
 </div>
 <header class="py-5 border-bottom bg-base">	
-		<div class="container">
-			<h1 class="display-3 text-center my-4">Final CSS <span class="text-muted"> - Build modern UI quickly</span> </h1>
+		<div class="container" style="max-width: 980px;">
+			<h1 class="display-4 text-center my-4">Final CSS <span class="text-muted"> - Build modern UI quickly</span> </h1>
 		
 			<p  class="text-center mb-4">
 				<code>
 				https://cdn.jsdelivr.net/gh/getfinalui/finalcss@main/css/finalcss.css
 				</code>
 			</p>
-		</div> <!-- container end.// -->
 
-		<div class="d-flex justify-content-center">
-			<button id="themeSwitcher" class="btn btn-secondary">
-				<div class="d-none dark:d-block">
-					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-					</svg>
-					<span class="align-middle">Make light</span>
-				</div>
-				<div class="dark:d-none">
-					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-					</svg>
-					<span class="align-middle">Make dark</span>
-				</div>
-			</button>
-		</div>
+			<article class="article">
+			<h4>Why another css library?</h4>
+			<p>
+				You may ask, what makes it different if there are libraries like Bootstrap and Tailwind? Yes, I used many of CSS libraries. They all have cons and pros. You may see many debates around those css frameworks.  None of them are perfect for all cases. They have their own approach. One prefer utility first approach, Another prefer component oriented library. Some of them are too <b>bloated</b> with features which you never use. some of them too outdated in terms of design. 
+			</p>
+			<p> So, I came with idea of creating something based on follwing criterias:</p>
+			<div class="row row-cols-md-4 row-cols-lg-4 my-5">
+				<aside>
+					<h5>Super easy & customizable</h5>
+				</aside>
+				<aside>
+					<h5>No javascript, no complex setup</h5>
+				</aside>
+				<aside>
+					<h5>Utility + component classes</h5>
+				</aside>
+				<aside>
+					<h5>Dark theme with accessibility in mind</h5>
+				</aside>
+				<aside>
+					<h5>Highly aesthetic design</h5>
+				</aside>
+				<aside>
+					<h5>Extendable for comlex projects</h5>
+				</aside>
+				<aside>
+					<h5>Not bloated with useless styles</h5>
+				</aside>
+				<aside>
+					<h5>Grid system of Bootstrap 5</h5>
+				</aside>
+			</div>
+
+			<p>This is called "Final CSS" (finalcss). This libraru will be updated regularly, </p>
+			
+			<h5>What's problem with Bootstrap</h5>
+			<p>I used Bootstrap for hundreds of projects. it gives scss with customizable varibales and separate sass files for each component.  you can use also directly css from cdn whic is great, but... </p>
+			<ul  class="list-bullet">
+				<li> It is bloated with so many styles and components</li>
+				<li> Its navbar is very limited, for many cases you have to create you own </li>
+				<li> Utility classes are limited, for ex, for creating  element with custom sizes you have to think about new class name and create another stylesheet for custom styles </li>
+				<li>Nav links and Buttons are made with inline-block, Adding svg icons or font-icons breaks alignment. not alignn perfectly centered</li>				
+				<li> Customizing with sass variables is too complicated. Variables connected with another variable and another variable </li>
+				<li> Colors are very complicated and too many color variables, dark mode works incorrect for many components</li>
+				<li>and many others. explained in detail </li>
+			</ul>
+
+			<h5>What's problem with Tailwind</h5>
+			<p>Tailwind is great, many big companies uses it. But still many developers complain about it  </p>
+			<ul class="list-bullet">
+				<li> Long and messy class names </li>
+				<li> It locks you  up with its ecosystem </li>
+				<li> Creating dark mode is difficult. You have to define colors of dark mode for each element. </li>
+				<li> Complex tooling and setup proccess, npm, postcss, cli and etc </li>				
+				<li> HTML bloats with repeatative and long long classnames. </li>
+				<li> Many color variants which you may not use many of them </li>
+				<li> and many others. explained in detail </li>
+			</ul>
+
+			<hr>	
+
+			<h5>How it is structures</h5>
+
+			<p>
+				It is contains with folders of <mark>css/</mark> and <mark>scss/</mark>. It is recommended to use scss if you want to customize with your needs. also for complex projects. You can use any sass compiler like "Prepros.io" or "Codekit". 
+			</p>
+			<p>scss/ folder contains of components/, layout/, utilities/ and some scss files</p> 
+			<p>finalcss uses grid system of Bootstrap5, because it is easy and familiar for many developers.</p>
+			<p> You can exclude/remove anything from scss/finalcss.scss file </p>
+			<p>Add any compponent into components folder and add include it into main finalcss.scss file, then compile to generate css file. </p>
+			
+
+			<h5>Tailwind's approach but with component classes</h5>
+			<p>I like Tailwind's approach as it claims that you don't need to think about giving class name for each component. That's great but not for everyting. For elements like button or input, it is easier to manage from single stylesheet. why not create component classes for basic and repetative elements. </p>
+			<p>Bootstrap has classnames for every component, It also has many utility classes of flexbox and spacing. But you can't create a basic shape with size of 400x400px. </p>
+			
+			<h5>Simplified version of Bootstrap with utility classes</h5>
+			<p>We created additional utility classes like w-4px, w-8px, w-12px, ..., w-96px, w-100px (means width:100px), same with height, margins and others. More on documentation. </p>
+			<p>Here is example: of creating a user profile card</p>
+		</article>
+			<!-- button -->
+			<div class="d-flex justify-content-center">
+				<button id="themeSwitcher" class="btn btn-secondary">
+					<div class="d-none dark:d-block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+						</svg>
+						<span class="align-middle">Make light</span>
+					</div>
+					<div class="dark:d-none">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+						<span class="align-middle">Make dark</span>
+					</div>
+				</button>
+			</div>
+		<!-- button .//end -->
+
+		</div> <!-- container end.// -->
 </header> <!-- section-header end.// -->
 
 <!-- ============== SECTION CONTENT  ============== -->
