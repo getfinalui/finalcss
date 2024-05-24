@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Website layout sample </title>
+
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', () => {
+		const htmlElement = document.documentElement;
+		const themeSwitcher = document.getElementById('themeSwitcher');
+		// Check localStorage for saved theme
+		const savedTheme = localStorage.getItem('data-theme');
+		if (savedTheme) {
+		    htmlElement.setAttribute('data-theme', savedTheme);
+		}
+		themeSwitcher.addEventListener('click', () => {
+		    const currentTheme = htmlElement.getAttribute('data-theme');
+		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    // Set the new theme on the body element
+		    htmlElement.setAttribute('data-theme', newTheme);          
+		    // Save the new theme in localStorage
+		    localStorage.setItem('data-theme', newTheme);
+		});
+	});
+
+
+	// prevent empty links with # from scrolling top
+	document.addEventListener('DOMContentLoaded', (event) => {
+		document.querySelectorAll('a[href="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+			});
+		});
+	});
+	</script>
+
+<style type="text/css">
+	.bg-colorful{
+		background-image: linear-gradient(180deg, #ffffff03, var(--bg-color-base) 85%), radial-gradient(ellipse at top left, #0d6efd80, transparent 50%), radial-gradient(ellipse at top right, #ffe48480, transparent 50%), radial-gradient(ellipse at center right, #712cf980, transparent 50%), radial-gradient(ellipse at center left, #d6338480, transparent 50%);
+	}
+
+</style>
+
+<!-- FinalCSS -->
+<link href="css/final.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class="bg-base">
+
+
+<header class="bg-neutral-0 p-2">
+	<div class="container">
+		<div class="d-flex align-items-center">
+			<div>
+				<a href="https://finalcss.com" class="h4">Final CSS</a>
+			</div>
+			<nav class="nav ms-auto">
+                <a href="index.html" class="nav-link">Home</a>
+				<a href="docs.html" class="nav-link">Docs</a>
+				<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+				<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
+				<a href="about.html" class="nav-link">About</a>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<section class="bg-secondary  border-top py-5">
+    <div class="container">
+    <h1 class="text-center">Usage guide</h1>
+    </div>
+</section>
+<section class="py-5">	
+<div class="container" style="max-width: 920px;">
+
+
+
+<h2>File structure</h2>
+
+<pre class="bg-light">
+    📂 your-proect
+    │
+    ├── 📂 scss/
+    │   │
+    │   ├── 📂 components/ <i class="text-muted">... button, input, checkbox, dropdown, etc </i>
+    │   │
+    │   ├── 📂 utilities/ <i class="text-muted">... utility classes for structure, sizing, spacing and etc,... </i>
+    │   │
+    │   ├── 📂 layout/ <i class="text-muted">(optional) to style specific pages </i>
+    │   │
+    │   ├── _base-settings.scss <i class="text-muted"> (text sizes, fonts, corder radius, etc) </i>
+    │   │
+    │   ├── _grid.scss  <i class="text-muted"> (grid by Bootstrap 5.3) </i>
+    │   │
+    │   ├── _theme.scss <i class="text-muted"> (all colors for light and dark)</i>
+    │   │
+    │   └── final.scss 
+    │   
+    │
+    ├── 📂 css/
+    │   └── final.css
+    └
+    📄  sample-admin.html
+    📄  sample-hero.html
+    📄  sample-table.html
+    📄  sample-forms.html
+    📄  sample-products.html
+    </pre>
+
+</div> <!-- container end -->
+</section>
+
+
+<footer class="bg-base border-top py-5">
+	<div class="container">
+	  <section class="d-flex justify-content-lg-between">
+        <p class="mb-0"> © 2024 <b>Final CSS.</b> Modern CSS library <br> by Final UI - Design System  </p>  
+        <nav class="nav">
+            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+            <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
+            <a href="about.html" class="nav-link">About</a>
+        </nav>
+      </section>
+	</div><!-- //container -->
+</footer>
+
+
+
+
+</body>
+</html>

@@ -26,132 +26,147 @@
 		    localStorage.setItem('data-theme', newTheme);
 		});
 	});
+
+
+	// prevent empty links with # from scrolling top
+	document.addEventListener('DOMContentLoaded', (event) => {
+		document.querySelectorAll('a[href="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+			});
+		});
+	});
 	</script>
 
+<style type="text/css">
+	.bg-colorful{
+		background-image: linear-gradient(180deg, #ffffff03, var(--bg-color-base) 85%), radial-gradient(ellipse at top left, #0d6efd80, transparent 50%), radial-gradient(ellipse at top right, #ffe48480, transparent 50%), radial-gradient(ellipse at center right, #712cf980, transparent 50%), radial-gradient(ellipse at center left, #d6338480, transparent 50%);
+	}
+
+</style>
 
 <!-- FinalCSS -->
-<link href="css/finalcss.css" rel="stylesheet" type="text/css" />
+<link href="css/final.css" rel="stylesheet" type="text/css" />
 
 
 </head>
-<body>
+<body class="bg-base">
 
-<div class="bg-primary-700 text-center text-invert p-3">
-	Final CSS
-</div>
-<header class="py-5 border-bottom bg-base">	
-		<div class="container" style="max-width: 980px;">
-			<h1 class="display-4 text-center my-4">Final CSS <span class="text-muted"> - Build modern UI quickly</span> </h1>
-		
-			<p  class="text-center mb-4">
-				<code>
-				https://cdn.jsdelivr.net/gh/getfinalui/finalcss@main/css/finalcss.css
-				</code>
-			</p>
 
-			<article class="article">
-			<h4>Why another css library?</h4>
-			<p>
-				You may ask, what makes it different if there are libraries like Bootstrap and Tailwind? Yes, I used many of CSS libraries. They all have cons and pros. You may see many debates around those css frameworks.  None of them are perfect for all cases. They have their own approach. One prefer utility first approach, Another prefer component oriented library. Some of them are too <b>bloated</b> with features which you never use. some of them too outdated in terms of design. 
-			</p>
-			<p> So, I came with idea of creating something based on follwing criterias:</p>
-			<div class="row row-cols-md-4 row-cols-lg-4 my-5">
-				<aside>
-					<h5>Super easy & customizable</h5>
-				</aside>
-				<aside>
-					<h5>No javascript, no complex setup</h5>
-				</aside>
-				<aside>
-					<h5>Utility + component classes</h5>
-				</aside>
-				<aside>
-					<h5>Dark theme with accessibility in mind</h5>
-				</aside>
-				<aside>
-					<h5>Highly aesthetic design</h5>
-				</aside>
-				<aside>
-					<h5>Extendable for comlex projects</h5>
-				</aside>
-				<aside>
-					<h5>Not bloated with useless styles</h5>
-				</aside>
-				<aside>
-					<h5>Grid system of Bootstrap 5</h5>
-				</aside>
+<header class="bg-neutral-0 p-2">
+	<div class="container">
+		<div class="d-flex align-items-center">
+			<div>
+				<a href="https://finalcss.com" class="h4">Final CSS</a>
 			</div>
+			<nav class="nav ms-auto">
+                <a href="index.html" class="nav-link">Home</a>
+				<a href="docs.html" class="nav-link">Docs</a>
+				<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+				<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
+				<a href="about.html" class="nav-link">About</a>
+			</nav>
+		</div>
+	</div>
+</header>
+<main class="py-5 bg-colorful">	
+	<div class="container" style="max-width: 980px;">
+		<h1 class="display-4 text-center my-4">A simple but powerful <br> CSS library for any purpose</span> </h1>
+		<p class="lead mb-4 text-muted text-center"> Reimagined version of Bootstrap and Tailwind CSS libraries. <br> Create anything with both utility and component classes </p>
+		<p  class="text-center my-5">
+			<code class="bg-neutral-0 rounded-pill border p-1 px-3 d-inline-block">
+			https://cdn.jsdelivr.net/gh/getfinalui/finalcss@main/css/finalcss.css
+			</code>
+		</p>
 
-			<p>This is called "Final CSS" (finalcss). This libraru will be updated regularly, </p>
+		<div class="text-center mb-3">
+			<a class="btn btn-lg btn-primary" href="docs.html">Read documentation</a>
+			<a class="btn btn-lg btn-secondary" href="#demo">View example UI</a>
+		</div>
+
+	</div> <!-- container end.// -->
+</main> <!-- section-header end.// -->
 			
-			<h5>What's problem with Bootstrap</h5>
-			<p>I used Bootstrap for hundreds of projects. it gives scss with customizable varibales and separate sass files for each component.  you can use also directly css from cdn whic is great, but... </p>
-			<ul  class="list-bullet">
-				<li> It is bloated with so many styles and components</li>
-				<li> Its navbar is very limited, for many cases you have to create you own </li>
-				<li> Utility classes are limited, for ex, for creating  element with custom sizes you have to think about new class name and create another stylesheet for custom styles </li>
-				<li>Nav links and Buttons are made with inline-block, Adding svg icons or font-icons breaks alignment. not alignn perfectly centered</li>				
-				<li> Customizing with sass variables is too complicated. Variables connected with another variable and another variable </li>
-				<li> Colors are very complicated and too many color variables, dark mode works incorrect for many components</li>
-				<li>and many others. explained in detail </li>
-			</ul>
-
-			<h5>What's problem with Tailwind</h5>
-			<p>Tailwind is great, many big companies uses it. But still many developers complain about it  </p>
-			<ul class="list-bullet">
-				<li> Long and messy class names </li>
-				<li> It locks you  up with its ecosystem </li>
-				<li> Creating dark mode is difficult. You have to define colors of dark mode for each element. </li>
-				<li> Complex tooling and setup proccess, npm, postcss, cli and etc </li>				
-				<li> HTML bloats with repeatative and long long classnames. </li>
-				<li> Many color variants which you may not use many of them </li>
-				<li> and many others. explained in detail </li>
-			</ul>
-
-			<hr>	
-
-			<h5>How it is structures</h5>
-
-			<p>
-				It is contains with folders of <mark>css/</mark> and <mark>scss/</mark>. It is recommended to use scss if you want to customize with your needs. also for complex projects. You can use any sass compiler like "Prepros.io" or "Codekit". 
-			</p>
-			<p>scss/ folder contains of components/, layout/, utilities/ and some scss files</p> 
-			<p>finalcss uses grid system of Bootstrap5, because it is easy and familiar for many developers.</p>
-			<p> You can exclude/remove anything from scss/finalcss.scss file </p>
-			<p>Add any compponent into components folder and add include it into main finalcss.scss file, then compile to generate css file. </p>
-			
-
-			<h5>Tailwind's approach but with component classes</h5>
-			<p>I like Tailwind's approach as it claims that you don't need to think about giving class name for each component. That's great but not for everyting. For elements like button or input, it is easier to manage from single stylesheet. why not create component classes for basic and repetative elements. </p>
-			<p>Bootstrap has classnames for every component, It also has many utility classes of flexbox and spacing. But you can't create a basic shape with size of 400x400px. </p>
-			
-			<h5>Simplified version of Bootstrap with utility classes</h5>
-			<p>We created additional utility classes like w-4px, w-8px, w-12px, ..., w-96px, w-100px (means width:100px), same with height, margins and others. More on documentation. </p>
-			<p>Here is example: of creating a user profile card</p>
+<section class="pb-5">
+	
+	<div class="container">
+		<hr>
+		<article class="article mt-4 text-lg">
+			<div class="row">
+				<div class="col-lg-7">
+					<h3 class="mb-3">Why another CSS library?</h3>
+					<p>
+						You may ask, what makes it different if there are libraries like Bootstrap and Tailwind? 
+					</p>
+					<p>
+						Good question, here is why: I used many of CSS libraries. They all have cons and pros. 
+						You may see many debates around those css frameworks.  
+						None of them are perfect for all cases. They have their own approach. 
+					</p>
+					<p>One prefer utility first approach, Another prefer component oriented library. 
+						Some of them are too <b>bloated</b> with features which you never use. 
+						some of them too outdated in terms of design. </p>
+					<p> So, I came with idea of creating something based on follwing criterias:</p>
+				</div>
+				<aside class="col-lg-5">
+					<img src="photo.png" class="mw-100" alt="">
+				</aside>
+			</div> <!-- row .//end -->
 		</article>
-			<!-- button -->
-			<div class="d-flex justify-content-center">
-				<button id="themeSwitcher" class="btn btn-secondary">
-					<div class="d-none dark:d-block">
-						<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-						</svg>
-						<span class="align-middle">Make light</span>
-					</div>
-					<div class="dark:d-none">
-						<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-						</svg>
-						<span class="align-middle">Make dark</span>
-					</div>
-				</button>
-			</div>
-		<!-- button .//end -->
+		<hr>
+		<div class="row row-cols-md-4 row-cols-lg-4 my-5">
+			<aside>
+				<h5>Super easy & customizable</h5>
+			</aside>
+			<aside>
+				<h5>No javascript, no complex setup</h5>
+			</aside>
+			<aside>
+				<h5>Utility + component classes</h5>
+			</aside>
+			<aside>
+				<h5>Dark theme with accessibility in mind</h5>
+			</aside>
+			<aside>
+				<h5>Highly aesthetic design</h5>
+			</aside>
+			<aside>
+				<h5>Extendable for comlex projects</h5>
+			</aside>
+			<aside>
+				<h5>Not bloated with useless styles</h5>
+			</aside>
+			<aside>
+				<h5>Grid system of Bootstrap 5</h5>
+			</aside>
+		</div>
 
-		</div> <!-- container end.// -->
-</header> <!-- section-header end.// -->
-
+		
+	</div> <!-- container .//end -->
+</section>
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="py-5 bg-lower">
+<section class="py-5 bg-lower" id="demo">
 <div class="container">
+
+<header class="mb-5">
+	<h3 class="text-center mb-4">Examples based on Final CSS library</h3>
+	<!-- button -->
+		<div class="d-flex justify-content-center">
+			<button id="themeSwitcher" class="btn btn-intense">
+				<div class="d-none dark:d-block">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+					</svg>
+					<span class="align-middle">Make light</span>
+				</div>
+				<div class="dark:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+					</svg>
+					<span class="align-middle">Make dark</span>
+				</div>
+			</button>
+		</div>
+	<!-- button .//end -->
+</header>
 
 	<article>
 		<div class="row mb-4">
@@ -817,10 +832,8 @@
 		
 		<article class="article text-lg">
 			<h1 class="mb-3">Now, let's talk about this library</h1>
-			<p>
-				I gave it name <b>Final CSS (finalcss.com)</b>
-			</p>
-			<h4>Utility + Component classes</h4>
+
+			<h5  class="mt-5">Utility + Component classes</h5>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -828,7 +841,7 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-			<h4>What makes it differente?</h4>
+			<h5  class="mt-5">What makes it differente?</h5>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -837,53 +850,64 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-			<h4>What is the problem with Bootstrap 5</h4>
+			<p>This is called "Final CSS" (finalcss). This libraru will be updated regularly, </p>
+			
+			<h5  class="mt-5">What's problem with Bootstrap</h5>
+			<p>I used Bootstrap for hundreds of projects. it gives scss with customizable varibales and separate sass files for each component.  you can use also directly css from cdn whic is great, but... </p>
+			<ul  class="list-bullet">
+				<li> It is bloated with so many styles and components</li>
+				<li> Its navbar is very limited, for many cases you have to create you own </li>
+				<li> Utility classes are limited, for ex, for creating  element with custom sizes you have to think about new class name and create another stylesheet for custom styles </li>
+				<li>Nav links and Buttons are made with inline-block, Adding svg icons or font-icons breaks alignment. not alignn perfectly centered</li>				
+				<li> Customizing with sass variables is too complicated. Variables connected with another variable and another variable </li>
+				<li> Colors are very complicated and too many color variables, dark mode works incorrect for many components</li>
+				<li>and many others. explained in detail </li>
+			</ul>
+
+			<h5  class="mt-5">What's problem with Tailwind</h5>
+			<p>Tailwind is great, many big companies uses it. But still many developers complain about it  </p>
+			<ul class="list-bullet">
+				<li> Long and messy class names </li>
+				<li> It locks you  up with its ecosystem </li>
+				<li> Creating dark mode is difficult. You have to define colors of dark mode for each element. </li>
+				<li> Complex tooling and setup proccess, npm, postcss, cli and etc </li>				
+				<li> HTML bloats with repeatative and long long classnames. </li>
+				<li> Many color variants which you may not use many of them </li>
+				<li> and many others. explained in detail </li>
+			</ul>
+
+			<hr>	
+
+			<h5  class="mt-5">How it is structures</h5>
+
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				It is contains with folders of <mark>css/</mark> and <mark>scss/</mark>. It is recommended to use scss if you want to customize with your needs. also for complex projects. You can use any sass compiler like "Prepros.io" or "Codekit". 
+			</p>
+			<p>scss/ folder contains of components/, layout/, utilities/ and some scss files</p> 
+			<p>finalcss uses grid system of Bootstrap5, because it is easy and familiar for many developers.</p>
+			<p> You can exclude/remove anything from scss/finalcss.scss file </p>
+			<p>Add any compponent into components folder and add include it into main finalcss.scss file, then compile to generate css file. </p>
+			
+
+			<h5  class="mt-4">Tailwind's approach but with component classes</h5>
+			
+			<p>I like Tailwind's approach as it claims that you don't need to think about giving class name for each component. That's great but not for everyting. For elements like button or input, it is easier to manage from single stylesheet. why not create component classes for basic and repetative elements. </p>
+			<p>Bootstrap has classnames for every component, It also has many utility classes of flexbox and spacing. But you can't create a basic shape with size of 400x400px. </p>
+			
+			<h5  class="mt-4">Simplified version of Bootstrap with utility classes</h5>
+			<p>We created additional utility classes like w-4px, w-8px, w-12px, ..., w-96px, w-100px (means width:100px), same with height, margins and others. More on documentation. </p>
+			<p>Here is example: of creating a user profile card</p>
+
+
+			<h5 class="mt-4">Can I use this for complex SaaS projects</h5>
+			<p>
+				Yes! absolutly!, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
-
-			<h4>What is the problem with Tailwind CSS</h4>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-
-			<h4>Can I use this (Final CSS) for complex projects</h4>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-
-			<h4>What is the advantages and disadvantages of finalcss?</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-			<h4>What is the advantages and disadvantages of finalcss?</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-			<h4>About me</h4>
 			
 
 		</article>
@@ -893,63 +917,38 @@
 </section>
 
 
-<section class="py-5 bg-secondary border-top text-lg">
-	
-	<div class="container article" style="max-width: 920px">
-		
-		<h4>About me</h4>
-
-		<p>I live in sunny Tashkent (Central Asia). </p> 
-			<p>I'm deeply passionate about UI Design, UX Design and Front-end things like HTML/CSS and Vanilla JS. </p> 
-			<p>I found life mission. It is making digital products more pleasent and aethtetic.  Here is how it all started.  When I was 7 years old kid (in 1997) I hated TV remote control with full of buttons, difficulty to use when to use VHS casette. That time I started thinking about usability of remote control of our TV set. How it should be and imagined better version of remote control with fewer buttons. Since then whenever I see complicated things, I make better version in my mind... </p> 
-			<p>Anyways. Until now I worked with hundreds of clients to improve their product's usability. I love designing and making my own UI into code. </p>
-			<p>
-				I started this project on May 2024, 
-				This is new project requires regular updates like adding new utility classes and components. I'd love to work on this project continiously. Will keep improving without bloating the code.
-				I relay on community support. Whoever uses it that makes me happy.
-			</p>
-
-	</div>
-
-</section>
-
-
-<section class="py-5 bg-primary-700 border-top text-invert text-lg">
-	
+<section class="py-5 bg-colorful border-top text-lg">
 	<div class="container article text-center" style="max-width: 920px">
 		
-		<h3 class="mb-3">Your support matters!</h3>
+		<h2 class="my-4">Your support matters!</h2>
 
-		<p class="mb-3">
+		<p class="mb-4">
 			This is new project requires regular updates like adding new utility classes and components. <br> Your support motivates to improve this project continiously. 
 		</p>
 		
-		<p class="mb-4">
-			<a class="btn btn-white btn-lg" href="https://github.com/sponsors/getfinalui" target="_blank">
-				<svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0099 0C5.36875 0 0 5.40833 0 12.0992C0 17.4475 3.43994 21.9748 8.21205 23.5771C8.80869 23.6976 9.02724 23.3168 9.02724 22.9965C9.02724 22.716 9.00757 21.7545 9.00757 20.7527C5.6667 21.474 4.97099 19.3104 4.97099 19.3104C4.43409 17.9082 3.63858 17.5478 3.63858 17.5478C2.54511 16.8066 3.71823 16.8066 3.71823 16.8066C4.93117 16.8868 5.56763 18.0486 5.56763 18.0486C6.64118 19.8913 8.37111 19.3707 9.06706 19.0501C9.16638 18.2688 9.48473 17.728 9.82275 17.4276C7.15817 17.1471 4.35469 16.1055 4.35469 11.458C4.35469 10.1359 4.8316 9.05428 5.58729 8.21304C5.46807 7.91263 5.0504 6.67043 5.70677 5.00787C5.70677 5.00787 6.72083 4.6873 9.00732 6.24981C9.98625 5.98497 10.9958 5.85024 12.0099 5.84911C13.024 5.84911 14.0577 5.98948 15.0123 6.24981C17.299 4.6873 18.3131 5.00787 18.3131 5.00787C18.9695 6.67043 18.5515 7.91263 18.4323 8.21304C19.2079 9.05428 19.6652 10.1359 19.6652 11.458C19.6652 16.1055 16.8617 17.1269 14.1772 17.4276C14.6148 17.8081 14.9924 18.5292 14.9924 19.6711C14.9924 21.2936 14.9727 22.5957 14.9727 22.9962C14.9727 23.3168 15.1915 23.6976 15.7879 23.5774C20.56 21.9745 23.9999 17.4475 23.9999 12.0992C24.0196 5.40833 18.6312 0 12.0099 0Z" fill="#24292F"/>
-				</svg>
-				Github Sponsors
+		<p class="mb-2">
+			<a class="btn btn-secondary text-black btn-lg" style="background-color:#FFDD00;" href="https://buymeacoffee.com/vosidiy" target="_blank">
+				<i class="h4 me-2"> &#9749; </i> <span>Buy me a coffee</span>
 			</a> 
-			<a class="btn btn-lg btn-primary" href="https://paypal.me/vosidiy/20"> Support via Paypal</a>
-
+			<a class="btn btn-lg btn-primary" href="https://paypal.me/vosidiy/20"> 
+				Support via Paypal
+			</a>
 		</p>
-		<p><a class="text-invert opacity-50" href="https://buymeacoffee.com/vosidiy">or buy me a coffee</a></p>
-		<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="vosidiy" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-	</div>
-
+	
+		<br><br>
+	</div> <!-- container end -->
 </section>
 
 
-<footer class="bg-base border-top text-lg py-5">
+<footer class="bg-base border-top py-5">
 	<div class="container">
 	  <section class="d-flex justify-content-lg-between">
         <p class="mb-0"> © 2024 <b>Final CSS.</b> Modern CSS library <br> by Final UI - Design System  </p>  
         <nav class="nav">
-          <a href="https://finalui.com" target="_blank" class="nav-link"> Figma version </a> 
-          <a href="https://ecommerce-ui.com" target="_blank" class="nav-link">E-commerce UI Kit</a> 
-          <a href="https://github.com/getfinalui/finalcss" target="_blank" class="nav-link">Github Repo</a> 
-          <a href="about.html" target="_blank" class="nav-link">About project</a> 
+			<a href="docs.html" class="nav-link">Docs</a>
+            <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+            <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
+            <a href="about.html" class="nav-link">About</a>
         </nav>
       </section>
 	</div><!-- //container -->

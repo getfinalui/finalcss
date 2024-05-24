@@ -32,7 +32,7 @@
 
 // generate classes for background ex. bg-primary-100, bg-neutral-900
 
-$color_nums:100, 200, 300, 400, 500, 600, 700, 800, 900;
+$color_nums:0, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 @each $num in $color_nums {
   .bg-neutral-#{$num} {

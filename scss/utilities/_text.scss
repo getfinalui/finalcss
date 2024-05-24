@@ -79,7 +79,7 @@ $display-font-sizes: (
 
 // .lead font-size
 .lead {
-  font-size:$font-size-base;
+  font-size:1.5rem;
   font-weight: 600;
 }
 
@@ -87,8 +87,8 @@ $display-font-sizes: (
 
 
 /// constant colors despite any theme
-.text-black{ color:#000; }
-.text-white{ color:#fff; }
+.text-black, .text-dark{ color:#000; }
+.text-white, { color:#fff; }
 
 /// theme based text color
 .text-base{ color: var(--text-color-base); }

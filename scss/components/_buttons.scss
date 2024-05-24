@@ -112,7 +112,7 @@
   box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.12) inset;
 }
 .btn-secondary {
-  --btn-bg: transparent;
+  --btn-bg: var(--bg-color-base);
   --btn-bg-hover: var(--bg-color-secondary);
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--border-color-base);
@@ -120,7 +120,7 @@
   box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
 }
 .btn-danger-soft{
-  --btn-bg: transparent;
+  --btn-bg: var(--bg-color-base);
   --btn-bg-hover: var(--bg-color-secondary);
   --btn-text-color: var(--text-color-danger);
   --btn-border-color: var(--border-color-base);
