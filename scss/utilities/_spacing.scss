@@ -3,7 +3,7 @@ $spacing_nums:
 210, 220, 230, 240;
 
 // * Generates sizes in px, for ex:
-// .mt-96px{margin-top:96px} or .w-40px{width:40px}
+// .mt-96px{margin-top:96px} 
 // MARGINS in px
 
 @each $spacing in $spacing_nums {
@@ -65,29 +65,6 @@ $spacing_nums:
 @each $spacing in $spacing_nums {
   .ps-#{$spacing}px {
     padding-left: #{$spacing}px;
-  }
-}
-
-
-// WIDTH
-@each $spacing in $spacing_nums {
-  .w-#{$spacing}px {
-    width: #{$spacing}px;
-  }
-}
-
-// HEIGHT
-@each $spacing in $spacing_nums {
-  .h-#{$spacing}px {
-    height: #{$spacing}px;
-  }
-}
-
-// WITH and HEIGHT
-@each $spacing in $spacing_nums {
-  .size-#{$spacing}px {
-    width: #{$spacing}px;
-    height: #{$spacing}px;
   }
 }
 
@@ -166,87 +143,6 @@ $spacing_nums:
 }
 
 
-
-
-.w-25 {
-  width: 25% !important;
-}
-
-.w-50 {
-  width: 50% !important;
-}
-
-.w-75 {
-  width: 75% !important;
-}
-
-.w-80 {
-  width: 80% !important;
-}
-
-.w-90 {
-  width: 90% !important;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-.w-auto {
-  width: auto !important;
-}
-
-.mw-100 {
-  max-width: 100% !important;
-}
-
-.vw-100 {
-  width: 100vw !important;
-}
-
-.min-vw-100 {
-  min-width: 100vw !important;
-}
-
-.h-25 {
-  height: 25% !important;
-}
-
-.h-50 {
-  height: 50% !important;
-}
-
-.h-75 {
-  height: 75% !important;
-}
-
-.h-80 {
-  height: 80% !important;
-}
-
-.h-90 {
-  height: 90% !important;
-}
-
-.h-100 {
-  height: 100% !important;
-}
-
-.h-auto {
-  height: auto !important;
-}
-
-.mh-100 {
-  max-height: 100% !important;
-}
-
-.vh-100 {
-  height: 100vh !important;
-}
-
-.min-vh-100 {
-  min-height: 100vh !important;
-}
 
 /// small devices 
 @media (min-width: 576px) {

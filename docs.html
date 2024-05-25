@@ -82,6 +82,14 @@
 
 <h2>File structure</h2>
 
+<p>
+	It is contains with folders of <mark>css/</mark> and <mark>scss/</mark>. It is recommended to use scss if you want to customize with your needs. also for complex projects. You can use any sass compiler like "Prepros.io" or "Codekit". 
+</p>
+<p>scss/ folder contains of components/, layout/, utilities/ and some scss files</p> 
+<p>finalcss uses grid system of Bootstrap5, because it is easy and familiar for many developers.</p>
+<p> You can exclude/remove anything from scss/finalcss.scss file </p>
+<p>Add any compponent into components folder and add include it into main finalcss.scss file, then compile to generate css file. </p>
+
 <pre class="bg-light">
     📂 your-proect
     │
@@ -112,6 +120,24 @@
     📄  sample-products.html
     </pre>
 
+
+
+
+<h5  class="mt-4">Tailwind's approach but with component classes</h5>
+
+<p>I like Tailwind's approach as it claims that you don't need to think about giving class name for each component. That's great but not for everyting. For elements like button or input, it is easier to manage from single stylesheet. why not create component classes for basic and repetative elements. </p>
+<p>Bootstrap has classnames for every component, It also has many utility classes of flexbox and spacing. But you can't create a basic shape with size of 400x400px. </p>
+
+<h5  class="mt-4">Simplified version of Bootstrap with utility classes</h5>
+<p>We created additional utility classes like w-4px, w-8px, w-12px, ..., w-96px, w-100px (means width:100px), same with height, margins and others. More on documentation. </p>
+<p>Here is example: of creating a user profile card</p>
+
+
+
+<hr>
+
+<p class="lead">Documentation is still in proccess of writing</p>
+
 </div> <!-- container end -->
 </section>
 
@@ -124,7 +150,6 @@
             <a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
             <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
-            <a href="about.html" class="nav-link">About</a>
         </nav>
       </section>
 	</div><!-- //container -->

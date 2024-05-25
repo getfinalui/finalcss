@@ -53,7 +53,7 @@
 <body class="bg-base">
 
 
-<header class="bg-neutral-0 p-2">
+<header class="bg-neutral-0 py-3">
 	<div class="container">
 		<div class="d-flex align-items-center">
 			<div>
@@ -64,7 +64,7 @@
 				<a href="docs.html" class="nav-link">Docs</a>
 				<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
 				<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
-				<a href="about.html" class="nav-link">About</a>
+				<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-primary-soft">Download</a>
 			</nav>
 		</div>
 	</div>
@@ -94,7 +94,7 @@
 		<article class="article mt-4 text-lg">
 			<div class="row">
 				<div class="col-lg-7">
-					<h3 class="mb-3">Why another CSS library?</h3>
+					<h2 class="mb-3">Why another CSS library?</h2>
 					<p>
 						You may ask, what makes it different if there are libraries like Bootstrap and Tailwind? 
 					</p>
@@ -113,31 +113,30 @@
 				</aside>
 			</div> <!-- row .//end -->
 		</article>
-		<hr>
-		<div class="row row-cols-md-4 row-cols-lg-4 my-5">
-			<aside>
-				<h5>Super easy & customizable</h5>
+		<div class="grid my-5">
+			<aside class="g-col-6 g-col-lg-4 p-4 card bg-secondary min-h-120px">
+				<h5>Customizable</h5>
+				<p>You're not locked in any rules. Make it your own, Add your component or utility classes</p>
 			</aside>
-			<aside>
-				<h5>No javascript, no complex setup</h5>
+			<aside class="g-col-6 g-col-lg-4 p-4 card bg-secondary min-h-120px">
+				<h5>No complex setup,</h5>
+				<p>Super easy to get started. Use any JS framework like React, Angular, Vue or Vanilla JS. </p>
 			</aside>
-			<aside>
-				<h5>Utility + component classes</h5>
+			<aside class="g-col-6 g-col-lg-4 p-4 card bg-secondary min-h-120px">
+				<h5>Utility classes &amp; components</h5>
+				<p>Create any structure with utility classes. Use component classes for base elements </p>
 			</aside>
-			<aside>
-				<h5>Dark theme with accessibility in mind</h5>
+			<aside class="g-col-6 g-col-lg-4 p-4 card bg-secondary min-h-120px">
+				<h5>Dark mode with accessibility</h5>
+				<p>We prepared all colors for both light and dark mode. feel free to customize for any theme</p>
 			</aside>
-			<aside>
-				<h5>Highly aesthetic design</h5>
-			</aside>
-			<aside>
-				<h5>Extendable for comlex projects</h5>
-			</aside>
-			<aside>
+			<aside class="g-col-6 g-col-lg-4 p-4 card bg-secondary min-h-120px">
 				<h5>Not bloated with useless styles</h5>
+				<p>Most essential utilities and components you need. No bloated with useless variables and styles </p>
 			</aside>
-			<aside>
+			<aside class="g-col-6 g-col-lg-4 p-4 card bg-secondary min-h-120px">
 				<h5>Grid system of Bootstrap 5</h5>
+				<p> Grid system with Flexbox and CSS grid classes by Bootstrap5. No need to reinvent the wheel </p>
 			</aside>
 		</div>
 
@@ -149,7 +148,8 @@
 <div class="container">
 
 <header class="mb-5">
-	<h3 class="text-center mb-4">Examples based on Final CSS library</h3>
+	<h2 class="text-center">Examples based on Final CSS library</h2>
+	<p class="lead text-center text-muted  mb-4">Created with utility and component classes of Final CSS library</p>
 	<!-- button -->
 		<div class="d-flex justify-content-center">
 			<button id="themeSwitcher" class="btn btn-intense">
@@ -831,26 +831,10 @@
 	<div class="container" style="max-width: 920px">
 		
 		<article class="article text-lg">
-			<h1 class="mb-3">Now, let's talk about this library</h1>
+			<h2 class="mb-3">Similar to Bootstrap 5, but...</h2>
 
-			<h5  class="mt-5">Utility + Component classes</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>... But more lightweight, without JS, simplified components with additional utility classes. Re-designed with more aethtetic styles.  If you have used bootstrap framwework you face some challenges like needing to override or changing variables of scss (sass). Both cases are time consuming and frustrating. So here comes Final CSS to solve that.   </p>
 
-			<h5  class="mt-5">What makes it differente?</h5>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-			<p>This is called "Final CSS" (finalcss). This libraru will be updated regularly, </p>
 			
 			<h5  class="mt-5">What's problem with Bootstrap</h5>
 			<p>I used Bootstrap for hundreds of projects. it gives scss with customizable varibales and separate sass files for each component.  you can use also directly css from cdn whic is great, but... </p>
@@ -860,59 +844,24 @@
 				<li> Utility classes are limited, for ex, for creating  element with custom sizes you have to think about new class name and create another stylesheet for custom styles </li>
 				<li>Nav links and Buttons are made with inline-block, Adding svg icons or font-icons breaks alignment. not alignn perfectly centered</li>				
 				<li> Customizing with sass variables is too complicated. Variables connected with another variable and another variable </li>
-				<li> Colors are very complicated and too many color variables, dark mode works incorrect for many components</li>
-				<li>and many others. explained in detail </li>
+				<li> Colors are very complicated and too many color $variables, dark mode works incorrect for many components</li>
+				<li> Color classes in bootstrrap is complicated. For ex. they have text-bg-primary, bg-primary, --bs-primary-rgb, --bs-primary-text-emphasis and you have to read documentation</li>
 			</ul>
 
 			<h5  class="mt-5">What's problem with Tailwind</h5>
 			<p>Tailwind is great, many big companies uses it. But still many developers complain about it  </p>
 			<ul class="list-bullet">
-				<li> Long and messy class names </li>
+				<li> Long and messy class names. HTML bloats with repeatative and long long classnames. </li>
 				<li> It locks you  up with its ecosystem </li>
 				<li> Creating dark mode is difficult. You have to define colors of dark mode for each element. </li>
-				<li> Complex tooling and setup proccess, npm, postcss, cli and etc </li>				
-				<li> HTML bloats with repeatative and long long classnames. </li>
+				<li> Complex tooling and setup proccess, npm, postcss, cli and etc </li>	
 				<li> Many color variants which you may not use many of them </li>
 				<li> and many others. explained in detail </li>
 			</ul>
-
-			<hr>	
-
-			<h5  class="mt-5">How it is structures</h5>
-
-			<p>
-				It is contains with folders of <mark>css/</mark> and <mark>scss/</mark>. It is recommended to use scss if you want to customize with your needs. also for complex projects. You can use any sass compiler like "Prepros.io" or "Codekit". 
-			</p>
-			<p>scss/ folder contains of components/, layout/, utilities/ and some scss files</p> 
-			<p>finalcss uses grid system of Bootstrap5, because it is easy and familiar for many developers.</p>
-			<p> You can exclude/remove anything from scss/finalcss.scss file </p>
-			<p>Add any compponent into components folder and add include it into main finalcss.scss file, then compile to generate css file. </p>
-			
-
-			<h5  class="mt-4">Tailwind's approach but with component classes</h5>
-			
-			<p>I like Tailwind's approach as it claims that you don't need to think about giving class name for each component. That's great but not for everyting. For elements like button or input, it is easier to manage from single stylesheet. why not create component classes for basic and repetative elements. </p>
-			<p>Bootstrap has classnames for every component, It also has many utility classes of flexbox and spacing. But you can't create a basic shape with size of 400x400px. </p>
-			
-			<h5  class="mt-4">Simplified version of Bootstrap with utility classes</h5>
-			<p>We created additional utility classes like w-4px, w-8px, w-12px, ..., w-96px, w-100px (means width:100px), same with height, margins and others. More on documentation. </p>
-			<p>Here is example: of creating a user profile card</p>
-
-
-			<h5 class="mt-4">Can I use this for complex SaaS projects</h5>
-			<p>
-				Yes! absolutly!, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
 			
 
 		</article>
 
-		
 	</div>
 </section>
 
@@ -948,7 +897,6 @@
 			<a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
             <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
-            <a href="about.html" class="nav-link">About</a>
         </nav>
       </section>
 	</div><!-- //container -->
