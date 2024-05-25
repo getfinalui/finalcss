@@ -72,26 +72,29 @@
 
 <section class="bg-secondary  border-top py-5">
     <div class="container">
-    <h1 class="text-center">Usage guide</h1>
+    <h1 class="text-center">Documentation</h1>
     </div>
 </section>
 <section class="py-5">	
-<div class="container" style="max-width: 920px;">
+<div class="container article text-lg" style="max-width: 920px;">
 
 
 
-<h2>File structure</h2>
+<h4>File structure</h4>
 
 <p>
-	It is contains with folders of <mark>css/</mark> and <mark>scss/</mark>. It is recommended to use scss if you want to customize with your needs. also for complex projects. You can use any sass compiler like "Prepros.io" or "Codekit". 
+	It  contains of folders <b>📂 css/</b> and <b>📂 scss/</b>. It is recommended to use scss if you want to customize with your needs. also for complex projects. 
 </p>
-<p>scss/ folder contains of components/, layout/, utilities/ and some scss files</p> 
-<p>finalcss uses grid system of Bootstrap5, because it is easy and familiar for many developers.</p>
-<p> You can exclude/remove anything from scss/finalcss.scss file </p>
+<p>You can use any sass compiler like "Prepros.io" or "Codekit" if you are web designer who is scared of terminal window. It is up to you how to compile scss. If you don't want customization then just include final.css file  </p>
+<p><b>📂 scss/</b> folder contains of <b>📂 components/</b>, <b>📂 layout/</b>, <b>📂 utilities/</b> and some .scss files for settings like theme colors and font sizes</p> 
+<p>finalcss uses grid system of <b>Bootstrap 5</b>, because it is easy and familiar for many developers.</p>
+<p> You can exclude or remove anything from sass (scss/finalcss.scss) file </p>
 <p>Add any compponent into components folder and add include it into main finalcss.scss file, then compile to generate css file. </p>
 
+<hr>
+
 <pre class="bg-light">
-    📂 your-proect
+    📂 your-project
     │
     ├── 📂 scss/
     │   │
@@ -120,32 +123,181 @@
     📄  sample-products.html
     </pre>
 
-
-
-
-<h5  class="mt-4">Tailwind's approach but with component classes</h5>
+<hr>
+<h4  class="mt-4">Tailwind's approach with component classes</h4>
 
 <p>I like Tailwind's approach as it claims that you don't need to think about giving class name for each component. That's great but not for everyting. For elements like button or input, it is easier to manage from single stylesheet. why not create component classes for basic and repetative elements. </p>
 <p>Bootstrap has classnames for every component, It also has many utility classes of flexbox and spacing. But you can't create a basic shape with size of 400x400px. </p>
 
-<h5  class="mt-4">Simplified version of Bootstrap with utility classes</h5>
+<h4  class="mt-4">Simplified version of Bootstrap with more utility classes</h4>
 <p>We created additional utility classes like w-4px, w-8px, w-12px, ..., w-96px, w-100px (means width:100px), same with height, margins and others. More on documentation. </p>
 <p>Here is example: of creating a user profile card</p>
 
 
+<h4>How to change theme</h5>
+<p>Open <b>📄 theme.scss</b>. It contains css variables for light and dark mode. You can simply change it based on your brand, and compile to generate css file</p>
+
+<h4>How to add new component?</h4>
+<p>Create a new sass file <b>📄_component_name.scss</b> inside the folder 📂components/  and import into final.scss file by writing <code>@import "components/component_name";</code> </p>
 
 <hr>
 
+<h4>Grid system</h4>
+<p>FinalCSS fully supports grid system of Bootstrap 5 (including CSS grid). <br> if you don't need grid system, then you can simply remove <code>@import "grid";</code> from <b>📄final.scss</b> file.   </p>
+<p>Read about Bootstrap's grid system here: <a target="_blank" href="https://getbootstrap.com/docs/5.3/layout/breakpoints/">https://getbootstrap.com/docs/5.3/layout/breakpoints/</a></p>
+
+<hr>
+
+<h4>Components</h4>
+<p>Check the files inside <b>📂scss/components/</b> and see components. Most components we use naming from documentation of Bootstrap 5  <a target="_blank" href="https://getbootstrap.com/docs/5.3/components/alerts/">https://getbootstrap.com/docs/5.3/components/alerts/</a></p>
+
+<p>Unlike from Bootstrap, we encapsulated each component separatly. For ex. <b>_buttons</b> component inherits colors from <b>theme.scss</b> but all other units like radius and sizes controlled from _buttons.scss file</p>
+<p>No chain of variables, No connection between components, No complex sass mixins or functions. All simple and encapsulated</p>
+
+<ul class="list-bullet fw-medium mb-4">
+	<li> alert  </li>
+	<li> badge </li>
+	<li> buttons   </li>
+	<li> card   </li>
+	<li> dropdown-menu   </li>
+	<li> form-check-input   </li>
+	<li> form-control   </li>
+	<li> form-label  </li>
+	<li> form-select   </li>
+	<li> nav   </li>
+	<li> segmented-control    </li>
+	<li> table  </li>
+	<li>... more components will be added soon</li>
+</ul>
+
+Most components are NOT same as Bootsrap. We simplified by removing useless styles, Some components made with flexbox. For ex: button <code>.btn</code> component is made with <code>inline-flex</code>. 
+<p>
+	<h6>Button styles we support: </h6>
+	<code>btn-intense, btn-primary, .btn-danger,  btn-secondary, btn-neutral, <br> btn-primary-soft, btn-danger-soft, btn-plain, btn-white </code>
+</p>
+<p>Dropped nonsense button styles like  <em>btn-warning, btn-info</em> and some others</p>
+<p>Added icon buttons also. add <code>btn-icon</code> to make buttons width and height same. </p>
+<p>Button sizing classes <code>btn-lg</code>, or <code>btn-sm</code></p>
+
+<div class="card p-3 mb-3">
+	<p>
+		<a class="btn btn-secondary">Secondary</a>
+		<a class="btn btn-secondary btn-icon"> ❤️ </a>
+	</p>
+
+	<p>
+		<code>&lt;a class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/a&gt;</code>  <br>
+		<code>&lt;a class=&quot;btn btn-secondary btn-icon&quot;&gt; ❤️&lt;/a&gt;</code>
+	 
+	</p>
+</div>
+
+<div class="card p-3">
+	<p>
+		<a class="btn btn-lg btn-primary-soft">Primary soft large</a>
+		<a class="btn btn-lg btn-primary-soft btn-icon"> ❤️ </a>
+	</p>
+
+	<p>
+		<code>&lt;a class=&quot;btn btn-lg btn-primary-soft&quot;&gt;Secondary&lt;/a&gt;</code>  <br>
+		<code>&lt;a class=&quot;btn btn-lg btn-primary-soft btn-icon&quot;&gt; ❤️&lt;/a&gt;</code>
+	 
+	</p>
+</div>
+
+<hr>
+
+<h4>Utility classes</h4>
+<p>Check scss/utilities folder. Add your own utility classes if you like </p>
+<p>Utility classes is used to create spacing, sizing, structure of layout and so on.  <br> FialCSS supports all utility classes of Bootsrap 5. You can use any classes like mt-5 (margin-top) as per bootstrap's documentation<br>
+Read more about bootstrap's utility classes: <br> <a target="_blank" href="https://getbootstrap.com/docs/5.3/utilities/spacing/">https://getbootstrap.com/docs/5.3/utilities/spacing/</a> <br>
+<a target="_blank" href="https://getbootstrap.com/docs/5.3/utilities/flex/">https://getbootstrap.com/docs/5.3/utilities/flex/</a>
+</p>
+
+<h4>Additional utility classes for sizing and spacing</h4>
+<p>In addition, we added sizing (width, height) and spacing (padding, margin, gap) classes into <b>📂 utilities/ 📄 size.scss</b>.  For ex. <b>w-4px</b> (width:4px) or <b>w-96px</b> (width:96px)</p>
+<p>Sizing is multiply of 4 (upto 100), and multiply of 10 (upto 240). <br> Here is full list: <br>  
+	<code>$spacing_nums: 
+0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200,
+210, 220, 230, 240;</code>
+<br> Same with sizing classes. You can modify them you wish.
+</p>
+<p>Also there are classes to make rectangles with <b>same width and height </b>. For ex. <code>size-40px</code> creates style { width:40px; height:40px }, Or <code>size-96px</code> creates { width:96px; height:96px }  </p> <p>Same with min-width and min-height, For ex: <code>min-w-240px</code> creates { min-width:240px; } </p>
 <p class="lead">Documentation is still in proccess of writing</p>
 
 </div> <!-- container end -->
 </section>
 
 
+
+
+<section class="pb-5 pt-100px border-top">
+	<div class="container" style="max-width: 920px">
+		
+		<article class="article text-lg">
+			<h2 class="mb-3">Similar to Bootstrap 5, but...</h2>
+
+			<p>... But more lightweight, without JS, simplified components with additional utility classes. Re-designed with more aethtetic styles.  If you have used bootstrap framwework you face some challenges like needing to override or changing variables of scss (sass). Both cases are time consuming and frustrating. So here comes Final CSS to solve that.   </p>
+
+			
+			<h5  class="mt-5">What's problem with Bootstrap</h5>
+			<p>I used Bootstrap for hundreds of projects. it gives scss with customizable varibales and separate sass files for each component.  you can use also directly css from cdn whic is great, but... </p>
+			<ul  class="list-bullet">
+				<li> It is bloated with so many styles and components</li>
+				<li> Its navbar is very limited, for many cases you have to create you own </li>
+				<li> Utility classes are limited, for ex, for creating  element with custom sizes you have to think about new class name and create another stylesheet for custom styles </li>
+				<li>Nav links and Buttons are made with inline-block, Adding svg icons or font-icons breaks alignment. not alignn perfectly centered</li>				
+				<li> Customizing with sass variables is too complicated. Variables connected with another variable and another variable </li>
+				<li> Colors are very complicated and too many color $variables, dark mode works incorrect for many components</li>
+				<li> Color classes in bootstrrap is complicated. For ex. they have text-bg-primary, bg-primary, --bs-primary-rgb, --bs-primary-text-emphasis and you have to read documentation</li>
+			</ul>
+
+			<h5  class="mt-5">What's problem with Tailwind</h5>
+			<p>Tailwind is great, many big companies uses it. But still many developers complain about it  </p>
+			<ul class="list-bullet">
+				<li> Long and messy class names. HTML bloats with repeatative and long long classnames. </li>
+				<li> It locks you  up with its ecosystem </li>
+				<li> Creating dark mode is difficult. You have to define colors of dark mode for each element. </li>
+				<li> Complex tooling and setup proccess, npm, postcss, cli and etc </li>	
+				<li> Many color variants which you may not use many of them </li>
+				<li> and many others. explained in detail </li>
+			</ul>
+			
+
+		</article>
+
+	</div>
+</section>
+
+
+
+
+<section class="py-5 bg-colorful border-top text-lg">
+	<div class="container article text-center" style="max-width: 920px">
+		
+		<h2 class="my-4">Your support matters!</h2>
+
+		<p class="mb-4">
+			This is new project requires regular updates like adding new utility classes and components. <br> Your support motivates to improve this project continiously. 
+		</p>
+		
+		<p class="mb-2">
+			<a class="btn btn-secondary text-black btn-lg" style="background-color:#FFDD00;" href="https://buymeacoffee.com/vosidiy" target="_blank">
+				<i class="h4 me-2"> &#9749; </i> <span>Buy me a coffee</span>
+			</a> 
+			<a class="btn btn-lg btn-primary" href="https://paypal.me/vosidiy/20"> 
+				Support via Paypal
+			</a>
+		</p>
+	
+		<br><br>
+	</div> <!-- container end -->
+</section>
+
 <footer class="bg-base border-top py-5">
 	<div class="container">
 	  <section class="d-flex justify-content-lg-between">
-        <p class="mb-0"> © 2024 <b>Final CSS.</b> Modern CSS library <br> by Final UI - Design System  </p>  
+        <p class="mb-0"> © 2024 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
         <nav class="nav">
             <a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>

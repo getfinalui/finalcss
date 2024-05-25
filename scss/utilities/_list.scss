@@ -1,11 +1,11 @@
 .list-bullet{
   list-style: none; margin-left:0; padding-left:0;  
-  li{ padding-left:24px;  position:relative;  }
+  li{ padding-left:20px;  position:relative;  }
   li::before { 
       content: " ";
       position:absolute;  
       top:50%;
-      transform:translateY(-50%);  
+      transform:translateY(-40%);  
       left:0;
       width: 8px; 
       height: 8px;
@@ -26,4 +26,8 @@
       transform:translateY(-50%);  
       left:0;
 	}
+}
+
+.list-inline{
+  li{ display:inline-block; margin-left:1rem;}
 }

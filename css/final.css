@@ -298,6 +298,10 @@ pre code {
 
 code {
   word-wrap: break-word;
+  background-color: var(--neutral-100);
+  padding: 0px 6px;
+  color: #d83200;
+  font-weight: 500;
 }
 a > code {
   color: inherit;
@@ -7839,7 +7843,7 @@ progress {
   --btn-padding-y: 6px;
   --btn-font-size-md: 1rem;
   --btn-font-size-sm: 0.96rem;
-  --btn-font-size-lg: 1.1rem;
+  --btn-font-size-lg: 1.2rem;
   --btn-font-weight:500;
   --btn-bg: transparent;
   --btn-border-color: transparent;
@@ -11272,8 +11276,11 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+.article {
+  line-height: 1.5;
+}
 .article p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .text-lg {
@@ -12131,15 +12138,15 @@ h6, .h6 {
   padding-left: 0;
 }
 .list-bullet li {
-  padding-left: 24px;
+  padding-left: 20px;
   position: relative;
 }
 .list-bullet li::before {
   content: " ";
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
   left: 0;
   width: 8px;
   height: 8px;
@@ -12165,6 +12172,11 @@ h6, .h6 {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 .object-fit-contain {

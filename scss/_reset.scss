@@ -204,7 +204,11 @@ pre {
 }
 
 code {
-  word-wrap: break-word;
+  word-wrap: break-word; 
+  background-color: var(--neutral-100);
+  padding:0px 6px;
+  color:#d83200;
+  font-weight:500;
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
     color: inherit;
