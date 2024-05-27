@@ -19,6 +19,7 @@
   // scss-docs-end btn-css-vars
   
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   height: var(--btn-size-md);

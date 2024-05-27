@@ -14,23 +14,24 @@
   <title>Final CSS - Simple Open source CSS library (utilities and components)</title>
 
 	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', () => {
-		const htmlElement = document.documentElement;
-		const themeSwitcher = document.getElementById('themeSwitcher');
+	const htmlElement = document.documentElement;
+	
+	document.addEventListener('DOMContentLoaded', () => {		
 		// Check localStorage for saved theme
 		const savedTheme = localStorage.getItem('data-theme');
 		if (savedTheme) {
 		    htmlElement.setAttribute('data-theme', savedTheme);
 		}
-		themeSwitcher.addEventListener('click', () => {
-		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
-		    // Set the new theme on the body element
-		    htmlElement.setAttribute('data-theme', newTheme);          
-		    // Save the new theme in localStorage
-		    localStorage.setItem('data-theme', newTheme);
-		});
 	});
+
+	function themeswitch() {
+	    const currentTheme = htmlElement.getAttribute('data-theme');
+	    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+	    // Set the new theme on the body element
+	    htmlElement.setAttribute('data-theme', newTheme);          
+	    // Save the new theme in localStorage
+	    localStorage.setItem('data-theme', newTheme);
+	}
 
 
 	// prevent empty links with # from scrolling top
@@ -60,26 +61,39 @@
 
 <header class="bg-neutral-0 py-3">
 	<div class="container">
-		<div class="d-flex align-items-center">
-			<div>
+		<div class="d-flex flex-column flex-md-row align-items-center">
+			<div class="mb-3 mb-md-0">
 				<a href="https://finalcss.com" class="h4">Final CSS</a>
 			</div>
-			<nav class="nav ms-auto">
+			<nav class="nav ms-md-auto">
                 <a href="index.html" class="nav-link">Home</a>
 				<a href="docs.html" class="nav-link">Docs</a>
-				<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
-				<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
-				<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-primary-soft">Download</a>
+				<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr; </a>
+				<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
+				
+				<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-secondary d-none d-md-inline-flex mx-2">Download</a>
+
+				<button id="themeSwitcher" onclick="themeswitch()" class="btn btn-icon btn-neutral">
+					<span class="d-none dark:d-block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+						</svg>
+					</span>
+					<span class="dark:d-none">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+					</span>
+				</button>
 			</nav>
 		</div>
 	</div>
 </header>
+
 <main class="py-5 bg-colorful">	
 	<div class="container" style="max-width: 980px;">
 		<h1 class="display-4 text-center my-4">A simple but powerful <br> CSS library for any purpose</span> </h1>
 		<p class="lead mb-4 text-muted text-center"> Reimagined version of Bootstrap and Tailwind CSS libraries. <br> Create anything with both utility and component classes </p>
 		<p  class="text-center my-5">
-			<code class="bg-neutral-0 rounded-pill border p-1 px-3 d-inline-block">
+			<code class="bg-neutral-0 d-none rounded-pill border p-1 px-3 d-md-inline-block">
 			https://cdn.jsdelivr.net/gh/getfinalui/finalcss@main/css/final.min.css
 			</code>
 		</p>
@@ -157,7 +171,7 @@
 	<p class="lead text-center text-muted  mb-4">Created with utility and component classes of Final CSS library</p>
 	<!-- button -->
 		<div class="d-flex justify-content-center">
-			<button id="themeSwitcher" class="btn btn-intense">
+			<button onclick="themeswitch()"  class="btn btn-intense">
 				<div class="d-none dark:d-block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-20px h-20px align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 					</svg>
@@ -672,9 +686,9 @@
 		<!-- row.// -->
 	
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body table-responsive">
 				
-				<table class="table align-middle">
+				<table class="table align-middle" style="min-width: 1100px">
 					<tr class="text-muted">
 						<td>   </td>
 						<td> Intense  </td>
@@ -689,7 +703,7 @@
 						<td class="text-muted"> Small  </td>
 						<td>
 							<a class="btn btn-sm btn-intense"  href="#"> Button </a>  
-							<a class="btn btn-intense btn-icon"  href="#">
+							<a class="btn btn-sm btn-intense btn-icon"  href="#">
 								<svg><use href="#icon-star" width="20" height="20"/></svg>
 							</a>
 						</td>
