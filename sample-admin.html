@@ -44,11 +44,11 @@
 <body class="bg-base">
 
 <div class="d-flex w-100 min-vh-100">
-	<aside class="bg-secondary  border-end flex-grow-0 flex-shrink-0 min-h-100 w-240px">
-		<header class="d-flex align-items-center p-3 border-bottom  h-60px">
+	<aside class="d-none d-md-block bg-secondary border-end flex-grow-0 flex-shrink-0 min-h-100 w-240px">
+		<header class="d-flex align-items-center px-4 border-bottom  h-60px">
 			<a href="https://finalcss.com" class="h5 m-0">Final CSS</a>
 		</header>
-		<nav class="p-2">
+		<nav class="p-3">
 			<ul class="nav nav-vertical">
 				<li><a class="nav-link active" href="#">Dashboard</a></li>
 				<li><a class="nav-link" href="#">Orders</a></li>
@@ -62,8 +62,15 @@
 	</aside>
 	<main class="flex-grow-1 bg-base">
 
-		<header class="d-flex align-items-center p-3 border-bottom h-60px">
-			<h5 class="m-0">Dashboard CSS</h5>
+		<header class="d-flex align-items-center p-3 px-lg-4 border-bottom h-60px">
+			<button class="btn btn-secondary btn-icon me-3 d-inline-flex d-md-none">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+				    <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				    <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				    <path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<h5 class="m-0">Dashboard </h5>
 			
 			<div class="d-flex align-items-center gap-2 ms-auto">
 				<a class="btn btn-secondary" href="#">Create</a>
@@ -88,28 +95,136 @@
 			</div>
 		</header>
 
-		<section class="p-3">
+		<section class="p-3 px-lg-4">
 
-			<div class="grid w-100">
-				<article class="g-col-6 g-col-lg-4 card card-body">
-					<p class="h4">1,300.00</p>
-					<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</p> 
-					<a href="#" class="btn btn-secondary">View report</a>
+			<div class="grid gap-3 w-100">
+				<article class="g-col-6 g-col-lg-3 card">
+					<div class="card-body">
+						<p class="h4">1,300.00</p>
+						<p class="mb-4">Consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p> 
+						<a href="#" class="btn btn-secondary">View report</a>
+					</div>
 				</article>
-				<article  class="g-col-6 g-col-lg-4 card card-body">
-					<p class="h4">340.00</p>
-					<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn btn-secondary">View report</a>
+				<article  class="g-col-6 g-col-lg-3 card">
+					<div class="card-body">
+						<p class="h4">340.00</p>
+						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut </p>
+						<a href="#" class="btn btn-secondary">View report</a>
+					</div>
 				</article>
-				<article  class="g-col-6 g-col-lg-4 card card-body">
-					<p class="h4">140.00</p>
-					<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn btn-secondary">View report</a>
+				<article  class="g-col-6 g-col-lg-3 card">
+					<div class="card-body">
+						<p class="h4">$140.00</p>
+						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt </p>
+						<a href="#" class="btn btn-secondary">View report</a>
+					</div>
+				</article>
+				<article class="g-col-6 g-col-lg-3 card">
+					<div class="card-body">
+						<p class="h4">$2,990.00</p>
+						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt</p> 
+						<a href="#" class="btn btn-secondary">View report</a>
+					</div>
 				</article>
 			</div>  <!-- grid.// -->
+
+
+			<header class="mt-4 mb-4">
+				<h5 class="mb-3">Latest orders</h5>
+				
+				<div class="d-lg-flex">
+					<nav class="segmented-control">
+						<label class="segmented-item active">
+							All orders
+						</label>
+						<label class="segmented-item">
+							Pending
+						</label>
+						<label class="segmented-item">
+							Confirmed
+						</label>
+					</nav>
+
+					<form class="ms-auto d-flex gap-2">
+						<input class="form-control" type="search" placeholder="Search item" name="">
+						<button class="btn btn-secondary">Search</button>
+					</form>
+				</div>
+			</header>
+
+			<table class="table">
+	          <thead>
+	            <tr>
+	              <th scope="col">#</th>
+	              <th scope="col">Header</th>
+	              <th scope="col">Header</th>
+	              <th scope="col">Header</th>
+	              <th scope="col">Header</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td>1,001</td>
+	              <td>random</td>
+	              <td>data</td>
+	              <td>placeholder</td>
+	              <td>text</td>
+	            </tr>
+	            <tr>
+	              <td>1,002</td>
+	              <td>placeholder</td>
+	              <td>irrelevant</td>
+	              <td>visual</td>
+	              <td>layout</td>
+	            </tr>
+	            <tr>
+	              <td>1,003</td>
+	              <td>data</td>
+	              <td>rich</td>
+	              <td>dashboard</td>
+	              <td>tabular</td>
+	            </tr>
+	            <tr>
+	              <td>1,003</td>
+	              <td>information</td>
+	              <td>placeholder</td>
+	              <td>illustrative</td>
+	              <td>data</td>
+	            </tr>
+	            <tr>
+	              <td>1,004</td>
+	              <td>text</td>
+	              <td>random</td>
+	              <td>layout</td>
+	              <td>dashboard</td>
+	            </tr>
+	            <tr>
+	              <td>1,005</td>
+	              <td>dashboard</td>
+	              <td>irrelevant</td>
+	              <td>text</td>
+	              <td>placeholder</td>
+	            </tr>
+	            <tr>
+	              <td>1,006</td>
+	              <td>dashboard</td>
+	              <td>illustrative</td>
+	              <td>rich</td>
+	              <td>data</td>
+	            </tr>
+	            <tr>
+	              <td>1,007</td>
+	              <td>placeholder</td>
+	              <td>tabular</td>
+	              <td>information</td>
+	              <td>irrelevant</td>
+	            </tr>
+	          </tbody>
+	        </table>
 
 		</section>
 	</main>
