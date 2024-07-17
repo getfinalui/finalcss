@@ -5,6 +5,14 @@
   background-color:var(--bg-color-base);
 }
 
+.bg-inherit{
+  background-color: inherit;
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-secondary{
   background-color:var(--bg-color-secondary);
 }
@@ -18,11 +26,11 @@
 }
 
 .bg-white{
-  background-color:var(--white);
+  background-color:#fff;
 }
 
 .bg-black{
-  background-color:var(--black);
+  background-color:#000;
 }
 
 .bg-dark{
