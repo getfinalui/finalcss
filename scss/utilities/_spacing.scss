@@ -2,210 +2,59 @@ $spacing_nums:
 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200,
 210, 220, 230, 240;
 
+
 // * Generates sizes in px, for ex:
 // .mt-96px{margin-top:96px} 
-// MARGINS in px
-
 @each $spacing in $spacing_nums {
-  .m-#{$spacing}px {
-    margin: #{$spacing}px;
-  }
+  .m-#{$spacing}px {  margin: #{$spacing}px; }
+  .mt-#{$spacing}px {  margin-top: #{$spacing}px; }
+  .mb-#{$spacing}px { margin-bottom: #{$spacing}px;  }
+  .me-#{$spacing}px { margin-right: #{$spacing}px; }
+  .ms-#{$spacing}px { margin-left: #{$spacing}px; }
+  .my-#{$spacing}px {  margin-top: #{$spacing}px; margin-bottom: #{$spacing}px;  }
+  .mx-#{$spacing}px {  margin-left: #{$spacing}px; margin-right: #{$spacing}px;  }
+
+  .p-#{$spacing}px { padding: #{$spacing}px; }
+  .pt-#{$spacing}px {  padding-top: #{$spacing}px;  }
+  .pb-#{$spacing}px { padding-bottom: #{$spacing}px; }
+  .pe-#{$spacing}px { padding-right: #{$spacing}px; }
+  .ps-#{$spacing}px { padding-left: #{$spacing}px; }
+  .py-#{$spacing}px { padding-top: #{$spacing}px; padding-bottom: #{$spacing}px; }
+  .px-#{$spacing}px { padding-left: #{$spacing}px; padding-right: #{$spacing}px; }
 }
 
-@each $spacing in $spacing_nums {
-  .mt-#{$spacing}px {
-    margin-top: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .me-#{$spacing}px {
-    margin-right: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .mb-#{$spacing}px {
-    margin-bottom: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .ms-#{$spacing}px {
-    margin-left: #{$spacing}px;
-  }
-}
-
-
-// PADDINGS
-@each $spacing in $spacing_nums {
-  .p-#{$spacing}px {
-    padding: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .pt-#{$spacing}px {
-    padding-top: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .pe-#{$spacing}px {
-    padding-right: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .pb-#{$spacing}px {
-    padding-bottom: #{$spacing}px;
-  }
-}
-
-@each $spacing in $spacing_nums {
-  .ps-#{$spacing}px {
-    padding-left: #{$spacing}px;
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    @each $spacing in $spacing_nums {
+      .#{$breakpoint}\:m-#{$spacing}px {  margin: #{$spacing}px; }
+      .#{$breakpoint}\:mt-#{$spacing}px {  margin-top: #{$spacing}px; }
+      .#{$breakpoint}\:mb-#{$spacing}px { margin-bottom: #{$spacing}px;  }
+      .#{$breakpoint}\:me-#{$spacing}px { margin-right: #{$spacing}px; }
+      .#{$breakpoint}\:ms-#{$spacing}px { margin-left: #{$spacing}px; }
+      .#{$breakpoint}\:mx-#{$spacing}px { margin-left: #{$spacing}px; margin-right: #{$spacing}px; }
+      .#{$breakpoint}\:my-#{$spacing}px { margin-top: #{$spacing}px; margin-bottom: #{$spacing}px; }
+    
+      .#{$breakpoint}\:p-#{$spacing}px { padding: #{$spacing}px; }
+      .#{$breakpoint}\:pt-#{$spacing}px {  padding-top: #{$spacing}px;  }
+      .#{$breakpoint}\:pb-#{$spacing}px { padding-bottom: #{$spacing}px; }
+      .#{$breakpoint}\:pe-#{$spacing}px { padding-right: #{$spacing}px; }
+      .#{$breakpoint}\:ps-#{$spacing}px { padding-left: #{$spacing}px; }
+      .#{$breakpoint}\:px-#{$spacing}px { padding-left: #{$spacing}px; padding-right: #{$spacing}px; }
+      .#{$breakpoint}\:py-#{$spacing}px { padding-top: #{$spacing}px; padding-bottom: #{$spacing}px; }
+    }
+   // end breakpoint
   }
 }
 
 
+/// GAP SIZES
+$gap_nums: 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px;
 
-/// GAP SIZES FROM BOOTSTRAP
-.gap-0 {
-  gap: 0 !important;
-}
-
-.gap-1 {
-  gap: 0.25rem !important;
-}
-
-.gap-2 {
-  gap: 0.5rem !important;
-}
-
-.gap-3 {
-  gap: 1rem !important;
-}
-
-.gap-4 {
-  gap: 1.5rem !important;
-}
-
-.gap-5 {
-  gap: 3rem !important;
-}
-.row-gap-0 {
-  row-gap: 0 !important;
-}
-
-.row-gap-1 {
-  row-gap: 0.25rem !important;
-}
-
-.row-gap-2 {
-  row-gap: 0.5rem !important;
-}
-
-.row-gap-3 {
-  row-gap: 1rem !important;
-}
-
-.row-gap-4 {
-  row-gap: 1.5rem !important;
-}
-
-.row-gap-5 {
-  row-gap: 3rem !important;
-}
-
-.column-gap-0 {
-  column-gap: 0 !important;
-}
-
-.column-gap-1 {
-  column-gap: 0.25rem !important;
-}
-
-.column-gap-2 {
-  column-gap: 0.5rem !important;
-}
-
-.column-gap-3 {
-  column-gap: 1rem !important;
-}
-
-.column-gap-4 {
-  column-gap: 1.5rem !important;
-}
-
-.column-gap-5 {
-  column-gap: 3rem !important;
-}
-
-
-
-/// small devices 
-@media (min-width: 576px) {
-
-    .gap-sm-0 {
-      gap: 0 !important;
-    }
-    .gap-sm-1 {
-      gap: 0.25rem !important;
-    }
-    .gap-sm-2 {
-      gap: 0.5rem !important;
-    }
-    .gap-sm-3 {
-      gap: 1rem !important;
-    }
-    .gap-sm-4 {
-      gap: 1.5rem !important;
-    }
-    .gap-sm-5 {
-      gap: 3rem !important;
-    }
-    .row-gap-sm-0 {
-      row-gap: 0 !important;
-    }
-    .row-gap-sm-1 {
-      row-gap: 0.25rem !important;
-    }
-    .row-gap-sm-2 {
-      row-gap: 0.5rem !important;
-    }
-    .row-gap-sm-3 {
-      row-gap: 1rem !important;
-    }
-    .row-gap-sm-4 {
-      row-gap: 1.5rem !important;
-    }
-    .row-gap-sm-5 {
-      row-gap: 3rem !important;
-    }
-    .column-gap-sm-0 {
-      -moz-column-gap: 0 !important;
-      column-gap: 0 !important;
-    }
-    .column-gap-sm-1 {
-      -moz-column-gap: 0.25rem !important;
-      column-gap: 0.25rem !important;
-    }
-    .column-gap-sm-2 {
-      -moz-column-gap: 0.5rem !important;
-      column-gap: 0.5rem !important;
-    }
-    .column-gap-sm-3 {
-      -moz-column-gap: 1rem !important;
-      column-gap: 1rem !important;
-    }
-    .column-gap-sm-4 {
-      -moz-column-gap: 1.5rem !important;
-      column-gap: 1.5rem !important;
-    }
-    .column-gap-sm-5 {
-      -moz-column-gap: 3rem !important;
-      column-gap: 3rem !important;
-    }
-
+@each $num in $gap_nums {
+  .gap-#{$num}px { gap: #{$num}; }
+  .row-gap-#{$num}px {  row-gap: #{$num}; }
+  .column-gap-#{$num}px { column-gap: #{$num}; }
 }

@@ -4,7 +4,7 @@
 //    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 //    margin for easier control within type scales as it avoids margin collapsing.
 
-%heading {
+h1,h2,h3,h4,h5,h6 {
   margin-top: 0; // 1
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
@@ -13,83 +13,55 @@
   line-height: $headings-line-height;
 }
 
-h1, .h1 {
-  @extend %heading;
-  font-size: $h1-font-size;
-}
 
-h2, .h2 {
-  @extend %heading;
-  font-size: $h2-font-size;
-}
-
-h3, .h3 {
-  @extend %heading;
-  font-size: $h3-font-size;
-}
-
-h4, .h4 {
-  @extend %heading;
-  font-size: $h4-font-size;
-}
-
-h5, .h5 {
-  @extend %heading;
-  font-size: $h5-font-size;
-}
-
-h6, .h6 {
-  @extend %heading;
-  font-size: $h6-font-size;
-}
-
+.text-lg{ font-size:1.2rem}
 
 .article{ 
   line-height:1.5;
   p{ margin-bottom:1rem}
 }
 
-.text-lg{ font-size:1.2rem}
-
-.small, .text-sm {
-  @extend small;
-}
-
-
 
 // Type display classes
 // scss-docs-start display-headings
-$display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
+$font-sizes-list: (
+  xs: 0.7rem,
+  sm: 0.9rem,
+  base: 1rem,
+  lg: 1.12rem,
+  xl: 1.3rem,
+  2xl: 1.5rem,
+  3xl: 1.8rem,
+  4xl: 2.2rem,
+  5xl: 3rem,
+  6xl: 3.75rem,
+  7xl: 4.5rem,
+  8xl: 6rem,
+  9xl: 8rem,
 ) !default;
 
-@each $display, $font-size in $display-font-sizes {
-  .display-#{$display} {
+@each $name, $font-size in $font-sizes-list {
+  .text-#{$name} {
     font-size: $font-size;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.4;
+  }
+}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    @each $name, $font-size in $font-sizes-list {
+      .#{$breakpoint}\:text-#{$name} {
+        font-size: $font-size;
+      }
+    }
+    // end breakpoint
   }
 }
 
 
-// .lead font-size
-.lead {
-  font-size:1.4rem;
-  font-weight: 500;
-}
 
-
-
-
-/// constant colors despite any theme
-.text-black, .text-dark{ color:#000; }
-.text-white, { color:#fff; }
 
 /// theme based text color
 .text-base{ color: var(--text-color-base); }
@@ -101,90 +73,32 @@ $display-font-sizes: (
 .text-success{ color: var(--text-color-success); }
 .text-info{ color: var(--text-color-info); }
 .text-invert{ color: var(--text-color-invert); }
-
+/// constant colors despite any theme
+.text-black, .text-dark{ color:#000; }
+.text-white, { color:#fff; }
 
 /// text utility classes
+.font-light {  font-weight: 300;}
+.font-normal {font-weight: 400;}
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600;}
+.font-bold { font-weight: 700; }
+.font-bolder { font-weight: bolder;}
 
-.fw-light {
-  font-weight: 300 !important;
-}
+.lh-1 { line-height:1;}
+.lh-sm {line-height: 1.25;}
+.lh-base { line-height: 1.5;}
+.lh-lg { line-height: 2;}
 
-.fw-normal {
-  font-weight: 400 !important;
-}
+.text-start {text-align: left;}
+.text-end {text-align: right;}
+.text-center { text-align: center;}
 
-.fw-medium {
-  font-weight: 500 !important;
-}
-
-.fw-semibold {
-  font-weight: 600 !important;
-}
-
-.fw-bold {
-  font-weight: 700 !important;
-}
-
-.fw-bolder {
-  font-weight: bolder !important;
-}
-
-.lh-1 {
-  line-height: 1 !important;
-}
-
-.lh-sm {
-  line-height: 1.25 !important;
-}
-
-.lh-base {
-  line-height: 1.5 !important;
-}
-
-.lh-lg {
-  line-height: 2 !important;
-}
-
-.text-start {
-  text-align: left !important;
-}
-
-.text-end {
-  text-align: right !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
-.text-underline {
-  text-decoration: underline !important;
-}
-
-.text-line-through {
-  text-decoration: line-through !important;
-}
-
-.text-lowercase {
-  text-transform: lowercase !important;
-}
-
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-.text-capitalize {
-  text-transform: capitalize !important;
-}
-
-.text-wrap {
-  white-space: normal !important;
-}
-
-.text-nowrap {
-  white-space: nowrap !important;
-}
+.text-decoration-none { text-decoration: none; }
+.text-underline { text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase;}
+.text-capitalize { text-transform: capitalize;}
+.text-wrap {white-space: normal;}
+.text-nowrap { white-space: nowrap;}

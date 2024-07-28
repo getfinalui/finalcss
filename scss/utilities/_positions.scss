@@ -36,17 +36,14 @@
 
 
 .translate-middle {
-  -webkit-transform: translate(-50%, -50%) !important;
           transform: translate(-50%, -50%) !important;
 }
 
 .translate-middle-x {
-  -webkit-transform: translateX(-50%) !important;
           transform: translateX(-50%) !important;
 }
 
 .translate-middle-y {
-  -webkit-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;
 }
 
@@ -90,54 +87,6 @@
 
 .inset-0{ inset:0}
 
-.top-0 {
-  top: 0 !important;
-}
-
-.top-50 {
-  top: 50% !important;
-}
-
-.top-100 {
-  top: 100% !important;
-}
-
-.bottom-0 {
-  bottom: 0 !important;
-}
-
-.bottom-50 {
-  bottom: 50% !important;
-}
-
-.bottom-100 {
-  bottom: 100% !important;
-}
-
-.start-0 {
-  left: 0 !important;
-}
-
-.start-50 {
-  left: 50% !important;
-}
-
-.start-100 {
-  left: 100% !important;
-}
-
-.end-0 {
-  right: 0 !important;
-}
-
-.end-50 {
-  right: 50% !important;
-}
-
-.end-100 {
-  right: 100% !important;
-}
-
 .translate-middle {
   transform: translate(-50%, -50%) !important;
 }
@@ -148,62 +97,4 @@
 
 .translate-middle-y {
   transform: translateY(-50%) !important;
-}
-
-
-@media (min-width: 576px) {
-  .float-sm-start {
-    float: left !important;
-  }
-  .float-sm-end {
-    float: right !important;
-  }
-  .float-sm-none {
-    float: none !important;
-  }
-}
-@media (min-width: 768px) {
-  .float-md-start {
-    float: left !important;
-  }
-  .float-md-end {
-    float: right !important;
-  }
-  .float-md-none {
-    float: none !important;
-  }
-}
-@media (min-width: 992px) {
-  .float-lg-start {
-    float: left !important;
-  }
-  .float-lg-end {
-    float: right !important;
-  }
-  .float-lg-none {
-    float: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .float-xl-start {
-    float: left !important;
-  }
-  .float-xl-end {
-    float: right !important;
-  }
-  .float-xl-none {
-    float: none !important;
-  }
-}
-
-@media (min-width: 1400px) {
-  .float-xxl-start {
-    float: left !important;
-  }
-  .float-xxl-end {
-    float: right !important;
-  }
-  .float-xxl-none {
-    float: none !important;
-  }
 }

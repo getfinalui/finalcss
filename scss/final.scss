@@ -10,7 +10,7 @@
 // Base
 @import "theme";
 @import "reset";
-@import "grid";
+@import "grid-system";
 
 // Components
 @import "components/alert";
@@ -25,17 +25,17 @@
 @import "components/nav";
 @import "components/dropdown-menu";
 @import "components/segmented-control";
+@import "components/list";
 
 // Utility classes
 @import "utilities/size";
 @import "utilities/spacing";
 @import "utilities/text";
-@import "utilities/border";
-@import "utilities/border-round";
+@import "utilities/border-color";
+@import "utilities/border-radius";
 @import "utilities/background";
 @import "utilities/gradient";
 @import "utilities/positions";
-@import "utilities/list";
 @import "utilities/object-fit";
 @import "utilities/overflow";
 @import "utilities/opacity";
@@ -43,6 +43,7 @@
 @import "utilities/z-index";
 @import "utilities/fixed-sticky";
 @import "utilities/visually-hidden";
+@import "utilities/layout-display";
 
 // Layouts and Temnplates
 @import "layout/base";

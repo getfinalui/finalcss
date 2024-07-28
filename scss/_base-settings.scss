@@ -2,7 +2,28 @@
 
 // WE USE VARIABLES DIRECTLY INTO COMPONENTS BY IMPLEMENTING CSS VARIABLE
 
+// Breakpoints
+$screen-xs: 0;
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1200px;
+$screen-xl: 1440px;
 
+// breakpoint sizes to generate 
+$breakpoints: (
+  'sm': 640px, // Ex @media(min-width: ...)
+  'md': 768px,
+  'lg': 1200px,
+  'xl': 1440px
+);
+
+// can be used for maximum screen size
+$breakpoints-max: (
+  'max-xs': 640px, // Ex @media(max-width: ...)
+  'max-sm': 768px,
+  'max-md': 1200px,
+  'max-xl': 1440px
+);
 
 // Border-radius
 // Allows for component radius independently from their own css
