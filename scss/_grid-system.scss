@@ -4,11 +4,127 @@
 .container-lg,
 .container-md,
 .container-sm {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+// CSS native columns
+.columns-1{columns: 1;}
+.columns-2{columns: 2;}
+.columns-3{columns: 3;}
+.columns-4{columns: 4;}
+.columns-5{columns: 5;}
+.columns-6{columns: 6;}
+.columns-7{columns: 7;}
+.columns-8{columns: 8;}
+.columns-9{columns: 9;}
+.columns-10{columns: 10;}
+.columns-11{columns: 11;}
+.columns-12{columns: 12;}
+.columns-auto{columns: auto;}
+
+
+.row {
+  --finalcss-cols-gap-x: 24px;
+  --finalcss-cols-gap-y: 0;
+  
+  display: flex; 
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--finalcss-cols-gap-y));
+  margin-right: calc(-.5 * var(--finalcss-cols-gap-x));
+  margin-left: calc(-.5 * var(--finalcss-cols-gap-x));
+}
+.row > * { 
+  flex-shrink: 0; 
+  width: 100%;  
+  max-width: 100%;
+  padding-right: calc(var(--finalcss-cols-gap-x) * .5);
+  padding-left: calc(var(--finalcss-cols-gap-x) * .5);
+  margin-top: var(--finalcss-cols-gap-y);
+}
+
+//////////// ROW COLS
+.row-cols-auto > * {flex: 0 0 auto; width: auto;}
+.row-cols-1 > * { flex: 0 0 auto;  width: 100%; }
+.row-cols-2 > * { flex: 0 0 auto; width: 50%;}
+.row-cols-3 > * { flex: 0 0 auto; width: 33.3333333333%; }
+.row-cols-4 > * { flex: 0 0 auto; width: 25%; }
+.row-cols-5 > * { flex: 0 0 auto; width: 20%; }
+.row-cols-6 > * { flex: 0 0 auto; width: 16.6666666667%;}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    .#{$breakpoint}\:row-cols-auto > * {flex: 0 0 auto; width: auto;}
+    .#{$breakpoint}\:row-cols-1 > * { flex: 0 0 auto;  width: 100%; }
+    .#{$breakpoint}\:row-cols-2 > * { flex: 0 0 auto; width: 50%;}
+    .#{$breakpoint}\:row-cols-3 > * { flex: 0 0 auto; width: 33.3333333333%; }
+    .#{$breakpoint}\:row-cols-4 > * { flex: 0 0 auto; width: 25%; }
+    .#{$breakpoint}\:row-cols-5 > * { flex: 0 0 auto; width: 20%; }
+    .#{$breakpoint}\:row-cols-6 > * { flex: 0 0 auto; width: 16.6666666667%;}
+    // end breakpoint
+  }
+}
+
+
+
+//////////// ROW and COLS separately 
+.col{ flex: 1 0 0%; }
+.col-auto{ flex: 0 0 auto; width: auto;}
+.col-1{flex: 0 0 auto; width: 8.33333333%;}
+.col-2{flex: 0 0 auto; width: 16.66666667%;}
+.col-3{flex: 0 0 auto; width: 25%;}
+.col-4{flex: 0 0 auto; width: 33.33333333%;}
+.col-5{flex: 0 0 auto; width: 41.66666667%;}
+.col-6{flex: 0 0 auto; width: 50%;}
+.col-7{flex: 0 0 auto; width: 58.33333333%;}
+.col-8{flex: 0 0 auto; width: 66.66666667%;}
+.col-9{flex: 0 0 auto; width: 75%;}
+.col-10{flex: 0 0 auto; width: 83.33333333%;}
+.col-11{flex: 0 0 auto; width: 91.66666667%;}
+.col-12{flex: 0 0 auto; width: 100%;}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    .#{$breakpoint}\:col{ flex: 1 0 0%; }
+    .#{$breakpoint}\:col-auto{ flex: 0 0 auto; width: auto;}
+    .#{$breakpoint}\:col-1{flex: 0 0 auto; width: 8.33333333%;}
+    .#{$breakpoint}\:col-2{flex: 0 0 auto; width: 16.66666667%;}
+    .#{$breakpoint}\:col-3{flex: 0 0 auto; width: 25%;}
+    .#{$breakpoint}\:col-4{flex: 0 0 auto; width: 33.33333333%;}
+    .#{$breakpoint}\:col-5{flex: 0 0 auto; width: 41.66666667%;}
+    .#{$breakpoint}\:col-6{flex: 0 0 auto; width: 50%;}
+    .#{$breakpoint}\:col-7{flex: 0 0 auto; width: 58.33333333%;}
+    .#{$breakpoint}\:col-8{flex: 0 0 auto; width: 66.66666667%;}
+    .#{$breakpoint}\:col-9{flex: 0 0 auto; width: 75%;}
+    .#{$breakpoint}\:col-10{flex: 0 0 auto; width: 83.33333333%;}
+    .#{$breakpoint}\:col-11{flex: 0 0 auto; width: 91.66666667%;}
+    .#{$breakpoint}\:col-12{flex: 0 0 auto; width: 100%;}
+    // end breakpoint
+  }
+}
+
+
+//// Space between cols (paddings)
+$space_nums: 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px;
+
+@each $num in $space_nums {
+  .space-#{$num}{
+    --finalcss-cols-gap-x: #{$num};
+    --finalcss-cols-gap-y: #{$num};
+  }
+  .space-y-#{$num}{
+    --finalcss-cols-gap-y: #{$num};
+  }
+  .space-x-#{$num}{
+    --finalcss-cols-gap-x: #{$num};
+  }
 }

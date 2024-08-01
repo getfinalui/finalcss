@@ -11,7 +11,6 @@ $size_nums:
   .min-w-#{$num}px { min-width: #{$num}px; }
   .h-#{$num}px { height: #{$num}px;  }
   .min-h-#{$num}px {  min-height: #{$num}px;  }
-  .size-#{$num}px {  width: #{$num}px; height: #{$num}px; }
 }
 
 // Generate responsive utility classes
@@ -24,7 +23,6 @@ $size_nums:
       .#{$breakpoint}\:min-w-#{$num}px {  min-width: #{$num}px; }
       .#{$breakpoint}\:h-#{$num}px { height: #{$num}px; }
       .#{$breakpoint}\:min-h-#{$num}px {  min-height: #{$num}px;  }
-      .#{$breakpoint}\:size-#{$num}px { width: #{$num}px; height: #{$num}px; }
     }
     // end breakpoint
   }
@@ -43,6 +41,7 @@ $size_nums:
 .w-80\% { width: 80%; }
 .w-90\% { width: 90%; }
 .w-100\% { width: 100% ; }
+.w-full { width: 100% ; }
 .min-w-100\% {min-width: 100%;}
 .max-w-100\% {max-width: 100%; }
 .vw-100 { width: 100vw;}
@@ -58,6 +57,7 @@ $size_nums:
 .h-80\% {height: 80%;}
 .h-90\% {height: 90%;}
 .h-100\% {height: 100%;}
+.h-full {height: 100%;}
 .min-h-100\% {min-height: 100%;}
 .max-h-100\% {max-height: 100%;}
 .min-vh-100 {min-height: 100vh;}
@@ -82,6 +82,7 @@ $size_nums:
     .#{$breakpoint}\:w-80\% { width: 80%; }
     .#{$breakpoint}\:w-90\% { width: 90%; }
     .#{$breakpoint}\:w-100\% { width: 100% ; }
+    .#{$breakpoint}\:w-full { width: 100% ; }
     .#{$breakpoint}\:min-w-100\% {min-width: 100%;}
     .#{$breakpoint}\:max-w-100\% {max-width: 100%; }
     .#{$breakpoint}\:vw-100 { width: 100vw;}
@@ -97,6 +98,7 @@ $size_nums:
     .#{$breakpoint}\:h-80\% {height: 80%;}
     .#{$breakpoint}\:h-90\% {height: 90%;}
     .#{$breakpoint}\:h-100\% {height: 100%;}
+    .#{$breakpoint}\:h-full {height: 100%;}
     .#{$breakpoint}\:min-h-100\% {min-height: 100%;}
     .#{$breakpoint}\:max-h-100\% {max-height: 100%;}
     .#{$breakpoint}\:min-vh-100 {min-height: 100vh;}
