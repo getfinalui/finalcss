@@ -1,67 +1,32 @@
 
 
-/// theme based colors
-.bg-base{
-  background-color:var(--bg-color-base);
+.bg-base{ background-color:var(--bg-color-base); }
+.bg-inherit{ background-color: inherit; }
+.bg-transparent{ background-color: transparent; }
+.bg-secondary{ background-color:var(--bg-color-secondary);}
+.bg-lower{ background-color:var(--bg-color-lower); }
+.bg-raised{ background-color:var(--bg-color-raised);}
+.bg-white{background-color:#fff;}
+.bg-black{ background-color:#000;}
+.bg-dark{background-color:#14181F;}
+
+// generate classes for background ex. bg-neutral-900
+$colors_neutral_nums: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000; 
+
+@each $num in $colors_neutral_nums {
+  .bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
 }
 
-.bg-inherit{
-  background-color: inherit;
-}
-
-.bg-transparent{
-  background-color: transparent;
-}
-
-.bg-secondary{
-  background-color:var(--bg-color-secondary);
-}
-
-.bg-lower{
-  background-color:var(--bg-color-lower);
-}
-
-.bg-raised{
-  background-color:var(--bg-color-raised);
-}
-
-.bg-white{
-  background-color:#fff;
-}
-
-.bg-black{
-  background-color:#000;
-}
-
-.bg-dark{
-  background-color:#14181F;
-}
+// generate classes for background ex. bg-primary-100 
 
 
-// generate classes for background ex. bg-primary-100, bg-neutral-900
+$colors_accent_nums: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
-$color_nums: 0, 100, 200, 300, 400, 500, 600, 700, 800, 900; 
-
-@each $num in $color_nums {
-  .bg-neutral-#{$num} {
-    background-color:var(--neutral-#{$num});
-  }
-  .bg-primary-#{$num} {
-    background-color:var(--primary-#{$num});
-  }
-  .bg-success-#{$num} {
-    background-color:var(--success-#{$num});
-  }
-  .bg-danger-#{$num} {
-    background-color:var(--danger-#{$num});
-  }
-  .bg-warning-#{$num} {
-    background-color:var(--warning-#{$num});
-  }
-  .bg-feature-#{$num} {
-    background-color:var(--feature-#{$num});
-  }
-  .bg-info-#{$num} {
-    background-color:var(--info-#{$num});
-  }
+@each $num in $colors_accent_nums {
+  .bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
+  .bg-success-#{$num} { background-color:var(--success-#{$num}); }
+  .bg-danger-#{$num} { background-color:var(--danger-#{$num});  }
+  .bg-warning-#{$num} { background-color:var(--warning-#{$num}); }
+  .bg-feature-#{$num} { background-color:var(--feature-#{$num});  }
+  .bg-info-#{$num} {  background-color:var(--info-#{$num});  }
 }

@@ -1,0 +1,43 @@
+
+/// theme based text color
+.text-base{ color: var(--text-color-base); }
+.text-secondary{ color: var(--text-color-secondary);  }
+.text-muted{ color: var(--text-color-muted);  }
+.text-active, .text-primary{ color: var(--text-color-primary); }
+.text-warning{ color: var(--text-color-warning); }
+.text-danger{ color: var(--text-color-danger); }
+.text-success{ color: var(--text-color-success); }
+.text-info{ color: var(--text-color-info); }
+.text-invert{ color: var(--text-color-invert); }
+/// constant colors despite any theme
+.text-black, .text-dark{ color:#000; }
+.text-white, { color:#fff; }
+
+/// text utility classes
+.font-light {  font-weight: 300;}
+.font-normal {font-weight: 400;}
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600;}
+.font-bold { font-weight: 700; }
+.font-bolder { font-weight: bolder;}
+
+/// text-position
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center { text-align: center;}
+
+.text-decoration-none { text-decoration: none; }
+.text-underline { text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase;}
+.text-capitalize { text-transform: capitalize;}
+.text-wrap {white-space: normal;}
+.text-nowrap { white-space: nowrap;}
+
+
+/// line height
+.lh-1{ line-height:1; }
+.lh-sm{ line-height:1.25; }
+.lh-base{ line-height:1.5; }
+.lh-lg{ line-height:1.8; }

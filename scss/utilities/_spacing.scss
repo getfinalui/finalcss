@@ -1,24 +1,31 @@
 $spacing_nums: 
-0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200,
-210, 220, 230, 240;
+0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240;
 
 
 // * Generates sizes in px, for ex:
 // .mt-96px{margin-top:96px} 
 @each $spacing in $spacing_nums {
   .m-#{$spacing}px {  margin: #{$spacing}px; }
+  
   .mt-#{$spacing}px {  margin-top: #{$spacing}px; }
   .mb-#{$spacing}px { margin-bottom: #{$spacing}px;  }
-  .me-#{$spacing}px { margin-right: #{$spacing}px; }
-  .ms-#{$spacing}px { margin-left: #{$spacing}px; }
+  .mr-#{$spacing}px { margin-right: #{$spacing}px; }
+  .ml-#{$spacing}px { margin-left: #{$spacing}px; }
   .my-#{$spacing}px {  margin-top: #{$spacing}px; margin-bottom: #{$spacing}px;  }
   .mx-#{$spacing}px {  margin-left: #{$spacing}px; margin-right: #{$spacing}px;  }
+  // negative (minus) numbers
+  .-mt-#{$spacing}px {  margin-top: -#{$spacing}px; }
+  .-mb-#{$spacing}px { margin-bottom: -#{$spacing}px;  }
+  .-mr-#{$spacing}px { margin-right: -#{$spacing}px; }
+  .-ml-#{$spacing}px { margin-left: -#{$spacing}px; }
+  .-my-#{$spacing}px {  margin-top: -#{$spacing}px; margin-bottom: -#{$spacing}px;  }
+  .-mx-#{$spacing}px {  margin-left: -#{$spacing}px; margin-right: -#{$spacing}px;  }
 
   .p-#{$spacing}px { padding: #{$spacing}px; }
   .pt-#{$spacing}px {  padding-top: #{$spacing}px;  }
   .pb-#{$spacing}px { padding-bottom: #{$spacing}px; }
-  .pe-#{$spacing}px { padding-right: #{$spacing}px; }
-  .ps-#{$spacing}px { padding-left: #{$spacing}px; }
+  .pr-#{$spacing}px { padding-right: #{$spacing}px; }
+  .pl-#{$spacing}px { padding-left: #{$spacing}px; }
   .py-#{$spacing}px { padding-top: #{$spacing}px; padding-bottom: #{$spacing}px; }
   .px-#{$spacing}px { padding-left: #{$spacing}px; padding-right: #{$spacing}px; }
 }
@@ -32,44 +39,26 @@ $spacing_nums:
       .#{$breakpoint}\:m-#{$spacing}px {  margin: #{$spacing}px; }
       .#{$breakpoint}\:mt-#{$spacing}px {  margin-top: #{$spacing}px; }
       .#{$breakpoint}\:mb-#{$spacing}px { margin-bottom: #{$spacing}px;  }
-      .#{$breakpoint}\:me-#{$spacing}px { margin-right: #{$spacing}px; }
-      .#{$breakpoint}\:ms-#{$spacing}px { margin-left: #{$spacing}px; }
+      .#{$breakpoint}\:mr-#{$spacing}px { margin-right: #{$spacing}px; }
+      .#{$breakpoint}\:ml-#{$spacing}px { margin-left: #{$spacing}px; }
       .#{$breakpoint}\:mx-#{$spacing}px { margin-left: #{$spacing}px; margin-right: #{$spacing}px; }
       .#{$breakpoint}\:my-#{$spacing}px { margin-top: #{$spacing}px; margin-bottom: #{$spacing}px; }
-    
+      // negative (minus) numbers
+      .-mt-#{$spacing}px {  margin-top: -#{$spacing}px; }
+      .-mb-#{$spacing}px { margin-bottom: -#{$spacing}px;  }
+      .-mr-#{$spacing}px { margin-right: -#{$spacing}px; }
+      .-ml-#{$spacing}px { margin-left: -#{$spacing}px; }
+      .-my-#{$spacing}px {  margin-top: -#{$spacing}px; margin-bottom: -#{$spacing}px;  }
+      .-mx-#{$spacing}px {  margin-left: -#{$spacing}px; margin-right: -#{$spacing}px;  }
+
       .#{$breakpoint}\:p-#{$spacing}px { padding: #{$spacing}px; }
       .#{$breakpoint}\:pt-#{$spacing}px {  padding-top: #{$spacing}px;  }
       .#{$breakpoint}\:pb-#{$spacing}px { padding-bottom: #{$spacing}px; }
-      .#{$breakpoint}\:pe-#{$spacing}px { padding-right: #{$spacing}px; }
-      .#{$breakpoint}\:ps-#{$spacing}px { padding-left: #{$spacing}px; }
+      .#{$breakpoint}\:pr-#{$spacing}px { padding-right: #{$spacing}px; }
+      .#{$breakpoint}\:pl-#{$spacing}px { padding-left: #{$spacing}px; }
       .#{$breakpoint}\:px-#{$spacing}px { padding-left: #{$spacing}px; padding-right: #{$spacing}px; }
       .#{$breakpoint}\:py-#{$spacing}px { padding-top: #{$spacing}px; padding-bottom: #{$spacing}px; }
     }
    // end breakpoint
-  }
-}
-
-
-/// GAP SIZES
-$gap_nums: 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px;
-
-@each $num in $gap_nums {
-  .gap-#{$num} { gap: #{$num}; }
-  .row-gap-#{$num} {  row-gap: #{$num}; }
-  .column-gap-#{$num} { column-gap: #{$num}; }
-}
-
-// Generate responsive utility classes
-// breakpoints can be changed from base-settings.scss
-@each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
-
-    @each $num in $gap_nums {
-      .#{$breakpoint}\gap-#{$num}px { gap: #{$num}; }
-      .#{$breakpoint}\row-gap-#{$num}px {  row-gap: #{$num}; }
-      .#{$breakpoint}\column-gap-#{$num}px { column-gap: #{$num}; }
-    }
-   // end breakpoint
-   
   }
 }

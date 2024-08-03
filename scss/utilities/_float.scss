@@ -1,0 +1,19 @@
+.float-start{float: inline-start;}
+.float-end{float: inline-end;}
+.float-right{float: right;}
+.float-left{float: left;}
+.float-none{float: none;}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    .#{$breakpoint}\:float-start{float: inline-start;}
+    .#{$breakpoint}\:float-end{float: inline-end;}
+    .#{$breakpoint}\:float-right{float: right;}
+    .#{$breakpoint}\:float-left{float: left;}
+    .#{$breakpoint}\:float-none{float: none;}
+    // end breakpoint
+  }
+}

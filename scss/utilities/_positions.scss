@@ -1,100 +1,56 @@
-.align-baseline {
-  vertical-align: baseline !important;
+
+.static { position: static;}
+.relative { position: relative;}
+.absolute {position: absolute;}
+.fixed {position: fixed;}
+.sticky {position: sticky;}
+
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
-.align-top {
-  vertical-align: top !important;
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
 }
 
-.align-middle {
-  vertical-align: middle !important;
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }
 
-.align-bottom {
-  vertical-align: bottom !important;
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 1020;
 }
 
-.align-text-bottom {
-  vertical-align: text-bottom !important;
-}
-
-.align-text-top {
-  vertical-align: text-top !important;
-}
-
-.float-start {
-  float: left !important;
-}
-
-.float-end {
-  float: right !important;
-}
-
-.float-none {
-  float: none !important;
-}
+.align-baseline {vertical-align: baseline;}
+.align-top {vertical-align: top;}
+.align-middle {vertical-align: middle;}
+.align-bottom {vertical-align: bottom;}
+.align-text-bottom {vertical-align: text-bottom;}
+.align-text-top {vertical-align: text-top;}
+.align-sub {vertical-align: sub;}
+.align-super {vertical-align: super;}
 
 
-.translate-middle {
-          transform: translate(-50%, -50%) !important;
-}
+.translate-middle-xy{ transform: translate(50%, 50%);}
+.translate-middle-x { transform: translateX(50%);}
+.translate-middle-y {  transform: translateY(50%);}
+.-translate-middle-xy{ transform: translate(-50%, -50%);}
+.-translate-middle-x { transform: translateX(-50%);}
+.-translate-middle-y {  transform: translateY(-50%);}
 
-.translate-middle-x {
-          transform: translateX(-50%) !important;
-}
-
-.translate-middle-y {
-          transform: translateY(-50%) !important;
-}
-
-
-.center-x{
-  top:50%;
-  transform: translateY(-50%);
-}
-
-.center-y{
-  left:50%;
-  transform: translateX(-50%);
-}
-
-.center-xy{
-  top:50%; left:50%;
-  transform: translateY(-50%); transform: translateX(-50%);
-}
-
-
-.position-static {
-  position: static !important;
-}
-
-.position-relative {
-  position: relative !important;
-}
-
-.position-absolute {
-  position: absolute !important;
-}
-
-.position-fixed {
-  position: fixed !important;
-}
-
-.position-sticky {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-}
-
-.inset-0{ inset:0}
-
-.translate-middle {
-  transform: translate(-50%, -50%) !important;
-}
-
-.translate-middle-x {
-  transform: translateX(-50%) !important;
-}
-
-.translate-middle-y {
-  transform: translateY(-50%) !important;
-}
+.center-y{  top:50%; transform: translateY(-50%);}
+.center-x{ left:50%; transform: translateX(-50%);}
+.center-xy{ top:50%; left:50%; transform: translateY(-50%); transform: translateX(-50%);}

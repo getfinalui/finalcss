@@ -1,0 +1,50 @@
+// Typograph: Font, Color and Sizes
+//
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0; // 1
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+}
+
+// Type display classes
+// scss-docs-start display-headings
+$font-sizes-list: (
+  xs: 0.7rem,
+  sm: 0.9rem,
+  base: 1rem,
+  lg: 1.12rem,
+  xl: 1.3rem,
+  2xl: 1.5rem,
+  3xl: 1.8rem,
+  4xl: 2.2rem,
+  5xl: 3rem,
+  6xl: 3.75rem,
+  7xl: 4.5rem,
+  8xl: 6rem,
+  9xl: 8rem,
+) !default;
+
+@each $name, $font-size in $font-sizes-list {
+  .text-#{$name} {
+    font-size: $font-size;
+  }
+}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    @each $name, $font-size in $font-sizes-list {
+      .#{$breakpoint}\:text-#{$name} {
+        font-size: $font-size;
+      }
+    }
+    // end breakpoint
+  }
+}
+

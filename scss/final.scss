@@ -28,9 +28,13 @@
 @import "components/list"; 
 
 // Utility classes
+@import "utilities/display-layout";
 @import "utilities/size";
 @import "utilities/spacing";
-@import "utilities/text";
+@import "utilities/gap";
+@import "utilities/float";
+@import "utilities/text-style";
+@import "utilities/text-size";
 @import "utilities/border-color";
 @import "utilities/border-radius";
 @import "utilities/background";
@@ -41,9 +45,8 @@
 @import "utilities/opacity";
 @import "utilities/shadow";
 @import "utilities/z-index";
-@import "utilities/fixed-sticky";
 @import "utilities/visually-hidden";
-@import "utilities/layout-display";
+
 
 // Layouts and Temnplates
 @import "layout/base";
