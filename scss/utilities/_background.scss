@@ -10,6 +10,7 @@
 .bg-black{ background-color:#000;}
 .bg-dark{background-color:#14181F;}
 
+
 // generate classes for background ex. bg-neutral-900
 $colors_neutral_nums: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000; 
 
@@ -17,9 +18,16 @@ $colors_neutral_nums: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
   .bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
 }
 
+// on-hover
+@each $num in $colors_neutral_nums {
+  .group:hover .group-hover\:bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
+}
+// group hover
+@each $num in $colors_neutral_nums {
+  .hover\:bg-neutral-#{$num}:hover { background-color:var(--neutral-#{$num}); }
+}
+
 // generate classes for background ex. bg-primary-100 
-
-
 $colors_accent_nums: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 @each $num in $colors_accent_nums {
@@ -29,4 +37,24 @@ $colors_accent_nums: 100, 200, 300, 400, 500, 600, 700, 800, 900;
   .bg-warning-#{$num} { background-color:var(--warning-#{$num}); }
   .bg-feature-#{$num} { background-color:var(--feature-#{$num});  }
   .bg-info-#{$num} {  background-color:var(--info-#{$num});  }
+}
+
+// on hover
+@each $num in $colors_accent_nums {
+  .hover\:bg-primary-#{$num}:hover { background-color:var(--primary-#{$num});  }
+  .hover\:bg-success-#{$num}:hover { background-color:var(--success-#{$num}); }
+  .hover\:bg-danger-#{$num}:hover { background-color:var(--danger-#{$num});  }
+  .hover\:bg-warning-#{$num}:hover { background-color:var(--warning-#{$num}); }
+  .hover\:bg-feature-#{$num}:hover { background-color:var(--feature-#{$num});  }
+  .hover\:bg-info-#{$num}:hover {  background-color:var(--info-#{$num});  }
+}
+
+// group hover (parent hover)
+@each $num in $colors_accent_nums {
+  .group:hover .group-hover\:bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
+  .group:hover .group-hover\:bg-success-#{$num} { background-color:var(--success-#{$num}); }
+  .group:hover .group-hover\:bg-danger-#{$num} { background-color:var(--danger-#{$num});  }
+  .group:hover .group-hover\:bg-warning-#{$num} { background-color:var(--warning-#{$num}); }
+  .group:hover .group-hover\:bg-feature-#{$num} { background-color:var(--feature-#{$num});  }
+  .group:hover .group-hover\:bg-info-#{$num} {  background-color:var(--info-#{$num});  }
 }

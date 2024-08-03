@@ -24257,534 +24257,534 @@ progress {
 }
 
 @media (min-width: 640px) {
-  .smgap-0px {
+  .sm\:gap-0px {
     gap: 0;
   }
 
-  .smrow-gap-0px {
+  .sm\:row-gap-0px {
     row-gap: 0;
   }
 
-  .sm\c olumn-gap-0px {
+  .sm\:column-gap-0px {
     column-gap: 0;
   }
 
-  .smgap-4pxpx {
+  .sm\:gap-4pxpx {
     gap: 4px;
   }
 
-  .smrow-gap-4pxpx {
+  .sm\:row-gap-4pxpx {
     row-gap: 4px;
   }
 
-  .sm\c olumn-gap-4pxpx {
+  .sm\:column-gap-4pxpx {
     column-gap: 4px;
   }
 
-  .smgap-8pxpx {
+  .sm\:gap-8pxpx {
     gap: 8px;
   }
 
-  .smrow-gap-8pxpx {
+  .sm\:row-gap-8pxpx {
     row-gap: 8px;
   }
 
-  .sm\c olumn-gap-8pxpx {
+  .sm\:column-gap-8pxpx {
     column-gap: 8px;
   }
 
-  .smgap-12pxpx {
+  .sm\:gap-12pxpx {
     gap: 12px;
   }
 
-  .smrow-gap-12pxpx {
+  .sm\:row-gap-12pxpx {
     row-gap: 12px;
   }
 
-  .sm\c olumn-gap-12pxpx {
+  .sm\:column-gap-12pxpx {
     column-gap: 12px;
   }
 
-  .smgap-16pxpx {
+  .sm\:gap-16pxpx {
     gap: 16px;
   }
 
-  .smrow-gap-16pxpx {
+  .sm\:row-gap-16pxpx {
     row-gap: 16px;
   }
 
-  .sm\c olumn-gap-16pxpx {
+  .sm\:column-gap-16pxpx {
     column-gap: 16px;
   }
 
-  .smgap-20pxpx {
+  .sm\:gap-20pxpx {
     gap: 20px;
   }
 
-  .smrow-gap-20pxpx {
+  .sm\:row-gap-20pxpx {
     row-gap: 20px;
   }
 
-  .sm\c olumn-gap-20pxpx {
+  .sm\:column-gap-20pxpx {
     column-gap: 20px;
   }
 
-  .smgap-24pxpx {
+  .sm\:gap-24pxpx {
     gap: 24px;
   }
 
-  .smrow-gap-24pxpx {
+  .sm\:row-gap-24pxpx {
     row-gap: 24px;
   }
 
-  .sm\c olumn-gap-24pxpx {
+  .sm\:column-gap-24pxpx {
     column-gap: 24px;
   }
 
-  .smgap-28pxpx {
+  .sm\:gap-28pxpx {
     gap: 28px;
   }
 
-  .smrow-gap-28pxpx {
+  .sm\:row-gap-28pxpx {
     row-gap: 28px;
   }
 
-  .sm\c olumn-gap-28pxpx {
+  .sm\:column-gap-28pxpx {
     column-gap: 28px;
   }
 
-  .smgap-32pxpx {
+  .sm\:gap-32pxpx {
     gap: 32px;
   }
 
-  .smrow-gap-32pxpx {
+  .sm\:row-gap-32pxpx {
     row-gap: 32px;
   }
 
-  .sm\c olumn-gap-32pxpx {
+  .sm\:column-gap-32pxpx {
     column-gap: 32px;
   }
 
-  .smgap-36pxpx {
+  .sm\:gap-36pxpx {
     gap: 36px;
   }
 
-  .smrow-gap-36pxpx {
+  .sm\:row-gap-36pxpx {
     row-gap: 36px;
   }
 
-  .sm\c olumn-gap-36pxpx {
+  .sm\:column-gap-36pxpx {
     column-gap: 36px;
   }
 
-  .smgap-40pxpx {
+  .sm\:gap-40pxpx {
     gap: 40px;
   }
 
-  .smrow-gap-40pxpx {
+  .sm\:row-gap-40pxpx {
     row-gap: 40px;
   }
 
-  .sm\c olumn-gap-40pxpx {
+  .sm\:column-gap-40pxpx {
     column-gap: 40px;
   }
 }
 @media (min-width: 768px) {
-  .mdgap-0px {
+  .md\:gap-0px {
     gap: 0;
   }
 
-  .mdrow-gap-0px {
+  .md\:row-gap-0px {
     row-gap: 0;
   }
 
-  .md\c olumn-gap-0px {
+  .md\:column-gap-0px {
     column-gap: 0;
   }
 
-  .mdgap-4pxpx {
+  .md\:gap-4pxpx {
     gap: 4px;
   }
 
-  .mdrow-gap-4pxpx {
+  .md\:row-gap-4pxpx {
     row-gap: 4px;
   }
 
-  .md\c olumn-gap-4pxpx {
+  .md\:column-gap-4pxpx {
     column-gap: 4px;
   }
 
-  .mdgap-8pxpx {
+  .md\:gap-8pxpx {
     gap: 8px;
   }
 
-  .mdrow-gap-8pxpx {
+  .md\:row-gap-8pxpx {
     row-gap: 8px;
   }
 
-  .md\c olumn-gap-8pxpx {
+  .md\:column-gap-8pxpx {
     column-gap: 8px;
   }
 
-  .mdgap-12pxpx {
+  .md\:gap-12pxpx {
     gap: 12px;
   }
 
-  .mdrow-gap-12pxpx {
+  .md\:row-gap-12pxpx {
     row-gap: 12px;
   }
 
-  .md\c olumn-gap-12pxpx {
+  .md\:column-gap-12pxpx {
     column-gap: 12px;
   }
 
-  .mdgap-16pxpx {
+  .md\:gap-16pxpx {
     gap: 16px;
   }
 
-  .mdrow-gap-16pxpx {
+  .md\:row-gap-16pxpx {
     row-gap: 16px;
   }
 
-  .md\c olumn-gap-16pxpx {
+  .md\:column-gap-16pxpx {
     column-gap: 16px;
   }
 
-  .mdgap-20pxpx {
+  .md\:gap-20pxpx {
     gap: 20px;
   }
 
-  .mdrow-gap-20pxpx {
+  .md\:row-gap-20pxpx {
     row-gap: 20px;
   }
 
-  .md\c olumn-gap-20pxpx {
+  .md\:column-gap-20pxpx {
     column-gap: 20px;
   }
 
-  .mdgap-24pxpx {
+  .md\:gap-24pxpx {
     gap: 24px;
   }
 
-  .mdrow-gap-24pxpx {
+  .md\:row-gap-24pxpx {
     row-gap: 24px;
   }
 
-  .md\c olumn-gap-24pxpx {
+  .md\:column-gap-24pxpx {
     column-gap: 24px;
   }
 
-  .mdgap-28pxpx {
+  .md\:gap-28pxpx {
     gap: 28px;
   }
 
-  .mdrow-gap-28pxpx {
+  .md\:row-gap-28pxpx {
     row-gap: 28px;
   }
 
-  .md\c olumn-gap-28pxpx {
+  .md\:column-gap-28pxpx {
     column-gap: 28px;
   }
 
-  .mdgap-32pxpx {
+  .md\:gap-32pxpx {
     gap: 32px;
   }
 
-  .mdrow-gap-32pxpx {
+  .md\:row-gap-32pxpx {
     row-gap: 32px;
   }
 
-  .md\c olumn-gap-32pxpx {
+  .md\:column-gap-32pxpx {
     column-gap: 32px;
   }
 
-  .mdgap-36pxpx {
+  .md\:gap-36pxpx {
     gap: 36px;
   }
 
-  .mdrow-gap-36pxpx {
+  .md\:row-gap-36pxpx {
     row-gap: 36px;
   }
 
-  .md\c olumn-gap-36pxpx {
+  .md\:column-gap-36pxpx {
     column-gap: 36px;
   }
 
-  .mdgap-40pxpx {
+  .md\:gap-40pxpx {
     gap: 40px;
   }
 
-  .mdrow-gap-40pxpx {
+  .md\:row-gap-40pxpx {
     row-gap: 40px;
   }
 
-  .md\c olumn-gap-40pxpx {
+  .md\:column-gap-40pxpx {
     column-gap: 40px;
   }
 }
 @media (min-width: 1200px) {
-  .lggap-0px {
+  .lg\:gap-0px {
     gap: 0;
   }
 
-  .lgrow-gap-0px {
+  .lg\:row-gap-0px {
     row-gap: 0;
   }
 
-  .lg\c olumn-gap-0px {
+  .lg\:column-gap-0px {
     column-gap: 0;
   }
 
-  .lggap-4pxpx {
+  .lg\:gap-4pxpx {
     gap: 4px;
   }
 
-  .lgrow-gap-4pxpx {
+  .lg\:row-gap-4pxpx {
     row-gap: 4px;
   }
 
-  .lg\c olumn-gap-4pxpx {
+  .lg\:column-gap-4pxpx {
     column-gap: 4px;
   }
 
-  .lggap-8pxpx {
+  .lg\:gap-8pxpx {
     gap: 8px;
   }
 
-  .lgrow-gap-8pxpx {
+  .lg\:row-gap-8pxpx {
     row-gap: 8px;
   }
 
-  .lg\c olumn-gap-8pxpx {
+  .lg\:column-gap-8pxpx {
     column-gap: 8px;
   }
 
-  .lggap-12pxpx {
+  .lg\:gap-12pxpx {
     gap: 12px;
   }
 
-  .lgrow-gap-12pxpx {
+  .lg\:row-gap-12pxpx {
     row-gap: 12px;
   }
 
-  .lg\c olumn-gap-12pxpx {
+  .lg\:column-gap-12pxpx {
     column-gap: 12px;
   }
 
-  .lggap-16pxpx {
+  .lg\:gap-16pxpx {
     gap: 16px;
   }
 
-  .lgrow-gap-16pxpx {
+  .lg\:row-gap-16pxpx {
     row-gap: 16px;
   }
 
-  .lg\c olumn-gap-16pxpx {
+  .lg\:column-gap-16pxpx {
     column-gap: 16px;
   }
 
-  .lggap-20pxpx {
+  .lg\:gap-20pxpx {
     gap: 20px;
   }
 
-  .lgrow-gap-20pxpx {
+  .lg\:row-gap-20pxpx {
     row-gap: 20px;
   }
 
-  .lg\c olumn-gap-20pxpx {
+  .lg\:column-gap-20pxpx {
     column-gap: 20px;
   }
 
-  .lggap-24pxpx {
+  .lg\:gap-24pxpx {
     gap: 24px;
   }
 
-  .lgrow-gap-24pxpx {
+  .lg\:row-gap-24pxpx {
     row-gap: 24px;
   }
 
-  .lg\c olumn-gap-24pxpx {
+  .lg\:column-gap-24pxpx {
     column-gap: 24px;
   }
 
-  .lggap-28pxpx {
+  .lg\:gap-28pxpx {
     gap: 28px;
   }
 
-  .lgrow-gap-28pxpx {
+  .lg\:row-gap-28pxpx {
     row-gap: 28px;
   }
 
-  .lg\c olumn-gap-28pxpx {
+  .lg\:column-gap-28pxpx {
     column-gap: 28px;
   }
 
-  .lggap-32pxpx {
+  .lg\:gap-32pxpx {
     gap: 32px;
   }
 
-  .lgrow-gap-32pxpx {
+  .lg\:row-gap-32pxpx {
     row-gap: 32px;
   }
 
-  .lg\c olumn-gap-32pxpx {
+  .lg\:column-gap-32pxpx {
     column-gap: 32px;
   }
 
-  .lggap-36pxpx {
+  .lg\:gap-36pxpx {
     gap: 36px;
   }
 
-  .lgrow-gap-36pxpx {
+  .lg\:row-gap-36pxpx {
     row-gap: 36px;
   }
 
-  .lg\c olumn-gap-36pxpx {
+  .lg\:column-gap-36pxpx {
     column-gap: 36px;
   }
 
-  .lggap-40pxpx {
+  .lg\:gap-40pxpx {
     gap: 40px;
   }
 
-  .lgrow-gap-40pxpx {
+  .lg\:row-gap-40pxpx {
     row-gap: 40px;
   }
 
-  .lg\c olumn-gap-40pxpx {
+  .lg\:column-gap-40pxpx {
     column-gap: 40px;
   }
 }
 @media (min-width: 1440px) {
-  .xlgap-0px {
+  .xl\:gap-0px {
     gap: 0;
   }
 
-  .xlrow-gap-0px {
+  .xl\:row-gap-0px {
     row-gap: 0;
   }
 
-  .xl\c olumn-gap-0px {
+  .xl\:column-gap-0px {
     column-gap: 0;
   }
 
-  .xlgap-4pxpx {
+  .xl\:gap-4pxpx {
     gap: 4px;
   }
 
-  .xlrow-gap-4pxpx {
+  .xl\:row-gap-4pxpx {
     row-gap: 4px;
   }
 
-  .xl\c olumn-gap-4pxpx {
+  .xl\:column-gap-4pxpx {
     column-gap: 4px;
   }
 
-  .xlgap-8pxpx {
+  .xl\:gap-8pxpx {
     gap: 8px;
   }
 
-  .xlrow-gap-8pxpx {
+  .xl\:row-gap-8pxpx {
     row-gap: 8px;
   }
 
-  .xl\c olumn-gap-8pxpx {
+  .xl\:column-gap-8pxpx {
     column-gap: 8px;
   }
 
-  .xlgap-12pxpx {
+  .xl\:gap-12pxpx {
     gap: 12px;
   }
 
-  .xlrow-gap-12pxpx {
+  .xl\:row-gap-12pxpx {
     row-gap: 12px;
   }
 
-  .xl\c olumn-gap-12pxpx {
+  .xl\:column-gap-12pxpx {
     column-gap: 12px;
   }
 
-  .xlgap-16pxpx {
+  .xl\:gap-16pxpx {
     gap: 16px;
   }
 
-  .xlrow-gap-16pxpx {
+  .xl\:row-gap-16pxpx {
     row-gap: 16px;
   }
 
-  .xl\c olumn-gap-16pxpx {
+  .xl\:column-gap-16pxpx {
     column-gap: 16px;
   }
 
-  .xlgap-20pxpx {
+  .xl\:gap-20pxpx {
     gap: 20px;
   }
 
-  .xlrow-gap-20pxpx {
+  .xl\:row-gap-20pxpx {
     row-gap: 20px;
   }
 
-  .xl\c olumn-gap-20pxpx {
+  .xl\:column-gap-20pxpx {
     column-gap: 20px;
   }
 
-  .xlgap-24pxpx {
+  .xl\:gap-24pxpx {
     gap: 24px;
   }
 
-  .xlrow-gap-24pxpx {
+  .xl\:row-gap-24pxpx {
     row-gap: 24px;
   }
 
-  .xl\c olumn-gap-24pxpx {
+  .xl\:column-gap-24pxpx {
     column-gap: 24px;
   }
 
-  .xlgap-28pxpx {
+  .xl\:gap-28pxpx {
     gap: 28px;
   }
 
-  .xlrow-gap-28pxpx {
+  .xl\:row-gap-28pxpx {
     row-gap: 28px;
   }
 
-  .xl\c olumn-gap-28pxpx {
+  .xl\:column-gap-28pxpx {
     column-gap: 28px;
   }
 
-  .xlgap-32pxpx {
+  .xl\:gap-32pxpx {
     gap: 32px;
   }
 
-  .xlrow-gap-32pxpx {
+  .xl\:row-gap-32pxpx {
     row-gap: 32px;
   }
 
-  .xl\c olumn-gap-32pxpx {
+  .xl\:column-gap-32pxpx {
     column-gap: 32px;
   }
 
-  .xlgap-36pxpx {
+  .xl\:gap-36pxpx {
     gap: 36px;
   }
 
-  .xlrow-gap-36pxpx {
+  .xl\:row-gap-36pxpx {
     row-gap: 36px;
   }
 
-  .xl\c olumn-gap-36pxpx {
+  .xl\:column-gap-36pxpx {
     column-gap: 36px;
   }
 
-  .xlgap-40pxpx {
+  .xl\:gap-40pxpx {
     gap: 40px;
   }
 
-  .xlrow-gap-40pxpx {
+  .xl\:row-gap-40pxpx {
     row-gap: 40px;
   }
 
-  .xl\c olumn-gap-40pxpx {
+  .xl\:column-gap-40pxpx {
     column-gap: 40px;
   }
 }
@@ -25507,6 +25507,102 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--neutral-1000);
 }
 
+.group:hover .group-hover\:bg-neutral-0 {
+  background-color: var(--neutral-0);
+}
+
+.group:hover .group-hover\:bg-neutral-50 {
+  background-color: var(--neutral-50);
+}
+
+.group:hover .group-hover\:bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+
+.group:hover .group-hover\:bg-neutral-200 {
+  background-color: var(--neutral-200);
+}
+
+.group:hover .group-hover\:bg-neutral-300 {
+  background-color: var(--neutral-300);
+}
+
+.group:hover .group-hover\:bg-neutral-400 {
+  background-color: var(--neutral-400);
+}
+
+.group:hover .group-hover\:bg-neutral-500 {
+  background-color: var(--neutral-500);
+}
+
+.group:hover .group-hover\:bg-neutral-600 {
+  background-color: var(--neutral-600);
+}
+
+.group:hover .group-hover\:bg-neutral-700 {
+  background-color: var(--neutral-700);
+}
+
+.group:hover .group-hover\:bg-neutral-800 {
+  background-color: var(--neutral-800);
+}
+
+.group:hover .group-hover\:bg-neutral-900 {
+  background-color: var(--neutral-900);
+}
+
+.group:hover .group-hover\:bg-neutral-1000 {
+  background-color: var(--neutral-1000);
+}
+
+.hover\:bg-neutral-0:hover {
+  background-color: var(--neutral-0);
+}
+
+.hover\:bg-neutral-50:hover {
+  background-color: var(--neutral-50);
+}
+
+.hover\:bg-neutral-100:hover {
+  background-color: var(--neutral-100);
+}
+
+.hover\:bg-neutral-200:hover {
+  background-color: var(--neutral-200);
+}
+
+.hover\:bg-neutral-300:hover {
+  background-color: var(--neutral-300);
+}
+
+.hover\:bg-neutral-400:hover {
+  background-color: var(--neutral-400);
+}
+
+.hover\:bg-neutral-500:hover {
+  background-color: var(--neutral-500);
+}
+
+.hover\:bg-neutral-600:hover {
+  background-color: var(--neutral-600);
+}
+
+.hover\:bg-neutral-700:hover {
+  background-color: var(--neutral-700);
+}
+
+.hover\:bg-neutral-800:hover {
+  background-color: var(--neutral-800);
+}
+
+.hover\:bg-neutral-900:hover {
+  background-color: var(--neutral-900);
+}
+
+.hover\:bg-neutral-1000:hover {
+  background-color: var(--neutral-1000);
+}
+
 .bg-primary-100 {
   background-color: var(--primary-100);
 }
@@ -25723,6 +25819,438 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--info-900);
 }
 
+.hover\:bg-primary-100:hover {
+  background-color: var(--primary-100);
+}
+
+.hover\:bg-success-100:hover {
+  background-color: var(--success-100);
+}
+
+.hover\:bg-danger-100:hover {
+  background-color: var(--danger-100);
+}
+
+.hover\:bg-warning-100:hover {
+  background-color: var(--warning-100);
+}
+
+.hover\:bg-feature-100:hover {
+  background-color: var(--feature-100);
+}
+
+.hover\:bg-info-100:hover {
+  background-color: var(--info-100);
+}
+
+.hover\:bg-primary-200:hover {
+  background-color: var(--primary-200);
+}
+
+.hover\:bg-success-200:hover {
+  background-color: var(--success-200);
+}
+
+.hover\:bg-danger-200:hover {
+  background-color: var(--danger-200);
+}
+
+.hover\:bg-warning-200:hover {
+  background-color: var(--warning-200);
+}
+
+.hover\:bg-feature-200:hover {
+  background-color: var(--feature-200);
+}
+
+.hover\:bg-info-200:hover {
+  background-color: var(--info-200);
+}
+
+.hover\:bg-primary-300:hover {
+  background-color: var(--primary-300);
+}
+
+.hover\:bg-success-300:hover {
+  background-color: var(--success-300);
+}
+
+.hover\:bg-danger-300:hover {
+  background-color: var(--danger-300);
+}
+
+.hover\:bg-warning-300:hover {
+  background-color: var(--warning-300);
+}
+
+.hover\:bg-feature-300:hover {
+  background-color: var(--feature-300);
+}
+
+.hover\:bg-info-300:hover {
+  background-color: var(--info-300);
+}
+
+.hover\:bg-primary-400:hover {
+  background-color: var(--primary-400);
+}
+
+.hover\:bg-success-400:hover {
+  background-color: var(--success-400);
+}
+
+.hover\:bg-danger-400:hover {
+  background-color: var(--danger-400);
+}
+
+.hover\:bg-warning-400:hover {
+  background-color: var(--warning-400);
+}
+
+.hover\:bg-feature-400:hover {
+  background-color: var(--feature-400);
+}
+
+.hover\:bg-info-400:hover {
+  background-color: var(--info-400);
+}
+
+.hover\:bg-primary-500:hover {
+  background-color: var(--primary-500);
+}
+
+.hover\:bg-success-500:hover {
+  background-color: var(--success-500);
+}
+
+.hover\:bg-danger-500:hover {
+  background-color: var(--danger-500);
+}
+
+.hover\:bg-warning-500:hover {
+  background-color: var(--warning-500);
+}
+
+.hover\:bg-feature-500:hover {
+  background-color: var(--feature-500);
+}
+
+.hover\:bg-info-500:hover {
+  background-color: var(--info-500);
+}
+
+.hover\:bg-primary-600:hover {
+  background-color: var(--primary-600);
+}
+
+.hover\:bg-success-600:hover {
+  background-color: var(--success-600);
+}
+
+.hover\:bg-danger-600:hover {
+  background-color: var(--danger-600);
+}
+
+.hover\:bg-warning-600:hover {
+  background-color: var(--warning-600);
+}
+
+.hover\:bg-feature-600:hover {
+  background-color: var(--feature-600);
+}
+
+.hover\:bg-info-600:hover {
+  background-color: var(--info-600);
+}
+
+.hover\:bg-primary-700:hover {
+  background-color: var(--primary-700);
+}
+
+.hover\:bg-success-700:hover {
+  background-color: var(--success-700);
+}
+
+.hover\:bg-danger-700:hover {
+  background-color: var(--danger-700);
+}
+
+.hover\:bg-warning-700:hover {
+  background-color: var(--warning-700);
+}
+
+.hover\:bg-feature-700:hover {
+  background-color: var(--feature-700);
+}
+
+.hover\:bg-info-700:hover {
+  background-color: var(--info-700);
+}
+
+.hover\:bg-primary-800:hover {
+  background-color: var(--primary-800);
+}
+
+.hover\:bg-success-800:hover {
+  background-color: var(--success-800);
+}
+
+.hover\:bg-danger-800:hover {
+  background-color: var(--danger-800);
+}
+
+.hover\:bg-warning-800:hover {
+  background-color: var(--warning-800);
+}
+
+.hover\:bg-feature-800:hover {
+  background-color: var(--feature-800);
+}
+
+.hover\:bg-info-800:hover {
+  background-color: var(--info-800);
+}
+
+.hover\:bg-primary-900:hover {
+  background-color: var(--primary-900);
+}
+
+.hover\:bg-success-900:hover {
+  background-color: var(--success-900);
+}
+
+.hover\:bg-danger-900:hover {
+  background-color: var(--danger-900);
+}
+
+.hover\:bg-warning-900:hover {
+  background-color: var(--warning-900);
+}
+
+.hover\:bg-feature-900:hover {
+  background-color: var(--feature-900);
+}
+
+.hover\:bg-info-900:hover {
+  background-color: var(--info-900);
+}
+
+.group:hover .group-hover\:bg-primary-100 {
+  background-color: var(--primary-100);
+}
+
+.group:hover .group-hover\:bg-success-100 {
+  background-color: var(--success-100);
+}
+
+.group:hover .group-hover\:bg-danger-100 {
+  background-color: var(--danger-100);
+}
+
+.group:hover .group-hover\:bg-warning-100 {
+  background-color: var(--warning-100);
+}
+
+.group:hover .group-hover\:bg-feature-100 {
+  background-color: var(--feature-100);
+}
+
+.group:hover .group-hover\:bg-info-100 {
+  background-color: var(--info-100);
+}
+
+.group:hover .group-hover\:bg-primary-200 {
+  background-color: var(--primary-200);
+}
+
+.group:hover .group-hover\:bg-success-200 {
+  background-color: var(--success-200);
+}
+
+.group:hover .group-hover\:bg-danger-200 {
+  background-color: var(--danger-200);
+}
+
+.group:hover .group-hover\:bg-warning-200 {
+  background-color: var(--warning-200);
+}
+
+.group:hover .group-hover\:bg-feature-200 {
+  background-color: var(--feature-200);
+}
+
+.group:hover .group-hover\:bg-info-200 {
+  background-color: var(--info-200);
+}
+
+.group:hover .group-hover\:bg-primary-300 {
+  background-color: var(--primary-300);
+}
+
+.group:hover .group-hover\:bg-success-300 {
+  background-color: var(--success-300);
+}
+
+.group:hover .group-hover\:bg-danger-300 {
+  background-color: var(--danger-300);
+}
+
+.group:hover .group-hover\:bg-warning-300 {
+  background-color: var(--warning-300);
+}
+
+.group:hover .group-hover\:bg-feature-300 {
+  background-color: var(--feature-300);
+}
+
+.group:hover .group-hover\:bg-info-300 {
+  background-color: var(--info-300);
+}
+
+.group:hover .group-hover\:bg-primary-400 {
+  background-color: var(--primary-400);
+}
+
+.group:hover .group-hover\:bg-success-400 {
+  background-color: var(--success-400);
+}
+
+.group:hover .group-hover\:bg-danger-400 {
+  background-color: var(--danger-400);
+}
+
+.group:hover .group-hover\:bg-warning-400 {
+  background-color: var(--warning-400);
+}
+
+.group:hover .group-hover\:bg-feature-400 {
+  background-color: var(--feature-400);
+}
+
+.group:hover .group-hover\:bg-info-400 {
+  background-color: var(--info-400);
+}
+
+.group:hover .group-hover\:bg-primary-500 {
+  background-color: var(--primary-500);
+}
+
+.group:hover .group-hover\:bg-success-500 {
+  background-color: var(--success-500);
+}
+
+.group:hover .group-hover\:bg-danger-500 {
+  background-color: var(--danger-500);
+}
+
+.group:hover .group-hover\:bg-warning-500 {
+  background-color: var(--warning-500);
+}
+
+.group:hover .group-hover\:bg-feature-500 {
+  background-color: var(--feature-500);
+}
+
+.group:hover .group-hover\:bg-info-500 {
+  background-color: var(--info-500);
+}
+
+.group:hover .group-hover\:bg-primary-600 {
+  background-color: var(--primary-600);
+}
+
+.group:hover .group-hover\:bg-success-600 {
+  background-color: var(--success-600);
+}
+
+.group:hover .group-hover\:bg-danger-600 {
+  background-color: var(--danger-600);
+}
+
+.group:hover .group-hover\:bg-warning-600 {
+  background-color: var(--warning-600);
+}
+
+.group:hover .group-hover\:bg-feature-600 {
+  background-color: var(--feature-600);
+}
+
+.group:hover .group-hover\:bg-info-600 {
+  background-color: var(--info-600);
+}
+
+.group:hover .group-hover\:bg-primary-700 {
+  background-color: var(--primary-700);
+}
+
+.group:hover .group-hover\:bg-success-700 {
+  background-color: var(--success-700);
+}
+
+.group:hover .group-hover\:bg-danger-700 {
+  background-color: var(--danger-700);
+}
+
+.group:hover .group-hover\:bg-warning-700 {
+  background-color: var(--warning-700);
+}
+
+.group:hover .group-hover\:bg-feature-700 {
+  background-color: var(--feature-700);
+}
+
+.group:hover .group-hover\:bg-info-700 {
+  background-color: var(--info-700);
+}
+
+.group:hover .group-hover\:bg-primary-800 {
+  background-color: var(--primary-800);
+}
+
+.group:hover .group-hover\:bg-success-800 {
+  background-color: var(--success-800);
+}
+
+.group:hover .group-hover\:bg-danger-800 {
+  background-color: var(--danger-800);
+}
+
+.group:hover .group-hover\:bg-warning-800 {
+  background-color: var(--warning-800);
+}
+
+.group:hover .group-hover\:bg-feature-800 {
+  background-color: var(--feature-800);
+}
+
+.group:hover .group-hover\:bg-info-800 {
+  background-color: var(--info-800);
+}
+
+.group:hover .group-hover\:bg-primary-900 {
+  background-color: var(--primary-900);
+}
+
+.group:hover .group-hover\:bg-success-900 {
+  background-color: var(--success-900);
+}
+
+.group:hover .group-hover\:bg-danger-900 {
+  background-color: var(--danger-900);
+}
+
+.group:hover .group-hover\:bg-warning-900 {
+  background-color: var(--warning-900);
+}
+
+.group:hover .group-hover\:bg-feature-900 {
+  background-color: var(--feature-900);
+}
+
+.group:hover .group-hover\:bg-info-900 {
+  background-color: var(--info-900);
+}
+
 .bg-aurora {
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
@@ -25761,6 +26289,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .sticky {
   position: sticky;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.left-0 {
+  left: 0;
 }
 
 .fixed-top {
