@@ -1,16 +1,17 @@
 $size_nums: 
-0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240;
-
+auto, 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px, 50px, 60px, 70px, 80px, 90px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 180px, 190px, 200px, 250px, 300px, 350px, 400px, 450px, 500px;
 
 // * Generates sizes in px, for ex:
 // .w-40px{width:40px}
 // MARGINS in px
 
 @each $num in $size_nums {
-  .w-#{$num}px {  width: #{$num}px; }
-  .min-w-#{$num}px { min-width: #{$num}px; }
-  .h-#{$num}px { height: #{$num}px;  }
-  .min-h-#{$num}px {  min-height: #{$num}px;  }
+  .w-#{$num} {  width: #{$num}; }
+  .min-w-#{$num} { min-width: #{$num}; }
+  .max-w-#{$num} { max-width: #{$num}; }
+  .h-#{$num} { height: #{$num};  }
+  .min-h-#{$num} {  min-height: #{$num};  }
+  .max-h-#{$num} {  max-height: #{$num};  }
 }
 
 // Generate responsive utility classes
@@ -19,10 +20,12 @@ $size_nums:
   @media (min-width: #{$size}){
     // breakpoinst styles
     @each $num in $size_nums {
-      .#{$breakpoint}\:w-#{$num}px { width: #{$num}px; }
-      .#{$breakpoint}\:min-w-#{$num}px {  min-width: #{$num}px; }
-      .#{$breakpoint}\:h-#{$num}px { height: #{$num}px; }
-      .#{$breakpoint}\:min-h-#{$num}px {  min-height: #{$num}px;  }
+      .#{$breakpoint}\:w-#{$num} { width: #{$num}; }
+      .#{$breakpoint}\:min-w-#{$num} {  min-width: #{$num}; }
+      .#{$breakpoint}\:max-w-#{$num} {  max-width: #{$num}; }
+      .#{$breakpoint}\:h-#{$num} { height: #{$num}; }
+      .#{$breakpoint}\:min-h-#{$num} {  min-height: #{$num};  }
+      .#{$breakpoint}\:max-h-#{$num} {  max-height: #{$num};  }
     }
     // end breakpoint
   }

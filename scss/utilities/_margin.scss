@@ -1,0 +1,58 @@
+$margin_nums: 
+auto, 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px, 50px, 60px, 70px, 80px, 90px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 180px, 190px, 200px;
+
+$margin_nums_negative: 
+4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px, 50px, 60px, 70px, 80px, 90px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 180px, 190px, 200px;
+
+// * Generates sizes in px, for ex:
+// .mt-96px{margin-top:96px} 
+@each $num in $margin_nums {
+  .m-#{$num} {  margin: #{$num}; }
+  .my-#{$num} {  margin-top: #{$num}; margin-bottom: #{$num};  }
+  .mx-#{$num} {  margin-left: #{$num}; margin-right: #{$num};  }
+  .mt-#{$num} {  margin-top: #{$num}; }
+  .mb-#{$num} { margin-bottom: #{$num};  }
+  .mr-#{$num} { margin-right: #{$num}; }
+  .ml-#{$num} { margin-left: #{$num}; }
+}
+
+// negative (minus) numbers
+@each $num in $margin_nums_negative {
+  .-my-#{$num} {  margin-top: -#{$num}; margin-bottom: -#{$num};  }
+  .-mx-#{$num} {  margin-left: -#{$num}; margin-right: -#{$num};  }
+  .-mt-#{$num} {  margin-top: -#{$num}; }
+  .-mb-#{$num} { margin-bottom: -#{$num};  }
+  .-mr-#{$num} { margin-right: -#{$num}; }
+  .-ml-#{$num} { margin-left: -#{$num}; }
+}
+
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+
+    @each $num in $margin_nums {
+      .#{$breakpoint}\:m-#{$num} {  margin: #{$num}; }
+      .#{$breakpoint}\:my-#{$num} {  margin-top: #{$num}; margin-bottom: #{$num};  }
+      .#{$breakpoint}\:mx-#{$num} {  margin-left: #{$num}; margin-right: #{$num};  }
+      .#{$breakpoint}\:mt-#{$num} {  margin-top: #{$num}; }
+      .#{$breakpoint}\:mb-#{$num} { margin-bottom: #{$num};  }
+      .#{$breakpoint}\:mr-#{$num} { margin-right: #{$num}; }
+      .#{$breakpoint}\:ml-#{$num} { margin-left: #{$num}; }
+    }
+
+    // negative (minus) numbers
+    @each $num in $margin_nums_negative {
+      .#{$breakpoint}\:-my-#{$num} {  margin-top: -#{$num}; margin-bottom: -#{$num}; }
+      .#{$breakpoint}\:-mx-#{$num} {  margin-left: -#{$num}; margin-right: -#{$num}; }
+      .#{$breakpoint}\:-mt-#{$num} {  margin-top: -#{$num}; }
+      .#{$breakpoint}\:-mb-#{$num} { margin-bottom: -#{$num};}
+      .#{$breakpoint}\:-mr-#{$num} { margin-right: -#{$num}; }
+      .#{$breakpoint}\:-ml-#{$num} { margin-left: -#{$num}; }
+    }
+    
+   // end breakpoint
+  }
+}

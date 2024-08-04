@@ -29,8 +29,7 @@
 
 // Utility classes
 @import "utilities/display-layout";
-@import "utilities/size";
-@import "utilities/spacing";
+@import "utilities/order";
 @import "utilities/gap";
 @import "utilities/float";
 @import "utilities/text-style";
@@ -46,6 +45,9 @@
 @import "utilities/shadow";
 @import "utilities/z-index";
 @import "utilities/visually-hidden";
+@import "utilities/size";
+@import "utilities/margin";
+@import "utilities/padding";
 
 
 // Layouts and Temnplates

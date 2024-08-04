@@ -9,3 +9,29 @@
 .opacity-80 {opacity: 0.8;}
 .opacity-90 {opacity: 0.9;}
 .opacity-100 {opacity: 1;}
+
+// on hover
+.hover\:opacity-0:hover { opacity: 0!important; }
+.hover\:opacity-10:hover { opacity: 0.1!important; }
+.hover\:opacity-20:hover { opacity: 0.2!important; }
+.hover\:opacity-30:hover { opacity: 0.3!important; }
+.hover\:opacity-40:hover {opacity: 0.4!important;}
+.hover\:opacity-50:hover {opacity: 0.5!important;}
+.hover\:opacity-60:hover {opacity: 0.6!important;}
+.hover\:opacity-70:hover {opacity: 0.7!important;}
+.hover\:opacity-80:hover {opacity: 0.8!important;}
+.hover\:opacity-90:hover {opacity: 0.9!important;}
+.hover\:opacity-100:hover {opacity: 1!important;}
+
+// group hover (parent hover)
+.group:hover .group-hover\:opacity-0 { opacity: 0!important;}
+.group:hover .group-hover\:opacity-10 { opacity: 0.1!important; }
+.group:hover .group-hover\:opacity-20 { opacity: 0.2!important; }
+.group:hover .group-hover\:opacity-30 { opacity: 0.3!important; }
+.group:hover .group-hover\:opacity-40 {opacity: 0.4!important;}
+.group:hover .group-hover\:opacity-50 {opacity: 0.5!important;}
+.group:hover .group-hover\:opacity-60 {opacity: 0.6!important;}
+.group:hover .group-hover\:opacity-70 {opacity: 0.7!important;}
+.group:hover .group-hover\:opacity-80 {opacity: 0.8!important;}
+.group:hover .group-hover\:opacity-90 {opacity: 0.9!important;}
+.group:hover .group-hover\:opacity-100 {opacity: 1!important;}
