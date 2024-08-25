@@ -3,12 +3,21 @@
 
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0; // 1
-  margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
-  font-style: $headings-font-style;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
+  margin-bottom: 0.4rem;
+  font-family: inherit;
+  font-style: initial;
+  font-weight: 600;
+  line-height: 1.2;
 }
+
+
+
+h6{ font-size: 1rem;}
+h5{ font-size: 1.3rem;}
+h4{ font-size: 1.5rem;}
+h3{ font-size: 1.8rem;}
+h2{ font-size: 2.2rem;}
+h1{ font-size: 3rem;}
 
 // Type display classes
 // scss-docs-start display-headings

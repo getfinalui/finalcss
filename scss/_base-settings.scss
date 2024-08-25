@@ -36,8 +36,7 @@ $border-radius-lg:           16px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 $font-family-base:           system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:      SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-code: 			$font-family-monospace;
+$font-family-code:      SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default; 
 
 // $font-size-base affects the font size of the body text
 $font-size-root:              15px;
@@ -51,20 +50,7 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-//heading texts
-$headings-font-family:        null !default;
-$headings-font-style:         null !default;
-$headings-font-weight:        600 !default;
-$headings-line-height:        1.2 !default;
-$headings-margin-bottom:	  0.4rem!default;
-$headings-color:              inherit !default;
 
-$h1-font-size:                3rem !default;
-$h2-font-size:                2rem !default;
-$h3-font-size:                1.75rem !default;
-$h4-font-size:                1.5rem !default;
-$h5-font-size:                1.25rem !default;
-$h6-font-size:                1rem !default;
 
 
 

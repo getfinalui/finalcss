@@ -24,6 +24,17 @@
   --primary-800: #1e40af;
   --primary-900: #1e3a8a;
 
+  // constant primary color variables (will not be changed on dark mode)
+  --primary-100-const: #dbeafe;
+  --primary-200-const: #bfdbfe;
+  --primary-300-const: #93c5fd;
+  --primary-400-const: #60a5fa;
+  --primary-500-const: #3b82f6;
+  --primary-600-const: #2563eb;
+  --primary-700-const: #1d4ed8;
+  --primary-800-const: #1e40af;
+  --primary-900-const: #1e3a8a;
+
   --warning-100: #ffedd5;
   --warning-200: #fed7aa;
   --warning-300: #fdba74;
@@ -77,7 +88,7 @@
   // alias variables for dark/light
   --bg-color-base: var(--neutral-0);
   --bg-color-secondary: var(--neutral-50);
-  --bg-color-lower: var(--neutral-50);
+  --bg-color-lower: var(--neutral-100);
   --bg-color-raised: var(--neutral-0);
 
   --border-color-light: var(--neutral-100);

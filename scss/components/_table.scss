@@ -23,7 +23,7 @@
 }
 
 .table  > tbody > tr:has(input[type="checkbox"]:checked) > *{
-  background-color:var(--primary-200)!important;
+  background-color:var(--primary-100)!important;
 }
 
 .table-bordered > :not(caption) > * {

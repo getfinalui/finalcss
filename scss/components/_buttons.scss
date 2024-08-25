@@ -99,8 +99,8 @@
 }
 
 .btn-primary{
-  --btn-bg: var(--primary-500);
-  --btn-bg-hover: var(--primary-400);
+  --btn-bg: var(--primary-600-const);
+  --btn-bg-hover: var(--primary-700-const);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
   box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.12) inset;

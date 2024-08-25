@@ -4,13 +4,13 @@ $padding_nums:
 // * Generates sizes in px, for ex:
 // .mt-96px{margin-top:96px} 
 @each $num in $padding_nums {
-  .p-#{$num} { padding: #{$num}; }
+  .p-#{$num} { padding: #{$num};}
   .py-#{$num} { padding-top: #{$num}; padding-bottom: #{$num}; }
   .px-#{$num} { padding-left: #{$num}; padding-right: #{$num}; }
-  .pt-#{$num} {  padding-top: #{$num};  }
-  .pb-#{$num} { padding-bottom: #{$num}; }
-  .pr-#{$num} { padding-right: #{$num}; }
-  .pl-#{$num} { padding-left: #{$num}; }
+  .pt-#{$num} { padding-top: #{$num}!important; }
+  .pb-#{$num} { padding-bottom: #{$num}!important; }
+  .pr-#{$num} { padding-right: #{$num}!important; }
+  .pl-#{$num} { padding-left: #{$num}!important; }
 }
 
 
@@ -24,10 +24,10 @@ $padding_nums:
       .#{$breakpoint}\:p-#{$num} { padding: #{$num}; }
       .#{$breakpoint}\:px-#{$num} { padding-left: #{$num}; padding-right: #{$num}; }
       .#{$breakpoint}\:py-#{$num} { padding-top: #{$num}; padding-bottom: #{$num}; }
-      .#{$breakpoint}\:pt-#{$num} {  padding-top: #{$num};  }
-      .#{$breakpoint}\:pb-#{$num} { padding-bottom: #{$num}; }
-      .#{$breakpoint}\:pr-#{$num} { padding-right: #{$num}; }
-      .#{$breakpoint}\:pl-#{$num} { padding-left: #{$num}; }
+      .#{$breakpoint}\:pt-#{$num} {  padding-top: #{$num}!important;  }
+      .#{$breakpoint}\:pb-#{$num} { padding-bottom: #{$num}!important; }
+      .#{$breakpoint}\:pr-#{$num} { padding-right: #{$num}!important; }
+      .#{$breakpoint}\:pl-#{$num} { padding-left: #{$num}!important; }
       
     }
    // end breakpoint
