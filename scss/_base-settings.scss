@@ -2,35 +2,32 @@
 
 // WE USE VARIABLES DIRECTLY INTO COMPONENTS BY IMPLEMENTING CSS VARIABLE
 
-// Breakpoints
-$screen-xs: 0;
+// Breakpoints (Starting point)
 $screen-sm: 640px;
 $screen-md: 768px;
-$screen-lg: 1200px;
+$screen-lg: 1280px;
 $screen-xl: 1440px;
 
 // breakpoint sizes to generate 
 $breakpoints: (
-  'sm': 640px, // Ex @media(min-width: ...)
-  'md': 768px,
-  'lg': 1200px,
-  'xl': 1440px
+  'sm': 640px,  // @media (min-width: 640px) { ... }
+  'md': 768px,  // @media (min-width: 768px) { ... }
+  'lg': 1280px, // @media (min-width: 1280px) { ... }
+  'xl': 1440px  // @media (min-width: 1440px) { ... }
 );
 
 // can be used for maximum screen size
-$breakpoints-max: (
-  'max-xs': 640px, // Ex @media(max-width: ...)
-  'max-sm': 768px,
-  'max-md': 1200px,
-  'max-xl': 1440px
+$breakpoints-only: (
+  'xs-only': 640px, // @media (max-width: 640px)
+  'sm-only': 768px, // @media (max-width: 768px)
 );
 
 // Border-radius
 // Allows for component radius independently from their own css
 // these radiuses are for utility classes like border-sm, border, border-lg 
-$border-radius-md:           8px !default;
-$border-radius-sm:           6px !default;
-$border-radius-lg:           16px !default;
+$border-radius-md:   8px !default;
+$border-radius-sm:   6px !default;
+$border-radius-lg:   16px !default;
 
 // Typography
 //

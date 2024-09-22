@@ -206,10 +206,3 @@
   --text-color-info: var(--info-700);
   --text-color-feature: var(--feature-700);
 }
-
-
-/// Show/hide based on theme color
-[data-theme=dark]{
-	.dark\:hide{display:none!important}
-	.dark\:block{display:block!important}
-}

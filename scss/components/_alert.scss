@@ -24,21 +24,21 @@
 
 .alert-danger{
   --alert-text-color: var(--text-color-danger);
-  --alert-bg-color: var(--danger-200);
+  --alert-bg-color: var(--danger-100);
 }
 
 .alert-warning{
   --alert-text-color: var(--text-color-warning);
-  --alert-bg-color: var(--warning-200);
+  --alert-bg-color: var(--warning-100);
 }
 
 .alert-success{
   --alert-text-color: var(--text-color-success);
-  --alert-bg-color: var(--success-200);
+  --alert-bg-color: var(--success-100);
 }
 
 .alert-info{
   --alert-text-color: var(--text-color-info);
-  --alert-bg-color: var(--info-200);
+  --alert-bg-color: var(--info-100);
 }
 

@@ -89,7 +89,7 @@ $layout-utils: (
 
 
 // Breakpointys for maximum screen width for ex: max-sm:flex 
-@each $breakpoint, $size in $breakpoints-max {
+@each $breakpoint, $size in $breakpoints-only {
   @media (max-width: #{$size}){
     // breakpoinst styles
      .#{$breakpoint}\:d-block{ display:block }
@@ -105,5 +105,21 @@ $layout-utils: (
      .#{$breakpoint}\:flex-col{flex-direction:column}
     // end breakpoint
   }
+}
+
+
+/// Show/hide based on theme color
+[data-theme=dark]{
+  .dark\:d-block{ display:block}
+  .dark\:d-inline{ display:inline }
+  .dark\:d-inline-block{ display:inline-block }
+  .dark\:d-flex{ display:flex }
+  .dark\:d-inline-flex{ display:inline-flex }
+  .dark\:d-grid{ display:grid }
+  .dark\:d-inline-grid{ display:inline-grid }
+  .dark\:d-none{ display:none }
+  .dark\:hide{ display:none }
+  .dark\:flex-row{flex-direction:row}
+  .dark\:flex-col{flex-direction:column}
 }
 
