@@ -536,200 +536,158 @@ progress {
 }
 
 .row {
-  --flex-gap-x: 20px;
-  --flex-gap-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--flex-gap-y));
-  margin-right: calc(-0.5 * var(--flex-gap-x));
-  margin-left: calc(-0.5 * var(--flex-gap-x));
+  gap: 20px;
 }
 
 .row > * {
-  flex-shrink: 0;
+  flex: 1 1 0%;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--flex-gap-x) * 0.5);
-  padding-left: calc(var(--flex-gap-x) * 0.5);
-  margin-top: var(--flex-gap-y);
 }
 
 .row-cols-auto > * {
-  flex: 0 0 auto;
   width: auto;
 }
 
 .row-cols-1 > * {
-  flex: 0 0 auto;
   width: 100%;
 }
 
 .row-cols-2 > * {
-  flex: 0 0 auto;
   width: 50%;
 }
 
 .row-cols-3 > * {
-  flex: 0 0 auto;
   width: 33.3333333333%;
 }
 
 .row-cols-4 > * {
-  flex: 0 0 auto;
   width: 25%;
 }
 
 .row-cols-5 > * {
-  flex: 0 0 auto;
   width: 20%;
 }
 
 .row-cols-6 > * {
-  flex: 0 0 auto;
   width: 16.6666666667%;
 }
 
 @media (min-width: 640px) {
   .sm\:row-cols-auto > * {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .sm\:row-cols-1 > * {
-    flex: 0 0 auto;
     width: 100%;
   }
 
   .sm\:row-cols-2 > * {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .sm\:row-cols-3 > * {
-    flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
   .sm\:row-cols-4 > * {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .sm\:row-cols-5 > * {
-    flex: 0 0 auto;
     width: 20%;
   }
 
   .sm\:row-cols-6 > * {
-    flex: 0 0 auto;
     width: 16.6666666667%;
   }
 }
 @media (min-width: 768px) {
   .md\:row-cols-auto > * {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .md\:row-cols-1 > * {
-    flex: 0 0 auto;
     width: 100%;
   }
 
   .md\:row-cols-2 > * {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .md\:row-cols-3 > * {
-    flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
   .md\:row-cols-4 > * {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .md\:row-cols-5 > * {
-    flex: 0 0 auto;
     width: 20%;
   }
 
   .md\:row-cols-6 > * {
-    flex: 0 0 auto;
     width: 16.6666666667%;
   }
 }
 @media (min-width: 1280px) {
   .lg\:row-cols-auto > * {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .lg\:row-cols-1 > * {
-    flex: 0 0 auto;
     width: 100%;
   }
 
   .lg\:row-cols-2 > * {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .lg\:row-cols-3 > * {
-    flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
   .lg\:row-cols-4 > * {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .lg\:row-cols-5 > * {
-    flex: 0 0 auto;
     width: 20%;
   }
 
   .lg\:row-cols-6 > * {
-    flex: 0 0 auto;
     width: 16.6666666667%;
   }
 }
 @media (min-width: 1440px) {
   .xl\:row-cols-auto > * {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .xl\:row-cols-1 > * {
-    flex: 0 0 auto;
     width: 100%;
   }
 
   .xl\:row-cols-2 > * {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .xl\:row-cols-3 > * {
-    flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
   .xl\:row-cols-4 > * {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .xl\:row-cols-5 > * {
-    flex: 0 0 auto;
     width: 20%;
   }
 
   .xl\:row-cols-6 > * {
-    flex: 0 0 auto;
     width: 16.6666666667%;
   }
 }
@@ -738,67 +696,54 @@ progress {
 }
 
 .col-auto {
-  flex: 0 0 auto;
   width: auto;
 }
 
 .col-1 {
-  flex: 0 0 auto;
   width: 8.33333333%;
 }
 
 .col-2 {
-  flex: 0 0 auto;
   width: 16.66666667%;
 }
 
 .col-3 {
-  flex: 0 0 auto;
   width: 25%;
 }
 
 .col-4 {
-  flex: 0 0 auto;
   width: 33.33333333%;
 }
 
 .col-5 {
-  flex: 0 0 auto;
   width: 41.66666667%;
 }
 
 .col-6 {
-  flex: 0 0 auto;
   width: 50%;
 }
 
 .col-7 {
-  flex: 0 0 auto;
   width: 58.33333333%;
 }
 
 .col-8 {
-  flex: 0 0 auto;
   width: 66.66666667%;
 }
 
 .col-9 {
-  flex: 0 0 auto;
   width: 75%;
 }
 
 .col-10 {
-  flex: 0 0 auto;
   width: 83.33333333%;
 }
 
 .col-11 {
-  flex: 0 0 auto;
   width: 91.66666667%;
 }
 
 .col-12 {
-  flex: 0 0 auto;
   width: 100%;
 }
 
@@ -808,67 +753,54 @@ progress {
   }
 
   .sm\:col-auto {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .sm\:col-1 {
-    flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .sm\:col-2 {
-    flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .sm\:col-3 {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .sm\:col-4 {
-    flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .sm\:col-5 {
-    flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .sm\:col-6 {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .sm\:col-7 {
-    flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .sm\:col-8 {
-    flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .sm\:col-9 {
-    flex: 0 0 auto;
     width: 75%;
   }
 
   .sm\:col-10 {
-    flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .sm\:col-11 {
-    flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .sm\:col-12 {
-    flex: 0 0 auto;
     width: 100%;
   }
 }
@@ -878,67 +810,54 @@ progress {
   }
 
   .md\:col-auto {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .md\:col-1 {
-    flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .md\:col-2 {
-    flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .md\:col-3 {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .md\:col-4 {
-    flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .md\:col-5 {
-    flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .md\:col-6 {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .md\:col-7 {
-    flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .md\:col-8 {
-    flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .md\:col-9 {
-    flex: 0 0 auto;
     width: 75%;
   }
 
   .md\:col-10 {
-    flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .md\:col-11 {
-    flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .md\:col-12 {
-    flex: 0 0 auto;
     width: 100%;
   }
 }
@@ -948,67 +867,54 @@ progress {
   }
 
   .lg\:col-auto {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .lg\:col-1 {
-    flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .lg\:col-2 {
-    flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .lg\:col-3 {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .lg\:col-4 {
-    flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .lg\:col-5 {
-    flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .lg\:col-6 {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .lg\:col-7 {
-    flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .lg\:col-8 {
-    flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .lg\:col-9 {
-    flex: 0 0 auto;
     width: 75%;
   }
 
   .lg\:col-10 {
-    flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .lg\:col-11 {
-    flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .lg\:col-12 {
-    flex: 0 0 auto;
     width: 100%;
   }
 }
@@ -1018,67 +924,54 @@ progress {
   }
 
   .xl\:col-auto {
-    flex: 0 0 auto;
     width: auto;
   }
 
   .xl\:col-1 {
-    flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .xl\:col-2 {
-    flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .xl\:col-3 {
-    flex: 0 0 auto;
     width: 25%;
   }
 
   .xl\:col-4 {
-    flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .xl\:col-5 {
-    flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .xl\:col-6 {
-    flex: 0 0 auto;
     width: 50%;
   }
 
   .xl\:col-7 {
-    flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .xl\:col-8 {
-    flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .xl\:col-9 {
-    flex: 0 0 auto;
     width: 75%;
   }
 
   .xl\:col-10 {
-    flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .xl\:col-11 {
-    flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .xl\:col-12 {
-    flex: 0 0 auto;
     width: 100%;
   }
 }
@@ -1932,16 +1825,16 @@ progress {
   --btn-bg-hover: var(--danger-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.15) inset;
 }
 
 .btn-secondary {
-  --btn-bg: var(--bg-color-base);
-  --btn-bg-hover: var(--bg-color-secondary);
+  --btn-bg: var(--bg-color-raised);
+  --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-base);
-  --btn-border-color: var(--border-color-base);
+  --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
 }
 
 .btn-danger-soft {
@@ -1954,8 +1847,8 @@ progress {
 }
 
 .btn-neutral {
-  --btn-bg: var(--neutral-100);
-  --btn-bg-hover: var(--neutral-200);
+  --btn-bg: var(--neutral-200);
+  --btn-bg-hover: var(--neutral-300);
   --btn-text-color: var(--text-color-base);
   --btn-border-hover-color: transparent;
 }
@@ -10624,51 +10517,51 @@ h1 {
   width: auto;
 }
 
-.w-10\% {
+.w-10 {
   width: 10%;
 }
 
-.w-20\% {
+.w-20 {
   width: 20%;
 }
 
-.w-30\% {
+.w-30 {
   width: 30%;
 }
 
-.w-40\% {
+.w-40 {
   width: 40%;
 }
 
-.w-50\% {
+.w-50 {
   width: 50%;
 }
 
-.w-60\% {
+.w-60 {
   width: 60%;
 }
 
-.w-70\% {
+.w-70 {
   width: 70%;
 }
 
-.w-80\% {
+.w-80 {
   width: 80%;
 }
 
-.w-90\% {
+.w-90 {
   width: 90%;
 }
 
-.w-100\%, .w-100 {
+.w-100, .w-full {
   width: 100%;
 }
 
-.min-w-100\%, .min-w-100 {
+.min-w-100 {
   min-width: 100%;
 }
 
-.max-w-100\%, .max-w-100 {
+.max-w-100 {
   max-width: 100%;
 }
 
@@ -10684,51 +10577,51 @@ h1 {
   height: auto;
 }
 
-.h-10\% {
+.h-10 {
   height: 10%;
 }
 
-.h-20\% {
+.h-20 {
   height: 20%;
 }
 
-.h-30\% {
+.h-30 {
   height: 30%;
 }
 
-.h-40\% {
+.h-40 {
   height: 40%;
 }
 
-.h-50\% {
+.h-50 {
   height: 50%;
 }
 
-.h-60\% {
+.h-60 {
   height: 60%;
 }
 
-.h-70\% {
+.h-70 {
   height: 70%;
 }
 
-.h-80\% {
+.h-80 {
   height: 80%;
 }
 
-.h-90\% {
+.h-90 {
   height: 90%;
 }
 
-.h-100\%, .h-100 {
+.h-100, .h-full {
   height: 100%;
 }
 
-.min-h-100\%, .min-h-100 {
+.min-h-100 {
   min-height: 100%;
 }
 
-.max-h-100\%, .max-h-100 {
+.max-h-100 {
   max-height: 100%;
 }
 
@@ -10745,43 +10638,43 @@ h1 {
     width: auto;
   }
 
-  .sm\:w-10\% {
+  .sm\:w-10 {
     width: 10%;
   }
 
-  .sm\:w-20\% {
+  .sm\:w-20 {
     width: 20%;
   }
 
-  .sm\:w-30\% {
+  .sm\:w-30 {
     width: 30%;
   }
 
-  .sm\:w-40\% {
+  .sm\:w-40 {
     width: 40%;
   }
 
-  .sm\:w-50\% {
+  .sm\:w-50 {
     width: 50%;
   }
 
-  .sm\:w-60\% {
+  .sm\:w-60 {
     width: 60%;
   }
 
-  .sm\:w-70\% {
+  .sm\:w-70 {
     width: 70%;
   }
 
-  .sm\:w-80\% {
+  .sm\:w-80 {
     width: 80%;
   }
 
-  .sm\:w-90\% {
+  .sm\:w-90 {
     width: 90%;
   }
 
-  .sm\:w-100\% {
+  .sm\:w-100 {
     width: 100%;
   }
 
@@ -10789,11 +10682,11 @@ h1 {
     width: 100%;
   }
 
-  .sm\:min-w-100\% {
+  .sm\:min-w-100 {
     min-width: 100%;
   }
 
-  .sm\:max-w-100\% {
+  .sm\:max-w-100 {
     max-width: 100%;
   }
 
@@ -10809,43 +10702,43 @@ h1 {
     height: auto;
   }
 
-  .sm\:h-10\% {
+  .sm\:h-10 {
     height: 10%;
   }
 
-  .sm\:h-20\% {
+  .sm\:h-20 {
     height: 20%;
   }
 
-  .sm\:h-30\% {
+  .sm\:h-30 {
     height: 30%;
   }
 
-  .sm\:h-40\% {
+  .sm\:h-40 {
     height: 40%;
   }
 
-  .sm\:h-50\% {
+  .sm\:h-50 {
     height: 50%;
   }
 
-  .sm\:h-60\% {
+  .sm\:h-60 {
     height: 60%;
   }
 
-  .sm\:h-70\% {
+  .sm\:h-70 {
     height: 70%;
   }
 
-  .sm\:h-80\% {
+  .sm\:h-80 {
     height: 80%;
   }
 
-  .sm\:h-90\% {
+  .sm\:h-90 {
     height: 90%;
   }
 
-  .sm\:h-100\% {
+  .sm\:h-100 {
     height: 100%;
   }
 
@@ -10853,11 +10746,11 @@ h1 {
     height: 100%;
   }
 
-  .sm\:min-h-100\% {
+  .sm\:min-h-100 {
     min-height: 100%;
   }
 
-  .sm\:max-h-100\% {
+  .sm\:max-h-100 {
     max-height: 100%;
   }
 
@@ -10874,43 +10767,43 @@ h1 {
     width: auto;
   }
 
-  .md\:w-10\% {
+  .md\:w-10 {
     width: 10%;
   }
 
-  .md\:w-20\% {
+  .md\:w-20 {
     width: 20%;
   }
 
-  .md\:w-30\% {
+  .md\:w-30 {
     width: 30%;
   }
 
-  .md\:w-40\% {
+  .md\:w-40 {
     width: 40%;
   }
 
-  .md\:w-50\% {
+  .md\:w-50 {
     width: 50%;
   }
 
-  .md\:w-60\% {
+  .md\:w-60 {
     width: 60%;
   }
 
-  .md\:w-70\% {
+  .md\:w-70 {
     width: 70%;
   }
 
-  .md\:w-80\% {
+  .md\:w-80 {
     width: 80%;
   }
 
-  .md\:w-90\% {
+  .md\:w-90 {
     width: 90%;
   }
 
-  .md\:w-100\% {
+  .md\:w-100 {
     width: 100%;
   }
 
@@ -10918,11 +10811,11 @@ h1 {
     width: 100%;
   }
 
-  .md\:min-w-100\% {
+  .md\:min-w-100 {
     min-width: 100%;
   }
 
-  .md\:max-w-100\% {
+  .md\:max-w-100 {
     max-width: 100%;
   }
 
@@ -10938,43 +10831,43 @@ h1 {
     height: auto;
   }
 
-  .md\:h-10\% {
+  .md\:h-10 {
     height: 10%;
   }
 
-  .md\:h-20\% {
+  .md\:h-20 {
     height: 20%;
   }
 
-  .md\:h-30\% {
+  .md\:h-30 {
     height: 30%;
   }
 
-  .md\:h-40\% {
+  .md\:h-40 {
     height: 40%;
   }
 
-  .md\:h-50\% {
+  .md\:h-50 {
     height: 50%;
   }
 
-  .md\:h-60\% {
+  .md\:h-60 {
     height: 60%;
   }
 
-  .md\:h-70\% {
+  .md\:h-70 {
     height: 70%;
   }
 
-  .md\:h-80\% {
+  .md\:h-80 {
     height: 80%;
   }
 
-  .md\:h-90\% {
+  .md\:h-90 {
     height: 90%;
   }
 
-  .md\:h-100\% {
+  .md\:h-100 {
     height: 100%;
   }
 
@@ -10982,11 +10875,11 @@ h1 {
     height: 100%;
   }
 
-  .md\:min-h-100\% {
+  .md\:min-h-100 {
     min-height: 100%;
   }
 
-  .md\:max-h-100\% {
+  .md\:max-h-100 {
     max-height: 100%;
   }
 
@@ -11003,43 +10896,43 @@ h1 {
     width: auto;
   }
 
-  .lg\:w-10\% {
+  .lg\:w-10 {
     width: 10%;
   }
 
-  .lg\:w-20\% {
+  .lg\:w-20 {
     width: 20%;
   }
 
-  .lg\:w-30\% {
+  .lg\:w-30 {
     width: 30%;
   }
 
-  .lg\:w-40\% {
+  .lg\:w-40 {
     width: 40%;
   }
 
-  .lg\:w-50\% {
+  .lg\:w-50 {
     width: 50%;
   }
 
-  .lg\:w-60\% {
+  .lg\:w-60 {
     width: 60%;
   }
 
-  .lg\:w-70\% {
+  .lg\:w-70 {
     width: 70%;
   }
 
-  .lg\:w-80\% {
+  .lg\:w-80 {
     width: 80%;
   }
 
-  .lg\:w-90\% {
+  .lg\:w-90 {
     width: 90%;
   }
 
-  .lg\:w-100\% {
+  .lg\:w-100 {
     width: 100%;
   }
 
@@ -11047,11 +10940,11 @@ h1 {
     width: 100%;
   }
 
-  .lg\:min-w-100\% {
+  .lg\:min-w-100 {
     min-width: 100%;
   }
 
-  .lg\:max-w-100\% {
+  .lg\:max-w-100 {
     max-width: 100%;
   }
 
@@ -11067,43 +10960,43 @@ h1 {
     height: auto;
   }
 
-  .lg\:h-10\% {
+  .lg\:h-10 {
     height: 10%;
   }
 
-  .lg\:h-20\% {
+  .lg\:h-20 {
     height: 20%;
   }
 
-  .lg\:h-30\% {
+  .lg\:h-30 {
     height: 30%;
   }
 
-  .lg\:h-40\% {
+  .lg\:h-40 {
     height: 40%;
   }
 
-  .lg\:h-50\% {
+  .lg\:h-50 {
     height: 50%;
   }
 
-  .lg\:h-60\% {
+  .lg\:h-60 {
     height: 60%;
   }
 
-  .lg\:h-70\% {
+  .lg\:h-70 {
     height: 70%;
   }
 
-  .lg\:h-80\% {
+  .lg\:h-80 {
     height: 80%;
   }
 
-  .lg\:h-90\% {
+  .lg\:h-90 {
     height: 90%;
   }
 
-  .lg\:h-100\% {
+  .lg\:h-100 {
     height: 100%;
   }
 
@@ -11111,11 +11004,11 @@ h1 {
     height: 100%;
   }
 
-  .lg\:min-h-100\% {
+  .lg\:min-h-100 {
     min-height: 100%;
   }
 
-  .lg\:max-h-100\% {
+  .lg\:max-h-100 {
     max-height: 100%;
   }
 
@@ -11132,43 +11025,43 @@ h1 {
     width: auto;
   }
 
-  .xl\:w-10\% {
+  .xl\:w-10 {
     width: 10%;
   }
 
-  .xl\:w-20\% {
+  .xl\:w-20 {
     width: 20%;
   }
 
-  .xl\:w-30\% {
+  .xl\:w-30 {
     width: 30%;
   }
 
-  .xl\:w-40\% {
+  .xl\:w-40 {
     width: 40%;
   }
 
-  .xl\:w-50\% {
+  .xl\:w-50 {
     width: 50%;
   }
 
-  .xl\:w-60\% {
+  .xl\:w-60 {
     width: 60%;
   }
 
-  .xl\:w-70\% {
+  .xl\:w-70 {
     width: 70%;
   }
 
-  .xl\:w-80\% {
+  .xl\:w-80 {
     width: 80%;
   }
 
-  .xl\:w-90\% {
+  .xl\:w-90 {
     width: 90%;
   }
 
-  .xl\:w-100\% {
+  .xl\:w-100 {
     width: 100%;
   }
 
@@ -11176,11 +11069,11 @@ h1 {
     width: 100%;
   }
 
-  .xl\:min-w-100\% {
+  .xl\:min-w-100 {
     min-width: 100%;
   }
 
-  .xl\:max-w-100\% {
+  .xl\:max-w-100 {
     max-width: 100%;
   }
 
@@ -11196,43 +11089,43 @@ h1 {
     height: auto;
   }
 
-  .xl\:h-10\% {
+  .xl\:h-10 {
     height: 10%;
   }
 
-  .xl\:h-20\% {
+  .xl\:h-20 {
     height: 20%;
   }
 
-  .xl\:h-30\% {
+  .xl\:h-30 {
     height: 30%;
   }
 
-  .xl\:h-40\% {
+  .xl\:h-40 {
     height: 40%;
   }
 
-  .xl\:h-50\% {
+  .xl\:h-50 {
     height: 50%;
   }
 
-  .xl\:h-60\% {
+  .xl\:h-60 {
     height: 60%;
   }
 
-  .xl\:h-70\% {
+  .xl\:h-70 {
     height: 70%;
   }
 
-  .xl\:h-80\% {
+  .xl\:h-80 {
     height: 80%;
   }
 
-  .xl\:h-90\% {
+  .xl\:h-90 {
     height: 90%;
   }
 
-  .xl\:h-100\% {
+  .xl\:h-100 {
     height: 100%;
   }
 
@@ -11240,11 +11133,11 @@ h1 {
     height: 100%;
   }
 
-  .xl\:min-h-100\% {
+  .xl\:min-h-100 {
     min-height: 100%;
   }
 
-  .xl\:max-h-100\% {
+  .xl\:max-h-100 {
     max-height: 100%;
   }
 

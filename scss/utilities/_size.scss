@@ -34,33 +34,33 @@ auto, 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px, 50px, 60px, 7
 
 /// Percentage units for width and height
 .w-auto { width: auto; }
-.w-10\% { width: 10%; }
-.w-20\% { width: 20% ; }
-.w-30\% { width: 30%; }
-.w-40\% { width: 40%; }
-.w-50\% {width: 50%; }
-.w-60\% {width: 60%; }
-.w-70\% {width: 70%; }
-.w-80\% { width: 80%; }
-.w-90\% { width: 90%; }
-.w-100\%, .w-100 { width: 100% ; }
-.min-w-100\%, .min-w-100 {min-width: 100%;}
-.max-w-100\%, .max-w-100 {max-width: 100%; }
+.w-10 { width: 10%; }
+.w-20 { width: 20% ; }
+.w-30 { width: 30%; }
+.w-40 { width: 40%; }
+.w-50 {width: 50%; }
+.w-60 {width: 60%; }
+.w-70 {width: 70%; }
+.w-80 { width: 80%; }
+.w-90 { width: 90%; }
+.w-100, .w-full { width: 100% ; }
+.min-w-100 {min-width: 100%;}
+.max-w-100 {max-width: 100%; }
 .vw-100 { width: 100vw;}
 .min-vw-100 {min-width: 100vw;}
 .h-auto {height: auto;}
-.h-10\% { height: 10%;}
-.h-20\% { height: 20%;}
-.h-30\% { height: 30%;}
-.h-40\% { height: 40%;}
-.h-50\% { height: 50%;}
-.h-60\% { height: 60%;}
-.h-70\% { height: 70% ;}
-.h-80\% {height: 80%;}
-.h-90\% {height: 90%;}
-.h-100\%, .h-100  {height: 100%;}
-.min-h-100\%, .min-h-100 {min-height: 100%;}
-.max-h-100\%, .max-h-100 {max-height: 100%;}
+.h-10 { height: 10%;}
+.h-20 { height: 20%;}
+.h-30 { height: 30%;}
+.h-40 { height: 40%;}
+.h-50 { height: 50%;}
+.h-60 { height: 60%;}
+.h-70 { height: 70% ;}
+.h-80 {height: 80%;}
+.h-90 {height: 90%;}
+.h-100, .h-full  {height: 100%;}
+.min-h-100 {min-height: 100%;}
+.max-h-100 {max-height: 100%;}
 .min-vh-100 {min-height: 100vh;}
 .vh-100 { height: 100vh;}
 
@@ -73,35 +73,35 @@ auto, 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px, 50px, 60px, 7
     // breakpoinst styles
     
     .#{$breakpoint}\:w-auto { width: auto; }
-    .#{$breakpoint}\:w-10\% { width: 10%; }
-    .#{$breakpoint}\:w-20\% { width: 20% ; }
-    .#{$breakpoint}\:w-30\% { width: 30%; }
-    .#{$breakpoint}\:w-40\% { width: 40%; }
-    .#{$breakpoint}\:w-50\% {width: 50%; }
-    .#{$breakpoint}\:w-60\% {width: 60%; }
-    .#{$breakpoint}\:w-70\% {width: 70%; }
-    .#{$breakpoint}\:w-80\% { width: 80%; }
-    .#{$breakpoint}\:w-90\% { width: 90%; }
-    .#{$breakpoint}\:w-100\% { width: 100% ; }
+    .#{$breakpoint}\:w-10 { width: 10%; }
+    .#{$breakpoint}\:w-20 { width: 20% ; }
+    .#{$breakpoint}\:w-30 { width: 30%; }
+    .#{$breakpoint}\:w-40 { width: 40%; }
+    .#{$breakpoint}\:w-50 {width: 50%; }
+    .#{$breakpoint}\:w-60 {width: 60%; }
+    .#{$breakpoint}\:w-70 {width: 70%; }
+    .#{$breakpoint}\:w-80 { width: 80%; }
+    .#{$breakpoint}\:w-90 { width: 90%; }
+    .#{$breakpoint}\:w-100 { width: 100% ; }
     .#{$breakpoint}\:w-full { width: 100% ; }
-    .#{$breakpoint}\:min-w-100\% {min-width: 100%;}
-    .#{$breakpoint}\:max-w-100\% {max-width: 100%; }
+    .#{$breakpoint}\:min-w-100 {min-width: 100%;}
+    .#{$breakpoint}\:max-w-100 {max-width: 100%; }
     .#{$breakpoint}\:vw-100 { width: 100vw;}
     .#{$breakpoint}\:min-vw-100 {min-width: 100vw;}
     .#{$breakpoint}\:h-auto {height: auto;}
-    .#{$breakpoint}\:h-10\% { height: 10%;}
-    .#{$breakpoint}\:h-20\% { height: 20%;}
-    .#{$breakpoint}\:h-30\% { height: 30%;}
-    .#{$breakpoint}\:h-40\% { height: 40%;}
-    .#{$breakpoint}\:h-50\% { height: 50%;}
-    .#{$breakpoint}\:h-60\% { height: 60%;}
-    .#{$breakpoint}\:h-70\% { height: 70% ;}
-    .#{$breakpoint}\:h-80\% {height: 80%;}
-    .#{$breakpoint}\:h-90\% {height: 90%;}
-    .#{$breakpoint}\:h-100\% {height: 100%;}
+    .#{$breakpoint}\:h-10 { height: 10%;}
+    .#{$breakpoint}\:h-20 { height: 20%;}
+    .#{$breakpoint}\:h-30 { height: 30%;}
+    .#{$breakpoint}\:h-40 { height: 40%;}
+    .#{$breakpoint}\:h-50 { height: 50%;}
+    .#{$breakpoint}\:h-60 { height: 60%;}
+    .#{$breakpoint}\:h-70 { height: 70% ;}
+    .#{$breakpoint}\:h-80 {height: 80%;}
+    .#{$breakpoint}\:h-90 {height: 90%;}
+    .#{$breakpoint}\:h-100 {height: 100%;}
     .#{$breakpoint}\:h-full {height: 100%;}
-    .#{$breakpoint}\:min-h-100\% {min-height: 100%;}
-    .#{$breakpoint}\:max-h-100\% {max-height: 100%;}
+    .#{$breakpoint}\:min-h-100 {min-height: 100%;}
+    .#{$breakpoint}\:max-h-100 {max-height: 100%;}
     .#{$breakpoint}\:min-vh-100 {min-height: 100vh;}
     .#{$breakpoint}\:vh-100 { height: 100vh;}
 

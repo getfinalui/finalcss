@@ -110,15 +110,15 @@
   --btn-bg-hover: var(--danger-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.12) inset;
+  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0, 0%, 100%, 0.15) inset;
 }
 .btn-secondary {
-  --btn-bg: var(--bg-color-base);
-  --btn-bg-hover: var(--bg-color-secondary);
+  --btn-bg: var(--bg-color-raised);
+  --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-base);
-  --btn-border-color: var(--border-color-base);
+  --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
 .btn-danger-soft{
   --btn-bg: var(--bg-color-base);
@@ -129,8 +129,8 @@
   box-shadow:0 -1px 0 0 hsla(0, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
 }
 .btn-neutral{
-  --btn-bg: var(--neutral-100);
-  --btn-bg-hover: var(--neutral-200);
+  --btn-bg: var(--neutral-200);
+  --btn-bg-hover: var(--neutral-300);
   --btn-text-color: var(--text-color-base);
   --btn-border-hover-color: transparent;
 }
