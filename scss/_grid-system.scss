@@ -5,8 +5,8 @@
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -23,7 +23,7 @@
   gap:20px;
 }
 .row > * { 
-  flex:1 1 0%;
+  flex:1 1 100%;
   width: 100%;  
   max-width: 100%;
 }
