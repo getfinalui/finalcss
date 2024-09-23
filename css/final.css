@@ -86,8 +86,8 @@
   --bg-color-secondary: var(--neutral-50);
   --bg-color-lower: var(--neutral-100);
   --bg-color-raised: var(--neutral-0);
-  --border-color-light: var(--neutral-100);
-  --border-color-base: var(--neutral-200);
+  --border-color-light: var(--neutral-200);
+  --border-color-base: var(--neutral-300);
   --border-color-strong: var(--neutral-400);
   --text-color-base: var(--neutral-900);
   --text-color-secondary: var(--neutral-700);
@@ -2060,19 +2060,6 @@ progress {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
-.card-check {
-  border: 1px solid var(--border-color-base);
-}
-.card-check:hover {
-  border: 1px solid var(--primary-400);
-}
-
-.card-check:has(input[type=checkbox]:checked),
-.card-check:has(input[type=radio]:checked) {
-  background-color: var(--primary-200);
-  border-color: var(--primary-500) !important;
-}
-
 .form-check-input {
   flex-shrink: 0;
   width: 18px;
@@ -2149,6 +2136,19 @@ progress {
   margin-left: 0;
 }
 
+.card-check {
+  border: 1px solid var(--border-color-base);
+}
+.card-check:hover {
+  border: 1px solid var(--primary-400);
+}
+
+.card-check:has(input[type=checkbox]:checked),
+.card-check:has(input[type=radio]:checked) {
+  background-color: var(--primary-200);
+  border-color: var(--primary-500) !important;
+}
+
 .badge {
   --badge-text-color: inherit;
   --badge-bg: var(--neutral-300);
@@ -2202,6 +2202,7 @@ progress {
 .nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -2223,14 +2224,14 @@ progress {
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
   color: var(--text-color-base);
-  background-color: var(--neutral-100);
+  background-color: var(--neutral-200);
 }
 .nav-link:active {
-  background-color: var(--neutral-200);
+  background-color: var(--neutral-300);
 }
 .nav-link.active {
   color: var(--text-color-primary);
-  background-color: var(--primary-200);
+  background-color: var(--primary-100);
 }
 .nav-link.disabled {
   color: var(--text-color-muted);
@@ -6067,6 +6068,22 @@ h1 {
 
 .left-0 {
   left: 0;
+}
+
+.top-50 {
+  top: 50%;
+}
+
+.bottom-50 {
+  bottom: 50%;
+}
+
+.right-50 {
+  right: 50%;
+}
+
+.left-50 {
+  left: 50%;
 }
 
 .fixed-top {

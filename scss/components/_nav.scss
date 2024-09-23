@@ -2,6 +2,7 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -22,15 +23,15 @@
   &:focus {
     text-decoration:none;
     color: var(--text-color-base);
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-200);
   }
   &:active {
-    background-color: var(--neutral-200);
+    background-color: var(--neutral-300);
   }
 
   &.active{
     color:var(--text-color-primary);
-    background-color: var(--primary-200);    
+    background-color: var(--primary-100);    
   }
   // Disabled state lightens text
   &.disabled {

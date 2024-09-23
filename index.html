@@ -72,7 +72,7 @@
 				<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
 				<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-secondary d-none d-md-inline-flex mx-2">Download</a>
 
-				<button id="themeSwitcher" onclick="themeswitch()" class="ml-8px btn btn-icon btn-neutral">
+				<button id="themeSwitcher" onclick="themeswitch()" class="ml-8px btn btn-icon btn-sm btn-neutral">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
@@ -553,23 +553,23 @@
 			<article class="card card-body mb-20px">
 				<h5 class="mb-20px">Choose delivery option</h5>
 				
-				<ul class="d-grid list-unstyled gap-2">
+				<ul class="d-grid list-unstyled gap-12px">
 				    <li>
-				      <label class="card-check w-100 d-block p-3 rounded">
+				      <label class="card-check w-100 d-block p-12px rounded">
 				      	<input class="form-check-input float-end" checked name="choose-delivery" type="radio" value="">
 				        <strong class="fw-semibold">Standart delivery</strong>
 				        <p class="d-block mb-0 text-muted">With support text underneath to add more detail</p>
 				      </label>
 				    </li>
 				    <li>
-				      <label class="card-check w-100 d-block p-3 rounded">
+				      <label class="card-check w-100 d-block p-12px rounded">
 				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
 				        <strong class="fw-semibold">One day shopping</strong>
 				        <p class="d-block mb-0 text-muted">Support text underneath to add more detail</p>
 				      </label>
 				    </li>
 				    <li>
-				      <label class="card-check w-100 d-block p-3 rounded">
+				      <label class="card-check w-100 d-block p-12px rounded">
 				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
 				        <strong class="fw-semibold">I will pickup myself</strong>
 				        <p class="d-block mb-0 text-muted">Text underneath to add more detail</p>
@@ -579,7 +579,7 @@
 			</article>
 
 			<div class="card mb-20px">
-				<div class="p-2">
+				<div class="p-12px">
 					<ul class="nav justify-content-center">
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="#">
@@ -622,22 +622,22 @@
 				</div>
 			</div>
 
-			<div class="grid w-100" style="--bs-columns:5;">
-				<article class="card card-body" style="grid-column: span 3;">
+			<div class="d-grid grid-cols-5 gap-20px w-100">
+				<article class="col-span-3 card card-body">
 					<!-- input search  -->
-					<div class="d-flex">
+					<div class="d-flex w-100">
 						<!-- search field -->
-						<div class="position-relative flex-grow-1 h-40px">
-							<i class="d-inline-flex position-absolute translate-middle-y ms-8px left-0 top-50">
-								<svg class="size-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+						<div class="relative w-100 h-40px">
+							<i class="d-inline-flex absolute ml-8px left-0 center-y">
+								<svg class="w-20px h-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
 									<path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									<path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
 							</svg>
 							</i>
-							<input class="form-control rounded-end-0 ps-36px" list="countries" placeholder="Search country" type="text">
+							<input class="form-control flex-grow-1 rounded-right-0 pl-36px" list="countries" placeholder="Search country" type="text">
 						</div>
 						<!-- search field .//end -->
-						<button class="rounded-start-0 btn btn-primary">Search</button>
+						<button class="rounded-left-0 btn btn-primary">Search</button>
 					</div>
 					<datalist id="countries">
 						<option value="Uzbekistan">
@@ -649,17 +649,17 @@
 					<!-- input search .// -->
 					<br>
 					<!-- input field -->
-					<div class="position-relative">
-						<i class="d-inline-flex position-absolute translate-middle-y ms-8px left-0 top-50">
+					<div class="relative">
+						<i class="d-inline-flex absolute ml-8px left-0 center-y">
 							<svg class="size-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							    <path d="M12 16.5V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 							    <path d="M4.26781 18.8447C4.49269 20.515 5.87613 21.8235 7.55966 21.9009C8.97627 21.966 10.4153 22 12 22C13.5847 22 15.0237 21.966 16.4403 21.9009C18.1239 21.8235 19.5073 20.515 19.7322 18.8447C19.879 17.7547 20 16.6376 20 15.5C20 14.3624 19.879 13.2453 19.7322 12.1553C19.5073 10.485 18.1239 9.17649 16.4403 9.09909C15.0237 9.03397 13.5847 9 12 9C10.4153 9 8.97627 9.03397 7.55966 9.09909C5.87613 9.17649 4.49269 10.485 4.26781 12.1553C4.12104 13.2453 4 14.3624 4 15.5C4 16.6376 4.12104 17.7547 4.26781 18.8447Z" stroke="currentColor" stroke-width="2" />
 							    <path d="M7.5 9V6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
 						</i>
-						<input class="form-control ps-36px" placeholder="Password" type="password">
-						<button class="btn btn-icon btn-sm btn-neutral bg-neutral-200 position-absolute translate-middle-y me-1 ms-8px end-0 top-50">
-							<svg class="icon size-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
+						<input class="form-control w-100 pl-36px" placeholder="Password" type="password">
+						<button class="btn btn-icon btn-sm btn-neutral bg-neutral-200 absolute mr-4px ml-8px right-0 center-y">
+							<svg class="w-20px h-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
 						    <path d="M21.544 11.045C21.848 11.4713 22 11.6845 22 12C22 12.3155 21.848 12.5287 21.544 12.955C20.1779 14.8706 16.6892 19 12 19C7.31078 19 3.8221 14.8706 2.45604 12.955C2.15201 12.5287 2 12.3155 2 12C2 11.6845 2.15201 11.4713 2.45604 11.045C3.8221 9.12944 7.31078 5 12 5C16.6892 5 20.1779 9.12944 21.544 11.045Z" stroke="currentColor" stroke-width="2" />
 						    <path d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z" stroke="currentColor" stroke-width="2" />
 						</svg>
@@ -667,8 +667,8 @@
 					</div>
 					<!-- input field .//end -->
 				</article> <!-- card .//end -->
-				<div class="g-col-5"  style="grid-column: span 2;">
-					<nav class="dropdown-menu">
+				<div class="col-span-2">
+					<nav class="dropdown-menu w-100">
 							<a class="dropdown-item" href="">Details</a>
 							<a class="dropdown-item" href="">Archive</a>
 							<a class="dropdown-item" href="">Edit</a>
