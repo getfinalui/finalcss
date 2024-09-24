@@ -20,11 +20,9 @@
 .row {
   display: flex; 
   flex-wrap: wrap;
-  gap:20px;
 }
 .row > * { 
-  flex:0 0 100%;
-  width: 100%;  
+  flex:0 0 auto;
   max-width: 100%;
 }
 
