@@ -52,13 +52,13 @@
 .align-super {vertical-align: super;}
 
 
-.translate-middle-xy{ transform: translate(50%, 50%);}
-.translate-middle-x { transform: translateX(50%);}
-.translate-middle-y {  transform: translateY(50%);}
-.-translate-middle-xy{ transform: translate(-50%, -50%);}
-.-translate-middle-x { transform: translateX(-50%);}
-.-translate-middle-y {  transform: translateY(-50%);}
+.translate-xy-50{ transform: translate(50%, 50%)!important;}
+.translate-x-50 { transform: translateX(50%)!important;}
+.translate-y-50 {  transform: translateY(50%)!important;}
+.-translate-xy-50{ transform: translate(-50%, -50%)!important;}
+.-translate-x-50 { transform: translateX(-50%)!important;}
+.-translate-y-50 {  transform: translateY(-50%)!important;}
 
-.center-y{  top:50%; transform: translateY(-50%);}
-.center-x{ left:50%; transform: translateX(-50%);}
-.center-xy{ top:50%; left:50%; transform: translateY(-50%); transform: translateX(-50%);}
+.center-y{  top:50%; transform: translateY(-50%)!important;}
+.center-x{ left:50%; transform: translateX(-50%)!important;}
+.center-xy{ top:50%; left:50%; transform: translateY(-50%)!important; transform: translateX(-50%)!important;}

@@ -535,14 +535,62 @@ progress {
   max-width: 1440px;
 }
 
+.flex-gap-0 {
+  --flex-gap:0px;
+}
+
+.flex-gap-4px {
+  --flex-gap: 4px;
+}
+
+.flex-gap-8px {
+  --flex-gap: 8px;
+}
+
+.flex-gap-12px {
+  --flex-gap: 12px;
+}
+
+.flex-gap-16px {
+  --flex-gap: 16px;
+}
+
+.flex-gap-20px {
+  --flex-gap: 20px;
+}
+
+.flex-gap-24px {
+  --flex-gap: 24px;
+}
+
+.flex-gap-28px {
+  --flex-gap: 28px;
+}
+
+.flex-gap-32px {
+  --flex-gap: 32px;
+}
+
+.flex-gap-36px {
+  --flex-gap: 36px;
+}
+
+.flex-gap-40px {
+  --flex-gap: 40px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: calc(-0.5 * var(--flex-gap));
+  margin-right: calc(-0.5 * var(--flex-gap));
 }
 
 .row > * {
   flex: 0 0 auto;
   max-width: 100%;
+  padding-right: calc(var(--flex-gap) * 0.5);
+  padding-left: calc(var(--flex-gap) * 0.5);
 }
 
 .row-cols-auto > * {
@@ -558,7 +606,7 @@ progress {
 }
 
 .row-cols-3 > * {
-  width: 33.3333333333%;
+  width: 33.33333333%;
 }
 
 .row-cols-4 > * {
@@ -570,7 +618,7 @@ progress {
 }
 
 .row-cols-6 > * {
-  width: 16.6666666667%;
+  width: 16.66666667%;
 }
 
 @media (min-width: 640px) {
@@ -1537,149 +1585,6 @@ progress {
     grid-column: 1/-1;
   }
 }
-.space-0 {
-  --finalcss-cols-gap-x: 0!important;
-  --finalcss-cols-gap-y: 0!important;
-}
-
-.space-y-0 {
-  --finalcss-cols-gap-y: 0!important;
-}
-
-.space-x-0 {
-  --finalcss-cols-gap-x: 0!important;
-}
-
-.space-4px {
-  --finalcss-cols-gap-x: 4px!important;
-  --finalcss-cols-gap-y: 4px!important;
-}
-
-.space-y-4px {
-  --finalcss-cols-gap-y: 4px!important;
-}
-
-.space-x-4px {
-  --finalcss-cols-gap-x: 4px!important;
-}
-
-.space-8px {
-  --finalcss-cols-gap-x: 8px!important;
-  --finalcss-cols-gap-y: 8px!important;
-}
-
-.space-y-8px {
-  --finalcss-cols-gap-y: 8px!important;
-}
-
-.space-x-8px {
-  --finalcss-cols-gap-x: 8px!important;
-}
-
-.space-12px {
-  --finalcss-cols-gap-x: 12px!important;
-  --finalcss-cols-gap-y: 12px!important;
-}
-
-.space-y-12px {
-  --finalcss-cols-gap-y: 12px!important;
-}
-
-.space-x-12px {
-  --finalcss-cols-gap-x: 12px!important;
-}
-
-.space-16px {
-  --finalcss-cols-gap-x: 16px!important;
-  --finalcss-cols-gap-y: 16px!important;
-}
-
-.space-y-16px {
-  --finalcss-cols-gap-y: 16px!important;
-}
-
-.space-x-16px {
-  --finalcss-cols-gap-x: 16px!important;
-}
-
-.space-20px {
-  --finalcss-cols-gap-x: 20px!important;
-  --finalcss-cols-gap-y: 20px!important;
-}
-
-.space-y-20px {
-  --finalcss-cols-gap-y: 20px!important;
-}
-
-.space-x-20px {
-  --finalcss-cols-gap-x: 20px!important;
-}
-
-.space-24px {
-  --finalcss-cols-gap-x: 24px!important;
-  --finalcss-cols-gap-y: 24px!important;
-}
-
-.space-y-24px {
-  --finalcss-cols-gap-y: 24px!important;
-}
-
-.space-x-24px {
-  --finalcss-cols-gap-x: 24px!important;
-}
-
-.space-28px {
-  --finalcss-cols-gap-x: 28px!important;
-  --finalcss-cols-gap-y: 28px!important;
-}
-
-.space-y-28px {
-  --finalcss-cols-gap-y: 28px!important;
-}
-
-.space-x-28px {
-  --finalcss-cols-gap-x: 28px!important;
-}
-
-.space-32px {
-  --finalcss-cols-gap-x: 32px!important;
-  --finalcss-cols-gap-y: 32px!important;
-}
-
-.space-y-32px {
-  --finalcss-cols-gap-y: 32px!important;
-}
-
-.space-x-32px {
-  --finalcss-cols-gap-x: 32px!important;
-}
-
-.space-36px {
-  --finalcss-cols-gap-x: 36px!important;
-  --finalcss-cols-gap-y: 36px!important;
-}
-
-.space-y-36px {
-  --finalcss-cols-gap-y: 36px!important;
-}
-
-.space-x-36px {
-  --finalcss-cols-gap-x: 36px!important;
-}
-
-.space-40px {
-  --finalcss-cols-gap-x: 40px!important;
-  --finalcss-cols-gap-y: 40px!important;
-}
-
-.space-y-40px {
-  --finalcss-cols-gap-y: 40px!important;
-}
-
-.space-x-40px {
-  --finalcss-cols-gap-x: 40px!important;
-}
-
 .alert {
   --alert-bg-color: transparent;
   --alert-text-color: inherit;
@@ -1762,7 +1667,7 @@ progress {
 }
 .btn:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(64, 64, 64, 0.2) inset;
+  box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
 }
 
 .btn-lg {
@@ -1807,7 +1712,7 @@ progress {
   --btn-bg-hover: var(--neutral-800);
   --btn-text-color: var(--text-color-invert);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.2) inset, 0 8px 10px rgba(255, 255, 255, 0.12) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
 }
 
 .btn-primary {
@@ -1815,7 +1720,7 @@ progress {
   --btn-bg-hover: var(--primary-700-const);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2) inset, 0 8px 10px rgba(255, 255, 255, 0.12) inset;
+  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
 }
 
 .btn-danger {
@@ -1823,7 +1728,7 @@ progress {
   --btn-bg-hover: var(--danger-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2) inset, 0 8px 10px rgba(255, 255, 255, 0.15) inset;
+  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.15) inset;
 }
 
 .btn-secondary {
@@ -1832,7 +1737,7 @@ progress {
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -2px 0 0 rgba(64, 64, 64, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
 }
 
 .btn-danger-soft {
@@ -1841,7 +1746,7 @@ progress {
   --btn-text-color: var(--text-color-danger);
   --btn-border-color: var(--border-color-base);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-neutral {
@@ -2282,7 +2187,7 @@ progress {
   gap: 8px;
   align-items: center;
   width: 100%;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 0.8rem;
   height: 38px;
   clear: both;
   color: var(--tetx-color-base);
@@ -6023,13 +5928,13 @@ h1 {
 }
 
 .bg-aurora {
-  background-color: red;
-  background-image: radial-gradient(at 40% 20%, #ffb87a 0px, transparent 50%), radial-gradient(at 80% 0%, #1fddff 0px, transparent 50%), radial-gradient(at 0% 50%, #ffdbde 0px, transparent 50%), radial-gradient(at 80% 50%, #ff85ad 0px, transparent 50%), radial-gradient(at 0% 100%, #ffb58a 0px, transparent 50%), radial-gradient(at 80% 100%, #6b66ff 0px, transparent 50%), radial-gradient(at 0% 0%, #ff85a7 0px, transparent 50%);
+  background-color: hsl(0deg, 100%, 50%);
+  background-image: radial-gradient(at 40% 20%, hsl(28deg, 100%, 74%) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(189deg, 100%, 56%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(355deg, 100%, 93%) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(340deg, 100%, 76%) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(22deg, 100%, 77%) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(242deg, 100%, 70%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(343deg, 100%, 76%) 0px, transparent 50%);
 }
 
 .bg-mix {
   background-color: #ffd899;
-  background-image: radial-gradient(at 98% 75%, #62c2fd 0px, transparent 50%), radial-gradient(at 47% 73%, #95eeee 0px, transparent 50%), radial-gradient(at 45% 16%, #84f43e 0px, transparent 50%), radial-gradient(at 31% 64%, #c1e95d 0px, transparent 50%), radial-gradient(at 63% 93%, #854cf0 0px, transparent 50%), radial-gradient(at 67% 78%, #da5a58 0px, transparent 50%), radial-gradient(at 81% 92%, #e6f2a1 0px, transparent 50%);
+  background-image: radial-gradient(at 98% 75%, hsl(203deg, 98%, 69%) 0px, transparent 50%), radial-gradient(at 47% 73%, hsl(180deg, 73%, 76%) 0px, transparent 50%), radial-gradient(at 45% 16%, hsl(97deg, 89%, 60%) 0px, transparent 50%), radial-gradient(at 31% 64%, hsl(77deg, 76%, 64%) 0px, transparent 50%), radial-gradient(at 63% 93%, hsl(261deg, 85%, 62%) 0px, transparent 50%), radial-gradient(at 67% 78%, hsl(1deg, 64%, 60%) 0px, transparent 50%), radial-gradient(at 81% 92%, hsl(69deg, 76%, 79%) 0px, transparent 50%);
 }
 
 .static {
@@ -6144,45 +6049,45 @@ h1 {
   vertical-align: super;
 }
 
-.translate-middle-xy {
-  transform: translate(50%, 50%);
+.translate-xy-50 {
+  transform: translate(50%, 50%) !important;
 }
 
-.translate-middle-x {
-  transform: translateX(50%);
+.translate-x-50 {
+  transform: translateX(50%) !important;
 }
 
-.translate-middle-y {
-  transform: translateY(50%);
+.translate-y-50 {
+  transform: translateY(50%) !important;
 }
 
-.-translate-middle-xy {
-  transform: translate(-50%, -50%);
+.-translate-xy-50 {
+  transform: translate(-50%, -50%) !important;
 }
 
-.-translate-middle-x {
-  transform: translateX(-50%);
+.-translate-x-50 {
+  transform: translateX(-50%) !important;
 }
 
-.-translate-middle-y {
-  transform: translateY(-50%);
+.-translate-y-50 {
+  transform: translateY(-50%) !important;
 }
 
 .center-y {
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) !important;
 }
 
 .center-x {
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
 }
 
 .center-xy {
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
+  transform: translateY(-50%) !important;
+  transform: translateX(-50%) !important;
 }
 
 .object-fit-contain {

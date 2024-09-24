@@ -16,24 +16,39 @@
 .container-lg{max-width: $screen-lg;} // laptop 1280
 .container{ max-width: $screen-xl; } // large screen 1440
 
+.flex-gap-0{ --flex-gap:0px;}
+.flex-gap-4px{ --flex-gap: 4px; }
+.flex-gap-8px{ --flex-gap: 8px; }
+.flex-gap-12px{ --flex-gap: 12px; }
+.flex-gap-16px{ --flex-gap: 16px; }
+.flex-gap-20px{ --flex-gap: 20px; }
+.flex-gap-24px{ --flex-gap: 24px; }
+.flex-gap-28px{ --flex-gap: 28px; }
+.flex-gap-32px{ --flex-gap: 32px; }
+.flex-gap-36px{ --flex-gap: 36px; }
+.flex-gap-40px{ --flex-gap: 40px; }
 
 .row {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
+  margin-left: calc( -0.5 * var(--flex-gap));
+  margin-right: calc( -0.5 * var(--flex-gap));
 }
 .row > * { 
   flex:0 0 auto;
   max-width: 100%;
+  padding-right: calc(var(--flex-gap)* 0.5);
+  padding-left: calc(var(--flex-gap)* 0.5);
 }
 
 //////////// ROW COLS
 .row-cols-auto > * {width: auto;}
 .row-cols-1 > * { width: 100%; }
 .row-cols-2 > * { width: 50%;}
-.row-cols-3 > * { width: 33.3333333333%; }
+.row-cols-3 > * { width: 33.33333333%; }
 .row-cols-4 > * { width: 25%; }
 .row-cols-5 > * { width: 20%; }
-.row-cols-6 > * { width: 16.6666666667%;}
+.row-cols-6 > * { width: 16.66666667%;}
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
@@ -161,23 +176,5 @@
     .#{$breakpoint}\:col-span-12{grid-column:auto/span 12;}
     .#{$breakpoint}\:col-span-full{grid-column: 1 / -1;}
     // end breakpoint
-  }
-}
-
-
-
-//// Space between cols (paddings)
-$space_nums: 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px;
-
-@each $num in $space_nums {
-  .space-#{$num}{
-    --finalcss-cols-gap-x: #{$num}!important;
-    --finalcss-cols-gap-y: #{$num}!important;
-  }
-  .space-y-#{$num}{
-    --finalcss-cols-gap-y: #{$num}!important;
-  }
-  .space-x-#{$num}{
-    --finalcss-cols-gap-x: #{$num}!important;
   }
 }
