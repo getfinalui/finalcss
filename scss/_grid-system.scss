@@ -16,19 +16,9 @@
 .container-lg{max-width: $screen-lg;} // laptop 1280
 .container{ max-width: $screen-xl; } // large screen 1440
 
-.flex-gap-0{ --flex-gap:0px;}
-.flex-gap-4px{ --flex-gap: 4px; }
-.flex-gap-8px{ --flex-gap: 8px; }
-.flex-gap-12px{ --flex-gap: 12px; }
-.flex-gap-16px{ --flex-gap: 16px; }
-.flex-gap-20px{ --flex-gap: 20px; }
-.flex-gap-24px{ --flex-gap: 24px; }
-.flex-gap-28px{ --flex-gap: 28px; }
-.flex-gap-32px{ --flex-gap: 32px; }
-.flex-gap-36px{ --flex-gap: 36px; }
-.flex-gap-40px{ --flex-gap: 40px; }
-
 .row {
+  --flex-gap: 20px; // default gap
+  gap:0!important; // css gap breaks flex column, it is good for css grid only
   display: flex;
   flex-wrap: wrap;
   margin-left: calc( -0.5 * var(--flex-gap));
@@ -37,6 +27,7 @@
 .row > * { 
   flex:0 0 auto;
   max-width: 100%;
+  width: 100%;
   padding-right: calc(var(--flex-gap)* 0.5);
   padding-left: calc(var(--flex-gap)* 0.5);
 }

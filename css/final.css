@@ -535,62 +535,21 @@ progress {
   max-width: 1440px;
 }
 
-.flex-gap-0 {
-  --flex-gap:0px;
-}
-
-.flex-gap-4px {
-  --flex-gap: 4px;
-}
-
-.flex-gap-8px {
-  --flex-gap: 8px;
-}
-
-.flex-gap-12px {
-  --flex-gap: 12px;
-}
-
-.flex-gap-16px {
-  --flex-gap: 16px;
-}
-
-.flex-gap-20px {
-  --flex-gap: 20px;
-}
-
-.flex-gap-24px {
-  --flex-gap: 24px;
-}
-
-.flex-gap-28px {
-  --flex-gap: 28px;
-}
-
-.flex-gap-32px {
-  --flex-gap: 32px;
-}
-
-.flex-gap-36px {
-  --flex-gap: 36px;
-}
-
-.flex-gap-40px {
-  --flex-gap: 40px;
-}
-
 .row {
+  --flex-gap: 20px;
+  gap: 0 !important;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-0.5 * var(--flex-gap));
-  margin-right: calc(-0.5 * var(--flex-gap));
+  margin-left: calc( -0.5 * var(--flex-gap));
+  margin-right: calc( -0.5 * var(--flex-gap));
 }
 
 .row > * {
   flex: 0 0 auto;
   max-width: 100%;
-  padding-right: calc(var(--flex-gap) * 0.5);
-  padding-left: calc(var(--flex-gap) * 0.5);
+  width: 100%;
+  padding-right: calc(var(--flex-gap)* 0.5);
+  padding-left: calc(var(--flex-gap)* 0.5);
 }
 
 .row-cols-auto > * {
@@ -1667,7 +1626,7 @@ progress {
 }
 .btn:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
+  box-shadow: 0 3px 6px rgba(64, 64, 64, 0.2) inset;
 }
 
 .btn-lg {
@@ -1712,7 +1671,7 @@ progress {
   --btn-bg-hover: var(--neutral-800);
   --btn-text-color: var(--text-color-invert);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
 }
 
 .btn-primary {
@@ -1720,7 +1679,7 @@ progress {
   --btn-bg-hover: var(--primary-700-const);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.12) inset;
+  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
 }
 
 .btn-danger {
@@ -1728,7 +1687,7 @@ progress {
   --btn-bg-hover: var(--danger-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.2) inset, 0 8px 10px hsla(0deg, 0%, 100%, 0.15) inset;
+  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
 }
 
 .btn-secondary {
@@ -1737,7 +1696,7 @@ progress {
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
+  box-shadow: 0 -2px 0 0 rgba(64, 64, 64, 0.1) inset;
 }
 
 .btn-danger-soft {
@@ -1746,7 +1705,7 @@ progress {
   --btn-text-color: var(--text-color-danger);
   --btn-border-color: var(--border-color-base);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -1px 0 0 hsla(0deg, 0%, 0%, 0.15) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
+  box-shadow: 0 -2px 0 0 rgba(64, 64, 64, 0.1) inset;
 }
 
 .btn-neutral {
@@ -3762,666 +3721,906 @@ progress {
 }
 .gap-0 {
   gap: 0;
+  --flex-gap:0;
 }
 
 .row-gap-0 {
   row-gap: 0;
+  --flex-gap:0;
 }
 
 .column-gap-0 {
   column-gap: 0;
+  --flex-gap:0;
+}
+
+.gap-0px {
+  gap: 0px;
+  --flex-gap:0px;
+}
+
+.row-gap-0px {
+  row-gap: 0px;
+  --flex-gap:0px;
+}
+
+.column-gap-0px {
+  column-gap: 0px;
+  --flex-gap:0px;
 }
 
 .gap-4px {
   gap: 4px;
+  --flex-gap:4px;
 }
 
 .row-gap-4px {
   row-gap: 4px;
+  --flex-gap:4px;
 }
 
 .column-gap-4px {
   column-gap: 4px;
+  --flex-gap:4px;
 }
 
 .gap-8px {
   gap: 8px;
+  --flex-gap:8px;
 }
 
 .row-gap-8px {
   row-gap: 8px;
+  --flex-gap:8px;
 }
 
 .column-gap-8px {
   column-gap: 8px;
+  --flex-gap:8px;
 }
 
 .gap-12px {
   gap: 12px;
+  --flex-gap:12px;
 }
 
 .row-gap-12px {
   row-gap: 12px;
+  --flex-gap:12px;
 }
 
 .column-gap-12px {
   column-gap: 12px;
+  --flex-gap:12px;
 }
 
 .gap-16px {
   gap: 16px;
+  --flex-gap:16px;
 }
 
 .row-gap-16px {
   row-gap: 16px;
+  --flex-gap:16px;
 }
 
 .column-gap-16px {
   column-gap: 16px;
+  --flex-gap:16px;
 }
 
 .gap-20px {
   gap: 20px;
+  --flex-gap:20px;
 }
 
 .row-gap-20px {
   row-gap: 20px;
+  --flex-gap:20px;
 }
 
 .column-gap-20px {
   column-gap: 20px;
+  --flex-gap:20px;
 }
 
 .gap-24px {
   gap: 24px;
+  --flex-gap:24px;
 }
 
 .row-gap-24px {
   row-gap: 24px;
+  --flex-gap:24px;
 }
 
 .column-gap-24px {
   column-gap: 24px;
+  --flex-gap:24px;
 }
 
 .gap-28px {
   gap: 28px;
+  --flex-gap:28px;
 }
 
 .row-gap-28px {
   row-gap: 28px;
+  --flex-gap:28px;
 }
 
 .column-gap-28px {
   column-gap: 28px;
+  --flex-gap:28px;
 }
 
 .gap-32px {
   gap: 32px;
+  --flex-gap:32px;
 }
 
 .row-gap-32px {
   row-gap: 32px;
+  --flex-gap:32px;
 }
 
 .column-gap-32px {
   column-gap: 32px;
+  --flex-gap:32px;
 }
 
 .gap-36px {
   gap: 36px;
+  --flex-gap:36px;
 }
 
 .row-gap-36px {
   row-gap: 36px;
+  --flex-gap:36px;
 }
 
 .column-gap-36px {
   column-gap: 36px;
+  --flex-gap:36px;
 }
 
 .gap-40px {
   gap: 40px;
+  --flex-gap:40px;
 }
 
 .row-gap-40px {
   row-gap: 40px;
+  --flex-gap:40px;
 }
 
 .column-gap-40px {
   column-gap: 40px;
+  --flex-gap:40px;
 }
 
 @media (min-width: 640px) {
-  .sm\:gap-0px {
+  .sm\:gap-0 {
     gap: 0;
+    --flex-gap:0;
+  }
+
+  .sm\:row-gap-0 {
+    row-gap: 0;
+    --flex-gap:0;
+  }
+
+  .sm\:column-gap-0 {
+    column-gap: 0;
+    --flex-gap:0;
+  }
+
+  .sm\:gap-0px {
+    gap: 0px;
+    --flex-gap:0px;
   }
 
   .sm\:row-gap-0px {
-    row-gap: 0;
+    row-gap: 0px;
+    --flex-gap:0px;
   }
 
   .sm\:column-gap-0px {
-    column-gap: 0;
+    column-gap: 0px;
+    --flex-gap:0px;
   }
 
-  .sm\:gap-4pxpx {
+  .sm\:gap-4px {
     gap: 4px;
+    --flex-gap:4px;
   }
 
-  .sm\:row-gap-4pxpx {
+  .sm\:row-gap-4px {
     row-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .sm\:column-gap-4pxpx {
+  .sm\:column-gap-4px {
     column-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .sm\:gap-8pxpx {
+  .sm\:gap-8px {
     gap: 8px;
+    --flex-gap:8px;
   }
 
-  .sm\:row-gap-8pxpx {
+  .sm\:row-gap-8px {
     row-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .sm\:column-gap-8pxpx {
+  .sm\:column-gap-8px {
     column-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .sm\:gap-12pxpx {
+  .sm\:gap-12px {
     gap: 12px;
+    --flex-gap:12px;
   }
 
-  .sm\:row-gap-12pxpx {
+  .sm\:row-gap-12px {
     row-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .sm\:column-gap-12pxpx {
+  .sm\:column-gap-12px {
     column-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .sm\:gap-16pxpx {
+  .sm\:gap-16px {
     gap: 16px;
+    --flex-gap:16px;
   }
 
-  .sm\:row-gap-16pxpx {
+  .sm\:row-gap-16px {
     row-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .sm\:column-gap-16pxpx {
+  .sm\:column-gap-16px {
     column-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .sm\:gap-20pxpx {
+  .sm\:gap-20px {
     gap: 20px;
+    --flex-gap:20px;
   }
 
-  .sm\:row-gap-20pxpx {
+  .sm\:row-gap-20px {
     row-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .sm\:column-gap-20pxpx {
+  .sm\:column-gap-20px {
     column-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .sm\:gap-24pxpx {
+  .sm\:gap-24px {
     gap: 24px;
+    --flex-gap:24px;
   }
 
-  .sm\:row-gap-24pxpx {
+  .sm\:row-gap-24px {
     row-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .sm\:column-gap-24pxpx {
+  .sm\:column-gap-24px {
     column-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .sm\:gap-28pxpx {
+  .sm\:gap-28px {
     gap: 28px;
+    --flex-gap:28px;
   }
 
-  .sm\:row-gap-28pxpx {
+  .sm\:row-gap-28px {
     row-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .sm\:column-gap-28pxpx {
+  .sm\:column-gap-28px {
     column-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .sm\:gap-32pxpx {
+  .sm\:gap-32px {
     gap: 32px;
+    --flex-gap:32px;
   }
 
-  .sm\:row-gap-32pxpx {
+  .sm\:row-gap-32px {
     row-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .sm\:column-gap-32pxpx {
+  .sm\:column-gap-32px {
     column-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .sm\:gap-36pxpx {
+  .sm\:gap-36px {
     gap: 36px;
+    --flex-gap:36px;
   }
 
-  .sm\:row-gap-36pxpx {
+  .sm\:row-gap-36px {
     row-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .sm\:column-gap-36pxpx {
+  .sm\:column-gap-36px {
     column-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .sm\:gap-40pxpx {
+  .sm\:gap-40px {
     gap: 40px;
+    --flex-gap:40px;
   }
 
-  .sm\:row-gap-40pxpx {
+  .sm\:row-gap-40px {
     row-gap: 40px;
+    --flex-gap:40px;
   }
 
-  .sm\:column-gap-40pxpx {
+  .sm\:column-gap-40px {
     column-gap: 40px;
+    --flex-gap:40px;
   }
 }
 @media (min-width: 768px) {
-  .md\:gap-0px {
+  .md\:gap-0 {
     gap: 0;
+    --flex-gap:0;
+  }
+
+  .md\:row-gap-0 {
+    row-gap: 0;
+    --flex-gap:0;
+  }
+
+  .md\:column-gap-0 {
+    column-gap: 0;
+    --flex-gap:0;
+  }
+
+  .md\:gap-0px {
+    gap: 0px;
+    --flex-gap:0px;
   }
 
   .md\:row-gap-0px {
-    row-gap: 0;
+    row-gap: 0px;
+    --flex-gap:0px;
   }
 
   .md\:column-gap-0px {
-    column-gap: 0;
+    column-gap: 0px;
+    --flex-gap:0px;
   }
 
-  .md\:gap-4pxpx {
+  .md\:gap-4px {
     gap: 4px;
+    --flex-gap:4px;
   }
 
-  .md\:row-gap-4pxpx {
+  .md\:row-gap-4px {
     row-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .md\:column-gap-4pxpx {
+  .md\:column-gap-4px {
     column-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .md\:gap-8pxpx {
+  .md\:gap-8px {
     gap: 8px;
+    --flex-gap:8px;
   }
 
-  .md\:row-gap-8pxpx {
+  .md\:row-gap-8px {
     row-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .md\:column-gap-8pxpx {
+  .md\:column-gap-8px {
     column-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .md\:gap-12pxpx {
+  .md\:gap-12px {
     gap: 12px;
+    --flex-gap:12px;
   }
 
-  .md\:row-gap-12pxpx {
+  .md\:row-gap-12px {
     row-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .md\:column-gap-12pxpx {
+  .md\:column-gap-12px {
     column-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .md\:gap-16pxpx {
+  .md\:gap-16px {
     gap: 16px;
+    --flex-gap:16px;
   }
 
-  .md\:row-gap-16pxpx {
+  .md\:row-gap-16px {
     row-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .md\:column-gap-16pxpx {
+  .md\:column-gap-16px {
     column-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .md\:gap-20pxpx {
+  .md\:gap-20px {
     gap: 20px;
+    --flex-gap:20px;
   }
 
-  .md\:row-gap-20pxpx {
+  .md\:row-gap-20px {
     row-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .md\:column-gap-20pxpx {
+  .md\:column-gap-20px {
     column-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .md\:gap-24pxpx {
+  .md\:gap-24px {
     gap: 24px;
+    --flex-gap:24px;
   }
 
-  .md\:row-gap-24pxpx {
+  .md\:row-gap-24px {
     row-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .md\:column-gap-24pxpx {
+  .md\:column-gap-24px {
     column-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .md\:gap-28pxpx {
+  .md\:gap-28px {
     gap: 28px;
+    --flex-gap:28px;
   }
 
-  .md\:row-gap-28pxpx {
+  .md\:row-gap-28px {
     row-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .md\:column-gap-28pxpx {
+  .md\:column-gap-28px {
     column-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .md\:gap-32pxpx {
+  .md\:gap-32px {
     gap: 32px;
+    --flex-gap:32px;
   }
 
-  .md\:row-gap-32pxpx {
+  .md\:row-gap-32px {
     row-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .md\:column-gap-32pxpx {
+  .md\:column-gap-32px {
     column-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .md\:gap-36pxpx {
+  .md\:gap-36px {
     gap: 36px;
+    --flex-gap:36px;
   }
 
-  .md\:row-gap-36pxpx {
+  .md\:row-gap-36px {
     row-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .md\:column-gap-36pxpx {
+  .md\:column-gap-36px {
     column-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .md\:gap-40pxpx {
+  .md\:gap-40px {
     gap: 40px;
+    --flex-gap:40px;
   }
 
-  .md\:row-gap-40pxpx {
+  .md\:row-gap-40px {
     row-gap: 40px;
+    --flex-gap:40px;
   }
 
-  .md\:column-gap-40pxpx {
+  .md\:column-gap-40px {
     column-gap: 40px;
+    --flex-gap:40px;
   }
 }
 @media (min-width: 1280px) {
-  .lg\:gap-0px {
+  .lg\:gap-0 {
     gap: 0;
+    --flex-gap:0;
+  }
+
+  .lg\:row-gap-0 {
+    row-gap: 0;
+    --flex-gap:0;
+  }
+
+  .lg\:column-gap-0 {
+    column-gap: 0;
+    --flex-gap:0;
+  }
+
+  .lg\:gap-0px {
+    gap: 0px;
+    --flex-gap:0px;
   }
 
   .lg\:row-gap-0px {
-    row-gap: 0;
+    row-gap: 0px;
+    --flex-gap:0px;
   }
 
   .lg\:column-gap-0px {
-    column-gap: 0;
+    column-gap: 0px;
+    --flex-gap:0px;
   }
 
-  .lg\:gap-4pxpx {
+  .lg\:gap-4px {
     gap: 4px;
+    --flex-gap:4px;
   }
 
-  .lg\:row-gap-4pxpx {
+  .lg\:row-gap-4px {
     row-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .lg\:column-gap-4pxpx {
+  .lg\:column-gap-4px {
     column-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .lg\:gap-8pxpx {
+  .lg\:gap-8px {
     gap: 8px;
+    --flex-gap:8px;
   }
 
-  .lg\:row-gap-8pxpx {
+  .lg\:row-gap-8px {
     row-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .lg\:column-gap-8pxpx {
+  .lg\:column-gap-8px {
     column-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .lg\:gap-12pxpx {
+  .lg\:gap-12px {
     gap: 12px;
+    --flex-gap:12px;
   }
 
-  .lg\:row-gap-12pxpx {
+  .lg\:row-gap-12px {
     row-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .lg\:column-gap-12pxpx {
+  .lg\:column-gap-12px {
     column-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .lg\:gap-16pxpx {
+  .lg\:gap-16px {
     gap: 16px;
+    --flex-gap:16px;
   }
 
-  .lg\:row-gap-16pxpx {
+  .lg\:row-gap-16px {
     row-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .lg\:column-gap-16pxpx {
+  .lg\:column-gap-16px {
     column-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .lg\:gap-20pxpx {
+  .lg\:gap-20px {
     gap: 20px;
+    --flex-gap:20px;
   }
 
-  .lg\:row-gap-20pxpx {
+  .lg\:row-gap-20px {
     row-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .lg\:column-gap-20pxpx {
+  .lg\:column-gap-20px {
     column-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .lg\:gap-24pxpx {
+  .lg\:gap-24px {
     gap: 24px;
+    --flex-gap:24px;
   }
 
-  .lg\:row-gap-24pxpx {
+  .lg\:row-gap-24px {
     row-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .lg\:column-gap-24pxpx {
+  .lg\:column-gap-24px {
     column-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .lg\:gap-28pxpx {
+  .lg\:gap-28px {
     gap: 28px;
+    --flex-gap:28px;
   }
 
-  .lg\:row-gap-28pxpx {
+  .lg\:row-gap-28px {
     row-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .lg\:column-gap-28pxpx {
+  .lg\:column-gap-28px {
     column-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .lg\:gap-32pxpx {
+  .lg\:gap-32px {
     gap: 32px;
+    --flex-gap:32px;
   }
 
-  .lg\:row-gap-32pxpx {
+  .lg\:row-gap-32px {
     row-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .lg\:column-gap-32pxpx {
+  .lg\:column-gap-32px {
     column-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .lg\:gap-36pxpx {
+  .lg\:gap-36px {
     gap: 36px;
+    --flex-gap:36px;
   }
 
-  .lg\:row-gap-36pxpx {
+  .lg\:row-gap-36px {
     row-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .lg\:column-gap-36pxpx {
+  .lg\:column-gap-36px {
     column-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .lg\:gap-40pxpx {
+  .lg\:gap-40px {
     gap: 40px;
+    --flex-gap:40px;
   }
 
-  .lg\:row-gap-40pxpx {
+  .lg\:row-gap-40px {
     row-gap: 40px;
+    --flex-gap:40px;
   }
 
-  .lg\:column-gap-40pxpx {
+  .lg\:column-gap-40px {
     column-gap: 40px;
+    --flex-gap:40px;
   }
 }
 @media (min-width: 1440px) {
-  .xl\:gap-0px {
+  .xl\:gap-0 {
     gap: 0;
+    --flex-gap:0;
+  }
+
+  .xl\:row-gap-0 {
+    row-gap: 0;
+    --flex-gap:0;
+  }
+
+  .xl\:column-gap-0 {
+    column-gap: 0;
+    --flex-gap:0;
+  }
+
+  .xl\:gap-0px {
+    gap: 0px;
+    --flex-gap:0px;
   }
 
   .xl\:row-gap-0px {
-    row-gap: 0;
+    row-gap: 0px;
+    --flex-gap:0px;
   }
 
   .xl\:column-gap-0px {
-    column-gap: 0;
+    column-gap: 0px;
+    --flex-gap:0px;
   }
 
-  .xl\:gap-4pxpx {
+  .xl\:gap-4px {
     gap: 4px;
+    --flex-gap:4px;
   }
 
-  .xl\:row-gap-4pxpx {
+  .xl\:row-gap-4px {
     row-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .xl\:column-gap-4pxpx {
+  .xl\:column-gap-4px {
     column-gap: 4px;
+    --flex-gap:4px;
   }
 
-  .xl\:gap-8pxpx {
+  .xl\:gap-8px {
     gap: 8px;
+    --flex-gap:8px;
   }
 
-  .xl\:row-gap-8pxpx {
+  .xl\:row-gap-8px {
     row-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .xl\:column-gap-8pxpx {
+  .xl\:column-gap-8px {
     column-gap: 8px;
+    --flex-gap:8px;
   }
 
-  .xl\:gap-12pxpx {
+  .xl\:gap-12px {
     gap: 12px;
+    --flex-gap:12px;
   }
 
-  .xl\:row-gap-12pxpx {
+  .xl\:row-gap-12px {
     row-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .xl\:column-gap-12pxpx {
+  .xl\:column-gap-12px {
     column-gap: 12px;
+    --flex-gap:12px;
   }
 
-  .xl\:gap-16pxpx {
+  .xl\:gap-16px {
     gap: 16px;
+    --flex-gap:16px;
   }
 
-  .xl\:row-gap-16pxpx {
+  .xl\:row-gap-16px {
     row-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .xl\:column-gap-16pxpx {
+  .xl\:column-gap-16px {
     column-gap: 16px;
+    --flex-gap:16px;
   }
 
-  .xl\:gap-20pxpx {
+  .xl\:gap-20px {
     gap: 20px;
+    --flex-gap:20px;
   }
 
-  .xl\:row-gap-20pxpx {
+  .xl\:row-gap-20px {
     row-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .xl\:column-gap-20pxpx {
+  .xl\:column-gap-20px {
     column-gap: 20px;
+    --flex-gap:20px;
   }
 
-  .xl\:gap-24pxpx {
+  .xl\:gap-24px {
     gap: 24px;
+    --flex-gap:24px;
   }
 
-  .xl\:row-gap-24pxpx {
+  .xl\:row-gap-24px {
     row-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .xl\:column-gap-24pxpx {
+  .xl\:column-gap-24px {
     column-gap: 24px;
+    --flex-gap:24px;
   }
 
-  .xl\:gap-28pxpx {
+  .xl\:gap-28px {
     gap: 28px;
+    --flex-gap:28px;
   }
 
-  .xl\:row-gap-28pxpx {
+  .xl\:row-gap-28px {
     row-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .xl\:column-gap-28pxpx {
+  .xl\:column-gap-28px {
     column-gap: 28px;
+    --flex-gap:28px;
   }
 
-  .xl\:gap-32pxpx {
+  .xl\:gap-32px {
     gap: 32px;
+    --flex-gap:32px;
   }
 
-  .xl\:row-gap-32pxpx {
+  .xl\:row-gap-32px {
     row-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .xl\:column-gap-32pxpx {
+  .xl\:column-gap-32px {
     column-gap: 32px;
+    --flex-gap:32px;
   }
 
-  .xl\:gap-36pxpx {
+  .xl\:gap-36px {
     gap: 36px;
+    --flex-gap:36px;
   }
 
-  .xl\:row-gap-36pxpx {
+  .xl\:row-gap-36px {
     row-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .xl\:column-gap-36pxpx {
+  .xl\:column-gap-36px {
     column-gap: 36px;
+    --flex-gap:36px;
   }
 
-  .xl\:gap-40pxpx {
+  .xl\:gap-40px {
     gap: 40px;
+    --flex-gap:40px;
   }
 
-  .xl\:row-gap-40pxpx {
+  .xl\:row-gap-40px {
     row-gap: 40px;
+    --flex-gap:40px;
   }
 
-  .xl\:column-gap-40pxpx {
+  .xl\:column-gap-40px {
     column-gap: 40px;
+    --flex-gap:40px;
   }
 }
 .float-start {
@@ -5928,13 +6127,13 @@ h1 {
 }
 
 .bg-aurora {
-  background-color: hsl(0deg, 100%, 50%);
-  background-image: radial-gradient(at 40% 20%, hsl(28deg, 100%, 74%) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(189deg, 100%, 56%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(355deg, 100%, 93%) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(340deg, 100%, 76%) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(22deg, 100%, 77%) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(242deg, 100%, 70%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(343deg, 100%, 76%) 0px, transparent 50%);
+  background-color: red;
+  background-image: radial-gradient(at 40% 20%, #ffb87a 0px, transparent 50%), radial-gradient(at 80% 0%, #1fddff 0px, transparent 50%), radial-gradient(at 0% 50%, #ffdbde 0px, transparent 50%), radial-gradient(at 80% 50%, #ff85ad 0px, transparent 50%), radial-gradient(at 0% 100%, #ffb58a 0px, transparent 50%), radial-gradient(at 80% 100%, #6b66ff 0px, transparent 50%), radial-gradient(at 0% 0%, #ff85a7 0px, transparent 50%);
 }
 
 .bg-mix {
   background-color: #ffd899;
-  background-image: radial-gradient(at 98% 75%, hsl(203deg, 98%, 69%) 0px, transparent 50%), radial-gradient(at 47% 73%, hsl(180deg, 73%, 76%) 0px, transparent 50%), radial-gradient(at 45% 16%, hsl(97deg, 89%, 60%) 0px, transparent 50%), radial-gradient(at 31% 64%, hsl(77deg, 76%, 64%) 0px, transparent 50%), radial-gradient(at 63% 93%, hsl(261deg, 85%, 62%) 0px, transparent 50%), radial-gradient(at 67% 78%, hsl(1deg, 64%, 60%) 0px, transparent 50%), radial-gradient(at 81% 92%, hsl(69deg, 76%, 79%) 0px, transparent 50%);
+  background-image: radial-gradient(at 98% 75%, #62c2fd 0px, transparent 50%), radial-gradient(at 47% 73%, #95eeee 0px, transparent 50%), radial-gradient(at 45% 16%, #84f43e 0px, transparent 50%), radial-gradient(at 31% 64%, #c1e95d 0px, transparent 50%), radial-gradient(at 63% 93%, #854cf0 0px, transparent 50%), radial-gradient(at 67% 78%, #da5a58 0px, transparent 50%), radial-gradient(at 81% 92%, #e6f2a1 0px, transparent 50%);
 }
 
 .static {
