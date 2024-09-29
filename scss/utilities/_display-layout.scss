@@ -12,7 +12,7 @@ $layout-utils: (
   'd-flex': (display:flex),
   'd-inline-flex' : (display:inline-flex),
   'd-none' : (display:none),
-  'hide' : (display:none),
+  'hidden' : (display:none),
   'flex-1' : (flex:1 1 0%),
   'flex-auto' : (flex:1 1 auto),
   'flex-initial' : (flex:0 1 auto),
@@ -100,7 +100,7 @@ $layout-utils: (
      .#{$breakpoint}\:d-grid{ display:grid }
      .#{$breakpoint}\:d-inline-grid{ display:inline-grid }
      .#{$breakpoint}\:d-none{ display:none }
-     .#{$breakpoint}\:hide{ display:none }
+     .#{$breakpoint}\:hidden{ display:none }
      .#{$breakpoint}\:flex-row{flex-direction:row}
      .#{$breakpoint}\:flex-col{flex-direction:column}
     // end breakpoint
@@ -118,7 +118,7 @@ $layout-utils: (
   .dark\:d-grid{ display:grid }
   .dark\:d-inline-grid{ display:inline-grid }
   .dark\:d-none{ display:none }
-  .dark\:hide{ display:none }
+  .dark\:hidden{ display:none }
   .dark\:flex-row{flex-direction:row}
   .dark\:flex-col{flex-direction:column}
 }

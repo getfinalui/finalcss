@@ -1,0 +1,26 @@
+//
+// Base styles
+//
+
+dialog {
+  z-index: 999;
+  visibility: hidden;
+  width: 90%;
+  min-width:360px;
+  top:0;
+  background-color: var(--bg-color-base);
+  border-radius: 8px;
+  border:1px solid var(--border-color-base);
+  box-shadow: 0 4px 12px rgba(#000, 0.2);
+  img{
+    max-width:100%;
+  }
+}
+dialog[open]{
+  visibility: visible;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  //backdrop-filter: blur(4px);
+}
+

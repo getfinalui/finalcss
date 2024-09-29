@@ -23,7 +23,7 @@
   &:focus {
     text-decoration:none;
     color: var(--text-color-base);
-    background-color: var(--neutral-200);
+    background-color: var(--neutral-100);
   }
   &:active {
     background-color: var(--neutral-300);
@@ -47,11 +47,18 @@
   position: relative;
 }
 
+.nav-link-sm {
+  padding: 0.2rem 0.6rem;
+  height: 32px;
+}
+
 //
 // Other variants
 //
 .nav-vertical{
   flex-direction: column;
+  align-items: flex-start;
+  .nav-link{width: 100%;}
 }
 
 .nav-fill {
