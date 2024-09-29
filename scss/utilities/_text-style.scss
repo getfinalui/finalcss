@@ -26,6 +26,21 @@
 .text-right {text-align: right;}
 .text-center { text-align: center;}
 
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    
+    .#{$breakpoint}\:text-left {text-align: left;}
+    .#{$breakpoint}\:text-right {text-align: right;}
+    .#{$breakpoint}\:text-center { text-align: center;}
+
+    // end breakpoint
+  }
+}
+
+
+
 .text-decoration-none { text-decoration: none; }
 .text-underline { text-decoration: underline; }
 .text-line-through { text-decoration: line-through; }
@@ -42,4 +57,7 @@
 .lh-base{ line-height:1.5; }
 .lh-lg{ line-height:1.8; }
 
-.article p{ margin-bottom:0.8rem}
+.article-wrap{
+  h1,h2,h3,h4,h5,h6{ margin-bottom: 0.6rem; margin-top:1.8rem}
+  p{ margin-bottom:0.8rem}
+}

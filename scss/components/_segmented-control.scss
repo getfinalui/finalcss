@@ -17,10 +17,15 @@
     font-size: inherit;
     font-weight: 500;
     text-decoration:none;
-    cursor: pointer;
     user-select: none;
     border-radius: $border-radius-md;
     color:var(--text-color-secondary);
+    text-wrap: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+
     &:hover,
     &:focus {
       text-decoration:none;

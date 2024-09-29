@@ -60,11 +60,14 @@
 
 
 <dialog id="mobile_menu" class="md:d-none" style="margin-top:12px">
-	<button type="button" class="btn float-right btn-icon btn-secondary absolute right-0 top-0 mt-8px mr-8px" onclick="document.getElementById('mobile_menu').close()">
+	<button type="button" class="btn float-right btn-icon btn-plain absolute right-0 top-0 m-4px" onclick="document.getElementById('mobile_menu').close()">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 			<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 		</svg> 
   </button>
+	<header class="border-b mb-8px text-lg font-semibold pb-8px pt-0">
+		Final CSS
+	</header>
 	<nav class="nav nav-vertical">
 		<a href="index.html" class="nav-link nav-link-sm">Home</a>
 		<a href="docs.html" class="nav-link nav-link-sm">Docs</a>
@@ -126,8 +129,8 @@
 		</p>
 
 		<div class="text-center mb-12px">
-			<a class="btn btn-lg btn-primary" href="docs.html">Read documentation</a>
-			<a class="btn btn-lg btn-secondary" href="#demo">View example UI</a>
+			<a class="btn btn-primary" href="docs.html">Documentation</a>
+			<a class="btn btn-secondary" href="#demo">View example UI</a>
 		</div>
 
 	</div> <!-- container end.// -->
@@ -369,9 +372,9 @@
 					</nav>
 				</article>
 
-				<div class="row md:row-cols-2">
+				<div class="row lg:row-cols-2">
 					<div>
-						<article class="card overflow-hidden md:h-100 mb-20px">
+						<article class="card overflow-hidden lg:h-100 mb-20px">
 							<header class="bg-feature-300 position-relative h-120px"> 
 								<a href="#" class="position-absolute bottom-0 end-0 m-8px btn btn-sm btn-neutral">Edit</a>
 							</header>
@@ -646,8 +649,8 @@
 				</div>
 			</div>
 
-			<div class="d-grid grid-cols-5 gap-20px w-100">
-				<article class="col-span-3 card card-body">
+			<div class="d-grid lg:grid-cols-5 gap-20px w-100">
+				<article class="lg:col-span-3 card card-body">
 					<!-- input search  -->
 					<div class="d-flex w-100">
 						<!-- search field -->
@@ -691,8 +694,8 @@
 					</div>
 					<!-- input field .//end -->
 				</article> <!-- card .//end -->
-				<div class="col-span-2">
-					<nav class="dropdown-menu w-100">
+				<div class="lg:col-span-2">
+					<nav class="dropdown-menu lg:w-100 w-200px">
 							<a class="dropdown-item" href="">Details</a>
 							<a class="dropdown-item" href="">Archive</a>
 							<a class="dropdown-item" href="">Edit</a>
@@ -871,7 +874,7 @@
 <section class="pb-40px pt-100px border-top">
 	<div class="container" style="max-width: 920px">
 		
-		<article class="article text-lg">
+		<article class="article-wrap text-lg">
 			<h2 class="mb-3">Similar to Bootstrap 5, but...</h2>
 
 			<p>... But more lightweight, without JS, simplified components with additional utility classes. Re-designed with more aethtetic styles.  If you have used bootstrap framwework you face some challenges like needing to override or changing variables of scss (sass). Both cases are time consuming and frustrating. So here comes Final CSS to solve that.   </p>
@@ -932,10 +935,10 @@
 
 <footer class="bg-base border-t py-40px">
 	<div class="container">
-	  <section class="d-flex lg:justify-content-between">
-        <p class="mb-0"> © 2024 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
+	  <section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
+        <p class="md:mb-0 mb-12px text-center md:text-left"> © 2024 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
         <nav class="nav">
-			<a href="docs.html" class="nav-link">Docs</a>
+						<a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
             <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
         </nav>

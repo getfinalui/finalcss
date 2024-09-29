@@ -12,6 +12,8 @@ dialog {
   border-radius: 8px;
   border:1px solid var(--border-color-base);
   box-shadow: 0 4px 12px rgba(#000, 0.2);
+  font-size: $font-size-base;
+  color: var(--text-color-base);
   img{
     max-width:100%;
   }
@@ -20,7 +22,7 @@ dialog[open]{
   visibility: visible;
 }
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   //backdrop-filter: blur(4px);
 }
 

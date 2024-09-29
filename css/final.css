@@ -528,7 +528,7 @@ progress {
 }
 
 .container-lg {
-  max-width: 1280px;
+  max-width: 1200px;
 }
 
 .container {
@@ -638,7 +638,7 @@ progress {
     width: 16.6666666667%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:row-cols-auto > * {
     width: auto;
   }
@@ -866,7 +866,7 @@ progress {
     width: 100%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:col {
     flex: 1 0 0%;
   }
@@ -1318,7 +1318,7 @@ progress {
     grid-column: 1/-1;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1766,6 +1766,8 @@ dialog {
   border-radius: 8px;
   border: 1px solid var(--border-color-base);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: var(--text-color-base);
 }
 dialog img {
   max-width: 100%;
@@ -1776,7 +1778,7 @@ dialog[open] {
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .table {
@@ -2226,10 +2228,14 @@ dialog::backdrop {
   font-size: inherit;
   font-weight: 500;
   text-decoration: none;
-  cursor: pointer;
   user-select: none;
   border-radius: 8px;
   color: var(--text-color-secondary);
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
 }
 .segmented-control .segmented-item:hover, .segmented-control .segmented-item:focus {
   text-decoration: none;
@@ -3021,7 +3027,7 @@ dialog::backdrop {
     justify-items: stretch;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:d-block {
     display: block;
   }
@@ -3701,7 +3707,7 @@ dialog::backdrop {
     order: 5;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:order-0 {
     order: 0;
   }
@@ -4293,7 +4299,7 @@ dialog::backdrop {
     --flex-gap:40px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:gap-0 {
     gap: 0;
     --flex-gap:0;
@@ -4717,7 +4723,7 @@ dialog::backdrop {
     float: none;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:float-start {
     float: inline-start;
   }
@@ -4839,6 +4845,58 @@ dialog::backdrop {
   text-align: center;
 }
 
+@media (min-width: 640px) {
+  .sm\:text-left {
+    text-align: left;
+  }
+
+  .sm\:text-right {
+    text-align: right;
+  }
+
+  .sm\:text-center {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .lg\:text-left {
+    text-align: left;
+  }
+
+  .lg\:text-right {
+    text-align: right;
+  }
+
+  .lg\:text-center {
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .xl\:text-left {
+    text-align: left;
+  }
+
+  .xl\:text-right {
+    text-align: right;
+  }
+
+  .xl\:text-center {
+    text-align: center;
+  }
+}
 .text-decoration-none {
   text-decoration: none;
 }
@@ -4887,7 +4945,11 @@ dialog::backdrop {
   line-height: 1.8;
 }
 
-.article p {
+.article-wrap h1, .article-wrap h2, .article-wrap h3, .article-wrap h4, .article-wrap h5, .article-wrap h6 {
+  margin-bottom: 0.6rem;
+  margin-top: 1.8rem;
+}
+.article-wrap p {
   margin-bottom: 0.8rem;
 }
 
@@ -5082,7 +5144,7 @@ h1 {
     font-size: 8rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:text-xs {
     font-size: 0.7rem;
   }
@@ -9030,7 +9092,7 @@ h1 {
     max-height: 500px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:w-auto {
     width: auto;
   }
@@ -11042,7 +11104,7 @@ h1 {
     height: 100vh;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:w-auto {
     width: auto;
   }
@@ -13822,7 +13884,7 @@ h1 {
     margin-left: 200px !important;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:m-auto {
     margin: auto;
   }
@@ -17936,7 +17998,7 @@ h1 {
     padding-left: 200px !important;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .lg\:p-0 {
     padding: 0;
   }
