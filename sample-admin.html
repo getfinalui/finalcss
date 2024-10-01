@@ -9,7 +9,7 @@
   <meta name="twitter:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <meta name="author" content="Vosidiy M">
+  <meta name="author" content="Final CSS">
 
   <title>Final CSS - Example Admin template (finalcss.com)</title>
 
@@ -41,14 +41,14 @@
 
 
 </head>
-<body class="bg-base">
+<body>
 
 <div class="d-flex w-100 min-vh-100">
-	<aside class="d-none d-md-block bg-secondary border-end flex-grow-0 flex-shrink-0 min-h-100 w-240px">
-		<header class="d-flex align-items-center px-4 border-bottom  h-60px">
-			<a href="https://finalcss.com" class="h5 m-0">Final CSS</a>
+	<aside class="d-none md:d-block bg-neutral-100 border-r flex-grow-0 flex-shrink-0 w-200px">
+		<header class="d-flex align-items-center px-12px border-b  h-60px">
+			<a href="https://finalcss.com" class="text-xl font-semibold m-0">Final CSS</a>
 		</header>
-		<nav class="p-3">
+		<nav class="p-8px">
 			<ul class="nav nav-vertical">
 				<li><a class="nav-link active" href="#">Dashboard</a></li>
 				<li><a class="nav-link" href="#">Orders</a></li>
@@ -60,21 +60,19 @@
 			</ul>
 		</nav>
 	</aside>
-	<main class="flex-grow-1 bg-base">
+	<main class="flex-grow">
 
-		<header class="d-flex align-items-center p-3 px-lg-4 border-bottom h-60px">
-			<button class="btn btn-secondary btn-icon me-3 d-inline-flex d-md-none">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+		<header class="d-flex p-12px lg:px-20px align-items-center border-b h-60px">
+			<button class="btn btn-secondary btn-icon mr-8px sm:d-none">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 				    <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 				    <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 				    <path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 			</button>
 			<h5 class="m-0">Dashboard </h5>
-			
-			<div class="d-flex align-items-center gap-2 ms-auto">
+			<div class="d-flex align-items-center gap-12px ml-auto">
 				<a class="btn btn-secondary" href="#">Create</a>
-				
 				<button id="themeSwitcher" class="btn btn-icon btn-secondary">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -86,7 +84,7 @@
 					</span>
 				</button>
 				
-				<a href="#" class="rounded-circle size-40px d-inline-flex align-items-center justify-content-center bg-primary-500 text-white">
+				<a href="#" class="rounded-circle w-40px h-40px d-inline-flex align-items-center justify-content-center bg-primary-500 text-white">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#000">
 					    <path d="M17.8063 14.8372C17.9226 14.9064 18.0663 14.9875 18.229 15.0793C18.9418 15.4814 20.0193 16.0893 20.7575 16.8118C21.2191 17.2637 21.6578 17.8592 21.7375 18.5888C21.8223 19.3646 21.4839 20.0927 20.8048 20.7396C19.6334 21.8556 18.2276 22.75 16.4093 22.75H7.59104C5.77274 22.75 4.36695 21.8556 3.1955 20.7396C2.51649 20.0927 2.17802 19.3646 2.26283 18.5888C2.34257 17.8592 2.78123 17.2637 3.2429 16.8118C3.98106 16.0893 5.05857 15.4814 5.77139 15.0793C5.93404 14.9875 6.07773 14.9064 6.19404 14.8372C9.74809 12.7209 14.2523 12.7209 17.8063 14.8372Z" fill="currentColor" />
 					    <path d="M6.75018 6.5C6.75018 3.6005 9.10068 1.25 12.0002 1.25C14.8997 1.25 17.2502 3.6005 17.2502 6.5C17.2502 9.39949 14.8997 11.75 12.0002 11.75C9.10068 11.75 6.75018 9.39949 6.75018 6.5Z" fill="currentColor" />
@@ -95,37 +93,37 @@
 			</div>
 		</header>
 
-		<section class="p-3 px-lg-4">
+		<section class="p-12px lg:p-20px">
 
-			<div class="grid gap-3 w-100">
-				<article class="g-col-6 g-col-lg-3 card">
+			<div class="d-grid grid-template-cols-1 sm:grid-template-cols-2 lg:grid-template-cols-4 gap-20px w-100">
+				<article class="card">
 					<div class="card-body">
-						<p class="h4">1,300.00</p>
-						<p class="mb-4">Consectetur adipisicing elit, sed do eiusmod
+						<h4 class="text-xl">1,300.00</h4>
+						<p class="mb-8px">Consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua.</p> 
 						<a href="#" class="btn btn-secondary">View report</a>
 					</div>
 				</article>
-				<article  class="g-col-6 g-col-lg-3 card">
+				<article  class="card">
 					<div class="card-body">
-						<p class="h4">340.00</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						<h4 class="text-xl">340.00</h4>
+						<p class="mb-8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut </p>
 						<a href="#" class="btn btn-secondary">View report</a>
 					</div>
 				</article>
-				<article  class="g-col-6 g-col-lg-3 card">
+				<article  class="card">
 					<div class="card-body">
-						<p class="h4">$140.00</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						<h4 class="text-xl">$140.00</h4>
+						<p class="mb-8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt </p>
 						<a href="#" class="btn btn-secondary">View report</a>
 					</div>
 				</article>
 				<article class="g-col-6 g-col-lg-3 card">
 					<div class="card-body">
-						<p class="h4">$2,990.00</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						<h4 class="text-xl">$2,990.00</h4>
+						<p class="mb-8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt</p> 
 						<a href="#" class="btn btn-secondary">View report</a>
 					</div>
@@ -133,10 +131,10 @@
 			</div>  <!-- grid.// -->
 
 
-			<header class="mt-4 mb-4">
-				<h5 class="mb-3">Latest orders</h5>
+			<header class="mt-20px mb-20px">
+				<h5 class="mb-12px">Latest orders</h5>
 				
-				<div class="d-lg-flex">
+				<div class="d-flex">
 					<nav class="segmented-control">
 						<label class="segmented-item active">
 							All orders
@@ -149,7 +147,7 @@
 						</label>
 					</nav>
 
-					<form class="ms-auto d-flex gap-2">
+					<form class="ml-auto d-flex gap-8px">
 						<input class="form-control" type="search" placeholder="Search item" name="">
 						<button class="btn btn-secondary">Search</button>
 					</form>

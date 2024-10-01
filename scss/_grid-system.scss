@@ -102,70 +102,70 @@
 
 // CSS GRID
 // Use gap utility with grid system (for ex: gap-20px)
-.grid-cols-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
-.grid-cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.grid-cols-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.grid-cols-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.grid-cols-5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.grid-cols-6{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.grid-cols-7{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
-.grid-cols-8{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
-.grid-cols-9{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
-.grid-cols-10{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
-.grid-cols-11{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
-.grid-cols-12{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
-.grid-cols-none{ grid-template-columns: none; }
-.grid-cols-subgrid{ grid-template-columns: subgrid; }
+.grid-template-cols-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-template-cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-template-cols-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-template-cols-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-template-cols-5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.grid-template-cols-6{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.grid-template-cols-7{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.grid-template-cols-8{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.grid-template-cols-9{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.grid-template-cols-10{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.grid-template-cols-11{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
+.grid-template-cols-12{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.grid-template-cols-none{ grid-template-columns: none; }
+.grid-template-cols-subgrid{ grid-template-columns: subgrid; }
 
-.col-auto{grid-column: auto;}
-.col-span-1{grid-column:auto/span 1;}
-.col-span-2{grid-column:auto/span 2;}
-.col-span-3{grid-column:auto/span 3;}
-.col-span-4{grid-column:auto/span 4;}
-.col-span-5{grid-column:auto/span 5;}
-.col-span-6{grid-column:auto/span 6;}
-.col-span-7{grid-column:auto/span 7;}
-.col-span-8{grid-column:auto/span 8;}
-.col-span-9{grid-column:auto/span 9;}
-.col-span-10{grid-column:auto/span 10;}
-.col-span-11{grid-column:auto/span 11;}
-.col-span-12{grid-column:auto/span 12;}
-.col-span-full{grid-column: 1 / -1;}
+.grid-col-auto{grid-column: auto;}
+.grid-col-span-1{grid-column:auto/span 1;}
+.grid-col-span-2{grid-column:auto/span 2;}
+.grid-col-span-3{grid-column:auto/span 3;}
+.grid-col-span-4{grid-column:auto/span 4;}
+.grid-col-span-5{grid-column:auto/span 5;}
+.grid-col-span-6{grid-column:auto/span 6;}
+.grid-col-span-7{grid-column:auto/span 7;}
+.grid-col-span-8{grid-column:auto/span 8;}
+.grid-col-span-9{grid-column:auto/span 9;}
+.grid-col-span-10{grid-column:auto/span 10;}
+.grid-col-span-11{grid-column:auto/span 11;}
+.grid-col-span-12{grid-column:auto/span 12;}
+.grid-col-span-full{grid-column: 1 / -1;}
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
   @media (min-width: #{$size}){
     // breakpoinst styles
-    .#{$breakpoint}\:grid-cols-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-6{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-7{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-8{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-9{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-10{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-11{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-12{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
-    .#{$breakpoint}\:grid-cols-none{ grid-template-columns: none; }
-    .#{$breakpoint}\:grid-cols-subgrid{ grid-template-columns: subgrid; }
+    .#{$breakpoint}\:grid-template-cols-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-5{ grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-6{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-7{ grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-8{ grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-9{ grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-10{ grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-11{ grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-12{ grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .#{$breakpoint}\:grid-template-cols-none{ grid-template-columns: none; }
+    .#{$breakpoint}\:grid-template-cols-subgrid{ grid-template-columns: subgrid; }
 
-    .#{$breakpoint}\:col-auto{grid-column: auto;}
-    .#{$breakpoint}\:col-span-1{grid-column:auto/span 1;}
-    .#{$breakpoint}\:col-span-2{grid-column:auto/span 2;}
-    .#{$breakpoint}\:col-span-3{grid-column:auto/span 3;}
-    .#{$breakpoint}\:col-span-4{grid-column:auto/span 4;}
-    .#{$breakpoint}\:col-span-5{grid-column:auto/span 5;}
-    .#{$breakpoint}\:col-span-6{grid-column:auto/span 6;}
-    .#{$breakpoint}\:col-span-7{grid-column:auto/span 7;}
-    .#{$breakpoint}\:col-span-8{grid-column:auto/span 8;}
-    .#{$breakpoint}\:col-span-9{grid-column:auto/span 9;}
-    .#{$breakpoint}\:col-span-10{grid-column:auto/span 10;}
-    .#{$breakpoint}\:col-span-11{grid-column:auto/span 11;}
-    .#{$breakpoint}\:col-span-12{grid-column:auto/span 12;}
-    .#{$breakpoint}\:col-span-full{grid-column: 1 / -1;}
+    .#{$breakpoint}\:grid-col-auto{grid-column: auto;}
+    .#{$breakpoint}\:grid-col-span-1{grid-column:auto/span 1;}
+    .#{$breakpoint}\:grid-col-span-2{grid-column:auto/span 2;}
+    .#{$breakpoint}\:grid-col-span-3{grid-column:auto/span 3;}
+    .#{$breakpoint}\:grid-col-span-4{grid-column:auto/span 4;}
+    .#{$breakpoint}\:grid-col-span-5{grid-column:auto/span 5;}
+    .#{$breakpoint}\:grid-col-span-6{grid-column:auto/span 6;}
+    .#{$breakpoint}\:grid-col-span-7{grid-column:auto/span 7;}
+    .#{$breakpoint}\:grid-col-span-8{grid-column:auto/span 8;}
+    .#{$breakpoint}\:grid-col-span-9{grid-column:auto/span 9;}
+    .#{$breakpoint}\:grid-col-span-10{grid-column:auto/span 10;}
+    .#{$breakpoint}\:grid-col-span-11{grid-column:auto/span 11;}
+    .#{$breakpoint}\:grid-col-span-12{grid-column:auto/span 12;}
+    .#{$breakpoint}\:grid-col-span-full{grid-column: 1 / -1;}
     // end breakpoint
   }
 }
