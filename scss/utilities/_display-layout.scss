@@ -87,7 +87,6 @@ $layout-utils: (
 }
 
 
-
 // Breakpointys for only smaller screen sizes
 @each $breakpoint, $size in $breakpoints-only {
   @media (max-width: #{$size}){
@@ -107,9 +106,8 @@ $layout-utils: (
   }
 }
 
-
 /// Show/hide based on theme color
-[data-theme=dark]{
+[data-theme=dark], .darkmode{
   .dark\:d-block{ display:block}
   .dark\:d-inline{ display:inline }
   .dark\:d-inline-block{ display:inline-block }

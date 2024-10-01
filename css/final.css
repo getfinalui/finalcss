@@ -3598,37 +3598,37 @@ dialog::backdrop {
     flex-direction: column;
   }
 }
-[data-theme=dark] .dark\:d-block {
+[data-theme=dark] .dark\:d-block, .darkmode .dark\:d-block {
   display: block;
 }
-[data-theme=dark] .dark\:d-inline {
+[data-theme=dark] .dark\:d-inline, .darkmode .dark\:d-inline {
   display: inline;
 }
-[data-theme=dark] .dark\:d-inline-block {
+[data-theme=dark] .dark\:d-inline-block, .darkmode .dark\:d-inline-block {
   display: inline-block;
 }
-[data-theme=dark] .dark\:d-flex {
+[data-theme=dark] .dark\:d-flex, .darkmode .dark\:d-flex {
   display: flex;
 }
-[data-theme=dark] .dark\:d-inline-flex {
+[data-theme=dark] .dark\:d-inline-flex, .darkmode .dark\:d-inline-flex {
   display: inline-flex;
 }
-[data-theme=dark] .dark\:d-grid {
+[data-theme=dark] .dark\:d-grid, .darkmode .dark\:d-grid {
   display: grid;
 }
-[data-theme=dark] .dark\:d-inline-grid {
+[data-theme=dark] .dark\:d-inline-grid, .darkmode .dark\:d-inline-grid {
   display: inline-grid;
 }
-[data-theme=dark] .dark\:d-none {
+[data-theme=dark] .dark\:d-none, .darkmode .dark\:d-none {
   display: none;
 }
-[data-theme=dark] .dark\:hidden {
+[data-theme=dark] .dark\:hidden, .darkmode .dark\:hidden {
   display: none;
 }
-[data-theme=dark] .dark\:flex-row {
+[data-theme=dark] .dark\:flex-row, .darkmode .dark\:flex-row {
   flex-direction: row;
 }
-[data-theme=dark] .dark\:flex-col {
+[data-theme=dark] .dark\:flex-col, .darkmode .dark\:flex-col {
   flex-direction: column;
 }
 

@@ -13,7 +13,6 @@ $padding_nums:
   .pl-#{$num} { padding-left: #{$num}!important; }
 }
 
-
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
