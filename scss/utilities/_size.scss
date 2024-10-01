@@ -1,110 +1,103 @@
-$size_nums: 
-auto, 0, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px, 50px, 60px, 70px, 80px, 90px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 180px, 190px, 200px, 250px, 300px, 350px, 400px, 450px, 500px;
+$size_map: (
+  "auto": auto,
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  "4": 16px,
+  "5": 20px,
+  "6": 24px,
+  "7": 28px,
+  "8": 32px,
+  "9": 36px,
+  "10": 40px,
+  "11": 50px,
+  "12": 60px,
+  "13": 70px,
+  "14": 80px,
+  "15": 90px,
+  "16": 100px,
+  "17": 125px,
+  "18": 150px,
+  "19": 175px,
+  "20": 200px,
+  "21": 225px,
+  "22": 250px,
+  "23": 275px,
+  "24": 300px,
+  "25": 325px,
+  "26": 350px,
+  "27": 375px,
+  "28": 400px,
+  "29": 450px,
+  "30": 500px,
+  "full": 100%,
+);
+
+$size_map_percent:(
+  "10": 10%,
+  "20": 20%,
+  "30": 30%,
+  "40": 40%,
+  "50": 50%,
+  "60": 60%,
+  "70": 70%,
+  "80": 80%,
+  "90": 90%,
+  "100": 100%,
+);
 
 // * Generates sizes in px, for ex:
-// .w-40px{width:40px}
-// MARGINS in px
+// .w-1{width:4px}
+@each $name, $value in $size_map {
+  .w-#{$name} {  width: #{$value}; }
+  .h-#{$name} { height: #{$value};  }
+  .min-w-#{$name} { min-width: #{$value}; }
+  .max-w-#{$name} { max-width: #{$value}; }  
+  .min-h-#{$name} {  min-height: #{$value};  }
+  .max-h-#{$name} {  max-height: #{$value};  }
+}
 
-@each $num in $size_nums {
-  .w-#{$num} {  width: #{$num}; }
-  .min-w-#{$num} { min-width: #{$num}; }
-  .max-w-#{$num} { max-width: #{$num}; }
-  .h-#{$num} { height: #{$num};  }
-  .min-h-#{$num} {  min-height: #{$num};  }
-  .max-h-#{$num} {  max-height: #{$num};  }
+// * Generates sizes in % percent:
+// .w-10%{width:10%}
+@each $name, $value in $size_map_percent {
+  .w-#{$name}\% { width: #{$value}; }
+  .h-#{$name}\% { height: #{$value}; }
+  .min-w-#{$name}\% { min-width: #{$value}; }
+  .max-w-#{$name}\% { max-width: #{$value}; }
+  .min-h-#{$name}\% { min-height: #{$value}; }
+  .max-h-#{$name}\% { max-height: #{$value}; }
 }
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
   @media (min-width: #{$size}){
+    
     // breakpoinst styles
-    @each $num in $size_nums {
-      .#{$breakpoint}\:w-#{$num} { width: #{$num}; }
-      .#{$breakpoint}\:min-w-#{$num} {  min-width: #{$num}; }
-      .#{$breakpoint}\:max-w-#{$num} {  max-width: #{$num}; }
-      .#{$breakpoint}\:h-#{$num} { height: #{$num}; }
-      .#{$breakpoint}\:min-h-#{$num} {  min-height: #{$num};  }
-      .#{$breakpoint}\:max-h-#{$num} {  max-height: #{$num};  }
+    @each $name, $value in $size_map {
+      .#{$breakpoint}\:w-#{$name} { width: #{$value}; }
+      .#{$breakpoint}\:h-#{$name} { height: #{$value}; }
+      .#{$breakpoint}\:min-w-#{$name} {  min-width: #{$value}; }
+      .#{$breakpoint}\:max-w-#{$name} {  max-width: #{$value}; }
+      .#{$breakpoint}\:min-h-#{$name} {  min-height: #{$value};  }
+      .#{$breakpoint}\:max-h-#{$name} {  max-height: #{$value};  }
+    }
+
+    @each $name, $value in $size_map_percent {
+      .#{$breakpoint}\:w-#{$name}\% { width: #{$value}; }
+      .#{$breakpoint}\:h-#{$name}\% { height: #{$value}; }
+      .#{$breakpoint}\:min-w-#{$name}\% { min-width: #{$value}; }
+      .#{$breakpoint}\:max-w-#{$name}\% { max-width: #{$value}; }
+      .#{$breakpoint}\:min-h-#{$name}\% { min-height: #{$value}; }
+      .#{$breakpoint}\:max-h-#{$name}\% { max-height: #{$value}; }
     }
     // end breakpoint
   }
 }
 
-
-/// Percentage units for width and height
-.w-auto { width: auto; }
-.w-10 { width: 10%; }
-.w-20 { width: 20% ; }
-.w-30 { width: 30%; }
-.w-40 { width: 40%; }
-.w-50 {width: 50%; }
-.w-60 {width: 60%; }
-.w-70 {width: 70%; }
-.w-80 { width: 80%; }
-.w-90 { width: 90%; }
-.w-100, .w-full { width: 100% ; }
-.min-w-100 {min-width: 100%;}
-.max-w-100 {max-width: 100%; }
-.vw-100 { width: 100vw;}
-.min-vw-100 {min-width: 100vw;}
-.h-auto {height: auto;}
-.h-10 { height: 10%;}
-.h-20 { height: 20%;}
-.h-30 { height: 30%;}
-.h-40 { height: 40%;}
-.h-50 { height: 50%;}
-.h-60 { height: 60%;}
-.h-70 { height: 70% ;}
-.h-80 {height: 80%;}
-.h-90 {height: 90%;}
-.h-100, .h-full  {height: 100%;}
-.min-h-100 {min-height: 100%;}
-.max-h-100 {max-height: 100%;}
-.min-vh-100 {min-height: 100vh;}
-.vh-100 { height: 100vh;}
-
-
-
-// Generate responsive utility classes
-// breakpoints can be changed from base-settings.scss
-@each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
-    // breakpoinst styles
-    
-    .#{$breakpoint}\:w-auto { width: auto; }
-    .#{$breakpoint}\:w-10 { width: 10%; }
-    .#{$breakpoint}\:w-20 { width: 20% ; }
-    .#{$breakpoint}\:w-30 { width: 30%; }
-    .#{$breakpoint}\:w-40 { width: 40%; }
-    .#{$breakpoint}\:w-50 {width: 50%; }
-    .#{$breakpoint}\:w-60 {width: 60%; }
-    .#{$breakpoint}\:w-70 {width: 70%; }
-    .#{$breakpoint}\:w-80 { width: 80%; }
-    .#{$breakpoint}\:w-90 { width: 90%; }
-    .#{$breakpoint}\:w-100 { width: 100% ; }
-    .#{$breakpoint}\:w-full { width: 100% ; }
-    .#{$breakpoint}\:min-w-100 {min-width: 100%;}
-    .#{$breakpoint}\:max-w-100 {max-width: 100%; }
-    .#{$breakpoint}\:vw-100 { width: 100vw;}
-    .#{$breakpoint}\:min-vw-100 {min-width: 100vw;}
-    .#{$breakpoint}\:h-auto {height: auto;}
-    .#{$breakpoint}\:h-10 { height: 10%;}
-    .#{$breakpoint}\:h-20 { height: 20%;}
-    .#{$breakpoint}\:h-30 { height: 30%;}
-    .#{$breakpoint}\:h-40 { height: 40%;}
-    .#{$breakpoint}\:h-50 { height: 50%;}
-    .#{$breakpoint}\:h-60 { height: 60%;}
-    .#{$breakpoint}\:h-70 { height: 70% ;}
-    .#{$breakpoint}\:h-80 {height: 80%;}
-    .#{$breakpoint}\:h-90 {height: 90%;}
-    .#{$breakpoint}\:h-100 {height: 100%;}
-    .#{$breakpoint}\:h-full {height: 100%;}
-    .#{$breakpoint}\:min-h-100 {min-height: 100%;}
-    .#{$breakpoint}\:max-h-100 {max-height: 100%;}
-    .#{$breakpoint}\:min-vh-100 {min-height: 100vh;}
-    .#{$breakpoint}\:vh-100 { height: 100vh;}
-
-    // end breakpoint
-  }
-}
+// full viewport sizes (100vh)
+.w-100vw { width: 100vw;}
+.h-100vh { height: 100vh;}
+.min-w-100vw {min-width: 100vw;}
+.min-h-100vh {min-height: 100vh;}

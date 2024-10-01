@@ -1,12 +1,22 @@
+$gap_map:(
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  "4": 16px,
+  "5": 20px,
+  "6": 24px,
+  "7": 28px,
+  "8": 32px,
+  "9": 36px,
+  "10": 40px
+);
 
 
-/// GAP SIZES
-$gap_nums: 0, 0px, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px;
-
-@each $num in $gap_nums {
-  .gap-#{$num} { gap: #{$num}; --flex-gap:#{$num}; }
-  .row-gap-#{$num} {  row-gap: #{$num}; --flex-gap:#{$num}; }
-  .column-gap-#{$num} { column-gap: #{$num}; --flex-gap:#{$num}; }
+@each $name, $value in $gap_map {
+  .gap-#{$name} { gap: #{$value}; --flex-gap:#{$value}; }
+  .row-gap-#{$name} {  row-gap: #{$value}; --flex-gap:#{$value}; }
+  .column-gap-#{$name} { column-gap: #{$value}; --flex-gap:#{$value}; }
 }
 
 // Generate responsive utility classes
@@ -14,10 +24,10 @@ $gap_nums: 0, 0px, 4px, 8px, 12px, 16px, 20px, 24px, 28px, 32px, 36px, 40px;
 @each $breakpoint, $size in $breakpoints {
   @media (min-width: #{$size}){
 
-    @each $num in $gap_nums {
-      .#{$breakpoint}\:gap-#{$num} { gap: #{$num}; --flex-gap:#{$num}; }
-      .#{$breakpoint}\:row-gap-#{$num} {  row-gap: #{$num}; --flex-gap:#{$num}; }
-      .#{$breakpoint}\:column-gap-#{$num} { column-gap: #{$num}; --flex-gap:#{$num}; }
+    @each $name, $value in $gap_map {
+      .#{$breakpoint}\:gap-#{$name} { gap: #{$value}; --flex-gap:#{$value}; }
+      .#{$breakpoint}\:row-gap-#{$name} {  row-gap: #{$value}; --flex-gap:#{$value}; }
+      .#{$breakpoint}\:column-gap-#{$name} { column-gap: #{$value}; --flex-gap:#{$value}; }
     }
    // end breakpoint
    
