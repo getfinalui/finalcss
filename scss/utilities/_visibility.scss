@@ -1,0 +1,37 @@
+.visibility-visible{ visibility: visible;}
+.visibility-hidden{ visibility: hidden;}
+.visibility-collapse{ visibility: collapse;}
+
+.visually-hidden{
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
+    // breakpoinst styles
+    .#{$breakpoint}\:visibility-visible{ visibility: visible;}
+    .#{$breakpoint}\:visibility-hidden{ visibility: hidden;}
+    .#{$breakpoint}\:visibility-collapse{ visibility: collapse;}
+    // end breakpoint
+  }
+}
+
+// Breakpointys for only smaller screen sizes
+@each $breakpoint, $size in $breakpoints-only {
+  @media (max-width: #{$size}){
+    // breakpoinst styles
+    .#{$breakpoint}\:visibility-visible{ visibility: visible;}
+    .#{$breakpoint}\:visibility-hidden{ visibility: hidden;}
+    .#{$breakpoint}\:visibility-collapse{ visibility: collapse;}
+    // end breakpoint
+  }
+}

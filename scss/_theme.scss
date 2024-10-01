@@ -1,4 +1,4 @@
-:root, [data-theme=light] {
+:root, [data-theme=light], .lightmode {
   --black: #000;
   --white: #fff;
   --neutral-0: #fff;
@@ -112,7 +112,7 @@
 
 }
 
-[data-theme=dark] {
+[data-theme=dark], .darkmode {
   --neutral-0: #000;
   --neutral-50: #121525;
   --neutral-100: #151F2F;

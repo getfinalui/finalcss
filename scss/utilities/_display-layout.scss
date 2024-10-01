@@ -88,7 +88,7 @@ $layout-utils: (
 
 
 
-// Breakpointys for maximum screen width for ex: max-sm:flex 
+// Breakpointys for only smaller screen sizes
 @each $breakpoint, $size in $breakpoints-only {
   @media (max-width: #{$size}){
     // breakpoinst styles
