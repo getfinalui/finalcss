@@ -72,51 +72,51 @@
 	</dialog>
 	
 	
-	<header class="bg-neutral-0 py-12px">
-		<div class="container">
-			<div class="d-flex flex-column md:flex-row align-items-center">
-				<div class="mb-20pxpx md:mb-0">
-					<a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
-				</div>
-				<div class="ml-auto d-flex align-items-center">
-					<nav class="nav d-none md:d-flex align-items-center">
-						<a href="index.html" class="nav-link nav-link-sm">Home</a>
-						<a href="docs.html" class="nav-link nav-link-sm">Docs</a>
-						<a href="https://finalui.medium.com" target="_blank"  class="nav-link nav-link-sm">Blog</a>
-						<a href="https://finalui.com" target="_blank" class="nav-link nav-link-sm">Figma UI Kit </a>  
-						<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link nav-link-sm">Github &nearr; </a>
-						<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-sm btn-secondary">Download</a>
-					</nav>
-					<button id="themeSwitcher" onclick="themeswitch()" class="ml-4px btn btn-icon btn-sm btn-neutral">
-						<span class="d-none dark:d-block">
-							<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-							</svg>
-						</span>
-						<span class="dark:d-none">
-							<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-							</svg>
-						</span>
-					</button>
-	
-					<button class="md:d-none ml-8px btn-sm btn-icon btn btn-secondary" onclick="window.mobile_menu.showModal()">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
-							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<header class="bg-neutral-0 py-2 lg:py-3">
+	<div class="container">
+		<div class="d-flex flex-column md:flex-row align-items-center">
+			<div>
+				<a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
+			</div>
+			<div class="ml-auto d-flex align-items-center">
+				<nav class="nav d-none md:d-flex align-items-center">
+					<a href="index.html" class="nav-link nav-link-sm">Home</a>
+					<a href="docs.html" class="nav-link nav-link-sm">Docs</a>
+					<a href="https://finalui.medium.com" target="_blank"  class="nav-link nav-link-sm">Blog</a>
+					<a href="https://finalui.com" target="_blank" class="nav-link nav-link-sm">Figma UI Kit </a>  
+					<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link nav-link-sm">Github &nearr; </a>
+					<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-sm btn-secondary">Download</a>
+				</nav>
+				<button id="themeSwitcher" onclick="themeswitch()" class="ml-1 btn btn-icon btn-sm btn-neutral">
+					<span class="d-none dark:d-block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
-					</button>
-				</div>
+					</span>
+					<span class="dark:d-none">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+					</span>
+				</button>
+
+				<button class="md:d-none ml-2 btn-sm btn-icon btn btn-secondary" onclick="window.mobile_menu.showModal()">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+						<path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
 			</div>
 		</div>
-	</header>
+	</div>
+</header>
 	
 
-<section class="bg-neutral-100  border-top py-40px">
+<section class="bg-neutral-100  border-top py-10">
     <div class="container">
     	<h1 class="text-center text-4xl my-20px">Documentation</h1>
     </div>
 </section>
-<section class="py-40px">	
+<section class="py-10">	
 <div class="container article-wrap text-lg" style="max-width: 920px;">
 
 <h4>File structure</h4>
@@ -268,9 +268,7 @@ Read more about bootstrap's utility classes: <br> <a target="_blank" href="https
 </section>
 
 
-
-
-<section class="py-40px bg-colorful border-t text-lg">
+<section class="py-10 bg-colorful border-t text-lg">
 	<div class="container article text-center" style="max-width: 920px">
 		
 		<h2 class="my-4">Your support matters!</h2>
@@ -292,7 +290,7 @@ Read more about bootstrap's utility classes: <br> <a target="_blank" href="https
 	</div> <!-- container end -->
 </section>
 
-<footer class="bg-base border-t py-40px">
+<footer class="bg-base border-t py-10">
 	<div class="container">
 	  <section class="d-flex lg:justify-content-between">
         <p class="mb-0"> © 2024 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  

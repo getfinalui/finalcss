@@ -60,7 +60,7 @@
 
 
 <dialog id="mobile_menu" class="md:d-none" style="margin-top:12px">
-	<button type="button" class="btn float-right btn-icon btn-plain absolute right-0 top-0 m-4px" onclick="document.getElementById('mobile_menu').close()">
+	<button type="button" class="btn float-right btn-icon btn-plain absolute right-0 top-0 m-1" onclick="document.getElementById('mobile_menu').close()">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 			<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 		</svg> 
@@ -80,10 +80,10 @@
 </dialog>
 
 
-<header class="bg-neutral-0 py-3">
+<header class="bg-neutral-0 py-2 lg:py-3">
 	<div class="container">
 		<div class="d-flex flex-column md:flex-row align-items-center">
-			<div class="mb-3 md:mb-0">
+			<div>
 				<a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
 			</div>
 			<div class="ml-auto d-flex align-items-center">
@@ -156,7 +156,7 @@
 					<p> So, I came with idea of creating something based on follwing criterias:</p>
 				</div>
 				<aside class="lg:col-5 md:col-6">
-					<img src="photo.png" class="max-w-100" alt="">
+					<img src="photo.png" class="max-w-100%" alt="">
 				</aside>
 			</div> <!-- row .//end -->
 		</article>
@@ -216,7 +216,7 @@
 </header>
 
 	<article>
-		<div class="row mb-5 lg:gap-6">
+		<div class="row mb-5">
 			<aside class="md:col-6">
 				<div class="d-grid grid-template-cols-2 gap-5 mb-5">
 					<article class="card">
@@ -224,7 +224,7 @@
 							<p class="mb-2">Total Profit</p>
 							<div class="text-xl font-semibold">$15,230.82</div>
 							<p class="text-sm text-success mb-2">+20.1% from last month</p>
-							<svg width="245" class="w-100" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg width="245" class="w-full" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<rect y="30" width="20" height="25" fill="#6575FF"/>
 								<rect x="150" y="28" width="20" height="27" fill="#6575FF"/>
 								<rect x="25" y="36" width="20" height="19" fill="#6575FF"/>
@@ -241,7 +241,7 @@
 					<article class="card">
 						<div class="card-body">
 							<div class="text-muted">
-								<svg class="float-end size-44px" width="44" height="44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
+								<svg class="float-end" width="44" height="44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
 							    <path d="M19.5 17.5C19.5 18.8807 18.3807 20 17 20C15.6193 20 14.5 18.8807 14.5 17.5C14.5 16.1193 15.6193 15 17 15C18.3807 15 19.5 16.1193 19.5 17.5Z" stroke="currentColor" stroke-width="1.5" />
 							    <path d="M9.5 17.5C9.5 18.8807 8.38071 20 7 20C5.61929 20 4.5 18.8807 4.5 17.5C4.5 16.1193 5.61929 15 7 15C8.38071 15 9.5 16.1193 9.5 17.5Z" stroke="currentColor" stroke-width="1.5" />
 							    <path d="M14.5 17.5H9.5M19.5 17.5H20.2632C20.4831 17.5 20.5931 17.5 20.6855 17.4885C21.3669 17.4036 21.9036 16.8669 21.9885 16.1855C22 16.0931 22 15.9831 22 15.7632V13C22 9.41015 19.0899 6.5 15.5 6.5M15 15.5V7C15 5.58579 15 4.87868 14.5607 4.43934C14.1213 4 13.4142 4 12 4H5C3.58579 4 2.87868 4 2.43934 4.43934C2 4.87868 2 5.58579 2 7V15C2 15.9346 2 16.4019 2.20096 16.75C2.33261 16.978 2.52197 17.1674 2.75 17.299C3.09808 17.5 3.56538 17.5 4.5 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -287,8 +287,8 @@
 
 						<!-- divider-line -->	
 							<div class="relative my-6">
-								<div class="d-flex align-items-center top-0 bottom-0 absolute w-100">
-									<hr class="my-0 w-100">	
+								<div class="d-flex align-items-center top-0 bottom-0 absolute w-100%">
+									<hr class="my-0 w-100%">	
 								</div>
 								<div class="d-flex relative align-items-center justify-content-center">
 									<small class="text-uppercase bg-base text-muted px-2">or continue with</small>
@@ -352,7 +352,7 @@
 				</article>
 
 				<article class="card p-3 mb-5">
-					<nav class="segmented-control w-100">
+					<nav class="segmented-control w-full">
 						<label class="segmented-item">
 							<input class="visually-hidden" checked type="radio" name="my-segment-123">
 							The first
@@ -374,21 +374,23 @@
 
 				<div class="row lg:row-cols-2">
 					<div>
-						<article class="card overflow-hidden lg:h-100 mb-5">
-							<header class="bg-feature-300 position-relative h-120px"> 
-								<a href="#" class="position-absolute bottom-0 end-0 m-2 btn btn-sm btn-neutral">Edit</a>
+						<article class="card overflow-hidden  mb-5 lg:mb-0">
+							
+							<header class="bg-feature-300 relative h-17">
+
+								<a href="#" class="absolute top-0 m-2 btn btn-sm btn-neutral">Edit</a>
 							</header>
 							
 							<div class="text-center">
-								<div style="margin-top:-120px" class="mx-auto w-16 h-16 d-flex align-items-center justify-content-center bg-neutral-0 rounded-circle">
-						 			<img src="https://i.pravatar.cc/300" width="90" height="90" class="rounded-circle w-15 h-15 d-inline-block bg-neutral-400">
+								<div style="margin-top:-60px" class="relative mx-auto w-16 h-16 d-flex align-items-center justify-content-center bg-neutral-0 rounded-circle">
+						 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="90" height="90" class="rounded-circle w-15 h-15 d-inline-block bg-neutral-400">
 						 		</div>
-						 		<div class="my-3 mb-5">
+						 		<div class="my-3 mb-4">
 						 			<h5>Alexandra Heilium</h5>
 						 			<p>Digital Designer UX/UI</p>
 						 		</div>
 						 		<!-- summary -->
-						 		<div class="mx-auto d-flex my-2  mb-7 p-2 row-cols-3 w-80% rounded-sm border">
+						 		<div class="mx-auto d-flex my-2  mb-6 p-1 row-cols-3 w-80% rounded-sm border">
 									<div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
 										<span class="font-bold">259</span>
 										<small class="text-sm">Posts</small>
@@ -409,9 +411,9 @@
 					</div> <!-- col.// -->
 					<div>
 						
-						<article class="card xs-only:mb-5">
+						<article class="card lg:h-full mb-5 lg:mb-0">
 							<div class="bg-neutral-300 rounded-top overflow-hidden">
-								<img class="object-fit-cover w-16 h-16" src="https://picsum.photos/seed/picsum/400/400">
+								<img class="object-fit-cover w-100% h-18" src="https://picsum.photos/seed/picsum/400/400">
 							</div>
 							<div class="card-body">
 							 	<h5>Marvels of Bali</h5>
@@ -420,7 +422,7 @@
 							 	</p>
 							 	<div class="d-flex gap-2 align-items-center">
 							 		<span class="bg-neutral-400 rounded-circle">
-							 			<img src="https://i.pravatar.cc/300" class="w-10 h-10 rounded-circle">
+							 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" class="w-10 h-10 rounded-circle">
 							 		</span>
 							 		<span>
 							 			<p><a href="#">Brooklyn Simmons</a></p>
@@ -538,7 +540,7 @@
 							<p class="text-muted mb-0">jessica1900@example.com</p>
 						</div>
 						<div>
-							<select class="form-select h-32px font-medium">
+							<select class="form-select h-8 font-medium">
 								<option>Can view</option>
 								<option>Can edit</option>
 								<option>Remove</option>
@@ -555,7 +557,7 @@
 							<p class="text-muted mb-0">max990@example.com</p>
 						</div>
 						<div>
-							<select class="form-select h-32px font-medium">
+							<select class="form-select h-8 font-medium">
 								<option>Can view</option>
 								<option>Can edit</option>
 								<option>Remove</option>
@@ -572,7 +574,7 @@
 							<p class="text-muted mb-0">alex_alex@example.com</p>
 						</div>
 						<div>
-							<select class="form-select h-32px font-medium">
+							<select class="form-select h-8 font-medium">
 								<option>Can view</option>
 								<option>Can edit</option>
 								<option>Remove</option>
@@ -589,21 +591,21 @@
 				
 				<ul class="d-grid list-unstyled gap-3">
 				    <li>
-				      <label class="card-check w-100 d-block p-3 rounded">
+				      <label class="card-check w-full d-block p-3 rounded">
 				      	<input class="form-check-input float-end" checked name="choose-delivery" type="radio" value="">
 				        <strong class="fw-semibold">Standart delivery</strong>
 				        <p class="d-block mb-0 text-muted">With support text underneath to add more detail</p>
 				      </label>
 				    </li>
 				    <li>
-				      <label class="card-check w-100 d-block p-3 rounded">
+				      <label class="card-check w-full d-block p-3 rounded">
 				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
 				        <strong class="fw-semibold">One day shopping</strong>
 				        <p class="d-block mb-0 text-muted">Support text underneath to add more detail</p>
 				      </label>
 				    </li>
 				    <li>
-				      <label class="card-check w-100 d-block p-3 rounded">
+				      <label class="card-check w-full d-block p-3 rounded">
 				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
 				        <strong class="fw-semibold">I will pickup myself</strong>
 				        <p class="d-block mb-0 text-muted">Text underneath to add more detail</p>
@@ -656,19 +658,19 @@
 				</div>
 			</div>
 
-			<div class="d-grid lg:grid-template-cols-5 gap-5 w-100">
+			<div class="d-grid lg:grid-template-cols-5 gap-5 w-100%">
 				<article class="lg:grid-col-span-3 card card-body">
 					<!-- input search  -->
-					<div class="d-flex w-100">
+					<div class="d-flex w-full">
 						<!-- search field -->
-						<div class="relative w-100 h-10">
+						<div class="relative w-full h-10">
 							<i class="d-inline-flex absolute ml-2 left-0 center-y">
-								<svg class="w-5 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
+								<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
 									<path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									<path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-							</svg>
+								</svg>
 							</i>
-							<input class="form-control flex-grow-1 rounded-right-0 pl-36px" list="countries" placeholder="Search country" type="text">
+							<input class="form-control flex-grow-1 rounded-right-0 pl-9" list="countries" placeholder="Search country" type="text">
 						</div>
 						<!-- search field .//end -->
 						<button class="rounded-left-0 btn btn-primary">Search</button>
@@ -685,13 +687,13 @@
 					<!-- input field -->
 					<div class="relative">
 						<i class="d-inline-flex absolute ml-2 left-0 center-y">
-							<svg class="size-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							    <path d="M12 16.5V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 							    <path d="M4.26781 18.8447C4.49269 20.515 5.87613 21.8235 7.55966 21.9009C8.97627 21.966 10.4153 22 12 22C13.5847 22 15.0237 21.966 16.4403 21.9009C18.1239 21.8235 19.5073 20.515 19.7322 18.8447C19.879 17.7547 20 16.6376 20 15.5C20 14.3624 19.879 13.2453 19.7322 12.1553C19.5073 10.485 18.1239 9.17649 16.4403 9.09909C15.0237 9.03397 13.5847 9 12 9C10.4153 9 8.97627 9.03397 7.55966 9.09909C5.87613 9.17649 4.49269 10.485 4.26781 12.1553C4.12104 13.2453 4 14.3624 4 15.5C4 16.6376 4.12104 17.7547 4.26781 18.8447Z" stroke="currentColor" stroke-width="2" />
 							    <path d="M7.5 9V6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
 						</i>
-						<input class="form-control w-100 pl-36px" placeholder="Password" type="password">
+						<input class="form-control w-full pl-9" placeholder="Password" type="password">
 						<button class="btn btn-icon btn-sm btn-neutral bg-neutral-200 absolute mr-1 ml-2 right-0 center-y">
 							<svg class="w-5 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
 						    <path d="M21.544 11.045C21.848 11.4713 22 11.6845 22 12C22 12.3155 21.848 12.5287 21.544 12.955C20.1779 14.8706 16.6892 19 12 19C7.31078 19 3.8221 14.8706 2.45604 12.955C2.15201 12.5287 2 12.3155 2 12C2 11.6845 2.15201 11.4713 2.45604 11.045C3.8221 9.12944 7.31078 5 12 5C16.6892 5 20.1779 9.12944 21.544 11.045Z" stroke="currentColor" stroke-width="2" />
@@ -702,9 +704,8 @@
 					<!-- input field .//end -->
 				</article> <!-- card .//end -->
 				<div class="lg:grid-col-span-2">
-					<nav class="dropdown-menu lg:w-100 w-200px">
+					<nav class="dropdown-menu lg:w-full w-20">
 							<a class="dropdown-item" href="">Details</a>
-							<a class="dropdown-item" href="">Archive</a>
 							<a class="dropdown-item" href="">Edit</a>
 							<hr>
 							<a class="dropdown-item text-danger" href="">Delete</a>
@@ -878,7 +879,7 @@
 </section>
 <!-- ============== SECTION CONTENT END// ============== -->
 
-<section class="pb-10 pt-100px border-top">
+<section class="pb-10 pt-10 border-top">
 	<div class="container" style="max-width: 920px">
 		
 		<article class="article-wrap text-lg">

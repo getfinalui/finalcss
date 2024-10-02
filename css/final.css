@@ -1832,7 +1832,7 @@ dialog::backdrop {
 }
 
 .table-hover > tbody > tr:hover > * {
-  background-color: var(--neutral-50);
+  background-color: var(--neutral-100);
 }
 
 .table-responsive {
@@ -2252,7 +2252,7 @@ dialog::backdrop {
   cursor: not-allowed;
 }
 
-.segmented-control.w-100 .segmented-item {
+.segmented-control.w-full .segmented-item, .segmented-control.w-100\% .segmented-item {
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -6615,17 +6615,17 @@ h1 {
   transform: translateY(-50%) !important;
 }
 
-.translate-center-y {
+.center-y {
   top: 50%;
   transform: translateY(-50%) !important;
 }
 
-.translate-center-x {
+.center-x {
   left: 50%;
   transform: translateX(-50%) !important;
 }
 
-.translate-center {
+.center-xy {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) !important;

@@ -47,7 +47,7 @@
   }
 }
 
-.segmented-control.w-100{
+.segmented-control.w-full, .segmented-control.w-100\%{
   .segmented-item{
     flex-grow: 1;
     flex-basis:0;

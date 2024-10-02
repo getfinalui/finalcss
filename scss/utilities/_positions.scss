@@ -89,6 +89,6 @@ $position_map_percent:(
 .-translate-x-50\% { transform: translateX(-50%)!important;}
 .-translate-y-50\% {  transform: translateY(-50%)!important;}
 
-.translate-center-y{  top:50%; transform: translateY(-50%)!important;}
-.translate-center-x{ left:50%; transform: translateX(-50%)!important;}
-.translate-center{ top:50%; left:50%; transform: translateY(-50%)!important; transform: translateX(-50%)!important;}
+.center-y{  top:50%; transform: translateY(-50%)!important;}
+.center-x{ left:50%; transform: translateX(-50%)!important;}
+.center-xy{ top:50%; left:50%; transform: translateY(-50%)!important; transform: translateX(-50%)!important;}
