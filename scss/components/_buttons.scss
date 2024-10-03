@@ -64,6 +64,8 @@
 }
 
 .btn-sm {
+  padding-left: 8px; 
+  padding-right: 8px;
   height: var(--btn-size-sm)!important;
   font-size: var(--btn-font-size-sm)!important;
 }
@@ -148,12 +150,11 @@
   --btn-border-hover-color: transparent;
 }
 
-.btn-white{
-  --btn-bg: white;
-  --btn-bg-hover: #ddd;
-  --btn-text-color: black;
-  --btn-border-hover-color: transparent;
+.btn-outline{
+  --btn-bg: transparent;
+  --btn-bg-hover: rgba(110, 110, 130, 0.1);
+  --btn-text-color: var(--text-color-primary);
+  --btn-border-color: var(--primary-500);
+  --btn-border-hover-color: var(--primary-600);;
 }
-
-
 

@@ -19,6 +19,8 @@
   --neutral-800: #1e293b;
   --neutral-900: #0f172a;
   --neutral-1000: #000;
+  --neutral-1000-alpha: rgba(0,0,0,.1);
+  --neutral-0-alpha: rgba(255,255,255,.1);
   --primary-100: #dbeafe;
   --primary-200: #bfdbfe;
   --primary-300: #93c5fd;
@@ -93,7 +95,7 @@
   --text-color-secondary: var(--neutral-700);
   --text-color-muted: var(--neutral-500);
   --text-color-invert: var(--neutral-0);
-  --text-color-primary: var(--primary-500);
+  --text-color-primary: var(--primary-600);
   --text-color-warning: var(--warning-500);
   --text-color-danger: var(--danger-500);
   --text-color-success: var(--success-500);
@@ -116,6 +118,8 @@
   --neutral-800: #e2e8f0;
   --neutral-900: #f1f5f9;
   --neutral-1000: #fff;
+  --neutral-1000-alpha: rgba(255,255,255,.1);
+  --neutral-0-alpha: rgba(0,0,0,.1);
   --primary-100: #091253;
   --primary-200: #0C186E;
   --primary-300: #1e3a8a;
@@ -181,7 +185,7 @@
   --text-color-secondary: var(--neutral-700);
   --text-color-muted: var(--neutral-600);
   --text-color-invert: var(--neutral-0);
-  --text-color-primary: var(--primary-700);
+  --text-color-primary: var(--primary-600);
   --text-color-warning: var(--warning-700);
   --text-color-danger: var(--danger-700);
   --text-color-success: var(--success-700);
@@ -352,7 +356,7 @@ caption {
 }
 
 th {
-  font-weight: 400;
+  font-weight: 500;
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
@@ -1636,6 +1640,8 @@ progress {
 }
 
 .btn-sm {
+  padding-left: 8px;
+  padding-right: 8px;
   height: var(--btn-size-sm) !important;
   font-size: var(--btn-font-size-sm) !important;
 }
@@ -1729,11 +1735,12 @@ progress {
   --btn-border-hover-color: transparent;
 }
 
-.btn-white {
-  --btn-bg: white;
-  --btn-bg-hover: #ddd;
-  --btn-text-color: black;
-  --btn-border-hover-color: transparent;
+.btn-outline {
+  --btn-bg: transparent;
+  --btn-bg-hover: rgba(110, 110, 130, 0.1);
+  --btn-text-color: var(--text-color-primary);
+  --btn-border-color: var(--primary-500);
+  --btn-border-hover-color: var(--primary-600);
 }
 
 .card {
@@ -1796,7 +1803,7 @@ dialog::backdrop {
 }
 .table > thead {
   vertical-align: bottom;
-  background-color: var(--bg-color-secondary);
+  background-color: var(--neutral-100);
 }
 
 .table > tbody > tr:has(input[type=checkbox]:checked) > * {
@@ -1823,12 +1830,8 @@ dialog::backdrop {
   background-color: var(--neutral-100);
 }
 
-.table-striped-columns > :not(caption) > tr > :nth-child(even) {
+.table-striped-cols > :not(caption) > tr > :nth-child(even) {
   background-color: var(--neutral-100);
-}
-
-.table-active {
-  background-color: var(--primary-200);
 }
 
 .table-hover > tbody > tr:hover > * {
@@ -2111,7 +2114,7 @@ dialog::backdrop {
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
   color: var(--text-color-base);
-  background-color: var(--neutral-100);
+  background-color: var(--neutral-1000-alpha);
 }
 .nav-link:active {
   background-color: var(--neutral-300);
@@ -2137,7 +2140,7 @@ dialog::backdrop {
 
 .nav-vertical {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
 }
 .nav-vertical .nav-link {
   width: 100%;

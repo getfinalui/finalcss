@@ -23,7 +23,7 @@
   &:focus {
     text-decoration:none;
     color: var(--text-color-base);
-    background-color: var(--neutral-100);
+    background-color: var(--neutral-1000-alpha);
   }
   &:active {
     background-color: var(--neutral-300);
@@ -57,7 +57,7 @@
 //
 .nav-vertical{
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   .nav-link{width: 100%;}
 }
 

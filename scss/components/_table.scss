@@ -17,7 +17,7 @@
   }
   > thead {
     vertical-align: bottom;
-    background-color:var(--bg-color-secondary);
+    background-color:var(--neutral-100);
   }
 
 }
@@ -44,12 +44,8 @@
   background-color:var(--neutral-100);
 }
 
-.table-striped-columns > :not(caption) > tr > :nth-child(even) {
+.table-striped-cols > :not(caption) > tr > :nth-child(even) {
   background-color:var(--neutral-100);
-}
-
-.table-active {
-  background-color:var(--primary-200);
 }
 
 .table-hover > tbody > tr:hover > * {
