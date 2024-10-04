@@ -25,7 +25,7 @@
   margin-right: calc( -0.5 * var(--flex-gap));
 }
 .row > * { 
-  flex:0 0 auto;
+  flex: 0 0 auto;
   max-width: 100%;
   width: 100%;
   padding-right: calc(var(--flex-gap)* 0.5);
@@ -60,7 +60,7 @@
 
 
 //////////// ROW and COLS separately 
-.col{ flex: 1 0 0%; }
+.col{ flex: 0 0 auto; }
 .col-auto{width: auto;}
 .col-1{width: 8.33333333%;}
 .col-2{width: 16.66666667%;}
