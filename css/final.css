@@ -4,9 +4,19 @@
  * Copyright 2024 The Finalui Authod Vosidiy M. 
  * Licensed under MIT
  */
-:root, [data-theme=light], .lightmode {
+:root, [data-theme=light], .lightmode, .theme-static {
   --black: #000;
   --white: #fff;
+  --gray-50: #f5f7fa;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #A3B0C2;
+  --gray-500: #6B7C94;
+  --gray-600: #52637A;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
   --neutral-0: #fff;
   --neutral-50: #f5f7fa;
   --neutral-100: #f1f5f9;
@@ -30,15 +40,15 @@
   --primary-700: #1d4ed8;
   --primary-800: #1e40af;
   --primary-900: #1e3a8a;
-  --primary-100-const: #dbeafe;
-  --primary-200-const: #bfdbfe;
-  --primary-300-const: #93c5fd;
-  --primary-400-const: #60a5fa;
-  --primary-500-const: #3b82f6;
-  --primary-600-const: #2563eb;
-  --primary-700-const: #1d4ed8;
-  --primary-800-const: #1e40af;
-  --primary-900-const: #1e3a8a;
+  --primary-100-static: #dbeafe;
+  --primary-200-static: #bfdbfe;
+  --primary-300-static: #93c5fd;
+  --primary-400-static: #60a5fa;
+  --primary-500-static: #3b82f6;
+  --primary-600-static: #2563eb;
+  --primary-700-static: #1d4ed8;
+  --primary-800-static: #1e40af;
+  --primary-900-static: #1e3a8a;
   --warning-100: #ffedd5;
   --warning-200: #fed7aa;
   --warning-300: #fdba74;
@@ -92,8 +102,8 @@
   --border-color-base: var(--neutral-300);
   --border-color-strong: var(--neutral-400);
   --text-color-base: var(--neutral-900);
-  --text-color-secondary: var(--neutral-700);
-  --text-color-muted: var(--neutral-500);
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
   --text-color-invert: var(--neutral-0);
   --text-color-primary: var(--primary-600);
   --text-color-warning: var(--warning-500);
@@ -182,8 +192,8 @@
   --border-color-base: var(--neutral-200);
   --border-color-strong: var(--neutral-400);
   --text-color-base: var(--neutral-1000);
-  --text-color-secondary: var(--neutral-700);
-  --text-color-muted: var(--neutral-600);
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
   --text-color-invert: var(--neutral-0);
   --text-color-primary: var(--primary-600);
   --text-color-warning: var(--warning-700);
@@ -191,6 +201,11 @@
   --text-color-success: var(--success-700);
   --text-color-info: var(--info-700);
   --text-color-feature: var(--feature-700);
+}
+
+.theme-static {
+  color: var(--text-color-base);
+  background-color: var(--bg-color-base);
 }
 
 html {
@@ -541,19 +556,25 @@ progress {
 
 .row {
   --flex-gap: 20px;
+  --flex-gap-x: 20px;
+  --flex-gap-y: 20px;
   gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc( -0.5 * var(--flex-gap));
-  margin-right: calc( -0.5 * var(--flex-gap));
+  margin-left: calc(-0.5 * var(--flex-gap-x));
+  margin-right: calc(-0.5 * var(--flex-gap-x));
+  margin-top: calc(-1 * var(--flex-gap-y));
 }
 
 .row > * {
   flex: 0 0 auto;
   max-width: 100%;
   width: 100%;
-  padding-right: calc(var(--flex-gap)* 0.5);
-  padding-left: calc(var(--flex-gap)* 0.5);
+  padding-right: calc(var(--flex-gap-x) * 0.5);
+  padding-left: calc(var(--flex-gap-x) * 0.5);
+  margin-top: var(--flex-gap-y);
 }
 
 .row-cols-auto > * {
@@ -1596,8 +1617,8 @@ progress {
   --btn-border-color: transparent;
   --btn-border-radius: 8px;
   --btn-size-sm: 32px;
-  --btn-size-md: 40px;
-  --btn-size-lg: 48px;
+  --btn-size-md: 38px;
+  --btn-size-lg: 44px;
   --btn-text-color: inherit;
   display: inline-flex;
   flex-shrink: 0;
@@ -1630,7 +1651,7 @@ progress {
 }
 .btn:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(64, 64, 64, 0.2) inset;
+  box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
 }
 
 .btn-lg {
@@ -1677,15 +1698,15 @@ progress {
   --btn-bg-hover: var(--neutral-800);
   --btn-text-color: var(--text-color-invert);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-primary {
-  --btn-bg: var(--primary-600-const);
-  --btn-bg-hover: var(--primary-700-const);
+  --btn-bg: var(--primary-600-static);
+  --btn-bg-hover: var(--primary-700-static);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-danger {
@@ -1693,7 +1714,7 @@ progress {
   --btn-bg-hover: var(--danger-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-secondary {
@@ -1702,7 +1723,7 @@ progress {
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -2px 0 0 rgba(64, 64, 64, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
 }
 
 .btn-danger-soft {
@@ -1711,7 +1732,7 @@ progress {
   --btn-text-color: var(--text-color-danger);
   --btn-border-color: var(--border-color-base);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow: 0 -2px 0 0 rgba(64, 64, 64, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
 }
 
 .btn-neutral {
@@ -1850,7 +1871,7 @@ dialog::backdrop {
 .form-control {
   display: block;
   width: 100%;
-  height: 40px;
+  height: 38px;
   padding: 0.36rem 0.6rem;
   font-weight: 400;
   line-height: 1.2;
@@ -2103,8 +2124,8 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0.5rem 0.8rem;
-  height: 40px;
+  padding: 0.4rem 0.8rem;
+  height: 38px;
   font-size: inherit;
   font-weight: 500;
   text-decoration: none;
@@ -2217,8 +2238,8 @@ dialog::backdrop {
   display: inline-flex;
   width: auto;
   align-items: center;
-  padding: 2px;
-  height: 40px;
+  padding: 1px;
+  height: 38px;
   border-radius: 8px;
 }
 .segmented-control .segmented-item {
@@ -3862,167 +3883,178 @@ dialog::backdrop {
 }
 .gap-0 {
   gap: 0;
-  --flex-gap:0;
+  --flex-gap-x:0;
+  --flex-gap-y:0;
 }
 
 .row-gap-0 {
   row-gap: 0;
-  --flex-gap:0;
+  --flex-gap-x:0;
 }
 
 .column-gap-0 {
   column-gap: 0;
-  --flex-gap:0;
+  --flex-gap-y:0;
 }
 
 .gap-1 {
   gap: 4px;
-  --flex-gap:4px;
+  --flex-gap-x:4px;
+  --flex-gap-y:4px;
 }
 
 .row-gap-1 {
   row-gap: 4px;
-  --flex-gap:4px;
+  --flex-gap-x:4px;
 }
 
 .column-gap-1 {
   column-gap: 4px;
-  --flex-gap:4px;
+  --flex-gap-y:4px;
 }
 
 .gap-2 {
   gap: 8px;
-  --flex-gap:8px;
+  --flex-gap-x:8px;
+  --flex-gap-y:8px;
 }
 
 .row-gap-2 {
   row-gap: 8px;
-  --flex-gap:8px;
+  --flex-gap-x:8px;
 }
 
 .column-gap-2 {
   column-gap: 8px;
-  --flex-gap:8px;
+  --flex-gap-y:8px;
 }
 
 .gap-3 {
   gap: 12px;
-  --flex-gap:12px;
+  --flex-gap-x:12px;
+  --flex-gap-y:12px;
 }
 
 .row-gap-3 {
   row-gap: 12px;
-  --flex-gap:12px;
+  --flex-gap-x:12px;
 }
 
 .column-gap-3 {
   column-gap: 12px;
-  --flex-gap:12px;
+  --flex-gap-y:12px;
 }
 
 .gap-4 {
   gap: 16px;
-  --flex-gap:16px;
+  --flex-gap-x:16px;
+  --flex-gap-y:16px;
 }
 
 .row-gap-4 {
   row-gap: 16px;
-  --flex-gap:16px;
+  --flex-gap-x:16px;
 }
 
 .column-gap-4 {
   column-gap: 16px;
-  --flex-gap:16px;
+  --flex-gap-y:16px;
 }
 
 .gap-5 {
   gap: 20px;
-  --flex-gap:20px;
+  --flex-gap-x:20px;
+  --flex-gap-y:20px;
 }
 
 .row-gap-5 {
   row-gap: 20px;
-  --flex-gap:20px;
+  --flex-gap-x:20px;
 }
 
 .column-gap-5 {
   column-gap: 20px;
-  --flex-gap:20px;
+  --flex-gap-y:20px;
 }
 
 .gap-6 {
   gap: 24px;
-  --flex-gap:24px;
+  --flex-gap-x:24px;
+  --flex-gap-y:24px;
 }
 
 .row-gap-6 {
   row-gap: 24px;
-  --flex-gap:24px;
+  --flex-gap-x:24px;
 }
 
 .column-gap-6 {
   column-gap: 24px;
-  --flex-gap:24px;
+  --flex-gap-y:24px;
 }
 
 .gap-7 {
   gap: 28px;
-  --flex-gap:28px;
+  --flex-gap-x:28px;
+  --flex-gap-y:28px;
 }
 
 .row-gap-7 {
   row-gap: 28px;
-  --flex-gap:28px;
+  --flex-gap-x:28px;
 }
 
 .column-gap-7 {
   column-gap: 28px;
-  --flex-gap:28px;
+  --flex-gap-y:28px;
 }
 
 .gap-8 {
   gap: 32px;
-  --flex-gap:32px;
+  --flex-gap-x:32px;
+  --flex-gap-y:32px;
 }
 
 .row-gap-8 {
   row-gap: 32px;
-  --flex-gap:32px;
+  --flex-gap-x:32px;
 }
 
 .column-gap-8 {
   column-gap: 32px;
-  --flex-gap:32px;
+  --flex-gap-y:32px;
 }
 
 .gap-9 {
   gap: 36px;
-  --flex-gap:36px;
+  --flex-gap-x:36px;
+  --flex-gap-y:36px;
 }
 
 .row-gap-9 {
   row-gap: 36px;
-  --flex-gap:36px;
+  --flex-gap-x:36px;
 }
 
 .column-gap-9 {
   column-gap: 36px;
-  --flex-gap:36px;
+  --flex-gap-y:36px;
 }
 
 .gap-10 {
   gap: 40px;
-  --flex-gap:40px;
+  --flex-gap-x:40px;
+  --flex-gap-y:40px;
 }
 
 .row-gap-10 {
   row-gap: 40px;
-  --flex-gap:40px;
+  --flex-gap-x:40px;
 }
 
 .column-gap-10 {
   column-gap: 40px;
-  --flex-gap:40px;
+  --flex-gap-y:40px;
 }
 
 @media (min-width: 640px) {
@@ -5494,7 +5526,51 @@ h1 {
   background-color: var(--neutral-1000);
 }
 
+.bg-gray-50 {
+  background-color: var(--gray-50);
+}
+
+.bg-gray-100 {
+  background-color: var(--gray-100);
+}
+
+.bg-gray-200 {
+  background-color: var(--gray-200);
+}
+
+.bg-gray-300 {
+  background-color: var(--gray-300);
+}
+
+.bg-gray-400 {
+  background-color: var(--gray-400);
+}
+
+.bg-gray-500 {
+  background-color: var(--gray-500);
+}
+
+.bg-gray-600 {
+  background-color: var(--gray-600);
+}
+
+.bg-gray-700 {
+  background-color: var(--gray-700);
+}
+
+.bg-gray-800 {
+  background-color: var(--gray-800);
+}
+
+.bg-gray-900 {
+  background-color: var(--gray-900);
+}
+
 .group:hover .group-hover\:bg-neutral-0 {
+  background-color: var(--neutral-0);
+}
+
+.hover\:bg-neutral-0:hover {
   background-color: var(--neutral-0);
 }
 
@@ -5502,7 +5578,15 @@ h1 {
   background-color: var(--neutral-50);
 }
 
+.hover\:bg-neutral-50:hover {
+  background-color: var(--neutral-50);
+}
+
 .group:hover .group-hover\:bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+
+.hover\:bg-neutral-100:hover {
   background-color: var(--neutral-100);
 }
 
@@ -5510,7 +5594,15 @@ h1 {
   background-color: var(--neutral-200);
 }
 
+.hover\:bg-neutral-200:hover {
+  background-color: var(--neutral-200);
+}
+
 .group:hover .group-hover\:bg-neutral-300 {
+  background-color: var(--neutral-300);
+}
+
+.hover\:bg-neutral-300:hover {
   background-color: var(--neutral-300);
 }
 
@@ -5518,7 +5610,15 @@ h1 {
   background-color: var(--neutral-400);
 }
 
+.hover\:bg-neutral-400:hover {
+  background-color: var(--neutral-400);
+}
+
 .group:hover .group-hover\:bg-neutral-500 {
+  background-color: var(--neutral-500);
+}
+
+.hover\:bg-neutral-500:hover {
   background-color: var(--neutral-500);
 }
 
@@ -5526,7 +5626,15 @@ h1 {
   background-color: var(--neutral-600);
 }
 
+.hover\:bg-neutral-600:hover {
+  background-color: var(--neutral-600);
+}
+
 .group:hover .group-hover\:bg-neutral-700 {
+  background-color: var(--neutral-700);
+}
+
+.hover\:bg-neutral-700:hover {
   background-color: var(--neutral-700);
 }
 
@@ -5534,56 +5642,20 @@ h1 {
   background-color: var(--neutral-800);
 }
 
+.hover\:bg-neutral-800:hover {
+  background-color: var(--neutral-800);
+}
+
 .group:hover .group-hover\:bg-neutral-900 {
+  background-color: var(--neutral-900);
+}
+
+.hover\:bg-neutral-900:hover {
   background-color: var(--neutral-900);
 }
 
 .group:hover .group-hover\:bg-neutral-1000 {
   background-color: var(--neutral-1000);
-}
-
-.hover\:bg-neutral-0:hover {
-  background-color: var(--neutral-0);
-}
-
-.hover\:bg-neutral-50:hover {
-  background-color: var(--neutral-50);
-}
-
-.hover\:bg-neutral-100:hover {
-  background-color: var(--neutral-100);
-}
-
-.hover\:bg-neutral-200:hover {
-  background-color: var(--neutral-200);
-}
-
-.hover\:bg-neutral-300:hover {
-  background-color: var(--neutral-300);
-}
-
-.hover\:bg-neutral-400:hover {
-  background-color: var(--neutral-400);
-}
-
-.hover\:bg-neutral-500:hover {
-  background-color: var(--neutral-500);
-}
-
-.hover\:bg-neutral-600:hover {
-  background-color: var(--neutral-600);
-}
-
-.hover\:bg-neutral-700:hover {
-  background-color: var(--neutral-700);
-}
-
-.hover\:bg-neutral-800:hover {
-  background-color: var(--neutral-800);
-}
-
-.hover\:bg-neutral-900:hover {
-  background-color: var(--neutral-900);
 }
 
 .hover\:bg-neutral-1000:hover {
@@ -6249,13 +6321,13 @@ h1 {
 }
 
 .bg-aurora {
-  background-color: red;
-  background-image: radial-gradient(at 40% 20%, #ffb87a 0px, transparent 50%), radial-gradient(at 80% 0%, #1fddff 0px, transparent 50%), radial-gradient(at 0% 50%, #ffdbde 0px, transparent 50%), radial-gradient(at 80% 50%, #ff85ad 0px, transparent 50%), radial-gradient(at 0% 100%, #ffb58a 0px, transparent 50%), radial-gradient(at 80% 100%, #6b66ff 0px, transparent 50%), radial-gradient(at 0% 0%, #ff85a7 0px, transparent 50%);
+  background-color: hsl(0deg, 100%, 50%);
+  background-image: radial-gradient(at 40% 20%, hsl(28deg, 100%, 74%) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(189deg, 100%, 56%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(355deg, 100%, 93%) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(340deg, 100%, 76%) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(22deg, 100%, 77%) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(242deg, 100%, 70%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(343deg, 100%, 76%) 0px, transparent 50%);
 }
 
 .bg-mix {
   background-color: #ffd899;
-  background-image: radial-gradient(at 98% 75%, #62c2fd 0px, transparent 50%), radial-gradient(at 47% 73%, #95eeee 0px, transparent 50%), radial-gradient(at 45% 16%, #84f43e 0px, transparent 50%), radial-gradient(at 31% 64%, #c1e95d 0px, transparent 50%), radial-gradient(at 63% 93%, #854cf0 0px, transparent 50%), radial-gradient(at 67% 78%, #da5a58 0px, transparent 50%), radial-gradient(at 81% 92%, #e6f2a1 0px, transparent 50%);
+  background-image: radial-gradient(at 98% 75%, hsl(203deg, 98%, 69%) 0px, transparent 50%), radial-gradient(at 47% 73%, hsl(180deg, 73%, 76%) 0px, transparent 50%), radial-gradient(at 45% 16%, hsl(97deg, 89%, 60%) 0px, transparent 50%), radial-gradient(at 31% 64%, hsl(77deg, 76%, 64%) 0px, transparent 50%), radial-gradient(at 63% 93%, hsl(261deg, 85%, 62%) 0px, transparent 50%), radial-gradient(at 67% 78%, hsl(1deg, 64%, 60%) 0px, transparent 50%), radial-gradient(at 81% 92%, hsl(69deg, 76%, 79%) 0px, transparent 50%);
 }
 
 .top-0 {

@@ -14,9 +14,9 @@ $gap_map:(
 
 
 @each $name, $value in $gap_map {
-  .gap-#{$name} { gap: #{$value}; --flex-gap:#{$value}; }
-  .row-gap-#{$name} {  row-gap: #{$value}; --flex-gap:#{$value}; }
-  .column-gap-#{$name} { column-gap: #{$value}; --flex-gap:#{$value}; }
+  .gap-#{$name} { gap: #{$value}; --flex-gap-x:#{$value}; --flex-gap-y:#{$value};  }
+  .row-gap-#{$name} {  row-gap: #{$value}; --flex-gap-x:#{$value}; }
+  .column-gap-#{$name} { column-gap: #{$value}; --flex-gap-y:#{$value}; }
 }
 
 // Generate responsive utility classes

@@ -13,8 +13,8 @@
   --btn-border-color: transparent;
   --btn-border-radius: 8px;
   --btn-size-sm: 32px;
-  --btn-size-md: 40px;
-  --btn-size-lg: 48px;
+  --btn-size-md: 38px;
+  --btn-size-lg: 44px;
   --btn-text-color: inherit;
   // scss-docs-end btn-css-vars
   
@@ -101,8 +101,8 @@
 }
 
 .btn-primary{
-  --btn-bg: var(--primary-600-const);
-  --btn-bg-hover: var(--primary-700-const);
+  --btn-bg: var(--primary-600-static);
+  --btn-bg-hover: var(--primary-700-static);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
   box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;

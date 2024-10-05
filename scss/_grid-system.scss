@@ -16,20 +16,27 @@
 .container-lg{max-width: $screen-lg;} // laptop 1280
 .container{ max-width: $screen-xl; } // large screen 1440
 
+
 .row {
-  --flex-gap: 20px; // default gap
+  --flex-gap: 20px; // default gap // gap.scss file
+  --flex-gap-x: 20px; // default gap // gap.scss file
+  --flex-gap-y: 20px; // default gap // gap.scss file
   gap:0!important; // css gap breaks flex column, it is good for css grid only
+  row-gap:0!important; // css gap breaks flex column, it is good for css grid only
+  column-gap: 0!important; // css gap breaks flex column, it is good for css grid only
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc( -0.5 * var(--flex-gap));
-  margin-right: calc( -0.5 * var(--flex-gap));
+  margin-left: calc( -0.5 * var(--flex-gap-x));
+  margin-right: calc( -0.5 * var(--flex-gap-x));
+  margin-top: calc(-1 * var(--flex-gap-y));
 }
 .row > * { 
   flex: 0 0 auto;
   max-width: 100%;
   width: 100%;
-  padding-right: calc(var(--flex-gap)* 0.5);
-  padding-left: calc(var(--flex-gap)* 0.5);
+  padding-right: calc(var(--flex-gap-x)* 0.5);
+  padding-left: calc(var(--flex-gap-x)* 0.5);
+  margin-top: var(--flex-gap-y);
 }
 
 //////////// ROW COLS
