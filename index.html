@@ -17,8 +17,19 @@
 		.bg-colorful{
 			background-image: linear-gradient(180deg, #ffffff03, var(--bg-color-base) 85%), radial-gradient(ellipse at top left, #0d6efd80, transparent 50%), radial-gradient(ellipse at top right, #ffe48480, transparent 50%), radial-gradient(ellipse at center right, #712cf980, transparent 50%), radial-gradient(ellipse at center left, #d6338480, transparent 50%);
 		}
-
 	</style>
+
+	<script>
+		// apply theme based attribute before loading
+		 const htmlElement = document.documentElement;
+			document.addEventListener('DOMContentLoaded', () => {		
+				// Check localStorage for saved theme
+				const savedTheme = localStorage.getItem('data-theme');
+				if (savedTheme) {
+						htmlElement.setAttribute('data-theme', savedTheme);
+				}
+			});
+	</script>
 
 	<!-- FinalCSS -->
 	<link href="css/final.css" rel="stylesheet" type="text/css" />
