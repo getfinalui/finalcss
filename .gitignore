@@ -3,8 +3,3 @@ CNAME
 /scss/.DS_Store
 .DS_Store
 .vscode/
-site/
-docs.html
-index.html
-prepros.config
-package.json
