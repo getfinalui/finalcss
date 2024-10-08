@@ -3,7 +3,4 @@ CNAME
 /scss/.DS_Store
 .DS_Store
 .vscode/
-index.html
-docs.html
 package.json
-site/
