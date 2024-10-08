@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="description" content="Final CSS (finalcss) is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta property="og:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <meta name="author" content="Vosidiy M">
+
+  <title>Final CSS - Example data table (finalcss.com)</title>
+
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', () => {
+		const htmlElement = document.documentElement;
+		const themeSwitcher = document.getElementById('themeSwitcher');
+		// Check localStorage for saved theme
+		const savedTheme = localStorage.getItem('data-theme');
+		if (savedTheme) {
+		    htmlElement.setAttribute('data-theme', savedTheme);
+		}
+		themeSwitcher.addEventListener('click', () => {
+		    const currentTheme = htmlElement.getAttribute('data-theme');
+		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    // Set the new theme on the body element
+		    htmlElement.setAttribute('data-theme', newTheme);          
+		    // Save the new theme in localStorage
+		    localStorage.setItem('data-theme', newTheme);
+		});
+	});
+
+	</script>
+
+
+
+<!-- FinalCSS -->
+<link href="css/final.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class="bg-base">
+
+
+<header class="bg-base py-2 border-b">
+	<div class="container">
+		<div class="d-flex flex-column flex-md-row align-items-center">
+			<div class="mb-3 md:mb-0">
+				<a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
+			</div>
+			<nav class="nav ml-auto">
+        <a href="#" class="nav-link">Menu one</a>
+				<a href="#" class="nav-link">Menu two</a>
+				<a href="#" class="nav-link">Menu three</a>
+				
+				<button id="themeSwitcher" class="btn btn-icon btn-secondary ms-2">
+					<span class="d-none dark:d-block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+						</svg>
+					</span>
+					<span class="dark:d-none">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+					</span>
+				</button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<section class="py-10 bg-lower">
+	<div class="container">
+		
+	  <header class="mb-10">
+      <h1 class="text-center">Sample landing</h1>
+      <p class="text-center text-xl max-w-60%">
+        Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
+      </p>
+    </header>
+
+    <div class="row row-cols-1 sm:row-cols-2 md:row-cols-3 lg:row-cols-4 gap-6">
+        <div class="col">
+          <article class="card">
+            <div class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-20" src="https://picsum.photos/id/4/400/400">
+			      </div>
+            <div class="card-body">
+              <time class="text-secondary mb-2 d-block">Today</time>
+              <h4>Breaking news about technology</h4>
+              <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+
+        <div class="col">
+          <article class="card">
+            <div class="bg-neutral-300 rounded-top overflow-hidden">
+				<img class="object-fit-cover w-100% h-20" src="https://picsum.photos/id/2/400/400">
+			</div>
+            <div class="card-body">
+              <time class="text-secondary mb-2 d-block">Yesterday</time>
+              <h4>Breaking news about technology</h4>
+              <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+
+        <div class="col">
+          <article class="card">
+            <div class="bg-neutral-300 rounded-top overflow-hidden">
+				<img class="object-fit-cover w-100% h-20" src="https://picsum.photos/id/1/400/400">
+			</div>
+            <div class="card-body">
+              <time class="text-secondary mb-2 d-block">Yesterday</time>
+              <h4>Why the world is changing so quickly</h4>
+              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+
+        <div class="col">
+          <article class="card">
+            <div class="bg-neutral-300 rounded-top overflow-hidden">
+				<img class="object-fit-cover w-100% h-20" src="https://picsum.photos/id/100/400/400">
+			</div>
+            <div class="card-body">
+              <time class="text-secondary mb-2 d-block">Yesterday</time>
+              <h4>Someone did something about nothing</h4>
+              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+
+        <div class="col">
+          <article class="card">
+            <div class="bg-neutral-300 rounded-top overflow-hidden">
+				<img class="object-fit-cover w-100% h-20" src="https://picsum.photos/seed/picsum/400/400">
+			</div>
+            <div class="card-body">
+              <time class="text-secondary mb-2 d-block">Yesterday</time>
+              <h4>Nothing is better than simple life, isn't it? </h4>
+              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+
+        <div class="col">
+          <article class="card">
+            <div class="bg-neutral-300 rounded-top overflow-hidden">
+				<img class="object-fit-cover w-100% h-20" src="https://picsum.photos/id/9/400/400">
+			</div>
+            <div class="card-body">
+              <time class="text-secondary mb-2 d-block">Yesterday</time>
+              <h4>Whereas disregard and contempt for human rights...</h4>
+              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+        
+      </div> <!-- row.// -->
+
+
+
+	</div> <!-- container.// -->
+</section>
+
+
+</body>
+</html>
