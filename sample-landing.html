@@ -13,28 +13,6 @@
 
   <title>Final CSS - Example data table (finalcss.com)</title>
 
-	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', () => {
-		const htmlElement = document.documentElement;
-		const themeSwitcher = document.getElementById('themeSwitcher');
-		// Check localStorage for saved theme
-		const savedTheme = localStorage.getItem('data-theme');
-		if (savedTheme) {
-		    htmlElement.setAttribute('data-theme', savedTheme);
-		}
-		themeSwitcher.addEventListener('click', () => {
-		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
-		    // Set the new theme on the body element
-		    htmlElement.setAttribute('data-theme', newTheme);          
-		    // Save the new theme in localStorage
-		    localStorage.setItem('data-theme', newTheme);
-		});
-	});
-
-	</script>
-
-
 
 <!-- FinalCSS -->
 <link href="css/final.css" rel="stylesheet" type="text/css" />
