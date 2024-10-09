@@ -4,3 +4,6 @@ CNAME
 .DS_Store
 .vscode/
 package.json
+site/
+index.html
+docs.html
