@@ -41,51 +41,85 @@
 
 
 </head>
-<body class="bg-base">
+<body>
 
 
-<header class="bg-base py-2 border-b">
-	<div class="container">
-		<div class="d-flex flex-column flex-md-row align-items-center">
-			<div class="mb-3 md:mb-0">
-				<a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
-			</div>
-			<nav class="nav ml-auto">
-        <a href="#" class="nav-link">Menu one</a>
-				<a href="#" class="nav-link">Menu two</a>
-				<a href="#" class="nav-link">Menu three</a>
-				
-				<button id="themeSwitcher" class="btn btn-icon btn-secondary ms-2">
-					<span class="d-none dark:d-block">
-						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-						</svg>
-					</span>
-					<span class="dark:d-none">
-						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-						</svg>
-					</span>
-				</button>
-			</nav>
-		</div>
-	</div>
+<header class="shadow-sm">
+    <div class="container">
+        <nav class="d-flex flex-col md:flex-row align-items-center md:justify-content-between p-2">
+        
+          <div class="lg:col-3 d-flex align-items-center mb-2 md:mb-0">
+            <a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
+					</div>
+          
+          <ul class="nav justify-content-center">
+            <li><a href="#main" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#faq" class="nav-link">FAQs</a></li>
+            <li><a href="#" class="nav-link">More menu</a></li>
+          </ul>
+        
+          <div class="lg:col-3 d-none md:d-block text-right">
+            <a href="#" class="btn btn-primary rounded-pill">Get started</a>
+          </div>
+        </nav>
+    </div> <!-- container.// -->
 </header>
 
-<section class="py-10 bg-lower">
+
+<section class="py-10 lg:py-16 bg-neutral-200">
 	<div class="container">
 		
-	  <header class="mb-10">
-      <h1 class="text-center">Sample landing page of main two</h1>
-      <p class="text-center text-xl max-w-60%">
-        Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
+	  <main class="my-10 mx-auto"  style="max-width: 760px;">
+      <h1 class="fw-bold text-4xl md:text-6xl text-center lg:text-7xl mb-4">The Ultimate Solution <br> for Easy Web Designing</h1>
+      <p class="text-center text-xl">
+        Something short and leading about the collection below—its contents. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
       </p>
-    </header>
-
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt iusto iste corporis temporibus aperiam vero, numquam non odio in commodi veritatis sint eum ipsum aliquam inventore delectus voluptatum sit.</p>
-
-  
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In atque soluta nobis repellat quas id voluptatem dicta optio omnis tempora? Porro ipsum nulla deserunt obcaecati. Sapiente corrupti voluptates aut numquam. 2222</p>
+    </main>
+		<form action="" class="mb-10">
+			<div class="d-flex p-3 mb-4 gap-2 justify-content-center mx-auto border rounded-lg bg-white" style="max-width: 420px">
+				<div class="w-80%">
+					<input type="email" placeholder="Your email" class="form-control" name="">
+				</div>
+				<div class="w-40%">
+					<button class="btn w-100% flex-shrink-0 btn-secondary" type="submit">Get access</button>
+				</div>
+			</div>
+		</form>
 
 	</div> <!-- container.// -->
+</section>
+
+
+<section class="py-10">
+	<div class="container">
+
+		<div class="row py-5 gap-8 row-cols-1 md:row-cols-3 text-center">
+			<div class="col">
+				<div class="bg-primary-200 mb-3 rounded" style="min-height: 160px;">
+					<img src="" class="w-100% h-auto">
+				</div>
+				<h4 class="my-2"> SaaS projects </h4>
+				<p>Using software in private schools offers numerous benefits: Efficient administrative management, Academic and performance tracking, Data analysis and reporting, Fiance management</p>
+				
+			</div>
+			<div class="col">
+				<div class="bg-primary-200 mb-3 rounded" style="min-height: 160px;">
+					<img src="" class="w-100% h-auto">
+				</div>
+				<h4 class="my-2"> Corporate websites</h4>
+				<p>Software solutions for the management of course centers, language centers, educational  and training institutes. It reduces all paperwork and gives a full control </p>
+			</div>
+			<div class="col">
+				<div class="bg-primary-200 mb-3 rounded" style="min-height: 160px;">
+					<img src="" class="w-100% h-auto">
+				</div>
+				<h4 class="my-2"> Landing pages </h4>
+				<p> University management system is designed to automate day-to-day academic and administrative functions. It is capable of reducing manual effort and increasing the overall efficiency.</p>
+			</div>
+		</div>
+	</div>  <!-- container.// -->
 </section>
 
 
