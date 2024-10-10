@@ -4,14 +4,14 @@
 
 // Breakpoints (Starting point)
 $screen-sm: 640px;
-$screen-md: 768px;
+$screen-md: 920px;
 $screen-lg: 1200px;
 $screen-xl: 1440px;
 
 // breakpoint sizes to generate 
 $breakpoints: (
   'sm': 640px,  // @media (min-width: 640px) { ... }
-  'md': 768px,  // @media (min-width: 768px) { ... }
+  'md': 920px,  // @media (min-width: 920px) { ... }
   'lg': 1200px, // @media (min-width: 1200px) { ... }
   'xl': 1440px  // @media (min-width: 1440px) { ... }
 );
@@ -19,7 +19,7 @@ $breakpoints: (
 // can be used for maximum screen size
 $breakpoints-only: (
   'xs-only': 640px, // @media (max-width: 640px)
-  'sm-only': 768px, // @media (max-width: 768px)
+  'sm-only': 920px, // @media (max-width: 920px)
 );
 
 // Border-radius

@@ -535,8 +535,8 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -546,7 +546,7 @@ progress {
 }
 
 .container-md {
-  max-width: 768px;
+  max-width: 920px;
 }
 
 .container-lg {
@@ -637,7 +637,7 @@ progress {
     width: 16.6666666667%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:row-cols-auto > * {
     width: auto;
   }
@@ -837,7 +837,7 @@ progress {
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:col {
     flex: 1 0 0%;
   }
@@ -1233,7 +1233,7 @@ progress {
     grid-column: 1/-1;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:grid-template-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -2812,7 +2812,7 @@ dialog::backdrop {
     justify-items: stretch;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:d-block {
     display: block;
   }
@@ -3580,7 +3580,7 @@ dialog::backdrop {
     flex-direction: column;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .sm-only\:d-block {
     display: block;
   }
@@ -3695,7 +3695,7 @@ dialog::backdrop {
     visibility: collapse;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:visibility-visible {
     visibility: visible;
   }
@@ -3747,7 +3747,7 @@ dialog::backdrop {
     visibility: collapse;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .sm-only\:visibility-visible {
     visibility: visible;
   }
@@ -3809,7 +3809,7 @@ dialog::backdrop {
     order: 5;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:order-0 {
     order: 0;
   }
@@ -4226,7 +4226,7 @@ dialog::backdrop {
     --flex-gap:40px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:gap-0 {
     gap: 0;
     --flex-gap:0;
@@ -4765,7 +4765,7 @@ dialog::backdrop {
     float: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:float-start {
     float: inline-start;
   }
@@ -4921,7 +4921,7 @@ dialog::backdrop {
     text-align: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:text-left {
     text-align: left;
   }
@@ -5082,23 +5082,23 @@ h1 {
 }
 
 .text-5xl {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 .text-6xl {
-  font-size: 3.75rem;
+  font-size: 3.4rem;
 }
 
 .text-7xl {
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 
 .text-8xl {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .text-9xl {
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 @media (min-width: 640px) {
@@ -5135,26 +5135,26 @@ h1 {
   }
 
   .sm\:text-5xl {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .sm\:text-6xl {
-    font-size: 3.75rem;
+    font-size: 3.4rem;
   }
 
   .sm\:text-7xl {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .sm\:text-8xl {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .sm\:text-9xl {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:text-xs {
     font-size: 0.7rem;
   }
@@ -5188,23 +5188,23 @@ h1 {
   }
 
   .md\:text-5xl {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .md\:text-6xl {
-    font-size: 3.75rem;
+    font-size: 3.4rem;
   }
 
   .md\:text-7xl {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .md\:text-8xl {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .md\:text-9xl {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
 @media (min-width: 1200px) {
@@ -5241,23 +5241,23 @@ h1 {
   }
 
   .lg\:text-5xl {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .lg\:text-6xl {
-    font-size: 3.75rem;
+    font-size: 3.4rem;
   }
 
   .lg\:text-7xl {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .lg\:text-8xl {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .lg\:text-9xl {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
 @media (min-width: 1440px) {
@@ -5294,23 +5294,23 @@ h1 {
   }
 
   .xl\:text-5xl {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .xl\:text-6xl {
-    font-size: 3.75rem;
+    font-size: 3.4rem;
   }
 
   .xl\:text-7xl {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .xl\:text-8xl {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .xl\:text-9xl {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
 .border {
@@ -9023,7 +9023,7 @@ h1 {
     max-height: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:w-auto {
     width: auto;
   }
@@ -13459,7 +13459,7 @@ h1 {
     margin-left: 200px !important;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:m-auto {
     margin: auto;
   }
@@ -16703,7 +16703,7 @@ h1 {
     padding-left: 200px !important;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .md\:p-0 {
     padding: 0;
   }
