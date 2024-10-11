@@ -181,7 +181,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family-code;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size:1em; // Correct the odd `em` font sizing in all browsers.
 }
 
@@ -194,7 +194,7 @@ pre {
   margin-top: 0; // 1
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
-
+  text-wrap: wrap;
   // Account for some code outputs that place code tags in pre tags
   code {
     font-size:inherit;

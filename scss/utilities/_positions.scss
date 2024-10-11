@@ -1,3 +1,27 @@
+
+.static { position: static;}
+.relative { position: relative;}
+.absolute {position: absolute;}
+.fixed {position: fixed;}
+.sticky {position: sticky;}
+
+.fixed-top {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 1030;
+}
+
+.fixed-bottom {
+  position: fixed; right: 0; bottom: 0; left: 0; z-index: 1030;
+}
+
+.sticky-top {
+  position: sticky;  top: 0; z-index: 1020;
+}
+
+.sticky-bottom {
+  position: sticky; bottom: 0; z-index: 1020;
+}
+
+
 $position_map:(
   "0": 0,
   "1": 4px,
@@ -38,39 +62,6 @@ $position_map_percent:(
   .left-#{$name}\% { left: #{$value}; }
 }
 
-.static { position: static;}
-.relative { position: relative;}
-.absolute {position: absolute;}
-.fixed {position: fixed;}
-.sticky {position: sticky;}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.fixed-bottom {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.sticky-top {
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-}
-
-.sticky-bottom {
-  position: sticky;
-  bottom: 0;
-  z-index: 1020;
-}
 
 .vertical-align-baseline {vertical-align: baseline;}
 .vertical-align-top {vertical-align: top;}
