@@ -8,15 +8,18 @@ class SidebarComponent extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
 
-        <nav class="border-r pr-5">
-          <ul class="nav nav-vertical">
-            <li><a class="nav-link active" href="index.html">Home</a></li>
-            <li><a class="nav-link" href="about.html">About</a></li>
-            <li><a class="nav-link" href="services.html">Services</a></li>
-            <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <nav class="md:border-right border-bottom md:border-bottom-0 lg:pr-5 pt-5 pb-5 h-100%">
+          <ul id="doc_sidebar" class="nav nav-vertical sticky-top top-5">
+            <li><a class="nav-link" href="docs.html">Getting started</a></li>
+            <li><a class="nav-link" href="docs-customize.html">Customization</a></li>
+            <li><a class="nav-link" href="docs-theme.html">Theme & colors</a></li>
+            <li><a class="nav-link" href="docs-grid.html">Grid system</a></li>
+            <li><a class="nav-link" href="docs-components.html">Components</a></li>
+            <li><a class="nav-link" href="docs-forms.html">Form elements</a></li>
+            <li><a class="nav-link" href="docs-utilities.html">Utility classes</a></li>
+            <hr>
+            <li><a class="nav-link" href="docs-links.html">Good resources</a></li>
           </ul>
-          <hr>
-          <a href="#" class="btn btn-primary">asdasdasd</a>
 
         </nav>
         
@@ -24,13 +27,29 @@ class SidebarComponent extends HTMLElement {
 
     // Append the template content to the Light DOM
     this.appendChild(template.content.cloneNode(true));
+
+    //this.highlightActiveLink();
   }
 }
 // Define the doc sidebar component
 customElements.define('sidebar-component', SidebarComponent);
 
+// Add "active" classname into selected menu by matching URL and linkname
+document.addEventListener("DOMContentLoaded", function(){
+  const currentPage = window.location.pathname.split('/').pop(); // Get the current page (e.g., 'about.html')
+  const links = document.querySelectorAll('#doc_sidebar a'); // Select all sidebar links
+  console.log(links);
 
+  links.forEach(link => {
+    // const listItem = link.parentElement; // Get the <li> containing the <a>
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active'); // Add 'active' class to the matching <li>
+    } else {
+      link.classList.remove('active'); // Remove 'active' class from other items
+    }
+  });
 
+});
 
 
 
@@ -46,7 +65,7 @@ class BottomComponent extends HTMLElement {
     template.innerHTML = `
 
 
-<section class="py-10 bg-colorful border-t text-lg">
+<section class="py-10 bg-colorful border-top text-lg">
     <div class="container article text-center" style="max-width: 920px">
       <h2 class="my-4">Your support matters!</h2>
       <p class="mb-5">
@@ -64,7 +83,7 @@ class BottomComponent extends HTMLElement {
     </div> <!-- container end -->
 </section>
 
-<footer class="bg-base border-t py-10">
+<footer class="bg-base border-top py-10">
   <div class="container">
     <section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
         <p class="md:mb-0 mb-3 text-center md:text-left"> © 2024 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
@@ -120,7 +139,7 @@ class HeaderComponent extends HTMLElement {
 		</nav>
 </dialog>
 	
-<header class="bg-neutral-0 py-2 lg:py-3 border-b">
+<header class="bg-neutral-0 py-2 lg:py-3 border-bottom">
 	<div class="container">
 		<div class="d-flex flex-column md:flex-row align-items-center">
 			<div>

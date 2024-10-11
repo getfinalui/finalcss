@@ -1,6 +1,18 @@
 
-.border {border: 1px solid var(--border-color-base);}
 
+// border default
+.border {border: 1px solid var(--border-color-base);}
+.border-0 { border: 0 !important; }
+.border-top { border-top: 1px solid var(--border-color-base) !important; }
+.border-top-0 { border-top: 0 !important; }
+.border-right { border-right: 1px solid var(--border-color-base) !important;}
+.border-right-0 {border-right: 0 !important;}
+.border-bottom {border-bottom: 1px solid var(--border-color-base) !important;}
+.border-bottom-0 {border-bottom: 0 !important;}
+.border-left {border-left: 1px solid var(--border-color-base) !important;}
+.border-left-0 {border-left: 0 !important;}
+
+// border-colors
 .border-primary { border: 1px solid var(--primary-400); }
 .border-warning { border: 1px solid var(--warning-400);}
 .border-danger { border: 1px solid var(--danger-400); }
@@ -8,13 +20,27 @@
 .border-info { border: 1px solid var(--info-400);}
 .border-strong { border-color: 1px solid var(--border-color-strong);}
 
-.border-0 { border: 0 !important; }
-.border-t { border-top: 1px solid var(--border-color-base) !important; }
-.border-t-0 { border-top: 0 !important; }
-.border-r { border-right: 1px solid var(--border-color-base) !important;}
-.border-r-0 {border-right: 0 !important;}
-.border-b {border-bottom: 1px solid var(--border-color-base) !important;}
-.border-b-0 {border-bottom: 0 !important;}
-.border-l {border-left: 1px solid var(--border-color-base) !important;}
-.border-l-0 {border-left: 0 !important;}
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: #{$size}){
 
+    @each $name, $value in $gap_map {
+
+      // border default
+      .#{$breakpoint}\:border {border: 1px solid var(--border-color-base);}
+      .#{$breakpoint}\:border-0 { border: 0 !important; }
+      .#{$breakpoint}\:border-top { border-top: 1px solid var(--border-color-base) !important; }
+      .#{$breakpoint}\:border-top-0 { border-top: 0 !important; }
+      .#{$breakpoint}\:border-right { border-right: 1px solid var(--border-color-base) !important;}
+      .#{$breakpoint}\:border-right-0 {border-right: 0 !important;}
+      .#{$breakpoint}\:border-bottom {border-bottom: 1px solid var(--border-color-base) !important;}
+      .#{$breakpoint}\:border-bottom-0 {border-bottom: 0 !important;}
+      .#{$breakpoint}\:border-left {border-left: 1px solid var(--border-color-base) !important;}
+      .#{$breakpoint}\:border-left-0 {border-left: 0 !important;}
+
+    }
+   // end breakpoint
+   
+  }
+}
