@@ -23,15 +23,12 @@ $breakpoints-only: (
 );
 
 // Border-radius
-// Allows for component radius independently from their own css
-// these radiuses are for utility classes like border-sm, border, border-lg 
+$border-radius-sm:   4px !default;
 $border-radius-md:   8px !default;
-$border-radius-sm:   6px !default;
-$border-radius-lg:   16px !default;
+$border-radius-lg:   12px !default;
+$border-radius-xl:   16px !default;
 
 // Typography
-//
-// Font, line-height, and color for body text, headings, and more.
 $font-family-base:           system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 // $font-size-base affects the font size of the body text

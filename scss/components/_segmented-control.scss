@@ -28,11 +28,12 @@
     &:hover,
     &:focus {
       text-decoration:none;
-      background-color: var(--neutral-200);
+      color:var(--text-color-base);
+      background-color: var(--neutral-1000-alpha);
     }
 
     &.active, &.selected, &:has(input[type="radio"]:checked){
-      color:var(--text-color-primary);
+      color:var(--text-color-base);
       background-color: var(--bg-color-raised); 
       box-shadow:0 1px 2px rgba(#000, .1) ;
       border:1px solid var(--border-color-base); 
