@@ -1,12 +1,15 @@
+// Border-radius varibales are defined on file: _base-settings.scss
 
-.rounded{border-radius: $border-radius-md;}
 .rounded-0 { border-radius: 0;}
-.rounded-sm {border-radius: $border-radius-sm;}
+.rounded{ border-radius: $border-radius-md; }
+
+.rounded-sm{border-radius: $border-radius-sm;}
 .rounded-md {border-radius: $border-radius-md;}
 .rounded-lg {border-radius: $border-radius-lg;}
+.rounded-xl {border-radius: $border-radius-xl;}
+.rounded-full { border-radius: 400px; }
+.rounded-circle, { border-radius: 50%; }
 
-.rounded-circle, .rounded-full { border-radius: 50% ;}
-.rounded-pill { border-radius: 100px; }
 
 .rounded-top {
   border-top-left-radius: $border-radius-md !important;

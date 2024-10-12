@@ -3,7 +3,6 @@
 :root, [data-theme=light], .lightmode, .theme-static{
 
   // constant gray color variables (will not be changed on dark mode)
-
   --black: #000;
   --white: #fff;
   --gray-50: #f5f7fa;
@@ -18,7 +17,6 @@
   --gray-900: #0f172a;
 
   // neutral color variables (will be replaced on dark mode)
-
   --neutral-0: #fff;
   --neutral-50: #f5f7fa;
   --neutral-100: #f1f5f9;
@@ -31,9 +29,10 @@
   --neutral-800: #1e293b;
   --neutral-900: #0f172a;
   --neutral-1000: #000;
-  --neutral-1000-alpha: rgba(0,0,0,.1);
+  --neutral-1000-alpha: rgba(0,0,0,.05);
   --neutral-0-alpha: rgba(255,255,255,.1);
 
+  // primary colors (will be replaced on dark mode)
   --primary-100: #dbeafe;
   --primary-200: #bfdbfe;
   --primary-300: #93c5fd;
@@ -44,8 +43,7 @@
   --primary-800: #1e40af;
   --primary-900: #1e3a8a;
 
-  // static colors for primary (will not change on darkmode)
-
+  // static primary colors for primary (will not change on darkmode)
   --primary-100-static: #dbeafe;
   --primary-200-static: #bfdbfe;
   --primary-300-static: #93c5fd;
@@ -57,7 +55,6 @@
   --primary-900-static: #1e3a8a;
 
   // Other semantic colors (dynamic)
-
   --warning-100: #ffedd5;
   --warning-200: #fed7aa;
   --warning-300: #fdba74;
@@ -149,7 +146,7 @@
   --neutral-800: #e2e8f0;
   --neutral-900: #f1f5f9;
   --neutral-1000: #fff;
-  --neutral-1000-alpha: rgba(255,255,255,.1);
+  --neutral-1000-alpha: rgba(255,255,255,.12);
   --neutral-0-alpha: rgba(0,0,0,.1);
 
   --primary-100: #091253;
@@ -215,10 +212,10 @@
   --bg-color-base: var(--neutral-50); 
   --bg-color-secondary: var(--neutral-50);
   --bg-color-lower: var(--neutral-0);
-  --bg-color-raised: var(--neutral-100);
+  --bg-color-raised: var(--neutral-200);
 
   --border-color-light: var(--neutral-100);
-  --border-color-base: var(--neutral-200);
+  --border-color-base: var(--neutral-300);
   --border-color-strong: var(--neutral-400);
 
   --text-color-base: var(--neutral-1000);
