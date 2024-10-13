@@ -3,44 +3,46 @@
 // border default
 .border {border: 1px solid var(--border-color-base);}
 .border-0 { border: 0 !important; }
-.border-top { border-top: 1px solid var(--border-color-base) !important; }
+.border-top { border-top: 1px solid var(--border-color-base); }
 .border-top-0 { border-top: 0 !important; }
-.border-right { border-right: 1px solid var(--border-color-base) !important;}
+.border-right { border-right: 1px solid var(--border-color-base);}
 .border-right-0 {border-right: 0 !important;}
-.border-bottom {border-bottom: 1px solid var(--border-color-base) !important;}
+.border-bottom {border-bottom: 1px solid var(--border-color-base);}
 .border-bottom-0 {border-bottom: 0 !important;}
-.border-left {border-left: 1px solid var(--border-color-base) !important;}
+.border-left {border-left: 1px solid var(--border-color-base);}
 .border-left-0 {border-left: 0 !important;}
 
 // border-colors
-.border-primary { border: 1px solid var(--primary-400); }
-.border-warning { border: 1px solid var(--warning-400);}
-.border-danger { border: 1px solid var(--danger-400); }
-.border-success {  border: 1px solid var(--success-400); }
-.border-info { border: 1px solid var(--info-400);}
-.border-strong { border-color: 1px solid var(--border-color-strong);}
+.border-color-base { border-color: var(--border-color-base);}
+.border-color-strong { border-color: var(--border-color-strong);}
+.border-color-light { border-color:var(--border-color-light);}
+.border-color-primary { border-color:var(--primary-400); }
+.border-color-warning { border-color:var(--warning-400);}
+.border-color-danger { border-color:var(--danger-400); }
+.border-color-success { border-color:var(--success-400); }
+.border-color-info { border-color:var(--info-400);}
+.border-color-feature { border-color:var(--feature-400);}
 
-// Generate responsive utility classes
-// breakpoints can be changed from base-settings.scss
-@each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+//// hover 
 
-    @each $name, $value in $gap_map {
+// hover on element
+.hover\:border-color-base:hover { border-color: var(--border-color-base);}
+.hover\:border-color-strong:hover { border-color: var(--border-color-strong);}
+.hover\:border-color-light:hover { border-color:var(--border-color-light);}
+.hover\:border-color-primary:hover { border-color:var(--primary-400); }
+.hover\:border-color-warning:hover { border-color:var(--warning-400);}
+.hover\:border-color-danger:hover { border-color:var(--danger-400); }
+.hover\:border-color-success:hover { border-color:var(--success-400); }
+.hover\:border-color-info:hover { border-color:var(--info-400);}
+.hover\:border-color-feature:hover { border-color:var(--feature-400);}
 
-      // border default
-      .#{$breakpoint}\:border {border: 1px solid var(--border-color-base);}
-      .#{$breakpoint}\:border-0 { border: 0 !important; }
-      .#{$breakpoint}\:border-top { border-top: 1px solid var(--border-color-base) !important; }
-      .#{$breakpoint}\:border-top-0 { border-top: 0 !important; }
-      .#{$breakpoint}\:border-right { border-right: 1px solid var(--border-color-base) !important;}
-      .#{$breakpoint}\:border-right-0 {border-right: 0 !important;}
-      .#{$breakpoint}\:border-bottom {border-bottom: 1px solid var(--border-color-base) !important;}
-      .#{$breakpoint}\:border-bottom-0 {border-bottom: 0 !important;}
-      .#{$breakpoint}\:border-left {border-left: 1px solid var(--border-color-base) !important;}
-      .#{$breakpoint}\:border-left-0 {border-left: 0 !important;}
-
-    }
-   // end breakpoint
-   
-  }
-}
+  // group hover (parent hover)
+.group:hover .group-hover\:border-color-base { border-color: var(--border-color-base);}
+.group:hover .group-hover\:border-color-strong { border-color: var(--border-color-strong);}
+.group:hover .group-hover\:border-color-light { border-color:var(--border-color-light);}
+.group:hover .group-hover\:border-color-primary { border-color:var(--primary-400); }
+.group:hover .group-hover\:border-color-warning { border-color:var(--warning-400);}
+.group:hover .group-hover\:border-color-danger { border-color:var(--danger-400); }
+.group:hover .group-hover\:border-color-success { border-color:var(--success-400); }
+.group:hover .group-hover\:border-color-info { border-color:var(--info-400);}
+.group:hover .group-hover\:border-color-feature { border-color:var(--feature-400);}
