@@ -1,23 +1,29 @@
-
 .nav {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  gap:4px;
+  gap:2px;
+  color:var(--text-color-base);
 }
+
+.nav-item{
+  display: inline-flex; 
+  align-items: center;
+  position: relative;
+}
+
 .nav-link {
+  height: 38px;
   display: flex; 
   align-items: center;
   gap:8px;
-  padding: 0.4rem 0.8rem;
-  height: 38px;
+  padding: 8px 12px;
   font-size: inherit;
   text-decoration:none;
   border-radius: $border-radius-md;
-  color:var(--text-color-base);
+  color:inherit;
   &:hover,
   &:focus {
     text-decoration:none;
@@ -35,21 +41,13 @@
   // Disabled state lightens text
   &.disabled {
     color: var(--text-color-muted);
-    pointer-events: none;
     cursor: not-allowed;
   }
-
 }
 
 
-.nav-item{
-  position: relative;
-}
 
-.nav-link-sm {
-  padding: 0.2rem 0.6rem;
-  height: 32px;
-}
+
 
 //
 // Other variants
@@ -76,3 +74,16 @@
     text-align: center;
   }
 }
+
+
+////// Nav underline Tab styled
+.nav-underline {
+  .nav-item{
+    border-bottom-width: 2px;
+    margin-bottom:-2px;
+    &.active{
+      border-bottom: 2px solid var(--primary-500);
+    }  
+  }
+}
+

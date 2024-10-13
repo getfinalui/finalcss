@@ -1863,7 +1863,8 @@ dialog::backdrop {
 
 .form-control {
   display: block;
-  min-width: 160px;
+  min-width: 120px;
+  width: 100%;
   height: 38px;
   padding: 0.36rem 0.6rem;
   line-height: 1.2;
@@ -1911,8 +1912,9 @@ dialog::backdrop {
 .form-select {
   --icon-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   display: block;
-  min-width: 160px;
-  height: 40px;
+  min-width: 120px;
+  width: 100%;
+  height: 38px;
   padding: 0.36rem 0.6rem;
   padding-right: 32px;
   line-height: 1.2;
@@ -2104,23 +2106,29 @@ dialog::backdrop {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  gap: 4px;
+  gap: 2px;
+  color: var(--text-color-base);
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
 }
 
 .nav-link {
+  height: 38px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0.4rem 0.8rem;
-  height: 38px;
+  padding: 8px 12px;
   font-size: inherit;
   text-decoration: none;
   border-radius: 8px;
-  color: var(--text-color-base);
+  color: inherit;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -2136,17 +2144,7 @@ dialog::backdrop {
 }
 .nav-link.disabled {
   color: var(--text-color-muted);
-  pointer-events: none;
   cursor: not-allowed;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link-sm {
-  padding: 0.2rem 0.6rem;
-  height: 32px;
 }
 
 .nav-vertical {
@@ -2168,6 +2166,54 @@ dialog::backdrop {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
+}
+
+.nav-underline .nav-item {
+  border-bottom-width: 2px;
+  margin-bottom: -2px;
+}
+.nav-underline .nav-item.active {
+  border-bottom: 2px solid var(--primary-500);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  gap: 2px;
+  border-bottom: 1px solid var(--border-color-base);
+  color: var(--text-color-secondary);
+}
+
+.tab-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+.tab-item:hover, .tab-item:focus {
+  text-decoration: none;
+  color: var(--text-color-base);
+  border-bottom-color: var(--border-color-strong);
+}
+.tab-item:active {
+  background-color: var(--neutral-100);
+}
+.tab-item.active {
+  color: var(--text-color-primary);
+  border-bottom-color: var(--primary-500);
+}
+.tab-item.disabled {
+  color: var(--text-color-muted);
+  cursor: not-allowed;
+  border-bottom: 2px solid transparent;
 }
 
 .dropdown-menu {
