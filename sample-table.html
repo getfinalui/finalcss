@@ -44,49 +44,56 @@
 <body class="bg-base">
 
 
-<header class="bg-secondary py-2 border-bottom">
-	<div class="container">
-		<div class="d-flex flex-column flex-md-row align-items-center">
-			<div class="mb-3 mb-md-0">
-				<a href="https://finalcss.com" class="h4">Final CSS</a>
-			</div>
-			<nav class="nav ms-md-auto">
-                <a href="#" class="nav-link">Menu one</a>
-				<a href="#" class="nav-link">Menu two</a>
-				<a href="#" class="nav-link">Menu three</a>
-				
-				<button id="themeSwitcher" class="btn btn-icon btn-secondary ms-2">
-					<span class="d-none dark:d-block">
-						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-						</svg>
-					</span>
-					<span class="dark:d-none">
-						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-						</svg>
-					</span>
-				</button>
-			</nav>
-		</div>
-	</div>
-</header>
+	<header class="bg-neutral-100 theme-dark py-4 md:py-2">
+		<div class="container">
+			<div class="d-flex flex-col md:flex-row align-items-center">
+				<div class="md:w-20%">
+					<a href="https://finalcss.com" style="color:var(--primary-700)" class="text-xl font-semibold">Final CSS</a>
+				</div>
+				<nav class="nav mx-auto my-3 md:my-0">
+					<a href="#" class="nav-link">Home</a>
+					<a href="#" class="nav-link">About</a>
+					<a href="#" class="nav-link">Something</a>
+					<a href="#" class="nav-link">Menu name</a>
+				</nav>
+				<div class="md:w-20% d-flex justify-content-end">
+					
+					<button id="themeSwitcher" class="btn btn-icon btn-secondary mr-2">
+						<span class="d-none dark:d-block">
+							<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+							</svg>
+						</span>
+						<span class="dark:d-none">
+							<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+							</svg>
+						</span>
+					</button>
 
-<section class="py-5">
+					<a href="#" class="btn btn-outline">Button</a>
+
+				</div>
+				
+			</div>
+		</div>
+	</header>
+
+<section class="py-8">
 	<div class="container">
 		
-		<h2 class="mb-3">Data table</h2>
+		<h3 class="mb-6">Data table</h3>
 
-		<div class="d-flex mb-4">
+		<div class="md:d-flex mb-4">
 			
-			<div class="d-flex w-75 flex-column flex-md-row gap-2 me-auto">
-				<input class="form-control" style="min-width: 300px" type="search" placeholder="Search" name="">
-				<select class="form-select">
+			<div class="d-flex flex-wrap md:flex-nowrap gap-2 mr-auto mb-4 md:mb-0">
+				<input class="form-control md:min-w-80" type="search" placeholder="Search" name="">
+				<select class="form-select w-40%">
 					<option>All category</option>
 					<option>Drinks</option>
 					<option>Food</option>
 					<option>Electronics</option>
 					<option>Others</option>
 				</select>
-				<select class="form-select">
+				<select class="form-select w-40%">
 					<option>Any status</option>
 					<option>Confirmed</option>
 					<option>Pending</option>
@@ -98,7 +105,7 @@
 			
 		</div>
 
-		<table class="table table-hover align-middle">
+		<table class="table table-hover vertical-align-middle">
 			<thead>
 				<tr>
 					<th width="30"> <input class="form-check-input" type="checkbox" value=""> </th>

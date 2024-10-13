@@ -1,6 +1,6 @@
 // A  Default theme OR on light theme 
 
-:root, [data-theme=light], .lightmode, .theme-static{
+:root, [data-theme=light], .theme-light, .theme-static{
 
   // constant color variables (will not be changed on dark mode)
   --black: #000;
@@ -101,8 +101,8 @@
   --bg-color-lower: var(--neutral-100);
   --bg-color-raised: var(--neutral-0);
 
-  --border-color-light: var(--neutral-200);
-  --border-color-base: var(--neutral-300);
+  --border-color-light: var(--neutral-100);
+  --border-color-base: var(--neutral-200);
   --border-color-strong: var(--neutral-400);
 
   --text-color-base: var(--neutral-900);
@@ -120,9 +120,11 @@
   --text-color-black: #000;
   --text-color-white: #fff; 
 
+  color: var(--text-color-base);
+  background-color: var(--bg-color-base);
 }
 
-[data-theme=dark], .darkmode {
+[data-theme=dark], .theme-dark {
 
   --neutral-0: #000;
   --neutral-50: #0d0f1c;
@@ -205,7 +207,7 @@
   --bg-color-raised: var(--neutral-200);
 
   --border-color-light: var(--neutral-100);
-  --border-color-base: var(--neutral-300);
+  --border-color-base: var(--neutral-200);
   --border-color-strong: var(--neutral-400);
 
   --text-color-base: var(--neutral-1000);
@@ -218,11 +220,7 @@
   --text-color-success: var(--success-700);
   --text-color-info: var(--info-700);
   --text-color-feature: var(--feature-700);
-}
 
-// if 'theme-static' class given on any element it will stay as default. 
-// this will set body text color and background color as default
-.theme-static{
   color: var(--text-color-base);
   background-color: var(--bg-color-base);
 }

@@ -1,10 +1,9 @@
 
 .form-control {
   display: block;
-  width: 100%;
+  min-width:160px;
   height: 38px;
   padding: .36rem .6rem;
-  font-weight: 400;
   line-height: 1.2;
   color: var(--text-color-base);
   appearance: none; // Fix appearance for date inputs in Safari
