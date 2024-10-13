@@ -13,13 +13,7 @@
 .text-black, .text-dark{ color:#000; }
 .text-white, { color:#fff; }
 
-/// text utility classes
-.font-light {  font-weight: 300;}
-.font-normal {font-weight: 400;}
-.font-medium { font-weight: 500; }
-.font-semibold { font-weight: 600;}
-.font-bold { font-weight: 700; }
-.font-bolder { font-weight: bolder;}
+
 
 /// text-position
 .text-left {text-align: left;}
@@ -40,6 +34,23 @@
 }
 
 
+
+
+/// text utility classes
+.font-light {  font-weight: 300;}
+.font-normal {font-weight: 400;}
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600;}
+.font-bold { font-weight: 700; }
+.font-bolder { font-weight: bolder;}
+
+
+
+
+.text-wrap { text-wrap: wrap; }
+.text-nowrap { text-wrap: nowrap; }
+.text-balance{ text-wrap: balance; }
+.text-pretty { text-wrap: pretty; } 
 
 .text-decoration-none { text-decoration: none; }
 .text-underline { text-decoration: underline; }

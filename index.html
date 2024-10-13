@@ -37,10 +37,10 @@
 <header-component></header-component>
 <!-- ======= HEADER end// =======-->
 
-<main class="py-17 bg-colorful">	
+<main class="py-24 bg-colorful">	
 	<div class="container" style="max-width: 980px;">
 		<h1 class="text-4xl md:text-5xl lg:text-6xl text-center my-5">A simple but powerful <br> CSS library for any purpose</span> </h1>
-		<p class="mb-5 text-xl text-secondary text-center"> Reimagined version of Bootstrap and Tailwind CSS libraries. <br> Create anything with both utility and component classes </p>
+		<p class="mb-5 text-xl text-secondary text-center text-balance"> Reimagined version of Bootstrap and Tailwind CSS libraries. Create anything with both utility and component classes </p>
 		<p  class="text-center mb-5">
 			<code class="bg-neutral-0 d-none rounded-pill border p-1 px-3 d-md-inline-block">
 			https://cdn.jsdelivr.net/gh/getfinalui/finalcss@main/css/final.min.css
@@ -55,7 +55,7 @@
 	</div> <!-- container end.// -->
 </main> <!-- section-header end.// -->
 			
-<section class="pb-12">
+<section class="pb-14">
 	
 	<div class="container">
 		<hr>
@@ -110,7 +110,7 @@
 	</div> <!-- container .//end -->
 </section>
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="py-12 bg-lower" id="demo">
+<section class="py-14 bg-lower" id="demo">
 <div class="container">
 
 <header class="mb-10">
@@ -119,15 +119,15 @@
 	<!-- button -->
 		<div class="d-flex justify-content-center">
 			<button onclick="themeswitch()"  class="btn btn-intense">
-				<div class="d-none dark:d-block">
+				<div class="d-none dark:d-flex gap-2 align-items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 					</svg>
-					<span class="align-middle">Make light</span>
+					<span class="vertical-align-middle">Make light</span>
 				</div>
-				<div class="dark:d-none">
+				<div class="d-flex align-items-center gap-2 dark:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 align-middle" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
 					</svg>
-					<span class="align-middle">Make dark</span>
+					<span class="vertical-align-middle">Make dark</span>
 				</div>
 			</button>
 		</div>
@@ -293,16 +293,14 @@
 
 				<div class="row lg:row-cols-2">
 					<div>
-						<article class="card overflow-hidden  mb-5 lg:mb-0">
+						<article class="card overflow-hidden lg:h-full  mb-5 lg:mb-0">
 							
-							<header class="bg-feature-300 relative h-17">
-
+							<header class="bg-feature-300 relative h-24">
 								<a href="#" class="absolute top-0 m-2 btn btn-sm btn-neutral">Edit</a>
 							</header>
-							
 							<div class="text-center">
-								<div style="margin-top:-60px" class="relative mx-auto w-16 h-16 d-flex align-items-center justify-content-center bg-neutral-0 rounded-circle">
-						 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="90" height="90" class="rounded-circle w-15 h-15 d-inline-block bg-neutral-400">
+								<div style="margin-top:-60px" class="relative mx-auto w-28 h-28 d-flex align-items-center justify-content-center bg-neutral-0 rounded-circle">
+						 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="60" height="60" class="rounded-circle w-24 h-24 d-inline-block bg-neutral-400">
 						 		</div>
 						 		<div class="my-3 mb-4">
 						 			<h5>Alexandra Heilium</h5>
@@ -330,9 +328,9 @@
 					</div> <!-- col.// -->
 					<div>
 						
-						<article class="card lg:h-full mb-5 lg:mb-0">
+						<article class="card mb-5 lg:mb-0">
 							<div class="bg-neutral-300 rounded-top overflow-hidden">
-								<img class="object-fit-cover w-100% h-18" src="https://picsum.photos/seed/picsum/400/400">
+								<img class="object-fit-cover w-100% h-40" src="https://picsum.photos/seed/picsum/400/400">
 							</div>
 							<div class="card-body">
 							 	<h5>Marvels of Bali</h5>
@@ -450,7 +448,7 @@
 				<h5 class="mb-5">Members list</h5>
 				
 				<ul class="list-unstyled">
-					<li class="d-flex align-items-center border-b py-2">
+					<li class="d-flex align-items-center border-bottom border-color-light hover:bg-neutral-100 py-2">
 						<div class="flex-grow-0 flex-shrink-0">
 							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="50" height="50" class="rounded-full w-11 h-11">
 						</div>
@@ -459,7 +457,7 @@
 							<p class="text-muted mb-0">jessica1900@example.com</p>
 						</div>
 						<div>
-							<select class="form-select h-8 font-medium">
+							<select class="form-select">
 								<option>Can view</option>
 								<option>Can edit</option>
 								<option>Remove</option>
@@ -467,7 +465,7 @@
 						</div>
 					</li>
 
-					<li class="d-flex align-items-center border-b py-2">
+					<li class="d-flex align-items-center border-bottom border-color-light  hover:bg-neutral-100 py-2">
 						<div class="flex-grow-0 flex-shrink-0">
 							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="50" height="50" class="rounded-full w-11 h-11">
 						</div>
@@ -476,7 +474,7 @@
 							<p class="text-muted mb-0">max990@example.com</p>
 						</div>
 						<div>
-							<select class="form-select h-8 font-medium">
+							<select class="form-select">
 								<option>Can view</option>
 								<option>Can edit</option>
 								<option>Remove</option>
@@ -484,7 +482,7 @@
 						</div>
 					</li>
 
-					<li class="d-flex align-items-center border-b py-2">
+					<li class="d-flex align-items-center border-bottom border-color-light  hover:bg-neutral-100 py-2">
 						<div class="flex-grow-0 flex-shrink-0">
 							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/3.webp" width="50" height="50" class="rounded-full w-11 h-11">
 						</div>
@@ -493,7 +491,7 @@
 							<p class="text-muted mb-0">alex_alex@example.com</p>
 						</div>
 						<div>
-							<select class="form-select h-8 font-medium">
+							<select class="form-select">
 								<option>Can view</option>
 								<option>Can edit</option>
 								<option>Remove</option>
@@ -798,7 +796,7 @@
 </section>
 <!-- ============== SECTION CONTENT END// ============== -->
 
-<section class="pb-10 pt-10 border-top">
+<section class="pb-14 pt-14 border-top">
 	<div class="container" style="max-width: 920px">
 		
 		<article class="article-wrap text-lg">

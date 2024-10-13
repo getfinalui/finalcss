@@ -67,17 +67,6 @@ $position_map_percent:(
   .left-#{$name}\% { left: #{$value}; }
 }
 
-
-.vertical-align-baseline {vertical-align: baseline;}
-.vertical-align-top {vertical-align: top;}
-.vertical-align-middle {vertical-align: middle;}
-.vertical-align-bottom {vertical-align: bottom;}
-.vertical-align-text-bottom {vertical-align: text-bottom;}
-.vertical-align-text-top {vertical-align: text-top;}
-.vertical-align-sub {vertical-align: sub;}
-.vertical-align-super {vertical-align: super;}
-
-
 .translate-xy-50\%{ transform: translate(50%, 50%)!important;}
 .translate-x-50\% { transform: translateX(50%)!important;}
 .translate-y-50\% {  transform: translateY(50%)!important;}

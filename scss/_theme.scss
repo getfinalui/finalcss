@@ -2,19 +2,9 @@
 
 :root, [data-theme=light], .lightmode, .theme-static{
 
-  // constant gray color variables (will not be changed on dark mode)
+  // constant color variables (will not be changed on dark mode)
   --black: #000;
   --white: #fff;
-  --gray-50: #f5f7fa;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-300: #cbd5e1;
-  --gray-400: #A3B0C2;
-  --gray-500: #6B7C94;
-  --gray-600: #52637A;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
 
   // neutral color variables (will be replaced on dark mode)
   --neutral-0: #fff;
