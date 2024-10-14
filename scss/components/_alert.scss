@@ -6,19 +6,18 @@
   // variables changed depending on state
   --alert-bg-color: transparent;
   --alert-text-color: inherit;
-
   color: var(--alert-text-color);
   background-color: var(--alert-bg-color);
-  
   position: relative;
   padding: 8px 12px;
   margin-bottom: 1rem;
-  border: transparent;
-  border-radius: 8px;
   display:flex; 
   align-items:center;
+  border: transparent;
+  border-radius: $border-radius-base; // from: _base-settings.scss
 
   p{ margin-bottom:0}
+
 }
 
 

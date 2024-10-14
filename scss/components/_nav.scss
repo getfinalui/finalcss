@@ -22,8 +22,9 @@
   padding: 8px 12px;
   font-size: inherit;
   text-decoration:none;
-  border-radius: $border-radius-md;
   color:inherit;
+  border-radius: $border-radius-base; // from: _base-settings.scss
+
   &:hover,
   &:focus {
     text-decoration:none;
