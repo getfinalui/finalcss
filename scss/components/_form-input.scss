@@ -11,12 +11,10 @@
   background-color: var(--neutral-50);
   background-clip: padding-box;
   border: 1px solid var(--neutral-300);
-  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  border-radius: 8px;
+  border-radius:$border-radius-base; // from: _base-settings.scss
 
   &[type="file"] {
     overflow: hidden; // prevent pseudo element button overlap
-
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
     }

@@ -11,11 +11,13 @@
   text-align: left;
   list-style: none;
   background-color:var(--bg-color-raised);
-  background-clip: padding-box;
-  border: 1px solid var(--border-color-base);
-  border-radius: $border-radius-md;
+  background-clip: padding-box;  
   box-shadow: 0 4px 12px rgba(#333, 0.2);
+  border: 1px solid var(--border-color-base);
+  border-radius: $border-radius-base; // from: _base-settings.scss
+  
   hr{ margin:4px 0;}
+  
 }
 
 

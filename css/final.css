@@ -126,11 +126,11 @@
   --primary-200: #0C186E;
   --primary-300: #1e3a8a;
   --primary-400: #006BD6;
-  --primary-500: #3b82f6;
-  --primary-600: #60a5fa;
-  --primary-700: #93c5fd;
-  --primary-800: #bfdbfe;
-  --primary-900: #dbeafe;
+  --primary-500: #3c99f6;
+  --primary-600: #61bafa;
+  --primary-700: #91d9fd;
+  --primary-800: #bee9fe;
+  --primary-900: #dcf3fe;
   --warning-100: #401A07;
   --warning-200: #4E2004;
   --warning-300: #662D00;
@@ -198,7 +198,7 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -1570,10 +1570,10 @@ progress {
   position: relative;
   padding: 8px 12px;
   margin-bottom: 1rem;
-  border: transparent;
-  border-radius: 8px;
   display: flex;
   align-items: center;
+  border: transparent;
+  border-radius: 8px;
 }
 .alert p {
   margin-bottom: 0;
@@ -1765,8 +1765,8 @@ progress {
   word-wrap: break-word;
   background-color: var(--bg-color-base);
   background-clip: border-box;
-  border-radius: 8px;
   border: 1px solid var(--border-color-base);
+  border-radius: 8px;
 }
 .card img {
   max-width: 100%;
@@ -1784,11 +1784,11 @@ dialog {
   min-width: 360px;
   top: 0;
   background-color: var(--bg-color-base);
-  border-radius: 8px;
-  border: 1px solid var(--border-color-base);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
   color: var(--text-color-base);
+  border: 1px solid var(--border-color-base);
+  border-radius: 8px;
 }
 dialog img {
   max-width: 100%;
@@ -2127,8 +2127,8 @@ dialog::backdrop {
   padding: 8px 12px;
   font-size: inherit;
   text-decoration: none;
-  border-radius: 8px;
   color: inherit;
+  border-radius: 8px;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -2227,9 +2227,9 @@ dialog::backdrop {
   list-style: none;
   background-color: var(--bg-color-raised);
   background-clip: padding-box;
+  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.2);
   border: 1px solid var(--border-color-base);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.2);
 }
 .dropdown-menu hr {
   margin: 4px 0;
@@ -2279,7 +2279,6 @@ dialog::backdrop {
   border-radius: 8px;
 }
 .segmented-control .segmented-item {
-  border: 1px solid transparent;
   justify-content: center;
   padding: 0.4rem 0.8rem;
   height: 36px;
@@ -2288,13 +2287,14 @@ dialog::backdrop {
   font-weight: 500;
   text-decoration: none;
   user-select: none;
-  border-radius: 8px;
   color: var(--text-color-secondary);
   text-wrap: nowrap;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
 }
 .segmented-control .segmented-item:hover, .segmented-control .segmented-item:focus {
   text-decoration: none;
@@ -3569,51 +3569,6 @@ dialog::backdrop {
     justify-items: stretch;
   }
 }
-@media (max-width: 640px) {
-  .xs-only\:d-block {
-    display: block;
-  }
-
-  .xs-only\:d-inline {
-    display: inline;
-  }
-
-  .xs-only\:d-inline-block {
-    display: inline-block;
-  }
-
-  .xs-only\:d-flex {
-    display: flex;
-  }
-
-  .xs-only\:d-inline-flex {
-    display: inline-flex;
-  }
-
-  .xs-only\:d-grid {
-    display: grid;
-  }
-
-  .xs-only\:d-inline-grid {
-    display: inline-grid;
-  }
-
-  .xs-only\:d-none {
-    display: none;
-  }
-
-  .xs-only\:hidden {
-    display: none;
-  }
-
-  .xs-only\:flex-row {
-    flex-direction: row;
-  }
-
-  .xs-only\:flex-col {
-    flex-direction: column;
-  }
-}
 @media (max-width: 920px) {
   .sm-only\:d-block {
     display: block;
@@ -3656,6 +3611,51 @@ dialog::backdrop {
   }
 
   .sm-only\:flex-col {
+    flex-direction: column;
+  }
+}
+@media (max-width: 640px) {
+  .xs-only\:d-block {
+    display: block;
+  }
+
+  .xs-only\:d-inline {
+    display: inline;
+  }
+
+  .xs-only\:d-inline-block {
+    display: inline-block;
+  }
+
+  .xs-only\:d-flex {
+    display: flex;
+  }
+
+  .xs-only\:d-inline-flex {
+    display: inline-flex;
+  }
+
+  .xs-only\:d-grid {
+    display: grid;
+  }
+
+  .xs-only\:d-inline-grid {
+    display: inline-grid;
+  }
+
+  .xs-only\:d-none {
+    display: none;
+  }
+
+  .xs-only\:hidden {
+    display: none;
+  }
+
+  .xs-only\:flex-row {
+    flex-direction: row;
+  }
+
+  .xs-only\:flex-col {
     flex-direction: column;
   }
 }
@@ -3762,19 +3762,6 @@ dialog::backdrop {
     visibility: collapse;
   }
 }
-@media (max-width: 640px) {
-  .xs-only\:visibility-visible {
-    visibility: visible;
-  }
-
-  .xs-only\:visibility-hidden {
-    visibility: hidden;
-  }
-
-  .xs-only\:visibility-collapse {
-    visibility: collapse;
-  }
-}
 @media (max-width: 920px) {
   .sm-only\:visibility-visible {
     visibility: visible;
@@ -3785,6 +3772,19 @@ dialog::backdrop {
   }
 
   .sm-only\:visibility-collapse {
+    visibility: collapse;
+  }
+}
+@media (max-width: 640px) {
+  .xs-only\:visibility-visible {
+    visibility: visible;
+  }
+
+  .xs-only\:visibility-hidden {
+    visibility: hidden;
+  }
+
+  .xs-only\:visibility-collapse {
     visibility: collapse;
   }
 }

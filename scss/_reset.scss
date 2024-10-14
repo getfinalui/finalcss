@@ -1,16 +1,4 @@
-// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
-
-
 // Reboot
-//
-// Normalization of HTML elements, manually forked from Normalize.css to remove
-// styles targeting irrelevant browsers while applying new styles.
-//
-// Normalize is licensed MIT. https://github.com/necolas/normalize.css
-
-
-// Document
-//
 // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
 
 html{
@@ -26,7 +14,7 @@ html{
 
 
 body {
-  margin: 0; // 1
+  margin: 0; 
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: normal;

@@ -9,11 +9,12 @@ dialog {
   min-width:360px;
   top:0;
   background-color: var(--bg-color-base);
-  border-radius: 8px;
-  border:1px solid var(--border-color-base);
   box-shadow: 0 4px 12px rgba(#000, 0.2);
   font-size: $font-size-base;
   color: var(--text-color-base);
+  border:1px solid var(--border-color-base);
+  border-radius: $border-radius-base; // from: _base-settings.scss
+
   img{
     max-width:100%;
   }

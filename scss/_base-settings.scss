@@ -17,22 +17,25 @@ $breakpoints: (
 );
 
 // can be used for maximum screen size
-$breakpoints-only: (
-  'xs-only': 640px, // @media (max-width: 640px)
+$breakpoints-only: (  
   'sm-only': 920px, // @media (max-width: 920px)
+  'xs-only': 640px, // @media (max-width: 640px)
 );
 
-// Border-radius
+// Border-radius for utility classes
 $border-radius-sm:   4px !default;
 $border-radius-md:   8px !default;
 $border-radius-lg:   12px !default;
 $border-radius-xl:   16px !default;
 
+// set base border radius for button, input, select, card, alert, nav, tab,
+$border-radius-base:  $border-radius-md;
+
 // Typography
 $font-family-base:           system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 // $font-size-base affects the font size of the body text
-$font-size-root:              15px;
+$font-size-root:              16px;
 $font-size-base:              1rem !default; // Assumes the browser default size;
 $font-size-sm:                0.875rem !default;
 $font-size-lg:                1.25rem !default;

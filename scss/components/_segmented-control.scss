@@ -5,10 +5,9 @@
   align-items:center;
   padding:1px;
   height:38px;
-  border-radius: $border-radius-md;
+  border-radius: $border-radius-base; // from: _base-settings.scss
 
   .segmented-item{
-    border:1px solid transparent; 
     justify-content:center;
     padding: 0.4rem 0.8rem;
     height: 36px;
@@ -17,14 +16,15 @@
     font-weight: 500;
     text-decoration:none;
     user-select: none;
-    border-radius: $border-radius-md;
     color:var(--text-color-secondary);
     text-wrap: nowrap;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     cursor: pointer;
-
+    border:1px solid transparent; 
+    border-radius: $border-radius-base; // from: _base-settings.scss
+    
     &:hover,
     &:focus {
       text-decoration:none;
