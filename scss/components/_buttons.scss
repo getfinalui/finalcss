@@ -37,7 +37,7 @@
   position: relative;
   cursor: pointer;
   user-select: none;
-  gap:0.15rem;
+  gap:8px;
   &:disabled,
   &.disabled {
     opacity:0.4;

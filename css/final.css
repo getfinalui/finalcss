@@ -1632,7 +1632,7 @@ progress {
   position: relative;
   cursor: pointer;
   user-select: none;
-  gap: 0.15rem;
+  gap: 8px;
 }
 .btn:disabled, .btn.disabled {
   opacity: 0.4;
@@ -2273,7 +2273,6 @@ dialog::backdrop {
   background-color: var(--bg-color-lower);
   display: inline-flex;
   width: auto;
-  align-items: center;
   padding: 1px;
   height: 38px;
   border-radius: 8px;
@@ -2281,7 +2280,8 @@ dialog::backdrop {
 .segmented-control .segmented-item {
   justify-content: center;
   padding: 0.4rem 0.8rem;
-  height: 36px;
+  align-items: center;
+  display: inline-flex;
   text-align: center;
   font-size: inherit;
   font-weight: 500;
@@ -7367,7 +7367,7 @@ h1 {
 }
 
 .shadow-lg {
-  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.2);
+  box-shadow: 0 8px 12px rgba(17, 17, 17, 0.1);
 }
 
 .shadow-inner, .shadow-inset {
