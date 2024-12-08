@@ -5,7 +5,7 @@
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  vertical-align: top;
+  vertical-align: middle;
   border-color: var(--border-color-base);
 
   > :not(caption) > * > * {
@@ -19,7 +19,9 @@
     vertical-align: bottom;
     background-color:var(--neutral-100);
   }
-
+  td:not(:first-child){
+    min-width: 110px;
+  }
 }
 
 .table  > tbody > tr:has(input[type="checkbox"]:checked) > *{

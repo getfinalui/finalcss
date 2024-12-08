@@ -31,6 +31,7 @@
   border-radius: var(--btn-border-radius);
   color: var(--btn-text-color);
   line-height: 1.2;
+  white-space: nowrap;
   text-align: center;
   text-decoration:none;
   vertical-align: middle;
@@ -38,11 +39,16 @@
   cursor: pointer;
   user-select: none;
   gap:8px;
+  
+  svg{
+    width: 20px; height: 20px;
+  }
+
   &:disabled,
   &.disabled {
     opacity:0.4;
   }
-
+  
   &:hover {  
     background-color: var(--btn-bg-hover);
     border-color: var(--btn-border-hover-color);
@@ -52,10 +58,35 @@
   &:active {  
     transform: translateY(1px);
     box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
-  }
-
- 
+  } 
 }
+
+
+// card stye button
+.btn-card{
+  width: 100%;
+  text-align: left;
+  padding:6px;
+  justify-content: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-color-raised);
+  color: var(--text-color-base);
+  border:1px solid transparent;
+  border-color: var(--border-color-base);
+  border-radius: 8px;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
+  &:hover{
+    border-color: var(--border-color-strong);
+    text-decoration: none;
+  }
+  &:active {  
+    transform: translateY(1px);
+    box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
+  } 
+}
+
 
 .btn-lg {
   height: var(--btn-size-lg)!important;
