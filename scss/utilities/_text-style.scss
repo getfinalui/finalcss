@@ -57,7 +57,6 @@
 .font-bolder { font-weight: bolder!important;}
 
 .text-wrap { text-wrap: wrap!important; }
-.text-nowrap { text-wrap: nowrap!important; }
 .text-balance{ text-wrap: balance!important; }
 .text-pretty { text-wrap: pretty!important; } 
 
@@ -68,7 +67,8 @@
 .text-uppercase { text-transform: uppercase!important;}
 .text-capitalize { text-transform: capitalize!important;}
 .text-wrap {white-space: normal!important;}
-.text-nowrap { white-space: nowrap!important;}
+.text-nowrap { white-space: nowrap!important; text-wrap: nowrap!important; }
+.text-truncate{text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
 
 /// line height
 .lh-1{ line-height:1; }
