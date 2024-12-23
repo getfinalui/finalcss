@@ -1,6 +1,6 @@
 // A  Default theme OR on light theme 
 
-:root, [data-theme=light], .theme-light, .theme-static{
+:root, [data-theme=light], .theme-light, [data-theme=static], .theme-static{
 
   // constant color variables (will not be changed on dark mode)
   --black: #000;

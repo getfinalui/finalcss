@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="description" content="Final CSS (finalcss) is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta property="og:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <meta name="author" content="Final CSS">
+
+  <title>Final CSS - Example Admin template (finalcss.com)</title>
+
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', () => {
+
+		// ***********************
+		// Theme toggle
+		const htmlElement = document.documentElement;
+		const themeSwitcher = document.getElementById('themeSwitcher');
+		// Check localStorage for saved theme
+		const savedTheme = localStorage.getItem('data-theme');
+		if (savedTheme) {
+		    htmlElement.setAttribute('data-theme', savedTheme);
+		}
+		themeSwitcher.addEventListener('click', () => {
+		    const currentTheme = htmlElement.getAttribute('data-theme');
+		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    // Set the new theme on the body element
+		    htmlElement.setAttribute('data-theme', newTheme);          
+		    // Save the new theme in localStorage
+		    localStorage.setItem('data-theme', newTheme);
+		});	
+
+	});
+	// end of DOM load
+	</script>
+
+
+<!-- FinalCSS -->
+<link href="css/final.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+
+<div class="d-flex h-100vh overflow-hidden">
+
+	<aside data-theme="dark" class="d-none md:d-flex flex-col overflow-hidden  bg-neutral-50 border-right h-100vh xl:w-60 w-52">
+		
+		<!-- aside top part -->
+		<div class="d-flex px-4 my-3 align-items-center flex-shrink-0">
+			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+				<img src="logo-symbol.svg" alt="" height="36">
+				<span class="text-3xl text-base font-medium ml-2">final<b class="text-secondary">ui</b></span>
+			</a>
+		</div>
+		<!-- aside top part .//end -->
+
+		<!-- aside main part -->
+		<div class="px-3 py-2 overflow-x-auto">
+			<nav>
+					<ul class="nav nav-vertical">
+						<li>
+							<a class="nav-link px-2 active border border-color-primary" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-home" /></svg>
+								</span>	
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link px-2" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-product" /></svg>
+								</span>
+								<span>Products</span>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link px-2" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-people" /></svg>
+								</span>	
+								<span>Customers</span>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link px-2" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-basket" /></svg>
+								</span>	
+								<span>Shopping</span>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link px-2" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-image" /></svg>
+								</span>	
+								<span>Gallery</span>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link px-2" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-history" /></svg>
+								</span>
+								<span>History</span>
+							</a>
+						</li>
+						<li>
+							<a class="nav-link px-2" href="#">
+								<span class="mr-2">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <use href="#icon-lucide-truck" /></svg>
+								</span>
+								<span>Shipments</span>
+							</a>
+						</li>						
+					</ul>
+			</nav>
+		</div>
+		<!-- aside main part .//end-->
+
+	</aside>
+
+	<main class="flex-1 w-100% overflow-x-hidden overflow-y-auto">
+
+		<header class="d-flex p-3 lg:px-5 align-items-center sticky top-0 z-100 bg-base border-bottom h-14">
+			<button class="btn btn-secondary btn-icon mr-3 md:d-none">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+				    <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				    <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				    <path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<h5 class="m-0 text-xl">Blank page </h5>
+			<div class="d-flex align-items-center gap-2 ml-auto">
+				
+				<a class="btn btn-secondary" href="#">Button</a>
+				
+				<a class="btn btn-primary" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+						<path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+					Button
+				</a>
+				
+				<button id="themeSwitcher" class="btn btn-icon btn-secondary"> 
+					<span class="d-none dark:d-block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+						</svg>
+					</span>
+					<span class="dark:d-none">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+					</span>
+				</button>
+
+				<button class="btn btn-icon btn-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+						<path d="M17 12C17 13.3807 18.1193 14.5 19.5 14.5C20.8807 14.5 22 13.3807 22 12C22 10.6193 20.8807 9.5 19.5 9.5C18.1193 9.5 17 10.6193 17 12Z" fill="currentColor" />
+						<path d="M9.5 12C9.5 13.3807 10.6193 14.5 12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12Z" fill="currentColor" />
+						<path d="M2 12C2 13.3807 3.11929 14.5 4.5 14.5C5.88071 14.5 7 13.3807 7 12C7 10.6193 5.88071 9.5 4.5 9.5C3.11929 9.5 2 10.6193 2 12Z" fill="currentColor" />
+					</svg>									
+				</button>
+							
+			</div>
+		</header>
+
+		<section class="p-3 lg:p-5 bg-lower">
+
+			<div class="d-grid grid-template-cols-1 sm:grid-template-cols-2 lg:grid-template-cols-4 gap-5 w-100%">
+				
+				<article class="card">
+					<div class="card-body lg:h-20">
+						<p class="text-muted">Place any widget</p>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-body lg:h-20">
+						<p class="text-muted">Place any widget</p>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-body lg:h-20">
+						<p class="text-muted">Place any widget</p>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-body lg:h-20">
+						<p class="text-muted">Place any widget</p>
+					</div>
+				</article>
+
+			</div>  <!-- grid.// -->
+
+
+			<header class="mt-6 mb-4">
+				<h5 class="mb-4 text-xl">Another content</h5>
+			</header>
+
+			<article class="card shadow-sm border">
+					<div class="card-body min-h-200">
+
+						<br><br><br>
+						<p class="text-secondary text-center">Your content goes here</p>
+						<br><br><br>
+
+					</div>
+			</article>
+
+
+		</section>
+	</main>
+
+</div>
+
+<!-- icons from  lucide.dev/icons -->
+<svg style="display: none;" width="0" height="0">
+	<symbol id="icon-lucide-home">
+		<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+		<path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+	</symbol>
+
+	<symbol id="icon-lucide-product">
+		<path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/>
+	</symbol>
+
+	<symbol id="icon-lucide-people">
+		<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+	</symbol>
+
+	<symbol id="icon-lucide-basket">
+		<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+	</symbol>
+
+	<symbol id="icon-lucide-image">
+		<rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+	</symbol>
+
+	<symbol id="icon-lucide-history">
+		<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/>
+	</symbol>
+
+	<symbol id="icon-lucide-truck">
+		<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>
+	</symbol>
+
+	<symbol id="icon-lucide-user">
+		<path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/>
+	</symbol>
+</svg>
+
+<!-- icons .//end -->
+
+
+
+
+
+</body>
+</html>
