@@ -84,7 +84,7 @@
 // Card checkboxes
 
 .card-check{ 
-  border:1px solid var(--border-color-base); 
+  border:1px solid var(--border-color-default); 
   &:hover{ border:1px solid var(--primary-400); }
 }
 .card-check:has(input[type="checkbox"]:checked),

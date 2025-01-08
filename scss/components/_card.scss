@@ -10,7 +10,7 @@
   word-wrap: break-word;
   background-color: var(--bg-color-base);
   background-clip: border-box;
-  border:1px solid var(--border-color-base);
+  border:1px solid var(--border-color-default);
   border-radius: $border-radius-base; // from: _base-settings.scss
   img{
     max-width:100%;

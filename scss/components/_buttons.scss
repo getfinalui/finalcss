@@ -74,7 +74,7 @@
   background-color: var(--bg-color-raised);
   color: var(--text-color-base);
   border:1px solid transparent;
-  border-color: var(--border-color-base);
+  border-color: var(--border-color-default);
   border-radius: 8px;
   box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
   &:hover{
@@ -139,8 +139,8 @@
   box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
 }
 .btn-danger{
-  --btn-bg: var(--danger-500);
-  --btn-bg-hover: var(--danger-400);
+  --btn-bg: var(--red-500);
+  --btn-bg-hover: var(--red-400);
   --btn-text-color: var(--text-color-white);
   --btn-border-hover-color: transparent;
   box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
@@ -154,10 +154,10 @@
   box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
 .btn-danger-soft{
-  --btn-bg: var(--bg-color-base);
-  --btn-bg-hover: var(--bg-color-secondary);
+  --btn-bg: var(--red-100);
+  --btn-bg-hover: var(--red-200);
   --btn-text-color: var(--text-color-danger);
-  --btn-border-color: var(--border-color-base);
+  --btn-border-color: var(--border-color-default);
   --btn-border-hover-color: var(--border-color-strong);
   box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
@@ -188,4 +188,3 @@
   --btn-border-color: var(--primary-500);
   --btn-border-hover-color: var(--primary-600);;
 }
-

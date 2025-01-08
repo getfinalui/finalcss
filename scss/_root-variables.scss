@@ -1,0 +1,148 @@
+
+:root, [data-theme=light], .theme-light, [data-theme=static], .theme-static{
+
+
+  // Generates css variables for default-light mode
+
+  @each $num, $value in $neutral_list {
+    --neutral-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $primary_list {
+    --primary-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $primary_list {
+    // static primary colors for primary (will not change on darkmode)
+    --primary-#{$num}-static: #{$value}; 
+  }
+
+  @each $num, $value in $blue_list {
+    --blue-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $orange_list {
+    --orange-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $red_list {
+    --red-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $green_list {
+    --green-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $purple_list {
+    --purple-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $yellow_list {
+    --yellow-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $teal_list {
+    --teal-#{$num}: #{$value};
+  }
+
+  // SEMANIC (ALIAS) COLOR VARIABLES FOR LIGHT-MODE
+
+  --bg-color-base: var(--neutral-0);
+  --bg-color-secondary: var(--neutral-50);
+  --bg-color-lower: var(--neutral-100);
+  --bg-color-raised: var(--neutral-0);
+
+  --border-color-light: var(--neutral-100);
+  --border-color-default: var(--neutral-200);
+  --border-color-strong: var(--neutral-400);
+
+  --text-color-base: var(--neutral-900);
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
+  --text-color-invert: var(--neutral-0);
+  --text-color-primary: var(--primary-600);
+  --text-color-warning: var(--orange-500);
+  --text-color-danger: var(--red-500);
+  --text-color-success: var(--green-600);
+  --text-color-info: var(--teal-500);
+  --text-color-feature: var(--purple-500);
+  --text-color-black: #000; // will not be changed on any theme
+  --text-color-white: #fff; // will not be changed on any theme
+
+  // GET TEXT AND BG COLORS FROM DEFAULT STYLE
+  // This will help if some part of layout has .theme-dark classname
+  color: var(--text-color-base);
+  background-color: var(--bg-color-base);
+
+}
+
+
+
+[data-theme=dark], .theme-dark {
+
+  // Generates css variables for dark theme
+
+   @each $num, $value in $darkmode_neutral_list {
+    --neutral-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_primary_list {
+    --primary-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_blue_list {
+    --blue-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_orange_list {
+    --orange-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_red_list {
+    --red-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_green_list {
+    --green-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_purple_list {
+    --purple-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_yellow_list {
+    --yellow-#{$num}: #{$value};
+  }
+
+  @each $num, $value in $darkmode_teal_list {
+    --teal-#{$num}: #{$value};
+  }
+
+  // SEMANIC (ALIAS) COLOR VARIABLES FOR DARK-MODE
+
+  --bg-color-base: var(--neutral-50); 
+  --bg-color-secondary: var(--neutral-50);
+  --bg-color-lower: var(--neutral-0);
+  --bg-color-raised: var(--neutral-200);
+
+  --border-color-light: var(--neutral-100);
+  --border-color-default: var(--neutral-200);
+  --border-color-strong: var(--neutral-400);
+
+  --text-color-base: var(--neutral-1000);
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
+  --text-color-invert: var(--neutral-0);
+  --text-color-primary: var(--primary-600);
+  --text-color-warning: var(--orange-700);
+  --text-color-danger: var(--red-700);
+  --text-color-success: var(--green-700);
+  --text-color-info: var(--teal-700);
+  --text-color-feature: var(--purple-700);
+
+  // GET DEFAULT TEXT AND BG COLORS FROM DARKMODE STYLE
+  // This will help if some part of layout has .theme-static or .theme-light classname
+  color: var(--text-color-base);
+  background-color: var(--bg-color-base);
+
+}
