@@ -7,53 +7,62 @@
 .bg-raised{ background-color:var(--bg-color-raised);}
 .bg-white{background-color:#fff;}
 .bg-black{ background-color:#000;}
-.bg-dark{background-color:#0f172a;}
+.bg-dark{background-color:#000;}
 
-
-// generate classes for background ex. bg-neutral-900
-$colors_neutral_nums: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000; 
-@each $num in $colors_neutral_nums {
-  .bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
-}
-
-
-// on-hover
-@each $num in $colors_neutral_nums {
-  // hover on element
-  .hover\:bg-neutral-#{$num}:hover { background-color:var(--neutral-#{$num}); }
-  // group hover (parent hover)
-  .group:hover .group-hover\:bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
-}
 
 
 // generate classes for background ex. bg-primary-100 
-$colors_accent_nums: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
-@each $num in $colors_accent_nums {
-  .bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
-  .bg-success-#{$num} { background-color:var(--success-#{$num}); }
-  .bg-danger-#{$num} { background-color:var(--danger-#{$num});  }
-  .bg-warning-#{$num} { background-color:var(--warning-#{$num}); }
-  .bg-feature-#{$num} { background-color:var(--feature-#{$num});  }
-  .bg-info-#{$num} {  background-color:var(--info-#{$num});  }
+@each $num, $value in $neutral_list {
+  .bg-neutral-#{$num} { background-color:var(--neutral-#{$num});  }
+  .hover\:bg-neutral-#{$num}:hover { background-color:var(--neutral-#{$num}); }
+  .group:hover .group-hover\:bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
 }
 
-// on-hover
-@each $num in $colors_accent_nums {
+@each $num, $value in $primary_list {
+  .bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
+  .hover\:bg-primary-#{$num}:hover { background-color:var(--primary-#{$num}); }
+  .group:hover .group-hover\:bg-primary-#{$num} { background-color:var(--primary-#{$num}); }
+}
 
-  // on hover element
-  .hover\:bg-primary-#{$num}:hover { background-color:var(--primary-#{$num});  }
-  .hover\:bg-success-#{$num}:hover { background-color:var(--success-#{$num}); }
-  .hover\:bg-danger-#{$num}:hover { background-color:var(--danger-#{$num});  }
-  .hover\:bg-warning-#{$num}:hover { background-color:var(--warning-#{$num}); }
-  .hover\:bg-feature-#{$num}:hover { background-color:var(--feature-#{$num});  }
-  .hover\:bg-info-#{$num}:hover {  background-color:var(--info-#{$num});  }
+@each $num, $value in $blue_list {
+  .bg-blue-#{$num} { background-color:var(--blue-#{$num});  }
+  .hover\:bg-blue-#{$num}:hover { background-color:var(--blue-#{$num}); }
+  .group:hover .group-hover\:bg-blue-#{$num} { background-color:var(--blue-#{$num}); }
+}
 
-  // group hover (parent hover)
-  .group:hover .group-hover\:bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
-  .group:hover .group-hover\:bg-success-#{$num} { background-color:var(--success-#{$num}); }
-  .group:hover .group-hover\:bg-danger-#{$num} { background-color:var(--danger-#{$num});  }
-  .group:hover .group-hover\:bg-warning-#{$num} { background-color:var(--warning-#{$num}); }
-  .group:hover .group-hover\:bg-feature-#{$num} { background-color:var(--feature-#{$num});  }
-  .group:hover .group-hover\:bg-info-#{$num} {  background-color:var(--info-#{$num});  }
+@each $num, $value in $orange_list {
+  .bg-orange-#{$num} { background-color:var(--orange-#{$num});  }
+  .hover\:bg-orange-#{$num}:hover { background-color:var(--orange-#{$num}); }
+  .group:hover .group-hover\:bg-orange-#{$num} { background-color:var(--orange-#{$num}); }
+}
+
+@each $num, $value in $red_list {
+  .bg-red-#{$num} { background-color:var(--red-#{$num});  }
+  .hover\:bg-red-#{$num}:hover { background-color:var(--red-#{$num}); }
+  .group:hover .group-hover\:bg-red-#{$num} { background-color:var(--red-#{$num}); }
+}
+
+@each $num, $value in $green_list {
+  .bg-green-#{$num} { background-color:var(--green-#{$num});  }
+  .hover\:bg-green-#{$num}:hover { background-color:var(--green-#{$num}); }
+  .group:hover .group-hover\:bg-green-#{$num} { background-color:var(--green-#{$num}); }
+}
+
+@each $num, $value in $yellow_list {
+  .bg-yellow-#{$num} { background-color:var(--yellow-#{$num});  }
+  .hover\:bg-yellow-#{$num}:hover { background-color:var(--yellow-#{$num}); }
+  .group:hover .group-hover\:bg-yellow-#{$num} { background-color:var(--yellow-#{$num}); }
+}
+
+@each $num, $value in $purple_list {
+  .bg-purple-#{$num} { background-color:var(--purple-#{$num});  }
+  .hover\:bg-purple-#{$num}:hover { background-color:var(--purple-#{$num}); }
+  .group:hover .group-hover\:bg-purple-#{$num} { background-color:var(--purple-#{$num}); }
+}
+
+@each $num, $value in $teal_list {
+  .bg-teal-#{$num} { background-color:var(--teal-#{$num});  }
+  .hover\:bg-teal-#{$num}:hover { background-color:var(--teal-#{$num}); }
+  .group:hover .group-hover\:bg-teal-#{$num} { background-color:var(--teal-#{$num}); }
 }

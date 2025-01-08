@@ -1,9 +1,8 @@
 
-/// theme based text color
+/// State based or semantic text colors
 .text-base{ color: var(--text-color-base); }
 .text-secondary{ color: var(--text-color-secondary);  }
 .text-muted{ color: var(--text-color-muted);  }
-.text-active{ color: var(--text-color-primary); }
 .text-primary{ color: var(--text-color-primary); }
 .text-warning{ color: var(--text-color-warning); }
 .text-danger{ color: var(--text-color-danger); }
@@ -15,37 +14,50 @@
 .text-white{ color:#fff; }
 
 
-//// hover 
+//// More text colors with hover support
+@each $num, $value in $blue_list {
+  .text-blue-#{$num} { color:var(--blue-#{$num});  }
+  .hover\:text-blue-#{$num}:hover { color:var(--blue-#{$num}); }
+  .group:hover .group-hover\:text-blue-#{$num} { color:var(--blue-#{$num}); }
+}
 
-// hover on element
-.hover\:text-base:hover { color: var(--text-color-base); }
-.hover\:text-secondary:hover { color: var(--text-color-secondary);  }
-.hover\:text-muted:hover { color: var(--text-color-muted);  }
-.hover\:text-active:hover { color: var(--text-color-primary); }
-.hover\:text-primary:hover { color: var(--text-color-primary); }
-.hover\:text-warning:hover { color: var(--text-color-warning); }
-.hover\:text-danger:hover { color: var(--text-color-danger); }
-.hover\:text-success:hover { color: var(--text-color-success); }
-.hover\:text-info:hover { color: var(--text-color-info); }
-.hover\:text-invert:hover { color: var(--text-color-invert); }
-.hover\:text-black:hover { color:#000; }
-.hover\:text-dark:hover { color:#000; }
-.hover\:text-white:hover { color:#fff; }
+@each $num, $value in $green_list {
+  .text-green-#{$num} { color:var(--green-#{$num});  }
+  .hover\:text-green-#{$num}:hover { color:var(--green-#{$num}); }
+  .group:hover .group-hover\:text-green-#{$num} { color:var(--green-#{$num}); }
+}
 
-// group hover (parent hover)
-.group:hover .group-hover\:text-base{ color: var(--text-color-base); }
-.group:hover .group-hover\:text-secondary{ color: var(--text-color-secondary);  }
-.group:hover .group-hover\:text-muted{ color: var(--text-color-muted);  }
-.group:hover .group-hover\:text-active{ color: var(--text-color-primary); }
-.group:hover .group-hover\:text-primary{ color: var(--text-color-primary); }
-.group:hover .group-hover\:text-warning{ color: var(--text-color-warning); }
-.group:hover .group-hover\:text-danger{ color: var(--text-color-danger); }
-.group:hover .group-hover\:text-success{ color: var(--text-color-success); }
-.group:hover .group-hover\:text-info{ color: var(--text-color-info); }
-.group:hover .group-hover\:text-invert{ color: var(--text-color-invert); }
-.group:hover .group-hover\:text-black{ color:#000; }
-.group:hover .group-hover\:text-dark{ color:#000; }
-.group:hover .group-hover\:text-white{ color:#fff; }
+@each $num, $value in $red_list {
+  .text-red-#{$num} { color:var(--red-#{$num});  }
+  .hover\:text-red-#{$num}:hover { color:var(--red-#{$num}); }
+  .group:hover .group-hover\:text-red-#{$num} { color:var(--red-#{$num}); }
+}
+
+@each $num, $value in $orange_list {
+  .text-orange-#{$num} { color:var(--orange-#{$num});  }
+  .hover\:text-orange-#{$num}:hover { color:var(--orange-#{$num}); }
+  .group:hover .group-hover\:text-orange-#{$num} { color:var(--orange-#{$num}); }
+}
+
+@each $num, $value in $yellow_list {
+  .text-yellow-#{$num} { color:var(--yellow-#{$num});  }
+  .hover\:text-yellow-#{$num}:hover { color:var(--yellow-#{$num}); }
+  .group:hover .group-hover\:text-yellow-#{$num} { color:var(--yellow-#{$num}); }
+}
+
+@each $num, $value in $purple_list {
+  .text-purple-#{$num} { orangcolor:var(--purple-#{$num});  }
+  .hover\:text-purple-#{$num}:hover { color:var(--purple-#{$num}); }
+  .group:hover .group-hover\:text-purple-#{$num} { color:var(--purple-#{$num}); }
+}
+
+@each $num, $value in $teal_list {
+  .text-teal-#{$num} { color:var(--teal-#{$num});  }
+  .hover\:text-teal-#{$num}:hover { color:var(--teal-#{$num}); }
+  .group:hover .group-hover\:text-teal-#{$num} { color:var(--teal-#{$num}); }
+}
+
+
 
 
 /// text utility classes
