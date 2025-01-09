@@ -23,15 +23,15 @@
 .badge:empty { display: none; }
 
 .badge-success{
-  --badge-bg: var(--success-100);
+  --badge-bg: var(--green-100);
   --badge-text-color: var(--text-color-success);
 }
 .badge-warning{
-  --badge-bg: var(--warning-100);
+  --badge-bg: var(--orange-100);
   --badge-text-color: var(--text-color-warning);
 }
 .badge-danger{
-  --badge-bg: var(--danger-100);
+  --badge-bg: var(--red-100);
   --badge-text-color: var(--text-color-danger);
 }
 .badge-primary{
@@ -39,7 +39,7 @@
   --badge-text-color: var(--text-color-primary);
 }
 .badge-info{
-  --badge-bg: var(--info-100);
+  --badge-bg: var(--teal-100);
   --badge-text-color: var(--text-color-info);
 }
 .badge-neutral{
