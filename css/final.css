@@ -119,21 +119,21 @@
   --text-color-black: #000;
   --text-color-white: #fff;
   color: var(--text-color-base);
-  background-color: var(--bg-color-base);
+  background-color: var(--neutral-0);
 }
 
 [data-theme=dark], .theme-dark {
   --neutral-0: #000;
-  --neutral-50: #030712;
-  --neutral-100: #141829;
-  --neutral-200: #1f2337;
-  --neutral-300: #373e51;
-  --neutral-400: #4b5563;
-  --neutral-500: #6b7280;
-  --neutral-600: #9ca3af;
-  --neutral-700: #d1d5db;
-  --neutral-800: #e5e7eb;
-  --neutral-900: #f3f4f6;
+  --neutral-50: #0d0d0d;
+  --neutral-100: #171717;
+  --neutral-200: #262626;
+  --neutral-300: #404040;
+  --neutral-400: #525252;
+  --neutral-500: #737373;
+  --neutral-600: #a3a3a3;
+  --neutral-700: #d4d4d4;
+  --neutral-800: #e5e5e5;
+  --neutral-900: #f5f5f5;
   --neutral-1000: #fff;
   --neutral-1000-alpha: rgba(255, 255, 255, 0.1);
   --primary-100: #1e1b4b;
@@ -226,7 +226,7 @@
   --text-color-info: var(--teal-700);
   --text-color-feature: var(--purple-700);
   color: var(--text-color-base);
-  background-color: var(--bg-color-base);
+  background-color: var(--neutral-0);
 }
 
 html {
@@ -249,7 +249,7 @@ body {
   font-optical-sizing: auto;
   line-height: 1.5;
   color: var(--text-color-base);
-  background-color: var(--bg-color-base);
+  background-color: var(--bg-nautral-0);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -2148,17 +2148,17 @@ dialog::backdrop {
 }
 
 .badge-success {
-  --badge-bg: var(--success-100);
+  --badge-bg: var(--green-100);
   --badge-text-color: var(--text-color-success);
 }
 
 .badge-warning {
-  --badge-bg: var(--warning-100);
+  --badge-bg: var(--orange-100);
   --badge-text-color: var(--text-color-warning);
 }
 
 .badge-danger {
-  --badge-bg: var(--danger-100);
+  --badge-bg: var(--red-100);
   --badge-text-color: var(--text-color-danger);
 }
 
@@ -2168,7 +2168,7 @@ dialog::backdrop {
 }
 
 .badge-info {
-  --badge-bg: var(--info-100);
+  --badge-bg: var(--teal-100);
   --badge-text-color: var(--text-color-info);
 }
 
