@@ -122,8 +122,6 @@ small {
   font-size:$font-size-sm;
 }
 
-
-
 // Sub and Sup
 //
 // Prevent `sub` and `sup` elements from affecting the line height in
@@ -471,4 +469,10 @@ progress {
 
 [hidden] {
   display: none !important;
+}
+
+// Number info or variable
+var{
+  font-style: normal;
+  line-height: inherit;
 }

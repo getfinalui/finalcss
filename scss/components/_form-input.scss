@@ -3,9 +3,9 @@
   display: block;
   min-width:120px;
   width: 100%;
-  height: 38px;
-  padding: .36rem .6rem;
-  line-height: 1.2;
+  min-height: 38px;
+  padding: .3rem .6rem;
+  line-height: 1.4;
   color: var(--text-color-base);
   appearance: none; // Fix appearance for date inputs in Safari
   background-color: var(--neutral-50);
@@ -22,9 +22,9 @@
 
   // Customize the `:focus` state to imitate native WebKit styles.
   &:focus {
-    border-color: var(--primary-500);
-    outline: 0;
-    box-shadow: 0 0 0 1px blue;
+    outline-offset:1px;
+    outline-color: var(--primary-500);
+    // outline-width: 2px;
   }
   &:hover {
     border-color: var(--neutral-500);
