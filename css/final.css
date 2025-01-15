@@ -124,7 +124,7 @@
 
 [data-theme=dark], .theme-dark {
   --neutral-0: #000;
-  --neutral-50: #0d0d0d;
+  --neutral-50: #101010;
   --neutral-100: #171717;
   --neutral-200: #262626;
   --neutral-300: #404040;
@@ -569,6 +569,10 @@ var {
   margin-left: auto;
 }
 
+.container {
+  max-width: 1440px;
+}
+
 .container-sm {
   max-width: 640px;
 }
@@ -579,10 +583,6 @@ var {
 
 .container-lg {
   max-width: 1200px;
-}
-
-.container {
-  max-width: 1440px;
 }
 
 .row {
@@ -1787,10 +1787,10 @@ var {
 }
 
 .btn-danger-soft {
-  --btn-bg: var(--red-100);
-  --btn-bg-hover: var(--red-200);
+  --btn-bg: var(--bg-color-raised);
+  --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-danger);
-  --btn-border-color: var(--border-color-default);
+  --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
   box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
 }
@@ -3911,93 +3911,93 @@ dialog::backdrop {
     place-content: stretch;
   }
 }
-@media (max-width: 920px) {
-  .sm-only\:d-block {
+@media (max-width: 1024px) {
+  .tablet\:d-block {
     display: block;
   }
 
-  .sm-only\:d-inline {
+  .tablet\:d-inline {
     display: inline;
   }
 
-  .sm-only\:d-inline-block {
+  .tablet\:d-inline-block {
     display: inline-block;
   }
 
-  .sm-only\:d-flex {
+  .tablet\:d-flex {
     display: flex;
   }
 
-  .sm-only\:d-inline-flex {
+  .tablet\:d-inline-flex {
     display: inline-flex;
   }
 
-  .sm-only\:d-grid {
+  .tablet\:d-grid {
     display: grid;
   }
 
-  .sm-only\:d-inline-grid {
+  .tablet\:d-inline-grid {
     display: inline-grid;
   }
 
-  .sm-only\:d-none {
+  .tablet\:d-none {
     display: none;
   }
 
-  .sm-only\:hidden {
+  .tablet\:hidden {
     display: none;
   }
 
-  .sm-only\:flex-row {
+  .tablet\:flex-row {
     flex-direction: row;
   }
 
-  .sm-only\:flex-col {
+  .tablet\:flex-col {
     flex-direction: column;
   }
 }
-@media (max-width: 640px) {
-  .xs-only\:d-block {
+@media (max-width: 639px) {
+  .mobile\:d-block {
     display: block;
   }
 
-  .xs-only\:d-inline {
+  .mobile\:d-inline {
     display: inline;
   }
 
-  .xs-only\:d-inline-block {
+  .mobile\:d-inline-block {
     display: inline-block;
   }
 
-  .xs-only\:d-flex {
+  .mobile\:d-flex {
     display: flex;
   }
 
-  .xs-only\:d-inline-flex {
+  .mobile\:d-inline-flex {
     display: inline-flex;
   }
 
-  .xs-only\:d-grid {
+  .mobile\:d-grid {
     display: grid;
   }
 
-  .xs-only\:d-inline-grid {
+  .mobile\:d-inline-grid {
     display: inline-grid;
   }
 
-  .xs-only\:d-none {
+  .mobile\:d-none {
     display: none;
   }
 
-  .xs-only\:hidden {
+  .mobile\:hidden {
     display: none;
   }
 
-  .xs-only\:flex-row {
+  .mobile\:flex-row {
     flex-direction: row;
   }
 
-  .xs-only\:flex-col {
+  .mobile\:flex-col {
     flex-direction: column;
   }
 }
@@ -4106,32 +4106,6 @@ dialog::backdrop {
   }
 
   .xl\:visibility-collapse {
-    visibility: collapse;
-  }
-}
-@media (max-width: 920px) {
-  .sm-only\:visibility-visible {
-    visibility: visible;
-  }
-
-  .sm-only\:visibility-hidden {
-    visibility: hidden;
-  }
-
-  .sm-only\:visibility-collapse {
-    visibility: collapse;
-  }
-}
-@media (max-width: 640px) {
-  .xs-only\:visibility-visible {
-    visibility: visible;
-  }
-
-  .xs-only\:visibility-hidden {
-    visibility: hidden;
-  }
-
-  .xs-only\:visibility-collapse {
     visibility: collapse;
   }
 }

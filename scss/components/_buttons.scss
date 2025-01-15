@@ -154,10 +154,10 @@
   box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
 .btn-danger-soft{
-  --btn-bg: var(--red-100);
-  --btn-bg-hover: var(--red-200);
+  --btn-bg: var(--bg-color-raised);
+  --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-danger);
-  --btn-border-color: var(--border-color-default);
+  --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
   box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }

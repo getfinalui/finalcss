@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="h-100%">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,7 +10,6 @@
   <title>Final CSS - Example Admin template (finalcss.com)</title>
 
 	<script type="text/javascript">
-	
 	// Check localStorage for saved theme and assign that
 	const htmlElement = document.documentElement;
 	const savedTheme = localStorage.getItem('site-theme');
@@ -18,19 +17,14 @@
 			htmlElement.setAttribute('data-theme', savedTheme);
 	}
 	// Need to load DOM tree to detect theme switching button
-	document.addEventListener('DOMContentLoaded', () => {
-		const themeSwitcher = document.getElementById('themeSwitcher');
-		themeSwitcher.addEventListener('click', () => {
-		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
-		    // Set the new theme on the body element
-		    htmlElement.setAttribute('data-theme', newTheme);          
-		    // Save the new theme in localStorage
-		    localStorage.setItem('site-theme', newTheme);
-		});	
-
-	});
-	// end of DOM load
+	function themeSwitcher() {
+				const currentTheme = htmlElement.getAttribute('data-theme');
+				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				// Set the new theme on the body element
+				htmlElement.setAttribute('data-theme', newTheme);          
+				// Save the new theme in localStorage
+				localStorage.setItem('site-theme', newTheme);
+	}
 	</script>
 
 
@@ -40,16 +34,17 @@
 </head>
 <body>
 
-
-<header class="py-2 border-bottom">	
+<header class="py-2 border-bottom">
 	<div class="container">
-		<div class="d-flex align-items-center justify-content-between">
+		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+			
 			<a href="https://finalcss.com" class="text-xl hover:opacity-80">
 				<img src="logo-finalui.svg" height="40" alt="">
 			</a>
+			
 			<div>
-				<button class="btn btn-neutral"> London, Buffalo city, A block  </button>
-				<button id="themeSwitcher" class="btn btn-icon btn-secondary">
+				<button class="btn btn-neutral"> London, Buffalo city, A block  </button>			
+				<button onclick="themeSwitcher()" class="btn btn-icon btn-secondary">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
@@ -59,12 +54,10 @@
 						</svg>
 					</span>
 				</button>
-				
 				<button class="btn btn-secondary">  Sign up 	</button>
 				<button class="btn btn-primary">  Sign in 	</button>
-				
-
 			</div>
+
 		</div>
 	</div> <!-- container end.// -->
 </header> <!-- section-header end.// -->
@@ -297,8 +290,6 @@
 
 </div> <!-- container .//  -->
 </section>
-<!-- ============== SECTION CONTENT END// ============== -->
-
 
 
 <footer class="py-8 bg-white border-top">
