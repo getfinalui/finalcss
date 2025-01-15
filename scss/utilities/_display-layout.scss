@@ -101,8 +101,10 @@ $layout-utils: (
 }
 
 
-// Breakpointys for only smaller screen sizes
-@each $breakpoint, $size in $breakpoints-only {
+// Breakpoint for max-width screen size.
+// For ex: "mobile:" means @media(max-width:639px)
+// control in _base-settings.scss
+@each $breakpoint, $size in $breakpoints-device {
   @media (max-width: #{$size}){
     // breakpoinst styles
      .#{$breakpoint}\:d-block{ display:block }
@@ -133,7 +135,6 @@ $layout-utils: (
   .dark\:hidden{ display:none }
 }
 
-// helper classes
+// helper class
 .flex-center{ justify-content:center; align-items:center }
 
-//css grid utilities

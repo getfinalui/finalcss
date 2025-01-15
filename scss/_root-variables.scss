@@ -68,7 +68,7 @@
   --text-color-feature: var(--purple-500);
   --text-color-black: #000; // will not be changed on any theme
   --text-color-white: #fff; // will not be changed on any theme
-
+ 
   // GET TEXT AND BG COLORS FROM DEFAULT STYLE
   // This will help if some part of layout has .theme-dark classname
   color: var(--text-color-base);

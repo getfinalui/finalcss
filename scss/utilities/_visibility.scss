@@ -24,14 +24,3 @@
     // end breakpoint
   }
 }
-
-// Breakpointys for only smaller screen sizes
-@each $breakpoint, $size in $breakpoints-only {
-  @media (max-width: #{$size}){
-    // breakpoinst styles
-    .#{$breakpoint}\:visibility-visible{ visibility: visible;}
-    .#{$breakpoint}\:visibility-hidden{ visibility: hidden;}
-    .#{$breakpoint}\:visibility-collapse{ visibility: collapse;}
-    // end breakpoint
-  }
-}
