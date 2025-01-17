@@ -44,13 +44,13 @@
 <body class="bg-base">
 
 
-	<header class="bg-neutral-100 theme-dark py-4 md:py-2">
+	<header class="bg-neutral-100 theme-dark py-4 sm:py-2">
 		<div class="container">
-			<div class="d-flex flex-col md:flex-row align-items-center">
+			<div class="d-flex flex-col sm:flex-row align-items-center">
 				<div class="md:w-20%">
 					<a href="https://finalcss.com" style="color:var(--primary-700)" class="text-xl font-semibold">Final CSS</a>
 				</div>
-				<nav class="nav mx-auto my-3 md:my-0">
+				<nav class="nav mx-auto my-3 sm:my-0">
 					<a href="#" class="nav-link">Home</a>
 					<a href="#" class="nav-link">About</a>
 					<a href="#" class="nav-link">Something</a>
@@ -82,18 +82,20 @@
 		
 		<h3 class="mb-6">Data table</h3>
 
-		<div class="md:d-flex mb-4">
+		<div class="sm:d-flex mb-4">
 			
-			<div class="d-flex flex-wrap md:flex-nowrap gap-2 mr-auto mb-4 md:mb-0">
-				<input class="form-control md:min-w-80" type="search" placeholder="Search" name="">
-				<select class="form-select w-40%">
+			<div class="d-flex flex-wrap flex-grow md:flex-grow-0 sm:flex-nowrap gap-3 lg:mr-auto mb-3 sm:mb-0 mr-3 md:mr-auto">
+				
+				<input class="form-control sm:flex-grow md:min-w-100" type="search" placeholder="Search" name="">
+
+				<select class="form-select w-40% md:min-w-40">
 					<option>All category</option>
 					<option>Drinks</option>
 					<option>Food</option>
 					<option>Electronics</option>
 					<option>Others</option>
 				</select>
-				<select class="form-select w-40%">
+				<select class="form-select w-40% md:min-w-40">
 					<option>Any status</option>
 					<option>Confirmed</option>
 					<option>Pending</option>

@@ -74,6 +74,10 @@ $layout-utils: (
   'place-content-stretch' : (place-content: stretch),
 );
 
+// Helper class 
+// for shorter versions of justify-content-center + align-items-center
+.flex-center{ justify-content:center; align-items:center }
+
 
 // Generate the base utility classes; 
 @each $name, $properties in $layout-utils {
@@ -87,7 +91,14 @@ $layout-utils: (
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+
+  $media_type: min-width !default;
+
+  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm'){ 
+    $media_type: 'max-width';
+  }
+
+  @media ( $media_type: #{$size}){
     // breakpoinst styles
     @each $name, $properties in $layout-utils {
       .#{$breakpoint}\:#{$name} {
@@ -100,27 +111,6 @@ $layout-utils: (
   }
 }
 
-
-// Breakpoint for max-width screen size.
-// For ex: "mobile:" means @media(max-width:639px)
-// control in _base-settings.scss
-@each $breakpoint, $size in $breakpoints-device {
-  @media (max-width: #{$size}){
-    // breakpoinst styles
-     .#{$breakpoint}\:d-block{ display:block }
-     .#{$breakpoint}\:d-inline{ display:inline }
-     .#{$breakpoint}\:d-inline-block{ display:inline-block }
-     .#{$breakpoint}\:d-flex{ display:flex }
-     .#{$breakpoint}\:d-inline-flex{ display:inline-flex }
-     .#{$breakpoint}\:d-grid{ display:grid }
-     .#{$breakpoint}\:d-inline-grid{ display:inline-grid }
-     .#{$breakpoint}\:d-none{ display:none }
-     .#{$breakpoint}\:hidden{ display:none }
-     .#{$breakpoint}\:flex-row{flex-direction:row}
-     .#{$breakpoint}\:flex-col{flex-direction:column}
-    // end breakpoint
-  }
-}
 
 /// Show/hide based on theme color
 [data-theme=dark], .darkmode{
@@ -135,6 +125,5 @@ $layout-utils: (
   .dark\:hidden{ display:none }
 }
 
-// helper class
-.flex-center{ justify-content:center; align-items:center }
+
 

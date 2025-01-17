@@ -7,8 +7,8 @@
 .rounded-md {border-radius: $border-radius-md;}
 .rounded-lg {border-radius: $border-radius-lg;}
 .rounded-xl {border-radius: $border-radius-xl;}
-.rounded-full { border-radius: 400px; }
-.rounded-circle, { border-radius: 50%; }
+.rounded-full { border-radius: 400px; flex-shrink:0; }
+.rounded-circle, { border-radius: 50%; flex-shrink:0; }
 
 
 .rounded-top {

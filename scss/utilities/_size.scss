@@ -79,7 +79,14 @@ $size_map_percent:(
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+  
+  $media_type: min-width !default;
+  
+  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm') { 
+    $media_type: 'max-width';
+  }
+
+  @media ( $media_type: #{$size}){
     
     // breakpoinst styles
     @each $name, $value in $size_map {
@@ -102,6 +109,7 @@ $size_map_percent:(
     // end breakpoint
   }
 }
+
 
 // Other sizes
 .w-100vw { width: 100vw;}

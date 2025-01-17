@@ -1,11 +1,7 @@
 
 // All Containers have left right padding
 .container,
-.container-fluid,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
+.container-fluid {
   width: 100%;
   padding-right: 20px;
   padding-left: 20px;
@@ -13,11 +9,7 @@
   margin-left: auto;
 }
 
-.container{ max-width: $screen-xl; } // max large screen 1440
-.container-sm{max-width: $screen-sm;} // tablet 640
-.container-md{max-width: $screen-md;} // large tablet 920 
-.container-lg{max-width: $screen-lg;} // laptop 1200
-
+.container{ max-width: $container-width; } // max large screen 1440
 
 .row {
   --flex-gap: 20px; // default gap // gap.scss file
@@ -54,6 +46,7 @@
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
+
   @media (min-width: #{$size}){
     // breakpoinst styles
     .#{$breakpoint}\:row-cols-auto > * { width: auto;}

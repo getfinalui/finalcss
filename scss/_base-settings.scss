@@ -2,24 +2,21 @@
 
 // WE USE VARIABLES DIRECTLY INTO COMPONENTS BY IMPLEMENTING CSS VARIABLE
 
-// Breakpoints (Starting point)
-$screen-sm: 640px;
-$screen-md: 920px;
-$screen-lg: 1200px;
-$screen-xl: 1440px;
+// largest container
+$container-width: 1440px;
 
-// breakpoint sizes to generate utility classes
+// Breakpoint sizes to generate utility classes
+// [from 0 to sm] mobile 
+// [from sm to md] tablet
+// [from md to lg] laptop 
+
 $breakpoints: (
-  'sm': 640px,  // @media (min-width: 640px) { ... }
-  'md': 920px,  // @media (min-width: 920px) { ... }
+  'sm': 680px,  // @media (min-width: 680px) { ... }
+  'md': 920px, // @media (min-width: 920px) { ... }
   'lg': 1200px, // @media (min-width: 1200px) { ... }
-  'xl': 1440px  // @media (min-width: 1440px) { ... }
-);
-
-// breakpoint sizes for device only (Used in _display-layout.scss)
-$breakpoints-device: (  
-  'tablet': 1024px,  // @media (max-width: 1024px) { ... }
-  'mobile': 639px,  // @media (max-width: 639px) { ... }
+  'max-lg': 1999px,  // @media (max-width: 1999px) { ... }
+  'max-md': 919px, // @media (max-width: 919px) { ... }
+  'max-sm': 679px,  // @media (max-width: 679px) { ... }
 );
 
 
@@ -39,7 +36,6 @@ $font-family-base:           system-ui, -apple-system, "Helvetica Neue", "Segoe 
 $font-size-root:              15px;
 $font-size-base:              1rem !default; // Assumes the browser default size;
 $font-size-sm:                0.875rem !default;
-$font-size-lg:                1.25rem !default;
 $font-size-sub-sup:           .75em !default;
 
 
