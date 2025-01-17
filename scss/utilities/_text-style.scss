@@ -94,10 +94,18 @@
 .text-right {text-align: right;}
 .text-center { text-align: center;}
 
+
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+
+  $media_type: min-width !default;
+  
+  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm') { 
+    $media_type: 'max-width';
+  }
+
+  @media ( $media_type: #{$size}){
     
     .#{$breakpoint}\:text-left {text-align: left;}
     .#{$breakpoint}\:text-right {text-align: right;}
@@ -107,7 +115,4 @@
   }
 }
 
-.article-wrap{
-  h1,h2,h3,h4,h5,h6{ margin-bottom: 0.6rem; margin-top:1.8rem}
-  p{ margin-bottom:0.8rem}
-}
+

@@ -21,8 +21,17 @@ $gap_map:(
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
+
+
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+
+  $media_type: min-width !default;
+  
+  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm'){ 
+    $media_type: 'max-width';
+  }
+
+  @media ( $media_type: #{$size}){
 
     @each $name, $value in $gap_map {
       .#{$breakpoint}\:gap-#{$name} { gap: #{$value}; --flex-gap:#{$value}; }

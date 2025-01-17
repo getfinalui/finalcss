@@ -32,6 +32,7 @@ $margin_map: (
   "72": 288px,
   "80": 320px,
   "96": 384px,
+  "100": 400px,
 );
 
 // * Generates sizes in px, for ex:
@@ -48,8 +49,17 @@ $margin_map: (
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
+
+
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+  
+  $media_type: min-width !default;
+  
+  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm'){ 
+    $media_type: 'max-width';
+  }
+
+  @media ( $media_type: #{$size}){
     // breakpoinst styles
     @each $name, $value in $margin_map {
       .#{$breakpoint}\:m-#{$name} {  margin: #{$value}; }
