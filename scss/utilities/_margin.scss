@@ -51,15 +51,8 @@ $margin_map: (
 // breakpoints can be changed from base-settings.scss
 
 
-@each $breakpoint, $size in $breakpoints {
-  
-  $media_type: min-width !default;
-  
-  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm'){ 
-    $media_type: 'max-width';
-  }
-
-  @media ( $media_type: #{$size}){
+@each $breakpoint, $screen_size in $breakpoints {
+  @media ($screen_size){
     // breakpoinst styles
     @each $name, $value in $margin_map {
       .#{$breakpoint}\:m-#{$name} {  margin: #{$value}; }

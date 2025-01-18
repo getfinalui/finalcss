@@ -6,17 +6,18 @@
 $container-width: 1440px;
 
 // Breakpoint sizes to generate utility classes
-// [from 0 to sm] mobile 
-// [from sm to md] tablet
-// [from md to lg] laptop 
-
+// Let's keep simple
 $breakpoints: (
-  'sm': 680px,  // @media (min-width: 680px) { ... }
-  'md': 920px, // @media (min-width: 920px) { ... }
-  'lg': 1200px, // @media (min-width: 1200px) { ... }
-  'max-lg': 1999px,  // @media (max-width: 1999px) { ... }
-  'max-md': 919px, // @media (max-width: 919px) { ... }
-  'max-sm': 679px,  // @media (max-width: 679px) { ... }
+  
+   // *** Standart breakpoint to override larger screens *** //
+  'sm': 'min-width: 641px',  // not mobile, - small tablet and up
+  'md': 'min-width: 921px', // medium and up - larger tablet and up
+  'lg': 'min-width: 1201px', // large and up - desktop and any widescreen
+  
+  // *** Additional for tablet and mobile only styles *** //
+  'tablet': 'max-width: 1200px', // Tablet and any smaller device
+  'mobile': 'max-width: 640px',  // mobile only
+
 );
 
 
@@ -26,7 +27,7 @@ $border-radius-md:   8px !default;
 $border-radius-lg:   12px !default;
 $border-radius-xl:   16px !default;
 
-// set base border radius for button, input, select, card, alert, nav, tab,
+// set base border radius for button, input, select, card, alert, nav,
 $border-radius-base:  $border-radius-md;
 
 // Typography

@@ -13,8 +13,8 @@
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
-@each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+@each $breakpoint, $screen_size in $breakpoints {
+  @media ($screen_size){
     // breakpoinst styles
     .#{$breakpoint}\:border {border: 1px solid var(--border-color-default);}
     .#{$breakpoint}\:border-0 { border: 0 !important; }

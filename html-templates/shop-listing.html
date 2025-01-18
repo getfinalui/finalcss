@@ -1,205 +1,84 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
-  <meta name="author" content="Type name">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Type some info">
+	<meta name="author" content="Type name">
 
-  <title>Website layout sample </title>
+	<title>Website layout sample </title>
 
-  <!-- Bootstrap css -->
-  <link href="css/bootstrap.css?v=2.0" rel="stylesheet" type="text/css" />
+	<!-- FinalCSS -->
+	<link href="../css/final.css" rel="stylesheet" type="text/css" />
 
-  <!-- Custom css -->
-  <link href="css/ui.css?v=2.0" rel="stylesheet" type="text/css" />
-  <link href="css/responsive.css?v=2.0" rel="stylesheet" type="text/css" />
-
-  <!-- Font awesome 5 -->
-  <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
-
+	<script type="text/javascript">
+		function showHide(elementID) {
+			const element = document.getElementById(elementID);
+			if (window.getComputedStyle(element).display === "none") {
+				element.style.display = "block";
+			} else {
+				element.style.display = "none";
+			}
+		}
+	</script>
 </head>
 <body>
 
-<header class="section-header">
-	<section class="header-main border-bottom py-3">
-		<div class="container">
-			<div class="row gx-2 gy-3">
-				<div class="col-lg col-md col-6 flex-grow-0">
-					<a href="https://ecommerce-ui.com#templates" class="brand-wrap me-4">
-						<img class="logo" height="40" src="images/logo.svg">
-					</a> <!-- brand-wrap end.// -->
-				</div>
-				<div class="col-lg col-md col-6 flex-grow-0">
-					<div class="dropdown float-end">
-						<button data-bs-toggle="dropdown" class="dropdown-toggle btn btn-primary text-nowrap"> 
-							<i class="fa me-1 fa-bars"></i> Categories 
-						</button>
-						<nav class="dropdown-menu dropdown-large">
-						 <ul class="row row-cols-2 row-cols-lg-3 list-unstyled nav-pills g-0">
-							<li><a class="nav-link" href="#">Laptops</a></li>
-							<li><a class="nav-link" href="#">Cameras</a></li>
-							<li><a class="nav-link" href="#">Gadgets</a></li>
-							<li><a class="nav-link" href="#">Accessories</a></li>
-							<li><a class="nav-link" href="#">Smartphones</a></li>
-							<li><a class="nav-link" href="#">Smartwatches</a></li>
-							<li><a class="nav-link" href="#">Headsets</a></li>
-							<li><a class="nav-link" href="#">Gamings</a></li>
-							<li><a class="nav-link" href="#">Apple</a></li>
-							<li><a class="nav-link" href="#">Lacetti</a></li>
-							<li><a class="nav-link" href="#">Toyota</a></li>
-							<li><a class="nav-link" href="#">Hyundai</a></li>
-							<li><a class="nav-link" href="#">Mercedes</a></li>
-							<li><a class="nav-link" href="#">Chevrolet</a></li>
-							<li><a class="nav-link" href="#">Lacetti</a></li>
-							<li><a class="nav-link" href="#">Hyundai</a></li>
-							<li><a class="nav-link" href="#">Office tech</a></li>
-							<li><a class="nav-link" href="#">Home equipments</a></li>
-						 </ul>
-					    </nav> <!-- dropdown-menu end.// -->
-					</div> <!-- dropdown end.// -->
-				</div> <!-- col end.// -->
-				
-				<div class="col-lg col-md order-lg-last">
-					<div class="float-md-end">
-						<a href="#" class="btn btn-light"> 
-					   	 <i class="fa fa-user"></i>  
-					   	 <span class="ms-1 d-none d-sm-inline-block"> Sign in  </span> 
-						</a>
-						<a href="#" class="btn btn-light"> 
-							<i class="fa fa-heart"></i> 
-							<span class="ms-1 d-none d-sm-inline-block"> Wishlist  </span>    
-						</a>
-						<a data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-light"> 
-							<i class="fa fa-shopping-cart me-1"></i>  My cart  
-						</a>
+<header class="py-2 lg:py-3 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap flex-col sm:flex-row gap-3 align-items-center justify-content-between">
+      
+      <a href="https://finalcss.com" class="text-xl hover:opacity-80">
+        <img src="logo-finalui.svg" height="40" alt="">
+      </a>
 
-						<button class="btn btn-light d-md-none ms-2 float-end" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-						   Menu
-						</button>
-					</div>
-				</div>
+      <div class="md:w-40% mr-4">
+        <form class="d-flex w-100% mx-3">
+          <input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
+          <button class="rounded-left-0 btn btn-secondary" style="margin-left:-1px">
+            Search
+          </button>
+        </form>
+      </div>
+      
+      <div>
+        <button class="btn btn-secondary"> Wishlist 	</button>	
+        <button class="btn btn-secondary">  Sign up 	</button>	
+        <button class="btn btn-primary">  My cart (0) 	</button>
+      </div>
 
-				<div class="col-lg-3 col-xl-4 col-xxl-5 col-md-12 order-lg-3">
-					<form action="#">
-						<div class="input-group">
-							<input type="search" class="form-control" placeholder="Search">
-							<button class="input-group-btn btn-icon btn btn-light">
-								 <i class="fa fa-search"></i> 
-							</button>
-						</div> <!-- input-group end.// -->
-					</form> <!-- search-wrap end.// -->
-				</div> <!-- col end.// -->
-
-			</div> <!-- row end.// -->
-		</div> <!-- container end.// -->
-	</section> <!-- header-main end.// -->
-
-	<nav class="navbar py-0 py-md-2 navbar-expand-md navbar-light border-bottom">
-		<div class="container">
-			<div class="navbar-collapse collapse" id="main_nav" style="">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							All templates
-						</a>
-						<nav class="dropdown-menu p-4">
-							<!-- megamenu-inner -->
-							<div class="d-flex flex-wrap flex-sm-nowrap">
-								<div style="width: 12rem">
-									
-									<h6>Ads website</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-ads-index.html"> Ads home </a> </li>
-										<li><a class="text-body" href="p-ads-list.html"> Ads listing </a> </li>
-										<li><a class="text-body" href="p-ads-detail.html"> Ads detail </a> </li>
-									</ul>
-	
-									<h6>Techstore</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-techstore-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-techstore-list.html"> Listing view </a> </li>
-										<li><a class="text-body" href="p-techstore-detail.html"> Item details </a> </li>
-									</ul>
-	
-								</div>
-								<div style="width: 12rem">
-									
-									<h6>Marketplace</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-market-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-market-list.html"> Listing view </a> </li>
-										<li><a class="text-body" href="p-market-list-grid.html"> Grid view </a> </li>
-										<li><a class="text-body" href="p-market-detail.html"> Item detail </a> </li>
-										<li><a class="text-body" href="p-market-cart.html"> Cart page </a> </li>
-										<li><a class="text-body" href="p-market-order.html"> Order page </a> </li>
-									</ul>
-	
-								</div>
-								<div style="width: 12rem">
-	
-									<h6>Food order</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-food-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-food-detail.html"> Restaurant foods </a> </li>
-										<li><a class="text-body" href="p-food-order.html">  Food order </a> </li>
-									</ul>
-	
-									<h6>Common pages</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-info-pricing.html"> Pricing page </a> </li>
-										<li><a class="text-body" href="p-user-profile.html">  User profile </a> </li>
-										<li><a class="text-body" href="p-user-signup.html">  User register </a> </li>
-									</ul>
-								</div>
-							</div>
-							<figure class="p-5 text-center bg-warning-subtle rounded">
-									<a href="https://ecommerce-ui.com#templates" class="btn btn-warning">Preview all templates</a>
-							</figure>
-							<!-- megamenu-inner .// -->
-						</nav> <!-- dropdown-menu .// -->
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Pages
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="p-techstore-index.html"> Page home </a> </li>
-							<li> <a class="dropdown-item" href="p-techstore-list.html"> Page listing </a> </li>
-							<li> <a class="dropdown-item" href="p-techstore-detail.html"> Page detail </a> </li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Services </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Projects </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Services </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Projects </a>
-					</li>
-				</ul>
-			</div> <!-- collapse .// -->
-		</div> <!-- container .// -->
-	</nav>
-	
+    </div>
+  </div> <!-- container end.// -->
 </header> <!-- section-header end.// -->
-
+  
+<nav class="border-bottom py-1">
+  <div  class="container">
+    <ul class="nav">
+      <li><a href="#main" class="nav-link">Hot offers</a></li>
+      <li><a href="#about" class="nav-link">Recommends</a></li>
+      <li><a href="#features" class="nav-link">Gift boxes</a></li>
+      <li><a href="#faq" class="nav-link">New arrivals</a></li>
+      <li><a href="#" class="nav-link">Bestsellers</a></li>
+      <li><a href="#" class="nav-link">Books</a></li>
+      <li><a href="#" class="nav-link">Other items</a></li>
+    </ul>
+  </div> <!-- container end.// -->
+</nav>
 
 <!-- ============== SECTION PAGETOP ============== -->
-<section class="bg-light py-4">
+<section class="bg-neutral-100 border-bottom py-12">
 <div class="container">
-	<ol class="breadcrumb mt-2">
-		<li class="breadcrumb-item"><a href="#" class="text-muted">Home</a></li>
-		<li class="breadcrumb-item"><a href="#" class="text-muted">Technology</a></li>
-		<li class="breadcrumb-item"><a href="#" class="text-muted">Gadgets</a></li>
+	
+	<ol class="d-flex gap-3 mb-3">
+		<li> <a href="shop-index.html">Back to main</a></li>
+		<li>/ <a href="#">Technology</a></li>
+		<li>/ <a href="#">Gadgets</a></li>
 	</ol>
+
 	<h2>Tech Gadgets</h2>
 	
-	<p style="max-width: 700px" class="text-muted">
+	<p style="max-width: 700px" class="text-secondary">
 	Choose from over 7,900 electronics. Explore items created by our global community of independent designers, confident they're hand-reviewed by us.</p>
 	
 </div> <!-- container //  -->
@@ -208,468 +87,339 @@
 
 
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="padding-y">
+<section class="py-10">
 <div class="container">
 
-<div class="row">
-	<aside class="col-lg-3">
+<div class="row gap-cols-8">
+	<aside class="md:col-3 lg:col-3 mb-8">
 
-<button class="btn btn-outline-primary mb-3 w-100  d-lg-none" data-bs-toggle="collapse" data-bs-target="#aside_filter">Show filter</button>
+	<button class="btn btn-secondary mb-3 w-100% md:hidden" onclick="showHide('aside_filter')">
+		Show/Hide filters
+	</button>
 
-<!-- ===== Card for sidebar filter ===== -->
-<div id="aside_filter" class="collapse card d-lg-block mb-5">
+	<!-- ===== wrap filter ===== -->
+	<div id="aside_filter" class="card shadow-sm hidden md:d-block">
 
-  <article class="p-3 p-lg-4 border-bottom">
-	<a href="#" class="d-flex text-decoration-none justify-content-between text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_aside1">     
-    	<strong>Other category </strong>
-    	<i class="icon-control fa fa-chevron-down"></i>
-	</a> 
-    <div class="collapse show" id="collapse_aside1">
-        <div class="pt-3">
-        <!-- content -->
-        	<ul class="list-menu mb-0">
-	          <li><a href="#">Computers </a></li>
-	          <li><a href="#">Smart watches  </a></li>
-	          <li><a href="#">Mini Cameras </a></li>
-	          <li><a href="#">Accessories </a></li>
-	          <li><a href="#">Headphones </a></li>
-	          <li><a href="#">Printers </a></li>
-	          <li><a href="#">Multimedia </a></li>
-	          <li><a href="#">Accessories </a></li>
-	        </ul>
-	    <!-- content .// -->
-        </div>
-    </div> <!-- collapse .// -->
-  </article> <!-- filter-group // -->
-
-
-  <article class="p-3 p-lg-4 border-bottom">
-	<a href="#" class="d-flex text-decoration-none justify-content-between text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_aside2">     
-    	<strong>Brands </strong>
-    	<i class="icon-control fa fa-chevron-down"></i>
-	</a> 
-    <div class="collapse show" id="collapse_aside2">
-        <div class="pt-3">
-        <!-- content -->
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="" checked>
-			<span class="form-check-label"> Apple </span>
-			</label> <!-- form-check end.// -->
-
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="" checked>
-			<span class="form-check-label"> Asus </span>
-			</label> <!-- form-check end.// -->
-
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="" checked>
-			<span class="form-check-label"> DELL </span>
-			</label> <!-- form-check end.// -->
-
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="" checked>
-			<span class="form-check-label"> Lenovo </span>
-			</label> <!-- form-check end.// -->
-
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label"> Xiaomi </span>
-			</label> <!-- form-check end.// -->
-
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label"> Samsung </span>
-			</label> <!-- form-check end.// -->
-		<!-- content .// -->
-        </div> 
-    </div> <!-- collapse .// -->
-  </article> <!-- filter-group // -->
-
-  <article class="p-3 p-lg-4 border-bottom">
-	<a href="#" class="d-flex text-decoration-none justify-content-between text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_aside3">     
-    	<strong>Prices </strong>
-    	<i class="icon-control fa fa-chevron-down"></i>
-	</a> 
-    <div class="collapse show" id="collapse_aside3">
-        <div class="pt-3">
-        <!-- content -->
-			<input type="range" class="form-range" min="0" max="100">
-	        <div class="row mb-3">
-	          <div class="col-6">
-	            <label for="min" class="form-label">Min</label>
-	            <input class="form-control" id="min" placeholder="$0" type="number">
-	          </div> <!-- col end.// -->
-
-	          <div class="col-6">
-	            <label for="max" class="form-label">Max</label>
-	            <input class="form-control" id="max" placeholder="$1,0000" type="number">
-	          </div> <!-- col end.// -->
-	        </div> <!-- row end.// -->
-	        <button class="btn btn-light w-100" type="button">Apply</button>
-	    <!-- content .// -->
-        </div> 
-    </div> <!-- collapse .// -->
-  </article> <!-- filter-group // -->
-
-
-  <article class="p-3 p-lg-4 border-bottom">
-	<a href="#" class="d-flex text-decoration-none justify-content-between text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_aside4">     
-    	<strong>Colors </strong>
-    	<i class="icon-control fa fa-chevron-down"></i>
-	</a> 
-    <div class="collapse show" id="collapse_aside4">
-        <div class="pt-3">
-        <!-- content -->
-			<label class="checkbox-btn mb-2">
-				<input type="checkbox"> <span class="btn btn-light bg-white"> Red </span>
-			</label> 
-			<label class="checkbox-btn mb-2">
-				<input type="checkbox"> <span class="btn btn-light bg-white"> Black </span>
-			</label> 
-			<label class="checkbox-btn mb-2">
-				<input type="checkbox"> <span class="btn btn-light bg-white"> Blue </span>
-			</label> 
-			<label class="checkbox-btn mb-2">
-				<input type="checkbox"> <span class="btn btn-light bg-white"> Brown </span>
-			</label>
-			<label class="checkbox-btn mb-2">
-				<input type="checkbox"> <span class="btn btn-light bg-white"> Silver </span>
-			</label>
-		<!-- content .// -->
-        </div> 
-    </div> <!-- collapse .// -->
-  </article> <!-- filter-group // -->
-
- <article class="p-3 p-lg-4">
-	<a href="#" class="d-flex text-decoration-none justify-content-between text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_aside5">     
-    	<strong>Rating </strong>
-    	<i class="icon-control fa fa-chevron-down"></i>
-	</a> 
-    <div class="collapse show" id="collapse_aside5">
-        <div class="pt-3">
-        	<!-- content -->
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label">
-			  <ul class="rating-stars">
-			    <li class="stars-active" style="width: 100%;">
-			      <img src="images/misc/stars-active.svg" alt="">
-			    </li>
-			    <li> <img src="images/misc/starts-disable.svg" alt="">  </li>
-			  </ul>
-			</span>
-			</label> <!-- form-check end.// -->
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label">
-			  <ul class="rating-stars">
-			    <li class="stars-active" style="width: 80%;">
-			      <img src="images/misc/stars-active.svg" alt="">
-			    </li>
-			    <li> <img src="images/misc/starts-disable.svg" alt="">  </li>
-			  </ul>
-			</span>
-			</label> <!-- form-check end.// -->
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label">
-			  <ul class="rating-stars">
-			    <li class="stars-active" style="width: 60%;">
-			      <img src="images/misc/stars-active.svg" alt="">
-			    </li>
-			    <li> <img src="images/misc/starts-disable.svg" alt="">  </li>
-			  </ul>
-			</span>
-			</label> <!-- form-check end.// -->
-			<label class="form-check mb-2">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label">
-			  <ul class="rating-stars">
-			    <li class="stars-active" style="width: 40%;">
-			      <img src="images/misc/stars-active.svg" alt="">
-			    </li>
-			    <li> <img src="images/misc/starts-disable.svg" alt="">  </li>
-			  </ul>
-			</span>
-			</label> <!-- form-check end.// -->
+	<details open class="p-3 lg:p-4 border-bottom">
+		<summary class="font-semibold">  Categories  </summary>
+			<div class="pt-3">
+				<!-- content -->
+					<ul class="lh-lg">
+						<li><a href="#">Computers </a></li>
+						<li><a href="#">Smart watches  </a></li>
+						<li><a href="#">Mini Cameras </a></li>
+						<li><a href="#">Accessories </a></li>
+						<li><a href="#">Headphones </a></li>
+						<li><a href="#">Printers </a></li>
+						<li><a href="#">Multimedia </a></li>
+						<li><a href="#">Accessories </a></li>
+					</ul>
 			<!-- content .// -->
-        </div> 
-    </div> <!-- collapse .// -->
-  </article> <!-- filter-group // -->
+			</div>
+	</details> <!-- filter-group // -->
 
-</div> <!-- card.// -->
+	<details open class="p-3 lg:p-4 border-bottom">
+		<summary class="font-semibold">  Brands  </summary>
+			<div class="pt-3">
+				<!-- content -->
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" checked>
+						<span class="form-check-label"> Apple </span>
+					</label>
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" checked>
+						<span class="form-check-label"> Asus </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="">
+						<span class="form-check-label"> DELL </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="">
+						<span class="form-check-label"> Lenovo </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="">
+						<span class="form-check-label"> Panasonic </span>
+					</label>  
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="">
+						<span class="form-check-label"> Samsung </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="">
+						<span class="form-check-label"> Xiaomi </span>
+					</label> 
+			<!-- content .// -->
+			</div>
+	</details> <!-- filter-group // -->
 
-<!-- ===== Card for sidebar filter .// ===== -->
+	<details open class="p-3 lg:p-4 border-bottom">
+		<summary class="font-semibold">  Condition  </summary>
+			<div class="pt-3">
+				<!-- content -->
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="radio" name="condition" value="" checked>
+						<span class="form-check-label"> Any condition </span>
+					</label>
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="radio" name="condition" value="">
+						<span class="form-check-label"> Brand new </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="radio" name="condition" value="">
+						<span class="form-check-label"> Used item </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="radio" name="condition" value="">
+						<span class="form-check-label"> Well used </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="radio" name="condition" value="">
+						<span class="form-check-label"> Old item </span>
+					</label>  
+			<!-- content .// -->
+			</div>
+	</details> <!-- filter-group // -->
+
+	<details open class="p-3 lg:p-4  border-bottom">
+		<summary class="font-semibold">  Price range  </summary>
+			<div class="pt-3">
+				<!-- content -->
+					<input type="range" class="w-100%" min="0" max="100">
+					<div class="row my-3">
+						<div class="col-6">
+							<label>Min</label>
+							<input class="form-control" id="min" placeholder="$0" type="number">
+						</div>
+						<div class="col-6">
+							<label>Max</label>
+							<input class="form-control" id="max" placeholder="$1,0000" type="number">
+						</div> 
+					</div> <!-- row end.// -->
+					<button class="btn btn-primary-soft w-100%" type="button">Apply</button>
+			<!-- content .// -->
+			</div>
+	</details> <!-- filter-group // -->
+
+	<details open class="p-3 lg:p-4 border-bottom">
+		<summary class="font-semibold">  Condition  </summary>
+			<div class="pt-3">
+				<!-- content -->
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" name="rating" value="">
+						<span class="form-check-label"> 5 star - ⭐⭐⭐⭐⭐ </span>
+					</label>
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" name="rating" value="">
+						<span class="form-check-label"> 4 star - ⭐⭐⭐⭐ </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" name="rating" value="">
+						<span class="form-check-label"> 3 star - ⭐⭐⭐ </span>
+					</label> 
+					<label class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" name="rating" value="">
+						<span class="form-check-label"> 2 star - ⭐⭐ </span>
+					</label> 
+			<!-- content .// -->
+			</div>
+	</details> <!-- filter-group // -->
+	</div> <!-- wrap filter.//end -->
+
+	<!-- ===== Card for sidebar filter .// ===== -->
 
 	</aside> <!-- col .// -->
-	<main class="col-lg-9">
+	<main class="md:col-9">
 
-    <header class="d-md-flex align-items-center border-bottom mb-3 pb-3">
-    	<div class="btn-group mb-3 mb-md-0">
-		  <a href="#" class="btn btn-light active">Recommended</a>
-		  <a href="#" class="btn btn-light">Best rated</a>
-		  <a href="#" class="btn btn-light">Latest</a>
-		</div>
-        <div class="ms-auto">
-	        <select class="form-select d-inline-block w-auto">
-	              <option value="0">Best match</option>
-	              <option value="1">Recommended</option>
-	              <option value="2">High rated</option>
-	              <option value="3">Randomly</option>
-	        </select>
-	        <div class="btn-group">
-	            <a href="#" class="btn btn-light" data-bs-toggle="tooltip" title="List view"> 
-	              <i class="fa fa-bars"></i>
-	            </a>
-	            <a href="#" class="btn btn-light active" data-bs-toggle="tooltip" title="Grid view"> 
-	              <i class="fa fa-th"></i>
-	            </a>
-	        </div> <!-- btn-group end.// -->
-        </div>
-    </header>
+		<header class="md:d-flex align-items-center border-bottom mb-3 pb-3">
+			<div class="d-flex gap-1">
+				<a href="#" class="btn btn-secondary text-primary border-color-primary">Recommended</a>
+				<a href="#" class="btn btn-secondary">Best rated</a>
+				<a href="#" class="btn btn-secondary">Latest</a>
+			</div>
+			<div class="ml-auto d-flex gap-1">
+				<select class="form-select w-auto">
+							<option value="0">Best match</option>
+							<option value="1">Recommended</option>
+							<option value="2">High rated</option>
+							<option value="3">Randomly</option>
+				</select>
+				<a href="#" class="btn btn-secondary text-primary border-color-primary"> 
+					List
+				</a>
+				<a href="#" class="btn btn-secondary"> 
+					Grid
+				</a>
+			</div>
+		</header>
 
-    <!-- ========= content items ========= -->
-    <article class="card-product-list border-bottom pb-3 mb-3">
-      <div class="row">
-        <aside class="col-xl-3 col-md-4">
-          <a href="#" class="img-wrap bg-light rounded"> 
-          	<img class="mix-blend-multiply" src="images/items/tech/1.jpg"> 
-          </a>
-        </aside> <!-- col.// -->
-        <div class="col-xl-9 col-md-8">
-          	<a href="#" class="btn btn-outline-primary btn-icon float-end">  
-          		<i class="fa fa-heart"></i>  
-          	</a>
+		<!-- ========= content items ========= -->
+		
+		<article class="border-bottom pb-3 mb-3">
+			<div class="row">
+				<aside class="lg:col-4 sm:col-5">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
+					</a>
+				</aside> <!-- col.// -->
+				<div class="lg:col-8 sm:col-7">
+						<div class="mt-3">
+							<a href="#" class="btn btn-primary-soft btn-sm float-right"> Save </a>
+							<h5><a href="#" class="link"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a></h5>
+							
+							<div class="d-flex gap-2 my-2">
+								<span class="text-secondary"> ⭐⭐⭐⭐⭐  4.5</span>
+								<b class="text-muted">•</b>
+								<span class="text-secondary"> 🛒 154 orders </span>
+								<b  class="text-muted">•</b>
+								<span class="label-rating text-success">Free shipping</span>
+							</div> <!-- rating .// -->
 
-            <a href="#" class="text-dark"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a>
+							<div class="mb-2">
+								<span class="text-lg font-semibold text-danger"> $899.50 </span> 
+							</div> 
+							<p class="text-secondary"> Description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
+						</div>
+				</div> <!-- col.// -->
+			</div> <!-- row.// -->
+		</article>
 
-            <div class="rating-wrap mb-2">
-              <ul class="rating-stars">
-                <li class="stars-active" style="width: 90%;">
-                  <img src="images/misc/stars-active.svg" alt="">
-                </li>
-                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-              </ul>
-              <span class="label-rating text-warning">4.5</span>
-              <i class="dot"></i>
-              <span class="label-rating text-muted">61 orders</span>
-              <i class="dot"></i>
-              <span class="label-rating text-success">Free shipping</span>
-            </div> <!-- rating-wrap.// -->
-            
-            <div class="mb-3 h5">
-              <span class="price text-danger"> $899.50 </span> 
-            </div> 
-            <p class="text-muted"> Description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
-        </div> <!-- col.// -->
-      </div> <!-- row.// -->
-    </article>
+		<article class="border-bottom pb-3 mb-3">
+			<div class="row">
+				<aside class="lg:col-4 sm:col-5">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
+					</a>
+				</aside> <!-- col.// -->
+				<div class="lg:col-8 sm:col-7">
+						<div class="mt-3">
+							<a href="#" class="btn btn-primary-soft btn-sm float-right"> Save </a>
+							<h5><a href="#" class="link">  Samsung Galaxy Tab S7 FE WiFi Tablet Snapdragon </a></h5>
+							
+							<div class="d-flex gap-2 my-2">
+								<span class="text-secondary"> ⭐⭐⭐⭐⭐  4.0</span>
+								<b class="text-muted">•</b>
+								<span class="text-secondary"> 🛒 90 orders </span>
+								<b  class="text-muted">•</b>
+								<span class="label-rating text-success">Free shipping</span>
+							</div> <!-- rating .// -->
 
+							<div class="mb-2">
+								<span class="text-lg font-semibold text-danger"> $1,950.00 </span> 
+							</div> 
+							<p class="text-secondary"> Description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
+						</div>
+				</div> <!-- col.// -->
+			</div> <!-- row.// -->
+		</article>
 
-    <article class="card-product-list border-bottom pb-3 mb-3">
-      <div class="row">
-        <aside class="col-xl-3 col-md-4">
-          <a href="#" class="img-wrap bg-light rounded"> 
-          	<img class="mix-blend-multiply" src="images/items/tech/2.jpg"> 
-          </a>
-        </aside> <!-- col.// -->
-        <div class="col-xl-9 col-md-8">
-          	<a href="#" class="btn btn-outline-primary btn-icon float-end">  
-          		<i class="fa fa-heart"></i>  
-          	</a>
+		<article class="border-bottom pb-3 mb-3">
+			<div class="row">
+				<aside class="lg:col-4 sm:col-5">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
+					</a>
+				</aside> <!-- col.// -->
+				<div class="lg:col-8 sm:col-7">
+						<div class="mt-3">
+							<a href="#" class="btn btn-primary-soft btn-sm float-right"> Save </a>
+							<h5><a href="#" class="link">  Xiaomi Redmi 12C Global Version 3GB </a></h5>
+							
+							<div class="d-flex gap-2 my-2">
+								<span class="text-secondary"> ⭐⭐⭐⭐⭐  5.0</span>
+								<b class="text-muted">•</b>
+								<span class="text-secondary"> 🛒 190 orders </span>
+								<b  class="text-muted">•</b>
+								<span class="label-rating text-success">Free shipping</span>
+							</div> <!-- rating .// -->
 
-            <a href="#" class="text-dark"> Samsung Galaxy Tab S7 FE WiFi Tablet Snapdragon </a>
+							<div class="mb-2">
+								<span class="text-lg font-semibold text-danger"> $97.99 </span> 
+							</div> 
+							<p class="text-secondary"> Description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
+						</div>
+				</div> <!-- col.// -->
+			</div> <!-- row.// -->
+		</article>
 
-            <div class="rating-wrap mb-2">
-              <ul class="rating-stars">
-                <li class="stars-active" style="width: 90%;">
-                  <img src="images/misc/stars-active.svg" alt="">
-                </li>
-                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-              </ul>
-              <span class="label-rating text-warning">4.5</span>
-              <i class="dot"></i>
-              <span class="label-rating text-muted">154 orders</span>
-              <i class="dot"></i>
-              <span class="label-rating text-success">Free shipping</span>
-            </div> <!-- rating-wrap.// -->
-            
-            <div class="mb-3 h5">
-              <span class="price text-danger"> $256.00 </span>  
-              <del class="price-old"> $830</del>
-            </div> 
-            <p class="text-muted"> Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
-        </div> <!-- col.// -->
-      </div> <!-- row.// -->
-    </article>
+		<article class="border-bottom pb-3 mb-3">
+			<div class="row">
+				<aside class="lg:col-4 sm:col-5">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
+					</a>
+				</aside> <!-- col.// -->
+				<div class="lg:col-8 sm:col-7">
+						<div class="mt-3">
+							<a href="#" class="btn btn-primary-soft btn-sm float-right"> Save </a>
+							<h5><a href="#" class="link"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a></h5>
+							
+							<div class="d-flex gap-2 my-2">
+								<span class="text-secondary"> ⭐⭐⭐⭐⭐  4.5</span>
+								<b class="text-muted">•</b>
+								<span class="text-secondary"> 🛒 154 orders </span>
+								<b  class="text-muted">•</b>
+								<span class="label-rating text-success">Free shipping</span>
+							</div> <!-- rating .// -->
 
-    <article class="card-product-list border-bottom pb-3 mb-3">
-      <div class="row">
-        <aside class="col-xl-3 col-md-4">
-          <a href="#" class="img-wrap bg-light rounded"> 
-          	<img class="mix-blend-multiply" src="images/items/tech/3.jpg"> 
-          </a>
-        </aside> <!-- col.// -->
-        <div class="col-xl-9 col-md-8">
-          	<a href="#" class="btn btn-outline-primary btn-icon float-end">  
-          		<i class="fa fa-heart"></i>  
-          	</a>
+							<div class="mb-2">
+								<span class="text-lg font-semibold text-danger"> $899.50 </span> 
+							</div> 
+							<p class="text-secondary"> Description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
+						</div>
+				</div> <!-- col.// -->
+			</div> <!-- row.// -->
+		</article>
 
-            <a href="#" class="text-dark"> Xiaomi Redmi 12C Global Version 3GB </a>
+		<article class="border-bottom pb-3 mb-3">
+			<div class="row">
+				<aside class="lg:col-4 sm:col-5">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
+					</a>
+				</aside> <!-- col.// -->
+				<div class="lg:col-8 sm:col-7">
+						<div class="mt-3">
+							<a href="#" class="btn btn-primary-soft btn-sm float-right"> Save </a>
+							<h5><a href="#" class="link"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a></h5>
+							
+							<div class="d-flex gap-2 my-2">
+								<span class="text-secondary"> ⭐⭐⭐⭐⭐  4.5</span>
+								<b class="text-muted">•</b>
+								<span class="text-secondary"> 🛒 154 orders </span>
+								<b  class="text-muted">•</b>
+								<span class="label-rating text-success">Free shipping</span>
+							</div> <!-- rating .// -->
 
-            <div class="rating-wrap mb-2">
-              <ul class="rating-stars">
-                <li class="stars-active" style="width: 90%;">
-                  <img src="images/misc/stars-active.svg" alt="">
-                </li>
-                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-              </ul>
-              <span class="label-rating text-warning">4.5</span>
-              <i class="dot"></i>
-              <span class="label-rating text-muted">154 orders</span>
-              <i class="dot"></i>
-              <span class="label-rating text-success">Free shipping</span>
-            </div> <!-- rating-wrap.// -->
-            
-            <div class="mb-3 h5">
-              <span class="price text-danger"> $249.99 </span>  
-              <del class="price-old"> $330</del>
-            </div> 
-            <p class="text-muted"> Some info about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
-        </div> <!-- col.// -->
-      </div> <!-- row.// -->
-    </article>
+							<div class="mb-2">
+								<span class="text-lg font-semibold text-danger"> $899.50 </span> 
+							</div> 
+							<p class="text-secondary"> Description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
+						</div>
+				</div> <!-- col.// -->
+			</div> <!-- row.// -->
+		</article>
 
-    <article class="card-product-list border-bottom pb-3 mb-3">
-      <div class="row">
-        <aside class="col-xl-3 col-md-4">
-          <a href="#" class="img-wrap bg-light rounded"> 
-          	<img class="mix-blend-multiply" src="images/items/tech/4.jpg"> 
-          </a>
-        </aside> <!-- col.// -->
-        <div class="col-xl-9 col-md-8">
-          	<a href="#" class="btn btn-outline-primary btn-icon float-end">  
-          		<i class="fa fa-heart"></i>  
-          	</a>
+		<!-- pagination -->
+		<footer class="d-flex my-4">
+			<div>
+				<a href="javascript: history.back()" class="btn btn-neutral"> &laquo; Go back</a>
+			</div>
+			
+			<nav class="ml-auto">
+				<a class="btn btn-neutral" disabled href="#">Prev</a>
+				<a class="btn btn-neutral text-primary bg-neutral-300" href="#">1</a>
+				<a class="btn btn-neutral" href="#">2</a>
+				<a class="btn btn-neutral" href="#">3</a>
+				<a class="btn btn-neutral" href="#">Next</a>
+			</nav>
+		</footer>
+		<!-- pagination .//end -->
 
-            <a href="#" class="text-dark"> Apple Iphone 13 Pro max Smartphone 256GB Black color </a>
+		<!-- ========= content items .//end ========= -->
 
-            <div class="rating-wrap mb-2">
-              <ul class="rating-stars">
-                <li class="stars-active" style="width: 50%;">
-                  <img src="images/misc/stars-active.svg" alt="">
-                </li>
-                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-              </ul>
-              <span class="label-rating text-warning">3.5</span>
-              <i class="dot"></i>
-              <span class="label-rating text-muted">9 orders</span>
-              <i class="dot"></i>
-              <span class="label-rating text-warning">Paid shipping</span>
-            </div> <!-- rating-wrap.// -->
-            
-            <div class="mb-3 h5">
-              <span class="price text-danger"> $899.50 </span>
-            </div> 
-            <p class="text-muted"> Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
-        </div> <!-- col.// -->
-      </div> <!-- row.// -->
-    </article>
-
-    <article class="card-product-list border-bottom pb-3 mb-3">
-      <div class="row">
-        <aside class="col-xl-3 col-md-4">
-          <a href="#" class="img-wrap bg-light rounded"> 
-          	<img class="mix-blend-multiply" src="images/items/tech/7.jpg"> 
-          </a>
-        </aside> <!-- col.// -->
-        <div class="col-xl-9 col-md-8">
-          	<a href="#" class="btn btn-outline-primary btn-icon float-end">  
-          		<i class="fa fa-heart"></i>  
-          	</a>
-
-            <a href="#" class="text-dark"> HP Laptop Computer 15.6" 512GB SSD Win11 Intel  </a>
-
-            <div class="rating-wrap mb-2">
-              <ul class="rating-stars">
-                <li class="stars-active" style="width: 90%;">
-                  <img src="images/misc/stars-active.svg" alt="">
-                </li>
-                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-              </ul>
-              <span class="label-rating text-warning">4.5</span>
-              <i class="dot"></i>
-              <span class="label-rating text-muted">154 orders</span>
-              <i class="dot"></i>
-              <span class="label-rating text-success">Free shipping</span>
-            </div> <!-- rating-wrap.// -->
-            
-            <div class="mb-3 h5">
-              <span class="price text-danger"> $299.50 </span>  
-            </div> 
-            <p class="text-muted"> We are offering the lowest price ever on this new, open box computer. These are priced below wholesale and once they're gone, they're never coming back. Don't miss out!  Lorem ipsum dolor sit amet  with hapti you enter into any text </p>
-        </div> <!-- col.// -->
-      </div> <!-- row.// -->
-    </article>
-
-    <article class="card-product-list border-bottom pb-3 mb-3">
-      <div class="row">
-        <aside class="col-xl-3 col-md-4">
-          <a href="#" class="img-wrap bg-light rounded"> 
-          	<img class="mix-blend-multiply" src="images/items/tech/8.jpg"> 
-          </a>
-        </aside> <!-- col.// -->
-        <div class="col-xl-9 col-md-8">
-          	<a href="#" class="btn btn-outline-primary btn-icon float-end">  
-          		<i class="fa fa-heart"></i>  
-          	</a>
-
-            <a href="#" class="text-dark"> Heading text about the product name </a>
-
-            <div class="rating-wrap mb-2">
-              <ul class="rating-stars">
-                <li class="stars-active" style="width: 20%;">
-                  <img src="images/misc/stars-active.svg" alt="">
-                </li>
-                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-              </ul>
-              <span class="label-rating text-warning">2.0</span>
-              <i class="dot"></i>
-              <span class="label-rating text-muted">3 orders</span>
-              <i class="dot"></i>
-              <span class="label-rating text-success">Free shipping</span>
-            </div> <!-- rating-wrap.// -->
-            
-            <div class="mb-3 h5">
-              <span class="price text-danger"> $499.50 </span>  
-            </div> 
-            <p class="text-muted"> Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet  with hapti you enter into any new area of science, you almost lorem ipsum  </p>
-        </div> <!-- col.// -->
-      </div> <!-- row.// -->
-    </article>
-
-
-    <footer class="d-flex mt-4">
-      <div>
-        <a href="javascript: history.back()" class="btn btn-light"> &laquo; Go back</a>
-      </div>
-      <nav class="ms-3">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
-            <span class="page-link">2</span>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
-    </footer>
-
-    <!-- ========= content items .// ========= -->
-
-    
+		
 
 	</main> <!-- col .// -->
 </div> <!-- row .// -->
@@ -680,134 +430,20 @@
 
 
 
-<!-- ============== SECTION CONTENT  ============== -->
-<section class="padding-y bg-light">
-<div class="container">
-
-	<header class="section-heading">
-		<h3>Popular categories </h3>
-	</header> 
-
-	<div class="row">
-		<div class="col-lg-4">
-		 <nav class="bg-white p-4 rounded shadow-sm mb-4">
-		 	<img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-1.jpg">
-		 	<h6 class="mb-2"><a href="#" class="text-dark">Notebooks</a></h6>
-		 	<ul class="list-menu mb-2">
-		 		<li><a href="#">Asus laptops</a></li>
-		 		<li><a href="#">Macbooks</a></li>
-		 		<li><a href="#">Gaming laptops</a></li>
-		 		<li><a href="#">Lenovo</a></li>
-		 	</ul>
-		 </nav>	
-		</div> <!-- col .// -->
-		<div class="col-lg-4">
-		 <nav class="bg-white p-4 rounded shadow-sm mb-4">
-		 	<img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-2.jpg">
-		 	<h6 class="mb-2"><a href="#" class="text-dark">Accessories</a></h6>
-		 	<ul class="list-menu mb-2">
-		 		<li><a href="#">Smartwatches</a></li>
-		 		<li><a href="#">Keyboards</a></li>
-		 		<li><a href="#">Cables HDML, USB</a></li>
-		 		<li><a href="#">Others</a></li>
-		 	</ul>
-		 </nav>	
-		</div> <!-- col .// -->
-		<div class="col-lg-4">
-		 <nav class="bg-white p-4 rounded shadow-sm mb-4">
-		 	<img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-8.jpg">
-		 	<h6 class="mb-2"><a href="#" class="text-dark">Office tech</a></h6>
-		 	<ul class="list-menu mb-0">
-		 		<li><a href="#">Printers</a></li>
-		 		<li><a href="#">Lighting</a></li>
-		 		<li><a href="#">TV boxes</a></li>
-		 		<li><a href="#">Lorem ipsum</a></li>
-		 	</ul>
-		 </nav>	
-		</div> <!-- col .// -->
-	</div>
-
-</div> <!-- container .//  -->
-</section>
-<!-- ============== SECTION CONTENT END// ============== -->
-
-
-<footer class="section-footer bg-gray-light">
+<footer class="border-top bg-secondary py-12">
 	<div class="container">
-		<section class="footer-main padding-y">
-			<div class="row">
-				<aside class="col-12 col-sm-12 col-lg-4">
-					<article class="me-lg-4">
-						<img src="images/logo.png" height="44" class="logo-footer">
-						<p class="mt-3 text-black-50"> You might remember the Lenovo computer commercials in which a youth reports this exciting news to his friends. </p>
-						<nav class="mb-4">
-							<a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-							<a class="btn btn-icon btn-light" title="Instagram" target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-							<a class="btn btn-icon btn-light" title="Youtube" target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-							<a class="btn btn-icon btn-light" title="Twitter" target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-					</nav>
-					</article>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Store</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#">About us</a></li>
-						<li> <a href="#">Find store</a></li>
-						<li> <a href="#">Categories</a></li>
-						<li> <a href="#">Blogs</a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Information</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#">Help center</a></li>
-						<li> <a href="#">Money refund</a></li>
-						<li> <a href="#">Shipping info</a></li>
-						<li> <a href="#">Refunds</a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4  col-lg-2">
-					<h6 class="title">Support</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#"> Help center </a></li>
-						<li> <a href="#"> Documents </a></li>
-						<li> <a href="#"> Account restore </a></li>
-						<li> <a href="#"> My Orders </a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Download</h6>
-					<a href="#" class="mb-2 d-inline-block"> <img src="images/misc/btn-appstore.png" height="44"></a>
-					<a href="#" class="mb-2 d-inline-block"> <img src="images/misc/btn-market.png" height="44"></a>
-				</aside>
-			</div> <!-- row.// -->
-		</section> <!-- footer-top.// -->
-		<hr class="my-0">
-		<section class="footer-bottom d-flex justify-content-between">
-			<div class="text-black-50">
-				© 2020- 2024 Ecommerce UI.
-			</div>
-			<nav class="dropup">
-				<button class="dropdown-toggle btn align-items-center" type="button" data-bs-toggle="dropdown">
-					<img src="images/flags/flag-usa.png" class="me-2" height="20">
-					<span>English</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-end">
-					<li><a class="dropdown-item" href="#">Russian</a></li>
-					<li><a class="dropdown-item" href="#">Arabic</a></li>
-					<li><a class="dropdown-item" href="#">Spanish</a></li>
-				</ul>
-			</nav>
-		</section>
-	</div> <!-- container end.// -->
+		<section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
+				<p class="md:mb-0 mb-3 text-center md:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
+				<nav class="nav">
+						<a href="#" class="nav-link">Menu item</a>
+						<a href="#" class="nav-link">Menu item</a>
+						<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+				</nav>
+			</section>
+	</div><!-- //container -->
 </footer>
 
 
-<!-- Bootstrap js -->
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom js -->
-<script src="js/script.js?v=2.0"></script>
 
 </body>
 </html>

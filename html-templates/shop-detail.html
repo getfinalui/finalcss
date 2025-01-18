@@ -1,201 +1,55 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
-  <meta name="author" content="Type name">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Type some info">
+	<meta name="author" content="Type name">
 
-  <title>Website layout sample </title>
+	<title>Website layout sample </title>
 
-  <!-- Bootstrap css -->
-  <link href="css/bootstrap.css?v=2.0" rel="stylesheet" type="text/css" />
-
-  <!-- Custom css -->
-  <link href="css/ui.css?v=2.0" rel="stylesheet" type="text/css" />
-  <link href="css/responsive.css?v=2.0" rel="stylesheet" type="text/css" />
-
-  <!-- Font awesome 5 -->
-  <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<!-- FinalCSS -->
+	<link href="../css/final.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 
-<header class="section-header">
-  <section class="header-main border-bottom py-3">
-    <div class="container">
-      <div class="row gx-2 gy-3">
-        <div class="col-lg col-md col-6 flex-grow-0">
-          <a href="https://ecommerce-ui.com#templates" class="brand-wrap me-4">
-            <img class="logo" height="40" src="images/logo.svg">
-          </a> <!-- brand-wrap end.// -->
-        </div>
-        <div class="col-lg col-md col-6 flex-grow-0">
-          <div class="dropdown float-end">
-            <button data-bs-toggle="dropdown" class="dropdown-toggle btn btn-primary text-nowrap"> 
-              <i class="fa me-1 fa-bars"></i> Categories 
-            </button>
-            <nav class="dropdown-menu dropdown-large">
-             <ul class="row row-cols-2 row-cols-lg-3 list-unstyled nav-pills g-0">
-              <li><a class="nav-link" href="#">Laptops</a></li>
-              <li><a class="nav-link" href="#">Cameras</a></li>
-              <li><a class="nav-link" href="#">Gadgets</a></li>
-              <li><a class="nav-link" href="#">Accessories</a></li>
-              <li><a class="nav-link" href="#">Smartphones</a></li>
-              <li><a class="nav-link" href="#">Smartwatches</a></li>
-              <li><a class="nav-link" href="#">Headsets</a></li>
-              <li><a class="nav-link" href="#">Gamings</a></li>
-              <li><a class="nav-link" href="#">Apple</a></li>
-              <li><a class="nav-link" href="#">Lacetti</a></li>
-              <li><a class="nav-link" href="#">Toyota</a></li>
-              <li><a class="nav-link" href="#">Hyundai</a></li>
-              <li><a class="nav-link" href="#">Mercedes</a></li>
-              <li><a class="nav-link" href="#">Chevrolet</a></li>
-              <li><a class="nav-link" href="#">Lacetti</a></li>
-              <li><a class="nav-link" href="#">Hyundai</a></li>
-              <li><a class="nav-link" href="#">Office tech</a></li>
-              <li><a class="nav-link" href="#">Home equipments</a></li>
-             </ul>
-              </nav> <!-- dropdown-menu end.// -->
-          </div> <!-- dropdown end.// -->
-        </div> <!-- col end.// -->
-        
-        <div class="col-lg col-md order-lg-last">
-          <div class="float-md-end">
-            <a href="#" class="btn btn-light"> 
-               <i class="fa fa-user"></i>  
-               <span class="ms-1 d-none d-sm-inline-block"> Sign in  </span> 
-            </a>
-            <a href="#" class="btn btn-light"> 
-              <i class="fa fa-heart"></i> 
-              <span class="ms-1 d-none d-sm-inline-block"> Wishlist  </span>    
-            </a>
-            <a data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-light"> 
-              <i class="fa fa-shopping-cart me-1"></i>  My cart  
-            </a>
+<header class="py-2 lg:py-3 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap flex-col sm:flex-row gap-3 align-items-center justify-content-between">
+      
+      <a href="https://finalcss.com" class="text-xl hover:opacity-80">
+        <img src="logo-finalui.svg" height="40" alt="">
+      </a>
 
-            <button class="btn btn-light d-md-none ms-2 float-end" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-               Menu
-            </button>
-          </div>
-        </div>
+      <div class="md:w-40% mr-4">
+        <form class="d-flex w-100% mx-3">
+          <input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
+          <button class="rounded-left-0 btn btn-secondary" style="margin-left:-1px">
+            Search
+          </button>
+        </form>
+      </div>
+      
+      <div>
+        <button class="btn btn-secondary"> Wishlist 	</button>	
+        <button class="btn btn-secondary">  Sign up 	</button>	
+        <button class="btn btn-primary">  My cart (0) 	</button>
+      </div>
 
-        <div class="col-lg-3 col-xl-4 col-xxl-5 col-md-12 order-lg-3">
-          <form action="#">
-            <div class="input-group">
-              <input type="search" class="form-control" placeholder="Search">
-              <button class="input-group-btn btn-icon btn btn-light">
-                 <i class="fa fa-search"></i> 
-              </button>
-            </div> <!-- input-group end.// -->
-          </form> <!-- search-wrap end.// -->
-        </div> <!-- col end.// -->
-
-      </div> <!-- row end.// -->
-    </div> <!-- container end.// -->
-  </section> <!-- header-main end.// -->
-
-  <nav class="navbar py-0 py-md-2 navbar-expand-md navbar-light border-bottom">
-		<div class="container">
-			<div class="navbar-collapse collapse" id="main_nav" style="">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							All templates
-						</a>
-						<nav class="dropdown-menu p-4">
-							<!-- megamenu-inner -->
-							<div class="d-flex flex-wrap flex-sm-nowrap">
-								<div style="width: 12rem">
-									
-									<h6>Ads website</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-ads-index.html"> Ads home </a> </li>
-										<li><a class="text-body" href="p-ads-list.html"> Ads listing </a> </li>
-										<li><a class="text-body" href="p-ads-detail.html"> Ads detail </a> </li>
-									</ul>
-	
-									<h6>Techstore</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-techstore-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-techstore-list.html"> Listing view </a> </li>
-										<li><a class="text-body" href="p-techstore-detail.html"> Item details </a> </li>
-									</ul>
-	
-								</div>
-								<div style="width: 12rem">
-									
-									<h6>Marketplace</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-market-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-market-list.html"> Listing view </a> </li>
-										<li><a class="text-body" href="p-market-list-grid.html"> Grid view </a> </li>
-										<li><a class="text-body" href="p-market-detail.html"> Item detail </a> </li>
-										<li><a class="text-body" href="p-market-cart.html"> Cart page </a> </li>
-										<li><a class="text-body" href="p-market-order.html"> Order page </a> </li>
-									</ul>
-	
-								</div>
-								<div style="width: 12rem">
-	
-									<h6>Food order</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-food-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-food-detail.html"> Restaurant foods </a> </li>
-										<li><a class="text-body" href="p-food-order.html">  Food order </a> </li>
-									</ul>
-	
-									<h6>Common pages</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-info-pricing.html"> Pricing page </a> </li>
-										<li><a class="text-body" href="p-user-profile.html">  User profile </a> </li>
-										<li><a class="text-body" href="p-user-signup.html">  User register </a> </li>
-									</ul>
-								</div>
-							</div>
-							<figure class="p-5 text-center bg-warning-subtle rounded">
-									<a href="https://ecommerce-ui.com#templates" class="btn btn-warning">Preview all templates</a>
-							</figure>
-							<!-- megamenu-inner .// -->
-						</nav> <!-- dropdown-menu .// -->
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Pages
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="p-techstore-index.html"> Page home </a> </li>
-							<li> <a class="dropdown-item" href="p-techstore-list.html"> Page listing </a> </li>
-							<li> <a class="dropdown-item" href="p-techstore-detail.html"> Page detail </a> </li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Services </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Projects </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Services </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Projects </a>
-					</li>
-				</ul>
-			</div> <!-- collapse .// -->
-		</div> <!-- container .// -->
-	</nav>
-  
+    </div>
+  </div> <!-- container end.// -->
 </header> <!-- section-header end.// -->
 
-
 <!-- ============== SECTION PAGETOP ============== -->
-<section class="bg-light py-4">
+<section class="bg-neutral-100 py-4">
 	<div class="container">
-		<ol class="breadcrumb my-0">
-			<li class="breadcrumb-item"><a href="#" class="text-muted">Home</a></li>
-			<li class="breadcrumb-item"><a href="#" class="text-muted">Technology</a></li>
-			<li class="breadcrumb-item"><a href="#" class="text-muted">Gadgets</a></li>
+		
+    <ol class="d-flex gap-3">
+			<li> <a href="shop-index.html">Back to main</a></li>
+			<li>/ <a href="#">Technology</a></li>
+			<li>/ <a href="#">Gadgets</a></li>
 		</ol>
 		
 	</div> <!-- container //  -->
@@ -204,72 +58,67 @@
 
 
 <!-- ============== SECTION CONTENT ============== -->
-<section class="padding-y">
+<section class="py-10">
 <div class="container">
 
 <div class="row">
-<aside class="col-lg-6">
+<aside class="lg:col-6">
 
-	<figure class="gallery-wrap">
-		<a href="#" class="img-main-wrap mb-3 img-thumbnail" style="height: 520px">
-			<img src="images/items/detail-tech/big1.jpg" class="h-100 img-cover">
+	<figure class="bg-neutral-200 p-1 rounded tablet:mb-5">
+		
+    <a href="#" class="d-block" style="height:480px">
+			<img src="#" alt="" title="" class="img-cover">
 		</a>
 
-		<div class="thumbs-wrap text-center overflow-auto text-nowrap">
-			<a href="#" class="item-thumb"> 
-				<img class="img-thumbnail size-60x60" height="60" src="images/items/detail-tech/big1.jpg"> </a>
-			<a href="#" class="item-thumb"> 
-				<img class="img-thumbnail size-60x60" height="60" src="images/items/detail-tech/big2.jpg"> </a>
-			<a href="#" class="item-thumb"> 
-				<img class="img-thumbnail size-60x60" height="60" src="images/items/detail-tech/big3.jpg"> </a>
-			<a href="#" class="item-thumb"> 
-				<img class="img-thumbnail size-60x60" height="60" src="images/items/detail-tech/big1.jpg"> </a>
-			<a href="#" class="item-thumb"> 
-				<img class="img-thumbnail size-60x60" height="60" src="images/items/detail-tech/big2.jpg"> </a>
+		<div class="mb-4 justify-content-center d-flex gap-1 text-center overflow-auto overflow-x-auto">
+			<a href="#" class="w-20 h-16 hover:opacity-80"> <img class="rounded object-fit-cover" height="60" src="placeholder.jpg"> </a>
+      <a href="#" class="w-20 h-16 hover:opacity-80"> <img class="rounded object-fit-cover" height="60" src="placeholder.jpg"> </a>
+      <a href="#" class="w-20 h-16 hover:opacity-80"> <img class="rounded object-fit-cover" height="60" src="placeholder.jpg"> </a>
+      <a href="#" class="w-20 h-16 hover:opacity-80"> <img class="rounded object-fit-cover" height="60" src="placeholder.jpg"> </a>
+      <a href="#" class="w-20 h-16 hover:opacity-80"> <img class="rounded object-fit-cover" height="60" src="placeholder.jpg"> </a>
 		</div> <!-- thumbs-wrap.// -->
-	</figure> <!-- gallery-wrap .end// -->
+	
+  </figure> <!-- gallery-wrap .end// -->
 
 </aside>
-<main class="col-lg-6">
-  <article class="ps-lg-3">
-    <h4 class="title text-dark">Smart Watch for Men Women, 2022 Fitness Tracker 1.69" Touch Screen and Waterproof,  Android OS </h4>
-    <div class="rating-wrap my-3">
-      <ul class="rating-stars">
-        <li style="width:80%" class="stars-active"> <img src="images/misc/stars-active.svg" alt=""> </li>
-        <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
-      </ul>
-      <b class="label-rating text-warning"> 4.5</b>
-      <i class="dot"></i>
-      <span class="label-rating text-muted"> <i class="fa fa-shopping-basket"></i> 154 orders </span>
-      <i class="dot"></i>
+<main class="lg:col-6">
+  <article class="lg:pl-3">
+    <h4 class="text-dark">Smart Watch for Men Women, 2022 Fitness Tracker 1.69" Touch Screen and Waterproof,  Android OS </h4>
+    <div class="d-flex gap-2 my-3">
+      <span class="text-warning"> ⭐⭐⭐⭐⭐  4.5</span>
+      <b class="text-muted">•</b>
+      <span class="text-secondary"> 🛒 154 orders </span>
+      <b  class="text-muted">•</b>
       <span class="label-rating text-success">In stock</span>
-    </div> <!-- rating-wrap.// -->
+    </div> <!-- rating .// -->
 
     <div class="mb-2"> 
-      <var class="price h5">$75.00</var> 
-      <span class="text-muted">/per box</span> 
+      <strong class="text-2xl"> $75.00 </strong> 
+      <span> /per box</span> 
     </div> 
 
-    <p>Modern look and quality demo item Smartwatch Fitness Watch 25 Sports IP68   is a streetwear-inspired collection that continues to break away from the conventions of mainstream fashion. Made in Italy, these black and brown  for men.</p>
+    <div class="mb-4">
+      <p>Modern look and quality demo item Smartwatch Fitness Watch 25 Sports IP68   is a streetwear-inspired collection that continues to break away from the conventions of mainstream fashion. Made in Italy, these black and brown  for men.</p>
+    </div>
 
     <dl class="row">
-      <dt class="col-3 fw-normal text-muted">Type:</dt>
+      <dt class="col-3">Type:</dt>
       <dd class="col-9">Regular</dd>
 
-      <dt class="col-3 fw-normal text-muted">Color</dt>
+      <dt class="col-3">Color:</dt>
       <dd class="col-9">Silver white</dd>
 
-      <dt class="col-3 fw-normal text-muted">Material</dt>
+      <dt class="col-3">Material:</dt>
       <dd class="col-9">Metallic, waterproof </dd>
 
-      <dt class="col-3 fw-normal text-muted">Brand</dt>
+      <dt class="col-3">Brand:</dt>
       <dd class="col-9">Samsung </dd>
     </dl>
 
     <hr>
 
-    <div class="row mb-3">
-      <div class="col-md-4 col-6 mb-2">
+    <div class="row my-3">
+      <div class="col-6 sm:col-4 mb-2">
         <label class="form-label">Size</label>
         <select class="form-select">
           <option>Small</option>
@@ -277,27 +126,31 @@
           <option>Large</option>
         </select>
       </div> <!-- col.// -->
-      <div class="col-md-4 col-6 mb-2">
+      <div class="col-6 mb-2">
         <label class="form-label d-block">Quantity</label>
-        <div class="input-group input-spinner">
-          <button class="btn btn-icon btn-light" type="button"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#999" viewBox="0 0 24 24">
+        
+        <div class="d-flex gap-1">
+          <button class="btn btn-icon btn-secondary" type="button"> 
+              <svg width="22" height="22" fill="#333" viewBox="0 0 24 24">
                 <path d="M19 13H5v-2h14v2z"></path>
               </svg>
           </button>
-          <input class="form-control text-center" placeholder="" value="14">
-          <button class="btn btn-icon btn-light" type="button"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#999" viewBox="0 0 24 24">
+
+          <input class="form-control text-center w-20 flex-shrink"  placeholder="0" value="1">
+          
+          <button class="btn btn-icon btn-secondary" type="button"> 
+              <svg width="22" height="22" fill="#333" viewBox="0 0 24 24">
                 <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
               </svg>
           </button>
-        </div> <!-- input-group.// -->
+        </div> <!-- input quantity .// -->
+
       </div> <!-- col.// -->
     </div> <!-- row.// -->
 
-    <a href="#" class="btn  btn-warning"> Buy now </a>
-    <a href="#" class="btn  btn-primary"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
-    <a href="#" class="btn  btn-light"> <i class="me-1 fa fa-heart"></i> Save </a>
+    <a href="#" class="btn  btn-primary"> Add to cart </a>
+    <a href="#" class="btn  btn-primary-soft"> Buy with 1 click  </a>
+    <a href="#" class="btn  btn-secondary">  Save for later </a>
   
   </article> <!-- product-info-aside .// -->
 </main> <!-- col.// -->
@@ -308,142 +161,105 @@
 <!-- ============== SECTION CONTENT END// ============== -->
 
 <!-- ============== SECTION  ============== -->
-<section class="padding-bottom">
+<section class="py-10 bg-secondary">
 <div class="container">
 <div class="row">
-  <div class="col-lg-8 col-xl-9">
-<!-- =================== COMPONENT SPECS ====================== -->
-<div class="card">
-  <header class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a href="#" data-bs-target="#tab_specs" data-bs-toggle="tab" class="nav-link active">Specification</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" data-bs-target="#tab_warranty" data-bs-toggle="tab" class="nav-link">Warranty info</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" data-bs-target="#tab_shipping" data-bs-toggle="tab" class="nav-link">Shipping info</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" data-bs-target="#tab_seller" data-bs-toggle="tab" class="nav-link">Seller profile</a>
-      </li>
-    </ul>
-  </header>
-  <div class="tab-content">
-    <article id="tab_specs" class="tab-pane show active card-body">
-      <p>With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-      <ul class="list-check cols-two">
-        <li>Some great feature name here </li>
-        <li>Lorem ipsum dolor sit amet, consectetur </li>
-        <li>Duis aute irure dolor in reprehenderit </li>
-        <li>Optical heart sensor </li>
-        <li>Easy fast and ver good </li>
-        <li>Some great feature name here </li>
-        <li>Modern style and design</li>
-      </ul>
-      <table class="table table-hover">
-        <tr>
-          <th>  Display: </th> <td> 13.3-inch LED-backlit display with IPS </td>
-        </tr>
-        <tr>
-          <th>  Processor capacity: </th> <td> 2.3GHz dual-core Intel Core i5 </td>
-        </tr>
-        <tr>
-          <th>  Camera quality: </th> <td>720p FaceTime HD camera  </td>
-        </tr>
-        <tr>
-          <th>  Memory </th> <td> 8 GB RAM or 16 GB RAM </td>
-        </tr>
-        <tr>
-          <th>  Graphics </th> <td> Intel Iris Plus Graphics 640 </td>
-        </tr>
-      </table>
-  </article> <!-- tab-content.// -->
-  <article id="tab_warranty" class="tab-pane card-body">
-    Tab content or sample information now <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  </article>
-  <article id="tab_shipping" class="tab-pane card-body">
-    Another tab content  or sample information now <br>
-    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </article>
-  <article id="tab_seller" class="tab-pane card-body">
-    Some other tab content  or sample information now <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </article>
-  </div>
-</div>
-<!-- =================== COMPONENT SPECS .// ================== -->   
+  <div class="lg:col-8">
+    <!-- =================== Detail info ====================== -->
+    <div class="card p-5">
+        
+      <nav class="nav mb-4">
+          <a href="#" class="nav-link active">Specification</a>
+          <a href="#" class="nav-link">Warranty info</a>
+          <a href="#" class="nav-link">Shipping info</a>
+          <a href="#" class="nav-link">Seller profile</a>
+      </nav>
+
+      <div class="tab-content">
+        <article id="tab_1">
+            <p>With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+            <ul class="list-check cols-two">
+              <li>Some great feature name here </li>
+              <li>Lorem ipsum dolor sit amet, consectetur </li>
+              <li>Duis aute irure dolor in reprehenderit </li>
+              <li>Optical heart sensor </li>
+              <li>Easy fast and ver good </li>
+              <li>Some great feature name here </li>
+              <li>Modern style and design</li>
+            </ul>
+            <table class="table table-hover">
+              <tr>
+                <th>  Display: </th> <td> 13.3-inch LED-backlit display with IPS </td>
+              </tr>
+              <tr>
+                <th>  Processor capacity: </th> <td> 2.3GHz dual-core Intel Core i5 </td>
+              </tr>
+              <tr>
+                <th>  Camera quality: </th> <td>720p FaceTime HD camera  </td>
+              </tr>
+              <tr>
+                <th>  Memory </th> <td> 8 GB RAM or 16 GB RAM </td>
+              </tr>
+              <tr>
+                <th>  Graphics </th> <td> Intel Iris Plus Graphics 640 </td>
+              </tr>
+            </table>
+        </article> <!-- tab-item.// -->
+      </div>
+    </div>
+    <!-- =================== Detail info .//end ================== -->   
   </div> <!-- col.// -->
-  <aside class="col-lg-4 col-xl-3">
+  <aside class="lg:col-4">
 <!-- =================== COMPONENT ADDINGS ====================== -->
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Similar items</h5>
+        <h5 class="mb-4">Similar items</h5>
         
         <article class="d-flex mb-4">
-          <a href="#" class="me-2 flex-shrink-0">
-            <img src="images/items/tech/9.jpg" width="96" height="96" class="size-96x96 img-thumbnail">
+          <a href="#" class="mr-3 flex-shrink-0">
+            <img src="placeholder.jpg" width="96" class="w-24 rounded h-20 object-fit-cover">
           </a>
           <div>
-            <p class="mb-2">
-            	<a href="#" class="text-body">Wired Gaming Headset Headphone </a>
+            <p class="mb-1">
+            	<a href="#">Wired Gaming Headset Headphone </a>
             </p>
-            <strong class="price mb-0">$45.50</strong>
+            <strong>$145.50</strong>
           </div>
         </article>
 
         <article class="d-flex mb-4">
-          <a href="#" class="me-2 flex-shrink-0">
-            <img src="images/items/tech/8.jpg" width="96" height="96" class="size-96x96 img-thumbnail">
+          <a href="#" class="mr-3 flex-shrink-0">
+            <img src="placeholder.jpg" width="96" class="w-24 rounded h-20 object-fit-cover">
           </a>
           <div>
-            <p class="mb-2">
-            	<a href="#" class="text-body">Sample product name goes here as demo </a>
+            <p class="mb-1">
+            	<a href="#">Smart Watch for Men Women, 2022 Fitness Tracker 1.69" Touch Screen </a>
             </p>
-            <strong class="price mb-0">$17.00</strong>
+            <strong>$192.99</strong>
           </div>
         </article>
 
         <article class="d-flex mb-4">
-          <a href="#" class="me-2 flex-shrink-0">
-            <img src="images/items/tech/7.jpg" width="96" height="96" class="size-96x96 img-thumbnail">
+          <a href="#" class="mr-3 flex-shrink-0">
+            <img src="placeholder.jpg" width="96" class="w-24 rounded h-20 object-fit-cover">
           </a>
           <div>
-            <p class="mb-2">
-            	<a href="#" class="text-body"> HP Laptop Computer 15.6" 512GB SSD</a>
+            <p class="mb-1">
+            	<a href="#">Wired Gaming Headset Headphone </a>
             </p>
-            <strong class="price mb-0">$399.50</strong>
+            <strong>$45.50</strong>
           </div>
         </article>
 
         <article class="d-flex mb-4">
-          <a href="#" class="me-2 flex-shrink-0">
-            <img src="images/items/tech/6.jpg" width="96" height="96" class="size-96x96 img-thumbnail">
+          <a href="#" class="mr-3 flex-shrink-0">
+            <img src="placeholder.jpg" width="96" class="w-24 rounded h-20 object-fit-cover">
           </a>
           <div>
-            <p class="mb-2">
-            	<a href="#" class="text-body"> Sample product name goes here as demo </a>
+            <p class="mb-1">
+            	<a href="#">HP Laptop Computer 15.6" 512GB SSD</a>
             </p>
-            <strong class="price mb-0">$99.50</strong>
+            <strong>$45.50</strong>
           </div>
         </article>
 
@@ -459,136 +275,70 @@
 </section>
 <!-- =============== SECTION  END// ============== -->
 
-
-
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="padding-y bg-light">
-<div class="container">
+<section class="py-10">
+  <div class="container">
 
-  <header class="section-heading">
-    <h3>Popular categories </h3>
-  </header> 
+    <header class="mb-8">
+      <h3>Popular categories </h3>
+    </header> 
 
-  <div class="row">
-    <div class="col-lg-4">
-     <nav class="bg-white p-4 rounded shadow-sm mb-4">
-      <img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-1.jpg">
-      <h6 class="mb-2"><a href="#" class="text-dark">Notebooks</a></h6>
-      <ul class="list-menu mb-2">
-        <li><a href="#">Asus laptops</a></li>
-        <li><a href="#">Macbooks</a></li>
-        <li><a href="#">Gaming laptops</a></li>
-        <li><a href="#">Lenovo</a></li>
-      </ul>
-     </nav> 
-    </div> <!-- col .// -->
-    <div class="col-lg-4">
-     <nav class="bg-white p-4 rounded shadow-sm mb-4">
-      <img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-2.jpg">
-      <h6 class="mb-2"><a href="#" class="text-dark">Accessories</a></h6>
-      <ul class="list-menu mb-2">
-        <li><a href="#">Smartwatches</a></li>
-        <li><a href="#">Keyboards</a></li>
-        <li><a href="#">Cables HDML, USB</a></li>
-        <li><a href="#">Others</a></li>
-      </ul>
-     </nav> 
-    </div> <!-- col .// -->
-    <div class="col-lg-4">
-     <nav class="bg-white p-4 rounded shadow-sm mb-4">
-      <img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-8.jpg">
-      <h6 class="mb-2"><a href="#" class="text-dark">Office tech</a></h6>
-      <ul class="list-menu mb-0">
-        <li><a href="#">Printers</a></li>
-        <li><a href="#">Lighting</a></li>
-        <li><a href="#">TV boxes</a></li>
-        <li><a href="#">Lorem ipsum</a></li>
-      </ul>
-     </nav> 
-    </div> <!-- col .// -->
-  </div>
+    <div class="row">
+      <div class="sm:col-4">
+        <nav class="card bg-neutral-100 p-5 rounded mb-4">
+          <h5 class="mb-2"> Notebooks </h5>
+          <ul>
+            <li><a href="#">Asus laptops</a></li>
+            <li><a href="#">Macbooks</a></li>
+            <li><a href="#">Gaming laptops</a></li>
+            <li><a href="#">Lenovo</a></li>
+          </ul>
+        </nav>	
+      </div> <!-- col .// -->
+      <div class="sm:col-4">
+        <nav class="card bg-neutral-100 p-5 rounded mb-4">
+          <h5 class="mb-2">Accessories </h5>
+          <ul>
+            <li><a href="#">Smartwatches</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li><a href="#">Cables HDML, USB</a></li>
+            <li><a href="#">Others</a></li>
+          </ul>
+        </nav>	
+      </div> <!-- col .// -->
+      <div class="sm:col-4">
+        <nav class="card bg-neutral-100 p-5 rounded mb-4">
+          <h5 class="mb-2">Office tech </h5>
+          <ul>
+            <li><a href="#">Printers</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="#">TV boxes</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+          </ul>
+        </nav>	
+      </div> <!-- col .// -->
+    </div>
 
-</div> <!-- container .//  -->
+  </div> <!-- container .//  -->
 </section>
 <!-- ============== SECTION CONTENT END// ============== -->
 
 
-<footer class="section-footer bg-gray-light">
-	<div class="container">
-		<section class="footer-main padding-y">
-			<div class="row">
-				<aside class="col-12 col-sm-12 col-lg-4">
-					<article class="me-lg-4">
-						<img src="images/logo.png" height="44" class="logo-footer">
-						<p class="mt-3 text-black-50"> You might remember the Lenovo computer commercials in which a youth reports this exciting news to his friends. </p>
-						<nav class="mb-4">
-							<a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-							<a class="btn btn-icon btn-light" title="Instagram" target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-							<a class="btn btn-icon btn-light" title="Youtube" target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-							<a class="btn btn-icon btn-light" title="Twitter" target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-					</nav>
-					</article>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Store</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#">About us</a></li>
-						<li> <a href="#">Find store</a></li>
-						<li> <a href="#">Categories</a></li>
-						<li> <a href="#">Blogs</a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Information</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#">Help center</a></li>
-						<li> <a href="#">Money refund</a></li>
-						<li> <a href="#">Shipping info</a></li>
-						<li> <a href="#">Refunds</a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4  col-lg-2">
-					<h6 class="title">Support</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#"> Help center </a></li>
-						<li> <a href="#"> Documents </a></li>
-						<li> <a href="#"> Account restore </a></li>
-						<li> <a href="#"> My Orders </a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Download</h6>
-					<a href="#" class="mb-2 d-inline-block"> <img src="images/misc/btn-appstore.png" height="44"></a>
-					<a href="#" class="mb-2 d-inline-block"> <img src="images/misc/btn-market.png" height="44"></a>
-				</aside>
-			</div> <!-- row.// -->
-		</section> <!-- footer-top.// -->
-		<hr class="my-0">
-		<section class="footer-bottom d-flex justify-content-between">
-			<div class="text-black-50">
-				© 2020- 2024 Ecommerce UI.
-			</div>
-			<nav class="dropup">
-				<button class="dropdown-toggle btn align-items-center" type="button" data-bs-toggle="dropdown">
-					<img src="images/flags/flag-usa.png" class="me-2" height="20">
-					<span>English</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-end">
-					<li><a class="dropdown-item" href="#">Russian</a></li>
-					<li><a class="dropdown-item" href="#">Arabic</a></li>
-					<li><a class="dropdown-item" href="#">Spanish</a></li>
-				</ul>
-			</nav>
 
-		</section>
-	</div> <!-- container end.// -->
+
+<footer class="border-top bg-secondary py-12">
+	<div class="container">
+		<section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
+				<p class="md:mb-0 mb-3 text-center md:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
+				<nav class="nav">
+						<a href="#" class="nav-link">Menu item</a>
+						<a href="#" class="nav-link">Menu item</a>
+						<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+				</nav>
+			</section>
+	</div><!-- //container -->
 </footer>
 
-<!-- Bootstrap js -->
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom js -->
-<script src="js/script.js?v=2.0"></script>
 
 </body>
 </html>
