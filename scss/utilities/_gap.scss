@@ -14,31 +14,23 @@ $gap_map:(
 
 
 @each $name, $value in $gap_map {
-  .gap-#{$name} { gap: #{$value}; --flex-gap-x:#{$value}; --flex-gap-y:#{$value};  }
-  .row-gap-#{$name} {  row-gap: #{$value}; --flex-gap-x:#{$value}; }
-  .column-gap-#{$name} { column-gap: #{$value}; --flex-gap-y:#{$value}; }
+  .gap-#{$name} { gap: #{$value}; --flex-gap-rows:#{$value}; --flex-gap-cols:#{$value};  }
+  .gap-rows-#{$name} {  row-gap: #{$value}; --flex-gap-rows:#{$value}; }
+  .gap-cols-#{$name} { column-gap: #{$value}; --flex-gap-cols:#{$value}; }
 }
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 
 
-@each $breakpoint, $size in $breakpoints {
+@each $breakpoint, $screen_size in $breakpoints {
 
-  $media_type: min-width !default;
-  
-  @if ($breakpoint == 'max-lg' or $breakpoint == 'max-md' or $breakpoint == 'max-sm'){ 
-    $media_type: 'max-width';
-  }
-
-  @media ( $media_type: #{$size}){
-
+  @media ($screen_size){
     @each $name, $value in $gap_map {
-      .#{$breakpoint}\:gap-#{$name} { gap: #{$value}; --flex-gap:#{$value}; }
-      .#{$breakpoint}\:row-gap-#{$name} {  row-gap: #{$value}; --flex-gap:#{$value}; }
-      .#{$breakpoint}\:column-gap-#{$name} { column-gap: #{$value}; --flex-gap:#{$value}; }
+      .#{$breakpoint}\:gap-#{$name} { gap: #{$value}; --flex-gap-rows:#{$value}; --flex-gap-cols:#{$value}; }
+      .#{$breakpoint}\:gap-rows-#{$name} {  row-gap: #{$value}; --flex-gap-rows:#{$value}; }
+      .#{$breakpoint}\:gap-cols-#{$name} { column-gap: #{$value}; --flex-gap-cols:#{$value}; }
     }
-   // end breakpoint
-   
+   // end breakpoint  
   }
 }

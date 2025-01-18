@@ -149,6 +149,17 @@ a {
   }
 }
 
+a.link {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--primary-300);
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 // And undo these styles for placeholder links/named anchors (without href).
 // It would be more straightforward to just use a[href] in previous block, but that
 // causes specificity issues in many other styles that are too complex to fix.
@@ -216,10 +227,9 @@ figure {
 
 
 // Images and content
-
-img,
-svg {
+img, svg {
   vertical-align: middle;
+  max-width: 100%;
 }
 
 
@@ -449,7 +459,7 @@ iframe {
 // 1. Add the correct display in all browsers
 
 summary {
-  display: list-item; // 1
+  user-select: none;
   cursor: pointer;
 }
 

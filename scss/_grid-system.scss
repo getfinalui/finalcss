@@ -9,29 +9,36 @@
   margin-left: auto;
 }
 
-.container{ max-width: $container-width; } // max large screen 1440
+
+.container{ max-width:$container-width; } // max large screen 1440
+
+// **** 
+// Optional: to keep extra space around the container
+@media (max-width: $container-width + 40px ){
+  .container{ max-width: ($container-width - 100px); } // max large screen 1440
+}
+// ***
 
 .row {
-  --flex-gap: 20px; // default gap // gap.scss file
-  --flex-gap-x: 20px; // default gap // gap.scss file
-  --flex-gap-y: 20px; // default gap // gap.scss file
+  --flex-gap-rows: 0px; // default gap // gap.scss file
+  --flex-gap-cols: 20px; // default gap // gap.scss file
   gap:0!important; // css gap breaks flex column, it is good for css grid only
   row-gap:0!important; // css gap breaks flex column, it is good for css grid only
   column-gap: 0!important; // css gap breaks flex column, it is good for css grid only
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc( -0.5 * var(--flex-gap-x));
-  margin-right: calc( -0.5 * var(--flex-gap-x));
-  margin-top: calc(-1 * var(--flex-gap-y));
+  margin-left: calc( -0.5 * var(--flex-gap-cols));
+  margin-right: calc( -0.5 * var(--flex-gap-cols));
+  margin-top: calc(-1 * var(--flex-gap-rows));
 }
 
 .row > * { 
   flex: 0 0 auto;
   max-width: 100%;
   width: 100%;
-  padding-right: calc(var(--flex-gap-x)* 0.5);
-  padding-left: calc(var(--flex-gap-x)* 0.5);
-  margin-top: var(--flex-gap-y);
+  padding-right: calc(var(--flex-gap-cols)* 0.5);
+  padding-left: calc(var(--flex-gap-cols)* 0.5);
+  margin-top: var(--flex-gap-rows);
 }
 
 //////////// ROW COLS
@@ -47,7 +54,7 @@
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
 
-  @media (min-width: #{$size}){
+  @media ($size){
     // breakpoinst styles
     .#{$breakpoint}\:row-cols-auto > * { width: auto;}
     .#{$breakpoint}\:row-cols-1 > * {  width: 100%; }
@@ -81,7 +88,7 @@
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+  @media ($size){
     // breakpoinst styles
     .#{$breakpoint}\:col{ flex: 1 0 0%; }
     .#{$breakpoint}\:col-auto{width: auto;}
@@ -138,7 +145,7 @@
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
-  @media (min-width: #{$size}){
+  @media ($size){
     // breakpoinst styles
     .#{$breakpoint}\:grid-template-cols-1{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
     .#{$breakpoint}\:grid-template-cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }

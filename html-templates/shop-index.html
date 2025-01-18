@@ -1,204 +1,73 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
-  <meta name="author" content="Type name">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Type some info">
+	<meta name="author" content="Type name">
 
-  <title>Website layout sample </title>
+	<title>Website layout sample </title>
 
-  <!-- Bootstrap css -->
-  <link href="css/bootstrap.css?v=2.0" rel="stylesheet" type="text/css" />
-
-  <!-- Custom css -->
-  <link href="css/ui.css?v=2.0" rel="stylesheet" type="text/css" />
-  <link href="css/responsive.css?v=2.0" rel="stylesheet" type="text/css" />
-
-  <!-- Font awesome 5 -->
-  <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<!-- FinalCSS -->
+	<link href="../css/final.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 
-<header class="section-header">
-	<section class="header-main border-bottom py-3">
-		<div class="container">
-			<div class="row gx-2 gy-3">
-				<div class="col-lg col-md col-6 flex-grow-0">
-					<a href="https://ecommerce-ui.com#templates" class="brand-wrap me-4">
-						<img class="logo" height="40" src="images/logo.svg">
-					</a> <!-- brand-wrap end.// -->
-				</div>
-				<div class="col-lg col-md col-6 flex-grow-0">
-					<div class="dropdown float-end">
-						<button data-bs-toggle="dropdown" class="dropdown-toggle btn btn-primary text-nowrap"> 
-							<i class="fa me-1 fa-bars"></i> Categories 
-						</button>
-						<nav class="dropdown-menu dropdown-large">
-						 <ul class="row row-cols-2 row-cols-lg-3 list-unstyled nav-pills g-0">
-							<li><a class="nav-link" href="#">Laptops</a></li>
-							<li><a class="nav-link" href="#">Cameras</a></li>
-							<li><a class="nav-link" href="#">Gadgets</a></li>
-							<li><a class="nav-link" href="#">Accessories</a></li>
-							<li><a class="nav-link" href="#">Smartphones</a></li>
-							<li><a class="nav-link" href="#">Smartwatches</a></li>
-							<li><a class="nav-link" href="#">Headsets</a></li>
-							<li><a class="nav-link" href="#">Gamings</a></li>
-							<li><a class="nav-link" href="#">Apple</a></li>
-							<li><a class="nav-link" href="#">Lacetti</a></li>
-							<li><a class="nav-link" href="#">Toyota</a></li>
-							<li><a class="nav-link" href="#">Hyundai</a></li>
-							<li><a class="nav-link" href="#">Mercedes</a></li>
-							<li><a class="nav-link" href="#">Chevrolet</a></li>
-							<li><a class="nav-link" href="#">Lacetti</a></li>
-							<li><a class="nav-link" href="#">Hyundai</a></li>
-							<li><a class="nav-link" href="#">Office tech</a></li>
-							<li><a class="nav-link" href="#">Home equipments</a></li>
-						 </ul>
-					    </nav> <!-- dropdown-menu end.// -->
-					</div> <!-- dropdown end.// -->
-				</div> <!-- col end.// -->
-				
-				<div class="col-lg col-md order-lg-last">
-					<div class="float-md-end">
-						<a href="#" class="btn btn-light"> 
-					   	 <i class="fa fa-user"></i>  
-					   	 <span class="ms-1 d-none d-sm-inline-block"> Sign in  </span> 
-						</a>
-						<a href="#" class="btn btn-light"> 
-							<i class="fa fa-heart"></i> 
-							<span class="ms-1 d-none d-sm-inline-block"> Wishlist  </span>    
-						</a>
-						<a data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-light"> 
-							<i class="fa fa-shopping-cart me-1"></i>  My cart  
-						</a>
+<header class="py-2 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap flex-col sm:flex-row gap-3 align-items-center justify-content-between">
+      
+      <a href="https://finalcss.com" class="text-xl hover:opacity-80">
+        <img src="logo-finalui.svg" height="40" alt="">
+      </a>
 
-						<button class="btn btn-light d-md-none ms-2 float-end" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-						   Menu
-						</button>
-					</div>
-				</div>
+      <div class="md:w-40% mr-4">
+        <form class="d-flex w-100% mx-3">
+          <input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
+          <button class="rounded-left-0 btn btn-secondary" style="margin-left:-1px">
+            Search
+          </button>
+        </form>
+      </div>
+      
+      <div>
+        <button class="btn btn-secondary"> Wishlist 	</button>	
+        <button class="btn btn-secondary">  Sign up 	</button>	
+        <button class="btn btn-primary">  My cart (0) 	</button>
+      </div>
 
-				<div class="col-lg-3 col-xl-4 col-xxl-5 col-md-12 order-lg-3">
-					<form action="#">
-						<div class="input-group">
-							<input type="search" class="form-control" placeholder="Search">
-							<button class="input-group-btn btn-icon btn btn-light">
-								 <i class="fa fa-search"></i> 
-							</button>
-						</div> <!-- input-group end.// -->
-					</form> <!-- search-wrap end.// -->
-				</div> <!-- col end.// -->
-
-			</div> <!-- row end.// -->
-		</div> <!-- container end.// -->
-	</section> <!-- header-main end.// -->
-
-	<nav class="navbar py-0 py-md-2 navbar-expand-md navbar-light border-bottom">
-		<div class="container">
-			<div class="navbar-collapse collapse" id="main_nav" style="">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							All templates
-						</a>
-						<nav class="dropdown-menu p-4">
-							<!-- megamenu-inner -->
-							<div class="d-flex flex-wrap flex-sm-nowrap">
-								<div style="width: 12rem">
-									
-									<h6>Ads website</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-ads-index.html"> Ads home </a> </li>
-										<li><a class="text-body" href="p-ads-list.html"> Ads listing </a> </li>
-										<li><a class="text-body" href="p-ads-detail.html"> Ads detail </a> </li>
-									</ul>
-	
-									<h6>Techstore</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-techstore-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-techstore-list.html"> Listing view </a> </li>
-										<li><a class="text-body" href="p-techstore-detail.html"> Item details </a> </li>
-									</ul>
-	
-								</div>
-								<div style="width: 12rem">
-									
-									<h6>Marketplace</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-market-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-market-list.html"> Listing view </a> </li>
-										<li><a class="text-body" href="p-market-list-grid.html"> Grid view </a> </li>
-										<li><a class="text-body" href="p-market-detail.html"> Item detail </a> </li>
-										<li><a class="text-body" href="p-market-cart.html"> Cart page </a> </li>
-										<li><a class="text-body" href="p-market-order.html"> Order page </a> </li>
-									</ul>
-	
-								</div>
-								<div style="width: 12rem">
-	
-									<h6>Food order</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-food-index.html"> Main page </a> </li>
-										<li><a class="text-body" href="p-food-detail.html"> Restaurant foods </a> </li>
-										<li><a class="text-body" href="p-food-order.html">  Food order </a> </li>
-									</ul>
-	
-									<h6>Common pages</h6>
-									<ul class="list-menu mb-3">
-										<li><a class="text-body" href="p-info-pricing.html"> Pricing page </a> </li>
-										<li><a class="text-body" href="p-user-profile.html">  User profile </a> </li>
-										<li><a class="text-body" href="p-user-signup.html">  User register </a> </li>
-									</ul>
-								</div>
-							</div>
-							<figure class="p-5 text-center bg-warning-subtle rounded">
-									<a href="https://ecommerce-ui.com#templates" class="btn btn-warning">Preview all templates</a>
-							</figure>
-							<!-- megamenu-inner .// -->
-						</nav> <!-- dropdown-menu .// -->
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Pages
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="p-techstore-index.html"> Page home </a> </li>
-							<li> <a class="dropdown-item" href="p-techstore-list.html"> Page listing </a> </li>
-							<li> <a class="dropdown-item" href="p-techstore-detail.html"> Page detail </a> </li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Services </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Projects </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Services </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Projects </a>
-					</li>
-				</ul>
-			</div> <!-- collapse .// -->
-		</div> <!-- container .// -->
-	</nav>
+    </div>
+  </div> <!-- container end.// -->
 </header> <!-- section-header end.// -->
-	
+  
+<nav class="border-bottom py-1">
+  <div  class="container">
+    <ul class="nav">
+      <li><a href="#main" class="nav-link">Hot offers</a></li>
+      <li><a href="#about" class="nav-link">Recommends</a></li>
+      <li><a href="#features" class="nav-link">Gift boxes</a></li>
+      <li><a href="#faq" class="nav-link">New arrivals</a></li>
+      <li><a href="#" class="nav-link">Bestsellers</a></li>
+      <li><a href="#" class="nav-link">Books</a></li>
+      <li><a href="#" class="nav-link">Other items</a></li>
+    </ul>
+  </div> <!-- container end.// -->
+</nav>
 
+	
 <!-- ================ SECTION INTRO ================ -->
-<section class="section-intro bg-primary padding-y bg-center" style="background-image: url('images/banners/main-wide.jpg')">
+<section class="bg-primary-700 theme-static py-8 md:py-20">
 	<div class="container">
 
-		<div class="row align-items-center" style="min-height:420px">
-			<div class="col-lg-6 col-xl-6 col-xxl-5">
-			 <article class="my-5">
-			    <h1 class="display-4 text-white"> Best products & <br> brands in our store  </h1>
-			    <p class="lead text-white">Trendy Products, Factory Prices, Excellent Service</p>
-			    <a href="#" class="btn btn-warning"> Purchase now</a> 
-			    <a href="#" class="btn btn-light"> Learn more </a>
+		<div class="row gap-5 align-items-center" style="min-height:400px">
+			<div class="lg:col-6">
+			 <article class="mb-10">
+			    <h1 class="text-white text-4xl sm:text-6xl md:text-7xl"> Best products & <br> brands in our store  </h1>
+			    <p class="text-white  text-xl md:text-3xl font-light mb-8">Trendy Products, Factory Prices, Excellent Service</p>
+			    <a href="#" class="btn btn-lg" style="--btn-bg:var(--yellow-500); --btn-bg-hover:var(--yellow-400)"> Purchase now</a> 
+			    <a href="#" class="btn btn-lg btn-primary-soft" style="--btn-bg:var(--primary-500); --btn-bg-hover:var(--primary-400); --btn-text-color:#fff"> Learn more </a>
 			  </article>
 			</div> <!-- col.// -->
 			
@@ -210,82 +79,30 @@
 
 
 <!-- ============== SECTION CATEGORY  ============== -->
-<section class="padding-y bg-light">
+<section class="pt-5">
 <div class="container">
 
-	<nav class="row gy-4 justify-content-center">
-     
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				 <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-1.jpg">
-				</div>
-				<span> Computers </span>
-			</a>
-		</div> <!-- col.// -->
+	<nav class="d-grid grid-template-cols-2 lg:grid-template-cols-4 min-h-32 gap-4"> 
+		
+		<a href="#" class="rounded text-decoration-none p-5 bg-primary-100 hover:bg-primary-200">
+				<p class="text-lg text-base font-semibold"> Computer & PC </p>
+				<p>85 products</p>
+		</a> <!-- item-grid.// -->
 
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-2.jpg">
-				</div>
-				<span> Mini gadgets </span>
-			</a>
-		</div> <!-- col.// -->
+		<a href="#" class="rounded text-decoration-none p-5  bg-primary-100 hover:bg-primary-200">
+				<p class="text-lg text-base font-semibold"> Electro scooters </p>
+				<p>17 products</p>
+		</a> <!-- item-grid.// -->
 
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-3.jpg">
-				</div>
-				<span> Tablets </span>
-			</a>
-		</div> <!-- col.// -->
+		<a href="#" class="rounded text-decoration-none p-5  bg-primary-100 hover:bg-primary-200">
+				<p class="text-lg text-base font-semibold"> Smart Gadgets </p>
+				<p>200+ products</p>
+		</a> <!-- item-grid.// -->
 
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-4.jpg">
-				</div>
-				<span> Home TV </span>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-5.jpg">
-				</div>
-				<span> Cameras </span>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-6.jpg">
-				</div>
-				<span> Gaming </span>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-7.jpg">
-				</div>
-				<span> Headphones </span>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-xl col-lg-2 col-md-3 col-sm-4 col-4">
-			<a href="#" class="d-block hover:opacity text-body text-center">
-				<div class="mb-2">
-				  <img class="size-100x100 shadow-sm rounded-circle bg-gray" width="100" height="100" src="images/icons/nav/nav-8.jpg">
-				</div>
-				<span> Equipments </span>
-			</a>
-		</div> <!-- col.// -->
+		<a href="#" class="rounded d-block text-decoration-none p-5 bg-primary-100 hover:bg-primary-200">
+				<p class="text-lg text-base font-semibold"> Wearable Items </p>
+				<p>100+ products</p>
+		</a> <!-- item-grid.// -->
    </nav>
 
 	</div> <!-- container end.// -->
@@ -293,121 +110,142 @@
 <!-- ============== SECTION CATEGORY .//END ============== -->
 
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="padding-y">
+<section class="py-8">
 <div class="container">
 
-	<header class="section-heading">
+	<header class="mb-8">
 		<h3>Recommended items </h3>
 	</header> 
 
-	<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+	<div class="row row-cols-5 tablet:row-cols-3 mobile:row-cols-2">
 		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/1.jpg" class="mix-blend-multiply"> 
+	        <figure>
+	          <a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+	          	<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 	          </a>
 	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $995.99 </p> <!-- price.// -->
-	            <a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/2.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $578.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Samsung Galaxy Tab S7 WiFi Tablet Snapdragon </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/3.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $32.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Sample product name goes here as demo </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/4.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $935.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Apple iPhone 8 64GB 128GB 256GB ATT T-Mobile </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/5.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $67.50 </p> <!-- price.// -->
-	            <a href="#" class="title"> Wired Gaming Headset Headphone with Microphone </a>
+	          	<p class="font-bold text-lg"> $995.99 </p> 
+	            <a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+							<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 	          </figcaption>
 	        </figure> <!-- item // -->
 		</div> <!-- col // -->
 
-		<div class="col mb-4">
-	        <article class="card p-3 p-lg-4 bg-primary h-100">
-	        	<div>
-	        		<h4 class="text-white mb-3">Huge White Sale savings</h4>
-	        		<p class="text-white-50">Get up to 70% off bedding and bath.</p>
-	        	</div>
-	        </article>
-		</div> <!-- col // -->
 		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/6.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $456.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Canon EOS Rebel with 100x zoom 18-55mm lense </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
 		</div> <!-- col // -->
+
 		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/7.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $280.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> HP Laptop Computer 15.6" 512GB SSD Win11 Intel </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
 		</div> <!-- col // -->
+
 		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/8.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $32.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Sample product name goes here as demo </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
 		</div> <!-- col // -->
+
 		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/9.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $8.95 </p> <!-- price.// -->
-	            <a href="#" class="title"> Sample product name goes here as demo </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
+		</div> <!-- col // -->
+
+		<div class="col">
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
+		</div> <!-- col // -->
+
+		<div class="col">
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
+		</div> <!-- col // -->
+
+		<div class="col">
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
+		</div> <!-- col // -->
+
+		<div class="col">
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
+		</div> <!-- col // -->
+
+		<div class="col">
+			<figure>
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-56 mobile:h-44 overflow-hidden"> 
+					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
+				</a>
+				<figcaption class="mt-2">
+					<p class="font-bold text-lg"> $995.99 </p> 
+					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
+					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
+				</figcaption>
+			</figure> <!-- item // -->
 		</div> <!-- col // -->
 
 	</div> <!-- row // -->
@@ -416,118 +254,40 @@
 </div> <!-- container .//  -->
 </section>
 <!-- ============== SECTION CONTENT END// ============== -->
-
 
 
 <!-- ============== SECTION BANNER  ============== -->
 <section>
 <div class="container">
 
-<article class="card-banner bg-gray-light" style="background-image: url('images/banners/tech-wide.jpg');">
-	
-	<div class="card-body">
-        <div class="p-5 m-lg-3">
-			<h2 class="mb-2">Live luxuriously <br> every day</h2>
-			<p>Indulge in the finer things, from timepieces to handbags.</p>
-			<a href="#" class="btn btn-warning"> Learn more </a>
-		</div>
-    </div>
-	
-</article>
+	<article class="bg-primary-300 p-3 lg:p-6 bg-gradient-1 rounded">
+
+			<div class="p-5">
+				<h2 class="mb-2 mobile:text-2xl">Live luxuriously in <br> every moment</h2>
+				<p class="mb-5">Indulge in the finer things, from timepieces to handbags.</p>
+				<a href="#" class="btn btn-lg btn-primary"> Learn more </a>
+			</div>
+
+	</article>
 
 </div> <!-- container .//  -->
 </section>
 <!-- ============== SECTION BANNER END// ============== -->
 
 
-
-
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="padding-y">
+<section class="py-8">
 <div class="container">
 
-	<header class="section-heading">
-		<h3>Continue browsing </h3>
-	</header> 
-
-	<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/1.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $32.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/9.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $132.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Samsung Galaxy Tab S7 WiFi Tablet Snapdragon </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/3.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $950.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Xiaomi Redmi 12C Global Version 124GB </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/4.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $12.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Apple iPhone 8 64GB 128GB 256GB ATT T-Mobile </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-		<div class="col">
-	        <figure class="card-product-grid">
-	          <a href="#" class="img-wrap rounded bg-light"> 
-	          	<img src="images/items/tech/5.jpg" class="mix-blend-multiply"> 
-	          </a>
-	          <figcaption class="mt-2">
-	          	<p class="mb-2 fw-bold price"> $32.00 </p> <!-- price.// -->
-	            <a href="#" class="title"> Wired Gaming Headset Headphone with Microphone </a>
-	          </figcaption>
-	        </figure> <!-- item // -->
-		</div> <!-- col // -->
-	</div> <!-- row // -->
-
-</div> <!-- container .//  -->
-</section>
-<!-- ============== SECTION CONTENT END// ============== -->
-
-
-
-<!-- ============== SECTION CONTENT  ============== -->
-<section class="padding-y bg-light">
-<div class="container">
-
-	<header class="section-heading">
+	<header class="mb-8">
 		<h3>Popular categories </h3>
 	</header> 
 
 	<div class="row">
-		<div class="col-lg-4">
-		 <nav class="bg-white p-4 rounded shadow-sm mb-4">
-		 	<img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-1.jpg">
-		 	<h5 class="mb-2"><a href="#" class="text-dark">Notebooks</a></h5>
-		 	<ul class="list-menu mb-2">
+		<div class="lg:col-4">
+		 <nav class="card bg-neutral-100 p-5 rounded mb-4">
+		 	<h5 class="mb-2"> Notebooks </h5>
+		 	<ul>
 		 		<li><a href="#">Asus laptops</a></li>
 		 		<li><a href="#">Macbooks</a></li>
 		 		<li><a href="#">Gaming laptops</a></li>
@@ -535,11 +295,10 @@
 		 	</ul>
 		 </nav>	
 		</div> <!-- col .// -->
-		<div class="col-lg-4">
-		 <nav class="bg-white p-4 rounded shadow-sm mb-4">
-		 	<img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-2.jpg">
-		 	<h5 class="mb-2"><a href="#" class="text-dark">Accessories</a></h5>
-		 	<ul class="list-menu mb-2">
+		<div class="lg:col-4">
+			<nav class="card bg-neutral-100 p-5 rounded mb-4">
+		 	<h5 class="mb-2">Accessories </h5>
+		 	<ul>
 		 		<li><a href="#">Smartwatches</a></li>
 		 		<li><a href="#">Keyboards</a></li>
 		 		<li><a href="#">Cables HDML, USB</a></li>
@@ -547,11 +306,10 @@
 		 	</ul>
 		 </nav>	
 		</div> <!-- col .// -->
-		<div class="col-lg-4">
-		 <nav class="bg-white p-4 rounded shadow-sm mb-4">
-		 	<img class="size-100x100 float-end mb-2" src="images/icons/nav/nav-8.jpg">
-		 	<h5 class="mb-2"><a href="#" class="text-dark">Office tech</a></h5>
-		 	<ul class="list-menu mb-0">
+		<div class="lg:col-4">
+			<nav class="card bg-neutral-100 p-5 rounded mb-4">
+		 	<h5 class="mb-2">Office tech </h5>
+		 	<ul>
 		 		<li><a href="#">Printers</a></li>
 		 		<li><a href="#">Lighting</a></li>
 		 		<li><a href="#">TV boxes</a></li>
@@ -567,83 +325,19 @@
 
 
 
-<footer class="section-footer bg-gray-light">
+<footer class="border-top bg-secondary py-12">
 	<div class="container">
-		<section class="footer-main padding-y">
-			<div class="row">
-				<aside class="col-12 col-sm-12 col-lg-4">
-					<article class="me-lg-4">
-						<img src="images/logo.png" height="44" class="logo-footer">
-						<p class="mt-3 text-black-50"> You might remember the Lenovo computer commercials in which a youth reports this exciting news to his friends. </p>
-						<nav class="mb-4">
-							<a class="btn btn-icon btn-light" title="Facebook" target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-							<a class="btn btn-icon btn-light" title="Instagram" target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-							<a class="btn btn-icon btn-light" title="Youtube" target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-							<a class="btn btn-icon btn-light" title="Twitter" target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-					</nav>
-					</article>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Store</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#">About us</a></li>
-						<li> <a href="#">Find store</a></li>
-						<li> <a href="#">Categories</a></li>
-						<li> <a href="#">Blogs</a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Information</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#">Help center</a></li>
-						<li> <a href="#">Money refund</a></li>
-						<li> <a href="#">Shipping info</a></li>
-						<li> <a href="#">Refunds</a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4  col-lg-2">
-					<h6 class="title">Support</h6>
-					<ul class="list-menu mb-4">
-						<li> <a href="#"> Help center </a></li>
-						<li> <a href="#"> Documents </a></li>
-						<li> <a href="#"> Account restore </a></li>
-						<li> <a href="#"> My Orders </a></li>
-					</ul>
-				</aside>
-				<aside class="col-6 col-sm-4 col-lg-2">
-					<h6 class="title">Download</h6>
-					<a href="#" class="mb-2 d-inline-block"> <img src="images/misc/btn-appstore.png" height="44"></a>
-					<a href="#" class="mb-2 d-inline-block"> <img src="images/misc/btn-market.png" height="44"></a>
-				</aside>
-			</div> <!-- row.// -->
-		</section> <!-- footer-top.// -->
-		<hr class="my-0">
-		<section class="footer-bottom d-flex justify-content-between">
-			<div class="text-black-50">
-				© 2020- 2024 Ecommerce UI.
-			</div>
-			<nav class="dropup">
-				<button class="dropdown-toggle btn align-items-center" type="button" data-bs-toggle="dropdown">
-					<img src="images/flags/flag-usa.png" class="me-2" height="20">
-					<span>English</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-end">
-					<li><a class="dropdown-item" href="#">Russian</a></li>
-					<li><a class="dropdown-item" href="#">Arabic</a></li>
-					<li><a class="dropdown-item" href="#">Spanish</a></li>
-				</ul>
-			</nav>
-
-		</section>
-	</div> <!-- container end.// -->
+		<section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
+				<p class="md:mb-0 mb-3 text-center md:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
+				<nav class="nav">
+						<a href="#" class="nav-link">Menu item</a>
+						<a href="#" class="nav-link">Menu item</a>
+						<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+				</nav>
+			</section>
+	</div><!-- //container -->
 </footer>
 
-
-<!-- Bootstrap js -->
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom js -->
-<script src="js/script.js?v=2.0"></script>
 
 </body>
 </html>

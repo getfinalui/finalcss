@@ -21,12 +21,12 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--primary-200);
+  background-color: var(--primary-100);
   background-image: var(--form-check-bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border:1px solid var(--primary-600);
+  border:1px solid var(--primary-400);
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
   print-color-adjust: exact;
@@ -62,9 +62,9 @@
 .form-check {
   display: block;
   min-height: 1.5rem; 
-}
-.form-check .form-check-input {
-  float: left;
+  .form-check-input {
+    float: left;
+  }
 }
 
 .form-check-reverse {

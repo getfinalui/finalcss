@@ -11,6 +11,7 @@
   --btn-font-weight:400;
   --btn-bg: transparent;
   --btn-border-color: transparent;
+  --btn-border-hover-color: transparent;
   --btn-border-radius: 8px;
   --btn-size-sm: 32px;
   --btn-size-md: 38px;
@@ -23,6 +24,7 @@
   align-items: center;
   justify-content: center;
   height: var(--btn-size-md);
+  min-width: var(--btn-size-md);
   padding: var(--btn-padding-y) var(--btn-padding-x);
   font-size: var(--btn-font-size-md);
   font-weight: var(--btn-font-weight);  
@@ -39,6 +41,7 @@
   cursor: pointer;
   user-select: none;
   gap:8px;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
   
   svg{
     max-width: 20px; max-height: 20px;
@@ -55,10 +58,10 @@
     text-decoration: none;
   }
 
-  &:active {  
+  &:active{  
     transform: translateY(1px);
     box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
-  } 
+  }
 }
 
 
@@ -123,13 +126,6 @@
 //
 // Alternate buttons (using method of finalui design system www.finalui.com )
 //
-.btn-intense{ 
-  --btn-bg: var(--neutral-900);
-  --btn-bg-hover: var(--neutral-800);
-  --btn-text-color: var(--text-color-invert);
-  --btn-border-hover-color: transparent;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
-}
 
 .btn-primary{
   --btn-bg: var(--primary-600-static);
@@ -138,47 +134,53 @@
   --btn-border-hover-color: transparent;
   box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
 }
-.btn-danger{
-  --btn-bg: var(--red-500);
-  --btn-bg-hover: var(--red-400);
-  --btn-text-color: var(--text-color-white);
-  --btn-border-hover-color: transparent;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
-}
+
 .btn-secondary {
   --btn-bg: var(--bg-color-raised);
   --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
+
+.btn-danger{
+  --btn-bg: var(--red-500);
+  --btn-bg-hover: var(--red-600);
+  --btn-text-color: var(--text-color-white);
+  --btn-border-hover-color: transparent;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+}
+
+.btn-success{
+  --btn-bg: var(--green-500);
+  --btn-bg-hover: var(--green-600);
+  --btn-text-color: var(--text-color-white);
+  --btn-border-hover-color: transparent;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+}
+
 .btn-danger-soft{
   --btn-bg: var(--bg-color-raised);
   --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-danger);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
+
 .btn-neutral{
   --btn-bg: var(--neutral-200);
   --btn-bg-hover: var(--neutral-300);
   --btn-text-color: var(--text-color-base);
   --btn-border-hover-color: transparent;
+  box-shadow: none;
 }
+
 .btn-primary-soft{
   --btn-bg: var(--primary-100);
   --btn-bg-hover: var(--primary-200);
   --btn-text-color: var(--text-color-primary);
   --btn-border-hover-color: transparent;
-}
-
-.btn-plain{
-  --btn-bg: transparent;
-  --btn-bg-hover: var(--neutral-200);
-  --btn-text-color: var(--text-color-base);
-  --btn-border-hover-color: transparent;
+  box-shadow: none;
 }
 
 .btn-outline{
@@ -186,5 +188,6 @@
   --btn-bg-hover: rgba(110, 110, 130, 0.1);
   --btn-text-color: var(--text-color-primary);
   --btn-border-color: var(--primary-500);
-  --btn-border-hover-color: var(--primary-600);;
+  --btn-border-hover-color: var(--primary-600);
+  box-shadow: none;
 }
