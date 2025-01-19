@@ -27,3 +27,11 @@ dialog::backdrop {
   //backdrop-filter: blur(4px);
 }
 
+
+.overlay, .backdrop{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99;
+    background-color: rgba(#000, 0.5);
+}

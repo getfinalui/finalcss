@@ -16,17 +16,20 @@
   align-items: center;
   gap:8px;
   padding:8px 12px;
+  padding-top: 10px;
   font-size: inherit;
   text-decoration:none;
   color:inherit;
-  border-bottom: 2px solid transparent;
-  &:hover, &:focus {
+  border-bottom: 3px solid transparent;
+  border-top-left-radius: $border-radius-base;
+  border-top-right-radius: $border-radius-base;
+  &:hover{
     text-decoration:none;
     color: var(--text-color-base);
-    border-bottom-color:var(--border-color-strong);
+    background-color: var(--neutral-1000-alpha);
   }
-  &:active {
-    background-color: var(--neutral-100);
+  &:not(.active):active {
+    background-color: var(--neutral-300);
   }
 
   &.active{
