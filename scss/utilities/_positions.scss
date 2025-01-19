@@ -5,20 +5,19 @@
 .fixed {position: fixed;}
 .sticky {position: sticky;}
 
-.fixed-top {
-  position: fixed; top: 0; right: 0; left: 0; z-index: 1030;
-}
-
-.fixed-bottom {
-  position: fixed; right: 0; bottom: 0; left: 0; z-index: 1030;
-}
-
-.sticky-top {
-  position: sticky;  top: 0; z-index: 1020;
-}
-
-.sticky-bottom {
-  position: sticky; bottom: 0; z-index: 1020;
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $screen_size in $breakpoints {
+  
+  @media ($screen_size){
+    // breakpoinst styles
+    .#{$breakpoint}\:static { position: static;}
+    .#{$breakpoint}\:relative { position: relative;}
+    .#{$breakpoint}\:absolute {position: absolute;}
+    .#{$breakpoint}\:fixed {position: fixed;}
+    .#{$breakpoint}\:sticky {position: sticky;}
+    // end breakpoint
+  }
 }
 
 
@@ -49,17 +48,14 @@ $position_map_percent:(
   "100": 100%
 );
 
-// * Generates sizes in px, for ex:
-// .top-1{top:4px} 
+// * Generates sizes in px, Ex: .top-1{top:4px} 
 @each $name, $value in $position_map {
   .top-#{$name} { top: #{$value}; }
   .bottom-#{$name} { bottom: #{$value}; }
   .right-#{$name} { right: #{$value}; }
   .left-#{$name} { left: #{$value}; }
 }
-
-// * Generates sizes in percents
-// .top-50%{top:50%} 
+// * Generates sizes in percents, Ex .top-50%{top:50%} 
 @each $name, $value in $position_map_percent {
   .top-#{$name}\% { top: #{$value}; }
   .bottom-#{$name}\% { bottom: #{$value}; }
@@ -67,13 +63,35 @@ $position_map_percent:(
   .left-#{$name}\% { left: #{$value}; }
 }
 
-.translate-xy-50\%{ transform: translate(50%, 50%)!important;}
-.translate-x-50\% { transform: translateX(50%)!important;}
-.translate-y-50\% {  transform: translateY(50%)!important;}
-.-translate-xy-50\% { transform: translate(-50%, -50%)!important;}
-.-translate-x-50\% { transform: translateX(-50%)!important;}
-.-translate-y-50\% {  transform: translateY(-50%)!important;}
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $screen_size in $breakpoints {
+  
+  @media ($screen_size){
+    // breakpoinst styles
 
+    // * Generates sizes in px, Ex: .top-1{top:4px} 
+    @each $name, $value in $position_map {
+      .#{$breakpoint}\:top-#{$name} { top: #{$value}; }
+      .#{$breakpoint}\:bottom-#{$name} { bottom: #{$value}; }
+      .#{$breakpoint}\:right-#{$name} { right: #{$value}; }
+      .#{$breakpoint}\:left-#{$name} { left: #{$value}; }
+    }
+    // * Generates sizes in percents, Ex .top-50%{top:50%} 
+    @each $name, $value in $position_map_percent {
+      .#{$breakpoint}\:top-#{$name}\% { top: #{$value}; }
+      .#{$breakpoint}\:bottom-#{$name}\% { bottom: #{$value}; }
+      .#{$breakpoint}\:right-#{$name}\% { right: #{$value}; }
+      .#{$breakpoint}\:left-#{$name}\% { left: #{$value}; }
+    }
+
+    // end breakpoint
+  }
+}
+
+
+/// *** 
+/// Helper classes
 .center-y{  top:50%; transform: translateY(-50%)!important;}
 .center-x{ left:50%; transform: translateX(-50%)!important;}
 .center-xy{ top:50%; left:50%; transform: translateY(-50%)!important; transform: translateX(-50%)!important;}

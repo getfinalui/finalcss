@@ -14,6 +14,7 @@
 @import "grid-system";
 
 // Components
+@import "components/avatar"; 
 @import "components/alert";
 @import "components/buttons";
 @import "components/card";
@@ -29,6 +30,7 @@
 @import "components/dropdown-menu";
 @import "components/segmented-control";
 @import "components/list"; 
+
 
 // Utility classes
 @import "utilities/display-layout";

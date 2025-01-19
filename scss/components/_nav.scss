@@ -20,13 +20,11 @@
   align-items: center;
   gap:8px;
   padding: 8px 12px;
-  font-size: inherit;
   text-decoration:none;
   color:inherit;
   border-radius: $border-radius-base; // from: _base-settings.scss
 
-  &:hover,
-  &:focus {
+  &:hover{
     text-decoration:none;
     color: var(--text-color-base);
     background-color: var(--neutral-1000-alpha);
