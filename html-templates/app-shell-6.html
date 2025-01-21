@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Final CSS (finalcss) is a utility-first and component library"/>
+
+  <meta name="author" content="Final CSS by Vosidiy M">
+
+  <title>Final CSS - Example Admin template (finalcss.com)</title>
+
+	<script type="text/javascript">
+    // Check localStorage for saved theme and assign that
+    const htmlElement = document.documentElement;
+    const savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    // Need to load DOM tree to detect theme switching button
+    function themeSwitcher() {
+          const currentTheme = htmlElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+          // Set the new theme on the body element
+          htmlElement.setAttribute('data-theme', newTheme);          
+          // Save the new theme in localStorage
+          localStorage.setItem('site-theme', newTheme);
+    }
+    </script>
+
+
+<!-- FinalCSS -->
+<link href="../css/final.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class="h-full">
+
+<div class="d-flex flex-col bg-base border h-full">
+
+  <article id="promo_1" data-theme="static" class="w-full d-flex justify-content-between bg-yellow-400 p-3">
+    <p class="font-semibold text-yellow-800"> Great promo banner as an example </p>
+    <a href="#" onclick="promo_1.style.display='none'">Close</a>
+  </article>
+
+  <div class="d-flex flex-row min-h-0 h-full overflow-hidden">
+    
+    <aside class="d-flex flex-row align-items-stretch relative">
+
+      <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin w-20 p-2 bg-primary-800 flex-shrink-0 theme-static">
+
+        <ul class="nav nav-vertical align-items-center gap-3 mt-4">
+          <li> 
+            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
+                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            </a>
+          </li>
+          <li> 
+            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
+                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            </a>
+          </li>
+          <li> 
+            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
+                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            </a>
+          </li>
+          <li> 
+            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
+                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      
+      <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin p-4 bg-neutral-200" style="width: 240px;">
+
+        <ul class="nav nav-vertical">
+          <li>
+            <a class="nav-link active border border-color-primary" href="#">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Products
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Customers
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Shopping
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              History
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Shipments
+            </a>
+          </li>						
+        </ul>
+        
+      </nav>
+    </aside>
+    
+    <main class="d-flex flex-col relative flex-grow h-full min-h-0">
+      <div class="d-flex flex-col flex-grow h-full w-full overflow-y-scroll">
+        
+        <header class="bg-neutral-100 border-bottom p-3 sticky top-0 z-10 shadow">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga quam voluptas similique veritatis culpa vitae, veniam nesciunt non ab minus quis. 
+        </header>
+
+        <section class="flex-grow p-5">
+
+          <button role="button"  class="btn btn-primary">Button asd</button>
+          <a role="button" href="#" class="btn btn-secondary">Another button</a>
+          <article>
+           
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            </article>
+            <article>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            </article>
+            <article>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            </article>
+            <article>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            </article>
+            <article >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
+            </article>
+           
+
+        </section>
+        
+      </div>
+    </main>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -22,22 +22,22 @@
 
 
 .alert-danger{
-  --alert-text-color: var(--text-color-danger);
+  --alert-text-color: var(--text-color-red);
   --alert-bg-color: var(--red-100);
 }
 
 .alert-warning{
-  --alert-text-color: var(--text-color-warning);
+  --alert-text-color: var(--text-color-orange);
   --alert-bg-color: var(--orange-100);
 }
 
 .alert-success{
-  --alert-text-color: var(--text-color-success);
+  --alert-text-color: var(--text-color-green);
   --alert-bg-color: var(--green-100);
 }
 
 .alert-info{
-  --alert-text-color: var(--text-color-info);
+  --alert-text-color: var(--text-color-teal);
   --alert-bg-color: var(--teal-100);
 }
 

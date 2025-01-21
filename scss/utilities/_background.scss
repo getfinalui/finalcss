@@ -19,6 +19,7 @@
   .group:hover .group-hover\:bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
 }
 
+
 @each $num, $value in $primary_list {
   .bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
   .hover\:bg-primary-#{$num}:hover { background-color:var(--primary-#{$num}); }
