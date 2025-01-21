@@ -1,17 +1,24 @@
 
 /// State based or semantic text colors
+/// To change colors of text go to _root-variables.scss 
+
 .text-base{ color: var(--text-color-base); }
 .text-secondary{ color: var(--text-color-secondary);  }
 .text-muted{ color: var(--text-color-muted);  }
-.text-primary{ color: var(--text-color-primary); }
-.text-warning{ color: var(--text-color-warning); }
-.text-danger{ color: var(--text-color-danger); }
-.text-success{ color: var(--text-color-success); }
-.text-info{ color: var(--text-color-info); }
 .text-invert{ color: var(--text-color-invert); }
-.text-black{ color:#000; }
 .text-dark{ color:#000; }
+.text-black{ color:#000; }
 .text-white{ color:#fff; }
+
+.text-primary{ color: var(--text-color-primary); }
+.text-blue{ color: var(--text-color-primary); }
+.text-orange{ color: var(--text-color-orange); }
+.text-red{ color: var(--text-color-red); }
+.text-green{ color: var(--text-color-green); }
+.text-teal{ color: var(--text-color-teal); }
+.text-purple{ color: var(--text-color-purple); }
+.text-yellow{ color: var(--text-color-yellow); }
+
 
 
 //// More text colors with hover support
@@ -67,6 +74,9 @@
 .font-semibold { font-weight: 600!important;}
 .font-bold { font-weight: 700!important; }
 .font-bolder { font-weight: bolder!important;}
+
+.font-style-italic, .font-italic {font-style: italic;}
+.font-style-normal {font-style: normal;}
 
 .text-wrap { text-wrap: wrap!important; }
 .text-balance{ text-wrap: balance!important; }

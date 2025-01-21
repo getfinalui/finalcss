@@ -60,14 +60,18 @@
   --text-color-secondary: var(--neutral-500);
   --text-color-muted: var(--neutral-400);
   --text-color-invert: var(--neutral-0);
-  --text-color-primary: var(--primary-600);
-  --text-color-warning: var(--orange-500);
-  --text-color-danger: var(--red-500);
-  --text-color-success: var(--green-600);
-  --text-color-info: var(--teal-500);
-  --text-color-feature: var(--purple-500);
   --text-color-black: #000; // will not be changed on any theme
   --text-color-white: #fff; // will not be changed on any theme
+
+  --text-color-primary: var(--primary-600);
+  --text-color-blue: var(--blue-500);
+  --text-color-orange: var(--orange-500);
+  --text-color-red: var(--red-500);
+  --text-color-green: var(--green-600);
+  --text-color-teal: var(--teal-600);
+  --text-color-purple: var(--purple-500);
+  --text-color-yellow: var(--yellow-500);
+ 
  
   // GET TEXT AND BG COLORS FROM DEFAULT STYLE
   // This will help if some part of layout has .theme-dark classname
@@ -133,12 +137,15 @@
   --text-color-secondary: var(--neutral-500);
   --text-color-muted: var(--neutral-400);
   --text-color-invert: var(--neutral-0);
+  
   --text-color-primary: var(--primary-600);
-  --text-color-warning: var(--orange-700);
-  --text-color-danger: var(--red-700);
-  --text-color-success: var(--green-700);
-  --text-color-info: var(--teal-700);
-  --text-color-feature: var(--purple-700);
+  --text-color-blue: var(--blue-700);
+  --text-color-orange: var(--orange-700);
+  --text-color-red: var(--red-700);
+  --text-color-green: var(--green-700);
+  --text-color-teal: var(--teal-700);
+  --text-color-purple: var(--purple-700);
+  --text-color-yellow: var(--yellow-700);
 
   // GET DEFAULT TEXT AND BG COLORS FROM DARKMODE STYLE
   // This will help if some part of layout has .theme-static or .theme-light classname
