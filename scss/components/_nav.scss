@@ -1,26 +1,52 @@
 .nav {
   display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
   list-style: none;
   gap:2px;
-  color:var(--text-color-base);
+  flex-wrap: wrap;
 }
+
+.nav-row{ 
+  flex-direction: row;
+  width: auto;
+}
+
+.nav-col{
+  flex-direction: column;
+  width: 100%;
+  .nav-link{
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.nav-fill { 
+  width: 100%;
+  > * { 
+    flex-grow: 1; 
+    flex-basis: 0;
+    text-align: center;
+  }
+}
+
 
 .nav-item{
   display: inline-flex; 
   align-items: center;
   position: relative;
+  > .nav-link{
+    width: 100%;
+  }
 }
 
 .nav-link {
   min-height: 38px;
-  display: flex; 
+  display: inline-flex; 
   align-items: center;
+  justify-content: center;
   gap:8px;
   padding: 8px 12px;
   text-decoration:none;
+  white-space: nowrap;
   color:inherit;
   border-radius: $border-radius-base; // from: _base-settings.scss
 
@@ -41,48 +67,6 @@
   &.disabled {
     color: var(--text-color-muted);
     cursor: not-allowed;
-  }
-}
-
-
-
-
-
-//
-// Other variants
-//
-.nav-vertical{
-  flex-direction: column;
-  align-items: stretch;
-  .nav-link{width: 100%;}
-}
-
-.nav-fill {
-  > .nav-link,
-  .nav-item {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-}
-
-.nav-justified {
-  > .nav-link,
-  .nav-item {
-    flex-basis: 0;
-    flex-grow: 1;
-    text-align: center;
-  }
-}
-
-
-////// Nav underline Tab styled
-.nav-underline {
-  .nav-item{
-    border-bottom-width: 2px;
-    margin-bottom:-2px;
-    &.active{
-      border-bottom: 2px solid var(--primary-500);
-    }  
   }
 }
 

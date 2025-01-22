@@ -38,7 +38,7 @@
 <div class="d-flex flex-col bg-base border h-full">
 
   <article id="promo_1" data-theme="static" class="w-full d-flex justify-content-between bg-yellow-400 p-3">
-    <p class="font-semibold text-yellow-800"> Great promo banner as an example </p>
+    <p class="font-semibold text-yellow-800"> Great promo banner or use it as header of your app. This is  an example </p>
     <a href="#" onclick="promo_1.style.display='none'">Close</a>
   </article>
 
@@ -46,38 +46,68 @@
     
     <aside class="d-flex flex-row align-items-stretch relative">
 
-      <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin w-20 p-2 bg-primary-800 flex-shrink-0 theme-static">
+      <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin w-16 lg:w-20 p-2 bg-primary-800 flex-shrink-0 theme-static">
 
-        <ul class="nav nav-vertical align-items-center gap-3 mt-4">
+        <ul class="nav nav-col align-items-center gap-3 mt-4">
           <li> 
-            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
-                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-dashboard" />
+              </svg>								
             </a>
           </li>
           <li> 
-            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
-                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-inbox" />
+              </svg>									
             </a>
           </li>
           <li> 
-            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
-                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-people" />
+              </svg>	
             </a>
           </li>
           <li> 
-            <a role="button" class="bg-primary-500 hover:bg-primary-400 w-10 h-10 d-flex flex-center rounded text-primary border-color-primary" href="#">
-                <svg width="20" height="20"><use href="#icon-home"></use></svg>										
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-product" />
+              </svg>	
             </a>
           </li>
-
+          <li> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-image" />
+              </svg>	
+            </a>
+          </li>
+          <li> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-history" />
+              </svg>	
+            </a>
+          </li>
+          <li> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <use href="#icon-lucide-file" />
+              </svg>	
+            </a>
+          </li>
         </ul>
       </nav>
       
-      <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin p-4 bg-neutral-200" style="width: 240px;">
+      <nav class="tablet:d-none d-flex flex-col h-full overflow-auto scrollbar-thin p-4 bg-neutral-100 border-right" style="width: 240px;">
 
-        <ul class="nav nav-vertical">
+        <p class="text-secondary">My workspace 1</p>
+        <hr>
+        <ul class="nav nav-col">
           <li>
-            <a class="nav-link active border border-color-primary" href="#">
+            <a class="nav-link active" href="#">
               Dashboard
             </a>
           </li>
@@ -119,36 +149,58 @@
     <main class="d-flex flex-col relative flex-grow h-full min-h-0">
       <div class="d-flex flex-col flex-grow h-full w-full overflow-y-scroll">
         
-        <header class="bg-neutral-100 border-bottom p-3 sticky top-0 z-10 shadow">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga quam voluptas similique veritatis culpa vitae, veniam nesciunt non ab minus quis. 
+        <!-- ====== any sticky block (optional) ====== -->
+        <header class="bg-raised border-bottom p-3 sticky top-0 z-10 shadow-sm">
+          Welcome, this can be toolbar of content or any important message and so on. Let's go
         </header>
+         <!-- ====== any sticky block (optional) .//end ====== -->
 
-        <section class="flex-grow p-5">
+        <section class="flex-grow p-3 lg:p-5">
+        
+        <!-- ====== content starts here ====== -->
+          <div class="d-grid grid-template-cols-1 sm:grid-template-cols-2 lg:grid-template-cols-4 gap-5 w-100%">
+				
+            <article class="card bg-secondary rounded-sm">
+              <div class="card-body lg:h-20">
+                <p class="text-muted">Place any widget</p>
+              </div>
+            </article>
+    
+            <article class="card bg-secondary rounded-sm">
+              <div class="card-body lg:h-20">
+                <p class="text-muted">Place any widget</p>
+              </div>
+            </article>
+    
+            <article class="card bg-secondary rounded-sm">
+              <div class="card-body lg:h-20">
+                <p class="text-muted">Place any widget</p>
+              </div>
+            </article>
+    
+            <article class="card bg-secondary rounded-sm">
+              <div class="card-body lg:h-20">
+                <p class="text-muted">Place any widget</p>
+              </div>
+            </article>
+    
+          </div>  <!-- grid.// -->
 
-          <button role="button"  class="btn btn-primary">Button asd</button>
-          <a role="button" href="#" class="btn btn-secondary">Another button</a>
-          <article>
-           
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            </article>
-            <article>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            </article>
-            <article>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            </article>
-            <article>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            </article>
-            <article >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam ratione quaerat explicabo dolore. Quae, odio, dolores velit veniam ratione doloribus ipsa suscipit architecto exercitationem assumenda, vel eaque veritatis sit!
-            </article>
-           
+          <header class="mt-6 mb-4">
+            <h5 class="mb-4 text-xl">Another content</h5>
+          </header>
+    
+          <article class="card  rounded-sm shadow-sm border">
+              <div class="card-body min-h-200">
+    
+                <br><br><br>
+                <p class="text-secondary text-center">Your content goes here</p>
+                <br><br><br>
+    
+              </div>
+          </article>
+          
+          <!-- ====== content end here .// ====== -->
 
         </section>
         
@@ -157,6 +209,47 @@
   </div>
 
 </div>
+
+
+
+
+<!-- icons from  lucide.dev/icons -->
+<svg style="display: none;" width="0" height="0">
+
+  <symbol id="icon-lucide-dashboard" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>
+  </symbol>
+
+  <symbol id="icon-lucide-inbox" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+  </symbol>
+  
+	<symbol id="icon-lucide-product" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/>
+	</symbol>
+
+	<symbol id="icon-lucide-people" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+	</symbol>
+
+	<symbol id="icon-lucide-image" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+	</symbol>
+
+	<symbol id="icon-lucide-history" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/>
+	</symbol>
+
+  <symbol id="icon-lucide-file" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>
+  </symbol>
+
+
+	<symbol id="icon-lucide-user" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/>
+	</symbol>
+</svg>
+<!-- icons .//end -->
+
 
 </body>
 </html>

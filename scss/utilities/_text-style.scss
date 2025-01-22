@@ -10,6 +10,13 @@
 .text-black{ color:#000; }
 .text-white{ color:#fff; }
 
+ // extra classes similar to bootstrap css
+.text-warning{ color: var(--text-color-orange); }
+.text-danger{ color: var(--text-color-red); }
+.text-success{ color: var(--text-color-green); }
+.text-info{ color: var(--text-color-teal); }
+
+ // all text color based on _theme.scss
 .text-primary{ color: var(--text-color-primary); }
 .text-blue{ color: var(--text-color-primary); }
 .text-orange{ color: var(--text-color-orange); }

@@ -290,6 +290,24 @@ button {
   border-radius: 0;
 }
 
+//
+// Anything with attribute rola="button" apply following
+//
+
+[role="button"]{
+  cursor: pointer;
+  user-select: none;
+  &:active{  
+    transform: translateY(1px);
+    box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
+  }
+  &:disabled,
+  &.disabled {
+    opacity:0.4;
+  }
+}
+
+
 // Explicitly remove focus outline in Chromium when it shouldn't be
 // visible (e.g. as result of mouse click or touch tap). It already
 // should be doing this automatically, but seems to currently be

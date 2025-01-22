@@ -1,8 +1,8 @@
 // Border-radius varibales are defined on file: _base-settings.scss
 
+// Border values can be changed from _base-settings.scss 
 .rounded-0 { border-radius: 0;}
 .rounded{ border-radius: $border-radius-md; }
-
 .rounded-sm{border-radius: $border-radius-sm;}
 .rounded-md {border-radius: $border-radius-md;}
 .rounded-lg {border-radius: $border-radius-lg;}
