@@ -16,7 +16,6 @@
     if (savedTheme) {
         htmlElement.setAttribute('data-theme', savedTheme);
     }
-    // Need to load DOM tree to detect theme switching button
     function themeSwitcher() {
           const currentTheme = htmlElement.getAttribute('data-theme');
           const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
@@ -35,7 +34,7 @@
 </head>
 <body class="h-full">
 
-<div class="d-flex flex-col bg-base border h-full">
+<div class="d-flex flex-col  h-full">
 
   <article id="promo_1" data-theme="static" class="w-full d-flex justify-content-between bg-yellow-400 p-3">
     <p class="font-semibold text-yellow-800"> Great promo banner or use it as header of your app. This is  an example </p>
@@ -44,55 +43,55 @@
 
   <div class="d-flex flex-row min-h-0 h-full overflow-hidden">
     
-    <aside class="d-flex flex-row align-items-stretch relative">
+    <aside class="tablet:d-none  d-flex flex-row align-items-stretch relative">
 
       <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin w-16 lg:w-20 p-2 bg-primary-800 flex-shrink-0 theme-static">
 
         <ul class="nav nav-col align-items-center gap-3 mt-4">
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item active"> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-dashboard" />
               </svg>								
             </a>
           </li>
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item"> 
+            <a role="button" class="bg-primary-500 border border-color-white hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-inbox" />
               </svg>									
             </a>
           </li>
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item"> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-people" />
               </svg>	
             </a>
           </li>
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item"> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-product" />
               </svg>	
             </a>
           </li>
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item"> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-image" />
               </svg>	
             </a>
           </li>
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item"> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-history" />
               </svg>	
             </a>
           </li>
-          <li> 
-            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white border-color-primary" href="#">
+          <li class="nav-item"> 
+            <a role="button" class="bg-primary-600 hover:bg-primary-500 w-10 h-10 d-flex flex-center rounded text-white" href="#">
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <use href="#icon-lucide-file" />
               </svg>	
@@ -101,7 +100,7 @@
         </ul>
       </nav>
       
-      <nav class="tablet:d-none d-flex flex-col h-full overflow-auto scrollbar-thin p-4 bg-neutral-100 border-right" style="width: 240px;">
+      <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin p-4 bg-neutral-100 border-right" style="width: 240px;">
 
         <p class="text-secondary">My workspace 1</p>
         <hr>
@@ -149,11 +148,41 @@
     <main class="d-flex flex-col relative flex-grow h-full min-h-0">
       <div class="d-flex flex-col flex-grow h-full w-full overflow-y-scroll">
         
-        <!-- ====== any sticky block (optional) ====== -->
-        <header class="bg-raised border-bottom p-3 sticky top-0 z-10 shadow-sm">
-          Welcome, this can be toolbar of content or any important message and so on. Let's go
+        <!-- ====== sticky content header ====== -->
+        <header class="d-flex mobile:flex-col mobile:gap-3 bg-base sm:align-items-center border-bottom px-4 py-3 sticky top-0 z-10 shadow-sm">
+
+          <div class="d-flex align-items-center">
+            <button class="btn btn-secondary btn-icon mr-3 md:d-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M3 18h18"/><path d="M3 6h18"/>
+              </svg>
+            </button>
+  
+            <h4 class="m-0 text-xl"> Blank page </h4>
+          </div>
+
+          <div class="d-flex flex-grow align-items-center sm:justify-content-end gap-1">
+			
+            <form class="mobile:flex-grow">
+              <input type="search" class="form-control" list="search_suggest" placeholder="Search">
+            </form>
+
+            <button class="btn btn-secondary">  Button </button>
+      
+            <button onclick="themeSwitcher()" class="btn btn-icon btn-secondary"> 
+              <span class="d-none dark:d-block"> 🔆 </span>
+              <span class="dark:d-none"> 🌒 </span>
+            </button>
+            
+            <button class="btn btn-icon btn-secondary">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+              </svg>
+            </button>
+
+          </div>
+
         </header>
-         <!-- ====== any sticky block (optional) .//end ====== -->
+         <!-- ====== sticky content header.//end ====== -->
 
         <section class="flex-grow p-3 lg:p-5">
         
@@ -247,6 +276,7 @@
 	<symbol id="icon-lucide-user" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 		<path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/>
 	</symbol>
+
 </svg>
 <!-- icons .//end -->
 

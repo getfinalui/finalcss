@@ -58,15 +58,14 @@
   &:active {
     background-color: var(--neutral-300);
   }
-
   &.active{
     color:var(--text-color-primary);
     background-color: var(--primary-100);    
   }
-  // Disabled state lightens text
   &.disabled {
     color: var(--text-color-muted);
     cursor: not-allowed;
   }
+  
 }
 

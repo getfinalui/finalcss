@@ -11,6 +11,10 @@
 .border-left {border-left: 1px solid var(--border-color-default);}
 .border-left-0 {border-left: 0 !important;}
 
+.border-width-1 {border-width: 1px ;}
+.border-width-3 {border-width: 2px ;}
+.border-width-4 {border-width: 3px ;}
+
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $screen_size in $breakpoints {
@@ -31,9 +35,12 @@
 }
 
 // border-colors
+.border-color-dark{ color:#000; }
+.border-color-black{ color:#000; }
+.border-color-white{ color:#fff; }
 .border-color-default { border-color: var(--border-color-default);}
 .border-color-strong { border-color: var(--border-color-strong);}
-.border-color-light { border-color:var(--border-color-light);}
+.border-color-weak { border-color:var(--border-color-weak);}
 .border-color-primary { border-color:var(--primary-400); }
 .border-color-blue { border-color:var(--blue-400); }
 .border-color-orange { border-color:var(--orange-400);}
@@ -43,26 +50,34 @@
 .border-color-teal { border-color:var(--teal-400);}
 .border-color-purple { border-color:var(--purple-400);}
 
-//// hover 
-
 // hover on element
+.hover\:border-color-dark:hover{ color:#000; }
+.hover\:border-color-black:hover{ color:#000; }
+.hover\:border-color-white:hover{ color:#fff; }
 .hover\:border-color-default:hover { border-color: var(--border-color-default);}
 .hover\:border-color-strong:hover { border-color: var(--border-color-strong);}
-.hover\:border-color-light:hover { border-color:var(--border-color-light);}
+.hover\:border-color-weak:hover { border-color:var(--border-color-weak);}
 .hover\:border-color-primary:hover { border-color:var(--primary-400); }
-.hover\:border-color-warning:hover { border-color:var(--orange-400);}
-.hover\:border-color-danger:hover { border-color:var(--red-400); }
-.hover\:border-color-success:hover { border-color:var(--green-400); }
-.hover\:border-color-info:hover { border-color:var(--teal-400);}
-.hover\:border-color-feature:hover { border-color:var(--purple-400);}
+.hover\:border-color-blue:hover { border-color:var(--blue-400);}
+.hover\:border-color-orange:hover { border-color:var(--orange-400); }
+.hover\:border-color-red:hover { border-color:var(--red-400); }
+.hover\:border-color-green:hover { border-color:var(--green-400); }
+.hover\:border-color-yellow:hover { border-color:var(--yellow-400); }
+.hover\:border-color-teal:hover { border-color:var(--teal-400);}
+.hover\:border-color-purple:hover { border-color:var(--purple-400);}
 
   // group hover (parent hover)
+.group:hover .group-hover\:border-color-dark{ color:#000; }
+.group:hover .group-hover\:border-color-black{ color:#000; }
+.group:hover .group-hover\:border-color-white{ color:#fff; }
 .group:hover .group-hover\:border-color-default { border-color: var(--border-color-default);}
 .group:hover .group-hover\:border-color-strong { border-color: var(--border-color-strong);}
-.group:hover .group-hover\:border-color-light { border-color:var(--border-color-light);}
+.group:hover .group-hover\:border-color-weak { border-color:var(--border-color-weak);}
 .group:hover .group-hover\:border-color-primary { border-color:var(--primary-400); }
-.group:hover .group-hover\:border-color-warning { border-color:var(--orange-400);}
-.group:hover .group-hover\:border-color-danger { border-color:var(--red-400); }
-.group:hover .group-hover\:border-color-success { border-color:var(--green-400); }
-.group:hover .group-hover\:border-color-info { border-color:var(--teal-400);}
-.group:hover .group-hover\:border-color-feature { border-color:var(--purple-400);}
+.group:hover .group-hover\:border-color-blue { border-color:var(--blue-400); }
+.group:hover .group-hover\:border-color-orange { border-color:var(--orange-400);}
+.group:hover .group-hover\:border-color-red { border-color:var(--red-400); }
+.group:hover .group-hover\:border-color-green { border-color:var(--green-400); }
+.group:hover .group-hover\:border-color-yellow { border-color:var(--yellow-400); }
+.group:hover .group-hover\:border-color-teal { border-color:var(--teal-400);}
+.group:hover .group-hover\:border-color-purple { border-color:var(--purple-400);}
