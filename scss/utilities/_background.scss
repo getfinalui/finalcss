@@ -20,12 +20,14 @@
   // Genarate bg colors with only single shade: 500 (Easy to define colors)
   // For ex. .bg-primary{ background-color:var(--primary-500) } .bg-red{ background-color:var(--red-500) }
   .bg-#{$color} { background-color: var(--#{$color}-500) };
+  .hover\:bg-#{$color}:hover { background-color:var(--#{$color}-500) !important; }
+  .group:hover .group-hover\:bg-#{$color} { background-color:var(--#{$color}-500) !important; }
 
   @each $shade, $value in $shades {
 
-    .bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade});  }
-    .hover\:bg-#{$color}-#{$shade}:hover { background-color:var(--#{$color}-#{$shade}); }
-    .group:hover .group-hover\:bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}); }
+    .bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}) !important;  }
+    .hover\:bg-#{$color}-#{$shade}:hover { background-color:var(--#{$color}-#{$shade}) !important; }
+    .group:hover .group-hover\:bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}) !important; }
     
   }
 }
