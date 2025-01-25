@@ -1,0 +1,30 @@
+
+//  Semantic names for colors: property
+/// To change colors of text go to _root-variables.scss 
+.text-base{ color: var(--text-color-base); }
+.text-secondary{ color: var(--text-color-secondary); }
+.text-muted{ color: var(--text-color-muted);  }
+.text-invert{ color: var(--text-color-invert); }
+.text-dark{ color:#000; }
+.text-black{ color:#000; }
+.text-white{ color:#fff; }
+
+
+// Generate classes for text colors based on color list in theme.scss 
+@each $color, $shades in $colors_list {
+
+  // Genarate text colors with only single shade: 600 (Easy to define colors)
+  // For ex. .text-primary{ color:var(--primary-600) } .text-red{ color:var(--red-600) }
+  .text-#{$color} { color: var(--#{$color}-600) };
+  .hover\:text-#{$color}:hover { color:var(--#{$color}-600); }
+  .group:hover .group-hover\:text-#{$color} { color:var(--#{$color}-600); }
+
+  // Generate for each shade (100,200,300,... 900)
+  // For ex. .text-primary-100{ style } text-primary-200{ style }
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} { color:var(--#{$color}-#{$shade});  }
+    .hover\:text-#{$color}-#{$shade}:hover { color:var(--#{$color}-#{$shade}); }
+    .group:hover .group-hover\:text-#{$color}-#{$shade} { color:var(--#{$color}-#{$shade}); }
+  }
+
+}

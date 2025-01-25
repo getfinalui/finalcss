@@ -1,80 +1,4 @@
-
-/// State based or semantic text colors
-/// To change colors of text go to _root-variables.scss 
-
-.text-base{ color: var(--text-color-base); }
-.text-secondary{ color: var(--text-color-secondary);  }
-.text-muted{ color: var(--text-color-muted);  }
-.text-invert{ color: var(--text-color-invert); }
-.text-dark{ color:#000; }
-.text-black{ color:#000; }
-.text-white{ color:#fff; }
-
- // extra classes similar to bootstrap css
-.text-warning{ color: var(--text-color-orange); }
-.text-danger{ color: var(--text-color-red); }
-.text-success{ color: var(--text-color-green); }
-.text-info{ color: var(--text-color-teal); }
-
- // all text color based on _theme.scss
-.text-primary{ color: var(--text-color-primary); }
-.text-blue{ color: var(--text-color-primary); }
-.text-orange{ color: var(--text-color-orange); }
-.text-red{ color: var(--text-color-red); }
-.text-green{ color: var(--text-color-green); }
-.text-teal{ color: var(--text-color-teal); }
-.text-purple{ color: var(--text-color-purple); }
-.text-yellow{ color: var(--text-color-yellow); }
-
-
-
-//// More text colors with hover support
-@each $num, $value in $blue_list {
-  .text-blue-#{$num} { color:var(--blue-#{$num});  }
-  .hover\:text-blue-#{$num}:hover { color:var(--blue-#{$num}); }
-  .group:hover .group-hover\:text-blue-#{$num} { color:var(--blue-#{$num}); }
-}
-
-@each $num, $value in $green_list {
-  .text-green-#{$num} { color:var(--green-#{$num});  }
-  .hover\:text-green-#{$num}:hover { color:var(--green-#{$num}); }
-  .group:hover .group-hover\:text-green-#{$num} { color:var(--green-#{$num}); }
-}
-
-@each $num, $value in $red_list {
-  .text-red-#{$num} { color:var(--red-#{$num});  }
-  .hover\:text-red-#{$num}:hover { color:var(--red-#{$num}); }
-  .group:hover .group-hover\:text-red-#{$num} { color:var(--red-#{$num}); }
-}
-
-@each $num, $value in $orange_list {
-  .text-orange-#{$num} { color:var(--orange-#{$num});  }
-  .hover\:text-orange-#{$num}:hover { color:var(--orange-#{$num}); }
-  .group:hover .group-hover\:text-orange-#{$num} { color:var(--orange-#{$num}); }
-}
-
-@each $num, $value in $yellow_list {
-  .text-yellow-#{$num} { color:var(--yellow-#{$num});  }
-  .hover\:text-yellow-#{$num}:hover { color:var(--yellow-#{$num}); }
-  .group:hover .group-hover\:text-yellow-#{$num} { color:var(--yellow-#{$num}); }
-}
-
-@each $num, $value in $purple_list {
-  .text-purple-#{$num} { orangcolor:var(--purple-#{$num});  }
-  .hover\:text-purple-#{$num}:hover { color:var(--purple-#{$num}); }
-  .group:hover .group-hover\:text-purple-#{$num} { color:var(--purple-#{$num}); }
-}
-
-@each $num, $value in $teal_list {
-  .text-teal-#{$num} { color:var(--teal-#{$num});  }
-  .hover\:text-teal-#{$num}:hover { color:var(--teal-#{$num}); }
-  .group:hover .group-hover\:text-teal-#{$num} { color:var(--teal-#{$num}); }
-}
-
-
-
-
-/// text utility classes
+/// Font style utility classes
 .font-light {  font-weight: 300!important;}
 .font-normal {font-weight: 400!important;}
 .font-medium { font-weight: 500!important; }
@@ -118,9 +42,9 @@
   
   @media ($screen_size){
     
-    .#{$breakpoint}\:text-left {text-align: left;}
-    .#{$breakpoint}\:text-right {text-align: right;}
-    .#{$breakpoint}\:text-center { text-align: center;}
+    .#{$breakpoint}\:text-left {text-align: left!important;}
+    .#{$breakpoint}\:text-right {text-align: right!important;}
+    .#{$breakpoint}\:text-center { text-align: center!important;}
 
     // end breakpoint
   }

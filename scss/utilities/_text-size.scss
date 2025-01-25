@@ -49,7 +49,7 @@ $font-sizes-list: (
     // breakpoinst styles
     @each $name, $font-size in $font-sizes-list {
       .#{$breakpoint}\:text-#{$name} {
-        font-size: $font-size;
+        font-size: $font-size !important;
       }
     }
     // end breakpoint

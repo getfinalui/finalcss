@@ -9,7 +9,7 @@
 
 // Base
 @import "theme";
-@import "root-variables";
+@import "variables-root";
 @import "reset";
 @import "grid-system";
 
@@ -40,6 +40,7 @@
 @import "utilities/float";
 @import "utilities/text-style";
 @import "utilities/text-size";
+@import "utilities/text-color";
 @import "utilities/border-color";
 @import "utilities/border-radius";
 @import "utilities/background";

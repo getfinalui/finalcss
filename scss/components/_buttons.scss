@@ -44,56 +44,26 @@
   cursor: pointer;
   user-select: none;
   gap:8px;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
-  
-  svg{
-    max-width: 22px; max-height: 22px;
-  }
 
+  svg{
+    max-width: 20px; max-height: 20px;
+  }
   &:disabled,
   &.disabled {
     opacity:0.4;
   }
-  
   &:hover {  
     background-color: var(--btn-bg-hover);
     border-color: var(--btn-border-hover-color);
     text-decoration: none;
   }
-
   &:active{  
     transform: translateY(1px);
     box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
   }
 }
 
-
-// card stye button
-.btn-card{
-  width: 100%;
-  text-align: left;
-  padding:6px;
-  justify-content: start;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: var(--bg-color-raised);
-  color: var(--text-color-base);
-  border:1px solid transparent;
-  border-color: var(--border-color-default);
-  border-radius: 8px;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
-  &:hover{
-    border-color: var(--border-color-strong);
-    text-decoration: none;
-  }
-  &:active {  
-    transform: translateY(1px);
-    box-shadow:0 3px 6px hsla(0, 0%, 25%, 0.2) inset;
-  } 
-}
-
-
+// Sizes of button
 .btn-lg {
   height: var(--btn-size-lg)!important;
   font-size: var(--btn-font-size-lg)!important;
@@ -107,6 +77,7 @@
   font-size: var(--btn-font-size-sm)!important;
 }
 
+// Button with only icon 
 .btn-icon{
   width: var(--btn-size-md);
   padding-left:0; padding-right:0;
@@ -126,71 +97,46 @@
   padding-left:0; padding-right:0;
 }
 
-//
-// Alternate buttons (using method of finalui design system www.finalui.com )
-//
+// Buttons with different colors
+// Generate classes for text colors based on color list in theme.scss 
+@each $color, $shades in $colors_list {
 
-.btn-primary{
-  --btn-bg: var(--primary-600-static);
-  --btn-bg-hover: var(--primary-700-static);
-  --btn-text-color: var(--text-color-white);
-  --btn-border-hover-color: transparent;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+  // Genarate button background with only single shade: 600 (Easy to define colors)
+  // For ex. .btn-green{ --btn-bg: var(--green-500); ...} 
+  // We use static variant, which will not be overridden in dark mode. (Generated in _variables-root.scss)
+  .btn-#{$color} { 
+    --btn-bg: var(--#{$color}-500-static);
+    --btn-bg-hover: var(--#{$color}-600-static);
+    --btn-text-color: #fff;
+    box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+  }
+
 }
 
+// Other styles of button 
+// Semantic names for buttons
 .btn-secondary {
   --btn-bg: var(--bg-color-raised);
   --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--border-color-strong);
-}
-
-.btn-danger{
-  --btn-bg: var(--red-500);
-  --btn-bg-hover: var(--red-600);
-  --btn-text-color: var(--text-color-white);
-  --btn-border-hover-color: transparent;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
-}
-
-.btn-success{
-  --btn-bg: var(--green-500);
-  --btn-bg-hover: var(--green-600);
-  --btn-text-color: var(--text-color-white);
-  --btn-border-hover-color: transparent;
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
-}
-
-.btn-danger-soft{
-  --btn-bg: var(--bg-color-raised);
-  --btn-bg-hover: var(--bg-color-raised);
-  --btn-text-color: var(--text-color-danger);
-  --btn-border-color: var(--neutral-300);
-  --btn-border-hover-color: var(--border-color-strong);
-}
-
-.btn-neutral{
-  --btn-bg: var(--neutral-200);
-  --btn-bg-hover: var(--neutral-300);
-  --btn-text-color: var(--text-color-base);
-  --btn-border-hover-color: transparent;
-  box-shadow: none;
-}
-
-.btn-primary-soft{
-  --btn-bg: var(--primary-100);
-  --btn-bg-hover: var(--primary-200);
-  --btn-text-color: var(--text-color-primary);
-  --btn-border-hover-color: transparent;
-  box-shadow: none;
+  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
 
 .btn-outline{
   --btn-bg: transparent;
-  --btn-bg-hover: rgba(110, 110, 130, 0.1);
+  --btn-bg-hover: var(--alpha-1);
   --btn-text-color: var(--text-color-primary);
   --btn-border-color: var(--primary-500);
   --btn-border-hover-color: var(--primary-600);
+  box-shadow: none;
+}
+
+// We will override btn-neutral variant, because of better UI
+.btn-neutral{
+  --btn-bg: var(--alpha-2);
+  --btn-bg-hover: var(--alpha-3);
+  --btn-text-color: var(--text-color-base);
   box-shadow: none;
 }
