@@ -16,7 +16,7 @@ class HeaderComponent extends HTMLElement {
 				<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 			</svg> 
 		</button>
-		<nav class="nav nav-vertical">
+		<nav class="nav nav-col">
 			<a href="index.html" class="nav-link">Home</a>
 			<a href="docs.html" class="nav-link">Docs</a>
 			<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog</a>
@@ -88,7 +88,7 @@ class SidebarComponent extends HTMLElement {
     template.innerHTML = `
 
         <nav class="md:border-right border-bottom md:border-bottom-0 lg:pr-5 pt-5 pb-5 h-100%">
-          <ul id="doc_sidebar" class="nav nav-vertical sticky-top top-5">
+          <ul id="doc_sidebar" class="nav nav-col sticky-top top-5">
             <li><a class="nav-link" href="docs.html">Getting started</a></li>
             <li><a class="nav-link" href="docs-customize.html">Customization</a></li>
             <li><a class="nav-link" href="docs-theme.html">Theme & colors</a></li>
