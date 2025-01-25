@@ -1,82 +1,116 @@
 
-// Semantic names for borders
+// Border for all sides
 .border { border: 1px solid var(--border-color-default);}
-.border-strong { border: 1px solid var(--border-color-strong);}
-.border-weak { border: 1px solid var(--border-color-weak);}
 .border-dark{ border: 1px solid #000; }
 .border-black{ border: 1px solid #000; }
 .border-white{ border: 1px solid #fff; }
-.border-0 { border: 0; }
-.border-none { border: none; }
-.border-inherit{ border: inherit; }
-.border-transparent{ border-color:transparent; }
+.border-0 { border: 0 !important; }
+.border-none { border: none !important; }
+.border-inherit{ border: inherit !important; }
+.border-transparent{ border-color:transparent !important; }
 
+// Hover effect (Border for all sides)
+.hover\:border:hover { border: 1px solid var(--border-color-default);}
+.hover\:border-dark:hover{ border: 1px solid #000; }
+.hover\:border-black:hover{ border: 1px solid #000; }
+.hover\:border-white:hover{ border: 1px solid #fff; }
 .hover\:border-0:hover { border: 0 !important; }
 .hover\:border-none:hover { border: none !important; }
 .hover\:border-inherit:hover { border: inherit !important; }
 .hover\:border-transparent:hover { border-color:transparent !important; }
 
+// Group-Hover effect (Border for all sides)
+.group:hover .group-hover\:border { border: 1px solid var(--border-color-default);}
+.group:hover .group-hover\:border-dark{ border: 1px solid #000; }
+.group:hover .group-hover\:border-black{ border: 1px solid #000; }
+.group:hover .group-hover\:border-white{ border: 1px solid #fff; }
 .group:hover .group-hover\:border-0 { border: 0 !important; }
 .group:hover .group-hover\:border-none { border: none !important; }
 .group:hover .group-hover\:border-inherit{ border: inherit !important; }
 .group:hover .group-hover\:border-transparent{ border-color:transparent !important; }
 
-// Border style
-.border-style-dashed{ border-style: dashed !important; }
-.border-style-dotted{ border-style: dotted !important;  }
-.border-style-solid{ border-style: solid !important;  }
-.border-style-initial{ border-style: solid !important;  }
-
-// Border thinckness 
-.border-width-1 {border-width: 1px!important;}
-.border-width-3 {border-width: 2px!important ;}
-.border-width-4 {border-width: 3px!important ;}
 
 
-// Generate classes for border colors based on color list in theme.scss 
-@each $color, $shades in $colors_list {
+//////////////////////////////////
+/// Border for specific sides ////
 
-  // Genarate border colors with only single shade: 500 (Easy to define colors)
-  // For ex. .border-blue{ border:1px solid var(--blue-500) } 
-  .border-#{$color} { border: 1px solid var(--#{$color}-500); }
-  .hover\:border-#{$color}:hover { border: 1px solid var(--#{$color}-500) ; }
-  .group:hover .group-hover\:border-#{$color} { border: 1px solid var(--#{$color}-500) ; }
-
-  // Generate for each shade
-  // For ex. .border-primary-100{ style } border-color-primary-200{ style }
-  @each $shade, $value in $shades {
-    .border-#{$color}-#{$shade} { border: 1px solid var(--#{$color}-#{$shade});  }
-    .hover\:border-#{$color}-#{$shade}:hover { border: 1px solid var(--#{$color}-#{$shade}); }
-    .group:hover .group-hover\:border-#{$color}-#{$shade} { border: 1px solid var(--#{$color}-#{$shade}); }
-  }
-}
-
-
-
-// Border for specific side of element
-// For ex border-top, border-left, border-bottom, border-right
+// Border for specific side 
 .border-top { border-top: 1px solid var(--border-color-default); }
-.border-top-0 { border-top: 0 !important; }
 .border-right { border-right: 1px solid var(--border-color-default);}
-.border-right-0 {border-right: 0 !important;}
 .border-bottom {border-bottom: 1px solid var(--border-color-default);}
-.border-bottom-0 {border-bottom: 0 !important;}
 .border-left {border-left: 1px solid var(--border-color-default);}
 .border-left-0 {border-left: 0 !important;}
+.border-bottom-0 {border-bottom: 0 !important;}
+.border-right-0 {border-right: 0 !important;}
+.border-top-0 { border-top: 0 !important; }
+
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $screen_size in $breakpoints {
   @media ($screen_size){
     // breakpoinst styles
+    
     .#{$breakpoint}\:border-top { border-top: 1px solid var(--border-color-default); }
-    .#{$breakpoint}\:border-top-0 { border-top: 0 !important; }
     .#{$breakpoint}\:border-right { border-right: 1px solid var(--border-color-default);}
-    .#{$breakpoint}\:border-right-0 {border-right: 0 !important;}
     .#{$breakpoint}\:border-bottom {border-bottom: 1px solid var(--border-color-default);}
-    .#{$breakpoint}\:border-bottom-0 {border-bottom: 0 !important;}
     .#{$breakpoint}\:border-left {border-left: 1px solid var(--border-color-default);}
+
+    .#{$breakpoint}\:border-top-0 { border-top: 0 !important; }
     .#{$breakpoint}\:border-left-0 {border-left: 0 !important;}
+    .#{$breakpoint}\:border-right-0 {border-right: 0 !important;}
+    .#{$breakpoint}\:border-bottom-0 {border-bottom: 0 !important;}
+
     // end breakpoint
   }
 }
+
+
+//////////////////////////////////
+// Generate classes for border colors 
+// Based on color list in theme.scss 
+
+@each $color, $shades in $colors_list {
+
+  //// Genarate border colors for only single shade: 500 (Easy to define colors)
+
+  //// All sides
+  .border-#{$color} { border: 1px solid var(--#{$color}-500); }
+  .hover\:border-#{$color}:hover { border: 1px solid var(--#{$color}-500) !important; }
+  .group:hover .group-hover\:border-#{$color} { border: 1px solid var(--#{$color}-500) !important; }
+
+  /// Border-color
+  .border-color-#{$color} { border-color:var(--#{$color}-500); }
+  .hover\:border-color-#{$color}:hover { border-color:var(--#{$color}-500) !important; }
+  .group:hover .group-hover\:border-color-#{$color} { border-color:var(--#{$color}-500) !important; }
+
+  //// Generate for every color shade
+
+  @each $shade, $value in $shades {
+    
+    //// All sides
+    .border-#{$color}-#{$shade} { border: 1px solid var(--#{$color}-#{$shade});  }
+    .hover\:border-#{$color}-#{$shade}:hover { border: 1px solid var(--#{$color}-#{$shade}) !important; }
+    .group:hover .group-hover\:border-#{$color}-#{$shade} { border: 1px solid var(--#{$color}-#{$shade}); }
+    
+    //// Border-color
+    .border-color-#{$color}-#{$shade} { border-color: var(--#{$color}-#{$shade});  }
+    .hover\:border-color-#{$color}-#{$shade}:hover { border-color:var(--#{$color}-#{$shade}) !important; }
+    .group:hover .group-hover\:border-color--#{$color}-#{$shade} { border-color:var(--#{$color}-#{$shade}) !important; }
+
+  }
+}
+
+
+// Border line style
+.border-style-dashed{ border-style: dashed !important; }
+.border-style-dotted{ border-style: dotted !important;  }
+.border-style-solid{ border-style: solid !important;  }
+.border-style-initial{ border-style: solid !important;  }
+
+// Border thinckness width 
+.border-width-1 {border-width: 1px!important;}
+.border-width-2 {border-width: 2px!important ;}
+.border-width-3 {border-width: 3px!important ;}
+.border-width-4 {border-width: 4px!important ;}
+.border-width-5 {border-width: 5px!important ;}
