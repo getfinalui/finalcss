@@ -48,6 +48,14 @@ $position_map_percent:(
   "100": 100%
 );
 
+
+/// *** 
+/// Helper classes
+.center-y{  top:50%; transform: translateY(-50%);}
+.center-x{ left:50%; transform: translateX(-50%);}
+.center-xy{ top:50%; left:50%; transform: translateY(-50%); transform: translateX(-50%);}
+
+
 // * Generates sizes in px, Ex: .top-1{top:4px} 
 @each $name, $value in $position_map {
   .top-#{$name} { top: #{$value}; }
@@ -72,17 +80,17 @@ $position_map_percent:(
 
     // * Generates sizes in px, Ex: .top-1{top:4px} 
     @each $name, $value in $position_map {
-      .#{$breakpoint}\:top-#{$name} { top: #{$value}; }
-      .#{$breakpoint}\:bottom-#{$name} { bottom: #{$value}; }
-      .#{$breakpoint}\:right-#{$name} { right: #{$value}; }
-      .#{$breakpoint}\:left-#{$name} { left: #{$value}; }
+      .#{$breakpoint}\:top-#{$name} { top: #{$value}!important; }
+      .#{$breakpoint}\:bottom-#{$name} { bottom: #{$value}!important; }
+      .#{$breakpoint}\:right-#{$name} { right: #{$value}!important; }
+      .#{$breakpoint}\:left-#{$name} { left: #{$value}!important; }
     }
     // * Generates sizes in percents, Ex .top-50%{top:50%} 
     @each $name, $value in $position_map_percent {
-      .#{$breakpoint}\:top-#{$name}\% { top: #{$value}; }
-      .#{$breakpoint}\:bottom-#{$name}\% { bottom: #{$value}; }
-      .#{$breakpoint}\:right-#{$name}\% { right: #{$value}; }
-      .#{$breakpoint}\:left-#{$name}\% { left: #{$value}; }
+      .#{$breakpoint}\:top-#{$name}\% { top: #{$value}!important; }
+      .#{$breakpoint}\:bottom-#{$name}\% { bottom: #{$value}!important; }
+      .#{$breakpoint}\:right-#{$name}\% { right: #{$value}!important; }
+      .#{$breakpoint}\:left-#{$name}\% { left: #{$value}!important; }
     }
 
     // end breakpoint
@@ -90,8 +98,3 @@ $position_map_percent:(
 }
 
 
-/// *** 
-/// Helper classes
-.center-y{  top:50%; transform: translateY(-50%)!important;}
-.center-x{ left:50%; transform: translateX(-50%)!important;}
-.center-xy{ top:50%; left:50%; transform: translateY(-50%)!important; transform: translateX(-50%)!important;}

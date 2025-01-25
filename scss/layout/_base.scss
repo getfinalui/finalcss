@@ -1,4 +1,6 @@
 
 //
 // Here you can write own css for specific layout structure
-//
+// If you have page spacific styles (or styles for only some component), put them into same page only.
+// Do NOT add every small styles as global style. 
+// You can add extra css into <body> or <head> if those styles used only in few places.

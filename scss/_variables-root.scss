@@ -1,0 +1,112 @@
+
+:root, [data-theme=light], .theme-light, [data-theme=static], .theme-static{
+
+  // Basic static colors
+  --white:#fff;
+  --black:#000;
+  --dark:#000;
+
+  // Generates a list of css variables for default-light mode
+  // For ex --neutral-100:#f1f5f9; --neutral-200:#e2e8f0;
+  @each $color, $shades in $colors_list {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // Generates a static list of color variables for default-light mode
+  // This will not be overridden in dark mode. It is used in some cases like _buttons.scss
+  @each $color, $shades in $colors_list {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}-static: #{$value};
+    }
+  }
+
+  // @each $num, $value in $primary_list {
+  //   // static primary colors for primary (will not change on darkmode)
+  //   --primary-#{$num}-static: #{$value}; 
+  // }
+
+  // SEMANIC (ALIAS) COLOR VARIABLES FOR LIGHT-MODE
+
+  --bg-color-base: var(--neutral-0);
+  --bg-color-secondary: var(--neutral-100);
+  --bg-color-lower: var(--neutral-100);
+  --bg-color-raised: var(--neutral-0);
+  
+  --alpha-1: rgba(0,0,0,.05);
+  --alpha-2: rgba(0,0,0,.1);
+  --alpha-3: rgba(0,0,0,.15);
+
+  --border-color-weak: var(--neutral-100);
+  --border-color-default: var(--neutral-200);
+  --border-color-strong: var(--neutral-300);
+
+  --text-color-base: var(--neutral-900);
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
+  --text-color-invert: var(--neutral-0);
+  --text-color-black: #000; // will not be changed on any theme
+  --text-color-white: #fff; // will not be changed on any theme
+
+  // Genarate text colors with single shade: 600
+  // Ex: --text-color-primary: var(--primary-600); --text-color-green: var(--green-600);
+  // Reason: text on lighgt mode with blue-500 shade, should be more lighter shade on dark mode 
+  // This used in text-style.scss
+  @each $color, $shades in $colors_list {
+    --text-color-#{$color}: var(--#{$color}-600);
+  }
+ 
+  // GET TEXT AND BG COLORS FROM DEFAULT STYLE
+  // This will help if some part of layout has .theme-dark classname
+  color: var(--text-color-base);
+  background-color: var(--neutral-0);
+
+}
+
+
+
+[data-theme=dark], .theme-dark {
+
+  // Generates a list of css variables for dark theme
+ 
+  @each $color, $shades in $colors_list_darkmode {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+  
+  // SEMANIC (ALIAS) COLOR VARIABLES FOR DARK-MODE
+
+  --bg-color-base: var(--neutral-50); 
+  --bg-color-secondary: var(--neutral-100);
+  --bg-color-lower: var(--neutral-0);
+  --bg-color-raised: var(--neutral-200);
+
+  --alpha-1: rgba(255,255,255,.1);
+  --alpha-2: rgba(255,255,255,.2);
+  --alpha-3: rgba(255,255,255,.3);
+
+  --border-color-weak: var(--neutral-100);
+  --border-color-default: var(--neutral-200);
+  --border-color-strong: var(--neutral-300);
+
+  --text-color-base: var(--neutral-1000);
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
+  --text-color-invert: var(--neutral-0);
+  
+  // Genarate text colors with single shade: 700
+  // Ex: --text-color-primary: var(--primary-700); --text-color-green: var(--green-700);
+  // Reason: text on lighgt mode with blue-500 shade, should be more lighter shade on dark mode 
+  // This used in text-style.scss
+  @each $color, $shades in $colors_list_darkmode {
+    --text-color-#{$color}: var(--#{$color}-700);
+  }
+
+  // GET DEFAULT TEXT AND BG COLORS FROM DARKMODE STYLE
+  // This will help if some part of layout has .theme-static or .theme-light classname
+  color: var(--text-color-base);
+  background-color: var(--neutral-0);
+
+}

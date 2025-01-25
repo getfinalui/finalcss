@@ -1,7 +1,60 @@
 
+// Semantic names for borders
+.border { border: 1px solid var(--border-color-default);}
+.border-strong { border: 1px solid var(--border-color-strong);}
+.border-weak { border: 1px solid var(--border-color-weak);}
+.border-dark{ border: 1px solid #000; }
+.border-black{ border: 1px solid #000; }
+.border-white{ border: 1px solid #fff; }
+.border-0 { border: 0; }
+.border-none { border: none; }
+.border-inherit{ border: inherit; }
+.border-transparent{ border-color:transparent; }
 
-.border {border: 1px solid var(--border-color-default);}
-.border-0 { border: 0 !important; }
+.hover\:border-0:hover { border: 0 !important; }
+.hover\:border-none:hover { border: none !important; }
+.hover\:border-inherit:hover { border: inherit !important; }
+.hover\:border-transparent:hover { border-color:transparent !important; }
+
+.group:hover .group-hover\:border-0 { border: 0 !important; }
+.group:hover .group-hover\:border-none { border: none !important; }
+.group:hover .group-hover\:border-inherit{ border: inherit !important; }
+.group:hover .group-hover\:border-transparent{ border-color:transparent !important; }
+
+// Border style
+.border-style-dashed{ border-style: dashed !important; }
+.border-style-dotted{ border-style: dotted !important;  }
+.border-style-solid{ border-style: solid !important;  }
+.border-style-initial{ border-style: solid !important;  }
+
+// Border thinckness 
+.border-width-1 {border-width: 1px!important;}
+.border-width-3 {border-width: 2px!important ;}
+.border-width-4 {border-width: 3px!important ;}
+
+
+// Generate classes for border colors based on color list in theme.scss 
+@each $color, $shades in $colors_list {
+
+  // Genarate border colors with only single shade: 500 (Easy to define colors)
+  // For ex. .border-blue{ border:1px solid var(--blue-500) } 
+  .border-#{$color} { border: 1px solid var(--#{$color}-500); }
+  .hover\:border-#{$color}:hover { border: 1px solid var(--#{$color}-500) ; }
+  .group:hover .group-hover\:border-#{$color} { border: 1px solid var(--#{$color}-500) ; }
+
+  // Generate for each shade
+  // For ex. .border-primary-100{ style } border-color-primary-200{ style }
+  @each $shade, $value in $shades {
+    .border-#{$color}-#{$shade} { border: 1px solid var(--#{$color}-#{$shade});  }
+    .hover\:border-#{$color}-#{$shade}:hover { border: 1px solid var(--#{$color}-#{$shade}); }
+    .group:hover .group-hover\:border-#{$color}-#{$shade} { border: 1px solid var(--#{$color}-#{$shade}); }
+  }
+}
+
+
+
+// Border for specific side of element
+// For ex border-top, border-left, border-bottom, border-right
 .border-top { border-top: 1px solid var(--border-color-default); }
 .border-top-0 { border-top: 0 !important; }
 .border-right { border-right: 1px solid var(--border-color-default);}
@@ -11,17 +64,11 @@
 .border-left {border-left: 1px solid var(--border-color-default);}
 .border-left-0 {border-left: 0 !important;}
 
-.border-width-1 {border-width: 1px ;}
-.border-width-3 {border-width: 2px ;}
-.border-width-4 {border-width: 3px ;}
-
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $screen_size in $breakpoints {
   @media ($screen_size){
     // breakpoinst styles
-    .#{$breakpoint}\:border {border: 1px solid var(--border-color-default);}
-    .#{$breakpoint}\:border-0 { border: 0 !important; }
     .#{$breakpoint}\:border-top { border-top: 1px solid var(--border-color-default); }
     .#{$breakpoint}\:border-top-0 { border-top: 0 !important; }
     .#{$breakpoint}\:border-right { border-right: 1px solid var(--border-color-default);}
@@ -33,51 +80,3 @@
     // end breakpoint
   }
 }
-
-// border-colors
-.border-color-dark{ color:#000; }
-.border-color-black{ color:#000; }
-.border-color-white{ color:#fff; }
-.border-color-default { border-color: var(--border-color-default);}
-.border-color-strong { border-color: var(--border-color-strong);}
-.border-color-weak { border-color:var(--border-color-weak);}
-.border-color-primary { border-color:var(--primary-400); }
-.border-color-blue { border-color:var(--blue-400); }
-.border-color-orange { border-color:var(--orange-400);}
-.border-color-red { border-color:var(--red-400); }
-.border-color-green { border-color:var(--green-400); }
-.border-color-yellow { border-color:var(--yellow-400); }
-.border-color-teal { border-color:var(--teal-400);}
-.border-color-purple { border-color:var(--purple-400);}
-
-// hover on element
-.hover\:border-color-dark:hover{ color:#000; }
-.hover\:border-color-black:hover{ color:#000; }
-.hover\:border-color-white:hover{ color:#fff; }
-.hover\:border-color-default:hover { border-color: var(--border-color-default);}
-.hover\:border-color-strong:hover { border-color: var(--border-color-strong);}
-.hover\:border-color-weak:hover { border-color:var(--border-color-weak);}
-.hover\:border-color-primary:hover { border-color:var(--primary-400); }
-.hover\:border-color-blue:hover { border-color:var(--blue-400);}
-.hover\:border-color-orange:hover { border-color:var(--orange-400); }
-.hover\:border-color-red:hover { border-color:var(--red-400); }
-.hover\:border-color-green:hover { border-color:var(--green-400); }
-.hover\:border-color-yellow:hover { border-color:var(--yellow-400); }
-.hover\:border-color-teal:hover { border-color:var(--teal-400);}
-.hover\:border-color-purple:hover { border-color:var(--purple-400);}
-
-  // group hover (parent hover)
-.group:hover .group-hover\:border-color-dark{ color:#000; }
-.group:hover .group-hover\:border-color-black{ color:#000; }
-.group:hover .group-hover\:border-color-white{ color:#fff; }
-.group:hover .group-hover\:border-color-default { border-color: var(--border-color-default);}
-.group:hover .group-hover\:border-color-strong { border-color: var(--border-color-strong);}
-.group:hover .group-hover\:border-color-weak { border-color:var(--border-color-weak);}
-.group:hover .group-hover\:border-color-primary { border-color:var(--primary-400); }
-.group:hover .group-hover\:border-color-blue { border-color:var(--blue-400); }
-.group:hover .group-hover\:border-color-orange { border-color:var(--orange-400);}
-.group:hover .group-hover\:border-color-red { border-color:var(--red-400); }
-.group:hover .group-hover\:border-color-green { border-color:var(--green-400); }
-.group:hover .group-hover\:border-color-yellow { border-color:var(--yellow-400); }
-.group:hover .group-hover\:border-color-teal { border-color:var(--teal-400);}
-.group:hover .group-hover\:border-color-purple { border-color:var(--purple-400);}

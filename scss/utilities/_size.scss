@@ -30,14 +30,13 @@ $size_map: (
   "64": 256px,
   "68": 272px,
   "72": 288px,
+  "76": 304px,
   "80": 320px,
+  "84": 336px,
+  "88": 352px,
+  "92": 368px,
   "96": 384px,
   "100": 400px,
-  "120": 480px,
-  "140": 560px,
-  "160": 640px,
-  "180": 720px,
-  "200": 800px,
   "full": 100%,
 );
 
@@ -53,6 +52,25 @@ $size_map_percent:(
   "90": 90%,
   "100": 100%,
 );
+
+
+
+// Full sizes of screen
+.w-100vw { width: 100vw;}
+.h-100vh { height: 100vh;}
+.min-w-100vw {min-width: 100vw;}
+.min-h-100vh {min-height: 100vh;}
+.max-w-fit { max-width: fit-content}
+.max-w-min { max-width: min-content;}
+.max-w-max {max-width: max-content;}
+
+// Generate custom size based on inline css variable
+// Ex: <div class="w-custom" style="--w:700px">
+.w-custom{width:var(--w, initial) }
+.h-custom{height:var(--h, initial) }
+.min-w-custom{min-width:var(--min-w, initial) }
+.max-w-custom{max-width:var(--max-w, initial) }
+
 
 // * Generates sizes in px, for ex:
 // .w-1{width:4px}
@@ -84,32 +102,23 @@ $size_map_percent:(
     
     // breakpoinst styles
     @each $name, $value in $size_map {
-      .#{$breakpoint}\:w-#{$name} { width: #{$value}; }
-      .#{$breakpoint}\:h-#{$name} { height: #{$value}; }
-      .#{$breakpoint}\:min-w-#{$name} {  min-width: #{$value}; }
-      .#{$breakpoint}\:max-w-#{$name} {  max-width: #{$value}; }
-      .#{$breakpoint}\:min-h-#{$name} {  min-height: #{$value};  }
-      .#{$breakpoint}\:max-h-#{$name} {  max-height: #{$value};  }
+      .#{$breakpoint}\:w-#{$name} { width: #{$value}!important; }
+      .#{$breakpoint}\:h-#{$name} { height: #{$value}!important; }
+      .#{$breakpoint}\:min-w-#{$name} {  min-width: #{$value}!important; }
+      .#{$breakpoint}\:max-w-#{$name} {  max-width: #{$value}!important; }
+      .#{$breakpoint}\:min-h-#{$name} {  min-height: #{$value}!important;  }
+      .#{$breakpoint}\:max-h-#{$name} {  max-height: #{$value}!important;  }
     }
 
     @each $name, $value in $size_map_percent {
-      .#{$breakpoint}\:w-#{$name}\% { width: #{$value}; }
-      .#{$breakpoint}\:h-#{$name}\% { height: #{$value}; }
-      .#{$breakpoint}\:min-w-#{$name}\% { min-width: #{$value}; }
-      .#{$breakpoint}\:max-w-#{$name}\% { max-width: #{$value}; }
-      .#{$breakpoint}\:min-h-#{$name}\% { min-height: #{$value}; }
-      .#{$breakpoint}\:max-h-#{$name}\% { max-height: #{$value}; }
+      .#{$breakpoint}\:w-#{$name}\% { width: #{$value}!important; }
+      .#{$breakpoint}\:h-#{$name}\% { height: #{$value}!important; }
+      .#{$breakpoint}\:min-w-#{$name}\% { min-width: #{$value}!important; }
+      .#{$breakpoint}\:max-w-#{$name}\% { max-width: #{$value}!important; }
+      .#{$breakpoint}\:min-h-#{$name}\% { min-height: #{$value}!important; }
+      .#{$breakpoint}\:max-h-#{$name}\% { max-height: #{$value}!important; }
     }
     // end breakpoint
   }
 }
 
-
-// Other sizes
-.w-100vw { width: 100vw;}
-.h-100vh { height: 100vh;}
-.min-w-100vw {min-width: 100vw;}
-.min-h-100vh {min-height: 100vh;}
-.max-w-fit { max-width: fit-content}
-.max-w-min { max-width: min-content;}
-.max-w-max {max-width: max-content;}

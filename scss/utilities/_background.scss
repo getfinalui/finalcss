@@ -1,4 +1,6 @@
 
+
+// Semantic names for background-colors
 .bg-base{ background-color:var(--bg-color-base); }
 .bg-inherit{ background-color: inherit; }
 .bg-transparent{ background-color: transparent; }
@@ -10,60 +12,20 @@
 .bg-dark{background-color:#000;}
 
 
+// Generate classes for background based on color list in theme.scss 
+// For ex. .bg-primary-100{ style } bg-primary-200{ style }
 
-// generate classes for background ex. bg-primary-100 
+@each $color, $shades in $colors_list {
 
-@each $num, $value in $neutral_list {
-  .bg-neutral-#{$num} { background-color:var(--neutral-#{$num});  }
-  .hover\:bg-neutral-#{$num}:hover { background-color:var(--neutral-#{$num}); }
-  .group:hover .group-hover\:bg-neutral-#{$num} { background-color:var(--neutral-#{$num}); }
-}
+  // Genarate bg colors with only single shade: 500 (Easy to define colors)
+  // For ex. .bg-primary{ background-color:var(--primary-500) } .bg-red{ background-color:var(--red-500) }
+  .bg-#{$color} { background-color: var(--#{$color}-500) };
 
+  @each $shade, $value in $shades {
 
-@each $num, $value in $primary_list {
-  .bg-primary-#{$num} { background-color:var(--primary-#{$num});  }
-  .hover\:bg-primary-#{$num}:hover { background-color:var(--primary-#{$num}); }
-  .group:hover .group-hover\:bg-primary-#{$num} { background-color:var(--primary-#{$num}); }
-}
-
-@each $num, $value in $blue_list {
-  .bg-blue-#{$num} { background-color:var(--blue-#{$num});  }
-  .hover\:bg-blue-#{$num}:hover { background-color:var(--blue-#{$num}); }
-  .group:hover .group-hover\:bg-blue-#{$num} { background-color:var(--blue-#{$num}); }
-}
-
-@each $num, $value in $orange_list {
-  .bg-orange-#{$num} { background-color:var(--orange-#{$num});  }
-  .hover\:bg-orange-#{$num}:hover { background-color:var(--orange-#{$num}); }
-  .group:hover .group-hover\:bg-orange-#{$num} { background-color:var(--orange-#{$num}); }
-}
-
-@each $num, $value in $red_list {
-  .bg-red-#{$num} { background-color:var(--red-#{$num});  }
-  .hover\:bg-red-#{$num}:hover { background-color:var(--red-#{$num}); }
-  .group:hover .group-hover\:bg-red-#{$num} { background-color:var(--red-#{$num}); }
-}
-
-@each $num, $value in $green_list {
-  .bg-green-#{$num} { background-color:var(--green-#{$num});  }
-  .hover\:bg-green-#{$num}:hover { background-color:var(--green-#{$num}); }
-  .group:hover .group-hover\:bg-green-#{$num} { background-color:var(--green-#{$num}); }
-}
-
-@each $num, $value in $yellow_list {
-  .bg-yellow-#{$num} { background-color:var(--yellow-#{$num});  }
-  .hover\:bg-yellow-#{$num}:hover { background-color:var(--yellow-#{$num}); }
-  .group:hover .group-hover\:bg-yellow-#{$num} { background-color:var(--yellow-#{$num}); }
-}
-
-@each $num, $value in $purple_list {
-  .bg-purple-#{$num} { background-color:var(--purple-#{$num});  }
-  .hover\:bg-purple-#{$num}:hover { background-color:var(--purple-#{$num}); }
-  .group:hover .group-hover\:bg-purple-#{$num} { background-color:var(--purple-#{$num}); }
-}
-
-@each $num, $value in $teal_list {
-  .bg-teal-#{$num} { background-color:var(--teal-#{$num});  }
-  .hover\:bg-teal-#{$num}:hover { background-color:var(--teal-#{$num}); }
-  .group:hover .group-hover\:bg-teal-#{$num} { background-color:var(--teal-#{$num}); }
+    .bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade});  }
+    .hover\:bg-#{$color}-#{$shade}:hover { background-color:var(--#{$color}-#{$shade}); }
+    .group:hover .group-hover\:bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}); }
+    
+  }
 }
