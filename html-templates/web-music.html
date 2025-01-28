@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="h-full">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,328 +27,105 @@
 	}
 	</script>
 
+<!-- Custom layout -->
+<style>
+.custom-layout-wrap{
+  display:grid;
+  grid-template-areas:
+    "layout_header layout_header layout_header"
+    "layout_left layout_main layout_right"
+    "layout_playing layout_playing layout_playing";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+</style>
+
 <!-- FinalCSS -->
 <link href="../css/final.css" rel="stylesheet" type="text/css" />
 
 </head>
-<body class="h-full bg-lower">
+<body class="bg-lower" style="min-width: 1024px;">
 
-<section class="mx-auto h-100vh lg:p-5 relative" style="max-width: 1600px;">
-
-<div class="bg-base border rounded d-flex overflow-hidden w-full h-full  lg:flex-row align-items-stretch relative shadow-sm">
-  <aside class="border-right md:max-w-30% h-full tablet:w-full">
-    <div class="d-flex flex-col h-full overflow-hidden">
+<!-- main-wrap start -->
+<div class="custom-layout-wrap d-grid w-full h-100vh min-h-full gap-cols-3">
+  <header style="grid-area:layout_header" class="rounded">
+    <div class="d-flex relative align-items-center justify-content-between p-3">
+      <div class="w-30%">
+        <h5>Final CSS</h5>
+      </div>
       
-      <header class="p-4 h-16 border-bottom">
-        <div class="d-flex align-items-center justify-content-between">
-          <h4 class="mb-0">Chats</h4>
-          <div>
-            <button onclick="themeSwitcher()" class="btn btn-sm btn-icon btn-secondary">
-              <span class="d-none dark:d-block"> 🌞  </span>
-              <span class="dark:d-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </header>
+      <div class="w-40%">
+        <input type="search" class="form-control">
+      </div>
+  
+      <div class="w-30% d-flex justify-content-end gap-1">
+        <button class="btn btn-secondary"> Button </button>
+        <button class="btn btn-secondary"> Button </button>
+        <button class="btn btn-secondary"> Button </button>
+        <button onclick="themeSwitcher()" class="btn btn-icon btn-secondary">
+          <span class="d-none dark:d-block"> 🌞  </span>
+          <span class="dark:d-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      <section class="p-4">
-        <input type="search" placeholder="Search" class="form-control">
-      </section>
-
-      <section>
-        <nav class="tabs px-3 shadow-sm font-medium">
-          <a class="tab-item active" href="#"> All </a>
-          <a class="tab-item" href="#"> Personal </a>
-          <a class="tab-item" href="#"> Groups </a>
-        </nav>
-      </section>
-      
-      <section class="overflow-y-auto scrollbar-thin py-2 h-full flex-1">
-        
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-neutral-400"> A </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Archived chats</h5> 
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">3 chats archived </p>
-            </div>
-          </div>
-        </a>        
-        
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-teal-500"> M </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Now</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-pink-500"> A </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Alexander J.</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Today</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-blue-400"> F </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Finalcss Support</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">16:45</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">OK Thanks u </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">My Love</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12:45</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">By be love you!  </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-orange-500"> M </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Yesterday</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-yellow-500"> D </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Donald Trump</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Yesterday</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-green-500"> M </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0"> Mr. President </h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
-            </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-          </div>
-        </a>
-
-
-      </section>
-      
+  <aside style="grid-area:layout_left" class="min-w-60 max-w-92 d-flex flex-col min-h-0">
+    <div class="bg-base rounded ml-3 h-full overflow-y-auto">
+      LEFT Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?
     </div>
   </aside>
-  <main class="bg-base tablet:absolute tablet:w-full tablet:h-full z-100">
-    <div class="d-flex flex-col w-full h-full">
 
-      <header class="p-3 d-flex h-16 flex-shrink-0 align-items-center border-bottom w-full">
+  <main style="grid-area:layout_main; min-width:500px;" class="d-flex flex-col w-full min-w-96 min-h-0 overflow-hidden">
+    <div class="overflow-y-auto flex-1 w-full h-full p-3 scrollbar-thin bg-base rounded">
+      <!-- ==== main-content start ==== -->
 
-        <button class="btn btn-secondary btn-icon mr-3 md:d-none">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-        </button>
+      <article>
+        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
+        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
+      </article>
 
-        <figure class="d-flex align-items-center mr-auto">
-          <div class="avatar mr-2 avatar-sm"> A </div>
-          <figcaption> Alex John</figcaption>
-        </figure>
+      <article>
+        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
+        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
+      </article>
 
-        <button class="btn btn-secondary btn-icon ml-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </button>
+      <article>
+        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
+        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
+      </article>
 
-        <button class="btn btn-secondary btn-icon ml-2">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-        </button>
+      <article>
+        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
+        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
+      </article>
 
-      </header>
+      <article>
+        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
+        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
+      </article>
 
-      <section class="bg-base flex-1  overflow-y-auto">
-      
-        <div class="d-flex flex-col h-full p-2">
-      
-          <span style="flex: 1 1 auto;"></span>
-
-          <!-- message item -->
-          <article class="align-items-end p-2  d-flex flex-row justify-content-end">
-            <div class="rounded-xl bg-primary-100 p-3" style="max-width: 70%;">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores, totam laboriosam voluptates aspernatur doloribus quos quas consectetur debitis nemo non veritatis sapiente recusandae eligendi fuga exercitationem corporis .
-            </div>
-          </article>
-          <!-- message item -->
-
-          <!-- message item -->
-          <article class="align-items-end p-2  d-flex flex-row justify-content-start">
-            <div class="rounded-xl bg-neutral-200 p-3" style="max-width: 70%;">
-              Super! Got it  See you later
-            </div>
-          </article>
-            <!-- message item -->
-
-          <!-- message item -->
-          <article class="align-items-end p-2 d-flex flex-row justify-content-end">
-            <div class="rounded-xl bg-primary-100 p-3" style="max-width: 70%;">
-              By the way, quas consectetur debitis nemo non 
-            </div>
-          </article>
-          <!-- message item -->
-
-          <!-- message item -->
-          <article class="align-items-end p-2  d-flex flex-row justify-content-start">
-            <div class="rounded-xl bg-neutral-200 p-3" style="max-width: 70%;">
-              OK Thanks a lot, I will do that 👍 👍 👍 
-            </div>
-          </article>
-          <!-- message item -->
-
-          <!-- message item -->
-          <article class="align-items-end p-2  d-flex flex-row justify-content-start">
-          <div class="rounded-xl bg-neutral-200 p-3" style="max-width: 70%;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores, totam laboriosam voluptates aspernatur doloribus quos quas consectetur debitis nemo non veritatis sapiente recusandae eligendi fuga exercitationem corporis .
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores, totam laboriosam voluptates aspernatur doloribus quos quas consectetur debitis nemo non veritatis sapiente recusandae eligendi fuga exercitationem corporis .
-          </div>
-          </article>
-          <!-- message item -->
-
-          <!-- message item -->
-          <article class="align-items-end p-2  d-flex flex-row justify-content-start">
-            <div class="rounded-xl bg-neutral-200 p-3" style="max-width: 70%;">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores, totam laboriosam voluptates aspernatur doloribus
-            </div>
-          </article>
-          <!-- message item -->
-
-
-        </div>
-
-      </section>
-
-      <footer class="bg-base border-top p-2 lg:p-3">
-        <div class="d-flex w-full gap-2">
-          <div> <button class="btn btn-secondary btn-icon"> 😃 </button> </div>
-          <textarea rows="3" placeholder="Type message" class="form-control" name=""></textarea>
-          <div> <button class="btn btn-primary"> Send</button> </div>
-        </div>
-      </footer>
-
+      <!-- ==== main-content end.// ==== -->
     </div>
   </main>
+
+  <aside style="grid-area:layout_right" class="d-flex flex-col min-h-0">
+    <div class="bg-base mr-3 h-full rounded max-w-100 min-w-60 overflow-y-auto">
+      RIGHT
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?
+    </div>
+  </aside>
+
+  <section style="grid-area:layout_playing" class="w-full pt-3">
+    <div class="border-top bg-raised p-3 shadow-top relative">
+      Now playing Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?
+    </div>
+  </section>
+
 </div>
-
-</section>
-
+<!-- main-wrap .//end -->
 
 </body>
 </html>

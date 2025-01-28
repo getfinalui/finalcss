@@ -2,12 +2,16 @@
   box-shadow: 0 4px 8px rgba(#404040, .1);
 }
 
+.shadow-top {
+  box-shadow: 0 -4px 8px rgba(#404040, .1);
+}
+
 .shadow-sm {
   box-shadow: 0 1px 3px rgba(#404040, .08);
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 12px rgba(#404040, 0.1);
+  box-shadow: 0 6px 12px rgba(#404040, 0.1);
 }
 
 .shadow-inner, .shadow-inset{
