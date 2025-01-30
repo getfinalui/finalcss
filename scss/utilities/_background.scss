@@ -11,6 +11,28 @@
 .bg-black{ background-color:#000;}
 .bg-dark{background-color:#000;}
 
+// Hover effect
+.hover\:bg-base:hover{ background-color:var(--bg-color-base); }
+.hover\:bg-inherit:hover{ background-color: inherit; }
+.hover\:bg-transparent:hover{ background-color: transparent; }
+.hover\:bg-secondary:hover{ background-color:var(--bg-color-secondary);}
+.hover\:bg-lower:hover{ background-color:var(--bg-color-lower); }
+.hover\:bg-raised:hover{ background-color:var(--bg-color-raised);}
+.hover\:bg-white:hover{background-color:#fff;}
+.hover\:bg-black:hover{ background-color:#000;}
+.hover\:bg-dark:hover{background-color:#000;}
+
+// Group-Hover effect 
+.group:hover .group-hover\:bg-base{ background-color:var(--bg-color-base); }
+.group:hover .group-hover\:bg-inherit{ background-color: inherit; }
+.group:hover .group-hover\:bg-transparent{ background-color: transparent; }
+.group:hover .group-hover\:bg-secondary{ background-color:var(--bg-color-secondary);}
+.group:hover .group-hover\:bg-lower{ background-color:var(--bg-color-lower); }
+.group:hover .group-hover\:bg-raised{ background-color:var(--bg-color-raised);}
+.group:hover .group-hover\:bg-white{background-color:#fff;}
+.group:hover .group-hover\:bg-black{ background-color:#000;}
+.group:hover .group-hover\:bg-dark{background-color:#000;}
+
 
 // Generate classes for background based on color list in theme.scss 
 // For ex. .bg-primary-100{ style } bg-primary-200{ style }

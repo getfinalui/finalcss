@@ -2,10 +2,8 @@
 //
 
 h1,h2,h3,h4,h5,h6 {
-  margin-top: 0; // 1
-  margin-bottom: 0.4rem;
+  margin: 0; 
   font-family: inherit;
-  font-style: initial;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-color-base, inherit);
