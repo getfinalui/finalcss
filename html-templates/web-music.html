@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=1024, initial-scale=1">
   <meta name="description" content="Type some info">
   
   <meta name="author" content="Final CSS">
 
-  <title>Final CSS - Example Admin template (finalcss.com)</title>
+  <title>Final CSS - Example template (finalcss.com)</title>
 
 	<script type="text/javascript">
 	// Check localStorage for saved theme and assign that
@@ -63,7 +63,9 @@
         <button class="btn btn-secondary"> Button </button>
         <button class="btn btn-secondary"> Button </button>
         <button onclick="themeSwitcher()" class="btn btn-icon btn-secondary">
-          <span class="d-none dark:d-block"> 🌞  </span>
+          <span class="d-none dark:d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </span>
           <span class="dark:d-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
           </span>
@@ -72,25 +74,173 @@
     </div>
   </header>
 
-  <aside style="grid-area:layout_left" class="min-w-60 max-w-92 d-flex flex-col min-h-0">
-    <div class="bg-base rounded ml-3 h-full overflow-y-auto">
-      LEFT Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?
+  <aside style="grid-area:layout_left" class="lg:w-100 md:w-72 d-flex flex-col min-h-0">
+    <div class="bg-base rounded ml-3 h-full scrollbar-thin  overflow-y-auto">
+      
+      <nav class="p-2">
+        
+        <h5 class="m-2">Playlists</h5>
+        
+        <ul>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar rounded bg-primary-300"> ❤️ </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Liked songs</h6>
+                <p><small>Playlist  •  11 songs</small></p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/440px-Eminem_2021_Color_Corrected.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Eminem - Slim Shady</h6>
+                <p><small>Artist  •  5 songs</small></p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_the_Communist_Party_of_Vietnam.svg/240px-Flag_of_the_Communist_Party_of_Vietnam.svg.png" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Soviet music</h6>
+                <p><small>Playlist  •  32 songs</small></p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg/550px-Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Spiritual music</h6>
+                <p><small>Playlist  •  7 songs</small></p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guitarist_girl.jpg/440px-Guitarist_girl.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Background beats </h6>
+                <p><small>Playlist  •  10 songs</small></p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+       
+        <hr>
+
+        <h5 class="m-2">Favorite artists</h5>
+        <ul>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src=" https://mighty.tools/mockmind-api/content/human/92.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Modern Talking </h6>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://mighty.tools/mockmind-api/content/human/124.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Madonna</h6>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Ahmad_%27Elvis%27_Zahir.png" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Ahmad Zahir</h6>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev_%28cropped%29.jpg/360px-Michael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev_%28cropped%29.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Michael Jackson</h6>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+              <div class="mr-2">
+                <b class="avatar bg-neutral-300">
+                  <img src="https://mighty.tools/mockmind-api/content/human/124.jpg" class="border" alt="">
+                </b>
+              </div>
+              <figcaption class="flex-grow">
+                <h6>Setora Guruhi</h6>
+              </figcaption>
+            </figure>
+          </li>
+
+        </ul>
+      </nav>
+
     </div>
   </aside>
 
-  <main style="grid-area:layout_main; min-width:500px;" class="d-flex flex-col w-full min-w-96 min-h-0 overflow-hidden">
+  <main style="grid-area:layout_main; min-width:450px;" class="d-flex flex-col w-full min-w-96 min-h-0 overflow-hidden">
     <div class="overflow-y-auto flex-1 w-full h-full p-3 scrollbar-thin bg-base rounded">
       <!-- ==== main-content start ==== -->
+      <nav>
+        <button>All</button>
+        <button>Music</button>
+        <button>Podcasts</button>
+      </nav>
+
+      <h5>Top picks for you</h5>
+      <article>
+        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
+        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
+      </article>
+      
+      <h5>Top picks for you</h5>
 
       <article>
         Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
         hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
       </article>
-
-      <article>
-        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
-        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
-      </article>
+      <hr>
+      <h5>Favorite artists</h5>
 
       <article>
         Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
@@ -112,9 +262,36 @@
   </main>
 
   <aside style="grid-area:layout_right" class="d-flex flex-col min-h-0">
-    <div class="bg-base mr-3 h-full rounded max-w-100 min-w-60 overflow-y-auto">
-      RIGHT
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?
+    <div class="bg-base mr-3 h-full d-flex flex-col rounded max-w-100 min-w-60">
+      <header class="p-3">Top header</header>
+      <section class="h-auto relative m-0 p-0 flex-auto overflow-x-hidden overflow-y-auto scrollbar-thin">
+        <div class="p-4 min-h-full d-flex flex-col">
+          <article>
+            <h2>Without Me</h2>
+            <h5>Eminem</h5>
+            <figure>
+    
+            </figure>
+          </article>
+    
+          <article>
+            <h5>Eminem</h5>
+            <p>73,005,716 monthly listeners</p>
+            <p>Apart from being one of the best-selling artists in music history, Eminem is one of the greatest rappers of his...</p>
+          </article>
+    
+          <article>
+            <h5>Credits</h5>
+            <p>Eminem</p>
+            <p>Jeff Bass</p>
+          </article>
+    
+          <article>
+            <h5>Next in queue</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?</p>
+          </article>
+        </div>
+      </section>
     </div>
   </aside>
 
