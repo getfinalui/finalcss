@@ -47,6 +47,7 @@
 
   svg{
     max-width: 20px; max-height: 20px;
+    min-width: 16px; min-height: 16px;
   }
   &:disabled,
   &.disabled {
@@ -81,10 +82,8 @@
 .btn-icon{
   width: var(--btn-size-md);
   padding-left:0; padding-right:0;
-  svg{ 
-    width:20px; height:20px;
-  }
 }
+
 .btn-lg.btn-icon{
   width: var(--btn-size-lg);
   padding-left:0; padding-right:0;
@@ -130,6 +129,13 @@
   --btn-text-color: var(--text-color-primary);
   --btn-border-color: var(--primary-500);
   --btn-border-hover-color: var(--primary-600);
+  box-shadow: none;
+}
+
+.btn-invert{
+  --btn-bg: var(--neutral-1000);
+  --btn-bg-hover: var(--neutral-700);
+  --btn-text-color: var(--neutral-0);
   box-shadow: none;
 }
 

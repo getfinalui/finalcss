@@ -9,6 +9,21 @@
 .text-black{ color:#000; }
 .text-white{ color:#fff; }
 
+.hover\:text-base:hover{ color: var(--text-color-base); }
+.hover\:text-secondary:hover{ color: var(--text-color-secondary); }
+.hover\:text-muted:hover{ color: var(--text-color-muted);  }
+.hover\:text-invert:hover{ color: var(--text-color-invert); }
+.hover\:text-dark:hover{ color:#000; }
+.hover\:text-black:hover{ color:#000; }
+.hover\:text-white:hover{ color:#fff; }
+
+.group:hover .group-hover\:text-base{ color: var(--text-color-base); }
+.group:hover .group-hover\:text-secondary{ color: var(--text-color-secondary); }
+.group:hover .group-hover\:text-muted{ color: var(--text-color-muted);  }
+.group:hover .group-hover\:text-invert{ color: var(--text-color-invert); }
+.group:hover .group-hover\:text-dark{ color:#000; }
+.group:hover .group-hover\:text-black{ color:#000; }
+.group:hover .group-hover\:text-white{ color:#fff; }
 
 // Generate classes for text colors based on color list in theme.scss 
 @each $color, $shades in $colors_list {

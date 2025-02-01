@@ -1,0 +1,40 @@
+.transition-all{
+  transition-property: all;
+  transition-duration: .2s;
+}
+
+.scale-50{ transform: scale(0.5); }
+.scale-60{ transform: scale(0.6);}
+.scale-70{ transform: scale(0.7);}
+.scale-80{ transform: scale(0.8);}
+.scale-90{ transform: scale(0.9);}
+.scale-100{ transform: scale(1);}
+.scale-110{ transform: scale(1.1);}
+.scale-120{ transform: scale(1.2);}
+.scale-130{ transform: scale(1.3);}
+.scale-140{ transform: scale(1.4);}
+.scale-150{ transform: scale(1.5);}
+
+.hover\:scale-50:hover{ transform: scale(0.5);}
+.hover\:scale-60:hover{ transform: scale(0.6);}
+.hover\:scale-70:hover{ transform: scale(0.7); }
+.hover\:scale-80:hover{ transform: scale(0.8); }
+.hover\:scale-90:hover{ transform: scale(0.9); }
+.hover\:scale-100:hover{ transform: scale(1);  }
+.hover\:scale-110:hover{ transform: scale(1.1); }
+.hover\:scale-120:hover{ transform: scale(1.2); }
+.hover\:scale-130:hover{ transform: scale(1.3); }
+.hover\:scale-140:hover{ transform: scale(1.4); }
+.hover\:scale-150:hover{ transform: scale(1.5);}
+
+.group:hover .group-hover\:scale-50{ transform: scale(0.5);}
+.group:hover .group-hover\:scale-60{ transform: scale(0.6); }
+.group:hover .group-hover\:scale-70{ transform: scale(0.7); }
+.group:hover .group-hover\:scale-80{ transform: scale(0.8); }
+.group:hover .group-hover\:scale-90{ transform: scale(0.9); }
+.group:hover .group-hover\:scale-100{ transform: scale(1); }
+.group:hover .group-hover\:scale-110{ transform: scale(1.1); }
+.group:hover .group-hover\:scale-120{ transform: scale(1.2); }
+.group:hover .group-hover\:scale-130{ transform: scale(1.3); }
+.group:hover .group-hover\:scale-140{ transform: scale(1.4); }
+.group:hover .group-hover\:scale-150{ transform: scale(1.5); }

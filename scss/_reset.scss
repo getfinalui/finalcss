@@ -236,6 +236,7 @@ img, svg {
   max-width: 100%;
 }
 
+img{ object-fit: cover;}
 
 // Tables
 //
@@ -508,4 +509,13 @@ progress {
 var{
   font-style: normal;
   line-height: inherit;
+}
+
+progress{
+  width: 100%;
+  overflow: hidden;
+  padding: 0px;
+  height:8px;
+  display: block;
+  border-radius:4px
 }

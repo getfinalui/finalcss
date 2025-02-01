@@ -25,9 +25,9 @@
 
 /// line height
 .lh-1{ line-height:1; }
-.lh-sm{ line-height:1.125; }
-.lh-base{ line-height:1.5; }
-.lh-lg{ line-height:1.8; }
+.lh-sm{ line-height: $line-height-sm; }
+.lh-base{ line-height: $line-height-base; }
+.lh-lg{ line-height: $line-height-lg; }
 
 
 /// text-position
