@@ -1,0 +1,48 @@
+
+
+
+.list-style-initial{ list-style-type: initial; }
+.list-style-disc{ list-style-type: disc; }
+.list-style-like{ list-style-type: "\1F44D"; }
+.list-style-number{ list-style-type: decimal; }
+.list-postion-inside{ list-style-position: inside; }
+.list-postion-outside{ list-style-position: outside; }
+
+.list-number{
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 20px;
+  > li { position:relative; margin-bottom:0.5rem;  }
+}
+
+
+.list-bullet{
+  list-style: none; margin-left:0; padding-left:0;  
+  > li{ padding-left:20px;  position:relative; margin-bottom:0.5rem;  }
+  > li::before { 
+      content: " ";
+      position:absolute;
+      left:0;  
+      top:50%;
+      transform:translateY(-40%);  
+      width: 10px; 
+      height: 10px;
+      background:orange;  
+      border-radius:100%;
+  }
+}
+
+.list-check{
+  list-style: none; margin-left:0; padding-left:0;  
+  > li{ padding-left:24px; position:relative; margin-bottom:0.5rem;  }
+  > li::before {
+  	  font-weight:bold;
+  	  color:green;
+      content: "\2713";
+      position:absolute;
+      left:0;  
+      top:50%;
+      transform:translateY(-50%);  
+	}
+}
+

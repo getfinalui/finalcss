@@ -29,7 +29,7 @@
 @import "components/tabs"; 
 @import "components/dropdown-menu";
 @import "components/segmented-control";
-@import "components/list"; 
+@import "components/tag-chip"; 
 
 
 // Utility classes
@@ -55,7 +55,11 @@
 @import "utilities/size";
 @import "utilities/margin";
 @import "utilities/padding";
-
+@import "utilities/cursor";
+@import "utilities/scale";
+@import "utilities/list";
+@import "utilities/ratio";
+@import "utilities/whitespace";
 
 // Layouts and Temnplates (optional)
 @import "layout/base";

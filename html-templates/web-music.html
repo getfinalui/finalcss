@@ -75,194 +75,440 @@
   </header>
 
   <aside style="grid-area:layout_left" class="lg:w-100 md:w-72 d-flex flex-col min-h-0">
-    <div class="bg-base rounded ml-3 h-full scrollbar-thin  overflow-y-auto">
-      
-      <nav class="p-2">
+    <div class="bg-base rounded ml-3 h-full overflow-hidden p-1 border">
+      <div class="h-full overflow-y-auto scrollbar-thin">
+        <nav class="p-2">   
+          
+          <h5 class="m-2">Playlists</h5>
+
+          <ul>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar rounded bg-primary-300"> ❤️ </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Liked songs</h6>
+                  <p><small>Playlist  •  11 songs</small></p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/440px-Eminem_2021_Color_Corrected.jpg" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Eminem - Slim Shady</h6>
+                  <p><small>Artist  •  5 songs</small></p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://images.unsplash.com/photo-1670997627495-874a440a49b0?q=80&w=200" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Soviet music</h6>
+                  <p><small>Playlist  •  32 songs</small></p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://images.unsplash.com/photo-1616435577207-ca90abc6b732?q=80&w=200" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Spiritual music</h6>
+                  <p><small>Playlist  •  7 songs</small></p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?q=80&w=200" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Background beats </h6>
+                  <p><small>Playlist  •  10 songs</small></p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
         
-        <h5 class="m-2">Playlists</h5>
-        
-        <ul>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar rounded bg-primary-300"> ❤️ </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Liked songs</h6>
-                <p><small>Playlist  •  11 songs</small></p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/440px-Eminem_2021_Color_Corrected.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Eminem - Slim Shady</h6>
-                <p><small>Artist  •  5 songs</small></p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_the_Communist_Party_of_Vietnam.svg/240px-Flag_of_the_Communist_Party_of_Vietnam.svg.png" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Soviet music</h6>
-                <p><small>Playlist  •  32 songs</small></p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg/550px-Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Spiritual music</h6>
-                <p><small>Playlist  •  7 songs</small></p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guitarist_girl.jpg/440px-Guitarist_girl.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Background beats </h6>
-                <p><small>Playlist  •  10 songs</small></p>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
-       
-        <hr>
+          <hr>
 
-        <h5 class="m-2">Favorite artists</h5>
-        <ul>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src=" https://mighty.tools/mockmind-api/content/human/92.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Modern Talking </h6>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://mighty.tools/mockmind-api/content/human/124.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Madonna</h6>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Ahmad_%27Elvis%27_Zahir.png" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Ahmad Zahir</h6>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev_%28cropped%29.jpg/360px-Michael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev_%28cropped%29.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Michael Jackson</h6>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
-              <div class="mr-2">
-                <b class="avatar bg-neutral-300">
-                  <img src="https://mighty.tools/mockmind-api/content/human/124.jpg" class="border" alt="">
-                </b>
-              </div>
-              <figcaption class="flex-grow">
-                <h6>Setora Guruhi</h6>
-              </figcaption>
-            </figure>
-          </li>
+          <h5 class="m-2">Favorite artists</h5>
+          <ul>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src=" https://mighty.tools/mockmind-api/content/human/92.jpg" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Modern Talking </h6>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://images.unsplash.com/photo-1526218626217-dc65a29bb444?q=80&w=200" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Madonna</h6>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Ahmad_%27Elvis%27_Zahir.png" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Ahmad Zahir</h6>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Michael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev_%28cropped%29.jpg/360px-Michael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev_%28cropped%29.jpg" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Michael Jackson</h6>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure role="button" class="rounded hover:bg-neutral-200 p-2 d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <b class="avatar bg-neutral-300">
+                    <img src="https://mighty.tools/mockmind-api/content/human/124.jpg" alt="">
+                  </b>
+                </div>
+                <figcaption class="flex-grow">
+                  <h6 class="font-medium">Setora Guruhi</h6>
+                </figcaption>
+              </figure>
+            </li>
 
-        </ul>
-      </nav>
+          </ul>
 
+        </nav>
+      </div>
     </div>
   </aside>
 
   <main style="grid-area:layout_main; min-width:450px;" class="d-flex flex-col w-full min-w-96 min-h-0 overflow-hidden">
-    <div class="overflow-y-auto flex-1 w-full h-full p-3 scrollbar-thin bg-base rounded">
-      <!-- ==== main-content start ==== -->
-      <nav>
-        <button>All</button>
-        <button>Music</button>
-        <button>Podcasts</button>
-      </nav>
+    
+    <div class="flex-1 w-full h-full bg-base rounded p-1 border">
+      <div class="overflow-y-auto scrollbar-thin h-full p-4 lg:p-5 lg:pr-3">
+        <!-- ==== main-content start ==== -->
+        
+        <nav class="mb-5">
+          <button role="button" class="tag active">All</button>
+          <button role="button" class="tag">Music</button>
+          <button role="button" class="tag">Podcasts</button>
+        </nav>
 
-      <h5>Top picks for you</h5>
-      <article>
-        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
-        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
-      </article>
-      
-      <h5>Top picks for you</h5>
+        <header class="pb-2 mb-4">
+          <h3>Discover songs</h3>
+          <p class="text-secondary">Top picks for you. Updated daily.</p>
+        </header>
+        
 
-      <article>
-        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
-        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
-      </article>
-      <hr>
-      <h5>Favorite artists</h5>
+        <article class="max-w-full overflow-x-auto scrollbar-thin">
+          
+          <div class="w-full d-table mb-2">
+            <div class="d-flex gap-3">
+              
+              <figure  role="button" class="w-custom" style="--w:220px">
+                <div class="h-40 overflow-hidden max-w-full rounded bg-yellow">
+                  <img class="transition-all hover:scale-120" width="250" height="160" src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?q=80&w=400" alt="">
+                </div>
+                <figcaption class="mt-2">
+                  <h6>A True Love</h6>
+                  <small class="text-secondary">Valeriya</small>
+                </figcaption>
+              </figure>
 
-      <article>
-        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
-        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
-      </article>
+              <figure role="button" class="w-custom" style="--w:210px">
+                <div class="h-40 overflow-hidden max-w-full rounded bg-yellow">
+                  <img class="transition-all hover:scale-120" width="250" height="160"  src="https://images.unsplash.com/photo-1736894739274-3e85a224f350?q=80&w=400" alt="">
+                </div>
+                <figcaption class="mt-2">
+                  <h6>The Art of Painting</h6>
+                  <small class="text-secondary">Maximillan</small>
+                </figcaption>
+              </figure>
 
-      <article>
-        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
-        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
-      </article>
+              <figure role="button" class="w-custom" style="--w:210px">
+                <div class="h-40 overflow-hidden max-w-full rounded bg-yellow">
+                  <img class="transition-all hover:scale-120" width="250" height="160" src="https://images.unsplash.com/photo-1736779491981-654894ba27e6?q=80&w=400" alt="">
+                </div>
+                <figcaption class="mt-2">
+                  <h6>This is it</h6>
+                  <small class="text-secondary">Michael Jackson</small>
+                </figcaption>
+              </figure>
+    
+              <figure role="button" class="w-custom" style="--w:210px">
+                <div class="h-40 overflow-hidden max-w-full rounded bg-yellow">
+                  <img class="transition-all hover:scale-120" width="250" height="160" src="https://images.unsplash.com/photo-1738279494075-5183d2eadc05?q=80&w=400" alt="">
+                </div>
+                <figcaption class="mt-2">
+                  <h6>Slim Shady</h6>
+                  <small class="text-secondary">Eminem</small>
+                </figcaption>
+              </figure>
+              
+              <figure role="button" class="w-custom" style="--w:210px">
+                <div class="h-40 overflow-hidden max-w-full rounded bg-yellow">
+                  <img class="transition-all hover:scale-120" width="250" height="160" src="https://plus.unsplash.com/premium_photo-1728650291164-1a6a512f219e?q=80&w=400" alt="">
+                </div>
+                <figcaption class="mt-2">
+                  <h6>Push The Tempo</h6>
+                  <small class="text-secondary">Moby</small>
+                </figcaption>
+              </figure>
 
-      <article>
-        Article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, doloribus amet labore rem deserunt, hic quod, at alias et magni quae atque aliquam unde consectetur aliquid fugit eum est? Quasi.
-        hello; Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! Harum fugit facere illo ut voluptate debitis quas eveniet nesciunt minima voluptatem animi, earum distinctio sint, velit similique omnis. Nihil, unde distinctio! 
-      </article>
+              <figure role="button" class="w-custom" style="--w:210px">
+                <div class="h-40 overflow-hidden max-w-full rounded bg-yellow">
+                  <img class="transition-all hover:scale-120" width="250" height="160" src="https://images.unsplash.com/photo-1738279494075-5183d2eadc05?q=80&w=400" alt="">
+                </div>
+                <figcaption class="mt-2">
+                  <h6>Dark Underground</h6>
+                  <small class="text-secondary">Alex Pavel</small>
+                </figcaption>
+              </figure>
+    
+            </div>
+          </div>
+        </article>
+
+        <header class="border-bottom pb-2 mb-4 mt-8">
+          <h5>Top picks for you</h5>
+          <p class="text-secondary">Based on your playlist we recommend</p>
+        </header>
+        
+        <article>
+          <!-- row-song -->
+          <table class="table">
+            <tr> 
+              <td width="40">
+                <button class="btn btn-icon btn-sm rounded-circle btn-neutral text-secondary">
+                  <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+                </button>
+              </td>
+              <td> 
+                <p>Rainmaker</p> 
+                <small>Yanni</small>
+              </td> 
+              <td>  <a href="#">Ethnicity</a> </td> 
+              <td>  3:45 </td>
+            </tr>
+
+            <tr> 
+              <td width="40">
+                <button class="btn btn-icon btn-sm rounded-circle btn-neutral text-secondary">
+                  <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+                </button>
+              </td>
+              <td> 
+                <p>Rainmaker</p> 
+                <small>Yanni</small>
+              </td> 
+              <td>  <a href="#">Ethnicity</a> </td> 
+              <td>  3:45 </td>
+            </tr>
+
+            <tr> 
+              <td width="40">
+                <button class="btn btn-icon btn-sm rounded-circle btn-neutral text-secondary">
+                  <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+                </button>
+              </td>
+              <td> 
+                <p>Rainmaker</p> 
+                <small>Yanni</small>
+              </td> 
+              <td>  <a href="#">Ethnicity</a> </td> 
+              <td>  3:45 </td>
+            </tr>
+
+            <tr> 
+              <td width="40">
+                <button class="btn btn-icon btn-sm rounded-circle btn-neutral text-secondary">
+                  <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+                </button>
+              </td>
+              <td> 
+                <p>Rainmaker</p> 
+                <small>Yanni</small>
+              </td> 
+              <td>  <a href="#">Ethnicity</a> </td> 
+              <td>  3:45 </td>
+            </tr>
+
+
+            <tr> 
+              <td width="40">
+                <button class="btn btn-icon btn-sm rounded-circle btn-neutral text-secondary">
+                  <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+                </button>
+              </td>
+              <td> 
+                <p>Rainmaker</p> 
+                <small>Yanni</small>
+              </td> 
+              <td>  <a href="#">Ethnicity</a> </td> 
+              <td>  3:45 </td>
+            </tr>
+
+          </table>
+          <!-- row-song .//end -->
+        </article>
+        
+
+        <header class="border-bottom pb-2 mb-4 mt-8">
+          <h5>Favorite artists</h5>
+          <p class="text-secondary">Artists and singers you follow</p>
+        </header>
+        
+
+        <article role="presentation">
+          <div class="d-flex flex-wrap gap-rows-4 row-cols-2 lg:row-cols-5" style="margin:0 -12px;">
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40 max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://images.unsplash.com/photo-1736779491981-654894ba27e6?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Xiao Kim Jo</p>
+                <small class="text-secondary">Chinese artist</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://images.unsplash.com/photo-1605722243979-fe0be8158232?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Marcus Alexandr</p>
+                <small class="text-secondary">Rock artist</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://images.unsplash.com/photo-1603393518079-86dc47e9a910?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Abraham John</p>
+                <small class="text-secondary">African hip-hop</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://images.unsplash.com/photo-1603545908215-1010e64eb840?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Mike Dima 
+                </p>
+                <small class="text-secondary">American artist</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://images.unsplash.com/photo-1736779491981-654894ba27e6?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Xiao Kim Jo</p>
+                <small class="text-secondary">Chinese artist</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://images.unsplash.com/flagged/photo-1563205764-79ea509b3e95?q=80&w=300" alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Dr. Albaniy</p>
+                <small class="text-secondary">African artist</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://plus.unsplash.com/premium_photo-1668319915384-3cccf7689bef?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Jonna Mary</p>
+                <small class="text-secondary">German artist</small>
+              </figcaption>
+            </figure>
+
+            <figure role="button" class="d-inline-flex flex-col min-w-40  max-w-60 hover:bg-neutral-200 rounded p-3">
+              <div>
+                <div class="overflow-hidden">
+                  <img  class="w-full rounded-circle ratio-1x1" width="160" src="https://plus.unsplash.com/premium_photo-1682096336189-c072e821d118?q=80&w=400"alt="">
+                </div>
+              </div>
+              <figcaption class="mt-2">
+                <p class="text-base text-truncate">Abuda M</p>
+                <small class="text-secondary">American Rap music</small>
+              </figcaption>
+            </figure>
+         
+          </div>
+        </article>
+
+
+
 
       <!-- ==== main-content end.// ==== -->
+      </div>
     </div>
   </main>
 
   <aside style="grid-area:layout_right" class="d-flex flex-col min-h-0">
-    <div class="bg-base mr-3 h-full d-flex flex-col rounded max-w-100 min-w-60">
+    <div class="bg-base border mr-3 h-full d-flex flex-col rounded max-w-100 min-w-60">
       <header class="p-3">Top header</header>
       <section class="h-auto relative m-0 p-0 flex-auto overflow-x-hidden overflow-y-auto scrollbar-thin">
         <div class="p-4 min-h-full d-flex flex-col">
@@ -296,8 +542,66 @@
   </aside>
 
   <section style="grid-area:layout_playing" class="w-full pt-3">
-    <div class="border-top bg-raised p-3 shadow-top relative">
-      Now playing Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?
+    <div class="border-top bg-raised p-4 shadow-top relative">
+      <div class="d-flex">
+        <aside class="w-30%  d-flex align-items-center justify-content-start">
+          <figure class="gap-3 d-flex flex-row align-items-center">
+            <div class="w-10 h-10 bg-yellow flex-shrink-0 rounded overflow-hidden text-xl d-flex flex-center"> 🎵  </div>
+            <figcaption> <p> Billie Jean </p> <p class="text-sm text-secondary"> Michael Jackson</p></figcaption>
+          </figure>
+        </aside>
+        <div  class="w-40%">
+
+          <!-- control actions -->
+          <div  class="d-flex mb-3 align-items-center gap-5 justify-content-center">
+            <button class="btn btn-icon btn-sm  text-secondary  hover:text-base">
+              <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"></path><path d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"></path></svg>
+            </button>
+            <button class="btn btn-icon btn-sm  text-secondary  hover:text-base">
+              <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"></path></svg>
+            </button>
+
+            <button class="btn btn-icon btn-sm rounded-circle btn-primary transition-all hover:scale-110">
+              <svg role="img" width="18" height="18"  aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+            </button>
+
+            <button class="btn btn-icon btn-sm text-secondary hover:text-base">
+              <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"></path></svg>
+            </button>
+            <button class="btn btn-icon btn-sm  text-secondary  hover:text-base">
+              <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"></path></svg>
+            </button>
+          </div>
+          <!-- control actions .//end -->
+
+          <!-- progreess control -->
+          <div class="d-flex align-items-center gap-4">
+            <span class="text-secondary max-w-10">0:18</span>
+            <div class="flex-grow relative group py-2"> 
+              <span class="relative d-block bg-neutral-400 h-1 w-full rounded-full cursor-pointer">
+                <b class="absolute d-block bg-primary-400 group-hover:bg-primary-600 h-1 rounded-full" style="width: 32%;">
+                  <i class="w-3 h-3 d-block rounded bg-primary border-white shadow absolute right-0 center-y"></i>
+                </b>
+              </span>
+            </div>
+            <span  class="text-secondary  max-w-10">3:19</span>
+          </div>
+          <!-- progreess control .//end-->
+          
+        </div>
+        <aside class="w-30% d-flex align-items-center justify-content-end">
+
+          <div class="d-flex align-items-center">
+            <span> 
+              <button class="btn btn-icon text-secondary">
+                <svg role="presentation" aria-label="Volume" fill="currentColor" aria-hidden="false" viewBox="0 0 16 16"><path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"></path><path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path></svg>
+              </button>
+            </span>
+            <input value="90" type="range"> 
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
