@@ -6,11 +6,13 @@
 }
 
 .nav-row, .nav-horizontal{ 
+  display: flex;
   flex-direction: row;
   width: auto;
 }
 
 .nav-col, .nav-vertical{
+  display: flex;
   flex-direction: column;
   width: 100%;
   .nav-link{
@@ -50,6 +52,11 @@
   color:inherit;
   border-radius: $border-radius-base; // from: _base-settings.scss
 
+  svg{
+    max-width: 20px; max-height: 20px;
+    min-width: 16px; min-height: 16px;
+  }
+  
   &:hover{
     text-decoration:none;
     color: var(--text-color-base);
