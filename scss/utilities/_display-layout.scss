@@ -110,6 +110,28 @@ $layout-utils: (
 }
 
 
+/// Hover based display manipulation
+.hover\:d-block:hover{ display:block}
+.hover\:d-inline:hover{ display:inline }
+.hover\:d-inline-block:hover{ display:inline-block }
+.hover\:d-flex:hover{ display:flex }
+.hover\:d-inline-flex:hover{ display:inline-flex }
+.hover\:d-grid:hover{ display:grid }
+.hover\:d-inline-grid:hover{ display:inline-grid }
+.hover\:d-none:hover{ display:none }
+.hover\:hidden:hover{ display:none }
+
+/// Hover based, but if parent is hvered
+.group:hover .group-hover\:d-block{ display:block}
+.group:hover .group-hover\:d-inline{ display:inline }
+.group:hover .group-hover\:d-inline-block{ display:inline-block }
+.group:hover .group-hover\:d-flex{ display:flex }
+.group:hover .group-hover\:d-inline-flex{ display:inline-flex }
+.group:hover .group-hover\:d-grid{ display:grid }
+.group:hover .group-hover\:d-inline-grid{ display:inline-grid }
+.group:hover .group-hover\:d-none{ display:none }
+.group:hover .group-hover\:hidden{ display:none }
+
 /// Show/hide based on theme color
 [data-theme=dark], .darkmode{
   .dark\:d-block{ display:block}

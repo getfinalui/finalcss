@@ -509,32 +509,63 @@
 
   <aside style="grid-area:layout_right" class="d-flex flex-col min-h-0">
     <div class="bg-base border mr-3 h-full d-flex flex-col rounded max-w-100 min-w-60">
-      <header class="p-3">Top header</header>
+      <header class="p-3 border-bottom">
+        <h6>About song</h6>
+      </header>
       <section class="h-auto relative m-0 p-0 flex-auto overflow-x-hidden overflow-y-auto scrollbar-thin">
         <div class="p-4 min-h-full d-flex flex-col">
-          <article>
-            <h2>Without Me</h2>
-            <h5>Eminem</h5>
+          
+          <article class="mb-4">
+            <h3>Billie Jean</h3>
+            <p class="text-secondary">Michael Jackson</p>
             <figure>
     
             </figure>
           </article>
     
-          <article>
-            <h5>Eminem</h5>
-            <p>73,005,716 monthly listeners</p>
-            <p>Apart from being one of the best-selling artists in music history, Eminem is one of the greatest rappers of his...</p>
+          <article class="card bg-raised p-4 mb-4">
+            <div class="bg-primary overflow-hidden max-h-100 ratio-4x3 rounded mb-3">
+              <img class="w-full h-full" src="https://i.scdn.co/image/ab67616d0000b273de437d960dda1ac0a3586d97" height="300" alt="">
+            </div>
+            <h5  class="mb-3">Michael Jackson</h5>
+            <div class="d-flex mb-3 justify-content-between">
+              <p>44,604,860 <br> monthly listeners</p>
+              <span>
+                <button class="btn btn-sm btn-outline">Follow</button>
+              </span>
+            </div>
+            <p class="text-secondary">Michael Jackson helped shape the sound and style of the 1970s and '80s and was one of the 20th century</p>
           </article>
     
-          <article>
-            <h5>Credits</h5>
-            <p>Eminem</p>
-            <p>Jeff Bass</p>
+          <article class="card bg-raised p-4 mb-4">
+            <h5 class="mb-3">Credits</h5>
+            <div class="d-flex justify-content-between">
+              <dl>
+                <dt>Michael Jacksons</dt>
+                <dd class="text-secondary">Main Artist </dd>
+                <dt>Jeremy Lubbock</dt>
+                <dd class="text-secondary">Conductor </dd>
+                <dt>J. Jackson</dt>
+                <dd class="text-secondary">Composer, Lyricist </dd>
+              </dl>
+            </div>
           </article>
     
-          <article>
-            <h5>Next in queue</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda, cum blanditiis atque eos nobis nostrum rerum voluptatum omnis qui nihil! Perspiciatis nam ut libero. Laborum laboriosam corporis totam doloremque?</p>
+          <article class="card bg-raised p-4 mb-4">
+            <h5 class="mb-3">Next in queue</h5>
+            
+            <figure role="button" class="relative group gap-3 rounded p-2 d-flex flex-row align-items-center bg-secondary hover:bg-neutral-200">
+              <div class="w-10 h-10 bg-primary-300 flex-shrink-0 rounded overflow-hidden text-xl d-flex flex-center"> 🎵  </div>
+              <figcaption> 
+                <p> Earth Song </p> <p class="text-sm text-secondary"> Michael Jackson</p>
+              </figcaption>
+              <div class="absolute right-0 pr-2 center-y group-hover:d-block d-none">
+                <button class="btn btn-icon btn-sm rounded-circle btn-primary">
+                  <svg role="img" width="18" height="18" aria-hidden="true" fill="currentColor" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+                </button>
+              </div>
+            </figure>
+
           </article>
         </div>
       </section>
