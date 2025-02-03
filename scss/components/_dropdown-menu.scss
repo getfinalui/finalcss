@@ -51,3 +51,15 @@
   cursor: not-allowed;
   background-color: transparent;
 }
+
+
+// Dropdown icon on trigger
+.has-dropdown::after {
+  display: inline-block;
+  vertical-align:4px;
+  content: "";
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-bottom: 0;
+  border-left: 5px solid transparent;
+}

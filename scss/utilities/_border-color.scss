@@ -1,38 +1,41 @@
 
 // Border for all sides
 .border { border: 1px solid var(--border-color-default);}
-.border-weak { border: 1px solid var(--border-color-weak);}
-.border-strong { border: 1px solid var(--border-color-strong);}
-.border-dark{ border: 1px solid #000; }
-.border-black{ border: 1px solid #000; }
-.border-white{ border: 1px solid #fff; }
 .border-0 { border: 0 !important; }
 .border-none { border: none !important; }
 .border-inherit{ border: inherit !important; }
+
+.border-weak { border-color:var(--border-color-weak)!important;}
+.border-strong { border-color:var(--border-color-strong)!important;}
+.border-dark{ border-color:#000!important; }
+.border-black{ border-color: #000!important; }
+.border-white{ border-color: #fff!important; }
 .border-transparent{ border-color:transparent !important; }
 
 // Hover effect (Border for all sides)
 .hover\:border:hover { border: 1px solid var(--border-color-default);}
-.hover\:border-weak:hover { border: 1px solid var(--border-color-weak);}
-.hover\:border-strong:hover { border: 1px solid var(--border-color-strong);}
-.hover\:border-dark:hover{ border: 1px solid #000; }
-.hover\:border-black:hover{ border: 1px solid #000; }
-.hover\:border-white:hover{ border: 1px solid #fff; }
 .hover\:border-0:hover { border: 0 !important; }
 .hover\:border-none:hover { border: none !important; }
 .hover\:border-inherit:hover { border: inherit !important; }
+
+.hover\:border-weak:hover { border-color: var(--border-color-weak) !important;}
+.hover\:border-strong:hover { border-color: var(--border-color-strong) !important;}
+.hover\:border-dark:hover{ border-color: #000 !important; }
+.hover\:border-black:hover{ border-color: #000 !important; }
+.hover\:border-white:hover{ border-color: #fff !important; }
 .hover\:border-transparent:hover { border-color:transparent !important; }
 
 // Group-Hover effect (Border for all sides)
 .group:hover .group-hover\:border { border: 1px solid var(--border-color-default);}
-.group:hover .border-weak { border: 1px solid var(--border-color-weak);}
-.group:hover .border-strong { border: 1px solid var(--border-color-strong);}
-.group:hover .group-hover\:border-dark{ border: 1px solid #000; }
-.group:hover .group-hover\:border-black{ border: 1px solid #000; }
-.group:hover .group-hover\:border-white{ border: 1px solid #fff; }
 .group:hover .group-hover\:border-0 { border: 0 !important; }
 .group:hover .group-hover\:border-none { border: none !important; }
 .group:hover .group-hover\:border-inherit{ border: inherit !important; }
+
+.group:hover .border-weak { border-color: var(--border-color-weak) !important;}
+.group:hover .border-strong { border-color: var(--border-color-strong) !important;}
+.group:hover .group-hover\:border-dark{ border-color: #000 !important; }
+.group:hover .group-hover\:border-black{ border-color: #000 !important; }
+.group:hover .group-hover\:border-white{ border-color: #fff !important; }
 .group:hover .group-hover\:border-transparent{ border-color:transparent !important; }
 
 

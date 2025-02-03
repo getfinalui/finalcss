@@ -31,301 +31,358 @@
 <link href="../css/final.css" rel="stylesheet" type="text/css" />
 
 </head>
-<body class="h-full bg-neutral-200" style="min-width: 920px;">
+<body class="h-full bg-neutral-200" style="--header-size:56px;  min-width:768px;" >
 
-<section class="mx-auto h-100vh lg:p-5 relative">
-
-<div class="bg-base border-strong rounded d-flex overflow-hidden w-full h-full  lg:flex-row align-items-stretch relative">
-  <aside class="bg-lower lg:w-60 border-right">
-    <div class="d-flex flex-col px-3 py-3 h-full overflow-y-auto min-w-52">
-      <nav class="nav nav-col gap-1">
-
-        <a role="button" class="nav-link px-2 active" href="#">
-          <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
-          <span>Inbox</span>
+<div class="mx-auto h-100vh d-flex flex-col">
+  
+  <header style="height:var(--header-size)" data-theme="static" class="bg-primary-700 d-flex p-3 lg:px-5 align-items-center h-14 bg-base z-100">
+    
+      <!-- header-left  -->
+      <div class="d-flex flex-grow">
+        
+        <!-- mobile hamburger button  -->
+        <button class="btn btn-primary btn-icon mr-3 md:d-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+              <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <!-- mobile hamburger button .//end -->
+        <a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+          <img src="logo-symbol.svg" alt="" height="36">
+          <span class="text-3xl text-white font-medium ml-2">final<b class="text-neutral-300">ui</b></span>
         </a>
-
-        <a role="button" class="nav-link px-2" href="#">
-          <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
-          <span>Starred</span>
-        </a>
-
-        <a role="button" class="nav-link px-2" href="#">
-          <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>
-          <span>Sent</span>
-        </a>
-
-        <a role="button" class="nav-link px-2" href="#">
-          <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
-          <span>Drafts</span>
-        </a>
-
-        <a role="button" class="nav-link px-2" href="#">
-          <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-warning"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M12 7v2"/><path d="M12 13h.01"/></svg>
-          <span>Spams</span>
-        </a>
-
-        <a role="button" class="nav-link px-2" href="#">
-          <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
-          <span>Deleted</span>
-        </a>
-
-      </nav>
-
-      <section class="mt-auto">
-        <button onclick="themeSwitcher()" class="btn btn-sm btn-icon btn-secondary">
-          <span class="d-none dark:d-block"> 🌞  </span>
+      </div>
+      <!-- header-left  .//end --> 
+      
+      <!-- header-middle --> 
+      <div class="d-flex col-5">
+        <form class="d-flex w-100% mx-3">
+          <div class="relative w-full">
+            <input type="search" class="form-control bg-primary-600 text-white border-primary rounded-right-0" list="search_suggest" placeholder="Search message">
+          </div>
+          <button class="rounded-left-0 btn btn-primary btn-icon"  style="--btn-bg-hover:var(--primary-400); margin-left:-1px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+        </form>
+        <datalist id="search_suggest">
+          <option value="All unread"> </option>
+          <option value="With attachment"> </option>
+          <option value="All clients"> </option>
+        </datalist>
+      </div>
+      <!-- header-middle .//end --> 
+    
+      <!-- header-right --> 
+      <div class="d-flex flex-grow align-items-center justify-content-end gap-1">
+        <button onclick="themeSwitcher()" class="btn btn-icon text-white">
+          <span class="d-none dark:d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </span>
           <span class="dark:d-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
           </span>
         </button>
-      </section>
+        <button class="btn btn-icon text-white" style="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>						
+        </button>
+        <button class="btn btn-icon text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>								
+        </button>
+        <a href="#" class="btn btn-primary btn-icon" style="--btn-bg-hover:var(--primary-400)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>			
+        </a>
+      </div>
+      <!-- header-right .//end --> 
+    
+  </header>
+  <section style="height:calc(100% - var(--header-size))" class="bg-base d-flex overflow-hidden w-full lg:flex-row align-items-stretch relative">
+    <aside class="bg-lower h-full lg:w-60 border-right d-none md:d-block">
+      <div class="d-flex flex-col px-3 py-3 h-full overflow-y-auto min-w-52">
 
-    </div>
-  </aside>
-  <aside style="flex-grow:30; max-width: 500px;" class="bg-base border-right  flex-shrink-0 flex-basis-0 overflow-hidden">
-    <div class="d-flex flex-col h-full overflow-hidden">
-      
-      <header class="p-4 h-16 border-bottom">
-        <div class="d-flex align-items-center justify-content-between">
-          <h4 class="mb-0">Chats</h4>
-          <div>
+        <a class="btn btn-primary" href="#"> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>  New message</a>
 
-          </div>
-        </div>
-      </header>
+        <hr>
 
-      <section class="p-4 border-bottom">
-        <input type="search" placeholder="Search" class="form-control">
-      </section>
-      
-      <section class="overflow-y-auto scrollbar-thin py-2 h-full flex-1">
+        <nav class="nav nav-col gap-1">
+
+          <a role="button" class="nav-link px-2 active" href="#">
+            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+            <span>Inbox</span>
+          </a>
+
+          <a role="button" class="nav-link px-2" href="#">
+            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+            <span>Starred</span>
+          </a>
+
+          <a role="button" class="nav-link px-2" href="#">
+            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>
+            <span>Sent</span>
+          </a>
+
+          <a role="button" class="nav-link px-2" href="#">
+            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+            <span>Drafts</span>
+          </a>
+
+          <a role="button" class="nav-link px-2" href="#">
+            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-warning"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M12 7v2"/><path d="M12 13h.01"/></svg>
+            <span>Spams</span>
+          </a>
+
+          <a role="button" class="nav-link px-2" href="#">
+            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+            <span>Deleted</span>
+          </a>
+
+        </nav>
+
+
+      </div>
+    </aside>
+    <aside style="flex-grow:30; max-width: 500px;" class="bg-base border-right  flex-shrink-0 flex-basis-0 overflow-hidden">
+      <div class="d-flex flex-col h-full overflow-hidden">
         
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-neutral-400"> A </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Archived chats</h5> 
+        <header class="d-flex align-items-center justify-content-between px-4 h-12 border-bottom">
+            <h5 class="mb-0">Inbox (459)</h5>
+            <div>
+               <a class="btn btn-sm text-base text-primary has-dropdown" href="#"> Filter by </a>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">3 chats archived </p>
-            </div>
-          </div>
-        </a>        
+        </header>
         
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-teal-500"> M </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Now</time>
+        <section class="overflow-y-auto scrollbar-thin py-2 h-full flex-1">
+                    
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-teal-500"> M </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Mike John</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">Now</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-pink-500"> A </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Alexander J.</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Today</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-pink-500"> A </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Alexander J.</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">Today</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-blue-400"> F </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Finalcss Support</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">16:45</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-blue-400"> F </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">OK Thanks u </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Finalcss Support</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">16:45</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">OK Thanks u </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">My Love</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12:45</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-red-500"> T </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">By be love you!  </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">My Love</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">12:45</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">By be love you!  </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-orange-500"> M </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Yesterday</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-orange-500"> M </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Mike John</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">Yesterday</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-yellow-500"> D </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Donald Trump</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">Yesterday</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-yellow-500"> D </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Donald Trump</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">Yesterday</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-green-500"> M </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-green-500"> M </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Mike John</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0"> Mr. President </h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-purple-500"> T </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0"> Mr. President </h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-orange-500"> T </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Mike John</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-yellow-500"> T </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Ahmed Hasan</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
-          <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
-          </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
-            <div class="d-flex align-item-center"> 
-              <h5 class="font-medium mb-0">Mike John</h5> 
-              <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+          <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+            <div class="mr-3">
+              <div class="avatar bg-blue-500"> T </div>
             </div>
-            <div class="text-secondary">
-              <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex-1 overflow-hidden py-4 border-bottom">
+              <div class="d-flex align-item-center"> 
+                <h5 class="font-medium mb-0">Alisher Eshmatov</h5> 
+                <time class="text-muted text-sm ml-auto" datetime="#">12/23/2024</time>
+              </div>
+              <div class="text-secondary">
+                <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+              </div>
             </div>
+          </a>
+
+
+        </section>
+        
+      </div>
+    </aside>
+    <main style="flex-grow:40; flex-basis:0px" class="bg-base flex-shrink-0 flex-basis-0 overflow-hidden">
+      <div class="d-flex flex-col w-full h-full">
+
+        <header class="p-2 d-flex h-12 flex-shrink-0 align-items-center border-bottom w-full">
+
+          <div class="d-flex gap-1 align-items-center">
+              <button class="btn btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                Delete
+              </button>
+    
+              <button class="btn btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ban"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+                Spam
+              </button>
+    
+              <i class="border-right border-strong d-inline-block h-6"></i>
+    
+              <button class="btn btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>
+                Forward
+              </button>
+    
+              <button class="btn btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Mark as unread
+              </button>
+            
+              <button class="btn btn-sm has-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                Labe as
+              </button>
+    
+              <button class="btn btn-sm btn-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+              </button>
           </div>
-        </a>
 
 
-      </section>
-      
-    </div>
-  </aside>
-  <main style="flex-grow:40; flex-basis:0px" class="bg-base flex-shrink-0 flex-basis-0 overflow-hidden">
-    <div class="d-flex flex-col w-full h-full">
 
-      <header class="p-3 d-flex h-16 flex-shrink-0 align-items-center border-bottom w-full">
+        </header>
 
-        <button class="btn btn-secondary btn-icon mr-3 md:d-none">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-        </button>
+        <section class="bg-base flex-1  overflow-y-auto">
+        
+          <div class="d-flex flex-col h-full p-2">
+        
+            <!-- message item -->
+            <article class="">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.
+            </article>
+            <!-- message item -->
+          </div>
+        </section>
 
-        <figure class="d-flex align-items-center mr-auto">
-          <div class="avatar mr-2 avatar-sm"> A </div>
-          <figcaption> Alex John</figcaption>
-        </figure>
-
-        <button class="btn btn-secondary btn-icon ml-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </button>
-
-        <button class="btn btn-secondary btn-icon ml-2">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-        </button>
-
-      </header>
-
-      <section class="bg-base flex-1  overflow-y-auto">
-      
-        <div class="d-flex flex-col h-full p-2">
-      
-          <!-- message item -->
-          <article class="">
-           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae iusto repudiandae non accusamus. Itaque quo illo harum pariatur delectus, excepturi quam eos voluptatum assumenda eaque molestias corrupti tempora recusandae eligendi.
-          </article>
-          <!-- message item -->
-        </div>
-      </section>
-
-    </div>
-  </main>
+      </div>
+    </main>
+  </section>
 </div>
-
-</section>
 
 
 </body>
