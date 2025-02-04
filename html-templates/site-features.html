@@ -14,356 +14,67 @@
   <title>Final CSS - Example Admin template (finalcss.com)</title>
 
 	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', () => {
-
-		// ***********************
-		// Theme toggle
-		const htmlElement = document.documentElement;
-		const themeSwitcher = document.getElementById('themeSwitcher');
-		// Check localStorage for saved theme
-		const savedTheme = localStorage.getItem('data-theme');
-		if (savedTheme) {
-		    htmlElement.setAttribute('data-theme', savedTheme);
-		}
-		themeSwitcher.addEventListener('click', () => {
-		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
-		    // Set the new theme on the body element
-		    htmlElement.setAttribute('data-theme', newTheme);          
-		    // Save the new theme in localStorage
-		    localStorage.setItem('data-theme', newTheme);
-		});
-
-		// ***********************
-		// Show/hide dropdown-menu 
-		document.addEventListener("click", function (event) {
-				// Find the closest ancestor with a `data-trigger` attribute (if any)
-				const triggerElement = event.target.closest("[data-trigger]");
-
-				if (triggerElement) {
-						// Get the target ID from the `data-trigger` attribute
-						const targetId = triggerElement.getAttribute("data-trigger");
-						const targetElement = document.getElementById(targetId);
-
-						if (targetElement) {
-								// Toggle the dropdown
-								if (targetElement.style.display === "none" || !targetElement.style.display) {
-										targetElement.style.display = "block"; // Show the dropdown
-								} else {
-										targetElement.style.display = "none"; // Hide the dropdown
-								}
-						}
-
-						// Prevent default action for links (optional)
-						event.preventDefault();
-						return; // Exit, since we handled the trigger click
-				}
-
-				// Close dropdowns if clicked outside
-				const openedDropdowns = document.querySelectorAll('.dropdown-menu[style*="display: block"]');
-				openedDropdowns.forEach(dropdown => {
-						// Check if the click is inside the dropdown
-						if (!dropdown.contains(event.target)) {
-								dropdown.style.display = "none"; // Close the dropdown
-						}
-				});
-		});
-
-
-	});
-	// end of DOM load
+	// Check localStorage for saved theme and assign that
+	const htmlElement = document.documentElement;
+	const savedTheme = localStorage.getItem('site-theme');
+	if (savedTheme) {
+			htmlElement.setAttribute('data-theme', savedTheme);
+	}
+	function themeSwitcher() {
+				const currentTheme = htmlElement.getAttribute('data-theme');
+				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				// Set the new theme on the body element
+				htmlElement.setAttribute('data-theme', newTheme);          
+				// Save the new theme in localStorage
+				localStorage.setItem('site-theme', newTheme);
+	}
 	</script>
 
-
-<!-- FinalCSS -->
-<link href="../css/final.css" rel="stylesheet" type="text/css" />
-
+	<!-- FinalCSS -->
+	<link href="../css/final.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 
-	<aside class="d-none md:d-flex z-100 flex-col bg-neutral-100 border-right fixed top-0 bottom-0 left-0 lg:w-60 w-52">
-		
-		<header class="d-flex px-3 align-items-center h-14 flex-shrink-0">
+<header class="py-2 border-bottom">
+	<div class="container">
+		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+			
 			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo-symbol.svg" alt="" height="36">
+				<img src="_logo-symbol.svg" alt="" height="36">
 				<span class="text-3xl text-base font-medium ml-2">final<b class="text-secondary">ui</b></span>
 			</a>
-		</header>
-		
-		<!-- aside main part -->
-		<div class="px-3 py-1 overflow-x-auto">
-			<form action="">
-				<input type="search" placeholder="Search" class="form-control bg-neutral-200">
-			</form>
-			<nav class="mt-3">
-					<ul class="nav nav-col">
-						<li>
-							<a class="nav-link h-10 p-1 active" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-home"/></svg>										
-								</span>	
-								<span>Dashboard</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-product"/></svg>										
-								</span>	
-								<span>Products</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-people"/></svg>										
-								</span>	
-								<span>Customers</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-building"/></svg>										
-								</span>	
-								<span>Companies</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-image"/></svg>										
-								</span>	
-								<span>Gallery</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-time"/></svg>										
-								</span>	
-								<span>History</span>
-							</a>
-						</li>
-						<li class="p-1 mt-2"><span class="text-sm text-secondary">Another group</span></li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-truck"/></svg>										
-								</span>	
-								<span>Shipments</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-chart"/></svg>										
-								</span>	
-								<span>Finance</span>
-							</a>
-						</li>
-						<li>
-							<a class="nav-link h-10 p-1" href="#">
-								<span class="bg-neutral-0 w-8 h-8 d-flex border text-primary flex-center rounded">
-									<svg width="20" height="20"><use href="#icon-file"/></svg>										
-								</span>	
-								<span>Documents</span>
-							</a>
-						</li>
-					</ul>
-			</nav>
-		</div>
-		<!-- aside main part .//end-->
-
-		<!-- aside bottom elements -->
-		<div class="p-3 mt-auto">
-
-			<nav class="relative">
-				<ul id="menu_more_1" class="dropdown-menu absolute left-0 bottom-0 lg:w-full w-20" style="transform: translateY(-48px); display: none;">
-					<li>
-						<a class="dropdown-item" href=""> 
-							<div class="lh-sm py-1">
-								<b>My profile</b> <br> <small class="text-secondary">myname@example.com</small>
-							</div> 
-						</a></li>
-					<li class="divider"></li>
-					<li><a class="dropdown-item" href="">Upgrade to pro</a></li>
-					<li><a class="dropdown-item" href="">Billing</a></li>
-					<li><a class="dropdown-item" id="themeSwitcher" href="#">Dark mode</a></li>
-					<li><a class="dropdown-item" href="">Settings</a></li>
-					<li><a class="dropdown-item text-danger" href="">Log out</a></li>
-				</ul>
-				<a href="#" data-trigger="menu_more_1" class="btn-card">
-						<span class="w-8 h-8 d-flex flex-center overflow-hidden flex-shrink-0 flex-grow-0 bg-neutral-300 rounded">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#000" color="var(--neutral-600)">
-								<path d="M17.8063 14.8372C17.9226 14.9064 18.0663 14.9875 18.229 15.0793C18.9418 15.4814 20.0193 16.0893 20.7575 16.8118C21.2191 17.2637 21.6578 17.8592 21.7375 18.5888C21.8223 19.3646 21.4839 20.0927 20.8048 20.7396C19.6334 21.8556 18.2276 22.75 16.4093 22.75H7.59104C5.77274 22.75 4.36695 21.8556 3.1955 20.7396C2.51649 20.0927 2.17802 19.3646 2.26283 18.5888C2.34257 17.8592 2.78123 17.2637 3.2429 16.8118C3.98106 16.0893 5.05857 15.4814 5.77139 15.0793C5.93404 14.9875 6.07773 14.9064 6.19404 14.8372C9.74809 12.7209 14.2523 12.7209 17.8063 14.8372Z" fill="currentColor" />
-								<path d="M6.75018 6.5C6.75018 3.6005 9.10068 1.25 12.0002 1.25C14.8997 1.25 17.2502 3.6005 17.2502 6.5C17.2502 9.39949 14.8997 11.75 12.0002 11.75C9.10068 11.75 6.75018 9.39949 6.75018 6.5Z" fill="currentColor" />
-							</svg>
-						</span>
-						<span class="ml-2 lh-sm text-base w-100%">
-							<p>Diana Mary</p>
-							<small class="text-secondary">Settings</small>
-						</span>
-						<span class="d-flex text-secondary pr-2">
-							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-up-down ml-auto size-4"><path d="m7 15 5 5 5-5"></path><path d="m7 9 5-5 5 5"></path></svg>
-						</span>
-				</a>
-			</nav>
-		</div>
-		<!-- aside bottom elements .//end -->
-
-	</aside>
-
-	<main class="lg:pl-60 md:pl-52">
-
-		<header class="d-flex p-3 lg:px-5 align-items-center border-bottom h-14">
-			<button class="btn btn-secondary btn-icon mr-3 md:d-none">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
-				    <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				    <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				    <path d="M4 19L20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</button>
-			<h5 class="m-0 text-xl">Blank page </h5>
-			<div class="d-flex align-items-center gap-2 ml-auto">
-				
-				<a class="btn btn-secondary" href="#">Button</a>
-				
-				<a class="btn btn-primary" href="#">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
-						<path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-						<path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-					</svg>
-					Button
-				</a>
-				
-				<button class="btn btn-icon btn-secondary">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
-						<path d="M17 12C17 13.3807 18.1193 14.5 19.5 14.5C20.8807 14.5 22 13.3807 22 12C22 10.6193 20.8807 9.5 19.5 9.5C18.1193 9.5 17 10.6193 17 12Z" fill="currentColor" />
-						<path d="M9.5 12C9.5 13.3807 10.6193 14.5 12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12Z" fill="currentColor" />
-						<path d="M2 12C2 13.3807 3.11929 14.5 4.5 14.5C5.88071 14.5 7 13.3807 7 12C7 10.6193 5.88071 9.5 4.5 9.5C3.11929 9.5 2 10.6193 2 12Z" fill="currentColor" />
-					</svg>									
+			
+			<div>		
+				<button onclick="themeSwitcher()" class="btn btn-icon btn-secondary">
+					<span class="d-none dark:d-block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+						</svg>
+					</span>
+					<span class="dark:d-none">
+						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+					</span>
 				</button>
-							
+				<button class="btn btn-secondary">  Button 	</button>
+				<button class="btn btn-primary">  Get finalcss 	</button>
 			</div>
-		</header>
 
-		<section class="p-3 lg:p-5">
+		</div>
+	</div> <!-- container end.// -->
+</header> <!-- section-header end.// -->
 
-			<div class="d-grid grid-template-cols-1 sm:grid-template-cols-2 lg:grid-template-cols-4 gap-5 w-100%">
-				
-				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
-						<p class="text-muted">Place any widget</p>
-					</div>
-				</article>
-
-				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
-						<p class="text-muted">Place any widget</p>
-					</div>
-				</article>
-
-				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
-						<p class="text-muted">Place any widget</p>
-					</div>
-				</article>
-
-				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
-						<p class="text-muted">Place any widget</p>
-					</div>
-				</article>
-
-			</div>  <!-- grid.// -->
-
-
-			<header class="mt-6 mb-4">
-				<h5 class="mb-4 text-xl">Another content</h5>
-			</header>
-
-			<article class="card shadow-sm border">
-					<div class="card-body min-h-200">
-
-						<br><br><br>
-						<p class="text-secondary text-center">Your content goes here</p>
-						<br><br><br>
-
-					</div>
-			</article>
-
-
-		</section>
-	</main>
-
-<!-- icons -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-
-	<symbol id="icon-star">
-    <title>star</title>
-	  <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-	</symbol>
-
-	<symbol id="icon-home">
-		<title>home icon</title>
-			<path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M7.93677 1.66312C8.63333 1.27224 9.27855 1.0415 10.0003 1.0415C10.722 1.0415 11.3672 1.27224 12.0638 1.66312C12.7387 2.04186 13.512 2.60104 14.4845 3.30419L14.4846 3.30421L15.7421 4.21345C16.5225 4.77773 17.1459 5.22842 17.616 5.64556C18.1015 6.07628 18.4647 6.50567 18.695 7.04578C18.9259 7.58708 18.9817 8.14188 18.9508 8.78157C18.9209 9.39889 18.8064 10.1437 18.6637 11.0724L18.4009 12.7821C18.1981 14.1019 18.0366 15.1529 17.7994 15.9716C17.5541 16.8183 17.2085 17.4904 16.5908 18.0042C15.9756 18.5158 15.2428 18.7437 14.3477 18.8524C14.043 18.8894 13.7105 18.9135 13.3474 18.9291L13.5402 15.4615C13.6827 13.41 12.057 11.6665 9.99961 11.6665C7.94226 11.6665 6.31648 13.41 6.45904 15.4615L6.65179 18.9291C6.28925 18.9134 5.95713 18.8894 5.65282 18.8524C4.75769 18.7437 4.02491 18.5158 3.40977 18.0042C2.79206 17.4904 2.44647 16.8183 2.20114 15.9716C1.96389 15.1529 1.80239 14.1019 1.59958 12.7821L1.33687 11.0725C1.19413 10.1437 1.07966 9.39891 1.04978 8.78157C1.0188 8.14188 1.07464 7.58708 1.30551 7.04578C1.53588 6.50567 1.89906 6.07628 2.38451 5.64556C2.85467 5.22842 3.47801 4.77773 4.25846 4.21344L4.25846 4.21344L5.51599 3.3042C6.48848 2.60104 7.26185 2.04186 7.93677 1.66312ZM8.32262 18.9576C8.54334 18.9582 8.7722 18.9582 9.00951 18.9582H10.991C11.2279 18.9582 11.4563 18.9582 11.6766 18.9577L11.8768 15.3563L11.8773 15.3497C11.9551 14.26 11.0921 13.3332 9.99961 13.3332C8.90716 13.3332 8.04413 14.26 8.12197 15.3497L8.12243 15.3563L8.32262 18.9576Z"/>
-	</symbol>
-
-	<symbol id="icon-product">
-		<title>Product icon</title>
-			<path d="M15.4391 5.20801C15.8094 5.208 16.1206 5.20799 16.3743 5.22639C16.6377 5.24549 16.8934 5.28703 17.1371 5.39958C17.4131 5.52705 17.6597 5.71829 17.8393 5.96726C18.0091 6.2025 18.0725 6.45592 18.1001 6.69935C18.1251 6.91972 18.125 7.18397 18.125 7.46969V7.52966C18.125 7.81538 18.1251 8.07963 18.1001 8.3C18.0725 8.54343 18.0091 8.79685 17.8393 9.0321C17.6597 9.28106 17.4131 9.4723 17.1371 9.59977C16.8934 9.71232 16.6377 9.75386 16.3743 9.77296C16.1206 9.79136 15.8094 9.79135 15.4391 9.79134H4.5609C4.19059 9.79135 3.87941 9.79136 3.62568 9.77296C3.36233 9.75386 3.10661 9.71232 2.86293 9.59977C2.58695 9.4723 2.34034 9.28106 2.16067 9.0321C1.99089 8.79685 1.92749 8.54343 1.89991 8.3C1.87494 8.07963 1.87497 7.81537 1.875 7.52965V7.4697C1.87497 7.18398 1.87494 6.91972 1.89991 6.69935C1.92749 6.45592 1.99089 6.2025 2.16067 5.96726C2.34034 5.71829 2.58695 5.52705 2.86293 5.39958C3.10661 5.28703 3.36233 5.24549 3.62568 5.22639C3.87941 5.20799 4.19058 5.208 4.56088 5.20801H15.4391Z" fill="currentColor"/>
-			<path d="M3.15563 10.765C2.93615 10.728 2.82641 10.7095 2.76736 10.7594C2.70831 10.8094 2.70831 10.9117 2.70831 11.1165V12.5451C2.7083 13.8806 2.70829 14.9464 2.82067 15.7823C2.93677 16.6459 3.18303 17.3571 3.74564 17.9197C4.30826 18.4823 5.01944 18.7285 5.88299 18.8446C6.7189 18.957 7.7847 18.957 9.1202 18.957C9.14585 18.957 9.16665 18.9362 9.16665 18.9105L9.16665 11.1653C9.16665 11.0082 9.16665 10.9296 9.11783 10.8808C9.06902 10.832 8.99045 10.832 8.83331 10.832H4.53257C4.18535 10.832 3.84211 10.832 3.55032 10.8109C3.42918 10.8021 3.2963 10.7887 3.15563 10.765Z" fill="currentColor"/>
-			<path d="M11.1666 10.832C11.0095 10.832 10.9309 10.832 10.8821 10.8808C10.8333 10.9296 10.8333 11.0082 10.8333 11.1653V18.9105C10.8333 18.9362 10.8541 18.957 10.8798 18.957C12.2153 18.957 13.2811 18.957 14.117 18.8446C14.9805 18.7285 15.6917 18.4823 16.2543 17.9197C16.8169 17.3571 17.0632 16.6459 17.1793 15.7823C17.2917 14.9464 17.2917 13.8806 17.2916 12.5451V11.1165C17.2916 10.9117 17.2916 10.8094 17.2326 10.7594C17.1735 10.7095 17.0638 10.728 16.8443 10.765C16.7037 10.7887 16.5708 10.8021 16.4496 10.8109C16.1578 10.832 15.8146 10.832 15.4674 10.832H11.1666Z" fill="currentColor"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M6.48812 1.0415C5.20603 1.0415 4.16669 2.08084 4.16669 3.36293C4.16669 5.3025 5.73902 6.87484 7.67859 6.87484H10H12.3214C14.261 6.87484 15.8334 5.3025 15.8334 3.36293C15.8334 2.08084 14.794 1.0415 13.5119 1.0415H13.2143C11.9044 1.0415 10.7398 1.66375 10 2.62878C9.26023 1.66375 8.09565 1.0415 6.78573 1.0415H6.48812ZM9.16669 5.08912C9.16669 3.77416 8.1007 2.70817 6.78573 2.70817H6.48812C6.1265 2.70817 5.83335 3.00132 5.83335 3.36293C5.83335 4.38203 6.6595 5.20817 7.67859 5.20817H9.16669V5.08912ZM10.8334 5.20817H12.3214C13.3405 5.20817 14.1667 4.38203 14.1667 3.36293C14.1667 3.00132 13.8735 2.70817 13.5119 2.70817H13.2143C11.8993 2.70817 10.8334 3.77416 10.8334 5.08912V5.20817Z" fill="currentColor"/>				
-	</symbol>
-
-	<symbol id="icon-people">
-		<title>Icon people</title>
-			<path d="M6.25279 10.9562C6.01354 11.0844 5.77907 11.2187 5.60676 11.3252C5.19459 11.5662 4.41824 12.0201 3.85739 12.5902C3.49545 12.9581 3.01965 13.5698 2.93109 14.4111C2.90374 14.6709 2.9161 14.9196 2.96085 15.1559C3.00563 15.3924 3.02803 15.5106 2.96819 15.5727C2.90836 15.6347 2.80866 15.6195 2.60926 15.5892C1.75608 15.4593 1.17951 14.9942 0.706348 14.4871C0.352545 14.1079 0.169802 13.6718 0.215125 13.2053C0.25768 12.7673 0.491805 12.4147 0.72596 12.1568C1.09553 11.7499 1.64026 11.405 1.96649 11.1984C2.03618 11.1543 2.09593 11.1165 2.14184 11.0857C3.37302 10.261 4.84139 10.0177 6.21252 10.3558C6.53578 10.4355 6.6974 10.4754 6.71169 10.589C6.72598 10.7026 6.56825 10.7871 6.25279 10.9562Z" fill="currentColor"/>
-			<path d="M5.40616 4.40526C5.56424 4.42903 5.64329 4.44092 5.6839 4.50659C5.72451 4.57226 5.6962 4.65947 5.6396 4.8339C5.49486 5.27986 5.41665 5.7558 5.41665 6.25C5.41665 7.28329 5.75858 8.23672 6.33547 9.00331C6.44552 9.14956 6.50055 9.22268 6.48359 9.29792C6.46663 9.37315 6.39589 9.41019 6.2544 9.48427C5.87937 9.68061 5.45264 9.79167 4.99998 9.79167C3.50421 9.79167 2.29165 8.5791 2.29165 7.08333C2.29165 5.58756 3.50421 4.375 4.99998 4.375C5.13803 4.375 5.27366 4.38533 5.40616 4.40526Z" fill="currentColor"/>
-			<path d="M13.7476 10.9562C13.9868 11.0844 14.2213 11.2187 14.3936 11.3252C14.8058 11.5662 15.5821 12.0201 16.143 12.5902C16.5049 12.9581 16.9807 13.5698 17.0693 14.4111C17.0966 14.6709 17.0843 14.9196 17.0395 15.1559C16.9947 15.3924 16.9723 15.5106 17.0322 15.5727C17.092 15.6347 17.1917 15.6195 17.3911 15.5892C18.2443 15.4593 18.8209 14.9942 19.294 14.4871C19.6478 14.1079 19.8306 13.6718 19.7852 13.2053C19.7427 12.7673 19.5086 12.4147 19.2744 12.1568C18.9048 11.7499 18.3601 11.405 18.0339 11.1984C17.9642 11.1543 17.9044 11.1165 17.8585 11.0857C16.6273 10.261 15.159 10.0177 13.7878 10.3558C13.4646 10.4355 13.303 10.4754 13.2887 10.589C13.2744 10.7026 13.4321 10.7871 13.7476 10.9562Z" fill="currentColor"/>
-			<path d="M13.6648 9.00331C13.5548 9.14956 13.4997 9.22268 13.5167 9.29792C13.5337 9.37315 13.6044 9.41019 13.7459 9.48427C14.1209 9.68061 14.5476 9.79167 15.0003 9.79167C16.4961 9.79167 17.7086 8.5791 17.7086 7.08333C17.7086 5.58756 16.4961 4.375 15.0003 4.375C14.8623 4.375 14.7266 4.38533 14.5941 4.40526C14.436 4.42903 14.357 4.44092 14.3164 4.50659C14.2758 4.57226 14.3041 4.65947 14.3607 4.8339C14.5054 5.27986 14.5836 5.7558 14.5836 6.25C14.5836 7.28329 14.2417 8.23672 13.6648 9.00331Z" fill="currentColor"/>
-			<path d="M6.40955 12.0614C8.6077 10.7022 11.3958 10.7022 13.5939 12.0614C13.6588 12.1015 13.7408 12.1495 13.8352 12.2047C14.262 12.4545 14.9397 12.851 15.4021 13.3211C15.6926 13.6163 15.9822 14.0187 16.035 14.5205C16.0915 15.0573 15.8637 15.5541 15.4291 15.9841C14.7111 16.6945 13.8216 17.292 12.6554 17.292H7.34811C6.18189 17.292 5.29245 16.6945 4.57443 15.9841C4.13979 15.5541 3.91196 15.0573 3.96846 14.5205C4.02127 14.0187 4.31094 13.6163 4.60137 13.3211C5.06379 12.851 5.74145 12.4545 6.16834 12.2047C6.26266 12.1495 6.34474 12.1015 6.40955 12.0614Z" fill="currentColor"/>
-			<path d="M6.45984 6.25016C6.45984 4.29415 8.0455 2.7085 10.0015 2.7085C11.9575 2.7085 13.5432 4.29415 13.5432 6.25016C13.5432 8.20617 11.9575 9.79183 10.0015 9.79183C8.0455 9.79183 6.45984 8.20617 6.45984 6.25016Z" fill="currentColor"/>
-	</symbol>
-
-	<symbol id="icon-building">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M14.6771 9.66986L12.8859 9.13251L13.3648 7.53613L15.156 8.07348C15.1703 8.07778 15.1846 8.08207 15.1989 8.08634C15.7344 8.24695 16.2031 8.38753 16.5752 8.54807C16.9773 8.72152 17.3471 8.95026 17.6311 9.33205C17.9152 9.71383 18.028 10.1338 18.0786 10.5687C18.1254 10.9713 18.1254 11.4606 18.1254 12.0197L18.1254 18.3343H16.4587L16.4587 12.0644C16.4587 11.4474 16.4574 11.0561 16.4231 10.7613C16.3913 10.4882 16.3394 10.388 16.294 10.3269C16.2485 10.2658 16.1675 10.1873 15.915 10.0784C15.6425 9.96085 15.268 9.84715 14.6771 9.66986Z" fill="currentColor"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M11.1077 2.88621C11.6634 3.0475 12.1336 3.18394 12.5039 3.34184C12.8987 3.51021 13.24 3.72648 13.4992 4.081C13.7569 4.43345 13.8632 4.82662 13.9122 5.25851C13.9586 5.66748 13.9585 6.17077 13.9585 6.7721V6.77213L13.9585 18.3335C13.9585 18.6787 13.6787 18.9585 13.3335 18.9585L2.50019 18.9585C2.15501 18.9585 1.87518 18.6787 1.87518 18.3335L1.87518 5.54924V5.54922C1.87516 4.54445 1.87514 3.72381 1.96365 3.09239C2.0553 2.43858 2.25775 1.85485 2.7729 1.44929C3.29365 1.03931 3.9039 0.991911 4.5475 1.07808C5.16207 1.16035 5.92747 1.38255 6.85617 1.65215L11.1077 2.8862L11.1077 2.88621ZM6.04185 6.66677C6.04185 6.32159 6.32167 6.04177 6.66685 6.04177L9.16685 6.04177C9.51203 6.04177 9.79185 6.32159 9.79185 6.66677C9.79185 7.01195 9.51203 7.29177 9.16685 7.29177L6.66685 7.29177C6.32167 7.29177 6.04185 7.01195 6.04185 6.66677ZM6.04185 10.0001C6.04185 9.65492 6.32167 9.3751 6.66685 9.3751L9.16685 9.3751C9.51203 9.3751 9.79185 9.65492 9.79185 10.0001C9.79185 10.3453 9.51203 10.6251 9.16685 10.6251L6.66685 10.6251C6.32167 10.6251 6.04185 10.3453 6.04185 10.0001ZM7.50019 12.7084L7.4629 12.7084C7.10222 12.7084 6.77153 12.7084 6.50252 12.7445C6.20628 12.7844 5.89318 12.8781 5.63566 13.1356C5.37814 13.3931 5.28443 13.7062 5.24461 14.0024C5.20844 14.2714 5.20848 14.6021 5.20852 14.9628V14.9628L5.20852 18.3334H6.45852L6.45852 15.0001C6.45852 14.5896 6.45985 14.3446 6.48346 14.169C6.49287 14.099 6.51561 14.0475 6.52628 14.0234C6.52787 14.0198 6.52919 14.0168 6.53016 14.0144C6.54831 14.0069 6.58861 13.9942 6.66908 13.9834C6.84468 13.9598 7.08968 13.9584 7.50019 13.9584L8.33352 13.9584C8.74403 13.9584 8.98903 13.9598 9.16464 13.9834C9.23465 13.9928 9.28613 14.0155 9.31027 14.0262C9.31387 14.0278 9.31687 14.0291 9.31922 14.0301C9.32669 14.0482 9.33943 14.0885 9.35025 14.169C9.37386 14.3446 9.37519 14.5896 9.37519 15.0001L9.37519 18.3334H10.6252L10.6252 14.9628C10.6252 14.6021 10.6253 14.2714 10.5891 14.0024C10.5493 13.7062 10.4556 13.3931 10.1981 13.1356C9.94053 12.8781 9.62743 12.7844 9.3312 12.7445C9.06219 12.7084 8.73149 12.7084 8.37081 12.7084L8.33352 12.7084L7.50019 12.7084Z" fill="currentColor"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M0.833496 18.1253C0.833496 17.6651 1.20659 17.292 1.66683 17.292H18.3335C18.7937 17.292 19.1668 17.6651 19.1668 18.1253C19.1668 18.5856 18.7937 18.9587 18.3335 18.9587H1.66683C1.20659 18.9587 0.833496 18.5856 0.833496 18.1253Z" fill="currentColor"/>
-	</symbol>
-
-	<symbol id="icon-image">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.375 6.04167C4.375 5.12119 5.12119 4.375 6.04167 4.375C6.96214 4.375 7.70833 5.12119 7.70833 6.04167C7.70833 6.96214 6.96214 7.70833 6.04167 7.70833C5.12119 7.70833 4.375 6.96214 4.375 6.04167Z" fill="currentColor"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M9.93796 1.25H10.062C11.8754 1.24998 13.321 1.24997 14.4544 1.40235C15.6247 1.5597 16.5862 1.89312 17.3466 2.65345C18.1069 3.41377 18.4403 4.37528 18.5976 5.54559C18.75 6.67904 18.75 8.12466 18.75 9.93798V10.062C18.75 11.8753 18.75 13.321 18.5976 14.4544C18.4403 15.6247 18.1069 16.5862 17.3466 17.3466C16.5862 18.1069 15.6247 18.4403 14.4544 18.5976C13.321 18.75 11.8753 18.75 10.062 18.75H9.93798C8.12466 18.75 6.67904 18.75 5.54559 18.5976C4.37528 18.4403 3.41377 18.1069 2.65345 17.3466C1.89312 16.5862 1.5597 15.6247 1.40235 14.4544C1.24997 13.321 1.24998 11.8754 1.25 10.062V9.93796C1.24998 8.12464 1.24997 6.67904 1.40235 5.54559C1.5597 4.37528 1.89312 3.41377 2.65345 2.65345C3.41377 1.89312 4.37528 1.5597 5.54559 1.40235C6.67904 1.24997 8.12464 1.24998 9.93796 1.25ZM5.76767 3.05416C4.78217 3.18665 4.231 3.43291 3.83196 3.83196C3.43291 4.231 3.18665 4.78217 3.05416 5.76767C2.91844 6.77715 2.91667 8.11047 2.91667 10C2.91667 11.8895 2.91844 13.2229 3.05416 14.2323C3.18665 15.2178 3.43291 15.769 3.83196 16.168C4.231 16.5671 4.78217 16.8133 5.76767 16.9458C6.77715 17.0816 8.11047 17.0833 10 17.0833C11.8895 17.0833 13.2229 17.0816 14.2323 16.9458C15.2178 16.8133 15.769 16.5671 16.168 16.168C16.5671 15.769 16.8133 15.2178 16.9458 14.2323C17.0816 13.2229 17.0833 11.8895 17.0833 10C17.0833 8.11047 17.0816 6.77715 16.9458 5.76767C16.8133 4.78217 16.5671 4.231 16.168 3.83196C15.769 3.43291 15.2178 3.18665 14.2323 3.05416C13.2229 2.91844 11.8895 2.91667 10 2.91667C8.11047 2.91667 6.77715 2.91844 5.76767 3.05416Z" fill="currentColor"/>
-			<path d="M18.3668 10.5855C16.7442 9.53913 15.1983 9.10065 13.7188 9.16244C12.2462 9.22394 10.922 9.77759 9.73087 10.574C7.71547 11.9214 5.94288 14.0715 4.35576 15.9966C4.10452 16.3013 3.85788 16.6005 3.61571 16.8899L2.91669 17.5007L3.93584 18.1946C4.656 18.4929 5.49829 18.6236 6.46626 18.6872C7.43046 18.7505 8.59189 18.7505 9.97295 18.7505H10.0626C11.8759 18.7505 13.3215 18.7506 14.455 18.5982C15.6253 18.4408 16.5868 18.1074 17.3471 17.3471C18.0134 16.6808 18.3539 15.8634 18.5335 14.8784C18.7084 13.9188 18.7412 12.7354 18.7484 11.2901L18.7507 10.8332L18.3668 10.5855Z" fill="currentColor"/>
-	</symbol>
-
-	<symbol id="icon-time">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.0415C5.05247 1.0415 1.04169 5.05229 1.04169 9.99984C1.04169 14.9474 5.05247 18.9582 10 18.9582C14.9476 18.9582 18.9584 14.9474 18.9584 9.99984C18.9584 5.05229 14.9476 1.0415 10 1.0415ZM10.8334 4.99984C10.8334 4.5396 10.4603 4.1665 10 4.1665C9.53978 4.1665 9.16669 4.5396 9.16669 4.99984V9.99984C9.16669 10.2209 9.25448 10.4328 9.41077 10.5891L11.9108 13.0891C12.2362 13.4145 12.7638 13.4145 13.0893 13.0891C13.4147 12.7637 13.4147 12.236 13.0893 11.9106L10.8334 9.65466V4.99984Z" fill="currentColor"/>
-	</symbol>
-
-	<symbol id="icon-truck">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0501 2.7085L4.24907 2.7085C3.71636 2.70845 3.23773 2.7084 2.85032 2.76022C2.42736 2.81679 1.99344 2.94815 1.63801 3.30175C1.28258 3.65534 1.15054 4.08702 1.09368 4.5078C1.04159 4.89321 1.04164 5.36937 1.04169 5.89933L1.04169 12.4633C1.04167 12.814 1.04165 13.1294 1.06548 13.391C1.09105 13.6717 1.14914 13.9688 1.31446 14.2536C1.49315 14.5615 1.75017 14.8172 2.05968 14.995C2.34602 15.1595 2.91127 15.2334 3.19347 15.2589C3.54147 16.434 4.63405 17.2918 5.92802 17.2918C7.21924 17.2918 8.30993 16.4377 8.66034 15.2664H11.3396C11.69 16.4377 12.7807 17.2918 14.0719 17.2918C15.3659 17.2918 16.4584 16.434 16.8064 15.2589C17.0886 15.2334 17.6539 15.1595 17.9402 14.995C18.2497 14.8172 18.5068 14.5615 18.6854 14.2536C18.8508 13.9688 18.9089 13.6717 18.9344 13.391C18.9583 13.1294 18.9582 12.814 18.9582 12.4633V12.4633V12.4633L18.9583 10.2054C18.9587 9.93424 18.9592 9.65988 18.8843 9.39103C18.8095 9.12216 18.6672 8.88713 18.5266 8.65488L17.094 6.27965C16.9346 6.0153 16.7866 5.76984 16.6408 5.57397C16.4795 5.35716 16.2858 5.15101 16.0121 4.99687C15.7385 4.84273 15.4612 4.78358 15.1913 4.75748C14.9475 4.73391 14.6598 4.73393 14.3499 4.73396L13.2297 4.73396C13.1728 4.31319 13.0166 3.65534 12.6612 3.30175C12.3058 2.94815 11.8718 2.81679 11.4489 2.76022C11.0615 2.7084 10.5828 2.70845 10.0501 2.7085ZM13.2581 11.738C13.5162 11.6616 13.7895 11.6205 14.0725 11.6205C15.3606 11.6205 16.4491 12.4705 16.8022 13.6374C17.178 13.6374 17.3301 13.391 17.3301 13.2409L17.3301 9.82354L15.2108 6.35433H13.2581V11.738ZM5.92863 13.2409C5.25397 13.2409 4.70705 13.785 4.70705 14.4562C4.70705 15.1274 5.25397 15.6715 5.92863 15.6715C6.60329 15.6715 7.15021 15.1274 7.15021 14.4562C7.15021 13.785 6.60329 13.2409 5.92863 13.2409ZM12.8509 14.4562C12.8509 13.785 13.3978 13.2409 14.0725 13.2409C14.7472 13.2409 15.2941 13.785 15.2941 14.4562C15.2941 15.1274 14.7472 15.6715 14.0725 15.6715C13.3978 15.6715 12.8509 15.1274 12.8509 14.4562Z" fill="currentColor"/>	
-	</symbol>
-
-	<symbol id="icon-chart">
-			<path d="M16.836 12.2059C17.5626 12.0658 17.9259 11.9958 18.0505 12.122C18.0651 12.1368 18.0742 12.1477 18.0862 12.1648C18.1878 12.31 18.0811 12.5837 17.8679 13.1311C16.6339 16.2977 13.5547 18.5417 9.95143 18.5417C5.26081 18.5417 1.45831 14.7392 1.45831 10.0485C1.45831 6.44526 3.70222 3.36607 6.86889 2.13211C7.4162 1.91884 7.68986 1.8122 7.83507 1.9138C7.85218 1.92577 7.8631 1.93487 7.87795 1.94954C8.00405 2.07407 7.93405 2.43733 7.79403 3.16386C7.67232 3.79545 7.67257 4.53533 7.67281 5.20769C7.67296 5.64197 7.67291 6.07625 7.67287 6.51053C7.67285 6.71751 7.67283 6.92448 7.67283 7.13146L7.67282 7.19521C7.67273 7.90116 7.67263 8.60347 7.75123 9.18803C7.8407 9.85356 8.06153 10.6353 8.71306 11.2868C9.36459 11.9384 10.1463 12.1592 10.8119 12.2487C11.3961 12.3272 12.098 12.3272 12.8036 12.3271C12.8252 12.3271 12.8468 12.3271 12.8684 12.3271L14.7169 12.3271C14.7419 12.3271 14.7669 12.3271 14.7921 12.3271C15.4645 12.3273 16.2044 12.3276 16.836 12.2059Z" fill="currentColor"/>
-			<path d="M13.0692 2.00077L13.0153 1.97844C12.4942 1.76248 12.0093 1.5615 11.5599 1.48917C11.036 1.40488 10.5576 1.49009 10.0601 1.7973C10.0198 1.82219 9.96011 1.86205 9.92168 1.88977C9.41277 2.25687 9.16849 2.73657 9.05745 3.31273C8.95801 3.82872 8.95807 4.46956 8.95813 5.20739L8.95814 7.06646C8.95811 7.82934 8.95809 8.46435 9.02584 8.96823C9.09728 9.49962 9.25422 9.97772 9.6382 10.3617C10.0222 10.7457 10.5003 10.9026 11.0317 10.9741C11.5355 11.0418 12.1705 11.0418 12.9334 11.0418L14.7925 11.0418C15.5303 11.0418 16.1712 11.0419 16.6872 10.9425C17.2633 10.8314 17.743 10.5871 18.1101 10.0782C18.1379 10.0398 18.1777 9.98015 18.2026 9.93983C18.5098 9.44234 18.595 8.96388 18.5107 8.44005C18.4384 7.99059 18.2374 7.50567 18.0215 6.98461L17.9991 6.93075C17.5413 5.82554 16.8704 4.82133 16.0245 3.97544C15.1786 3.12955 14.1744 2.45856 13.0692 2.00077Z" fill="currentColor"/>
-	</symbol>
-
-	<symbol id="icon-file">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83333 0.9375C6.29357 0.9375 6.66667 1.3106 6.66667 1.77083L6.66667 3.4375C6.66667 3.89774 6.29357 4.27083 5.83333 4.27083C5.3731 4.27083 5 3.89774 5 3.4375L5 1.77083C5 1.3106 5.3731 0.9375 5.83333 0.9375ZM10 0.9375C10.4602 0.9375 10.8333 1.3106 10.8333 1.77083V3.4375C10.8333 3.89774 10.4602 4.27083 10 4.27083C9.53976 4.27083 9.16667 3.89774 9.16667 3.4375V1.77083C9.16667 1.3106 9.53976 0.9375 10 0.9375ZM14.1667 0.9375C14.6269 0.9375 15 1.3106 15 1.77083V3.4375C15 3.89774 14.6269 4.27083 14.1667 4.27083C13.7064 4.27083 13.3333 3.89774 13.3333 3.4375V1.77083C13.3333 1.3106 13.7064 0.9375 14.1667 0.9375Z" fill="currentColor"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5337 2.09136C13.6978 1.97898 12.632 1.97899 11.2965 1.979L8.70357 1.979H8.70356C7.36807 1.97899 6.30227 1.97898 5.46637 2.09136C4.60281 2.20746 3.89163 2.45372 3.32902 3.01633C2.7664 3.57895 2.52015 4.29013 2.40405 5.15368C2.29166 5.98959 2.29167 7.05538 2.29169 8.39088V8.39088L2.29169 12.6505C2.29167 13.986 2.29166 15.0518 2.40405 15.8877C2.52015 16.7512 2.7664 17.4624 3.32902 18.025C3.89163 18.5876 4.60281 18.8339 5.46637 18.95C6.30227 19.0624 7.36807 19.0624 8.70357 19.0623L11.2965 19.0623C12.632 19.0624 13.6978 19.0624 14.5337 18.95C15.3972 18.8339 16.1084 18.5876 16.671 18.025C17.2336 17.4624 17.4799 16.7512 17.596 15.8877C17.7084 15.0518 17.7084 13.986 17.7084 12.6505V8.39089C17.7084 7.05539 17.7084 5.98959 17.596 5.15368C17.4799 4.29013 17.2336 3.57895 16.671 3.01633C16.1084 2.45372 15.3972 2.20746 14.5337 2.09136ZM6.66669 7.604C6.20645 7.604 5.83335 7.9771 5.83335 8.43734C5.83335 8.89757 6.20645 9.27067 6.66669 9.27067H13.3334C13.7936 9.27067 14.1667 8.89757 14.1667 8.43734C14.1667 7.9771 13.7936 7.604 13.3334 7.604L6.66669 7.604ZM6.66669 11.7707C6.20645 11.7707 5.83335 12.1438 5.83335 12.604C5.83335 13.0642 6.20645 13.4373 6.66669 13.4373H10C10.4603 13.4373 10.8334 13.0642 10.8334 12.604C10.8334 12.1438 10.4603 11.7707 10 11.7707H6.66669Z" fill="currentColor"/>	
-	</symbol>
-</svg>
-<!-- icons .//end -->
-
-
-
-
+<section class="py-10 bg-neutral-200">
+  <div class="container">
+		<p class="text-secondary">Feature example <br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div> <!-- container end.// -->
+</section>
 
 </body>
 </html>

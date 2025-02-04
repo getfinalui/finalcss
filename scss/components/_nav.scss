@@ -1,13 +1,14 @@
 .nav {
   display: flex;
   list-style: none;
-  gap:2px;
   flex-wrap: wrap;
+  gap:2px;
 }
 
 .nav-row, .nav-horizontal{ 
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: auto;
 }
 
@@ -30,11 +31,16 @@
   }
 }
 
-
 .nav-item{
   display: inline-flex; 
   align-items: center;
   position: relative;
+
+  // keep nav link highlighted when mouse cursor on its dropdown items
+  &:has(.dropdown):hover .nav-link{
+    background-color: var(--alpha-1);
+  }
+
   > .nav-link{
     width: 100%;
   }
@@ -63,7 +69,7 @@
     background-color: var(--alpha-1);
   }
   &:active {
-    background-color: var(--neutral-300);
+    background-color: var(--neutral-300)!important;
   }
   &.active{
     color:var(--text-color-primary);

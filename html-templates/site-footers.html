@@ -35,7 +35,7 @@
 		});
 
 		// ***********************
-		// Show/hide dropdown-menu 
+		// Show/hide dropdown 
 		document.addEventListener("click", function (event) {
 				// Find the closest ancestor with a `data-trigger` attribute (if any)
 				const triggerElement = event.target.closest("[data-trigger]");
@@ -60,7 +60,7 @@
 				}
 
 				// Close dropdowns if clicked outside
-				const openedDropdowns = document.querySelectorAll('.dropdown-menu[style*="display: block"]');
+				const openedDropdowns = document.querySelectorAll('.dropdown[style*="display: block"]');
 				openedDropdowns.forEach(dropdown => {
 						// Check if the click is inside the dropdown
 						if (!dropdown.contains(event.target)) {
@@ -180,7 +180,7 @@
 		<div class="p-3 mt-auto">
 
 			<nav class="relative">
-				<ul id="menu_more_1" class="dropdown-menu absolute left-0 bottom-0 lg:w-full w-20" style="transform: translateY(-48px); display: none;">
+				<ul id="menu_more_1" class="dropdown absolute left-0 bottom-0 lg:w-full w-20" style="transform: translateY(-48px); display: none;">
 					<li>
 						<a class="dropdown-item" href=""> 
 							<div class="lh-sm py-1">

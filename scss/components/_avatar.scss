@@ -1,7 +1,7 @@
 .avatar{
   font-size: var(--font-size, 1.6rem);
-  width: var(--size, 56px);
-  height: var(--size, 56px);
+  width: var(--size, 40px);
+  height: var(--size, 40px);
   background-color: var(--primary-500, teal);
   color: #ffffffaf;
   object-fit: cover;
@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   user-select: none;
   position: relative;
@@ -28,7 +28,12 @@
 }
 
 .avatar-sm{
-  width: 40px; height: 40px;
+  width: 36px; height: 36px;
+  font-size: 1.2rem;
+}
+
+.avatar-md{
+  width: 56px; height: 56px;
   font-size: 1.4rem;
 }
 

@@ -1,8 +1,9 @@
 
-.dropdown-menu {
-  // position: absolute;
+.dropdown{
   // display: none;
   z-index: 1000;
+  position: absolute;
+  top:99%;
   min-width: 10rem;
   padding:4px;
   margin: 0;
@@ -15,11 +16,16 @@
   box-shadow: 0 4px 16px rgba(#000, 0.2);
   border: 1px solid var(--neutral-300);
   border-radius: $border-radius-base; // from: _base-settings.scss
-  
+
   hr{ margin:4px 0;}
-  .divider{ margin-top:4px; margin-bottom:4px; border-top:1px solid var(--neutral-300); }
+  .divider{ margin:4px 0; border-top:1px solid var(--neutral-300); }
 }
 
+.dropdown.open-up{
+  bottom:0!important;
+  top:auto!important;
+  transform: translateY(-40px);
+}
 
 .dropdown-item {
   display: flex;
@@ -53,8 +59,10 @@
 }
 
 
-// Dropdown icon on trigger
-.has-dropdown::after {
+// Dropdown icon without extra tag
+// Ex: <button class="btn has-icon-dropdown">
+
+.has-icon-dropdown::after {
   display: inline-block;
   vertical-align:4px;
   content: "";
@@ -63,3 +71,42 @@
   border-bottom: 0;
   border-left: 5px solid transparent;
 }
+
+.has-icon-dropup::after {
+  display: inline-block;
+  vertical-align:4px;
+  content: "";
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-bottom: 0;
+  border-left: 5px solid transparent;
+}
+
+
+// Dropdown icon separate  tag
+// Ex: <i class="icon-dropdown"></i>
+
+.icon-dropdown {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-bottom: 0;
+  border-left: 5px solid transparent;
+}
+
+.icon-dropup {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  border-top: 0;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
