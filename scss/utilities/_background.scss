@@ -47,7 +47,7 @@
 
   @each $shade, $value in $shades {
 
-    .bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}) !important;  }
+    .bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade});  }
     .hover\:bg-#{$color}-#{$shade}:hover { background-color:var(--#{$color}-#{$shade}) !important; }
     .group:hover .group-hover\:bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}) !important; }
     

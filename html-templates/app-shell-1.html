@@ -35,22 +35,24 @@
 		});
 
 		// ***********************
-		// Show/hide dropdown-menu 
+		// Show/hide dropdown 
 		document.addEventListener("click", function (event) {
 				// Find the closest ancestor with a `data-trigger` attribute (if any)
-				const triggerElement = event.target.closest("[data-trigger]");
+				const triggerElement = event.target.closest("[data-toggle]");
 
 				if (triggerElement) {
 						// Get the target ID from the `data-trigger` attribute
-						const targetId = triggerElement.getAttribute("data-trigger");
+						const targetId = triggerElement.getAttribute("data-toggle");
 						const targetElement = document.getElementById(targetId);
 
 						if (targetElement) {
-								// Toggle the dropdown
-								if (targetElement.style.display === "none" || !targetElement.style.display) {
+								// Toggle element
+								if (targetElement.style.display === "none" || !targetElement.style.display || targetElement.hasAttribute('hidden')) {
 										targetElement.style.display = "block"; // Show the dropdown
+										targetElement.removeAttribute('hidden');
 								} else {
 										targetElement.style.display = "none"; // Hide the dropdown
+										targetElement.setAttribute('hidden', '');
 								}
 						}
 
@@ -60,7 +62,7 @@
 				}
 
 				// Close dropdowns if clicked outside
-				const openedDropdowns = document.querySelectorAll('.dropdown-menu[style*="display: block"]');
+				const openedDropdowns = document.querySelectorAll('.dropdown[style*="display: block"]');
 				openedDropdowns.forEach(dropdown => {
 						// Check if the click is inside the dropdown
 						if (!dropdown.contains(event.target)) {
@@ -180,7 +182,7 @@
 		<div class="p-3 mt-auto">
 
 			<nav class="relative">
-				<ul id="menu_more_1" class="dropdown-menu absolute left-0 bottom-0 lg:w-full w-20" style="transform: translateY(-48px); display: none;">
+				<ul id="menu_more_1" class="dropdown open-up lg:w-full" hidden style="transform: translateY(-48px);">
 					<li>
 						<a class="dropdown-item" href=""> 
 							<div class="lh-sm py-1">
@@ -194,7 +196,7 @@
 					<li><a class="dropdown-item" href="">Settings</a></li>
 					<li><a class="dropdown-item text-danger" href="">Log out</a></li>
 				</ul>
-				<a href="#" data-trigger="menu_more_1" class="btn-card">
+				<a href="#" data-toggle="menu_more_1" class="btn btn-secondary w-full h-auto p-1 text-left">
 						<span class="w-8 h-8 d-flex flex-center overflow-hidden flex-shrink-0 flex-grow-0 bg-neutral-300 rounded">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#000" color="var(--neutral-600)">
 								<path d="M17.8063 14.8372C17.9226 14.9064 18.0663 14.9875 18.229 15.0793C18.9418 15.4814 20.0193 16.0893 20.7575 16.8118C21.2191 17.2637 21.6578 17.8592 21.7375 18.5888C21.8223 19.3646 21.4839 20.0927 20.8048 20.7396C19.6334 21.8556 18.2276 22.75 16.4093 22.75H7.59104C5.77274 22.75 4.36695 21.8556 3.1955 20.7396C2.51649 20.0927 2.17802 19.3646 2.26283 18.5888C2.34257 17.8592 2.78123 17.2637 3.2429 16.8118C3.98106 16.0893 5.05857 15.4814 5.77139 15.0793C5.93404 14.9875 6.07773 14.9064 6.19404 14.8372C9.74809 12.7209 14.2523 12.7209 17.8063 14.8372Z" fill="currentColor" />

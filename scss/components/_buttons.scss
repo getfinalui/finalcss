@@ -13,7 +13,7 @@
   --btn-font-size-lg: 1.1rem;
   --btn-font-weight:400;
   --btn-bg: transparent;
-  --btn-bg-hover: var(--alpha-2);
+  --btn-bg-hover: var(--alpha-1);
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
   --btn-border-radius: 8px;
@@ -102,11 +102,10 @@
   padding-left:0; padding-right:0;
 }
 
-// Buttons with different colors
-// Generate classes for text colors based on color list in theme.scss 
+// Buttons with each color name (Shade 500 only)
 @each $color, $shades in $colors_list {
 
-  // Genarate button background with only single shade: 600 (Easy to define colors)
+  // Genarate button background with only single shade: 500 (Easy to define colors)
   // For ex. .btn-green{ --btn-bg: var(--green-500); ...} 
   // We use static variant, which will not be overridden in dark mode. (Generated in _variables-root.scss)
   .btn-#{$color} { 
@@ -117,6 +116,22 @@
   }
 
 }
+
+
+// Buttons with each color name, but soft variant (Shade 200 only)
+@each $color, $shades in $colors_list {
+
+  // Genarate button background with only single shade: 200 (Easy to define colors)
+  // For ex. .btn-green-soft{ --btn-bg: var(--green-200); ...} 
+  .btn-#{$color}-soft { 
+    --btn-bg: var(--#{$color}-100);
+    --btn-bg-hover: var(--#{$color}-200);
+    --btn-text-color:var(--#{$color}-600);
+    // box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
+  }
+
+}
+
 
 // Other styles of button 
 // Semantic names for buttons
@@ -135,14 +150,14 @@
   --btn-text-color: var(--text-color-primary);
   --btn-border-color: var(--primary-500);
   --btn-border-hover-color: var(--primary-600);
-  box-shadow: none;
+  box-shadow: none!important;
 }
 
 .btn-invert{
   --btn-bg: var(--neutral-1000);
   --btn-bg-hover: var(--neutral-700);
   --btn-text-color: var(--neutral-0);
-  box-shadow: none;
+  box-shadow: none!important;
 }
 
 // We will override btn-neutral variant, because of better UI
@@ -150,5 +165,7 @@
   --btn-bg: var(--alpha-2);
   --btn-bg-hover: var(--alpha-3);
   --btn-text-color: var(--text-color-base);
-  box-shadow: none;
+  box-shadow: none!important;
 }
+
+/// BEBI
