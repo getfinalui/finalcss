@@ -5,7 +5,7 @@
   background-color: var(--primary-500, teal);
   color: #ffffffaf;
   object-fit: cover;
-  display: flex;
+  display: inline-flex;
   flex: none;
   align-items: center;
   justify-content: center;
@@ -28,12 +28,12 @@
 }
 
 .avatar-sm{
-  width: 36px; height: 36px;
+  width: 32px; height: 32px;
   font-size: 1.2rem;
 }
 
 .avatar-md{
-  width: 56px; height: 56px;
+  width: 36px; height: 36px;
   font-size: 1.4rem;
 }
 

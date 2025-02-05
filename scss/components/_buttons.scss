@@ -16,7 +16,7 @@
   --btn-bg-hover: var(--alpha-1);
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
-  --btn-border-radius: 8px;
+  --btn-border-radius: #{$border-radius-base};
   --btn-size-sm: 32px;
   --btn-size-md: 38px;
   --btn-size-lg: 44px;
@@ -71,15 +71,16 @@
 
 // Sizes of button
 .btn-lg {
+  padding-left: 12px; 
+  padding-right: 12px;
   height: var(--btn-size-lg);
-  font-size: var(--btn-font-size-lg)!important;
-  padding: var(--btn-padding-y) calc(var(--btn-padding-x) * 1.2);
+  font-size: var(--btn-font-size-lg);
 }
 
 .btn-sm {
   padding-left: 8px; 
   padding-right: 8px;
-  height: var(--btn-size-sm)!important;
+  height: var(--btn-size-sm);
   font-size: var(--btn-font-size-sm);
   svg, .icon, img{ width: 18px; height: 18px;}
 }

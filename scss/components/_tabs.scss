@@ -8,33 +8,28 @@
 }
 
 
-.nav-item {
-  display: inline-flex; 
-  align-items: center;
-  gap:4px;
-  padding-top: 6px;
-  padding-bottom: 4px;
-  text-decoration:none;
-  color:inherit;
-  border-bottom: 2px solid transparent;
-  &:hover{
-    text-decoration:none;
-    color: var(--text-color-base);
-    background-color: var(--neutral-1000-alpha);
-  }
-  &:not(.active):active {
-    background-color: var(--neutral-300);
-  }
-
-  &.active, &.nav-item:has(.active){
-    color:var(--text-color-primary);
-    border-bottom-color:var(--primary-500);
-  }
+// .item-nav {
+//   display: inline-flex; 
+//   align-items: center;
+//   gap:4px;
+//   padding-top: 6px;
+//   padding-bottom: 4px;
+//   text-decoration:none;
+//   color:inherit;
+//   border-bottom: 2px solid transparent;
+//   &:hover{
+//     text-decoration:none;
+//     color: var(--text-color-base);
+//     background-color: var(--neutral-1000-alpha);
+//   }
+//   &:not(.active):active {
+//     background-color: var(--neutral-300);
+//   }
  
-  // Disabled state lightens text
-  &.disabled {
-    color: var(--text-color-muted);
-    cursor: not-allowed;
-    border-bottom: 2px solid transparent;
-  }
-}
+//   // Disabled state lightens text
+//   &.disabled {
+//     color: var(--text-color-muted);
+//     cursor: not-allowed;
+//     border-bottom: 2px solid transparent;
+//   }
+// }
