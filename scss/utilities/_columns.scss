@@ -1,0 +1,38 @@
+
+
+.columns-1{ columns:1 }
+.columns-2{ columns:2 }
+.columns-3{ columns:3 }
+.columns-4{ columns:4 }
+.columns-5{ columns:5 }
+.columns-6{ columns:6 }
+.columns-7{ columns:7 }
+.columns-8{ columns:8 }
+.columns-9{ columns:9 }
+.columns-10{ columns:10 }
+
+.break-inside-avoid {break-inside: avoid;}
+.break-inside-auto {break-inside: auto;}
+
+// Generate responsive utility classes
+// breakpoints can be changed from base-settings.scss
+@each $breakpoint, $screen_size in $breakpoints {
+
+  @media ($screen_size){
+    // breakpoinst styles
+    .#{$breakpoint}\:columns-1{ columns:1 }
+    .#{$breakpoint}\:columns-2{ columns:2 }
+    .#{$breakpoint}\:columns-3{ columns:3 }
+    .#{$breakpoint}\:columns-4{ columns:4 }
+    .#{$breakpoint}\:columns-5{ columns:5 }
+    .#{$breakpoint}\:columns-6{ columns:6 }
+    .#{$breakpoint}\:columns-7{ columns:7 }
+    .#{$breakpoint}\:columns-8{ columns:8 }
+    .#{$breakpoint}\:columns-9{ columns:9 }
+    .#{$breakpoint}\:columns-10{ columns:10 }
+
+    .#{$breakpoint}\:break-inside-avoid {break-inside: avoid;}
+    .#{$breakpoint}\:break-inside-auto {break-inside: auto;}
+    // end breakpoint
+  }
+}
