@@ -8,6 +8,7 @@
 .text-dark{ color:#000; }
 .text-black{ color:#000; }
 .text-white{ color:#fff; }
+.text-color-inherit{ color:inherit; }
 
 .hover\:text-base:hover{ color: var(--text-color-base); }
 .hover\:text-secondary:hover{ color: var(--text-color-secondary); }
@@ -16,6 +17,7 @@
 .hover\:text-dark:hover{ color:#000; }
 .hover\:text-black:hover{ color:#000; }
 .hover\:text-white:hover{ color:#fff; }
+.hover\:text-color-inherit{ color:inherit; }
 
 .group:hover .group-hover\:text-base{ color: var(--text-color-base); }
 .group:hover .group-hover\:text-secondary{ color: var(--text-color-secondary); }
@@ -24,15 +26,16 @@
 .group:hover .group-hover\:text-dark{ color:#000; }
 .group:hover .group-hover\:text-black{ color:#000; }
 .group:hover .group-hover\:text-white{ color:#fff; }
+.group:hover .group-hover\:text-color-inherit{ color:inherit; }
 
 // Generate classes for text colors based on color list in theme.scss 
 @each $color, $shades in $colors_list {
 
-  // Genarate text colors with only single shade: 600 (Easy to define colors)
-  // For ex. .text-primary{ color:var(--primary-600) } .text-red{ color:var(--red-600) }
-  .text-#{$color} { color: var(--#{$color}-600) !important };
-  .hover\:text-#{$color}:hover { color:var(--#{$color}-600) !important; }
-  .group:hover .group-hover\:text-#{$color} { color:var(--#{$color}-600) !important; }
+  // Genarate text colors with only single shade: 600 lightmode / 700 darkmode 
+  // For ex. .text-primary{ color:var(--text-color-primary) } .text-red{ color:var(--text-color-red) }
+  .text-#{$color} { color: var(--text-color-#{$color}) !important };
+  .hover\:text-#{$color}:hover { color:var(--text-color-#{$color}) !important; }
+  .group:hover .group-hover\:text-#{$color} { color:var(--text-color-#{$color}) !important; }
 
   // Generate for each shade (100,200,300,... 900)
   // For ex. .text-primary-100{ style } text-primary-200{ style }
@@ -43,3 +46,5 @@
   }
 
 }
+
+

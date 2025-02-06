@@ -28,24 +28,17 @@ $border-radius-lg:   12px !default;
 $border-radius-xl:   16px !default;
 
 // set base border radius for button, input, select, card, alert, nav,
-$border-radius-base:  $border-radius-md;
+$border-radius-base: $border-radius-md; 
 
 // Typography
-$font-family-base:           system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
-// $font-size-base affects the font size of the body text
-$font-size-root:              15px;
-$font-size-base:              1rem !default; // Assumes the browser default size;
+$font-size-base:              15px !default; 
 $font-size-sm:                0.875rem !default;
-$font-size-sub-sup:           .75em !default;
-
 
 $line-height-base:            1.4 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
-
-
-
 
 
 

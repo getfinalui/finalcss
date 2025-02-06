@@ -6,6 +6,9 @@
 
 .btn{
   // scss-docs-start btn-css-vars
+  --btn-size-sm: 32px;
+  --btn-size-md: 38px;
+  --btn-size-lg: 44px;
   --btn-padding-x: 12px;
   --btn-padding-y: 6px;
   --btn-font-size-md: 1rem;
@@ -17,9 +20,7 @@
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
   --btn-border-radius: #{$border-radius-base};
-  --btn-size-sm: 32px;
-  --btn-size-md: 38px;
-  --btn-size-lg: 44px;
+
   --btn-text-color: inherit;
   // scss-docs-end btn-css-vars
   

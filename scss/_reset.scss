@@ -2,7 +2,7 @@
 // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
 
 html{
-  font-size:$font-size-root;
+  font-size:$font-size-base;
   scroll-behavior: smooth;
 }
 
@@ -22,7 +22,7 @@ body {
   font-optical-sizing: auto;
   line-height: $line-height-base;
   color: var(--text-color-base);
-  background-color: var(--bg-nautral-0); 
+  background-color: var(--bg-neutral-0, initial); 
   -webkit-text-size-adjust: 100%; 
 }
 
@@ -134,7 +134,7 @@ small {
 sub,
 sup {
   position: relative;
-  font-size: $font-size-sub-sup;
+  font-size: 75em;
   line-height: 0;
   vertical-align: baseline;
 }
