@@ -7,6 +7,9 @@
 .bg-secondary{ background-color:var(--bg-color-secondary);}
 .bg-lower{ background-color:var(--bg-color-lower); }
 .bg-raised{ background-color:var(--bg-color-raised);}
+.bg-alpha-1{ background-color:var(--bg-alpha-1);}
+.bg-alpha-2{ background-color:var(--bg-alpha-2);}
+.bg-alpha-3{ background-color:var(--bg-alpha-3);}
 .bg-white{background-color:#fff;}
 .bg-black{ background-color:#000;}
 .bg-dark{background-color:#000;}
@@ -18,6 +21,9 @@
 .hover\:bg-secondary:hover{ background-color:var(--bg-color-secondary);}
 .hover\:bg-lower:hover{ background-color:var(--bg-color-lower); }
 .hover\:bg-raised:hover{ background-color:var(--bg-color-raised);}
+.hover\:bg-alpha-1:hover{ background-color:var(--bg-alpha-1);}
+.hover\:bg-alpha-2:hover{ background-color:var(--bg-alpha-2);}
+.hover\:bg-alpha-3:hover{ background-color:var(--bg-alpha-3);}
 .hover\:bg-white:hover{background-color:#fff;}
 .hover\:bg-black:hover{ background-color:#000;}
 .hover\:bg-dark:hover{background-color:#000;}
@@ -29,6 +35,9 @@
 .group:hover .group-hover\:bg-secondary{ background-color:var(--bg-color-secondary);}
 .group:hover .group-hover\:bg-lower{ background-color:var(--bg-color-lower); }
 .group:hover .group-hover\:bg-raised{ background-color:var(--bg-color-raised);}
+.group:hover .group-hover\:bg-alpha-1{ background-color:var(--bg-alpha-1);}
+.group:hover .group-hover\:bg-alpha-2{ background-color:var(--bg-alpha-2);}
+.group:hover .group-hover\:bg-alpha-3{ background-color:var(--bg-alpha-3);}
 .group:hover .group-hover\:bg-white{background-color:#fff;}
 .group:hover .group-hover\:bg-black{ background-color:#000;}
 .group:hover .group-hover\:bg-dark{background-color:#000;}

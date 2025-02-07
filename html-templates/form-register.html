@@ -39,11 +39,10 @@
 		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
 			
 			<a href="https://finalcss.com" class="text-xl hover:opacity-80">
-				<img src="logo-finalui.svg" height="40" alt="">
+				<img src="_logo-finalui.svg" height="40" alt="">
 			</a>
 			
-			<div>
-				<button class="btn btn-neutral"> London, Buffalo city, A block  </button>			
+			<div>	
 				<button onclick="themeSwitcher()" class="btn btn-icon btn-secondary">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -54,7 +53,6 @@
 						</svg>
 					</span>
 				</button>
-				<button class="btn btn-secondary">  Sign up 	</button>
 				<button class="btn btn-primary">  Sign in 	</button>
 			</div>
 
@@ -64,230 +62,104 @@
 	
 
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="py-10 bg-lower">
-<div class="container">
+<section class="py-10">
 
-<div class="row">
-	<main class="md:col-8">
+<div class="d-flex container">
+	<aside class="md:col-5">
+		
+		<div class="mobile:hidden h-full w-full bg-primary-400 bg-gradient-2 rounded-lg" style="min-height: 600px;"> 
+		</div>
 
-		<article class="card mb-4">
-			<div class="card-body">
-				<h5 class="mb-3"> Choose delivery option </h5>
+	</aside>
+	<main class="col-12 md:col-7">
 
-				<fieldset class="d-flex flex-col sm:flex-row gap-2">
+		<div class="mb-5 lg:ml-10 md:p-5 tablet:mx-auto" style="max-width: 460px;">
+			<header class="mb-5">
+				<h4 class="text-2xl mb-2">Create an account</h4>
+				<p>Already have an account? <a href="#">Sign in</a></p>
+			</header>
+			
+			<hr>
 
-					<label class="card-check d-flex p-3 rounded">
-						<input class="form-check-input" name="delivery-type" type="radio" value="">
-						<div class="ml-1">
-							<span>Self pick-up</span>
-							<p class="d-block mb-0 text-secondary">From nearest location</p>
-						</div>
-					</label>
-					
-					<label class="card-check d-flex p-3 rounded">
-						<input class="form-check-input" name="delivery-type" type="radio" value="">
-						<div class="ml-1">
-							<span>Standart delivery</span>
-							<p class="d-block mb-0 text-secondary">7-10 days after order</p>
-						</div>
-					</label>
+			<fieldset class="mb-4">
 
-					<label class="card-check d-flex p-3 rounded">
-						<input class="form-check-input" name="delivery-type" type="radio" value="">
-						<div class="ml-1">
-							<span>Express Delivery</span>
-							<p class="d-block mb-0 text-secondary">1-2 days after order</p>
-						</div>
-					</label>
-
-				</fieldset>
-
-			</div>
-		</article>
-
-		<!-- ============== COMPONENT CHECKOUT =============== -->			
-		<article class="card mb-4">
-			<div class="card-body">
-				<h5 class="mb-3"> Contact person </h5>
-					
-					<fieldset class="row gap-3 mb-6">
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Your name   </label>
-							<input type="text" class="form-control" placeholder="Type here">
-						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Phone  </label>
-							<input type="text" value="+1" class="form-control">
-						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Email <span class="text-muted">(optional)</span>  </label>
-							<input type="text" class="form-control" placeholder="Type here">
-						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Whatsapp <span class="text-muted">(optional)</span> </label>
-							<input type="text" value=""  class="form-control" placeholder="Type here">
-						</div> <!-- col end.// -->
-					</fieldset> <!-- row.// -->
-					
-					<h5 class="mb-3"> Delivery address </h5> 
-
-					<fieldset class="row gap-3  mb-6">
-						
-						<div class="lg:col-8 mb-3">
-							<label for="" class="form-label">Address</label>
-							<input type="text" class="form-control"  placeholder="Street name, district">
-						</div> <!-- col end.// -->
-
-						<div class="lg:col-4 mb-3">
-							<label for="" class="form-label">Location</label>
-							<a href="#" class="btn btn-primary-soft w-full">  Select location from map  </a>
-						</div> <!-- col end.// -->
-
-						<div class="lg:col-4 mb-3">
-							<label for="" class="form-label">Building number</label>
-							<input type="text" class="form-control"  placeholder="Type here">
-						</div> <!-- col end.// -->
-
-						<div class="lg:col-4 col-6 mb-3">
-							<label for="" class="form-label">Entrance code</label>
-							<input type="text" class="form-control"  placeholder="">
-						</div> <!-- col end.// -->
-		 
-						<div class="lg:col-4 col-6 mb-3">
-							<label for="" class="form-label">Floor</label>
-							<input type="text" class="form-control"  placeholder="">
-						</div> <!-- col end.// -->
-
-						<div class="col-12 mb-3">
-							<label for="" class="form-label">Your comment</label>
-							<textarea class="form-control" rows="2" placeholder="Have something to say?"></textarea>
-						</div> 
-
-					</fieldset> <!-- row.// -->
-
-				
-					<h5 class="mb-3"> When to deliver </h5> 
-
-					<fieldset class="row gap-3">
-						<div class="col-4 mb-4">
-							<select class="form-select">
-								<option>Today</option>
-								<option>Tomorrow</option>
-								<option>Mon, 13-May</option>
-							</select>
-						</div> <!-- col end.// -->
-						<div class="col-4 mb-4">
-							<select class="form-select">
-								<option>Quicly</option>
-								<option>13:00</option>
-								<option>14:00</option>
-								<option>14:30</option>
-								<option>15:00</option>
-							</select>
-						</div>
-					</fieldset> <!-- row.// -->
-
-					<div class="form-check my-4">
-						<input class="form-check-input" type="checkbox" value="" id="agreement" checked="">
-						<label class="form-check-label" for="agreement">
-							I can't agree with any terms and conditons
-						</label>
+				<div class="row gap-2">
+					<div class="col-6 mb-4">
+						<label class="form-label font-medium">First name</label>
+						<input type="text" class="form-control" placeholder="Type here">
 					</div>
+					<div class="col-6 mb-4">
+						<label class="form-label font-medium">Last name</label>
+						<input type="text" class="form-control" placeholder="Type here">
+					</div>
+				</div>
 
-			</div> <!-- card-body end.// -->
-		</article> <!-- card end.// -->
+				<div class="mb-4">
+					<label class="form-label font-medium">Email</label>
+					<input type="text" class="form-control" placeholder="Enter email address">
+				</div>
 
+				<div class="mb-4">
+					<label class="form-label font-medium">Phone</label>
+					<div class="d-flex gap-2">
 
-	
+						<select class="form-select w-10" name="">
+							<option value="">US +1 </option>
+							<option value="">RU +7 </option>
+							<option value="">JP +81</option>
+							<option value="">GE +49 </option>
+							<option value="">UZ +998 </option>
+						</select>
+						
+						<input type="text" class="form-control" placeholder="Phone number">
+					
+					</div>
+				</div>
 
-		<article  class="card mb-4">
-			<div class="card-body">
-				<h5 class="mb-3"> Your items </h5> 
-				
-				<table class="table">
-					<tr valign="middle">
-						<td width="100">
-							<img src="placeholder.jpg" class="w-16 h-12 rounded object-fit-cover" alt="Item">
-						</td>
-						<td>
-							<p>Indian Plov, Medium</p> 
-							<var class="text-muted">$12.99</var>
-						</td>
-						<td class="font-semibold  text-right"> 1 pcs </td>
-					</tr>
-					<tr valign="middle">
-						<td width="100">
-							<img src="placeholder.jpg" class="w-16 h-12 rounded object-fit-cover" alt="Item">
-						</td>
-						<td>
-							<p>Large Pizza with Barbeque meat</p>
-							<var class="text-muted">$18.00</var>
-						</td>
-						<td class="font-semibold text-right"> 3 pcs </td>
-					</tr>
-					<tr valign="middle">
-						<td width="100">
-							<img src="placeholder.jpg" class="w-16 h-12 rounded object-fit-cover" alt="Item">
-						</td>
-						<td>
-							<p>Uzbek plov with Horse Meat</p>
-							<var class="text-muted">$32.00</var>
-						</td>
-						<td class="font-semibold text-right"> 3 pcs </td>
-					</tr>
-				</table>
-				<a class="btn btn-secondary btn-sm" href="#">  Edit order</a>
-			</div>
-		</article>
+				<div class="mb-4">
+					<label class="form-label">
+						<span class="font-medium">Password</span> <br>
+						<p class="text-sm text-secondary">Passwords must be at least 6 characters.</p>
+					</label>
+					
+					<input type="text" class="form-control" placeholder="Enter password">
+				</div>
 
-
-
-	</main> <!-- col.// -->
-	<aside class="md:col-4">
-		<!-- ============== COMPONENT SUMMARY =============== -->
-		<div class="card shadow-lg bg-raised sticky-top top-2">
-			<div class="card-body">
-				
-				<ul>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Order subtotal:</label> <var>$103.97</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Discount</label> <var>- $5.40</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Delivery cost:</label> <var>+ $9.00</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Tax:</label> <var>+ $3.90</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Tax:</label> <var>+ $3.90</var>
-					</li>
-				</ul>
-				
-				<hr>
-				<dl class="d-flex justify-content-between">
-					<dt class="font-semibold text-lg">Total:</dt>
-					<dd class="font-semibold text-lg lg:mb-0"> $157.90 </dd>
-				</dl>
-				<hr>
-				<p class="my-3 text-center text-secondary">
-					We accept Visa, Master Card, Paypal
-				</p>
-				<div>
-					<a href="#" class="btn btn-lg btn-primary w-full"> Make Order </a>
+				<div class="mb-4">
+					<label class="form-label font-medium">Re-enter password </label>
+					<input type="text" class="form-control" placeholder="Repeat password">
 				</div>
 				
-			</div> <!-- card-body.// -->
-		</div> <!-- card.// -->
-		<!-- ============== COMPONENT SUMMARY .// =============== -->
-	</aside> <!-- col.// -->
-</div> <!-- row.// -->
 
-<br><br>
+				<p class="mb-4 text-xs text-secondary">
+					By selecting Create personal account, you agree to our User Agreement and acknowledge reading our User Privacy Notice.
+				</p>
+
+				<button class="btn btn-lg rounded-full font-semibold btn-primary w-full">Create my account</button>
+
+			</fieldset>
+			
+				<!-- line   -->
+				<div class="relative text-center mb-4">
+					<small class="bg-base p-2 text-secondary relative z-10">or continue with</small>
+					<hr class="my-0 absolute center-y"> 
+				</div>
+				
+				<div class="mb-5 d-flex  gap-2">
+					<a href="#" class="btn flex-1 btn-secondary">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon-google"/></svg>
+						Google
+					</a>
+					<a href="#" class="btn flex-1 btn-secondary">
+						<svg width="20" height="20" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16"><use href="#icon-apple"/></svg>
+						Apple
+					</a>        
+				</div>
 
 
+		</div>
+
+	</main>
 </div> <!-- container .//  -->
 </section>
 
@@ -299,6 +171,27 @@
 			</p>
 	</div> <!-- container end.// -->
 </footer>
+
+
+
+<!-- store icons - not visible inside the HTML file -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+
+	<symbol id="icon-google">
+			<path d="M11.9998 9.81812V14.4654H18.4579C18.1743 15.9599 17.3233 17.2254 16.047 18.0763L19.9415 21.0982C22.2106 19.0037 23.5197 15.9273 23.5197 12.2728C23.5197 11.4219 23.4433 10.6036 23.3015 9.81825L11.9998 9.81812Z" fill="#4285F4"/>
+			<path d="M5.27461 14.284L4.39625 14.9564L1.28711 17.3782C3.26165 21.2945 7.30862 24 11.9995 24C15.2394 24 17.9557 22.9309 19.9412 21.0982L16.0467 18.0764C14.9776 18.7963 13.614 19.2328 11.9995 19.2328C8.87951 19.2328 6.22868 17.1273 5.27952 14.2909L5.27461 14.284Z" fill="#34A853"/>
+			<path d="M1.28718 6.62183C0.469042 8.23631 0 10.0581 0 11.9999C0 13.9417 0.469042 15.7636 1.28718 17.378C1.28718 17.3889 5.27997 14.2799 5.27997 14.2799C5.03998 13.5599 4.89812 12.7963 4.89812 11.9998C4.89812 11.2033 5.03998 10.4398 5.27997 9.71976L1.28718 6.62183Z" fill="#FBBC05"/>
+			<path d="M11.9997 4.77818C13.767 4.77818 15.3379 5.38907 16.5925 6.56727L20.0288 3.13095C17.9452 1.18917 15.2398 0 11.9997 0C7.30887 0 3.26165 2.69454 1.28711 6.62183L5.27978 9.72001C6.22882 6.88362 8.87976 4.77818 11.9997 4.77818Z" fill="#EA4335"/>
+	</symbol>
+	
+	<symbol id="icon-apple">
+			<path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+			<path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+	</symbol>
+	
+	</svg>
+
+	
 
 </body>
 </html>
