@@ -34,16 +34,20 @@
 </head>
 <body>
 
-<header class="py-2 border-bottom">
+<header class="py-2 border-bottom bg-secondary">
 	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+		<div class="d-flex flex-wrap gap-2 align-items-center">
 			
-			<a href="https://finalcss.com" class="text-xl hover:opacity-80">
-				<img src="logo-finalui.svg" height="40" alt="">
+			<a href="https://finalcss.com" class="text-xl mr-2 flex-grow-0 hover:opacity-80">
+				<img src="_logo-finalui.svg" height="40" alt="">
 			</a>
 			
-			<div>
-				<button class="btn btn-neutral"> London, Buffalo city, A block  </button>			
+			<div class="sm:border-left border-strong flex-grow sm:pl-4 py-2 mobile:order-3 mobile:w-full">
+				<h4 class="text-lg text-secondary text-nowrap">Account settings</h4>
+			</div>
+
+			<div class="ml-auto">
+				
 				<button onclick="themeSwitcher()" class="btn btn-icon btn-secondary">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -54,235 +58,151 @@
 						</svg>
 					</span>
 				</button>
-				<button class="btn btn-secondary">  Sign up 	</button>
-				<button class="btn btn-primary">  Sign in 	</button>
+				<button class="btn btn-secondary">  Profile	</button>
 			</div>
 
 		</div>
 	</div> <!-- container end.// -->
 </header> <!-- section-header end.// -->
-	
 
 <!-- ============== SECTION CONTENT  ============== -->
-<section class="py-10 bg-lower">
-<div class="container">
+<section class="py-10">
 
-<div class="row">
-	<main class="md:col-8">
+<div class="container" style="max-width:1140px;">
 
-		<article class="card mb-4">
-			<div class="card-body">
-				<h5 class="mb-3"> Choose delivery option </h5>
+<div class="d-flex gap-8 mobile:flex-col">
+	<aside class="col-auto md:col-3">
 
-				<fieldset class="d-flex flex-col sm:flex-row gap-2">
+		<nav class="nav nav-col min-w-60 card p-2 shadow-sm">
+			<a href="#" class="active nav-link">
+				<i class="mr-2 text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+				</i>
+				Personal details 
+			</a>
+			<a href="#" class="nav-link"> 
+				<i class="mr-2 text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+				</i>
+				Privacy &amp; security 
+			</a>
+			<a href="#" class="nav-link"> 
+				<i class="mr-2 text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+				</i>
+				Payment methods 
+			</a>
+			<a href="#" class="nav-link"> 
+				<i class="mr-2 text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+				</i>
+				Appearance 
+			</a>
+			<a href="#" class="nav-link"> 
+				<i class="mr-2 text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+				</i>
+				Notifications 
+			</a>
+			<a href="#" class="nav-link"> 
+				<i class="mr-2 text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-ccw"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+				</i>
+				Integrations 
+			</a>
+		</nav>
 
-					<label class="card-check d-flex p-3 rounded">
-						<input class="form-check-input" name="delivery-type" type="radio" value="">
-						<div class="ml-1">
-							<span>Self pick-up</span>
-							<p class="d-block mb-0 text-secondary">From nearest location</p>
-						</div>
-					</label>
-					
-					<label class="card-check d-flex p-3 rounded">
-						<input class="form-check-input" name="delivery-type" type="radio" value="">
-						<div class="ml-1">
-							<span>Standart delivery</span>
-							<p class="d-block mb-0 text-secondary">7-10 days after order</p>
-						</div>
-					</label>
 
-					<label class="card-check d-flex p-3 rounded">
-						<input class="form-check-input" name="delivery-type" type="radio" value="">
-						<div class="ml-1">
-							<span>Express Delivery</span>
-							<p class="d-block mb-0 text-secondary">1-2 days after order</p>
-						</div>
-					</label>
+	</aside> <!-- col.// -->
+	<main class="flex-grow" style="min-height:70vh;">
 
-				</fieldset>
+		<div>
+			<h4>Personal details</h4>
+			<hr>
 
-			</div>
-		</article>
+			<article class="d-flex gap-2 py-4 align-items-center  border-bottom">
+				<div class="md:col-3"> 
+					<b class="avatar bg-gradient avatar-xl">
+						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+					</b>
+				</div>
+				<div class="md:col-6"> 
+					<label class="font-semibold"> Profile image </label> 
+					<p class="text-sm text-secondary mb-2">Use at least 200x200 image</p>
+					<button class="btn btn-sm btn-secondary"> Upload </button>
 
-		<!-- ============== COMPONENT CHECKOUT =============== -->			
-		<article class="card mb-4">
-			<div class="card-body">
-				<h5 class="mb-3"> Contact person </h5>
-					
-					<fieldset class="row gap-3 mb-6">
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Your name   </label>
-							<input type="text" class="form-control" placeholder="Type here">
-						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Phone  </label>
-							<input type="text" value="+1" class="form-control">
-						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Email <span class="text-muted">(optional)</span>  </label>
-							<input type="text" class="form-control" placeholder="Type here">
-						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
-							<label class="form-label">Whatsapp <span class="text-muted">(optional)</span> </label>
-							<input type="text" value=""  class="form-control" placeholder="Type here">
-						</div> <!-- col end.// -->
-					</fieldset> <!-- row.// -->
-					
-					<h5 class="mb-3"> Delivery address </h5> 
-
-					<fieldset class="row gap-3  mb-6">
+				</div>
+				<div class="md:col-3 d-flex md:justify-content-end"> 
 						
-						<div class="lg:col-8 mb-3">
-							<label for="" class="form-label">Address</label>
-							<input type="text" class="form-control"  placeholder="Street name, district">
-						</div> <!-- col end.// -->
-
-						<div class="lg:col-4 mb-3">
-							<label for="" class="form-label">Location</label>
-							<a href="#" class="btn btn-primary-soft w-full">  Select location from map  </a>
-						</div> <!-- col end.// -->
-
-						<div class="lg:col-4 mb-3">
-							<label for="" class="form-label">Building number</label>
-							<input type="text" class="form-control"  placeholder="Type here">
-						</div> <!-- col end.// -->
-
-						<div class="lg:col-4 col-6 mb-3">
-							<label for="" class="form-label">Entrance code</label>
-							<input type="text" class="form-control"  placeholder="">
-						</div> <!-- col end.// -->
-		 
-						<div class="lg:col-4 col-6 mb-3">
-							<label for="" class="form-label">Floor</label>
-							<input type="text" class="form-control"  placeholder="">
-						</div> <!-- col end.// -->
-
-						<div class="col-12 mb-3">
-							<label for="" class="form-label">Your comment</label>
-							<textarea class="form-control" rows="2" placeholder="Have something to say?"></textarea>
-						</div> 
-
-					</fieldset> <!-- row.// -->
-
-				
-					<h5 class="mb-3"> When to deliver </h5> 
-
-					<fieldset class="row gap-3">
-						<div class="col-4 mb-4">
-							<select class="form-select">
-								<option>Today</option>
-								<option>Tomorrow</option>
-								<option>Mon, 13-May</option>
-							</select>
-						</div> <!-- col end.// -->
-						<div class="col-4 mb-4">
-							<select class="form-select">
-								<option>Quicly</option>
-								<option>13:00</option>
-								<option>14:00</option>
-								<option>14:30</option>
-								<option>15:00</option>
-							</select>
-						</div>
-					</fieldset> <!-- row.// -->
-
-					<div class="form-check my-4">
-						<input class="form-check-input" type="checkbox" value="" id="agreement" checked="">
-						<label class="form-check-label" for="agreement">
-							I can't agree with any terms and conditons
-						</label>
-					</div>
-
-			</div> <!-- card-body end.// -->
-		</article> <!-- card end.// -->
+				</div>
+			</article>
 
 
-	
+			<article class="d-flex  flex-col  md:flex-row gap-2 py-4 md:align-items-stretch border-bottom">
+				<div class="md:col-3"> 
+					<label class="font-semibold">Full name</label> 
+				</div>
+				<div class="md:col-6"> 
+					<p>Alisher Jackson</p> 
+				</div>
+				<div class="md:col-3 d-flex md:justify-content-end"> 
+						<button class="btn btn-sm btn-secondary">Edit</button>
+				</div>
+			</article>
 
-		<article  class="card mb-4">
-			<div class="card-body">
-				<h5 class="mb-3"> Your items </h5> 
-				
-				<table class="table">
-					<tr valign="middle">
-						<td width="100">
-							<img src="placeholder.jpg" class="w-16 h-12 rounded object-fit-cover" alt="Item">
-						</td>
-						<td>
-							<p>Indian Plov, Medium</p> 
-							<var class="text-muted">$12.99</var>
-						</td>
-						<td class="font-semibold  text-right"> 1 pcs </td>
-					</tr>
-					<tr valign="middle">
-						<td width="100">
-							<img src="placeholder.jpg" class="w-16 h-12 rounded object-fit-cover" alt="Item">
-						</td>
-						<td>
-							<p>Large Pizza with Barbeque meat</p>
-							<var class="text-muted">$18.00</var>
-						</td>
-						<td class="font-semibold text-right"> 3 pcs </td>
-					</tr>
-					<tr valign="middle">
-						<td width="100">
-							<img src="placeholder.jpg" class="w-16 h-12 rounded object-fit-cover" alt="Item">
-						</td>
-						<td>
-							<p>Uzbek plov with Horse Meat</p>
-							<var class="text-muted">$32.00</var>
-						</td>
-						<td class="font-semibold text-right"> 3 pcs </td>
-					</tr>
-				</table>
-				<a class="btn btn-secondary btn-sm" href="#">  Edit order</a>
-			</div>
-		</article>
+			<article class="d-flex  flex-col  md:flex-row gap-2 py-4 md:align-items-stretch border-bottom">
+				<div class="md:col-3"> 
+					<label class="font-semibold">Username</label> 
+				</div>
+				<div class="md:col-6"> 
+					<p>@alex_jack</p> 
+				</div>
+				<div class="md:col-3 d-flex md:justify-content-end"> 
+						<button class="btn btn-sm btn-secondary">Edit</button>
+				</div>
+			</article>
+
+			<article class="d-flex  flex-col  md:flex-row gap-2 py-4 md:align-items-stretch border-bottom">
+				<div class="md:col-3"> 
+					<label class="font-semibold">Email address</label> 
+				</div>
+				<div class="md:col-6"> 
+					<p>example_name@gmail.com <b class="badge badge-green"> <b>✓</b>  Verified</b></p> 
+					<p class="text-sm text-secondary mt-2">This is the email address you use to sign in. It’s also where we send your booking confirmations.</p>
+				</div>
+				<div class="md:col-3 d-flex md:justify-content-end"> 
+						<button class="btn btn-sm btn-secondary">Edit</button>
+				</div>
+			</article>
+
+			<article class="d-flex  flex-col  md:flex-row gap-2 py-4 md:align-items-stretch border-bottom">
+				<div class="md:col-3"> 
+					<label class="font-semibold">Phone number	</label> 
+				</div>
+				<div class="md:col-6"> 
+					<p> - </p> 
+				</div>
+				<div class="md:col-3 d-flex md:justify-content-end"> 
+						<button class="btn btn-sm btn-secondary">Add phone</button>
+				</div>
+			</article>
+
+			<article class="d-flex  flex-col  md:flex-row gap-2 py-3 md:align-items-center border-bottom">
+				<div class="md:col-3"> 
+					<label class="font-semibold">Address </label> 
+				</div>
+				<div class="md:col-6"> 
+					<p>Tashkent, Uzbekistan Navoiy street, Building 3</p> 
+				</div>
+				<div class="md:col-3 d-flex md:justify-content-end"> 
+						<button class="btn btn-sm btn-secondary">Edit</button>
+				</div>
+			</article>
 
 
+		</div>
 
 	</main> <!-- col.// -->
-	<aside class="md:col-4">
-		<!-- ============== COMPONENT SUMMARY =============== -->
-		<div class="card shadow-lg bg-raised sticky-top top-2">
-			<div class="card-body">
-				
-				<ul>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Order subtotal:</label> <var>$103.97</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Discount</label> <var>- $5.40</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Delivery cost:</label> <var>+ $9.00</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Tax:</label> <var>+ $3.90</var>
-					</li>
-					<li class="d-flex justify-content-between mb-2">
-						<label>Tax:</label> <var>+ $3.90</var>
-					</li>
-				</ul>
-				
-				<hr>
-				<dl class="d-flex justify-content-between">
-					<dt class="font-semibold text-lg">Total:</dt>
-					<dd class="font-semibold text-lg lg:mb-0"> $157.90 </dd>
-				</dl>
-				<hr>
-				<p class="my-3 text-center text-secondary">
-					We accept Visa, Master Card, Paypal
-				</p>
-				<div>
-					<a href="#" class="btn btn-lg btn-primary w-full"> Make Order </a>
-				</div>
-				
-			</div> <!-- card-body.// -->
-		</div> <!-- card.// -->
-		<!-- ============== COMPONENT SUMMARY .// =============== -->
-	</aside> <!-- col.// -->
 </div> <!-- row.// -->
 
 <br><br>

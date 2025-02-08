@@ -2,47 +2,53 @@
   
   --badge-text-color: inherit;
   --badge-bg: var(--neutral-300);
+  --badge-border: transparent;
 
   color: var(--badge-text-color);
   background-color: var(--badge-bg);
+  border:1px solid var(--badge-border);
+  font-weight: 500;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   gap:4px;
   padding:4px 8px;
-  font-weight: 400;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius:16px;
+  
 
   svg, img, .icon{
     width: 18px; height: 18px;
   }
 }
+
 .badge:empty { display: none; }
 
-.badge-success{
+.badge-green{
   --badge-bg: var(--green-100);
   --badge-text-color: var(--text-color-green);
+  --badge-border: var(--green-300);
 }
-.badge-warning{
+.badge-orange{
   --badge-bg: var(--orange-100);
   --badge-text-color: var(--text-color-orange);
+  --badge-border: var(--orange-300);
 }
-.badge-danger{
+.badge-red{
   --badge-bg: var(--red-100);
   --badge-text-color: var(--text-color-red);
+  --badge-border: var(--red-300);
 }
-.badge-primary{
-  --badge-bg: var(--primary-100);
-  --badge-text-color: var(--text-color-primary);
-}
-.badge-info{
-  --badge-bg: var(--teal-100);
-  --badge-text-color: var(--text-color-teal);
+.badge-blue{
+  --badge-bg: var(--blue-100);
+  --badge-text-color: var(--text-color-blue);
+  --badge-border: var(--blue-300);
 }
 .badge-neutral{
   --badge-bg: var(--neutral-200);
   --badge-text-color: var(--text-color-secondary);
+  --badge-border: var(--neutral-300);
 }
