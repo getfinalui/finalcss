@@ -33,7 +33,7 @@ $font-sizes-list: (
 ) !default;
 
 @each $name, $font-size in $font-sizes-list {
-  .text-#{$name} {
+  .text-size-#{$name} {
     font-size: $font-size;
   }
 }
