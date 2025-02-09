@@ -27,11 +27,14 @@ class HeaderComponent extends HTMLElement {
 		</nav>
 </dialog>
 	
-<header class="bg-neutral-0 py-2 lg:py-3 border-bottom">
+<header class="bg-neutral-0 py-2 border-bottom">
 	<div class="container">
 		<div class="d-flex flex-column md:flex-row align-items-center">
 			<div>
-				<a href="https://finalcss.com" class="text-xl font-semibold">Final CSS</a>
+				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+				<img src="_logo.png" alt="Finalcss logo" height="40">
+				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 font-medium ml-1">final<span class="text-secondary">css</span> </div>
+			  </a>
 			</div>
 			<div class="ml-auto d-flex align-items-center">
 				<nav class="nav d-none md:d-flex align-items-center">
@@ -170,7 +173,7 @@ class BottomComponent extends HTMLElement {
 <footer class="bg-base border-top py-10">
   <div class="container">
     <section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
-        <p class="md:mb-0 mb-3 text-center md:text-left"> © 2024 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
+        <p class="md:mb-0 mb-3 text-center md:text-left"> © 2025 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
         <nav class="nav">
             <a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
