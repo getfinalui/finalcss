@@ -32,7 +32,7 @@ class HeaderComponent extends HTMLElement {
 		<div class="d-flex flex-column md:flex-row align-items-center">
 			<div>
 				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="_logo.png" alt="Finalcss logo" height="40">
+				<img src="logo.png" alt="Finalcss logo" height="40">
 				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 font-medium ml-1">final<span class="text-secondary">css</span> </div>
 			  </a>
 			</div>
