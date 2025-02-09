@@ -152,7 +152,7 @@ class BottomComponent extends HTMLElement {
   }
 </style>
 
-<section class="py-10 bg-colorful border-top text-lg">
+<section class="py-10 bg-colorful border-top text-size-lg">
     <div class="container article text-center" style="max-width: 920px">
       <h2 class="my-4">Your support matters!</h2>
       <p class="mb-5">

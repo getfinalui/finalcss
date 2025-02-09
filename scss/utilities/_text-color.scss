@@ -9,6 +9,7 @@
 .text-black{ color:#000; }
 .text-white{ color:#fff; }
 .text-color-inherit{ color:inherit; }
+.text-color-initial{ color:initial; }
 
 .hover\:text-base:hover{ color: var(--text-color-base); }
 .hover\:text-secondary:hover{ color: var(--text-color-secondary); }
@@ -18,6 +19,7 @@
 .hover\:text-black:hover{ color:#000; }
 .hover\:text-white:hover{ color:#fff; }
 .hover\:text-color-inherit{ color:inherit; }
+.hover\:text-color-initial{ color:initial; }
 
 .group:hover .group-hover\:text-base{ color: var(--text-color-base); }
 .group:hover .group-hover\:text-secondary{ color: var(--text-color-secondary); }
@@ -27,6 +29,8 @@
 .group:hover .group-hover\:text-black{ color:#000; }
 .group:hover .group-hover\:text-white{ color:#fff; }
 .group:hover .group-hover\:text-color-inherit{ color:inherit; }
+.group:hover .group-hover\:text-color-initial{ color:initial; }
+
 
 // Generate classes for text colors based on color list in theme.scss 
 @each $color, $shades in $colors_list {
