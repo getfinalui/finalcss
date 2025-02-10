@@ -23,7 +23,7 @@ class HeaderComponent extends HTMLElement {
 			<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit </a>  
 			<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
 			<hr>
-			<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-secondary">Download</a>
+			<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-default">Download</a>
 		</nav>
 </dialog>
 	
@@ -43,9 +43,9 @@ class HeaderComponent extends HTMLElement {
 					<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog</a>
 					<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit </a>  
 					<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
-					<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-secondary">Download</a>
+					<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-default">Download</a>
 				</nav>
-				<button id="themeSwitcher" onclick="themeswitch()" class="ml-1 btn btn-icon btn-neutral">
+				<button id="themeSwitcher" onclick="themeswitch()" class="ml-1 btn btn-icon">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
@@ -55,7 +55,7 @@ class HeaderComponent extends HTMLElement {
 						</svg>
 					</span>
 				</button>
-				<button class="md:d-none ml-2 btn-icon btn btn-secondary" onclick="window.mobile_menu.showModal()">
+				<button class="md:d-none ml-2 btn-icon btn btn-default" onclick="window.mobile_menu.showModal()">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 						<path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 						<path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -159,10 +159,10 @@ class BottomComponent extends HTMLElement {
         This is new project requires regular updates like adding new utility classes and components. <br> Your support motivates to improve this project continiously. 
       </p> 
       <p class="mb-2">
-        <a class="btn btn-secondary text-black btn-lg" style="background-color:#FFDD00;" href="https://buymeacoffee.com/vosidiy" target="_blank">
+        <a class="btn border border-dark btn-lg" href="https://buymeacoffee.com/vosidiy" target="_blank">
           <i class="h4 me-2"> &#9749; </i> <span>Buy me a coffee</span>
         </a> 
-        <a class="btn btn-lg btn-primary" href="https://paypal.me/vosidiy/20"> 
+        <a class="btn btn-lg btn-outline" href="https://paypal.me/vosidiy/20"> 
           Support via Paypal
         </a>
       </p>

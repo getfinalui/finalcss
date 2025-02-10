@@ -23,8 +23,7 @@
       content: " ";
       position:absolute;
       left:0;  
-      top:50%;
-      transform:translateY(-40%);  
+      top:0.5rem;
       width: 10px; 
       height: 10px;
       background:orange;  
@@ -41,8 +40,7 @@
       content: "\2713";
       position:absolute;
       left:0;  
-      top:50%;
-      transform:translateY(-50%);  
+      top:0.5rem;
 	}
 }
 
