@@ -4,7 +4,7 @@
 // Base styles
 //
 
-.btn{
+.btn{ 
   // scss-docs-start btn-css-vars
   --btn-size-sm: 32px;
   --btn-size-md: 38px;
@@ -15,12 +15,11 @@
   --btn-font-size-sm: 0.96rem;
   --btn-font-size-lg: 1.1rem;
   --btn-font-weight:400;
-  --btn-bg: transparent;
-  --btn-bg-hover: var(--alpha-1);
+  --btn-bg: var(--alpha-1);
+  --btn-bg-hover: var(--alpha-2);
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
   --btn-border-radius: #{$border-radius-base};
-
   --btn-text-color: inherit;
   // scss-docs-end btn-css-vars
   
@@ -124,12 +123,11 @@
 @each $color, $shades in $colors_list {
 
   // Genarate button background with only single shade: 200 (Easy to define colors)
-  // For ex. .btn-green-soft{ --btn-bg: var(--green-200); ...} 
-  .btn-#{$color}-soft { 
+  // For ex. .btn-green-subtle{ --btn-bg: var(--green-200); ...} 
+  .btn-#{$color}-subtle { 
     --btn-bg: var(--#{$color}-100);
     --btn-bg-hover: var(--#{$color}-200);
     --btn-text-color:var(--#{$color}-600);
-    // box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
   }
 
 }
@@ -137,7 +135,7 @@
 
 // Other styles of button 
 // Semantic names for buttons
-.btn-secondary {
+.btn-default{
   --btn-bg: var(--bg-color-raised);
   --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-base);
@@ -151,23 +149,12 @@
   --btn-bg-hover: var(--alpha-1);
   --btn-text-color: var(--text-color-primary);
   --btn-border-color: var(--primary-500);
-  --btn-border-hover-color: var(--primary-600);
-  box-shadow: none!important;
+  --btn-border-hover-color: var(--primary-500);
 }
 
 .btn-invert{
   --btn-bg: var(--neutral-1000);
   --btn-bg-hover: var(--neutral-700);
   --btn-text-color: var(--neutral-0);
-  box-shadow: none!important;
 }
-
-// We will override btn-neutral variant, because of better UI
-.btn-neutral{
-  --btn-bg: var(--alpha-2);
-  --btn-bg-hover: var(--alpha-3);
-  --btn-text-color: var(--text-color-base);
-  box-shadow: none!important;
-}
-
 /// BEBI

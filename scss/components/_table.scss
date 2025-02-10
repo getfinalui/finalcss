@@ -42,7 +42,7 @@
   border-top-width: 0;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > * {
+.table-striped > tbody > tr:nth-of-type(even) > * {
   background-color:var(--neutral-100);
 }
 
