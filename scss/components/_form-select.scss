@@ -4,15 +4,15 @@
   min-width:120px;
   width: 100%;
   height: 38px;
-  padding: 0.36rem 0.6rem;
+  padding: 0.3rem 0.6rem;
   padding-right:32px;
-  line-height: 1.2;
+  line-height: 1.4;
   color: var(--text-color-base);
   appearance: none;
   background-color: var(--neutral-50);
   background-image: var(--icon-arrow);
   background-repeat: no-repeat;
-  background-position: right 0.75rem center;
+  background-position: right 0.6rem center;
   background-size: 16px 12px;
   border: 1px solid var(--neutral-300);
   border-radius: $border-radius-base; // from: _base-settings.scss
