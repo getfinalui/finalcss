@@ -17,7 +17,7 @@
 
 
 .list-bullet{
-  list-style: none; margin-left:0; padding-left:0;  
+  list-style: none; margin-left:0; padding-left:0; margin-top:0.5rem;
   > li{ padding-left:20px;  position:relative; margin-bottom:0.5rem;  }
   > li::before { 
       content: " ";
@@ -33,7 +33,7 @@
 }
 
 .list-check{
-  list-style: none; margin-left:0; padding-left:0;  
+  list-style: none; margin-left:0; padding-left:0; margin-top:0.5rem;
   > li{ padding-left:24px; position:relative; margin-bottom:0.5rem;  }
   > li::before {
   	  font-weight:bold;

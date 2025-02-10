@@ -36,8 +36,8 @@
 
 <main class="py-24 bg-colorful">	
 	<div class="container" style="max-width: 980px;">
-		<h1 class="text-size-4xl md:text-size-5xl lg:text-size-6xl text-center my-5">A simple but powerful <br> CSS library for any purpose</span> </h1>
-		<p class="mb-5 text-size-xl text-secondary text-center text-balance"> Reimagined version of Bootstrap and Tailwind CSS libraries. Create anything with both utility and component classes </p>
+		<h1 class="fs-4xl md:fs-5xl lg:fs-6xl text-center my-5">A simple but powerful <br> CSS library for any purpose</span> </h1>
+		<p class="mb-5 fs-xl text-secondary text-center text-balance"> Reimagined version of Bootstrap and Tailwind CSS libraries. Create anything with both utility and component classes. Free and open source </p>
 		<p  class="text-center mb-5">
 			<code class="bg-neutral-0 d-none rounded-pill border p-1 px-3 d-md-inline-block">
 			https://cdn.jsdelivr.net/gh/getfinalui/finalcss@main/css/final.min.css
@@ -55,51 +55,52 @@
 <section class="pb-14">
 	
 	<div class="container">
-		<hr>
-		<article class="article mt-10">
+		<article class="card h-full p-6 shadow-sm">
 			<div class="row">
-				<div class="lg:col-7 md:col-6">
-					<h3 class="mb-3">Why another CSS library?</h3>
+				
+				<aside class="md:col-6">
+					<h4 class="mb-4">Built for modern web apps</h4>
 					<p>
-						You may ask, what makes it different if there are libraries like Bootstrap and Tailwind? 
-						Good question, here is why: I used many of CSS libraries. They all have cons and pros. 
-						You may see many debates around those css frameworks.  
-						None of them are perfect for all cases. They have their own approach. 
+						As UI Designer and Web developer I deeply understand your struggles with CSS. During the last 10 years I've made hundreds of complex layouts for various web apps. I tried many css frameworks including Bootstrap and Tailwind. I know what can be improved, so I decided to fill all gaps... But this is the beginning of new css library. <br><b>Here are some reasons why you should try it:</b>
 					</p>
-					<p>One prefer utility first approach, Another prefer component oriented library. 
-						Some of them are too <b>bloated</b> with features which you never use. 
-						some of them too outdated in terms of design. </p>
-					<p> So, I came with idea of creating something based on follwing criterias:</p>
-				</div>
-				<aside class="lg:col-5 md:col-6">
-					<img src="site/photo.png" class="max-w-100%" alt="">
+					<ul class="list-check">
+						<li> Carefully curated UI design - colors and typogrpahy </li>
+						<li> Light / Dark mode, without writing extra code</li>
+						<li> Tailwind like utility classes, Bootstrap like components </li>
+						<li> You're NOT locked into framework </li>
+						<li> Extend by adding your utility classes and components</li>
+					</ul>
+				</aside>
+				<aside class="md:col-6">
+					<figure class="bg-primary h-full rounded"> </figure>
 				</aside>
 			</div> <!-- row .//end -->
 		</article>
+
 		<div class="d-grid lg:grid-template-cols-3 md:grid-template-cols-2 gap-5 mt-10">
-			<aside class="p-4 card bg-neutral-100">
-				<h5>Customizable &amp; encapsulated SCSS</h5>
-				<p class="text-secondary">You're not locked in any rules. Make it your own, Add your component or utility classes</p>
+			<aside class="p-4 card border-transparent  bg-orange-100">
+				<h5 class="mb-2">Customizable SASS/SCSS</h5>
+				<p class="text-secondary">You're not locked in any rules. Make it your own. Add your component or utility classes</p>
 			</aside>
-			<aside class="p-4 card bg-neutral-100">
-				<h5>No complex setup,</h5>
-				<p class="text-secondary">Super easy to get started. Use any JS framework like React, Angular, Vue or Vanilla JS. </p>
+			<aside class="p-4 card border-transparent  bg-green-100">
+				<h5 class="mb-2">No complex setup,</h5>
+				<p class="text-secondary">No buid proccess. Easy to get started. Use any JS framework like react, angular or server side... </p>
 			</aside>
-			<aside class="p-4 card bg-neutral-100">
-				<h5>Utility classes &amp; components</h5>
-				<p class="text-secondary">Create any structure with utility classes. Use component classes for base elements </p>
+			<aside class="p-4 card border-transparent  bg-red-100">
+				<h5 class="mb-2">Make your design system</h5>
+				<p class="text-secondary">Create any layout structure. Ready to use components to create design system </p>
 			</aside>
-			<aside class="p-4 card bg-neutral-100">
-				<h5>Dark mode with accessibility</h5>
-				<p class="text-secondary">We prepared all colors for both light and dark mode. feel free to customize for any theme</p>
+			<aside class="p-4 card border-transparent  bg-neutral-200">
+				<h5 class="mb-2">Dark mode with accessibility</h5>
+				<p class="text-secondary">We prepared all colors for both light and dark mode. You can add your custom theme as well</p>
 			</aside>
-			<aside class="p-4 card bg-neutral-100">
-				<h5>Not bloated with useless styles</h5>
-				<p class="text-secondary">Most essential utilities and components you need. No bloated with useless variables and styles </p>
+			<aside class="p-4 card border-transparent  bg-purple-100">
+				<h5 class="mb-2">Not bloated, No overrides</h5>
+				<p class="text-secondary">No need to override for customization. All changes via CSS variables or SCSS/SASS </p>
 			</aside>
-			<aside class="p-4 card bg-neutral-100">
-				<h5>Powerful grid system</h5>
-				<p class="text-secondary"> Grid system with Flexbox and CSS grid system similar to Bootstrap 5, but classnames are similar to Tailwind's. </p>
+			<aside class="p-4 card border-transparent bg-blue-100">
+				<h5 class="mb-2">Powerful grid system</h5>
+				<p class="text-secondary"> Responsive grid system inspired by Bootstrap's grid and Tailwind's utiltities</p>
 			</aside>
 		</div>
 
@@ -111,11 +112,11 @@
 <div class="container">
 
 <header class="mb-10">
-	<h2 class="text-center">Create any UI with Final CSS library</h2>
-	<p class="text-center text-muted  mb-5">Some examples which is created with utility and component classes of Final CSS library</p>
+	<h2 class="text-center mb-2">Sneak peak of UI library</h2>
+	<p class="text-center text-secondary  mb-5">Here are some of examples which is created with utility and component classes of Final CSS library</p>
 	<!-- button -->
 		<div class="d-flex justify-content-center">
-			<button onclick="themeswitch()"  class="btn btn-intense">
+			<button onclick="themeswitch()"  class="btn btn-invert">
 				<div class="d-none dark:d-flex gap-2 align-items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 align-middle" fill="none" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 					</svg>
@@ -135,12 +136,24 @@
 		<div class="row mb-5">
 			<aside class="md:col-6">
 				<div class="d-grid grid-template-cols-2 gap-5 mb-5">
-					<article class="card">
+					
+					<article class="card border-transparent theme-static bg-primary-700 text-white">
 						<div class="card-body">
-							<p class="mb-2">Total Profit</p>
-							<div class="text-size-xl font-semibold">$15,230.82</div>
-							<p class="text-size-sm text-success mb-2">+20.1% from last month</p>
-							<svg width="245" class="w-full" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<p class="mb-1">Total shipping</p>
+							<div class="fs-2xl fw-semibold">7,120</div>
+							<p class="small text-orange-400 mb-3 fs-sm">-10% from last month</p>
+							<div class="border-t pt-3">
+								<a href="#" class="btn btn-primary" btn-sm>View report</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card border-primary">
+						<div class="card-body">
+							<p class="mb-1">Total Profit</p>
+							<div class="fs-2xl fw-semibold">$15,230.82</div>
+							<p class="fs-sm text-green mb-2">+20.1% from last month</p>
+							<svg width="245" class="max-w-full" height="55" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<rect y="30" width="20" height="25" fill="#6575FF"/>
 								<rect x="150" y="28" width="20" height="27" fill="#6575FF"/>
 								<rect x="25" y="36" width="20" height="19" fill="#6575FF"/>
@@ -154,23 +167,7 @@
 							</svg>
 						</div>
 					</article>
-					<article class="card">
-						<div class="card-body">
-							<div class="text-muted">
-								<svg class="float-end" width="44" height="44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="currentColor" fill="none">
-							    <path d="M19.5 17.5C19.5 18.8807 18.3807 20 17 20C15.6193 20 14.5 18.8807 14.5 17.5C14.5 16.1193 15.6193 15 17 15C18.3807 15 19.5 16.1193 19.5 17.5Z" stroke="currentColor" stroke-width="1.5" />
-							    <path d="M9.5 17.5C9.5 18.8807 8.38071 20 7 20C5.61929 20 4.5 18.8807 4.5 17.5C4.5 16.1193 5.61929 15 7 15C8.38071 15 9.5 16.1193 9.5 17.5Z" stroke="currentColor" stroke-width="1.5" />
-							    <path d="M14.5 17.5H9.5M19.5 17.5H20.2632C20.4831 17.5 20.5931 17.5 20.6855 17.4885C21.3669 17.4036 21.9036 16.8669 21.9885 16.1855C22 16.0931 22 15.9831 22 15.7632V13C22 9.41015 19.0899 6.5 15.5 6.5M15 15.5V7C15 5.58579 15 4.87868 14.5607 4.43934C14.1213 4 13.4142 4 12 4H5C3.58579 4 2.87868 4 2.43934 4.43934C2 4.87868 2 5.58579 2 7V15C2 15.9346 2 16.4019 2.20096 16.75C2.33261 16.978 2.52197 17.1674 2.75 17.299C3.09808 17.5 3.56538 17.5 4.5 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-							</div>
-							<p class="mb-2">Total shipping</p>
-							<div class="text-size-xl font-semibold">7,120</div>
-							<p class="small text-danger mb-3 text-size-sm">-10% from last month</p>
-							<div class="border-t pt-3">
-								<a href="#" class="btn btn-secondary" btn-sm>View report</a>
-							</div>
-						</div>
-					</article>
+					
 				</div>
 
 				<article class="card mb-4">
@@ -188,7 +185,7 @@
 									<path d="M11.9997 4.77818C13.767 4.77818 15.3379 5.38907 16.5925 6.56727L20.0288 3.13095C17.9452 1.18917 15.2398 0 11.9997 0C7.30887 0 3.26165 2.69454 1.28711 6.62183L5.27978 9.72001C6.22882 6.88362 8.87976 4.77818 11.9997 4.77818Z" fill="#EA4335"/>
 								</svg>
 							</span>
-							<span class="pl-2">Google</span>
+							<span>Google</span>
 
 							</button>
 							<button class="btn btn-secondary">
@@ -197,7 +194,7 @@
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0099 0C5.36875 0 0 5.40833 0 12.0992C0 17.4475 3.43994 21.9748 8.21205 23.5771C8.80869 23.6976 9.02724 23.3168 9.02724 22.9965C9.02724 22.716 9.00757 21.7545 9.00757 20.7527C5.6667 21.474 4.97099 19.3104 4.97099 19.3104C4.43409 17.9082 3.63858 17.5478 3.63858 17.5478C2.54511 16.8066 3.71823 16.8066 3.71823 16.8066C4.93117 16.8868 5.56763 18.0486 5.56763 18.0486C6.64118 19.8913 8.37111 19.3707 9.06706 19.0501C9.16638 18.2688 9.48473 17.728 9.82275 17.4276C7.15817 17.1471 4.35469 16.1055 4.35469 11.458C4.35469 10.1359 4.8316 9.05428 5.58729 8.21304C5.46807 7.91263 5.0504 6.67043 5.70677 5.00787C5.70677 5.00787 6.72083 4.6873 9.00732 6.24981C9.98625 5.98497 10.9958 5.85024 12.0099 5.84911C13.024 5.84911 14.0577 5.98948 15.0123 6.24981C17.299 4.6873 18.3131 5.00787 18.3131 5.00787C18.9695 6.67043 18.5515 7.91263 18.4323 8.21304C19.2079 9.05428 19.6652 10.1359 19.6652 11.458C19.6652 16.1055 16.8617 17.1269 14.1772 17.4276C14.6148 17.8081 14.9924 18.5292 14.9924 19.6711C14.9924 21.2936 14.9727 22.5957 14.9727 22.9962C14.9727 23.3168 15.1915 23.6976 15.7879 23.5774C20.56 21.9745 23.9999 17.4475 23.9999 12.0992C24.0196 5.40833 18.6312 0 12.0099 0Z" fill="currentColor"/>
 									</svg>
 								</span>
-								<span class="pl-2">Github</span>
+								<span>Github</span>
 							</button>
 						</div>
 
@@ -247,7 +244,7 @@
 							<div class="mb-5">
 							  <label class="form-label">Create password</label>
 							  <input type="password" class="form-control" placeholder="Password">
-							  <p class="text-muted text-size-sm mt-2">
+							  <p class="text-secondary fs-sm lh-sm mt-2">
 								  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 							  </p>
 							</div>
@@ -269,53 +266,53 @@
 
 				<article class="card p-3 mb-5">
 					<nav class="segmented-control w-full">
-						<label class="segmented-item">
-							<input class="visually-hidden" checked type="radio" name="my-segment-123">
+						<label tabindex="0" class="segmented-item">
+							<input tabindex="-1" class="visually-hidden" checked type="radio" name="my-segment-123">
 							The first
 						</label>
-						<label class="segmented-item">
-							<input class="visually-hidden" type="radio" name="my-segment-123">
+						<label tabindex="0" class="segmented-item">
+							<input tabindex="-1" class="visually-hidden" type="radio" name="my-segment-123">
 							Second item
 						</label>
-						<label class="segmented-item">
-							<input class="visually-hidden" type="radio" name="my-segment-123">
+						<label tabindex="0" class="segmented-item">
+							<input tabindex="-1" class="visually-hidden" type="radio" name="my-segment-123">
 							Third item 
 						</label>
-						<label class="segmented-item">
-							<input class="visually-hidden" type="radio" name="my-segment-123">
+						<label tabindex="0" class="segmented-item">
+							<input tabindex="-1" class="visually-hidden" type="radio" name="my-segment-123">
 							Another one 
 						</label>
 					</nav>
 				</article>
 
-				<div class="row lg:row-cols-2">
+				<div class="row sm:row-cols-2">
 					<div>
-						<article class="card overflow-hidden lg:h-full  mb-5 lg:mb-0">
+						<article class="card overflow-hidden lg:h-full  mb-5 md:mb-0">
 							
-							<header class="bg-feature-300 relative h-24">
+							<header class="bg-purple-200 relative h-24">
 								<a href="#" class="absolute top-0 m-2 btn btn-sm btn-neutral">Edit</a>
 							</header>
 							<div class="text-center">
-								<div style="margin-top:-60px" class="relative mx-auto w-28 h-28 d-flex align-items-center justify-content-center bg-neutral-0 rounded-circle">
-						 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="60" height="60" class="rounded-circle w-24 h-24 d-inline-block bg-neutral-400">
+								<div style="margin-top:-60px" class="relative d-inline-flex rounded-circle mx-auto p-1 bg-white">
+						 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="96" height="96" class="avatar avatar-lg">
 						 		</div>
 						 		<div class="my-3 mb-4">
-						 			<h5>Alexandra Heilium</h5>
+						 			<h5 class="mb-1">Alexandra Heilium</h5>
 						 			<p>Digital Designer UX/UI</p>
 						 		</div>
 						 		<!-- summary -->
 						 		<div class="mx-auto d-flex my-2  mb-6 p-1 row-cols-3 w-80% rounded-sm border">
 									<div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
-										<span class="font-bold">259</span>
-										<small class="text-size-sm">Posts</small>
+										<span class="fw-bold">259</span>
+										<small class="fs-sm">Posts</small>
 									</div>
 									<div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
-										<span class="font-bold">129K</span>
-										<small class="text-size-sm">Followers</small>
+										<span class="fw-bold">129K</span>
+										<small class="fs-sm">Followers</small>
 									</div>
 									<div class="d-flex flex-col p-2 align-items-center justify-content-center">
-										<span class="font-bold">34</span>
-										<small class="text-size-sm">Following</small>
+										<span class="fw-bold">34</span>
+										<small class="fs-sm">Following</small>
 									</div>
 								</div>
 			          <!-- summary .//end -->
@@ -327,7 +324,7 @@
 						
 						<article class="card mb-5 lg:mb-0">
 							<div class="bg-neutral-300 rounded-top overflow-hidden">
-								<img class="object-fit-cover w-100% h-40" src="https://picsum.photos/seed/picsum/400/400">
+								<img class="object-fit-cover w-full" style="height: 166px;" src="https://picsum.photos/seed/picsum/400/400">
 							</div>
 							<div class="card-body">
 							 	<h5>Marvels of Bali</h5>
@@ -335,8 +332,8 @@
 							 		Discover fascinating, unusual, and adventurous things to do.
 							 	</p>
 							 	<div class="d-flex gap-2 align-items-center">
-							 		<span class="bg-neutral-400 rounded-circle">
-							 			<img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" class="w-10 h-10 rounded-circle">
+							 		<span class="avatar">
+							 			<img width="40" height="40" src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp">
 							 		</span>
 							 		<span>
 							 			<p><a href="#">Brooklyn Simmons</a></p>
@@ -376,62 +373,62 @@
 								<th> <input class="form-check-input" type="checkbox" value=""> </th>
 								<th>Transaction ID</th>
 								<th>Status</th>
-								<th class="text-end">Amount</th>
-								<th class="text-end">Action</th>
+								<th class="text-right">Amount</th>
+								<th class="text-right">Action</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-123 </td>
-								<td> <b role="status" class="badge badge-success">Completed</b> </td>
-								<td class="text-end"> $980.00 </td>
-								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+								<td> <b role="status" class="badge badge-green"> ✓ Completed</b> </td>
+								<td class="text-right"> $980.00 </td>
+								<td class="text-right"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" checked value=""> </td>
 								<td> 1982-123 </td>
-								<td> <b role="status" class="badge badge-success">Completed</b> </td>
-								<td class="text-end"> $980.00 </td>
-								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+								<td> <b role="status" class="badge badge-green"> ✓ Completed</b> </td>
+								<td class="text-right"> $980.00 </td>
+								<td class="text-right"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-123 </td>
-								<td> <b role="status" class="badge badge-warning">Pending</b> </td>
-								<td class="text-end"> $18.90 </td>
-								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+								<td> <b role="status" class="badge badge-orange"> 🕐 Pending</b> </td>
+								<td class="text-right"> $18.90 </td>
+								<td class="text-right"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-123 </td>
-								<td> <b role="status" class="badge badge-warning">Pending</b> </td>
-								<td class="text-end"> $980.00 </td>
-								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+								<td> <b role="status" class="badge badge-orange"> 🕐 Pending</b> </td>
+								<td class="text-right"> $980.00 </td>
+								<td class="text-right"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 8362-988 </td>
-								<td> <b role="status" class="badge badge-danger">Cancelled</b> </td>
-								<td class="text-end"> $1,980.00 </td>
-								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+								<td> <b role="status" class="badge badge-red"> ✕ Cancelled</b> </td>
+								<td class="text-right"> $1,980.00 </td>
+								<td class="text-right"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
 							<tr>
 								<td> <input class="form-check-input" type="checkbox" value=""> </td>
 								<td> 0023-332 </td>
-								<td> <b role="status" class="badge badge-success">Success</b> </td>
-								<td class="text-end"> $567.99 </td>
-								<td class="text-end"> <button class="btn btn-sm btn-neutral btn-icon">  
+								<td> <b role="status" class="badge badge-green"> ✓ Success</b> </td>
+								<td class="text-right"> $567.99 </td>
+								<td class="text-right"> <button class="btn btn-sm btn-neutral btn-icon">  
 									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
 								</button> </td>
 							</tr>
@@ -450,8 +447,8 @@
 							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="50" height="50" class="rounded-full w-11 h-11">
 						</div>
 						<div class="flex-grow pl-3">
-							<p class="font-medium mb-0">Jessica Sarah</p>
-							<p class="text-muted mb-0">jessica1900@example.com</p>
+							<p class="fw-medium mb-0">Jessica Sarah</p>
+							<p class="text-secondary mb-0">jessica1900@example.com</p>
 						</div>
 						<div>
 							<select class="form-select">
@@ -467,8 +464,8 @@
 							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" width="50" height="50" class="rounded-full w-11 h-11">
 						</div>
 						<div class="flex-grow pl-3">
-							<p class="font-medium mb-0">Olivia Martin</p>
-							<p class="text-muted mb-0">max990@example.com</p>
+							<p class="fw-medium mb-0">Olivia Martin</p>
+							<p class="text-secondary mb-0">max990@example.com</p>
 						</div>
 						<div>
 							<select class="form-select">
@@ -484,8 +481,8 @@
 							<img src="https://mdbcdn.b-cdn.net/img/new/avatars/3.webp" width="50" height="50" class="rounded-full w-11 h-11">
 						</div>
 						<div class="flex-grow pl-3">
-							<p class="font-medium mb-0">Olivia Alexander</p>
-							<p class="text-muted mb-0">alex_alex@example.com</p>
+							<p class="fw-medium mb-0">Olivia Alexander</p>
+							<p class="text-secondary mb-0">alex_alex@example.com</p>
 						</div>
 						<div>
 							<select class="form-select">
@@ -507,14 +504,14 @@
 				    <li>
 				      <label class="card-check w-full d-block p-3 rounded">
 				      	<input class="form-check-input float-end" checked name="choose-delivery" type="radio" value="">
-				        <strong class="fw-semibold">Standart delivery</strong>
+				        <strong class="fw-medium">Standart delivery</strong>
 				        <p class="d-block mb-0 text-secondary">With support text underneath to add more detail</p>
 				      </label>
 				    </li>
 				    <li>
 				      <label class="card-check w-full d-block p-3 rounded">
 				      	<input class="form-check-input float-end" name="choose-delivery" type="radio" value="">
-				        <strong class="fw-semibold">One day shopping</strong>
+				        <strong class="fw-medium">One day shopping</strong>
 				        <p class="d-block mb-0 text-secondary">Support text underneath to add more detail</p>
 				      </label>
 				    </li>
@@ -572,10 +569,10 @@
 				</div>
 			</div>
 
-			<div class="d-grid lg:grid-template-cols-5 gap-5 w-100%">
-				<article class="lg:grid-col-span-3 card card-body">
+			<div class="d-grid grid-template-cols-5 gap-5 w-100%">
+				<article class="grid-col-span-3 card card-body">
 					<!-- input search  -->
-					<div class="d-flex w-full">
+					<div class="d-flex w-full mb-4">
 						<!-- search field -->
 						<div class="relative w-full">
 							<i class="d-inline-flex absolute ml-2 left-0 center-y">
@@ -597,7 +594,7 @@
 						<option value="China">
 					</datalist>
 					<!-- input search .// -->
-					<br>
+
 					<!-- input field -->
 					<div class="relative">
 						<i class="d-inline-flex absolute ml-2 left-0 center-y">
@@ -617,12 +614,12 @@
 					</div>
 					<!-- input field .//end -->
 				</article> <!-- card .//end -->
-				<div class="lg:grid-col-span-2">
-					<nav class="dropdown static lg:w-full w-20">
+				<div class="grid-col-span-2">
+					<nav class="dropdown static w-full max-w-80">
 							<a class="dropdown-item" href="">Details</a>
 							<a class="dropdown-item" href="">Edit</a>
 							<hr>
-							<a class="dropdown-item text-danger" href="">Delete</a>
+							<a class="dropdown-item text-red" href="">Delete</a>
 					</nav>
 				</div> <!-- card .//end -->
 			</div> 
@@ -631,6 +628,58 @@
 			</aside>
 		</div> 
 		<!-- row.// -->
+
+		<div class="row gap-5 sm:row-cols-2 lg:row-cols-3">
+			<aside class="col">
+				<dialog open class="relative max-w-full w-full"> 
+						<div>
+							<h5 class="mb-3">Rename project</h5>
+							<form action="">
+								<input type="text" value="Project one" class="form-control">
+							</form>
+						</div>
+						<div class="mt-4 d-flex gap-2">
+							<button class="btn btn-primary">Save</button>
+							<button class="btn btn-secondary">Cancel</button>
+						</div>
+				</dialog>
+			</aside>
+			<aside class="col">
+				<dialog open class="relative max-w-full w-full">
+					<button class="btn-close-dialog">
+						<svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+						</svg> 
+					</button> 
+						<div>
+							<h5 class="mb-2">Delete items?</h5>
+							<p class="text-secondary">Are you sure to delete complately?</p>
+						</div>
+						<div class="border-top mt-4 pt-4 d-flex gap-2 justify-content-end">
+							<button class="btn btn-secondary">Cancel</button>
+							<button class="btn btn-red">Yes, delete</button>
+						</div>
+				</dialog>
+			</aside>
+			<aside class="col">
+				<dialog open class="relative max-w-full w-full"> 
+						<div class="d-flex gap-3">
+							<span class="d-flex text-red flex-shrink-0 w-11 h-11 flex-center rounded-full bg-red-100">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+							</span>
+							<div>
+								<h5 class="mb-1 text-red">Can't do something</h5>
+								<p class="text-secondary mb-1">There was an internal error demo text. </p>
+							</div>
+						</div>
+						<div class="border-top mt-4 pt-4 d-flex gap-2 justify-content-end">
+							<button class="btn btn-neutral mr-auto">Learn more</button>
+							<button class="btn btn-secondary">Cancel</button>
+							<button class="btn btn-primary">Continue</button>
+						</div>
+				</dialog>
+			</aside>
+		</div>
 	</article>
 
 </div> <!-- container .//  -->
@@ -656,7 +705,7 @@
 
 		<figure>
 			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
-				<a class="d-block h-full cursor-zoom-in" href="html-templates/app-shell-1.html"  target="_blank">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/app-shell-2.html"  target="_blank">
 					<img src="#" alt="Admin control panel template design">
 				</a>
 			</div>
@@ -667,7 +716,7 @@
 
 		<figure>
 			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
-				<a class="d-block h-full cursor-zoom-in" href="html-templates/app-shell-1.html"  target="_blank">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/app-shell-3.html"  target="_blank">
 					<img src="#" alt="Admin control panel template design">
 				</a>
 			</div>
@@ -710,45 +759,104 @@
 		</figure>
 
 
-		<article>
-			<a href="html-templates/app-shell-4.html" target="_blank">Web app layout 4 ↗</a>
-		</article>
-		<article>
-			<a href="html-templates/app-shell-5.html" target="_blank">Web app layout 5 ↗</a>
-		</article>
-		<article>
-			<a href="html-templates/app-shell-6.html" target="_blank">Web app layout 6 ↗</a>
-		</article>
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/form-order.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/form-order.html" target="_blank">Order form ↗</a>
+			</figcaption>
+		</figure>
 
-		<article>
-			<a href="html-templates/form-order.html" target="_blank">Order form ↗ </a>
-		</article>
-		<article>
-			<a href="html-templates/form-register.html" target="_blank">Sign up form ↗ </a>
-		</article>
-		<article>
-			<a href="html-templates/form-setting.html" target="_blank">Setting page ↗</a>
-		</article>
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/form-register.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/form-register.html" target="_blank">Sign up form ↗  </a>
+			</figcaption>
+		</figure>
 
-		<article>
-			<a href="html-templates/shop-index.html" target="_blank"> E-commerce template ↗</a>
-		</article>
-		<article>
-			<a href="html-templates/shop-listing.html" target="_blank">Product listing ↗</a>
-		</article>
-		<article>
-			<a href="html-templates/shop-detail.html" target="_blank">Product detail ↗</a>
-		</article>
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/form-setting.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/form-setting.html" target="_blank">Setting page ↗ </a>
+			</figcaption>
+		</figure>
 
-		<article>
-			<a href="html-templates/site-headers.html" target="_blank">Website Headers ↗</a>
-		</article>
-		<article>
-			<a href="html-templates/site-footers.html" target="_blank">Website Footers ↗</a>
-		</article>
-		<article>
-			<a href="html-templates/site-features.html" target="_blank">Feature sections ↗ </a>
-		</article>
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/shop-index.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/shop-index.html" target="_blank">E-commerce template ↗ </a>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/shop-listing.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/shop-listing.html" target="_blank">Product listing ↗ </a>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/shop-detail.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/shop-detail.html" target="_blank">Product detail ↗ </a>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/site-features.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/site-features.html" target="_blank"> Feature sections ↗ </a>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/site-headers.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/site-headers.html" target="_blank">Website Headers ↗ </a>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<div class="bg-neutral-200 ratio-4x3 rounded overflow-hidden">
+				<a class="d-block h-full cursor-zoom-in" href="html-templates/site-footers.html"  target="_blank">
+					<img src="#" alt="Admin control panel template design">
+				</a>
+			</div>
+			<figcaption  class="my-3">
+				<a href="html-templates/site-footers.html" target="_blank">Website Footers ↗ </a>
+			</figcaption>
+		</figure>
 
 	</div>
 </div>
@@ -756,7 +864,7 @@
 
 <section class="pb-14 pt-14 border-top">
 	<div class="container" style="max-width: 920px">
-		<article class="article-wrap text-size-lg">
+		<article class="article-wrap fs-lg">
 			<h2 class="mb-3">Similar to Bootstrap 5, but...</h2>
 
 			<p>... But more lightweight, without JS, simplified components with additional utility classes. Re-designed with more aethtetic styles.  If you have used bootstrap framwework you face some challenges like needing to override or changing variables of scss (sass). Both cases are time consuming and frustrating. So here comes Final CSS to solve that.   </p>

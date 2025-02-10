@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0; 
   font-family: inherit;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 h6{ font-size: 1rem;}
@@ -32,8 +32,9 @@ $font-sizes-list: (
   9xl: 6rem,
 ) !default;
 
+// Generate classlist Ex. fs-3xl, fs-sm, fs-base
 @each $name, $font-size in $font-sizes-list {
-  .text-size-#{$name} {
+  .fs-#{$name} {
     font-size: $font-size;
   }
 }
@@ -45,7 +46,7 @@ $font-sizes-list: (
   @media ($screen_size){
     // breakpoinst styles
     @each $name, $font-size in $font-sizes-list {
-      .#{$breakpoint}\:text-#{$name} {
+      .#{$breakpoint}\:fs-#{$name} {
         font-size: $font-size !important;
       }
     }

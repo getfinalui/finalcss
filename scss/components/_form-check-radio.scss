@@ -41,12 +41,12 @@
   filter: brightness(90%);
 }
 .form-check-input:focus, .form-check-input:focus-visible {
-  outline-offset: 2px;
+  outline-offset: 3px;
   outline-style: #0d6efd;
 }
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: var(--primary-500);;
+  border-color: var(--primary-500);
 }
 
 .form-check-input:disabled {
