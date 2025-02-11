@@ -15,17 +15,17 @@
 </head>
 <body>
 
-<header class="py-2 border-bottom">
-  <div class="container">
-    <div class="d-flex flex-wrap flex-col sm:flex-row gap-3 align-items-center justify-content-between">
+<header class="py-2 lg:py-3 border-bottom">
+  <div class="container px-3">
+    <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
       
       <a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 				<img src="logo.svg" alt="" height="40">
 				<div style="font-size:24px;" class="text-neutral-1000 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 			</a>
 
-      <div class="md:w-40% mr-4">
-        <form class="d-flex w-100% mx-3">
+      <div class="mobile:order-3 flex-grow lg:max-w-50% mobile:w-full">
+        <form class="d-flex w-100%">
           <input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
           <button class="rounded-left-0 btn btn-default" style="margin-left:-1px">
             Search
@@ -34,9 +34,24 @@
       </div>
       
       <div>
-        <button class="btn btn-default"> Wishlist 	</button>	
-        <button class="btn btn-default">  Sign up 	</button>	
-        <button class="btn btn-primary">  My cart (0) 	</button>
+        <button class="btn btn-default"> 
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+					</span>
+					<span class="tablet:hidden"> Wishlist </span>
+				</button>	
+        <button class="btn btn-default"> 
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+					</span>
+					<span class="tablet:hidden"> Sign up </span>
+				</button>	
+        <button class="btn btn-primary"> 
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+					</span>
+					<span  class="tablet:hidden">My cart</span> (0) 	
+				</button>
       </div>
 
     </div>
@@ -44,8 +59,8 @@
 </header> <!-- section-header end.// -->
   
 <nav class="border-bottom py-1">
-  <div  class="container">
-    <ul class="nav">
+  <div  class="container px-3">
+    <ul class="nav mobile:justify-content-center">
       <li><a href="#main" class="nav-link">Hot offers</a></li>
       <li><a href="#about" class="nav-link">Recommends</a></li>
       <li><a href="#features" class="nav-link">Gift boxes</a></li>
@@ -68,7 +83,7 @@
 			    <h1 class="text-white fs-4xl sm:fs-6xl md:fs-7xl"> Best products & <br> brands in our store  </h1>
 			    <p class="text-white  fs-xl md:fs-3xl fw-light mb-8">Trendy Products, Factory Prices, Excellent Service</p>
 			    <a href="#" class="btn btn-lg" style="--btn-bg:var(--yellow-500); --btn-bg-hover:var(--yellow-400)"> Purchase now</a> 
-			    <a href="#" class="btn btn-lg btn-primary-subtle" style="--btn-bg:var(--primary-500); --btn-bg-hover:var(--primary-400); --btn-text-color:#fff"> Learn more </a>
+			    <a href="#" class="btn btn-lg" style="--btn-bg:var(--primary-500); --btn-bg-hover:var(--primary-400); --btn-text-color:#fff"> Learn more </a>
 			  </article>
 			</div> <!-- col.// -->
 			

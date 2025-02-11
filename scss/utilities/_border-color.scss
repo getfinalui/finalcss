@@ -31,8 +31,8 @@
 .group:hover .group-hover\:border-none { border: none !important; }
 .group:hover .group-hover\:border-inherit{ border: inherit !important; }
 
-.group:hover .border-weak { border-color: var(--border-color-weak) !important;}
-.group:hover .border-strong { border-color: var(--border-color-strong) !important;}
+.group:hover .group-hover\:border-weak { border-color: var(--border-color-weak) !important;}
+.group:hover .group-hover\:border-strong { border-color: var(--border-color-strong) !important;}
 .group:hover .group-hover\:border-dark{ border-color: #000 !important; }
 .group:hover .group-hover\:border-black{ border-color: #000 !important; }
 .group:hover .group-hover\:border-white{ border-color: #fff !important; }

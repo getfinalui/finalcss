@@ -21,7 +21,7 @@
     }
   }
 
-  // Genarate text colors with single shade (600), It is used in text-style.scss
+  // Genarate text colors with single shade (600), It is used in text-color.scss
   // Ex: --text-color-primary: var(--primary-600); --text-color-green: var(--green-600);
   @each $color, $shades in $colors_list {
     --text-color-#{$color}: var(--#{$color}-600);
@@ -37,7 +37,7 @@
   --bg-color-raised: #fff;
   --border-color-weak: var(--neutral-100);
   --border-color-default: var(--neutral-200);
-  --border-color-strong: var(--neutral-300);
+  --border-color-strong: var(--neutral-400);
   --text-color-base: #000;
   --text-color-secondary: var(--neutral-500);
   --text-color-muted: var(--neutral-400);
@@ -65,7 +65,7 @@
     }
   }
   
-  // Genarate text colors with single shade (700). It is used in text-style.scss
+  // Genarate text colors with single shade (700). It is used in text-color.scss
   // Ex: --text-color-primary: var(--primary-700); --text-color-green: var(--green-700);
   @each $color, $shades in $colors_list_darkmode {
     --text-color-#{$color}: var(--#{$color}-700);
@@ -81,7 +81,7 @@
   --bg-color-raised: var(--neutral-200);
   --border-color-weak: var(--neutral-100);
   --border-color-default: var(--neutral-200);
-  --border-color-strong: var(--neutral-300);
+  --border-color-strong: var(--neutral-400);
   --text-color-base: #fff;
   --text-color-secondary: var(--neutral-600);
   --text-color-muted: var(--neutral-400);
