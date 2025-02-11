@@ -79,15 +79,25 @@
 
 
 <header class="py-2 border-bottom">
-	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+	<div class="container mobile:px-2">
+		<div class="d-flex gap-2 align-items-center justify-content-between">
 			
-			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo.svg" alt="" height="40">
-				<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
-			</a>
+			<div class="d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 md:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="mobile:hidden hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+					<img src="logo.svg" alt="" height="40">
+					<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				</a>
+			</div>
 			
-			<nav class="nav nav-row ml-auto">
+			<nav class="nav nav-row ml-auto tablet:hidden">
 					<a class="nav-link active" href="#"> Home </a>
 					<a class="nav-link" href="#">About</a>
 					<a class="nav-link" href="#">Services</a>
@@ -117,7 +127,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Header example <br>
+		<p class="text-secondary">Header example 1<br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -128,15 +138,25 @@
 </section>
 
 <header class="py-2 border-bottom">
-	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+	<div class="container mobile:px-2">
+		<div class="d-flex gap-2 align-items-center justify-content-between">
 
-			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo.svg" alt="" height="40">
-				<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
-			</a>
+			<div class="d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 md:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+					<img src="logo.svg" alt="" height="40">
+					<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				</a>
+			</div>
 			
-			<ul class="nav nav-row ml-auto">
+			<ul class="nav nav-row ml-auto tablet:hidden">
 				<li class="item-nav">
 					<a class="nav-link active" href="#"> Home  </a>
 				</li>
@@ -155,21 +175,22 @@
 				<li class="item-nav">
 					<a class="nav-link" href="#">Contacts</a>
 				</li>
-				<li class="item-nav">
-						<a class="nav-link px-2 p-1" href="#" data-toggle="menu_profile_1">
-							<span class="avatar avatar-sm">A</span>
-							<span>Profile</span>
-							<i class="icon-dropdown"></i>
-						</a>
-						<ul class="dropdown right-0" id="menu_profile_1" style="display: none;">
-							<li> <a class="dropdown-item" href="#">Profile</a> </li>
-							<li> <a class="dropdown-item" href="#">Account Settings</a> </li>
-							<li> <a class="dropdown-item" href="#">Newsletter</a> </li>
-							<li> <hr> </li>
-							<li> <a class="dropdown-item" href="#">Sign Out</a> </li>
-						</ul>
-				 </li>
 			</ul>
+			
+			<div class="item-nav">
+				<a class="nav-link px-2 p-1" href="#" data-toggle="menu_profile_1">
+					<span class="avatar avatar-sm">A</span>
+					<span>Profile</span>
+					<i class="icon-dropdown"></i>
+				</a>
+				<ul class="dropdown right-0" id="menu_profile_1" style="display: none;">
+					<li> <a class="dropdown-item" href="#">Profile</a> </li>
+					<li> <a class="dropdown-item" href="#">Account Settings</a> </li>
+					<li> <a class="dropdown-item" href="#">Newsletter</a> </li>
+					<li> <hr> </li>
+					<li> <a class="dropdown-item" href="#">Sign Out</a> </li>
+				</ul>
+			</div>
 
 		</div>
 	</div> <!-- container end.// -->
@@ -177,7 +198,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Header example <br>
+		<p class="text-secondary">Header example 2<br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -188,43 +209,51 @@
 </section>
 
 <header class="py-2 border-bottom">
-	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+	<div class="container mobile:px-2">
+		<div class="d-flex gap-2 align-items-center justify-content-between">
 			
-			<div class="lg:col-3">
-				
-				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+			<div class="lg:col-3 d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 md:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="hover:opacity-80 d-none sm:d-flex text-decoration-none align-items-center m-0">
 					<img src="logo.svg" alt="" height="40">
 					<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 				</a>
-
 			</div>
 			
-			<ul class="lg:col-auto nav">
-				<li class="item-nav">
-					<a class="nav-link active" href="#"> Home  </a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">Services</a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">Projects</a>
-				</li>
-				<li class="item-nav group">
-					<a class="nav-link" href="#">More dropdown <i class="icon-dropdown"></i> </a>
-					<nav class="dropdown lg:min-w-60 group-hover:d-block d-none">
-						<a class="dropdown-item" href="#">Great courses</a>
-						<a class="dropdown-item" href="#">Documentation</a>
-						<a class="dropdown-item" href="#">Newsletter</a>
-						<hr>  
-						<a class="dropdown-item" href="#">Example link</a>  
-						<a class="dropdown-item" href="#">Great sample</a>  
-					</nav>
-				</li>
-			</ul>
+			<div class="lg:col-auto d-none md:d-block">
+				<ul class="nav">
+					<li class="item-nav">
+						<a class="nav-link active" href="#"> Home  </a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">Projects</a>
+					</li>
+					<li class="item-nav group">
+						<a class="nav-link" href="#">More dropdown <i class="icon-dropdown"></i> </a>
+						<nav class="dropdown lg:min-w-60 group-hover:d-block d-none">
+							<a class="dropdown-item" href="#">Great courses</a>
+							<a class="dropdown-item" href="#">Documentation</a>
+							<a class="dropdown-item" href="#">Newsletter</a>
+							<hr>  
+							<a class="dropdown-item" href="#">Example link</a>  
+							<a class="dropdown-item" href="#">Great sample</a>  
+						</nav>
+					</li>
+				</ul>
+			</div>
 
 			<div class="lg:col-3 lg:text-right">		
 				<button class="btn btn-default">  Button 	</button>
@@ -237,7 +266,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Header example <br>
+		<p class="text-secondary">Header example 3<br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -248,36 +277,50 @@
 </section>
 
 <header class="py-2 border-bottom">
-	<div class="container">
-		<div class="d-flex flex-col sm:flex-row align-items-center justify-content-between">
+	<div class="container mobile:px-2">
+		<div class="d-flex mobile:flex-wrap sm:flex-row gap-3 align-items-center justify-content-between">
 			
-			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo.svg" alt="" height="40">
-				<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
-			</a>
+			<div class="flex-shrink-0 d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 md:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+					<img src="logo.svg" alt="" height="40">
+					<div style="font-size:24px;" class="d-none sm:d-flex text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				</a>
+				
+			</div>
 			
-			<ul class="nav col-12 lg:col-auto lg:mr-auto lg:ml-5 justify-content-center">
-				<li class="item-nav">
-					<a class="nav-link active" href="#"> Home  </a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">Services</a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">Projects</a>
-				</li>
-				<li class="item-nav">
-					<a class="nav-link" href="#">Good menu</a>
-				</li>
-			</ul>
+			<div class="col-12 lg:col-auto lg:mr-auto d-none md:d-flex">
+				<ul class="nav flex-nowrap justify-content-center">
+					<li class="item-nav">
+						<a class="nav-link active" href="#"> Home  </a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">Projects</a>
+					</li>
+					<li class="item-nav">
+						<a class="nav-link" href="#">Good menu</a>
+					</li>
+				</ul>
+			</div>
 
-			<form class="col-12 mr-2 lg:col-auto">
-				<input type="search" placeholder="Search" class="form-control">
-			</form>
-			<div class="text-right d-flex gap-2">	
+			<div class="col-12 md:col-4 lg:col-3 mobile:order-3">
+					<input type="search" placeholder="Search" class="form-control">
+			</div>
+
+			<div class="text-right d-flex gap-1">	
 				<button class="btn btn-default">  Button 	</button>
 				<button class="btn btn-primary">  Get finalcss 	</button>
 			</div>
@@ -288,7 +331,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Header example <br>
+		<p class="text-secondary">Header example 4<br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -299,20 +342,26 @@
 </section>
 
 <header class="border-bottom">
-	<div class="container">
-		<section class="py-3 d-flex flex-col lg:flex-row gap-2 align-items-center justify-content-between">
+	<div class="container mobile:px-2">
+		<section class="d-flex mobile:flex-wrap py-3  gap-2 align-items-center justify-content-between">
 			
-			<div class="mr-5">
-				
-				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-					<img src="logo.svg" alt="" height="40">
-					<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+			<div class="d-flex align-items-center mr-4">
+				<button class="btn btn-default btn-icon mr-2 sm:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="d-block flex-shrink-0 hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+					<img src="logo.svg" height="40">
+					<div style="font-size:24px;" class="tablet:hidden text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 				</a>
-
 			</div>
 
-			<div class="relative">
-				<button data-toggle="mymenu_1" class="btn btn-primary-subtle has-icon-dropdown"> 
+			<div class="relative mobile:order-3 mobile:w-full">
+				<button data-toggle="mymenu_1" class="btn mobile:w-full btn-primary-subtle has-icon-dropdown"> 
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
 					All categories
 				</button>
@@ -322,8 +371,8 @@
 				</menu>
 			</div>
 
-			<div class="flex-grow">
-				<form class="d-flex mr-5">
+			<div class="flex-grow mobile:order-2 mobile:w-full">
+				<form class="d-flex w-full mr-5">
 					<div class="relative w-full">
 						<input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
 					</div>
@@ -333,24 +382,26 @@
 				</form>
 			</div>
 
-			<div class="d-flex lg:justify-content-end">	
+			<div class="d-flex gap-1 lg:justify-content-end">	
 
 				<button class="btn"> 
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-					  Sign in 	
+						<span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+					  <span class="d-none lg:d-block">Sign in </span>	
 				</button>
 
 				<button class="btn">  
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-					Wishlist (0) 	
+						<span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> </span>
+						<span class="d-none lg:d-block">Wishlist (0) 	</span>
 				</button>
 
 				<!-- button with dropdown  -->
 				<div class="relative">
 					<button data-toggle="mycart_1" class="btn has-icon-dropdown"> 
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
-						</svg>
-						Cart (2) 	
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+								</svg>
+							</span>
+							<span>Cart (2) </span>
 					</button>
 					<menu id="mycart_1" class="dropdown right-0 d-none">
 						<p class="text-secondary p-3 text-center min-w-60">
@@ -361,10 +412,9 @@
 				<!-- button with dropdown .//end  -->
 
 			</div>
-
 		</section>
 
-		<nav class="py-2 border-top">
+		<nav class="py-2 border-top mobile:hidden">
 			<ul class="nav">
 				<li class="item-nav">
 					<a class="nav-link" href="#"> Home  </a>
@@ -394,7 +444,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Header example <br>
+		<p class="text-secondary">Header example 5<br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -405,15 +455,25 @@
 </section>
 
 <header class="border-bottom">
-	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+	<div class="container mobile:px-2">
+		<div class="d-flex gap-2 tablet:py-2 align-items-center justify-content-between">
 			
-			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo.svg" alt="" height="40">
-				<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
-			</a>
+			<div class="d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 md:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+					<img src="logo.svg" alt="" height="40">
+					<div style="font-size:24px;" class="mobile:hidden text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				</a>
+			</div>
 			
-			<ul class="nav nav-underline">
+			<ul class="nav nav-underline tablet:d-none">
 			  <li class="item-nav active"><a href="#" class="nav-link"> Home </a></li>
 				<li class="item-nav"><a href="#" class="nav-link"> About </a></li>
 				<li class="item-nav"><a href="#" class="nav-link"> Services </a></li>
@@ -431,7 +491,7 @@
 				</li>
 			</ul>
 
-			<div>		
+			<div class="d-flex gap-1">		
 				<button class="btn btn-default">  Button 	</button>
 				<button class="btn btn-primary">  Get finalcss 	</button>
 			</div>
@@ -442,7 +502,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Tab style header example <br>
+		<p class="text-secondary">Tab style header example 6<br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -454,15 +514,25 @@
 
 
 <header class="border-bottom">
-	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+	<div class="container px-2">
+		<div class="d-flex flex-row tablet:py-2 gap-2 align-items-center justify-content-between">
 			
-			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo.svg" alt="" height="40">
-				<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
-			</a>
+			<div class="d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 md:d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
+							<path d="M4 19L20 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</button>
+	
+				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+					<img src="logo.svg" alt="" height="40">
+					<div style="font-size:24px;" class="mobile:hidden text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				</a>
+			</div>
 			
-			<nav class="nav nav-underline my-1">
+			<nav class="nav nav-underline tablet:hidden my-1">
 			  <a href="#" class="nav-link active"> Home </a>
 				<a href="#" class="nav-link"> About </a>
 				<a href="#" class="nav-link"> Services </a>
@@ -470,7 +540,7 @@
 				<a href="#" class="nav-link"> Example </a>
 			</nav>
 
-			<div>		
+			<div class="d-flex gap-1">		
 				<button class="btn btn-default">  Button 	</button>
 				<button class="btn px-1 btn-primary-subtle has-icon-dropdown"> <span class="avatar avatar-sm"> M </span></button>
 			</div>
@@ -481,7 +551,7 @@
 
 <section class="py-10 bg-neutral-200">
   <div class="container">
-		<p class="text-secondary">Tab style header example <br>
+		<p class="text-secondary">Tab style header example 7 <br>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

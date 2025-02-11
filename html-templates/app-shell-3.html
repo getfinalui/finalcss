@@ -43,10 +43,10 @@
 </head>
 <body>
 
-<header class="d-flex p-3 lg:px-5 align-items-center border-bottom h-14 bg-base z-100 sticky top-0">
+<header class="d-flex p-2 lg:px-5 align-items-center border-bottom h-14 bg-base z-100 sticky top-0">
 	
 	<!-- header-left  -->
-	<div class="d-flex flex-grow">
+	<div class="d-flex flex-grow align-items-center">
 		
 		<!-- mobile hamburger button  -->
 		<button class="btn btn-default btn-icon mr-3 md:d-none">
@@ -57,7 +57,7 @@
 			</svg>
 		</button>
 		<!-- mobile hamburger button .//end -->
-		<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
+		<a href="https://finalcss.com" class="mobile:hidden  hover:opacity-80 d-flex flex-shrink-0 text-decoration-none align-items-center m-0">
 			<img src="logo.svg" alt="" height="40">
 			<div style="font-size:24px;" class="text-neutral-1000 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 		</a>
@@ -89,12 +89,14 @@
 		<button class="btn btn-icon btn-default">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use color="var(--neutral-700)" href="#icon-bell"/></svg>								
 		</button>
-		<button class="btn btn-icon btn-default">
+		<button class="btn btn-icon btn-default mobile:hidden">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use color="var(--neutral-700)" href="#icon-setting"/></svg>								
 		</button>
+
 		<a class="btn btn-primary" href="#">Create</a>
-		<a href="#" class="btn rounded-circle btn-icon">
-			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use color="var(--neutral-700)" href="#icon-user"/></svg>			
+
+		<a href="#" class="btn btn-primary-subtle rounded-circle btn-icon  mobile:hidden">
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use href="#icon-user"/></svg>			
 		</a>
 	</div>
 	<!-- header-right .//end --> 
@@ -113,43 +115,43 @@
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-product"/></svg>										
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-people"/></svg>		
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-building"/></svg>		
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-image"/></svg>		
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-time"/></svg>	
 					</a>
 				</li>
 				<li class="w-100%"> <hr class="w-100%"> </li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-truck"/></svg>	
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-chart"/></svg>
 					</a>
 				</li>
 				<li>
-					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-color-strong text-base" href="#">
+					<a class="bg-raised w-10 h-10 d-flex border flex-center rounded hover:border-primary text-base" href="#">
 							<svg width="20" height="20"><use href="#icon-file"/></svg>	
 					</a>
 				</li>
