@@ -15,32 +15,35 @@
   > li { position:relative; margin-bottom:0.5rem;  }
 }
 
+// Use any symbol from 
+// https://www.toptal.com/designers/htmlarrows/symbols/
+// https://www.w3schools.com/cssref/css_entities.php
 
 .list-bullet{
-  list-style: none; margin-left:0; padding-left:0; margin-top:0.5rem;
-  > li{ padding-left:20px;  position:relative; margin-bottom:0.5rem;  }
+  list-style: none; margin-left:0; padding-left:0; margin-top:0.6rem;
+  > li{ padding-left:1.6em;  position:relative; margin-bottom:0.6rem;  }
   > li::before { 
-      content: " ";
+      content: "\25CF";
+      color:var(--primary-500, #04b4a0);
+      font-size: 0.8em;
       position:absolute;
+      margin-top:0.25em;
       left:0;  
-      top:0.5rem;
-      width: 10px; 
-      height: 10px;
-      background:orange;  
-      border-radius:100%;
+      top:0;
   }
 }
 
+
 .list-check{
-  list-style: none; margin-left:0; padding-left:0; margin-top:0.5rem;
-  > li{ padding-left:24px; position:relative; margin-bottom:0.5rem;  }
+  list-style: none; margin-left:0; padding-left:0; margin-top:0.6rem;
+  > li{ padding-left:1.6em; position:relative; margin-bottom:0.6rem;  }
   > li::before {
-  	  font-weight:bold;
-  	  color:green;
       content: "\2713";
+  	  color:var(--primary-500, #04b4a0);
+      font-weight: bold;
       position:absolute;
       left:0;  
-      top:0.5rem;
+      top:0;
 	}
 }
 
