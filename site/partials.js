@@ -11,23 +11,24 @@ class HeaderComponent extends HTMLElement {
     template.innerHTML = `
 
 <dialog id="mobile_menu" class="md:d-none" style="margin-top:12px">
-		<button type="button" class="btn float-right btn-icon btn-plain absolute right-0 top-0 m-1" onclick="document.getElementById('mobile_menu').close()">
+    <button type="button" class="btn btn-icon absolute top-0 right-0 m-2 float-right" onclick="document.getElementById('mobile_menu').close()">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 				<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 			</svg> 
 		</button>
-		<nav class="nav nav-col">
-			<a href="index.html" class="nav-link">Home</a>
-			<a href="docs.html" class="nav-link">Docs</a>
-			<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog</a>
-			<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit </a>  
+		<h5>FinalCSS</h5>
+    <hr>
+		<nav class="nav nav-col" style="margin:0 -8px;">
+			<a href="index.html" class="nav-link"> Home </a>
+			<a href="docs.html" class="nav-link"> Documentation </a>
+      <a href="templates.html" class="nav-link"> Templates </a>
+			<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr;  </a>
+			<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr;  </a>  
 			<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
-			<hr>
-			<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-default">Download</a>
 		</nav>
 </dialog>
 	
-<header class="bg-neutral-0 py-2 border-bottom">
+<header class="bg-neutral-0 py-2 border-bottom sticky top-0 z-10">
 	<div class="container">
 		<div class="d-flex flex-column md:flex-row align-items-center">
 			<div>
@@ -39,13 +40,14 @@ class HeaderComponent extends HTMLElement {
 			<div class="ml-auto d-flex align-items-center">
 				<nav class="nav d-none md:d-flex align-items-center">
 					<a href="index.html" class="nav-link">Home</a>
-					<a href="docs.html" class="nav-link">Docs</a>
-					<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog</a>
-					<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit </a>  
+					<a href="docs.html" class="nav-link"> Documentation </a>
+          <a href="templates.html" class="nav-link"> Templates </a>
+					<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr; </a>
+					<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr; </a>  
 					<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
 					<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-default">Download</a>
 				</nav>
-				<button id="themeSwitcher" onclick="themeswitch()" class="ml-1 btn btn-icon">
+				<button onclick="themeSwitcher()" class="ml-1 btn btn-icon">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
@@ -90,14 +92,27 @@ class SidebarComponent extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
 
-        <nav class="md:border-right border-bottom md:border-bottom-0 lg:pr-5 pt-5 pb-5 h-100%">
-          <ul id="doc_sidebar" class="nav nav-col sticky-top top-5">
+        <nav class="md:border-right pt-4 pb-4 pr-2 sticky h-full scrollbar-thin overflow-y-scroll" style="max-height:calc(100vh - 57px); top:57px">
+          <ul id="doc_sidebar" class="nav nav-col nav-compact">
             <li><a class="nav-link" href="docs.html">Getting started</a></li>
             <li><a class="nav-link" href="docs-customize.html">Customization</a></li>
             <li><a class="nav-link" href="docs-theme.html">Theme & colors</a></li>
             <li><a class="nav-link" href="docs-grid.html">Grid system</a></li>
-            <li><a class="nav-link" href="docs-components.html">Components</a></li>
-            <li><a class="nav-link" href="docs-forms.html">Form elements</a></li>
+            <li><hr></li>
+            <li><a class="nav-link" href="docs-component-alert.html">Alert</a></li>
+            <li><a class="nav-link" href="docs-component-avatar.html">Avatar</a></li>
+            <li><a class="nav-link" href="docs-component-badge.html">Badge</a></li>
+            <li><a class="nav-link" href="docs-component-button.html">Button</a></li>
+            <li><a class="nav-link" href="docs-component-card.html">Card</a></li>
+            <li><a class="nav-link" href="docs-component-dialog.html">Dialog</a></li>
+            <li><a class="nav-link" href="docs-component-dropdown.html">Dropdown</a></li>
+            <li><a class="nav-link" href="docs-component-forms.html">Form elements</a></li>
+            <li><a class="nav-link" href="docs-component-nav.html">Nav menu</a></li>
+            <li><a class="nav-link" href="docs-component-segment.html">Segmented control</a></li>
+            <li><a class="nav-link" href="docs-component-table.html">Table</a></li>
+            <li><a class="nav-link" href="docs-component-tabs.html">Tabs</a></li>
+            <li><a class="nav-link" href="docs-component-tag.html">Tag / chips</a></li>
+            <li><hr></li>
             <li><a class="nav-link" href="docs-utilities.html">Utility classes</a></li>
             <hr>
             <li><a class="nav-link" href="docs-links.html">Good resources</a></li>
