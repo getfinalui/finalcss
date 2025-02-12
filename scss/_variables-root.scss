@@ -28,9 +28,9 @@
   }
 
   // SEMANIC (ALIAS) COLOR VARIABLES FOR LIGHT-MODE
-  --alpha-1: rgba(0,0,0,.06);
-  --alpha-2: rgba(0,0,0,.10);
-  --alpha-3: rgba(0,0,0,.15);
+  --alpha-1: rgba(0,20,60,.06);
+  --alpha-2: rgba(0,20,60,.10);
+  --alpha-3: rgba(0,20,60,.15);
   --bg-color-base: #fff;
   --bg-color-secondary: var(--neutral-100);
   --bg-color-lower: var(--neutral-100);
@@ -72,9 +72,9 @@
   }
 
   // SEMANIC (ALIAS) COLOR VARIABLES FOR DARK-MODE
-  --alpha-1: rgba(255,255,255,.06);
-  --alpha-2: rgba(255,255,255,.10);
-  --alpha-3: rgba(255,255,255,.15);
+  --alpha-1: rgba(255,255,255,.1);
+  --alpha-2: rgba(255,255,255,.15);
+  --alpha-3: rgba(255,255,255,.2);
   --bg-color-base: var(--neutral-50); 
   --bg-color-secondary: var(--neutral-100);
   --bg-color-lower: #000;

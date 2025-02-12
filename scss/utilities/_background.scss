@@ -2,34 +2,40 @@
 
 // Semantic names for background-colors
 .bg-base{ background-color:var(--bg-color-base); }
+.bg-none{ background: none; }
+.bg-initial{ background-color: initial; }
 .bg-inherit{ background-color: inherit; }
 .bg-transparent{ background-color: transparent; }
 .bg-secondary{ background-color:var(--bg-color-secondary); }
 .bg-lower{ background-color:var(--bg-color-lower); }
 .bg-raised{ background-color:var(--bg-color-raised);}
-.bg-alpha-1{ background-color:var(--bg-alpha-1);}
-.bg-alpha-2{ background-color:var(--bg-alpha-2);}
-.bg-alpha-3{ background-color:var(--bg-alpha-3);}
+.bg-alpha-1{ background-color:var(--alpha-1);}
+.bg-alpha-2{ background-color:var(--alpha-2);}
+.bg-alpha-3{ background-color:var(--alpha-3);}
 .bg-white{background-color:#fff;}
 .bg-black{ background-color:#000;}
 .bg-dark{background-color:#000;}
 
 // Hover effect
 .hover\:bg-base:hover{ background-color:var(--bg-color-base); }
+.hover\:bg-none:hover{ background: none; }
+.hover\:bg-initial:hover{ background-color: initial; }
 .hover\:bg-inherit:hover{ background-color: inherit; }
 .hover\:bg-transparent:hover{ background-color: transparent; }
 .hover\:bg-secondary:hover{ background-color:var(--bg-color-secondary);}
 .hover\:bg-lower:hover{ background-color:var(--bg-color-lower); }
 .hover\:bg-raised:hover{ background-color:var(--bg-color-raised);}
-.hover\:bg-alpha-1:hover{ background-color:var(--bg-alpha-1);}
-.hover\:bg-alpha-2:hover{ background-color:var(--bg-alpha-2);}
-.hover\:bg-alpha-3:hover{ background-color:var(--bg-alpha-3);}
+.hover\:bg-alpha-1:hover{ background-color:var(--alpha-1);}
+.hover\:bg-alpha-2:hover{ background-color:var(--alpha-2);}
+.hover\:bg-alpha-3:hover{ background-color:var(--alpha-3);}
 .hover\:bg-white:hover{background-color:#fff;}
 .hover\:bg-black:hover{ background-color:#000;}
 .hover\:bg-dark:hover{background-color:#000;}
 
 // Group-Hover effect 
 .group:hover .group-hover\:bg-base{ background-color:var(--bg-color-base); }
+.group:hover .group-hover\:bg-none{ background: none; }
+.group:hover .group-hover\:bg-initial{ background-color: initial; }
 .group:hover .group-hover\:bg-inherit{ background-color: inherit; }
 .group:hover .group-hover\:bg-transparent{ background-color: transparent; }
 .group:hover .group-hover\:bg-secondary{ background-color:var(--bg-color-secondary);}
