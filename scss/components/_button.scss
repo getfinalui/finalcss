@@ -15,8 +15,8 @@
   --btn-font-size-sm: 0.96rem;
   --btn-font-size-lg: 1.1rem;
   --btn-font-weight:400;
-  --btn-bg: var(--alpha-1);
-  --btn-bg-hover: var(--alpha-2);
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--alpha-1);
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
   --btn-border-radius: #{$border-radius-base};
@@ -157,4 +157,11 @@
   --btn-bg-hover: var(--neutral-700);
   --btn-text-color: var(--neutral-0);
 }
-/// BEBI
+
+// We will override btn-neutral variant, because of better UI
+.btn-neutral, .btn-neutral-subtle{
+  --btn-bg: var(--alpha-2);
+  --btn-bg-hover: var(--alpha-3);
+  --btn-text-color: var(--text-color-base);
+  box-shadow: none!important;
+}

@@ -47,7 +47,7 @@ class HeaderComponent extends HTMLElement {
 					<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
 					<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-default">Download</a>
 				</nav>
-				<button onclick="themeSwitcher()" class="ml-1 btn btn-icon">
+				<button onclick="themeSwitcher()" class="ml-1 btn btn-neutral btn-icon">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
