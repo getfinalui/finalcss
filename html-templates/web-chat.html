@@ -39,11 +39,11 @@
   <aside class="border-right md:max-w-30% h-full tablet:w-full">
     <div class="d-flex flex-col h-full overflow-hidden">
       
-      <header class="p-4 h-16 border-bottom">
+      <header class="p-3 h-16 border-bottom">
         <div class="d-flex align-items-center justify-content-between">
-          <h4 class="mb-0">Chats</h4>
+          <h4 class="mb-0 ml-2">Chats</h4>
           <div>
-            <button onclick="themeSwitcher()" class="btn btn-sm btn-icon btn-default">
+            <button onclick="themeSwitcher()" class="btn btn-icon btn-neutral">
               <span class="d-none dark:d-block"> 🌞  </span>
               <span class="dark:d-none">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -58,10 +58,10 @@
       </section>
 
       <section>
-        <nav class="tabs px-3 shadow-sm fw-medium">
-          <a class="tab-item active" href="#"> All </a>
-          <a class="tab-item" href="#"> Personal </a>
-          <a class="tab-item" href="#"> Groups </a>
+        <nav class="nav-tabs px-3 shadow-sm fw-medium border-bottom">
+          <a class="tab-link active" href="#"> All </a>
+          <a class="tab-link" href="#"> Personal </a>
+          <a class="tab-link" href="#"> Groups </a>
         </nav>
       </section>
       
@@ -203,11 +203,11 @@
 
         <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
           <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
+            <div class="avatar bg-yellow-500"> G </div>
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Mike John</h5> 
+              <h5 class="fw-medium mb-0">George Alexander</h5> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -218,11 +218,11 @@
 
         <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
           <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
+            <div class="avatar bg-orange-500"> T </div>
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Mike John</h5> 
+              <h5 class="fw-medium mb-0">Tony John</h5> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -233,7 +233,7 @@
 
         <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
           <div class="mr-3">
-            <div class="avatar bg-red-500"> T </div>
+            <div class="avatar bg-purple-500"> T </div>
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
@@ -261,8 +261,13 @@
         </button>
 
         <figure class="d-flex align-items-center mr-auto">
-          <div class="avatar mr-2 avatar-sm"> A </div>
-          <figcaption> Alex John</figcaption>
+          <div class="avatar mr-2 avatar">
+            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="40" height="40">
+          </div>
+          <figcaption> 
+            <h6>Alexandra John</h6>
+            <small class="text-sm text-green"> &#9679; Online</small>
+          </figcaption>
         </figure>
 
         <button class="btn btn-default btn-icon ml-3">
