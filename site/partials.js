@@ -98,7 +98,11 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="docs-customize.html">Customization</a></li>
             <li><a class="nav-link" href="docs-theme.html">Theme & colors</a></li>
             <li><a class="nav-link" href="docs-grid.html">Grid system</a></li>
-            <li><hr></li>
+            <li><a class="nav-link" href="docs-howto.html">How to (tutorials) </a></li>
+            <li class="px-2">
+              <hr>
+              <h6 class="mb-2"> Components </h6>
+            </li>
             <li><a class="nav-link" href="docs-component-alert.html">Alert</a></li>
             <li><a class="nav-link" href="docs-component-avatar.html">Avatar</a></li>
             <li><a class="nav-link" href="docs-component-badge.html">Badge</a></li>
@@ -112,10 +116,44 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="docs-component-table.html">Table</a></li>
             <li><a class="nav-link" href="docs-component-tabs.html">Tabs</a></li>
             <li><a class="nav-link" href="docs-component-tag.html">Tag / chips</a></li>
-            <li><hr></li>
-            <li><a class="nav-link" href="docs-utilities.html">Utility classes</a></li>
-            <hr>
-            <li><a class="nav-link" href="docs-links.html">Good resources</a></li>
+            <li class="px-2">
+              <hr>
+              <h6 class="mb-2"> Utiltiy classes </h6>
+            </li>
+            <li><a class="nav-link" href="docs-display-layout.html"> Display (block, flex) </a></li>
+            <li><a class="nav-link" href="docs-size.html"> Size (width, height) </a></li>
+            <li><a class="nav-link" href="docs-margin.html">Margin</a></li>
+            <li><a class="nav-link" href="docs-padding.html"> Padding </a></li>
+            <li><a class="nav-link" href="docs-float.html"> Float </a></li>
+            <li><a class="nav-link" href="docs-gap.html">Gap</a></li>
+            <li><a class="nav-link" href="docs-positions.html"> Positions </a></li>
+            <li><a class="nav-link" href="docs-columns.html">Columns</a></li>
+            <li><a class="nav-link" href="docs-overflow.html"> Overflow </a></li>
+            <li> <hr class="my-1"> </li>
+            <li><a class="nav-link" href="docs-text-color.html"> Text color </a></li>
+            <li><a class="nav-link" href="docs-text-size.html"> Text size </a></li>
+            <li><a class="nav-link" href="docs-text-style.html"> Text style </a></li>
+            <li> <hr class="my-1"> </li>
+            <li><a class="nav-link" href="docs-bacckground.html">Background</a></li>
+            <li><a class="nav-link" href="docs-border-color.html">Border color</a></li>
+            <li><a class="nav-link" href="docs-border-radius.html">Border radius</a></li>
+            <li><a class="nav-link" href="docs-shadow.html"> Shadow </a></li>
+            <li><a class="nav-link" href="docs-opacity.html">Opacity</a></li>
+            <li><a class="nav-link" href="docs-gradient.html">Gradient</a></li>
+            <li><a class="nav-link" href="docs-object-fit.html">Object fit</a></li>
+            <li> <hr class="my-1"> </li>
+            <li><a class="nav-link" href="docs-list.html">List</a></li>
+            <li><a class="nav-link" href="docs-order.html"> Order </a></li>
+            <li><a class="nav-link" href="docs-ratio.html"> Ratio </a></li>
+            <li><a class="nav-link" href="docs-scale.html"> Scale </a></li>
+            <li><a class="nav-link" href="docs-vertical-align.html"> Vertical align </a></li>
+            <li><a class="nav-link" href="docs-visibility.html"> Visibility </a></li>
+            <li><a class="nav-link" href="docs-whitespace.html"> White-space </a></li>
+            <li><a class="nav-link" href="docs-cursor.html"> Cursor </a></li>
+            <li><a class="nav-link" href="docs-z-index.html"> Z-index </a></li>
+            <li><hr class="my-1"></li>
+            <li><a class="nav-link" href="docs-links.html">Useful resources</a></li>
+            <li><br></li>
           </ul>
 
         </nav>
@@ -207,16 +245,3 @@ class BottomComponent extends HTMLElement {
 }
 // Define the doc sidebar component
 customElements.define('bottom-component', BottomComponent);
-
-
-
-
-
-
-
-
-
-
-
-
-
