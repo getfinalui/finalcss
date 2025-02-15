@@ -223,10 +223,10 @@ class BottomComponent extends HTMLElement {
     </div> <!-- container end -->
 </section>
 
-<footer class="bg-base border-top py-10">
+<footer class="bg-secondary border-top py-6">
   <div class="container">
     <section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
-        <p class="md:mb-0 mb-3 text-center md:text-left"> © 2025 <b>Final CSS.</b> Modern CSS library <br> based on Final UI - Design System  </p>  
+        <p class="md:mb-0 mb-3 text-center md:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
         <nav class="nav">
             <a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
