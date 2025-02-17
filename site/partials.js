@@ -19,9 +19,9 @@ class HeaderComponent extends HTMLElement {
 		<h5>FinalCSS</h5>
     <hr>
 		<nav class="nav nav-col" style="margin:0 -8px;">
-			<a href="index.html" class="nav-link"> Home </a>
-			<a href="docs.html" class="nav-link"> Documentation </a>
-      <a href="templates.html" class="nav-link"> Templates </a>
+			<a href="/index.html" class="nav-link"> Home </a>
+			<a href="/docs/doc-start.html" class="nav-link"> Documentation </a>
+      <a href="/templates.html" class="nav-link"> Templates </a>
 			<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr;  </a>
 			<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr;  </a>  
 			<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
@@ -33,15 +33,15 @@ class HeaderComponent extends HTMLElement {
 		<div class="d-flex flex-column md:flex-row align-items-center">
 			<div>
 				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
-				<img src="logo.png" alt="Finalcss logo" height="40">
+				<img src="/logo.png" alt="Finalcss logo" height="40">
 				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 			  </a>
 			</div>
 			<div class="ml-auto d-flex align-items-center">
 				<nav class="nav d-none md:d-flex align-items-center">
-					<a href="index.html" class="nav-link">Home</a>
-					<a href="docs.html" class="nav-link"> Documentation </a>
-          <a href="templates.html" class="nav-link"> Templates </a>
+					<a href="/index.html" class="nav-link">Home</a>
+					<a href="/docs/doc-start.html" class="nav-link"> Documentation </a>
+          <a href="/templates.html" class="nav-link"> Templates </a>
 					<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr; </a>
 					<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr; </a>  
 					<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
@@ -94,65 +94,65 @@ class SidebarComponent extends HTMLElement {
 
         <nav class="md:border-right pt-4 pb-4 pr-2 sticky h-full scrollbar-thin overflow-y-scroll" style="max-height:calc(100vh - 57px); top:57px">
           <ul id="doc_sidebar" class="nav nav-col nav-compact">
-            <li><a class="nav-link" href="docs.html">Getting started</a></li>
-            <li><a class="nav-link" href="docs-customize.html">Customization</a></li>
-            <li><a class="nav-link" href="docs-theme.html">Theme & colors</a></li>
-            <li><a class="nav-link" href="docs-grid.html">Grid system</a></li>
-            <li><a class="nav-link" href="docs-howto.html">How to (tutorials) </a></li>
+            <li><a class="nav-link" href="/docs/doc-start.html">Getting started</a></li>
+            <li><a class="nav-link" href="/docs/doc-customize.html">Customization</a></li>
+            <li><a class="nav-link" href="/docs/doc-theme.html">Theme & colors</a></li>
+            <li><a class="nav-link" href="/docs/doc-grid.html">Grid system</a></li>
+            <li><a class="nav-link" href="/docs/doc-howto.html">How to (tutorials) </a></li>
             <li class="px-2">
               <hr>
               <h6 class="mb-2"> Components </h6>
             </li>
-            <li><a class="nav-link" href="docs-component-alert.html">Alert</a></li>
-            <li><a class="nav-link" href="docs-component-avatar.html">Avatar</a></li>
-            <li><a class="nav-link" href="docs-component-badge.html">Badge</a></li>
-            <li><a class="nav-link" href="docs-component-button.html">Button</a></li>
-            <li><a class="nav-link" href="docs-component-card.html">Card</a></li>
-            <li><a class="nav-link" href="docs-component-dialog.html">Dialog</a></li>
-            <li><a class="nav-link" href="docs-component-dropdown.html">Dropdown</a></li>
-            <li><a class="nav-link" href="docs-component-forms.html">Form elements</a></li>
-            <li><a class="nav-link" href="docs-component-nav.html">Nav menu</a></li>
-            <li><a class="nav-link" href="docs-component-segment.html">Segmented control</a></li>
-            <li><a class="nav-link" href="docs-component-table.html">Table</a></li>
-            <li><a class="nav-link" href="docs-component-tabs.html">Tabs</a></li>
-            <li><a class="nav-link" href="docs-component-tag.html">Tag / chips</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-alert.html">Alert</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-avatar.html">Avatar</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-badge.html">Badge</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-button.html">Button</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-card.html">Card</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-dialog.html">Dialog</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-dropdown.html">Dropdown</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-forms.html">Form elements</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-nav.html">Nav menu</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-segment.html">Segmented control</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-table.html">Table</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-tabs.html">Tabs</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-tag.html">Tag / chips</a></li>
             <li class="px-2">
               <hr>
               <h6 class="mb-2"> Utiltiy classes </h6>
             </li>
-            <li><a class="nav-link" href="docs-display-layout.html"> Display (block, flex) </a></li>
-            <li><a class="nav-link" href="docs-size.html"> Size (width, height) </a></li>
-            <li><a class="nav-link" href="docs-margin.html">Margin</a></li>
-            <li><a class="nav-link" href="docs-padding.html"> Padding </a></li>
-            <li><a class="nav-link" href="docs-float.html"> Float </a></li>
-            <li><a class="nav-link" href="docs-gap.html">Gap</a></li>
-            <li><a class="nav-link" href="docs-positions.html"> Positions </a></li>
-            <li><a class="nav-link" href="docs-columns.html">Columns</a></li>
-            <li><a class="nav-link" href="docs-overflow.html"> Overflow </a></li>
+            <li><a class="nav-link" href="/docs/doc-display-layout.html"> Display (block, flex) </a></li>
+            <li><a class="nav-link" href="/docs/doc-size.html"> Size (width, height) </a></li>
+            <li><a class="nav-link" href="/docs/doc-margin.html">Margin</a></li>
+            <li><a class="nav-link" href="/docs/doc-padding.html"> Padding </a></li>
+            <li><a class="nav-link" href="/docs/doc-float.html"> Float </a></li>
+            <li><a class="nav-link" href="/docs/doc-gap.html">Gap</a></li>
+            <li><a class="nav-link" href="/docs/doc-positions.html"> Positions </a></li>
+            <li><a class="nav-link" href="/docs/doc-columns.html">Columns</a></li>
+            <li><a class="nav-link" href="/docs/doc-overflow.html"> Overflow </a></li>
             <li> <hr class="my-1"> </li>
-            <li><a class="nav-link" href="docs-text-color.html"> Text color </a></li>
-            <li><a class="nav-link" href="docs-text-size.html"> Text size </a></li>
-            <li><a class="nav-link" href="docs-text-style.html"> Text style </a></li>
+            <li><a class="nav-link" href="/docs/doc-text-color.html"> Text color </a></li>
+            <li><a class="nav-link" href="/docs/doc-text-size.html"> Text size </a></li>
+            <li><a class="nav-link" href="/docs/doc-text-style.html"> Text style </a></li>
             <li> <hr class="my-1"> </li>
-            <li><a class="nav-link" href="docs-bacckground.html">Background</a></li>
-            <li><a class="nav-link" href="docs-border-color.html">Border color</a></li>
-            <li><a class="nav-link" href="docs-border-radius.html">Border radius</a></li>
-            <li><a class="nav-link" href="docs-shadow.html"> Shadow </a></li>
-            <li><a class="nav-link" href="docs-opacity.html">Opacity</a></li>
-            <li><a class="nav-link" href="docs-gradient.html">Gradient</a></li>
-            <li><a class="nav-link" href="docs-object-fit.html">Object fit</a></li>
+            <li><a class="nav-link" href="/docs/doc-bacckground.html">Background</a></li>
+            <li><a class="nav-link" href="/docs/doc-border-color.html">Border color</a></li>
+            <li><a class="nav-link" href="/docs/doc-border-radius.html">Border radius</a></li>
+            <li><a class="nav-link" href="/docs/doc-shadow.html"> Shadow </a></li>
+            <li><a class="nav-link" href="/docs/doc-opacity.html">Opacity</a></li>
+            <li><a class="nav-link" href="/docs/doc-gradient.html">Gradient</a></li>
+            <li><a class="nav-link" href="/docs/doc-object-fit.html">Object fit</a></li>
             <li> <hr class="my-1"> </li>
-            <li><a class="nav-link" href="docs-list.html">List</a></li>
-            <li><a class="nav-link" href="docs-order.html"> Order </a></li>
-            <li><a class="nav-link" href="docs-ratio.html"> Ratio </a></li>
-            <li><a class="nav-link" href="docs-scale.html"> Scale </a></li>
-            <li><a class="nav-link" href="docs-vertical-align.html"> Vertical align </a></li>
-            <li><a class="nav-link" href="docs-visibility.html"> Visibility </a></li>
-            <li><a class="nav-link" href="docs-whitespace.html"> White-space </a></li>
-            <li><a class="nav-link" href="docs-cursor.html"> Cursor </a></li>
-            <li><a class="nav-link" href="docs-z-index.html"> Z-index </a></li>
+            <li><a class="nav-link" href="/docs/doc-list.html">List</a></li>
+            <li><a class="nav-link" href="/docs/doc-order.html"> Order </a></li>
+            <li><a class="nav-link" href="/docs/doc-ratio.html"> Ratio </a></li>
+            <li><a class="nav-link" href="/docs/doc-scale.html"> Scale </a></li>
+            <li><a class="nav-link" href="/docs/doc-vertical-align.html"> Vertical align </a></li>
+            <li><a class="nav-link" href="/docs/doc-visibility.html"> Visibility </a></li>
+            <li><a class="nav-link" href="/docs/doc-whitespace.html"> White-space </a></li>
+            <li><a class="nav-link" href="/docs/doc-cursor.html"> Cursor </a></li>
+            <li><a class="nav-link" href="/docs/doc-z-index.html"> Z-index </a></li>
             <li><hr class="my-1"></li>
-            <li><a class="nav-link" href="docs-links.html">Useful resources</a></li>
+            <li><a class="nav-link" href="/docs/doc-links.html">Useful resources</a></li>
             <li><br></li>
           </ul>
 
@@ -171,9 +171,8 @@ customElements.define('sidebar-component', SidebarComponent);
 
 // Add "active" classname into selected menu by matching URL and linkname
 document.addEventListener("DOMContentLoaded", function(){
-  const currentPage = window.location.pathname.split('/').pop(); // Get the current page (e.g., 'about.html')
+  const currentPage = window.location.pathname; // Get the current link (e.g., 'docs/about.html')
   const links = document.querySelectorAll('#doc_sidebar a'); // Select all sidebar links
-  console.log(links);
 
   links.forEach(link => {
     // const listItem = link.parentElement; // Get the <li> containing the <a>
@@ -228,7 +227,7 @@ class BottomComponent extends HTMLElement {
     <section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
         <p class="md:mb-0 mb-3 text-center md:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
         <nav class="nav">
-            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="/docs/doc.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
             <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
         </nav>
