@@ -5,13 +5,7 @@ CNAME
 .vscode/
 package.json
 site/
+docs/
 index.html
 docs.html
-docs-utilities.html
-docs-theme.html
-docs-links.html
-docs-grid.html
-docs-forms.html
-docs-customize.html
-docs-components.html
 prepros.config
