@@ -14,25 +14,21 @@
   <title>Final CSS - Example data table (finalcss.com)</title>
 
 	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', () => {
-		const htmlElement = document.documentElement;
-		const themeSwitcher = document.getElementById('themeSwitcher');
-		// Check localStorage for saved theme
-		const savedTheme = localStorage.getItem('data-theme');
-		if (savedTheme) {
-		    htmlElement.setAttribute('data-theme', savedTheme);
-		}
-		themeSwitcher.addEventListener('click', () => {
-		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
-		    // Set the new theme on the body element
-		    htmlElement.setAttribute('data-theme', newTheme);          
-		    // Save the new theme in localStorage
-		    localStorage.setItem('data-theme', newTheme);
-		});
-	});
-
-	</script>
+    // Check localStorage for saved theme and assign that
+    const htmlElement = document.documentElement;
+    const savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    function themeSwitcher() {
+          const currentTheme = htmlElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+          // Set the new theme on the body element
+          htmlElement.setAttribute('data-theme', newTheme);          
+          // Save the new theme in localStorage
+          localStorage.setItem('site-theme', newTheme);
+    }
+  </script>
 
 
 
@@ -57,7 +53,7 @@
 				<a href="#" class="nav-link">Link one</a>
         <a href="#" class="nav-link">Link two</a>
 				
-				<button id="themeSwitcher" class="btn btn-icon btn-default ml-2">
+				<button onclick="themeSwitcher()" class="btn btn-icon btn-default ml-2">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
@@ -75,107 +71,108 @@
 <section class="py-10 bg-lower">
 	<div class="container">
 		
-	  <header class="py-16">
-      <h1 class="fs-6xl">Blog posts</h1>
-      <p class="fs-xl max-w-60%">
+	  <header class="py-12">
+      <h1 class="fs-6xl mb-4">Blog posts</h1>
+      <p class="fs-lg lg:max-w-50%">
         Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
       </p>
     </header>
 
-    <div class="row row-cols-1 sm:row-cols-2 md:row-cols-3 lg:row-cols-4 gap-6">
+    <div class="row row-cols-1 sm:row-cols-2 md:row-cols-3 lg:row-cols-3 gap-6">
         <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-				      <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-			      </div>
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
             <div class="card-body">
-              <time class="text-secondary mb-2 d-block">Today</time>
-              <h4>Breaking news about technology</h4>
+              <time class="text-orange mb-2 d-block">Today</time>
+              <a href="#"><h4 class="fs-xl mb-2">Breaking news about technology</h4></a>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </article>
         </div> <!-- col.// -->
 
         <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-				      <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-			      </div>
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
             <div class="card-body">
-              <time class="text-secondary mb-2 d-block">Today</time>
-              <h4>Breaking news about technology</h4>
+              <time class="text-orange mb-2 d-block">Today</time>
+              <a href="#"><h4 class="fs-xl mb-2">Why the world is changing so quickly</h4></a>
+              <p>Temporary text is here. So this is a wider card with supporting text below as a natural .</p>
+            </div>
+          </article>
+        </div> <!-- col.// -->
+
+        <div class="col">
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
+            <div class="card-body">
+              <time class="text-orange mb-2 d-block">Today</time>
+              <a href="#"><h4 class="fs-xl mb-2">Someone did something about nothing</h4></a>
               <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </article>
         </div> <!-- col.// -->
 
         <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-				      <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-			      </div>
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
             <div class="card-body">
-              <time class="text-secondary mb-2 d-block">Yesterday</time>
-              <h4>Why the world is changing so quickly</h4>
-              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              <time class="text-orange mb-2 d-block">Yesterday</time>
+              <a href="#"><h4 class="fs-xl mb-2">Breaking news about technology</h4></a>
+              <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </article>
         </div> <!-- col.// -->
 
         <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-              <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-            </div>
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
             <div class="card-body">
-              <time class="text-secondary mb-2 d-block">Yesterday</time>
-              <h4>Someone did something about nothing</h4>
-              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              <time class="text-orange mb-2 d-block">Yesterday</time>
+              <a href="#"><h4 class="fs-xl mb-2">Nothing is better than simple life, isn't it?</h4></a>
+              <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </article>
         </div> <!-- col.// -->
 
         <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-              <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-            </div>
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
             <div class="card-body">
-              <time class="text-secondary mb-2 d-block">24/09/2025</time>
-              <h4>Nothing is better than simple life, isn't it? </h4>
-              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              <time class="text-orange mb-2 d-block">Fev 2, 2025</time>
+              <a href="#"><h4 class="fs-xl mb-2"> Whereas disregard and contempt for human rights... </h4></a>
+              <p> Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit... </p>
             </div>
           </article>
         </div> <!-- col.// -->
 
         <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-              <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-            </div>
+          <article class="card hover:border-primary h-full">
+            <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">
+				      <img class="object-fit-cover w-100% h-48" src="placeholder.jpg">
+			      </a>
             <div class="card-body">
-              <time class="text-secondary mb-2 d-block">24/09/2025</time>
-              <h4>Whereas disregard and contempt for human rights...</h4>
-              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              <time class="text-orange mb-2 d-block">Fev 12, 2025</time>
+              <a href="#"><h4 class="fs-xl mb-2">No news is a good news</h4></a>
+              <p> Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
             </div>
           </article>
         </div> <!-- col.// -->
-
-        <div class="col">
-          <article class="card">
-            <div class="bg-neutral-300 rounded-top overflow-hidden">
-              <img class="object-fit-cover w-100% h-40" src="placeholder.jpg">
-            </div>
-            <div class="card-body">
-              <time class="text-secondary mb-2 d-block">24/09/2025</time>
-              <h4>No news is a good news</h4>
-              <p>Discover fascinating, unusual, and adventurous things to do. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            </div>
-          </article>
-        </div> <!-- col.// -->
-        
       </div> <!-- row.// -->
 
+      <br>
+      <hr>
 
 
 	</div> <!-- container.// -->
