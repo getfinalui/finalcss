@@ -13,26 +13,22 @@
 
   <title>Final CSS - Example data table (finalcss.com)</title>
 
-	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', () => {
-		const htmlElement = document.documentElement;
-		const themeSwitcher = document.getElementById('themeSwitcher');
-		// Check localStorage for saved theme
-		const savedTheme = localStorage.getItem('data-theme');
-		if (savedTheme) {
-		    htmlElement.setAttribute('data-theme', savedTheme);
-		}
-		themeSwitcher.addEventListener('click', () => {
-		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
-		    // Set the new theme on the body element
-		    htmlElement.setAttribute('data-theme', newTheme);          
-		    // Save the new theme in localStorage
-		    localStorage.setItem('data-theme', newTheme);
-		});
-	});
-
-	</script>
+  <script type="text/javascript">
+    // Check localStorage for saved theme and assign that
+    const htmlElement = document.documentElement;
+    const savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    function themeSwitcher() {
+          const currentTheme = htmlElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+          // Set the new theme on the body element
+          htmlElement.setAttribute('data-theme', newTheme);          
+          // Save the new theme in localStorage
+          localStorage.setItem('site-theme', newTheme);
+    }
+  </script>
 
 
 
@@ -57,7 +53,7 @@
 			</nav>
 			<div class="md:w-20% d-flex justify-content-end">
 				
-				<button id="themeSwitcher" class="btn btn-icon btn-default mr-2">
+				<button onclick="themeSwitcher()" class="btn btn-icon btn-default mr-2">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
