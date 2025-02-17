@@ -229,7 +229,7 @@ class BottomComponent extends HTMLElement {
         <nav class="nav">
             <a href="/docs/doc.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
-            <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
+            <a href="https://getfinalui.github.io/finalcss"  target="_blank" class="nav-link">Github pages</a>
         </nav>
       </section>
   </div><!-- //container -->
