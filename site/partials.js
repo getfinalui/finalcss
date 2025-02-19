@@ -98,7 +98,7 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-customize.html">Customization</a></li>
             <li><a class="nav-link" href="/docs/doc-theme.html">Theme & colors</a></li>
             <li><a class="nav-link" href="/docs/doc-grid.html">Grid system</a></li>
-            <li><a class="nav-link" href="/docs/doc-howto.html">How to (tutorials) </a></li>
+            <li class="d-none"><a class="nav-link" href="/docs/doc-howto.html">How to (tutorials) </a></li>
             <li class="px-2">
               <hr>
               <h6 class="mb-2"> Components </h6>
