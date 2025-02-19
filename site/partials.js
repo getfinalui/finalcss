@@ -244,3 +244,37 @@ class BottomComponent extends HTMLElement {
 }
 // Define the doc sidebar component
 customElements.define('bottom-component', BottomComponent);
+
+
+
+
+
+class FooterComponent extends HTMLElement {
+  constructor() {
+    super(); // Always call super in the constructor.
+  }
+
+  // Use connectedCallback to modify the DOM when the component is added to the document
+  connectedCallback() {
+    const template = document.createElement('template');
+    template.innerHTML = `
+<footer class="bg-secondary border-top py-6">
+  <div class="container">
+    <section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
+        <p class="md:mb-0 mb-3 text-center md:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
+        <nav class="nav">
+            <a href="docs.html" class="nav-link">Docs</a>
+            <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
+            <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github</a>
+        </nav>
+      </section>
+  </div><!-- //container -->
+</footer>
+    `;
+
+    // Append the template content to the Light DOM
+    this.appendChild(template.content.cloneNode(true));
+  }
+}
+// Define the doc sidebar component
+customElements.define('footer-component', FooterComponent);
