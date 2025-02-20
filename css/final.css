@@ -450,6 +450,7 @@ samp {
 
 pre {
   display: block;
+  tab-size: 32px;
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
@@ -460,7 +461,6 @@ pre code {
   color: inherit;
   word-break: normal;
   display: block;
-  border-radius: 8px;
   padding: 8px;
 }
 

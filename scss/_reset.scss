@@ -193,6 +193,7 @@ samp {
 
 pre {
   display: block;
+  tab-size: 32px;
   margin-top: 0; // 1
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
@@ -203,7 +204,6 @@ pre {
     color: inherit;
     word-break: normal;
     display: block;
-    border-radius: 8px;
     padding: 8px;
   }
 }
