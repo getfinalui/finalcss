@@ -44,6 +44,283 @@
 <hr>
 
 <article class="article-wrap  mb-16">
+<p>Finalcss includes a vast, beautiful color palette, carefully crafted and tested for dark mode and accessibility. Here are all available colors in Finalcss:</p>
+
+<h4>Neutral (monochrome) colors:  </h4>
+<p><b>Default (light)</b> mode: <br>Assigned to <code>:root</code> element, <code>data-theme="light"</code> attribute,  <code>theme-light</code>  class name </p>
+
+<div class="theme-light text-center border fs-xs h-24 d-grid grid-template-cols-12">
+  <div class="bg-neutral-0 py-2">
+    #ffffff <br>  --neutral-0
+  </div>
+  <div class="bg-neutral-50 py-2">
+    #f8fafc <br> --neutral-50
+  </div>
+  <div class="bg-neutral-100 py-2">
+    #f1f5f9 <br> --neutral-100
+  </div>
+  <div class="bg-neutral-200 py-2">
+    #e2e8f0 <br>  --neutral-200
+  </div>
+  <div class="bg-neutral-300 py-2">
+    #cbd5e1 <br>  --neutral-300
+  </div>
+  <div class="bg-neutral-400 py-2  text-invert">
+    #A3B0C2 <br>  --neutral-400
+  </div>
+  <div class="bg-neutral-500 py-2  text-invert">
+    #6B7C94 <br>  --neutral-500
+  </div>
+  <div class="bg-neutral-600 py-2  text-invert">
+    #52637A <br>  --neutral-600
+  </div>
+  <div class="bg-neutral-700 py-2  text-invert">
+    #334155 <br>  --neutral-700
+  </div>
+  <div class="bg-neutral-800 py-2  text-invert">
+    #1e293b <br>  --neutral-800
+  </div>
+  <div class="bg-neutral-900 py-2  text-invert">
+    #0f172a <br>  --neutral-900
+  </div>
+  <div class="bg-neutral-1000 py-2 text-invert">
+    #000000 <br>  --neutral-1000
+  </div>
+</div>
+
+<p><b>Dark mode:</b> <br> It will override default/light mode colors. <br> Assigned to <code>data-theme="dark"</code> attribute, <code>theme-dark</code> class name</p>
+
+<div class="theme-dark text-center border fs-xs  h-24 d-grid grid-template-cols-12">
+  <div class="bg-neutral-0 py-2">
+    #000000 <br>  --neutral-0
+  </div>
+  <div class="bg-neutral-50 py-2">
+    #101010 <br> --neutral-50
+  </div>
+  <div class="bg-neutral-100 py-2">
+    #171717 <br> --neutral-100
+  </div>
+  <div class="bg-neutral-200 py-2">
+    #242424 <br>  --neutral-200
+  </div>
+  <div class="bg-neutral-300 py-2">
+    #373737 <br>  --neutral-300
+  </div>
+  <div class="bg-neutral-400 py-2">
+    #555555 <br>  --neutral-400
+  </div>
+  <div class="bg-neutral-500 py-2">
+    #737373 <br>  --neutral-500
+  </div>
+  <div class="bg-neutral-600 py-2">
+    #9c9c9c <br>  --neutral-600
+  </div>
+  <div class="bg-neutral-700 py-2  text-invert">
+    #c5c5c5 <br>  --neutral-700
+  </div>
+  <div class="bg-neutral-800 py-2  text-invert">
+    #dddddd <br>  --neutral-800
+  </div>
+  <div class="bg-neutral-900 py-2  text-invert">
+    #eeeeee <br>  --neutral-900
+  </div>
+  <div class="bg-neutral-1000 py-2 text-invert">
+    #ffffff <br>  --neutral-1000
+  </div>
+</div>
+
+<br>
+<hr>
+<h6>Example component</h6>
+
+<br>
+
+<div class="sm:d-flex">
+<aside class="sm:col-6 bg-neutral-100 border p-8">
+  <p style="margin-top: 0;">Light mode sample UI</p>
+  <article class="card overflow-hidden bg-neutral-0 mb-5 md:mb-0">
+							
+    <header class="bg-neutral-400 relative h-24">
+      <a href="#" class="bg-neutral-100 absolute top-0 m-2 btn btn-sm">Edit</a>
+    </header>
+    <div class="text-center">
+      <div style="margin-top:-60px" class="relative d-inline-flex rounded-circle mx-auto p-1 bg-neutral-0">
+         <img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="96" height="96" class="avatar avatar-lg">
+       </div>
+       <div class="my-3 mb-4">
+         <h5>Alexandra Heilium</h5>
+         <div class="text-secondary">Digital Designer UX/UI</div>
+       </div>
+       <!-- summary -->
+       <div class="mx-auto d-flex my-2  mb-4 p-1 row-cols-3 w-80% rounded bg-neutral-50" style="border:1px solid var(--neutral-300)">
+        <div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
+          <span class="fw-bold">259</span>
+          <small class="fs-sm" style="color:var(--neutral-500)">Posts</small>
+        </div>
+        <div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
+          <span class="fw-bold">129K</span>
+          <small class="fs-sm" style="color:var(--neutral-500)">Followers</small>
+        </div>
+        <div class="d-flex flex-col p-2 align-items-center justify-content-center">
+          <span class="fw-bold">34</span>
+          <small class="fs-sm" style="color:var(--neutral-500)">Following</small>
+        </div>
+      </div>
+      <!-- summary .//end -->
+      <div class="mb-4 w-80% mx-auto  d-flex gap-2 justify-content-center">
+        <button class="btn flex-grow" style="background:var(--neutral-200);"> Follow </button>
+        <button class="btn flex-grow" style="background:var(--neutral-1000); color:var(--neutral-0)"> Message </button>
+      </div>
+    </div>
+  </article>
+</aside>
+<aside class="sm:col-6 bg-neutral-100 border p-8 theme-dark">
+  <p style="margin-top: 0;">Dark mode sample UI</p>
+  <article class="card overflow-hidden bg-neutral-0 mb-5 md:mb-0">
+    <header class="bg-neutral-400 relative h-24">
+      <a href="#" class="bg-neutral-100 absolute top-0 m-2 btn btn-sm">Edit</a>
+    </header>
+    <div class="text-center">
+      <div style="margin-top:-60px" class="relative d-inline-flex rounded-circle mx-auto p-1 bg-neutral-0">
+         <img src="https://mdbcdn.b-cdn.net/img/new/avatars/4.webp" width="96" height="96" class="avatar avatar-lg">
+       </div>
+       <div class="my-3 mb-4">
+         <h5>Alexandra Heilium</h5>
+         <div class="text-secondary">Digital Designer UX/UI</div>
+       </div>
+       <!-- summary -->
+       <div class="mx-auto d-flex my-2  mb-4 p-1 row-cols-3 w-80% rounded bg-neutral-50" style="border:1px solid var(--neutral-300)">
+        <div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
+          <span class="fw-bold">259</span>
+          <small class="fs-sm" style="color:var(--neutral-500)">Posts</small>
+        </div>
+        <div class="d-flex flex-col p-2 border-r align-items-center justify-content-center">
+          <span class="fw-bold">129K</span>
+          <small class="fs-sm" style="color:var(--neutral-500)">Followers</small>
+        </div>
+        <div class="d-flex flex-col p-2 align-items-center justify-content-center">
+          <span class="fw-bold">34</span>
+          <small class="fs-sm" style="color:var(--neutral-500)">Following</small>
+        </div>
+      </div>
+      <!-- summary .//end -->
+      <div class="mb-4 w-80% mx-auto  d-flex gap-2 justify-content-center">
+        <button class="btn flex-grow" style="background:var(--neutral-200);"> Follow </button>
+        <button class="btn flex-grow" style="background:var(--neutral-1000); color:var(--neutral-0)"> Message </button>
+      </div>
+    </div>
+  </article>
+</aside>
+</div>
+
+<br>
+<hr>
+<h4>Color palette:  </h4>
+<p>Each of following color has its dark variant. <br> Color will be changed to dark variant when parent tag has class name <code>theme-dark</code> or attribute <code>data-theme="dark"</code>   </p>
+
+<div class="d-grid grid-template-cols-8 gap-1">
+  <aside>
+    <div class="bg-primary-100 p-4"> primary-100 </div>
+    <div class="bg-primary-200 p-4"> primary-200 </div>
+    <div class="bg-primary-300 p-4"> primary-300 </div>
+    <div class="bg-primary-400 p-4"> primary-400 </div>
+    <div class="bg-primary-500 p-4 text-invert"> primary-500 </div>
+    <div class="bg-primary-600 p-4 text-invert"> primary-600 </div>
+    <div class="bg-primary-700 p-4 text-invert"> primary-700 </div>
+    <div class="bg-primary-800 p-4 text-invert"> primary-800 </div>
+    <div class="bg-primary-900 p-4 text-invert"> primary-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-blue-100 p-4"> blue-100 </div>
+    <div class="bg-blue-200 p-4"> blue-200 </div>
+    <div class="bg-blue-300 p-4"> blue-300 </div>
+    <div class="bg-blue-400 p-4"> blue-400 </div>
+    <div class="bg-blue-500 p-4 text-invert"> blue-500 </div>
+    <div class="bg-blue-600 p-4 text-invert"> blue-600 </div>
+    <div class="bg-blue-700 p-4 text-invert"> blue-700 </div>
+    <div class="bg-blue-800 p-4 text-invert"> blue-800 </div>
+    <div class="bg-blue-900 p-4 text-invert"> blue-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-red-100 p-4"> red-100 </div>
+    <div class="bg-red-200 p-4"> red-200 </div>
+    <div class="bg-red-300 p-4"> red-300 </div>
+    <div class="bg-red-400 p-4"> red-400 </div>
+    <div class="bg-red-500 p-4 text-invert"> red-500 </div>
+    <div class="bg-red-600 p-4 text-invert"> red-600 </div>
+    <div class="bg-red-700 p-4 text-invert"> red-700 </div>
+    <div class="bg-red-800 p-4 text-invert"> red-800 </div>
+    <div class="bg-red-900 p-4 text-invert"> red-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-green-100 p-4"> green-100 </div>
+    <div class="bg-green-200 p-4"> green-200 </div>
+    <div class="bg-green-300 p-4"> green-300 </div>
+    <div class="bg-green-400 p-4"> green-400 </div>
+    <div class="bg-green-500 p-4 text-invert"> green-500 </div>
+    <div class="bg-green-600 p-4 text-invert"> green-600 </div>
+    <div class="bg-green-700 p-4 text-invert"> green-700 </div>
+    <div class="bg-green-800 p-4 text-invert"> green-800 </div>
+    <div class="bg-green-900 p-4 text-invert"> green-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-orange-100 p-4"> orange-100 </div>
+    <div class="bg-orange-200 p-4"> orange-200 </div>
+    <div class="bg-orange-300 p-4"> orange-300 </div>
+    <div class="bg-orange-400 p-4"> orange-400 </div>
+    <div class="bg-orange-500 p-4 text-invert"> orange-500 </div>
+    <div class="bg-orange-600 p-4 text-invert"> orange-600 </div>
+    <div class="bg-orange-700 p-4 text-invert"> orange-700 </div>
+    <div class="bg-orange-800 p-4 text-invert"> orange-800 </div>
+    <div class="bg-orange-900 p-4 text-invert"> orange-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-yellow-100 p-4"> yellow-100 </div>
+    <div class="bg-yellow-200 p-4"> yellow-200 </div>
+    <div class="bg-yellow-300 p-4"> yellow-300 </div>
+    <div class="bg-yellow-400 p-4"> yellow-400 </div>
+    <div class="bg-yellow-500 p-4 text-invert"> yellow-500 </div>
+    <div class="bg-yellow-600 p-4 text-invert"> yellow-600 </div>
+    <div class="bg-yellow-700 p-4 text-invert"> yellow-700 </div>
+    <div class="bg-yellow-800 p-4 text-invert"> yellow-800 </div>
+    <div class="bg-yellow-900 p-4 text-invert"> yellow-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-purple-100 p-4"> purple-100 </div>
+    <div class="bg-purple-200 p-4"> purple-200 </div>
+    <div class="bg-purple-300 p-4"> purple-300 </div>
+    <div class="bg-purple-400 p-4"> purple-400 </div>
+    <div class="bg-purple-500 p-4 text-invert"> purple-500 </div>
+    <div class="bg-purple-600 p-4 text-invert"> purple-600 </div>
+    <div class="bg-purple-700 p-4 text-invert"> purple-700 </div>
+    <div class="bg-purple-800 p-4 text-invert"> purple-800 </div>
+    <div class="bg-purple-900 p-4 text-invert"> purple-900 </div>
+  </aside>
+  <aside>
+    <div class="bg-teal-100 p-4"> teal-100 </div>
+    <div class="bg-teal-200 p-4"> teal-200 </div>
+    <div class="bg-teal-300 p-4"> teal-300 </div>
+    <div class="bg-teal-400 p-4"> teal-400 </div>
+    <div class="bg-teal-500 p-4 text-invert"> teal-500 </div>
+    <div class="bg-teal-600 p-4 text-invert"> teal-600 </div>
+    <div class="bg-teal-700 p-4 text-invert"> teal-700 </div>
+    <div class="bg-teal-800 p-4 text-invert"> teal-800 </div>
+    <div class="bg-teal-900 p-4 text-invert"> teal-900 </div>
+  </aside>
+</div>
+
+<br>
+<hr>
+<h4>Static colors:  </h4>
+<p>If you don't want colors to be changed on dark theme, then use static color variables of css. just use <code>-static</code> keyword after color name.  <br> For ex: <code> --primary-300-static</code> is always remain <code>#a5b4fc</code> on any theme.  <code>--neutral-0-static</code>  always white color and it will not affected by changing theme. Because there is no override on theme-dark { ... } color list </p> 
+
+<hr>
+<p>If you designed a component using utility classes like bg-neutral-100, border and text-secondary class names, all of them will be changed if parent tag has <code>theme-dark</code> class name. But if you don't want them to be changed, then add <code> theme-static</code> class name to parent element.</p>
+
+<br>
+<hr>
+
+<h4>How does color system work?</h4>
 <p>
 	All colors are inside the <b>📂 scss/_theme.scss</b>  file. There are two groups: <u>Default (light)</u> theme colors and <u>Dark</u> theme colors
 </p>
@@ -269,6 +546,7 @@
 </code></pre>
 	</aside>
 </div>
+
 
 <hr>
 <h5>Colors in CSS variable</h5>
