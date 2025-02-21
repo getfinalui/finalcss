@@ -154,11 +154,9 @@ a {
 }
 
 a.link {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+  text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--primary-300);
+  text-decoration-color: var(--primary-400);
   &:hover{
     text-decoration: none;
   }
@@ -176,7 +174,6 @@ a:not([href]):not([class]) {
     text-decoration: none;
   }
 }
-
 
 // Code
 pre,

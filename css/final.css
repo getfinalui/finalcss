@@ -425,11 +425,9 @@ a:hover {
 }
 
 a.link {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+  text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--primary-300);
+  text-decoration-color: var(--primary-400);
 }
 a.link:hover {
   text-decoration: none;
@@ -2304,15 +2302,12 @@ progress {
   color: var(--alert-text-color);
   background-color: var(--alert-bg-color);
   position: relative;
-  padding: 8px 12px;
+  padding: 12px;
   margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
   border: transparent;
   border-radius: 8px;
-}
-.alert p {
-  margin-bottom: 0;
+  margin-bottom: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .alert-danger {
@@ -2331,8 +2326,8 @@ progress {
 }
 
 .alert-info {
-  --alert-text-color: var(--text-color-teal);
-  --alert-bg-color: var(--teal-100);
+  --alert-text-color: var(--text-color-blue);
+  --alert-bg-color: var(--blue-100);
 }
 
 .btn {
