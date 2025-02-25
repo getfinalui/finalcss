@@ -32,7 +32,8 @@
 // Article or long texts
 .article-wrap{
   line-height: 1.6;
-  p{ margin-bottom: 12px; margin-top:12px; }
+  p:not(:first-child){ margin-top: 12px; }
+  p{ margin-bottom: 12px;  }
 }
 
 /// text-position

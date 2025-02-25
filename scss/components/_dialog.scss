@@ -6,19 +6,20 @@
 
 dialog {
   z-index: 999;
-  padding:20px;
+  padding:16px;
   visibility: hidden;
-  max-width: 90%;
+  max-width:720px;
   min-width:340px;
   top:0;
+  margin-top:8%;
   background-color: var(--bg-color-base);
-  box-shadow: 0 4px 8px rgba(#000, 0.1);
+  box-shadow: 0 4px 12px rgba(#000, 0.2);
   font-size: $font-size-base;
   color: var(--text-color-base);
   border:1px solid var(--border-color-default);
   border-radius: $border-radius-base; // from: _base-settings.scss
 
-  img{
+  img, svg{
     max-width:100%;
   }
 }

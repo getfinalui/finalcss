@@ -53,6 +53,32 @@ $size_map_percent:(
   "100": 100%,
 );
 
+$size_map_vw:(
+  "10": 10vw,
+  "20": 20vw,
+  "30": 30vw,
+  "40": 40vw,
+  "50": 50vw,
+  "60": 60vw,
+  "70": 70vw,
+  "80": 80vw,
+  "90": 90vw,
+  "100": 100vw,
+);
+
+$size_map_vh:(
+  "10": 10vh,
+  "20": 20vh,
+  "30": 30vh,
+  "40": 40vh,
+  "50": 50vh,
+  "60": 60vh,
+  "70": 70vh,
+  "80": 80vh,
+  "90": 90vh,
+  "100": 100vh,
+);
+
 
 
 // Full sizes of screen
@@ -93,6 +119,29 @@ $size_map_percent:(
   .min-h-#{$name}\% { min-height: #{$value}; }
   .max-h-#{$name}\% { max-height: #{$value}; }
 }
+
+// * Generates sizes in vw Vewport-width:
+// .w-10vw{width:10vw}
+@each $name, $value in $size_map_vw {
+  .w-#{$name}vw { width: #{$value}; }
+  .h-#{$name}vw { height: #{$value}; }
+  .min-w-#{$name}vw { min-width: #{$value}; }
+  .max-w-#{$name}vw { max-width: #{$value}; }
+  .min-h-#{$name}vw { min-height: #{$value}; }
+  .max-h-#{$name}vw { max-height: #{$value}; }
+}
+
+// * Generates sizes in vh Vewport-height:
+// .w-10vh{width:10vh}
+@each $name, $value in $size_map_vh {
+  .w-#{$name}vh { width: #{$value}; }
+  .h-#{$name}vh { height: #{$value}; }
+  .min-w-#{$name}vh { min-width: #{$value}; }
+  .max-w-#{$name}vh { max-width: #{$value}; }
+  .min-h-#{$name}vh { min-height: #{$value}; }
+  .max-h-#{$name}vh { max-height: #{$value}; }
+}
+
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss

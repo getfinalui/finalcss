@@ -41,7 +41,7 @@ $padding_map:(
 // * Generates sizes in px, for ex:
 // .pt-10{margin-top:40px} 
 @each $name, $value in $padding_map {
-  .p-#{$name} { padding: #{$value};}
+  .p-#{$name} { padding: #{$value}; }
   .py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
   .px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
   .pt-#{$name} { padding-top: #{$value}!important; }

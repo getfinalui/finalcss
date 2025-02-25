@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="description" content="Final CSS (finalcss) is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta property="og:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <meta name="author" content="Vosidiy M">
+
+  <title>Final CSS - Example data table (finalcss.com)</title>
+
+  <script type="text/javascript">
+    // Check localStorage for saved theme and assign that
+    const htmlElement = document.documentElement;
+    const savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    function themeSwitcher() {
+          const currentTheme = htmlElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+          // Set the new theme on the body element
+          htmlElement.setAttribute('data-theme', newTheme);          
+          // Save the new theme in localStorage
+          localStorage.setItem('site-theme', newTheme);
+    }
+  </script>
+
+
+
+<!-- FinalCSS -->
+<link href="css/final.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class="bg-base">
+
+
+<header class="bg-base py-2 border-b">
+	<div class="container"  style="max-width: 920px;">
+		<div class="d-flex flex-column flex-md-row align-items-center">
+			<div class="mb-3 md:mb-0">
+				<a href="https://finalcss.com" class="fs-xl fw-semibold">Final CSS</a>
+			</div>
+			<nav class="nav ml-auto">
+        
+        <a href="#" class="nav-link">Home</a>
+				<a href="#" class="nav-link">About</a>
+				<a href="#" class="nav-link">Link one</a>
+        <a href="#" class="nav-link">Link two</a>
+				
+				<button onclick="themeSwitcher()" class="btn  btn-neutral ml-2">
+					<span class="d-none dark:d-block"> Make light </span>
+					<span class="dark:d-none"> Make dark </span>
+				</button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<section class="py-10 bg-lower min-h-100vh">
+  <div class="container" style="max-width: 920px;">
+    <h3 class="mb-2">Dialog examples</h3>
+    <p class="text-secondary">Example HTML native dialog windows</p>
+    <hr>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_basic')">Open basic dialog</button>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_long')">Open long dialog</button>
+
+    <button class="btn btn-default">Open form dialog</button>
+
+    <hr>
+
+    <button class="btn btn-default">Open confirmation </button>
+
+    <button class="btn btn-default">Open error dialog</button>
+
+    <button class="btn btn-default">Open success dialog</button>
+
+
+    <hr>
+
+    <button class="btn btn-default">Full page dialog</button>
+
+    <button class="btn btn-default">Aside left dialog</button>
+
+    <button class="btn btn-default">Aside right dialog</button>
+
+    <hr>
+
+    <h6>How to trigger via JS</h6>
+
+    <pre class="border p-2 bg-orange-100 my-2"><code class="bg-transparent">&lt;button class="btn btn-default" <b>onclick="open_dialog('dialog_basic')"></b>Open dialog &lt;/button &gt;
+
+function open_dialog(dialog_id){
+  document.getElementById(dialog_id).showModal();
+}
+
+// To close the dialog you can use native "close()" function
+
+document.getElementById('dialog_long').close()
+</code></pre>
+
+    <p class="text-secondary">You can also press <kbd>ESC</kbd> key to close the dialog</p>
+  </div>
+</section>
+
+
+
+
+<dialog id="dialog_basic">
+  <button class="btn-close-dialog" onclick="close_dialog(this)">
+    <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+      <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+    </svg> 
+  </button> 
+  <h5 class="mb-2">Basic dialog</h5>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+  
+  <div class="mt-3 d-flex gap-1">
+    <button class="btn btn-default" onclick="close_dialog(this)"> Got it</button>
+  </div>
+</dialog>
+
+
+<dialog id="dialog_long" class="mt-20 p-0 overflow-hidden">
+  
+  <header class="pl-4 p-1 d-flex align-items-center justify-content-between border-bottom">
+    <h5>Long content dialog</h5>
+    <button class="btn btn-icon" onclick="close_dialog(this)">
+      <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+        <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+      </svg> 
+    </button> 
+  </header>
+  <div class="p-4 overflow-y-auto scrollbar-thin max-h-70vh">
+    <article class="article-wrap">
+      <p>This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+      
+      <img  src="https://picsum.photos/seed/picsum/800/600">
+      
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+
+    </article>
+  </div>
+  <div class="py-1 p-4 d-flex gap-1 border-top">
+    <a class="btn btn-default" href="#"> Read more </a>
+    <button class="btn btn-default" onclick="close_dialog(this)"> Close </button>
+  </div>
+</dialog>
+
+
+
+<script>
+
+  function open_dialog(dialog_id){
+    document.getElementById(dialog_id).showModal();
+  }
+
+  function close_dialog(btn_close){
+    btn_close.closest('dialog').close();
+  }
+
+</script>
+
+</body>
+</html>
