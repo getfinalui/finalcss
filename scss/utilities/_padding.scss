@@ -39,35 +39,56 @@ $padding_map:(
 );
 
 // * Generates sizes in px, for ex:
-// .pt-10{margin-top:40px} 
+// .p-2{padding:8px}  .pt-10{padding-top:40px} 
+// @each written for every utility individually by intention. There is a reason for it 
 @each $name, $value in $padding_map {
   .p-#{$name} { padding: #{$value}; }
+}
+@each $name, $value in $padding_map {
   .py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
+}
+@each $name, $value in $padding_map {
   .px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
+}
+@each $name, $value in $padding_map {
   .pt-#{$name} { padding-top: #{$value}!important; }
+}
+@each $name, $value in $padding_map {
   .pb-#{$name} { padding-bottom: #{$value}!important; }
+}
+@each $name, $value in $padding_map {
   .pr-#{$name} { padding-right: #{$value}!important; }
+}
+@each $name, $value in $padding_map {
   .pl-#{$name} { padding-left: #{$value}!important; }
 }
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
-
-
 @each $breakpoint, $screen_size in $breakpoints {
   
   @media ($screen_size){
     // breakpoinst styles
     @each $name, $value in $padding_map {
-
       .#{$breakpoint}\:p-#{$name} { padding: #{$value}; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pt-#{$name} {  padding-top: #{$value}!important;  }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pb-#{$name} { padding-bottom: #{$value}!important; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pr-#{$name} { padding-right: #{$value}!important; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pl-#{$name} { padding-left: #{$value}!important; }
-      
     }
    // end breakpoint
   }

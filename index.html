@@ -629,39 +629,41 @@
 
 		<div class="row gap-5 sm:row-cols-2 lg:row-cols-3">
 			<aside class="col">
-				<dialog open class="relative max-w-full w-full"> 
-						<div>
-							<h5 class="mb-3">Rename project</h5>
-							<form action="">
-								<input type="text" value="Project one" class="form-control">
-							</form>
-						</div>
-						<div class="mt-4 d-flex gap-2">
-							<button class="btn btn-primary">Save</button>
-							<button class="btn btn-default">Cancel</button>
-						</div>
+				<dialog open class="static m-0"> 
+						<article class="dialog-body">
+							<div>
+								<h5 class="mb-2">Rename project</h5>
+								<form action="">
+									<input type="text" value="Project one" class="form-control">
+								</form>
+							</div>
+							<div class="mt-4 d-flex gap-2">
+								<button class="btn btn-primary">Save</button>
+								<button class="btn btn-default">Cancel</button>
+							</div>
+						</article>
 				</dialog>
 			</aside>
 			<aside class="col">
-				<dialog open class="relative max-w-full w-full">
+				<dialog open class="static m-0">
 					<button class="btn-close-dialog">
 						<svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
 						</svg> 
 					</button> 
-						<div>
+						<div class="dialog-body">
 							<h5 class="mb-2">Delete items?</h5>
 							<p class="text-secondary">Are you sure to delete complately?</p>
 						</div>
-						<div class="border-top mt-4 pt-4 d-flex gap-2 justify-content-end">
+						<div class="dialog-bottom py-4">
 							<button class="btn btn-default">Cancel</button>
 							<button class="btn btn-red">Yes, delete</button>
 						</div>
 				</dialog>
 			</aside>
 			<aside class="col">
-				<dialog open class="relative max-w-full w-full"> 
-						<div class="d-flex gap-3">
+				<dialog open class="static m-0"> 
+						<div class="dialog-body d-flex gap-3">
 							<span class="d-flex text-red flex-shrink-0 w-11 h-11 flex-center rounded-full bg-red-100">
 								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
 							</span>
@@ -670,7 +672,7 @@
 								<p class="text-secondary mb-1">There was an internal error demo text. </p>
 							</div>
 						</div>
-						<div class="border-top mt-4 pt-4 d-flex gap-2 justify-content-end">
+						<div class="dialog-bottom py-4">
 							<button class="btn btn-neutral mr-auto">Learn more</button>
 							<button class="btn btn-default">Cancel</button>
 							<button class="btn btn-primary">Continue</button>
