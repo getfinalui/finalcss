@@ -29,6 +29,29 @@ dialog {
 .dialog-md{ max-width: 620px; }
 .dialog-sm{ max-width: 360px; }
 
+.dialog-aside-left, .dialog-aside-right{
+  display: block;
+  transition: transform 0.25s, opacity 1s;
+  margin-top:0; margin-bottom: 0;
+  max-height: none;
+  max-height: 100vh;
+  border-radius:0;
+  height: 100%;
+  .dialog-body{
+    max-height:none;
+    max-height: 92vh;
+  }
+}
+
+.dialog-aside-left{ margin-left:0; left:0; 
+  transform: translateX(-100%);  opacity:0;
+  &[open]{ transform: translateX(0); opacity:1; transition: transform 0.25s, opacity 0s; }
+}
+.dialog-aside-right{ margin-right:0; right:0;
+  transform: translateX(100%); opacity:0;
+  &[open]{ transform: translateX(0); opacity:1; transition: transform 0.25s, opacity 0s; }
+}
+
 .dialog-header{
   display:flex;  align-items:center; justify-content:space-between;
   padding:8px; padding-left:16px;  
@@ -50,8 +73,9 @@ dialog {
 dialog[open]{
   visibility: visible;
 }
+
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(70, 70, 90, 0.8);
   //backdrop-filter: blur(4px);
 }
 
@@ -92,5 +116,5 @@ dialog::backdrop {
     inset: 0;
     pointer-events: none;
     z-index: 99;
-    background-color: rgba(#000, 0.5);
+    background: rgba(70, 70, 90, 0.8);
 }
