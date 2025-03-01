@@ -22,11 +22,11 @@ $breakpoints: (
 
 
 // Border-radius for utility classes
+// This will generate css variable on _variables-root.scss
 $border-radius-sm:   4px !default;
 $border-radius-md:   8px !default;
 $border-radius-lg:   12px !default;
 $border-radius-xl:   16px !default;
-
 // set base border radius for button, input, select, card, alert, nav,
 $border-radius-base: $border-radius-md; 
 

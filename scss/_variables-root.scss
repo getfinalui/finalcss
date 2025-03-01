@@ -93,3 +93,31 @@
   background-color: var(--bg-color-base);
 
 }
+
+
+
+// *********************************** //
+// *********************************** //
+////////// OTHER SETTINGS ///
+:root{
+  
+  // Border-radius css variables (can be changed in _base-settings.scss)
+  // Or you can change values directly here
+  --border-radius-sm:  #{$border-radius-sm};
+  --border-radius-md:  #{$border-radius-md};
+  --border-radius-lg:  #{$border-radius-lg};
+  --border-radius-xl:  #{$border-radius-xl};
+  --border-radius-base:  #{$border-radius-base};
+
+  // Typography (can be changed in _base-settings.scss)
+  // Or you can change values directly here
+  --font-family-base: #{$font-family-base}: 
+
+  --font-size-base:  #{$font-size-base};
+  --font-size-sm:    #{$font-size-sm};
+
+  --line-height-base:  #{$line-height-base};
+  --line-height-sm:  #{$line-height-sm};
+  --line-height-lg: #{$line-height-lg};
+
+}

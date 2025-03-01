@@ -82,16 +82,6 @@ $size_map_vh:(
 );
 
 
-
-// Full sizes of screen
-.w-100vw { width: 100vw;}
-.h-100vh { height: 100vh;}
-.min-w-100vw {min-width: 100vw;}
-.min-h-100vh {min-height: 100vh;}
-.max-w-fit { max-width: fit-content}
-.max-w-min { max-width: min-content;}
-.max-w-max {max-width: max-content;}
-
 // Generate custom size based on inline css variable
 // Ex: <div class="w-custom" style="--w:700px">
 .w-custom{width:var(--w, initial) }
@@ -169,6 +159,25 @@ $size_map_vh:(
       .#{$breakpoint}\:min-h-#{$name}\% { min-height: #{$value}!important; }
       .#{$breakpoint}\:max-h-#{$name}\% { max-height: #{$value}!important; }
     }
+
+    @each $name, $value in $size_map_vw {
+      .#{$breakpoint}\:w-#{$name}vw { width: #{$value}; }
+      .#{$breakpoint}\:h-#{$name}vw { height: #{$value}; }
+      .#{$breakpoint}\:min-w-#{$name}vw { min-width: #{$value}; }
+      .#{$breakpoint}\:max-w-#{$name}vw { max-width: #{$value}; }
+      .#{$breakpoint}\:min-h-#{$name}vw { min-height: #{$value}; }
+      .#{$breakpoint}\:max-h-#{$name}vw { max-height: #{$value}; }
+    }
+
+    @each $name, $value in $size_map_vh {
+      .#{$breakpoint}\:w-#{$name}vh { width: #{$value}; }
+      .#{$breakpoint}\:h-#{$name}vh { height: #{$value}; }
+      .#{$breakpoint}\:min-w-#{$name}vh { min-width: #{$value}; }
+      .#{$breakpoint}\:max-w-#{$name}vh { max-width: #{$value}; }
+      .#{$breakpoint}\:min-h-#{$name}vh { min-height: #{$value}; }
+      .#{$breakpoint}\:max-h-#{$name}vh { max-height: #{$value}; }
+    }
+
     // end breakpoint
   }
 }

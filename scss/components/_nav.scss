@@ -69,7 +69,7 @@
   text-decoration:none;
   white-space: nowrap;
   color:var(--neutral-700);
-  border-radius: $border-radius-base; // from: _base-settings.scss
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
 
   svg.icon{ width: 20px; height: 20px;}
   svg{ min-width: 16px; min-height: 16px; }

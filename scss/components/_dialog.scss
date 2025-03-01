@@ -17,7 +17,7 @@ dialog {
   font-size: $font-size-base;
   color: var(--text-color-base);
   border:1px solid var(--border-color-default);
-  border-radius: $border-radius-base; // from: _base-settings.scss
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
 
   img, svg{
     max-width:100%;

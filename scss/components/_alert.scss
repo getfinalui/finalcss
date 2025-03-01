@@ -12,7 +12,7 @@
   padding:12px;
   margin-bottom: 1rem;
   border: transparent;
-  border-radius: $border-radius-base; // from: _base-settings.scss
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
   margin-bottom: 8px;
   border:1px solid rgba(#000, 0.1);
 }

@@ -19,7 +19,7 @@
   --btn-bg-hover: var(--alpha-1);
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
-  --btn-border-radius: #{$border-radius-base};
+  --btn-border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss;
   --btn-text-color: inherit;
   // scss-docs-end btn-css-vars
   

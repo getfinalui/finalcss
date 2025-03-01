@@ -4,7 +4,7 @@
   width:auto;
   padding:1px;
   height:38px;
-  border-radius: $border-radius-base; // from: _base-settings.scss
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
 
   .segmented-item{
     justify-content:center;
@@ -23,7 +23,7 @@
     overflow: hidden;
     cursor: pointer;
     border:1px solid transparent; 
-    border-radius: $border-radius-base; // from: _base-settings.scss
+    border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
     
     &:hover,
     &:focus {
