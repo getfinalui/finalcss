@@ -19,7 +19,6 @@
   --btn-bg-hover: var(--alpha-1);
   --btn-border-color: transparent;
   --btn-border-hover-color: transparent;
-  --btn-border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss;
   --btn-text-color: inherit;
   // scss-docs-end btn-css-vars
   
@@ -34,7 +33,7 @@
   font-weight: var(--btn-font-weight);  
   background-color: var(--btn-bg);
   border:1px solid var(--btn-border-color);
-  border-radius: var(--btn-border-radius);
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss;
   color: var(--btn-text-color);
   line-height: 1.2;
   white-space: nowrap;
