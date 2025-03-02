@@ -46,13 +46,13 @@ $margin_map: (
 // .mt-2{margin:8px}  .mt-10{margin-top:40px} 
 // @each written for every utility individually by intention. There is a reason for it 
 @each $name, $value in $margin_map {
-  .m-#{$name} { margin: #{$value}; }
+  .m-#{$name} { margin: #{$value}!important; }
 }
 @each $name, $value in $margin_map {
-  .my-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; }
+  .my-#{$name} { margin-top: #{$value}!important; margin-bottom: #{$value}!important; }
 }
 @each $name, $value in $margin_map {
-  .mx-#{$name} { margin-left: #{$value}; margin-right: #{$value}; }
+  .mx-#{$name} { margin-left: #{$value}!important; margin-right: #{$value}!important; }
 }
 @each $name, $value in $margin_map {
   .mt-#{$name} { margin-top: #{$value}!important; }
@@ -75,13 +75,13 @@ $margin_map: (
   @media ($screen_size){
     // breakpoinst styles
     @each $name, $value in $margin_map {
-      .#{$breakpoint}\:m-#{$name} {  margin: #{$value}; }
+      .#{$breakpoint}\:m-#{$name} {  margin: #{$value}!important; }
     }
     @each $name, $value in $margin_map {
-      .#{$breakpoint}\:my-#{$name} {  margin-top: #{$value}; margin-bottom: #{$value};  }
+      .#{$breakpoint}\:my-#{$name} {  margin-top: #{$value}!important; margin-bottom: #{$value}!important;  }
     }
     @each $name, $value in $margin_map {
-      .#{$breakpoint}\:mx-#{$name} {  margin-left: #{$value}; margin-right: #{$value};  }
+      .#{$breakpoint}\:mx-#{$name} {  margin-left: #{$value}!important; margin-right: #{$value}!important;  }
     }
     @each $name, $value in $margin_map {
       .#{$breakpoint}\:mt-#{$name} {  margin-top: #{$value}!important; }
