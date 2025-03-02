@@ -32,6 +32,7 @@
 @import "components/tag-chip"; 
 
 // Utility classes
+@import "utilities/text-article";
 @import "utilities/display-layout";
 @import "utilities/visibility";
 @import "utilities/order";
@@ -51,15 +52,15 @@
 @import "utilities/opacity";
 @import "utilities/shadow";
 @import "utilities/z-index";
-@import "utilities/size";
-@import "utilities/margin";
-@import "utilities/padding";
 @import "utilities/cursor";
 @import "utilities/scale";
 @import "utilities/list";
 @import "utilities/ratio";
 @import "utilities/whitespace";
 @import "utilities/columns";
+@import "utilities/size";
+@import "utilities/margin";
+@import "utilities/padding";
 
 // Layouts and Temnplates (optional)
 @import "layout/base";

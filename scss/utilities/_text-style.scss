@@ -29,13 +29,6 @@
 .lh-base{ line-height: $line-height-base; }
 .lh-lg{ line-height: $line-height-lg; }
 
-// Article or long texts
-.article-wrap{
-  line-height: 1.6;
-  p:not(:first-child){ margin-top: 12px; }
-  p{ margin-bottom: 12px;  }
-}
-
 /// text-position
 .text-left {text-align: left;}
 .text-right {text-align: right;}
