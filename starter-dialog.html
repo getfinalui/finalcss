@@ -390,15 +390,31 @@ document.getElementById('dialog_long').close()
 
 
 <script>
+  // detect scrollbar (if exists)
+  scrollbar_width = Math.abs(window.innerWidth - document.documentElement.clientWidth);
 
   function open_dialog(dialog_id){
-    document.getElementById(dialog_id).showModal();
     document.body.classList.add('overflow-hidden', 'dialog-open');
+    document.getElementById(dialog_id).style.display = "block";
+    setTimeout(function(){
+      document.getElementById(dialog_id).showModal();
+    }, 0)
+    // add padding same as size of scrollbar size
+    document.body.style.paddingRight = scrollbar_width + 'px';
   }
 
   function close_dialog(btn_close){
-    btn_close.closest('dialog').close();
     document.body.classList.remove('overflow-hidden', 'dialog-open');
+    let this_dialog = btn_close.closest('dialog')
+    this_dialog.close();    
+    if (this_dialog.classList.contains("dialog-aside-left") || this_dialog.classList.contains("dialog-aside-right")) {
+      // for aside dialog we can't make display:none before animation has completed. Need to wait for transition
+      setTimeout(function(){ this_dialog.style.display = ""; }, 300)
+    } else {
+      this_dialog.style.display = "";
+    }
+    // remove padding (added for scrollbar size)
+    document.body.style.paddingRight = "";
   }
 
 </script>
