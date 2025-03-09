@@ -22,7 +22,7 @@
 	}
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -97,7 +97,7 @@
 				</a>
 			</div>
 			
-			<nav class="nav nav-row ml-auto tablet:hidden">
+			<nav class="nav nav-row ml-auto d-none md:d-flex">
 					<a class="nav-link active" href="#"> Home </a>
 					<a class="nav-link" href="#">About</a>
 					<a class="nav-link" href="#">Services</a>
@@ -455,7 +455,7 @@
 </section>
 
 <header class="border-bottom">
-	<div class="container mobile:px-2">
+	<div class="container">
 		<div class="d-flex gap-2 tablet:py-2 align-items-center justify-content-between">
 			
 			<div class="d-flex align-items-center">
@@ -480,7 +480,7 @@
 				<li class="item-nav"><a href="#" class="nav-link"> Project </a></li>
 				<li class="item-nav group">
 					<a class="nav-link has-icon-dropdown" href="#"> More menu  </a>
-					<nav class="dropdown lg:min-w-48 group-hover:d-block d-none">
+					<nav class="dropdown lg:min-w-45 group-hover:d-block d-none">
 						<a class="dropdown-item" href="#">Great courses</a>
 						<a class="dropdown-item" href="#">Documentation</a>
 						<a class="dropdown-item" href="#">Newsletter</a>
@@ -514,7 +514,7 @@
 
 
 <header class="border-bottom">
-	<div class="container px-2">
+	<div class="container">
 		<div class="d-flex flex-row tablet:py-2 gap-2 align-items-center justify-content-between">
 			
 			<div class="d-flex align-items-center">

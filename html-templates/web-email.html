@@ -19,7 +19,7 @@
 	// Need to load DOM tree to detect theme switching button
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';   
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -99,7 +99,7 @@
   </header>
   <section style="height:calc(100% - var(--header-size))" class="bg-base d-flex overflow-hidden w-full lg:flex-row align-items-stretch relative">
     <aside class="bg-lower h-full lg:w-60 border-right d-none md:d-block">
-      <div class="d-flex flex-col px-3 py-3 h-full overflow-y-auto min-w-52">
+      <div class="d-flex flex-col px-3 py-3 h-full overflow-y-auto min-w-50">
 
         <a class="btn btn-primary" href="#"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>  New message</a>

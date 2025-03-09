@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * Final UI (https://finalui.com/)
- * Copyright 2024 The Finalui Author Vosidiy M. 
+ * Final CSS ( https://finalcss.com )
+ * Copyright 2025 The Finalcss by Author Vosidiy M. 
  * Licensed under MIT
  */
 
@@ -32,8 +32,8 @@
 @import "components/tag-chip"; 
 
 // Utility classes
-@import "utilities/text-article";
 @import "utilities/display-layout";
+@import "utilities/text-article";
 @import "utilities/visibility";
 @import "utilities/order";
 @import "utilities/gap";
@@ -42,8 +42,8 @@
 @import "utilities/text-size";
 @import "utilities/text-color";
 @import "utilities/border-color";
-@import "utilities/border-radius";
 @import "utilities/background";
+@import "utilities/border-radius";
 @import "utilities/gradient";
 @import "utilities/positions";
 @import "utilities/vertical-align";

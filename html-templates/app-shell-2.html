@@ -6,8 +6,6 @@
   <meta name="description" content="Type some info">
   <meta name="description" content="Final CSS (finalcss) is a utility-first and component library for building modern websites without leaving your HTML"/>
   <meta property="og:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
-  <meta name="twitter:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
-  <meta name="twitter:card" content="summary_large_image"/>
 
   <meta name="author" content="Final CSS">
 
@@ -24,7 +22,7 @@
 		}
 		themeSwitcher.addEventListener('click', () => {
 		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';     
 		    // Set the new theme on the body element
 		    htmlElement.setAttribute('data-theme', newTheme);          
 		    // Save the new theme in localStorage
@@ -41,7 +39,7 @@
 <body>
 
 <div>
-	<aside class="d-none md:d-flex flex-col fixed left-0 top-0 bottom-0 bg-neutral-100  border-right w-24">
+	<aside class="d-none md:d-flex flex-col fixed left-0 top-0 bottom-0 bg-neutral-100  border-right w-25">
 		<header class="p-2 text-center border-bottom h-14">
 			<a href="https://finalcss.com" class="hover:opacity-80 d-block w-full text-center">
 				<img src="logo.svg" alt="" height="40">
@@ -117,7 +115,7 @@
 		</nav>
 	</aside>
 
-	<main class="flex-grow md:ml-24">
+	<main class="flex-grow md:ml-25">
 		<header class="d-flex p-3 lg:px-5 align-items-center border-bottom h-14">
 			<button class="btn btn-default btn-icon mr-3 md:d-none">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">

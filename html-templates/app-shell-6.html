@@ -18,7 +18,7 @@
     }
     function themeSwitcher() {
           const currentTheme = htmlElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+          const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
           // Set the new theme on the body element
           htmlElement.setAttribute('data-theme', newTheme);          
           // Save the new theme in localStorage
@@ -43,7 +43,7 @@
 
   <div class="d-flex flex-row min-h-0 h-full overflow-hidden">
     
-    <aside class="tablet:d-none  d-flex flex-row align-items-stretch relative">
+    <aside class="d-none  md:d-flex flex-row align-items-stretch relative">
 
       <nav class="d-flex flex-col h-full overflow-auto scrollbar-thin w-16 lg:w-20 p-2 bg-primary-800 flex-shrink-0 theme-static">
 

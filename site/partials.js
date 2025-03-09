@@ -11,21 +11,23 @@ class HeaderComponent extends HTMLElement {
     template.innerHTML = `
 
 <dialog id="mobile_menu" class="md:d-none" style="margin-top:12px">
-    <button type="button" class="btn btn-icon absolute top-0 right-0 m-2 float-right" onclick="document.getElementById('mobile_menu').close()">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
-				<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-			</svg> 
-		</button>
-		<h5>FinalCSS</h5>
-    <hr>
-		<nav class="nav nav-col" style="margin:0 -8px;">
-			<a href="/index.html" class="nav-link"> Home </a>
-			<a href="/docs/doc-start.html" class="nav-link"> Documentation </a>
-      <a href="/templates.html" class="nav-link"> Templates </a>
-			<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr;  </a>
-			<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr;  </a>  
-			<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
-		</nav>
+    <div class="dialog-body">
+      <button type="button" class="btn btn-icon absolute top-0 right-0 m-2 float-right" onclick="document.getElementById('mobile_menu').close()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+          <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg> 
+      </button>
+      <h5>FinalCSS</h5>
+      <hr>
+      <nav class="nav nav-col" style="margin:0 -8px;">
+        <a href="/index.html" class="nav-link"> Home </a>
+        <a href="/docs/doc-start.html" class="nav-link"> Documentation </a>
+        <a href="/templates.html" class="nav-link"> Templates </a>
+        <a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr;  </a>
+        <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr;  </a>  
+        <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
+      </nav>
+    </div>
 </dialog>
 	
 <header class="bg-neutral-0 py-2 border-bottom sticky top-0 z-10">

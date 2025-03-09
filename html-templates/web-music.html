@@ -19,7 +19,7 @@
 	// Need to load DOM tree to detect theme switching button
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -81,7 +81,7 @@
     </div>
   </header>
 
-  <aside style="grid-area:layout_left" class="lg:w-100 md:w-72 d-flex flex-col min-h-0">
+  <aside style="grid-area:layout_left" class="lg:w-100 md:w-70 d-flex flex-col min-h-0">
     <div class="bg-base rounded ml-3 h-full overflow-hidden p-1 border">
       <div class="h-full overflow-y-auto scrollbar-thin">
         <nav class="p-2">   
@@ -226,7 +226,7 @@
     </div>
   </aside>
 
-  <main style="grid-area:layout_main; min-width:450px;" class="d-flex flex-col w-full min-w-96 min-h-0 overflow-hidden">
+  <main style="grid-area:layout_main; min-width:450px;" class="d-flex flex-col w-full min-w-95 min-h-0 overflow-hidden">
     
     <div class="flex-1 w-full h-full bg-base rounded p-1 border">
       <div class="overflow-y-auto scrollbar-thin h-full p-4 lg:p-5 lg:pr-3">

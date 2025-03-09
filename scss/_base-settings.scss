@@ -14,9 +14,9 @@ $breakpoints: (
   'md': 'min-width: 921px', // medium and up - larger tablet and up
   'lg': 'min-width: 1201px', // large and up - desktop and any widescreen
   
-  // *** Additional for tablet and mobile only styles *** //
-  'tablet': 'max-width: 920px', // Tablet and any smaller device
-  'mobile': 'max-width: 640px',  // mobile only
+  // *** Additional only for smaller devices *** //
+  'tablet': 'max-width: 920px', // Tablet and mobile 
+  'mobile': 'max-width: 640px',  // Mobile only
 
 );
 
@@ -31,7 +31,7 @@ $border-radius-xl:   16px !default;
 $border-radius-base: $border-radius-md; 
 
 // Typography
-$font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 $font-size-base:              15px !default; 
 $font-size-sm:                0.9rem !default;

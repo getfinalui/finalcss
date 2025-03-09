@@ -27,7 +27,7 @@
 		}
 		themeSwitcher.addEventListener('click', () => {
 		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 		    // Set the new theme on the body element
 		    htmlElement.setAttribute('data-theme', newTheme);          
 		    // Save the new theme in localStorage
@@ -84,7 +84,7 @@
 </head>
 <body>
 
-	<aside class="d-none md:d-flex z-100 flex-col bg-neutral-100 border-right fixed top-0 bottom-0 left-0 lg:w-60 w-52">
+	<aside class="d-none md:d-flex z-100 flex-col bg-neutral-100 border-right fixed top-0 bottom-0 left-0 lg:w-60 w-50">
 		
 		<header class="d-flex px-3 align-items-center h-14 flex-shrink-0">
 			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">

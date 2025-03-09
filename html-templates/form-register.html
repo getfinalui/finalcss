@@ -19,7 +19,7 @@
 	// Need to load DOM tree to detect theme switching button
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -74,7 +74,7 @@
 	</aside>
 	<main class="col-12 md:col-6">
 
-		<div class="mb-5 lg:ml-10 md:p-5 tablet:mx-auto" style="max-width: 460px;">
+		<div class="mb-5 lg:ml-10 md:p-5 mx-auto" style="max-width: 460px;">
 			<header class="mb-5">
 				<h4 class="fs-2xl mb-2">Create an account</h4>
 				<p>Already have an account? <a href="#">Sign in</a></p>

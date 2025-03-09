@@ -5,9 +5,11 @@ if (savedTheme) {
 		htmlElement.setAttribute('data-theme', savedTheme);
 }
 
+
 function themeSwitcher() {
 		const currentTheme = htmlElement.getAttribute('data-theme');
-		const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		const newTheme = currentTheme === 'light'  || !currentTheme ? 'dark' : 'light';   
+
 		// Set the new theme on the body element
 		htmlElement.setAttribute('data-theme', newTheme);          
 		// Save the new theme in localStorage

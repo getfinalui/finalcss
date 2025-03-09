@@ -1,35 +1,36 @@
 .segmented-control{
   background-color:var(--bg-color-lower);
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
   display:inline-flex;
   width:auto;
   padding:1px;
   height:38px;
-  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+  overflow-x: auto;
 
   .segmented-item{
+    color:var(--text-color-secondary);
+    border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
     justify-content:center;
     padding: 0.4rem 0.8rem;
-    align-items: center;
+    flex-shrink: 0;
     display: inline-flex;
+    align-items: center;
     text-align: center;
     font-size: inherit;
     font-weight: 400;
     text-decoration:none;
     user-select: none;
-    color:var(--text-color-secondary);
     text-wrap: nowrap;
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
     cursor: pointer;
-    border:1px solid transparent; 
-    border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+    border:1px solid transparent;
     
     &:hover,
     &:focus {
       text-decoration:none;
       color:var(--text-color-base);
-      background-color: var(--neutral-1000-alpha);
+      background-color: var(--alpha-1);
     }
 
     &.active, &.selected, &:has(input[type="radio"]:checked){
@@ -51,6 +52,5 @@
 .segmented-control.w-full, .segmented-control.w-100\%{
   .segmented-item{
     flex-grow: 1;
-    flex-basis:0;
   }
 }

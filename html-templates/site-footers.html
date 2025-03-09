@@ -22,7 +22,7 @@
 	}
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';     
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -237,7 +237,7 @@
 
 <footer class="bg-neutral-200">
 	<section class="py-12 container d-grid gap-5 grid-template-cols-2 sm:grid-template-cols-4 md:grid-template-cols-6">
-		<div class="tablet:grid-col-span-full">
+		<div class="mobile:grid-col-span-full">
 			
 			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 				<img src="logo.svg" alt="" height="40">

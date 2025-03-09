@@ -22,7 +22,7 @@
 		}
 		function themeSwitcher() {
 					const currentTheme = htmlElement.getAttribute('data-theme');
-					const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+					const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';   
 					// Set the new theme on the body element
 					htmlElement.setAttribute('data-theme', newTheme);          
 					// Save the new theme in localStorage
@@ -76,7 +76,7 @@
 </dialog>
 
 <div class="md:d-flex w-100% min-h-100vh">
-	<aside class="d-none md:d-block bg-neutral-100 border-right flex-grow-0 flex-shrink-0 lg:w-56 w-40">
+	<aside class="d-none md:d-block bg-neutral-100 border-right flex-grow-0 flex-shrink-0 lg:w-55 w-40">
 		<header class="d-flex align-items-center px-3 border-bottom h-14">
 			<a href="https://finalcss.com" class="fs-xl fw-semibold m-0">Final CSS</a>
 		</header>
