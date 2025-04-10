@@ -2,7 +2,7 @@
 // Base styles
 //
 
-
+dialog:not([open]){display:none}
 
 dialog {
   z-index: 99999;
