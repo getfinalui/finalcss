@@ -35,13 +35,13 @@
 
 <div class="mx-auto h-100vh d-flex flex-col">
   
-  <header style="height:var(--header-size)" data-theme="static" class="bg-primary-700 d-flex p-3 lg:px-5 align-items-center h-14 bg-base z-100">
+  <header style="height:var(--header-size)" data-theme="static" class="bg-primary-700 d-flex p-3 desktop:px-5 align-items-center h-14 bg-base z-100">
     
       <!-- header-left  -->
       <div class="d-flex flex-grow">
         
         <!-- mobile hamburger button  -->
-        <button class="btn btn-primary btn-icon mr-3 md:d-none">
+        <button class="btn btn-primary btn-icon mr-3 desktop:d-none">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
               <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -57,7 +57,7 @@
       <!-- header-left  .//end --> 
       
       <!-- header-middle --> 
-      <div class="d-flex col-5">
+      <div class="d-flex col-5/12">
         <form class="d-flex w-100% mx-3">
           <div class="relative w-full">
             <input type="search" class="form-control bg-primary-600 text-white border-primary rounded-right-0" list="search_suggest" placeholder="Search message">
@@ -97,8 +97,8 @@
       <!-- header-right .//end --> 
     
   </header>
-  <section style="height:calc(100% - var(--header-size))" class="bg-base d-flex overflow-hidden w-full lg:flex-row align-items-stretch relative">
-    <aside class="bg-lower h-full lg:w-60 border-right d-none md:d-block">
+  <section style="height:calc(100% - var(--header-size))" class="bg-base d-flex overflow-hidden w-full desktop:flex-row align-items-stretch relative">
+    <aside class="bg-lower h-full desktop:w-60 border-right d-none desktop:d-block">
       <div class="d-flex flex-col px-3 py-3 h-full overflow-y-auto min-w-50">
 
         <a class="btn btn-primary" href="#"> 
@@ -372,7 +372,7 @@
           <div class="d-flex flex-col h-full p-3">
         
             <!-- message item -->
-            <article class="lg:p-8  mx-auto max-w-90%">
+            <article class="desktop:p-8  mx-auto max-w-90%">
               <h4 class="mb-4">Re: About partnership</h4>
 
               <div class="d-flex mb-3">
@@ -385,7 +385,7 @@
                   <h6 class="fw-medium mb-0">From: Alexander J.  <span class="text-secondary fw-normal">example@gmail.com</span> </h6> 
                   <div class="has-icon-dropdown text-secondary"> to me </div>
                 </div>
-                <div class="lg:ml-auto">
+                <div class="desktop:ml-auto">
                   <time datetime="" class="text-secondary"> 🕒 Today 7:55 PM</time>
                 </div>
               </div>

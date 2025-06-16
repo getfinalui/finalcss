@@ -35,7 +35,7 @@
 
 <main class="py-25 bg-colorful">	
 	<div class="container" style="max-width: 980px;">
-		<h1 class="fs-4xl md:fs-5xl lg:fs-6xl text-center my-5">A simple but powerful <br> CSS library for any purpose</span> </h1>
+		<h1 class="fs-4xl tablet:fs-5xl desktop:fs-6xl text-center my-5">A simple but powerful <br> CSS library for any purpose</span> </h1>
 		<p class="mb-5 fs-xl text-secondary text-center text-balance"> Reimagined version of Bootstrap and Tailwind CSS libraries. Create anything with both utility and component classes. Free and open source </p>
 		<p  class="text-center mb-5">
 			<code class="bg-neutral-0 d-none rounded-pill border p-1 px-3 d-md-inline-block">
@@ -44,7 +44,7 @@
 		</p>
 
 		<div class="text-center mb-3">
-			<a class="btn btn-primary" href="docs.html">Documentation</a>
+			<a class="btn btn-primary" href="docs/doc-start.html">Documentation</a>
 			<a class="btn btn-default" href="#demo">View example UI</a>
 		</div>
 
@@ -54,10 +54,10 @@
 <section class="pb-14">
 	
 	<div class="container">
-		<article class="card h-full p-4 lg:p-6 shadow-sm">
+		<article class="card h-full p-4 desktop:p-6 shadow-sm">
 			<div class="row">
 				
-				<aside class="md:col-6">
+				<aside class="desktop:col-6/12">
 					<h4 class="mb-4">Built for modern web apps</h4>
 					<p>
 						As UI Designer and Web developer I deeply understand your struggles with CSS. During the last 10 years I've made hundreds of complex layouts for various web apps. I tried many css frameworks including Bootstrap and Tailwind. I know what can be improved, so I decided to fill all gaps... But this is the beginning of new css library. <br><b>Here are some reasons why you should try it:</b>
@@ -70,13 +70,13 @@
 						<li> Extend by adding your utility classes and components</li>
 					</ul>
 				</aside>
-				<aside class="md:col-6">
+				<aside class="desktop:col-6/12">
 					<figure class="bg-primary h-full rounded"> </figure>
 				</aside>
 			</div> <!-- row .//end -->
 		</article>
 
-		<div class="d-grid lg:grid-template-cols-3 md:grid-template-cols-2 gap-5 mt-10">
+		<div class="d-grid grid-template-cols-3 tablet:grid-template-cols-2 mobile:grid-template-cols-1 gap-5 mt-10">
 			<aside class="p-4 card border-transparent  bg-orange-100">
 				<h5 class="mb-2">Customizable SASS/SCSS</h5>
 				<p class="opacity-70">You're not locked in any rules. Make it your own. Add your component or utility classes</p>
@@ -133,8 +133,8 @@
 
 	<article>
 		<div class="row mb-5">
-			<aside class="md:col-6">
-				<div class="d-grid md:grid-template-cols-2 gap-5 mb-5">
+			<aside class="col-6/12 tablet:col-12/12">
+				<div class="d-grid grid-template-cols-2 mobile:grid-template-cols-1 gap-5 mb-5">
 					
 					<article class="card border-transparent theme-static bg-primary-700 text-white">
 						<div class="card-body">
@@ -217,11 +217,11 @@
 							</div>
 
 							<div class="row">
-								<div class="lg:col-6 mb-5">
+								<div class="desktop:col-6/12 mb-5">
 										<label for="firstName" class="form-label">First name</label>
 										<input type="text" class="form-control" placeholder="Type here" value="" required="">  
 								</div>
-								<div class="lg:col-6 mb-5">
+								<div class="desktop:col-6/12 mb-5">
 									<label class="form-label">Last name</label>
 									<input type="text" class="form-control" placeholder="Type here" value="" required="">
 								</div>
@@ -284,9 +284,9 @@
 					</nav>
 				</article>
 
-				<div class="row sm:row-cols-2">
+				<div class="row row-cols-2">
 					<div>
-						<article class="card overflow-hidden lg:h-full  mb-5 md:mb-0">
+						<article class="card overflow-hidden desktop:h-full  mb-5 desktop:mb-0">
 							
 							<header class="bg-purple-200 relative h-25">
 								<a href="#" class="absolute top-0 m-2 btn btn-neutral btn-sm">Edit</a>
@@ -321,7 +321,7 @@
 					</div> <!-- col.// -->
 					<div>
 						
-						<article class="card mb-5 lg:mb-0">
+						<article class="card mb-5 desktop:mb-0">
 							<div class="bg-neutral-300 rounded-top overflow-hidden">
 								<img class="object-fit-cover w-full" style="height: 164px;" src="https://picsum.photos/seed/picsum/400/400">
 							</div>
@@ -347,7 +347,7 @@
 				</div> <!-- row.// -->
 
 			</aside>
-			<aside class="md:col-6">
+			<aside class="col-6/12 tablet:col-12/12">
 				
 			<article class="card mb-5">
 				<header class="p-5 pb-0">
@@ -572,7 +572,7 @@
 			</div>
 
 			<div class="d-grid grid-template-cols-5 gap-5 w-100%">
-				<article class="grid-col-span-full sm:grid-col-span-3 card card-body">
+				<article class="grid-col-span-3 card card-body">
 					
 					<!-- input search  -->
 					<div class="d-flex w-full mb-4">
@@ -616,7 +616,7 @@
 					</div>
 					<!-- input field .//end -->
 				</article> <!-- card .//end -->
-				<div class="sm:grid-col-span-2">
+				<div class="grid-col-span-2">
 					<nav class="dropdown static w-full max-w-80">
 							<a class="dropdown-item" href="">Details</a>
 							<a class="dropdown-item" href="">Edit</a>
@@ -631,7 +631,7 @@
 		</div> 
 		<!-- row.// -->
 
-		<div class="row gap-5 sm:row-cols-2 lg:row-cols-3">
+		<div class="row gap-5 row-cols-3 tablet:row-cols-2 mobile:row-cols-1">
 			<aside class="col">
 				<dialog open class="static m-0 w-full"> 
 						<article class="dialog-body">
@@ -653,7 +653,7 @@
 					<button class="btn-close-dialog">
 						<svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
-						</svg> 
+						</svg>
 					</button> 
 						<div class="dialog-body">
 							<h5 class="mb-2">Delete items?</h5>
@@ -700,7 +700,7 @@
 		<p class="text-center text-secondary  mb-5 fs-lg">Modern website templates, crafted with Final CSS</p>
 	</header>
 
-	<div class="d-grid lg:grid-template-cols-3 sm:grid-template-cols-2 grid-template-cols-1 gap-6">
+	<div class="d-grid desktop:grid-template-cols-3 tablet:grid-template-cols-2 mobile:grid-template-cols-1 gap-6">
 		
 		<figure>
 				<div class="bg-neutral-200 border shadow rounded-sm overflow-hidden" style="max-height: 310px;">

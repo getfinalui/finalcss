@@ -9,11 +9,13 @@
   --btn-size-sm: 32px;
   --btn-size-md: 38px;
   --btn-size-lg: 44px;
+  --btn-size-xl: 50px;
   --btn-padding-x: 12px;
   --btn-padding-y: 6px;
   --btn-font-size-md: 1rem;
   --btn-font-size-sm: 0.96rem;
   --btn-font-size-lg: 1.1rem;
+  --btn-font-size-xl: 1.14rem;
   --btn-font-weight:400;
   --btn-bg: transparent;
   --btn-bg-hover: var(--alpha-1);
@@ -69,6 +71,14 @@
 }
 
 // Sizes of button
+.btn-xl {
+  padding-left: 20px; 
+  padding-right: 20px;
+  height: var(--btn-size-xl);
+  font-size: var(--btn-font-size-xl);
+  border-radius: 10px;
+}
+
 .btn-lg {
   padding-left: 12px; 
   padding-right: 12px;

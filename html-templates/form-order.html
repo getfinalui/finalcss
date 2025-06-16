@@ -36,7 +36,7 @@
 
 <header class="py-2 border-bottom">
 	<div class="container">
-		<div class="d-flex flex-col sm:flex-row gap-2 align-items-center justify-content-between">
+		<div class="d-flex flex-col flex-row gap-2 align-items-center justify-content-between">
 			
 			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 				<img src="logo.svg" alt="" height="40">
@@ -69,13 +69,13 @@
 <div class="container" style="max-width:1140px;">
 
 <div class="row">
-	<main class="md:col-8">
+	<main class="desktop:col-8/12">
 
 		<article class="card mb-4">
 			<div class="card-body">
 				<h5 class="mb-3"> Choose delivery option </h5>
 
-				<fieldset class="d-flex flex-col sm:flex-row gap-2">
+				<fieldset class="d-flex flex-col flex-row gap-2">
 
 					<label class="card-check d-flex p-3 rounded">
 						<input class="form-check-input" name="delivery-type" type="radio" value="">
@@ -112,19 +112,19 @@
 				<h5 class="mb-3"> Contact person </h5>
 					
 					<fieldset class="row gap-3 mb-6">
-						<div class="sm:col-6 mb-3">
+						<div class="col-6/12 mb-3">
 							<label class="form-label">Your name   </label>
 							<input type="text" class="form-control" placeholder="Type here">
 						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
+						<div class="col-6/12 mb-3">
 							<label class="form-label">Phone  </label>
 							<input type="text" value="+1" class="form-control">
 						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
+						<div class="col-6/12 mb-3">
 							<label class="form-label">Email <span class="text-muted">(optional)</span>  </label>
 							<input type="text" class="form-control" placeholder="Type here">
 						</div> <!-- col end.// -->
-						<div class="sm:col-6 mb-3">
+						<div class="col-6/12 mb-3">
 							<label class="form-label">Whatsapp <span class="text-muted">(optional)</span> </label>
 							<input type="text" value=""  class="form-control" placeholder="Type here">
 						</div> <!-- col end.// -->
@@ -134,32 +134,32 @@
 
 					<fieldset class="row gap-3  mb-6">
 						
-						<div class="lg:col-8 mb-3">
+						<div class="desktop:col-8/12 mb-3">
 							<label for="" class="form-label">Address</label>
 							<input type="text" class="form-control"  placeholder="Street name, district">
 						</div> <!-- col end.// -->
 
-						<div class="lg:col-4 mb-3">
+						<div class="desktop:col-4/12 mb-3">
 							<label for="" class="form-label">Location</label>
 							<a href="#" class="btn btn-primary-subtle w-full">  Select location from map  </a>
 						</div> <!-- col end.// -->
 
-						<div class="lg:col-4 mb-3">
+						<div class="desktop:col-4/12 mb-3">
 							<label for="" class="form-label">Building number</label>
 							<input type="text" class="form-control"  placeholder="Type here">
 						</div> <!-- col end.// -->
 
-						<div class="lg:col-4 col-6 mb-3">
+						<div class="desktop:col-4/12 col-6/12 mb-3">
 							<label for="" class="form-label">Entrance code</label>
 							<input type="text" class="form-control"  placeholder="">
 						</div> <!-- col end.// -->
 		 
-						<div class="lg:col-4 col-6 mb-3">
+						<div class="desktop:col-4/12 col-6/12 mb-3">
 							<label for="" class="form-label">Floor</label>
 							<input type="text" class="form-control"  placeholder="">
 						</div> <!-- col end.// -->
 
-						<div class="col-12 mb-3">
+						<div class="col-1/122 mb-3">
 							<label for="" class="form-label">Your comment</label>
 							<textarea class="form-control" rows="2" placeholder="Have something to say?"></textarea>
 						</div> 
@@ -170,14 +170,14 @@
 					<h5 class="mb-3"> When to deliver </h5> 
 
 					<fieldset class="row gap-3">
-						<div class="col-4 mb-4">
+						<div class="col-4/12 mb-4">
 							<select class="form-select">
 								<option>Today</option>
 								<option>Tomorrow</option>
 								<option>Mon, 13-May</option>
 							</select>
 						</div> <!-- col end.// -->
-						<div class="col-4 mb-4">
+						<div class="col-4/12 mb-4">
 							<select class="form-select">
 								<option>Quicly</option>
 								<option>13:00</option>
@@ -244,7 +244,7 @@
 
 
 	</main> <!-- col.// -->
-	<aside class="md:col-4">
+	<aside class="desktop:col-4/12">
 		<!-- ============== COMPONENT SUMMARY =============== -->
 		<div class="card shadow-lg bg-raised sticky-top top-2">
 			<div class="card-body">
@@ -270,7 +270,7 @@
 				<hr>
 				<dl class="d-flex justify-content-between">
 					<dt class="fw-semibold fs-lg">Total:</dt>
-					<dd class="fw-semibold fs-lg lg:mb-0"> $157.90 </dd>
+					<dd class="fw-semibold fs-lg desktop:mb-0"> $157.90 </dd>
 				</dl>
 				<hr>
 				<p class="my-3 text-center text-secondary">
