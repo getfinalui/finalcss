@@ -11,7 +11,7 @@
   background-color: var(--bg-color-base);
   background-clip: border-box;
   border:1px solid var(--border-color-default);
-  border-radius: $border-radius-base; // from: _base-settings.scss
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
   img{
     max-width:100%;
   }

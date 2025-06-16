@@ -19,7 +19,7 @@
 	// Need to load DOM tree to detect theme switching button
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -66,15 +66,15 @@
 <section class="py-10">
 
 <div class="d-flex container">
-	<aside class="md:col-6">
+	<aside class="desktop:col-6/12">
 		
 		<div class="mobile:hidden h-full w-full bg-primary-400 bg-gradient-2 rounded-lg" style="min-height: 600px;"> 
 		</div>
 
 	</aside>
-	<main class="col-12 md:col-6">
+	<main class="col-1/122 desktop:col-6/12">
 
-		<div class="mb-5 lg:ml-10 md:p-5 tablet:mx-auto" style="max-width: 460px;">
+		<div class="mb-5 desktop:ml-10 desktop:p-5 mx-auto" style="max-width: 460px;">
 			<header class="mb-5">
 				<h4 class="fs-2xl mb-2">Create an account</h4>
 				<p>Already have an account? <a href="#">Sign in</a></p>
@@ -85,11 +85,11 @@
 			<fieldset class="mb-4">
 
 				<div class="row gap-2">
-					<div class="col-6 mb-4">
+					<div class="col-6/12 mb-4">
 						<label class="form-label fw-medium">First name</label>
 						<input type="text" class="form-control" placeholder="Type here">
 					</div>
-					<div class="col-6 mb-4">
+					<div class="col-6/12 mb-4">
 						<label class="form-label fw-medium">Last name</label>
 						<input type="text" class="form-control" placeholder="Type here">
 					</div>

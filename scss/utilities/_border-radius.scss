@@ -2,30 +2,30 @@
 
 // Border values can be changed from _base-settings.scss 
 .rounded-0 { border-radius: 0;}
-.rounded{ border-radius: $border-radius-md; }
-.rounded-sm{border-radius: $border-radius-sm;}
-.rounded-md {border-radius: $border-radius-md;}
-.rounded-lg {border-radius: $border-radius-lg;}
-.rounded-xl {border-radius: $border-radius-xl;}
+.rounded{ border-radius:var(--border-radius-base); } // from: _base-settings.scss or _variables-root.scss }
+.rounded-sm{border-radius: var(--border-radius-sm); } // from: _base-settings.scss or _variables-root.scss }
+.rounded-md {border-radius: var(--border-radius-md);} // from: _base-settings.scss or _variables-root.scss}
+.rounded-lg {border-radius: var(--border-radius-lg);} // from: _base-settings.scss or _variables-root.scss}
+.rounded-xl {border-radius: var(--border-radius-xl); } // from: _base-settings.scss or _variables-root.scss}
 .rounded-full { border-radius: 400px; flex-shrink:0; }
-.rounded-circle, { border-radius: 50%; flex-shrink:0; }
+.rounded-circle { border-radius: 50%; flex-shrink:0; }
 
 
 .rounded-top {
-  border-top-left-radius: $border-radius-md !important;
-  border-top-right-radius: $border-radius-md !important;
+  border-top-left-radius: var(--border-radius-base)!important; 
+  border-top-right-radius: var(--border-radius-base)!important; 
 }
 .rounded-bottom {
-  border-bottom-right-radius: $border-radius-md !important;
-  border-bottom-left-radius: $border-radius-md !important;
+  border-bottom-right-radius: var(--border-radius-base)!important; 
+  border-bottom-left-radius: var(--border-radius-base)!important; 
 }
 .rounded-left {
-  border-top-left-radius: $border-radius-md !important;
-  border-bottom-left-radius: $border-radius-md !important;
+  border-top-left-radius: var(--border-radius-base)!important; 
+  border-bottom-left-radius: var(--border-radius-base)!important; 
 }
 .rounded-right{
-  border-bottom-right-radius: $border-radius-md !important;
-  border-top-right-radius: $border-radius-md !important;
+  border-bottom-right-radius: var(--border-radius-base)!important; 
+  border-top-right-radius: var(--border-radius-base)!important; 
 }
 
 .rounded-top-0 {

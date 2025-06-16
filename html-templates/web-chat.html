@@ -19,7 +19,7 @@
 	// Need to load DOM tree to detect theme switching button
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';   
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -33,10 +33,10 @@
 </head>
 <body class="h-full bg-lower">
 
-<section class="mx-auto h-100vh lg:p-5 relative" style="max-width: 1600px;">
+<section class="mx-auto h-100vh desktop:p-5 relative" style="max-width: 1600px;">
 
-<div class="bg-base border rounded d-flex overflow-hidden w-full h-full  lg:flex-row align-items-stretch relative shadow-sm">
-  <aside class="border-right md:max-w-30% h-full tablet:w-full">
+<div class="bg-base border rounded d-flex overflow-hidden w-full h-full  desktop:flex-row align-items-stretch relative shadow-sm">
+  <aside class="border-right desktop:max-w-30% h-full tablet:w-full">
     <div class="d-flex flex-col h-full overflow-hidden">
       
       <header class="p-3 h-16 border-bottom">
@@ -73,7 +73,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Archived chats</h5> 
+              <h6>Archived chats</h6> 
             </div>
             <div class="text-secondary">
               <p class="text-truncate">3 chats archived </p>
@@ -87,7 +87,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Mike John</h5> 
+              <h6>Mike John</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">Now</time>
             </div>
             <div class="text-secondary">
@@ -96,16 +96,16 @@
           </div>
         </a>
 
-        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded hover:bg-neutral-200">
+        <a href="#" role="button" class="d-flex align-items-center mx-2 px-2 rounded bg-primary text-white">
           <div class="mr-3">
-            <div class="avatar bg-pink-500"> A </div>
+            <div class="avatar bg-orange-500"> A </div>
           </div>
-          <div class="flex-1 overflow-hidden py-4 border-bottom">
+          <div class="flex-1 overflow-hidden py-4">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Alexander J.</h5> 
-              <time class="text-muted fs-sm ml-auto" datetime="#">Today</time>
+              <h6>Alexander J.</h6> 
+              <time class="text-white fs-sm ml-auto" datetime="#">Today</time>
             </div>
-            <div class="text-secondary">
+            <div class="text-white">
               <p class="text-truncate">Hey man, I saw your comment on my Figma preview. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
           </div>
@@ -117,7 +117,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Finalcss Support</h5> 
+              <h6>Finalcss Support</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">16:45</time>
             </div>
             <div class="text-secondary">
@@ -132,7 +132,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">My Love</h5> 
+              <h6>My Love</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12:45</time>
             </div>
             <div class="text-secondary">
@@ -147,7 +147,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Mike John</h5> 
+              <h6>Mike John</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">Yesterday</time>
             </div>
             <div class="text-secondary">
@@ -162,7 +162,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Donald Trump</h5> 
+              <h6>Donald Trump</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">Yesterday</time>
             </div>
             <div class="text-secondary">
@@ -177,7 +177,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Mike John</h5> 
+              <h6>Mike John</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -192,7 +192,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0"> Mr. President </h5> 
+              <h6> Mr. President </h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -207,7 +207,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">George Alexander</h5> 
+              <h6>George Alexander</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -222,7 +222,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Tony John</h5> 
+              <h6>Tony John</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -237,7 +237,7 @@
           </div>
           <div class="flex-1 overflow-hidden py-4 border-bottom">
             <div class="d-flex align-item-center"> 
-              <h5 class="fw-medium mb-0">Mike John</h5> 
+              <h6>Mike John</h6> 
               <time class="text-muted fs-sm ml-auto" datetime="#">12/23/2024</time>
             </div>
             <div class="text-secondary">
@@ -256,7 +256,7 @@
 
       <header class="p-3 d-flex h-16 flex-shrink-0 align-items-center border-bottom w-full">
 
-        <button class="btn btn-default btn-icon mr-3 md:d-none">
+        <button class="btn btn-default btn-icon mr-3 desktop:d-none">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
         </button>
 
@@ -340,7 +340,7 @@
 
       </section>
 
-      <footer class="bg-base border-top p-2 lg:p-3">
+      <footer class="bg-base border-top p-2 desktop:p-3">
         <div class="d-flex w-full gap-2">
           <div> <button class="btn btn-default btn-icon"> 😃 </button> </div>
           <textarea rows="3" placeholder="Type message" class="form-control" name=""></textarea>

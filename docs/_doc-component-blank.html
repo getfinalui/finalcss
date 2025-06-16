@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Website layout sample </title>
+
+	<!-- Site script (only for documentation site) -->
+	<script src="/site/script.js"></script>
+	
+	<!-- FinalCSS -->
+	<link href="/css/final.css" rel="stylesheet" type="text/css" />
+
+	<!-- Template parts (only for documentation site) -->
+	<script src="/site/partials.js"></script>
+
+	<!-- Syntax highlight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <!--
+  ### https://codebeautify.org/html-escape-unescape 
+  -->
+
+</head>
+<body class="bg-base">
+
+<!-- ======= HEADER =======  -->
+<header-component></header-component>
+<!-- ======= HEADER end// =======-->
+
+<div class="container">
+
+<div class="d-flex flex-wrap">
+<aside class="w-full desktop:w-20%">
+	
+<!-- ======= SIDEBAR =======  -->
+<sidebar-component></sidebar-component>
+<!-- ======= SIDEBAR end// =======-->
+
+</aside>
+<main class="desktop:w-80% pl-0 desktop:pl-10 pt-10">
+
+<h6 class="mb-3 text-secondary">Documentation</h6>
+
+<h1 class="fs-4xl my-20px">Component name</h1>
+<hr>
+
+<article class="article-wrap mb-16">
+<p>Some explanation about what component is, what it does, </p>
+
+<ul class="list-check">
+	<li> When to use it </li>
+	<li> Responsive classes: Yes </li>
+  <li> Darkm mode: Yes </li>
+	<li> Don't use for ... </li>
+	<li> Don't use for ... </li>
+	<li> SCSS file:  </li>
+</ul>
+
+<hr>
+<h4> Basic example </h4>
+
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-primary">Example button</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <pre class="m-0"><code class="rounded-bottom language-html"> &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Simple button &lt;/a&gt;</code></pre>
+  </figcaption>
+</figure>
+
+
+<hr>
+<h4> Other variants </h4>
+<p>Variants based on theme colors, how to do that...</p>
+
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-primary">Example button</button>  <button class="btn btn-primary">Example button</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <pre class="m-0"><code class="rounded-bottom language-html"> &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Simple button &lt;/a&gt; 
+ &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Simple button &lt;/a&gt; </code></pre>
+  </figcaption>
+</figure>
+
+
+
+<hr>
+<h4> Size  </h4>
+<p> Size or customization. How to do that...</p>
+
+
+<hr>
+<h4> Class names - parameters </h4>
+<table class="table table-bordered">
+  <tr>
+    <th> Class name </th> <th> Generated style  </th> <th> Result (if color) </th>
+  </tr>
+  <tr>
+    <td> <code> bg-white</code> </td> <td> background-color:var(--bg-white)  </td> <td> <b class="bg-white w-6 h-6 d-block border"> </b> </td>
+  </tr>
+</table>
+
+
+
+<hr>
+<h4> Example (playground) </h4>
+<p>Codepen demo to fork and play with code</p>
+
+<p class="codepen" data-height="600" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="NPWdora" data-pen-title="Buttons" data-user="vosidiy" style="display: flex; align-items: center; justify-content: center; border: 1px solid;"></p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+
+</article>
+
+</main>
+</div> <!-- row end -->
+</div> <!-- container end -->
+
+
+<footer-component></footer-component>
+
+
+</body>
+</html>

@@ -15,7 +15,6 @@
 
 	<script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', () => {
-
 		// ***********************
 		// Theme toggle
 		const htmlElement = document.documentElement;
@@ -27,7 +26,7 @@
 		}
 		themeSwitcher.addEventListener('click', () => {
 		    const currentTheme = htmlElement.getAttribute('data-theme');
-		    const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+		    const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 		    // Set the new theme on the body element
 		    htmlElement.setAttribute('data-theme', newTheme);          
 		    // Save the new theme in localStorage
@@ -84,7 +83,7 @@
 </head>
 <body>
 
-	<aside class="d-none md:d-flex z-100 flex-col bg-neutral-100 border-right fixed top-0 bottom-0 left-0 lg:w-60 w-52">
+	<aside class="d-none desktop:d-flex z-100 flex-col bg-neutral-100 border-right fixed top-0 bottom-0 left-0 desktop:w-60 w-50">
 		
 		<header class="d-flex px-3 align-items-center h-14 flex-shrink-0">
 			<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
@@ -182,7 +181,7 @@
 		<div class="p-3 mt-auto">
 
 			<nav class="relative">
-				<ul id="menu_more_1" class="dropdown open-up lg:w-full" hidden style="transform: translateY(-48px);">
+				<ul id="menu_more_1" class="dropdown open-up desktop:w-full" hidden style="transform: translateY(-48px);">
 					<li>
 						<a class="dropdown-item" href=""> 
 							<div class="lh-sm py-1">
@@ -217,10 +216,10 @@
 
 	</aside>
 
-	<main class="lg:pl-60 md:pl-52">
+	<main class="desktop:pl-60 desktop:pl-52">
 
-		<header class="d-flex p-3 lg:px-5 align-items-center border-bottom h-14">
-			<button class="btn btn-default btn-icon mr-3 md:d-none">
+		<header class="d-flex p-3 desktop:px-5 align-items-center border-bottom h-14">
+			<button class="btn btn-default btn-icon mr-3 desktop:d-none">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 				    <path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 				    <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -251,30 +250,30 @@
 			</div>
 		</header>
 
-		<section class="p-3 lg:p-5">
+		<section class="p-3 desktop:p-5">
 
-			<div class="d-grid grid-template-cols-1 sm:grid-template-cols-2 lg:grid-template-cols-4 gap-5 w-100%">
+			<div class="d-grid grid-template-cols-1 grid-template-cols-2 desktop:grid-template-cols-4 gap-5 w-100%">
 				
 				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
+					<div class="card-body desktop:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
 
 				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
+					<div class="card-body desktop:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
 
 				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
+					<div class="card-body desktop:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
 
 				<article class="card bg-secondary border">
-					<div class="card-body lg:h-20">
+					<div class="card-body desktop:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>

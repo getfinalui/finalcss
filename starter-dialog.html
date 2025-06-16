@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="description" content="Final CSS (finalcss) is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta property="og:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:description" content="Final CSS is a utility-first and component library for building modern websites without leaving your HTML"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <meta name="author" content="Vosidiy M">
+
+  <title>Final CSS - Example data table (finalcss.com)</title>
+
+  <script type="text/javascript">
+    // Check localStorage for saved theme and assign that
+    const htmlElement = document.documentElement;
+    const savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    function themeSwitcher() {
+          const currentTheme = htmlElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';   
+          // Set the new theme on the body element
+          htmlElement.setAttribute('data-theme', newTheme);          
+          // Save the new theme in localStorage
+          localStorage.setItem('site-theme', newTheme);
+    }
+  </script>
+
+
+
+<!-- FinalCSS -->
+<link href="css/final.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class="bg-base">
+
+
+<header class="bg-base py-2 border-b">
+	<div class="container"  style="max-width: 920px;">
+		<div class="d-flex flex-column flex-md-row align-items-center">
+			<div class="mb-3 desktop:mb-0">
+				<a href="https://finalcss.com" class="fs-xl fw-semibold">Final CSS</a>
+			</div>
+			<nav class="nav ml-auto">
+        
+        <a href="index.html" class="nav-link">Home</a>
+				<a href="#" class="nav-link">About</a>
+				<a href="#" class="nav-link">Link one</a>
+        <a href="#" class="nav-link">Link two</a>
+				
+				<button onclick="themeSwitcher()" class="btn  btn-neutral ml-2">
+					<span class="d-none dark:d-block"> Make light </span>
+					<span class="dark:d-none"> Make dark </span>
+				</button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<section class="py-10 bg-lower min-h-100vh">
+  <div class="container" style="max-width: 920px;">
+    <h3 class="mb-2">Dialog examples</h3>
+    <p class="text-secondary">Example HTML native dialog windows</p>
+    <hr>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_basic')">Open basic dialog</button>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_long')">Open long dialog</button>
+
+    <button class="btn btn-default"  onclick="open_dialog('dialog_form')">Open form dialog</button>
+
+    <hr>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_confirm')">Open confirmation </button>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_error')">Open error dialog</button>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_success')">Open success dialog</button>
+
+
+    <hr>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_full')">Wide page dialog</button>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_aside_left')">Aside left dialog</button>
+
+    <button class="btn btn-default" onclick="open_dialog('dialog_aside_right')">Aside right dialog</button>
+
+    <hr>
+
+    <h6>How to trigger via JS</h6>
+
+    <pre class="border p-2 bg-orange-100 my-2"><code class="bg-transparent">&lt;button class="btn btn-default" <b>onclick="open_dialog('dialog_basic')"></b>Open dialog &lt;/button &gt;
+
+function open_dialog(dialog_id){
+  document.getElementById(dialog_id).showModal();
+}
+
+// To close the dialog you can use native "close()" function
+
+document.getElementById('dialog_long').close()
+</code></pre>
+
+    <p class="text-secondary">You can also press <kbd>ESC</kbd> key to close the dialog</p>
+  </div>
+</section>
+
+
+<!-- DIALOG BASIC start -->
+<dialog id="dialog_basic">
+  <div class="dialog-body">
+    <button class="btn-close-dialog" onclick="close_dialog(this)">
+      <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+        <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+      </svg> 
+    </button> 
+    <h5 class="mb-2">Basic dialog</h5>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+    
+    <div class="mt-3 d-flex gap-1">
+      <button class="btn btn-default" onclick="close_dialog(this)"> Got it</button>
+    </div>
+  </div>
+</dialog>
+<!-- DIALOG BASIC end.// -->
+
+<!-- DIALOG LONG start -->
+<dialog id="dialog_long" class="mt-20">
+  <header class="dialog-header">
+    <h5>Long content dialog</h5>
+    <button class="btn btn-icon" onclick="close_dialog(this)">
+      <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+        <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+      </svg> 
+    </button> 
+  </header>
+  <div class="dialog-body">
+    <article class="article-wrap">
+      <p>This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas!</p>
+      
+      <img  src="https://picsum.photos/seed/picsum/800/600">
+      
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+
+    </article>
+  </div>
+  <div class="dialog-bottom">
+    <a class="btn btn-default" href="#"> Read more </a>
+    <button class="btn btn-default" onclick="close_dialog(this)"> Close </button>
+  </div>
+</dialog>
+<!-- DIALOG LONG end.// -->
+
+
+<!-- DIALOG FORM start -->
+<dialog id="dialog_form" class="mt-20">
+  <header class="dialog-header">
+    <h5>My sample form</h5>
+    <button class="btn btn-icon" onclick="close_dialog(this)">
+      <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+        <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+      </svg> 
+    </button> 
+  </header>
+  <article class="dialog-body">
+    <form action="">
+      <div class="d-flex w-full gap-3">
+        <div class="mb-4 flex-grow">
+          <label class="form-label">First name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="mb-4 flex-grow">
+          <label class="form-label">Last name</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label">Country</label>
+        <select name="" class="form-select">
+          <option value="">Select country</option>
+          <option value="">United States </option>
+          <option value="">Germany</option>
+          <option value="">Uzbekistan</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <div class="form-label mb-3">Choose a plan</div>
+        
+        <div class="d-flex flex-wrap gap-2">
+          <label class="form-check mb-2 bg-neutral-200 p-2 flex-1 rounded  border hover:border-primary ">
+            <input type="radio" name="option_plan" class="form-check-input">
+            <span class="form-check-label">Free plan</span>
+          </label>
+  
+          <label class="form-check mb-2 bg-neutral-200 p-2 flex-1  rounded border  hover:border-primary ">
+            <input type="radio" name="option_plan" class="form-check-input">
+            <span class="form-check-label">Premium plan</span>
+          </label>
+  
+          <label class="form-check mb-2 bg-neutral-200 p-2 flex-1 rounded border  hover:border-primary ">
+            <input type="radio" name="option_plan" class="form-check-input">
+            <span class="form-check-label">Best plan</span>
+          </label>
+        </div>
+      </div>
+      <hr>
+
+      <label class="form-check mb-4">
+        <input type="checkbox" class="form-check-input">
+        <span class="form-check-label">I agree with all terms and condition</span>
+      </label>
+      <div class="pt-3 d-flex align-items-center gap-2">
+        <button class="btn btn-primary"> Submit form </button>
+        <button class="btn btn-default" onclick="close_dialog(this)"> Cancel </button>
+      </div>
+
+    </form>
+  </article>
+</dialog>
+<!-- DIALOG FORM end.// -->
+
+<!-- DIALOG CONFIRM start -->
+<dialog id="dialog_confirm" class="dialog-sm">
+   <button class="btn-close-dialog" onclick="close_dialog(this)">
+    <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+      <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+    </svg> 
+   </button>
+    <div class="dialog-body">
+      <h5 class="mb-1">Delete items?</h5>
+      <p>Are you sure to delete complately?</p>
+    </div>
+    <div class="p-4 pt-0 d-flex gap-2 justify-content-end">
+      <button class="btn btn-default" onclick="close_dialog(this)">Cancel </button>
+      <button class="btn btn-red">Yes, delete</button>
+    </div>
+</dialog>
+<!-- DIALOG CONFIRM end.// -->
+
+<!-- DIALOG ERROR start -->
+<dialog id="dialog_error" class="dialog-sm">
+  <button class="btn-close-dialog" onclick="close_dialog(this)">
+   <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+     <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+   </svg> 
+  </button>
+   <div class="dialog-body text-center">
+
+      <span class="d-inline-block my-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+      </span>
+
+     <h5 class="mb-1 text-red">Can't do this action</h5>
+     <p>Because you are not an owner of this</p>
+   </div>
+   <div class="p-4 d-flex w-full gap-1">
+     <button class="btn btn-neutral flex-1"> Learn more </button>
+     <button class="btn btn-primary flex-1" onclick="close_dialog(this)">Got it</button>
+   </div>
+</dialog>
+<!-- DIALOG ERROR end.// -->
+
+<!-- DIALOG SUCCESS start -->
+<dialog id="dialog_success" class="dialog-sm">
+  <button class="btn-close-dialog" onclick="close_dialog(this)">
+   <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+     <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+   </svg> 
+  </button>
+   <div class="dialog-body text-center">
+
+    <span class="my-2 w-16 h-16 text-green bg-green-200 rounded-circle d-inline-flex flex-center flex-shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-1"><path d="M20 6 9 17l-5-5"/></svg>
+      </svg>
+    </span>
+
+     <h5 class="mb-1 text-green">Success message</h5>
+     <p class="text-secondary">You made that action successfully. <br> Total: $190.00</p>
+   </div>
+   <div class="dialog-bottom">
+     <button class="btn btn-neutral flex-1"> My account </button>
+     <button class="btn btn-primary flex-1" onclick="close_dialog(this)"> OK  </button>
+   </div>
+</dialog>
+<!-- DIALOG SUCCESS end.// -->
+
+
+<!-- DIALOG FULL start -->
+<dialog id="dialog_full" style="max-width: 1200px;" class="max-h-full mt-10">
+  <div class="d-flex flex-col max-h-90vh">
+    <header class="dialog-header">
+      <h5>Wide page dialog</h5>
+      <button class="btn btn-icon" onclick="close_dialog(this)">
+        <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+          <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+        </svg> 
+      </button> 
+    </header>
+    <div class="dialog-body max-h-initial">
+      <article class="article-wrap">
+        <p>This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas!</p>
+        
+        <img  src="https://picsum.photos/seed/picsum/800/600">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+  
+      </article>
+    </div>
+    <footer class="dialog-bottom">
+      <a class="btn btn-default" href="#"> Read more </a>
+      <button class="btn btn-default" onclick="close_dialog(this)"> Close </button>
+    </footer>
+  </div>
+</dialog>
+<!-- DIALOG FULL end.// -->
+
+
+
+
+<!-- DIALOG ASIDE LEFT start -->
+<dialog id="dialog_aside_left" class="dialog-aside-left">
+  <div class="d-flex flex-col h-100vh">
+    <header class="dialog-header">
+      <h5>Aside left dialog</h5>
+      <button class="btn btn-icon" onclick="close_dialog(this)">
+        <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+          <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+        </svg> 
+      </button> 
+    </header>
+    <div class="dialog-body">
+      <article class="article-wrap">
+        <p>This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas!</p>
+        
+        <img  src="https://picsum.photos/seed/picsum/800/600">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+  
+      </article>
+    </div>
+    <footer class="dialog-bottom">
+      <a class="btn btn-default" href="#"> Read more </a>
+      <button class="btn btn-default" onclick="close_dialog(this)"> Close </button>
+    </footer>
+  </div>
+</dialog>
+<!-- DIALOG ASIDE LEFT end.// -->
+
+
+
+<!-- DIALOG ASIDE RIGHT start -->
+<dialog id="dialog_aside_right" class="dialog-aside-right">
+  <div class="d-flex flex-col h-100vh">
+    <header class="dialog-header">
+      <h5>Aside left dialog</h5>
+      <button class="btn btn-icon" onclick="close_dialog(this)">
+        <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+          <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+        </svg> 
+      </button> 
+    </header>
+    <div class="dialog-body">
+      <article class="article-wrap">
+        <p>This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas!</p>
+        
+        <img  src="https://picsum.photos/seed/picsum/800/600">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ad quisquam quia modi tempore sequi, unde dignissimos, distinctio similique ullam recusandae ex placeat nobis eum perspiciatis esse quas. Ad, dolorem? This is long dialog with scroll. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eligendi ut rem? Esse quo omnis nam perferendis labore eligendi veniam, voluptate mollitia optio deleniti, quod, distinctio maiores libero. Ut, sint!</p>
+  
+      </article>
+    </div>
+    <footer class="dialog-bottom">
+      <a class="btn btn-default" href="#"> Read more </a>
+      <button class="btn btn-default" onclick="close_dialog(this)"> Close </button>
+    </footer>
+  </div>
+</dialog>
+<!-- DIALOG ASIDE RIGHT end.// -->
+
+
+<script>
+  // detect scrollbar (if exists)
+  scrollbar_width = Math.abs(window.innerWidth - document.documentElement.clientWidth);
+
+  function open_dialog(dialog_id){
+    document.body.classList.add('overflow-hidden', 'dialog-open');
+    document.getElementById(dialog_id).style.display = "block";
+    setTimeout(function(){
+      document.getElementById(dialog_id).showModal();
+    }, 0)
+    // add padding same as size of scrollbar size
+    document.body.style.paddingRight = scrollbar_width + 'px';
+  }
+
+  function close_dialog(btn_close){
+    document.body.classList.remove('overflow-hidden', 'dialog-open');
+    let this_dialog = btn_close.closest('dialog')
+    this_dialog.close();    
+    if (this_dialog.classList.contains("dialog-aside-left") || this_dialog.classList.contains("dialog-aside-right")) {
+      // for aside dialog we can't make display:none before animation has completed. Need to wait for transition
+      setTimeout(function(){ this_dialog.style.display = ""; }, 300)
+    } else {
+      this_dialog.style.display = "";
+    }
+    // remove padding (added for scrollbar size)
+    document.body.style.paddingRight = "";
+  }
+
+</script>
+
+</body>
+</html>

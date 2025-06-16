@@ -4,10 +4,6 @@
 .border-0 { border: 0 !important; }
 .border-none { border: none !important; }
 .border-inherit{ border: inherit !important; }
-
-.border-weak { border-color:var(--border-color-weak)!important;}
-.border-strong { border-color:var(--border-color-strong)!important;}
-.border-dark{ border-color:#000!important; }
 .border-black{ border-color: #000!important; }
 .border-white{ border-color: #fff!important; }
 .border-transparent{ border-color:transparent !important; }
@@ -17,10 +13,6 @@
 .hover\:border-0:hover { border: 0 !important; }
 .hover\:border-none:hover { border: none !important; }
 .hover\:border-inherit:hover { border: inherit !important; }
-
-.hover\:border-weak:hover { border-color: var(--border-color-weak) !important;}
-.hover\:border-strong:hover { border-color: var(--border-color-strong) !important;}
-.hover\:border-dark:hover{ border-color: #000 !important; }
 .hover\:border-black:hover{ border-color: #000 !important; }
 .hover\:border-white:hover{ border-color: #fff !important; }
 .hover\:border-transparent:hover { border-color:transparent !important; }
@@ -30,10 +22,6 @@
 .group:hover .group-hover\:border-0 { border: 0 !important; }
 .group:hover .group-hover\:border-none { border: none !important; }
 .group:hover .group-hover\:border-inherit{ border: inherit !important; }
-
-.group:hover .group-hover\:border-weak { border-color: var(--border-color-weak) !important;}
-.group:hover .group-hover\:border-strong { border-color: var(--border-color-strong) !important;}
-.group:hover .group-hover\:border-dark{ border-color: #000 !important; }
 .group:hover .group-hover\:border-black{ border-color: #000 !important; }
 .group:hover .group-hover\:border-white{ border-color: #fff !important; }
 .group:hover .group-hover\:border-transparent{ border-color:transparent !important; }

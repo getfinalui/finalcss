@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<header class="py-2 lg:py-3 border-bottom">
+<header class="py-2 desktop:py-3 border-bottom">
 	<div class="container px-3">
 		<div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
 			
@@ -34,7 +34,7 @@
 				<div style="font-size:24px;" class="text-neutral-1000 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 			</a>
 
-			<div class="mobile:order-3 flex-grow lg:max-w-50% mobile:w-full">
+			<div class="mobile:order-3 flex-grow desktop:max-w-50% mobile:w-full">
 				<form class="d-flex w-100%">
 					<input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
 					<button class="rounded-left-0 btn btn-default" style="margin-left:-1px">
@@ -48,19 +48,19 @@
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
 					</span>
-					<span class="tablet:hidden"> Wishlist </span>
+					<span class="d-none desktop:d-inline-block"> Wishlist </span>
 				</button>	
 				<button class="btn btn-default"> 
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 					</span>
-					<span class="tablet:hidden"> Sign up </span>
+					<span class="d-none desktop:d-inline-block"> Sign up </span>
 				</button>	
 				<button class="btn btn-primary"> 
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
 					</span>
-					<span  class="tablet:hidden">My cart</span> (0) 	
+					<span  class="d-none desktop:d-inline-block">My cart</span> (0) 	
 				</button>
 			</div>
 
@@ -107,16 +107,16 @@
 <div class="container">
 
 <div class="row gap-cols-8">
-	<aside class="md:col-3 lg:col-3 mb-8">
+	<aside class="desktop:col-3/12 desktop:col-3/12 mb-8">
 
-	<button class="btn btn-default mb-3 w-100% md:hidden" onclick="showHide('aside_filter')">
+	<button class="btn btn-default mb-3 w-100% desktop:hidden" onclick="showHide('aside_filter')">
 		Show/Hide filters
 	</button>
 
 	<!-- ===== wrap filter ===== -->
-	<div id="aside_filter" class="card shadow-sm hidden md:d-block">
+	<div id="aside_filter" class="card shadow-sm hidden desktop:d-block">
 
-	<details open class="p-3 lg:p-4 border-bottom">
+	<details open class="p-3 desktop:p-4 border-bottom">
 		<summary class="fw-semibold">  Categories  </summary>
 			<div class="pt-3">
 				<!-- content -->
@@ -134,7 +134,7 @@
 			</div>
 	</details> <!-- filter-group // -->
 
-	<details open class="p-3 lg:p-4 border-bottom">
+	<details open class="p-3 desktop:p-4 border-bottom">
 		<summary class="fw-semibold">  Brands  </summary>
 			<div class="pt-3">
 				<!-- content -->
@@ -170,7 +170,7 @@
 			</div>
 	</details> <!-- filter-group // -->
 
-	<details open class="p-3 lg:p-4 border-bottom">
+	<details open class="p-3 desktop:p-4 border-bottom">
 		<summary class="fw-semibold">  Condition  </summary>
 			<div class="pt-3">
 				<!-- content -->
@@ -198,17 +198,17 @@
 			</div>
 	</details> <!-- filter-group // -->
 
-	<details open class="p-3 lg:p-4  border-bottom">
+	<details open class="p-3 desktop:p-4  border-bottom">
 		<summary class="fw-semibold">  Price range  </summary>
 			<div class="pt-3">
 				<!-- content -->
 					<input type="range" class="w-100%" min="0" max="100">
 					<div class="row my-3">
-						<div class="col-6">
+						<div class="col-6/12">
 							<label>Min</label>
 							<input class="form-control" id="min" placeholder="$0" type="number">
 						</div>
-						<div class="col-6">
+						<div class="col-6/12">
 							<label>Max</label>
 							<input class="form-control" id="max" placeholder="$1,0000" type="number">
 						</div> 
@@ -218,7 +218,7 @@
 			</div>
 	</details> <!-- filter-group // -->
 
-	<details open class="p-3 lg:p-4 border-bottom">
+	<details open class="p-3 desktop:p-4 border-bottom">
 		<summary class="fw-semibold">  Condition  </summary>
 			<div class="pt-3">
 				<!-- content -->
@@ -246,9 +246,9 @@
 	<!-- ===== Card for sidebar filter .// ===== -->
 
 	</aside> <!-- col .// -->
-	<main class="md:col-9">
+	<main class="desktop:col-9/12">
 
-		<header class="md:d-flex align-items-center border-bottom mb-3 pb-3">
+		<header class="desktop:d-flex align-items-center border-bottom mb-3 pb-3">
 			<div class="d-flex gap-1">
 				<a href="#" class="btn btn-default text-primary border-color-primary">Recommended</a>
 				<a href="#" class="btn btn-default">Best rated</a>
@@ -274,12 +274,12 @@
 		
 		<article class="border-bottom pb-3 mb-3">
 			<div class="row">
-				<aside class="lg:col-4 sm:col-5">
-					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+				<aside class="desktop:col-4/12 col-5/12">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-55 rounded"> 
 						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
 					</a>
 				</aside> <!-- col.// -->
-				<div class="lg:col-8 sm:col-7">
+				<div class="desktop:col-8/12 col-7/12">
 						<div class="mt-3">
 							<a href="#" class="btn btn-primary-subtle btn-sm float-right"> Save </a>
 							<h5><a href="#" class="link"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a></h5>
@@ -303,12 +303,12 @@
 
 		<article class="border-bottom pb-3 mb-3">
 			<div class="row">
-				<aside class="lg:col-4 sm:col-5">
-					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+				<aside class="desktop:col-4/12 col-5/12">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-55 rounded"> 
 						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
 					</a>
 				</aside> <!-- col.// -->
-				<div class="lg:col-8 sm:col-7">
+				<div class="desktop:col-8/12 col-7/12">
 						<div class="mt-3">
 							<a href="#" class="btn btn-primary-subtle btn-sm float-right"> Save </a>
 							<h5><a href="#" class="link">  Samsung Galaxy Tab S7 FE WiFi Tablet Snapdragon </a></h5>
@@ -332,12 +332,12 @@
 
 		<article class="border-bottom pb-3 mb-3">
 			<div class="row">
-				<aside class="lg:col-4 sm:col-5">
-					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+				<aside class="desktop:col-4/12 col-5/12">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-55 rounded"> 
 						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
 					</a>
 				</aside> <!-- col.// -->
-				<div class="lg:col-8 sm:col-7">
+				<div class="desktop:col-8/12 col-7/12">
 						<div class="mt-3">
 							<a href="#" class="btn btn-primary-subtle btn-sm float-right"> Save </a>
 							<h5><a href="#" class="link">  Xiaomi Redmi 12C Global Version 3GB </a></h5>
@@ -361,12 +361,12 @@
 
 		<article class="border-bottom pb-3 mb-3">
 			<div class="row">
-				<aside class="lg:col-4 sm:col-5">
-					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+				<aside class="desktop:col-4/12 col-5/12">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-55 rounded"> 
 						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
 					</a>
 				</aside> <!-- col.// -->
-				<div class="lg:col-8 sm:col-7">
+				<div class="desktop:col-8/12 col-7/12">
 						<div class="mt-3">
 							<a href="#" class="btn btn-primary-subtle btn-sm float-right"> Save </a>
 							<h5><a href="#" class="link"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a></h5>
@@ -390,12 +390,12 @@
 
 		<article class="border-bottom pb-3 mb-3">
 			<div class="row">
-				<aside class="lg:col-4 sm:col-5">
-					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-56 rounded"> 
+				<aside class="desktop:col-4/12 col-5/12">
+					<a href="#" class="bg-neutral-200 d-block overflow-hidden h-55 rounded"> 
 						<img src="placeholder.jpg" width="300" class="h-100% w-100% object-fit-cover"> 
 					</a>
 				</aside> <!-- col.// -->
-				<div class="lg:col-8 sm:col-7">
+				<div class="desktop:col-8/12 col-7/12">
 						<div class="mt-3">
 							<a href="#" class="btn btn-primary-subtle btn-sm float-right"> Save </a>
 							<h5><a href="#" class="link"> Original Apple iPhone 12 Mini 5G LTE Cellphone </a></h5>
@@ -448,8 +448,8 @@
 
 <footer class="border-top bg-secondary py-12">
 	<div class="container">
-		<section class="d-flex align-items-center flex-col md:flex-row md:justify-content-between">
-				<p class="md:mb-0 mb-3 text-center md:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
+		<section class="d-flex align-items-center flex-col desktop:flex-row desktop:justify-content-between">
+				<p class="desktop:mb-0 mb-3 text-center desktop:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
 				<nav class="nav">
 						<a href="#" class="nav-link">Menu item</a>
 						<a href="#" class="nav-link">Menu item</a>

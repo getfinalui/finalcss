@@ -15,7 +15,7 @@
   flex-shrink: 0;
   width: 18px;
   height: 18px;
-  margin-top: 0.2em;
+  margin-top: 0.1em;
   margin-right: 0.5rem;
   vertical-align: top;
   -webkit-appearance: none;
@@ -60,7 +60,7 @@
 
 
 .form-check {
-  display: block;
+  display: flex;
   min-height: 1.5rem; 
   .form-check-input {
     float: left;

@@ -18,8 +18,8 @@
   text-decoration:none;
   color:var(--text-color-secondary);
   border-bottom: 2px solid transparent;
-  border-top-left-radius: $border-radius-base;
-  border-top-right-radius: $border-radius-base;
+  border-top-left-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+  border-top-right-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
   &:hover{
     text-decoration:none;
     color: var(--text-color-base);

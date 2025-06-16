@@ -1,4 +1,6 @@
 $size_map: (
+  "unset": unset,
+  "initial": initial,
   "auto": auto,
   "0": 0,
   "1": 4px,
@@ -17,25 +19,21 @@ $size_map: (
   "16": 64px,
   "18": 72px,
   "20": 80px,
-  "24": 96px,
-  "28": 112px,
-  "32": 128px,
-  "36": 144px,
+  "25": 100px,
+  "30": 120px,
+  "35": 140px,
   "40": 160px,
-  "44": 176px,
-  "48": 192px,
-  "52": 208px,
-  "56": 224px,
+  "45": 180px,
+  "50": 200px,
+  "55": 220px,
   "60": 240px,
-  "64": 256px,
-  "68": 272px,
-  "72": 288px,
-  "76": 304px,
+  "65": 260px,
+  "70": 280px,
+  "75": 300px,
   "80": 320px,
-  "84": 336px,
-  "88": 352px,
-  "92": 368px,
-  "96": 384px,
+  "85": 340px,
+  "90": 360px,
+  "95": 380px,
   "100": 400px,
   "full": 100%,
 );
@@ -53,16 +51,32 @@ $size_map_percent:(
   "100": 100%,
 );
 
+$size_map_vw:(
+  "10": 10vw,
+  "20": 20vw,
+  "30": 30vw,
+  "40": 40vw,
+  "50": 50vw,
+  "60": 60vw,
+  "70": 70vw,
+  "80": 80vw,
+  "90": 90vw,
+  "100": 100vw,
+);
 
+$size_map_vh:(
+  "10": 10vh,
+  "20": 20vh,
+  "30": 30vh,
+  "40": 40vh,
+  "50": 50vh,
+  "60": 60vh,
+  "70": 70vh,
+  "80": 80vh,
+  "90": 90vh,
+  "100": 100vh,
+);
 
-// Full sizes of screen
-.w-100vw { width: 100vw;}
-.h-100vh { height: 100vh;}
-.min-w-100vw {min-width: 100vw;}
-.min-h-100vh {min-height: 100vh;}
-.max-w-fit { max-width: fit-content}
-.max-w-min { max-width: min-content;}
-.max-w-max {max-width: max-content;}
 
 // Generate custom size based on inline css variable
 // Ex: <div class="w-custom" style="--w:700px">
@@ -94,6 +108,23 @@ $size_map_percent:(
   .max-h-#{$name}\% { max-height: #{$value}; }
 }
 
+// * Generates sizes in vw Vewport-width:
+// .w-10vw{width:10vw}
+@each $name, $value in $size_map_vw {
+  .w-#{$name}vw { width: #{$value}; }
+  .min-w-#{$name}vw { min-width: #{$value}; }
+  .max-w-#{$name}vw { max-width: #{$value}; }
+}
+
+// * Generates sizes in vh Vewport-height:
+// .w-10vh{width:10vh}
+@each $name, $value in $size_map_vh {
+  .h-#{$name}vh { height: #{$value}; }
+  .min-h-#{$name}vh { min-height: #{$value}; }
+  .max-h-#{$name}vh { max-height: #{$value}; }
+}
+
+
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $screen_size in $breakpoints {
@@ -118,6 +149,19 @@ $size_map_percent:(
       .#{$breakpoint}\:min-h-#{$name}\% { min-height: #{$value}!important; }
       .#{$breakpoint}\:max-h-#{$name}\% { max-height: #{$value}!important; }
     }
+
+    @each $name, $value in $size_map_vw {
+      .#{$breakpoint}\:w-#{$name}vw { width: #{$value}; }
+      .#{$breakpoint}\:min-w-#{$name}vw { min-width: #{$value}; }
+      .#{$breakpoint}\:max-w-#{$name}vw { max-width: #{$value}; }
+    }
+
+    @each $name, $value in $size_map_vh {
+      .#{$breakpoint}\:h-#{$name}vh { height: #{$value}; }
+      .#{$breakpoint}\:min-h-#{$name}vh { min-height: #{$value}; }
+      .#{$breakpoint}\:max-h-#{$name}vh { max-height: #{$value}; }
+    }
+
     // end breakpoint
   }
 }

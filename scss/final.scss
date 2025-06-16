@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * Final UI (https://finalui.com/)
- * Copyright 2024 The Finalui Author Vosidiy M. 
+ * Final CSS ( https://finalcss.com )
+ * Copyright 2025 The Finalcss by Author Vosidiy M. 
  * Licensed under MIT
  */
 
@@ -33,6 +33,7 @@
 
 // Utility classes
 @import "utilities/display-layout";
+@import "utilities/text-article";
 @import "utilities/visibility";
 @import "utilities/order";
 @import "utilities/gap";
@@ -40,9 +41,9 @@
 @import "utilities/text-style";
 @import "utilities/text-size";
 @import "utilities/text-color";
-@import "utilities/border-color";
+@import "utilities/border-color"; 
+@import "utilities/background"; 
 @import "utilities/border-radius";
-@import "utilities/background";
 @import "utilities/gradient";
 @import "utilities/positions";
 @import "utilities/vertical-align";
@@ -51,15 +52,15 @@
 @import "utilities/opacity";
 @import "utilities/shadow";
 @import "utilities/z-index";
-@import "utilities/size";
-@import "utilities/margin";
-@import "utilities/padding";
 @import "utilities/cursor";
 @import "utilities/scale";
 @import "utilities/list";
 @import "utilities/ratio";
 @import "utilities/whitespace";
 @import "utilities/columns";
+@import "utilities/size"; 
+@import "utilities/margin"; 
+@import "utilities/padding"; 
 
 // Layouts and Temnplates (optional)
 @import "layout/base";

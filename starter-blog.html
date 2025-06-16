@@ -22,7 +22,7 @@
     }
     function themeSwitcher() {
           const currentTheme = htmlElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+          const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';   
           // Set the new theme on the body element
           htmlElement.setAttribute('data-theme', newTheme);          
           // Save the new theme in localStorage
@@ -43,7 +43,7 @@
 <header class="bg-base py-2 border-bottom">
 	<div class="container">
 		<div class="d-flex flex-column flex-md-row align-items-center">
-			<div class="mb-3 md:mb-0">
+			<div class="mb-3 desktop:mb-0">
 				<a href="https://finalcss.com" class="fs-xl fw-semibold">Final CSS</a>
 			</div>
 			<nav class="nav ml-auto">
@@ -73,12 +73,12 @@
 		
 	  <header class="py-12">
       <h1 class="fs-6xl mb-4">Blog posts</h1>
-      <p class="fs-lg lg:max-w-50%">
+      <p class="fs-lg desktop:max-w-50%">
         Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
       </p>
     </header>
 
-    <div class="row row-cols-1 sm:row-cols-2 md:row-cols-3 lg:row-cols-3 gap-6">
+    <div class="row row-cols-1 row-cols-2 desktop:row-cols-3 desktop:row-cols-3 gap-6">
         <div class="col">
           <article class="card hover:border-primary h-full">
             <a href="#" class="bg-neutral-300 rounded-top overflow-hidden">

@@ -22,7 +22,7 @@
 	}
 	function themeSwitcher() {
 				const currentTheme = htmlElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';   
+				const newTheme = currentTheme === 'light' || !currentTheme ? 'dark' : 'light';    
 				// Set the new theme on the body element
 				htmlElement.setAttribute('data-theme', newTheme);          
 				// Save the new theme in localStorage
@@ -83,7 +83,7 @@
 		<div class="d-flex gap-2 align-items-center justify-content-between">
 			
 			<div class="d-flex align-items-center">
-				<button class="btn btn-default btn-icon mr-2 md:d-none">
+				<button class="btn btn-default btn-icon mr-2 desktop:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
@@ -97,7 +97,7 @@
 				</a>
 			</div>
 			
-			<nav class="nav nav-row ml-auto tablet:hidden">
+			<nav class="nav nav-row ml-auto d-none desktop:d-flex">
 					<a class="nav-link active" href="#"> Home </a>
 					<a class="nav-link" href="#">About</a>
 					<a class="nav-link" href="#">Services</a>
@@ -142,7 +142,7 @@
 		<div class="d-flex gap-2 align-items-center justify-content-between">
 
 			<div class="d-flex align-items-center">
-				<button class="btn btn-default btn-icon mr-2 md:d-none">
+				<button class="btn btn-default btn-icon mr-2 desktop:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
@@ -212,8 +212,8 @@
 	<div class="container mobile:px-2">
 		<div class="d-flex gap-2 align-items-center justify-content-between">
 			
-			<div class="lg:col-3 d-flex align-items-center">
-				<button class="btn btn-default btn-icon mr-2 md:d-none">
+			<div class="desktop:col-3/12 d-flex align-items-center">
+				<button class="btn btn-default btn-icon mr-2 desktop:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
@@ -221,13 +221,13 @@
 					</svg>
 				</button>
 	
-				<a href="https://finalcss.com" class="hover:opacity-80 d-none sm:d-flex text-decoration-none align-items-center m-0">
+				<a href="https://finalcss.com" class="hover:opacity-80 d-none d-flex text-decoration-none align-items-center m-0">
 					<img src="logo.svg" alt="" height="40">
 					<div style="font-size:24px;" class="text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 				</a>
 			</div>
 			
-			<div class="lg:col-auto d-none md:d-block">
+			<div class="desktop:col-auto d-none desktop:d-block">
 				<ul class="nav">
 					<li class="item-nav">
 						<a class="nav-link active" href="#"> Home  </a>
@@ -243,7 +243,7 @@
 					</li>
 					<li class="item-nav group">
 						<a class="nav-link" href="#">More dropdown <i class="icon-dropdown"></i> </a>
-						<nav class="dropdown lg:min-w-60 group-hover:d-block d-none">
+						<nav class="dropdown desktop:min-w-60 group-hover:d-block d-none">
 							<a class="dropdown-item" href="#">Great courses</a>
 							<a class="dropdown-item" href="#">Documentation</a>
 							<a class="dropdown-item" href="#">Newsletter</a>
@@ -255,7 +255,7 @@
 				</ul>
 			</div>
 
-			<div class="lg:col-3 lg:text-right">		
+			<div class="desktop:col-3/12 desktop:text-right">		
 				<button class="btn btn-default">  Button 	</button>
 				<button class="btn btn-primary">  Get finalcss 	</button>
 			</div>
@@ -278,10 +278,10 @@
 
 <header class="py-2 border-bottom">
 	<div class="container mobile:px-2">
-		<div class="d-flex mobile:flex-wrap sm:flex-row gap-3 align-items-center justify-content-between">
+		<div class="d-flex mobile:flex-wrap flex-row gap-3 align-items-center justify-content-between">
 			
 			<div class="flex-shrink-0 d-flex align-items-center">
-				<button class="btn btn-default btn-icon mr-2 md:d-none">
+				<button class="btn btn-default btn-icon mr-2 desktop:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
@@ -291,12 +291,12 @@
 	
 				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 					<img src="logo.svg" alt="" height="40">
-					<div style="font-size:24px;" class="d-none sm:d-flex text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+					<div style="font-size:24px;" class="d-none d-flex text-neutral-1000 fs-xl fw-medium ml-1">final<span class="text-secondary">css</span> </div>
 				</a>
 				
 			</div>
 			
-			<div class="col-12 lg:col-auto lg:mr-auto d-none md:d-flex">
+			<div class="col-1/122 desktop:col-auto desktop:mr-auto d-none desktop:d-flex">
 				<ul class="nav flex-nowrap justify-content-center">
 					<li class="item-nav">
 						<a class="nav-link active" href="#"> Home  </a>
@@ -316,7 +316,7 @@
 				</ul>
 			</div>
 
-			<div class="col-12 md:col-4 lg:col-3 mobile:order-3">
+			<div class="col-1/122 desktop:col-4/12 desktop:col-3/12 mobile:order-3">
 					<input type="search" placeholder="Search" class="form-control">
 			</div>
 
@@ -346,7 +346,7 @@
 		<section class="d-flex mobile:flex-wrap py-3  gap-2 align-items-center justify-content-between">
 			
 			<div class="d-flex align-items-center mr-4">
-				<button class="btn btn-default btn-icon mr-2 sm:d-none">
+				<button class="btn btn-default btn-icon mr-2 d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
@@ -382,16 +382,16 @@
 				</form>
 			</div>
 
-			<div class="d-flex gap-1 lg:justify-content-end">	
+			<div class="d-flex gap-1 desktop:justify-content-end">	
 
 				<button class="btn"> 
 						<span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-					  <span class="d-none lg:d-block">Sign in </span>	
+					  <span class="d-none desktop:d-block">Sign in </span>	
 				</button>
 
 				<button class="btn">  
 						<span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> </span>
-						<span class="d-none lg:d-block">Wishlist (0) 	</span>
+						<span class="d-none desktop:d-block">Wishlist (0) 	</span>
 				</button>
 
 				<!-- button with dropdown  -->
@@ -455,11 +455,11 @@
 </section>
 
 <header class="border-bottom">
-	<div class="container mobile:px-2">
+	<div class="container">
 		<div class="d-flex gap-2 tablet:py-2 align-items-center justify-content-between">
 			
 			<div class="d-flex align-items-center">
-				<button class="btn btn-default btn-icon mr-2 md:d-none">
+				<button class="btn btn-default btn-icon mr-2 desktop:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>
@@ -480,7 +480,7 @@
 				<li class="item-nav"><a href="#" class="nav-link"> Project </a></li>
 				<li class="item-nav group">
 					<a class="nav-link has-icon-dropdown" href="#"> More menu  </a>
-					<nav class="dropdown lg:min-w-48 group-hover:d-block d-none">
+					<nav class="dropdown desktop:min-w-45 group-hover:d-block d-none">
 						<a class="dropdown-item" href="#">Great courses</a>
 						<a class="dropdown-item" href="#">Documentation</a>
 						<a class="dropdown-item" href="#">Newsletter</a>
@@ -514,11 +514,11 @@
 
 
 <header class="border-bottom">
-	<div class="container px-2">
+	<div class="container">
 		<div class="d-flex flex-row tablet:py-2 gap-2 align-items-center justify-content-between">
 			
 			<div class="d-flex align-items-center">
-				<button class="btn btn-default btn-icon mr-2 md:d-none">
+				<button class="btn btn-default btn-icon mr-2 desktop:d-none">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 							<path d="M4 5L20 5" stroke="currentColor" stroke-width="2"/>
 							<path d="M4 12L20 12" stroke="currentColor" stroke-width="2"/>

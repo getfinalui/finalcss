@@ -1,4 +1,6 @@
 $margin_map: (
+  "unset": unset,
+  "initial": initial,
   "auto": auto,
   "0": 0,
   "1": 4px,
@@ -17,38 +19,47 @@ $margin_map: (
   "16": 64px,
   "18": 72px,
   "20": 80px,
-  "24": 96px,
-  "28": 112px,
-  "32": 128px,
-  "36": 144px,
+  "25": 100px,
+  "30": 120px,
+  "35": 140px,
   "40": 160px,
-  "44": 176px,
-  "48": 192px,
-  "52": 208px,
-  "56": 224px,
+  "45": 180px,
+  "50": 200px,
+  "55": 220px,
   "60": 240px,
-  "64": 256px,
-  "68": 272px,
-  "72": 288px,
-  "76": 304px,
+  "65": 260px,
+  "70": 280px,
+  "75": 300px,
   "80": 320px,
-  "84": 336px,
-  "88": 352px,
-  "92": 368px,
-  "96": 384px,
+  "85": 340px,
+  "90": 360px,
+  "95": 380px,
   "100": 400px,
 );
 
 
 // * Generates sizes in px, for ex:
-// .mt-10{margin-top:40px} 
+// .mt-2{margin:8px}  .mt-10{margin-top:40px} 
+// @each written for every utility individually by intention. There is a reason for it 
 @each $name, $value in $margin_map {
-  .m-#{$name} { margin: #{$value}; }
-  .my-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; }
-  .mx-#{$name} { margin-left: #{$value}; margin-right: #{$value}; }
+  .m-#{$name} { margin: #{$value}!important; }
+}
+@each $name, $value in $margin_map {
+  .my-#{$name} { margin-top: #{$value}!important; margin-bottom: #{$value}!important; }
+}
+@each $name, $value in $margin_map {
+  .mx-#{$name} { margin-left: #{$value}!important; margin-right: #{$value}!important; }
+}
+@each $name, $value in $margin_map {
   .mt-#{$name} { margin-top: #{$value}!important; }
+}
+@each $name, $value in $margin_map {
   .mb-#{$name} { margin-bottom: #{$value}!important; }
+}
+@each $name, $value in $margin_map {
   .mr-#{$name} { margin-right: #{$value}!important; }
+}
+@each $name, $value in $margin_map {
   .ml-#{$name} { margin-left: #{$value}!important; }
 }
 
@@ -60,14 +71,26 @@ $margin_map: (
   @media ($screen_size){
     // breakpoinst styles
     @each $name, $value in $margin_map {
-      .#{$breakpoint}\:m-#{$name} {  margin: #{$value}; }
-      .#{$breakpoint}\:my-#{$name} {  margin-top: #{$value}; margin-bottom: #{$value};  }
-      .#{$breakpoint}\:mx-#{$name} {  margin-left: #{$value}; margin-right: #{$value};  }
+      .#{$breakpoint}\:m-#{$name} {  margin: #{$value}!important; }
+    }
+    @each $name, $value in $margin_map {
+      .#{$breakpoint}\:my-#{$name} {  margin-top: #{$value}!important; margin-bottom: #{$value}!important;  }
+    }
+    @each $name, $value in $margin_map {
+      .#{$breakpoint}\:mx-#{$name} {  margin-left: #{$value}!important; margin-right: #{$value}!important;  }
+    }
+    @each $name, $value in $margin_map {
       .#{$breakpoint}\:mt-#{$name} {  margin-top: #{$value}!important; }
+    }
+    @each $name, $value in $margin_map {
       .#{$breakpoint}\:mb-#{$name} { margin-bottom: #{$value}!important;  }
+    }
+    @each $name, $value in $margin_map {
       .#{$breakpoint}\:mr-#{$name} { margin-right: #{$value}!important; }
+    }
+    @each $name, $value in $margin_map {
       .#{$breakpoint}\:ml-#{$name} { margin-left: #{$value}!important; }
     }
-   // end breakpoint
   }
+   // end breakpoint
 }

@@ -1,4 +1,6 @@
 $padding_map:(
+  "unset": unset,
+  "initial": initial,
   "0": 0,
   "1": 4px,
   "2": 8px,
@@ -16,58 +18,75 @@ $padding_map:(
   "16": 64px,
   "18": 72px,
   "20": 80px,
-  "24": 96px,
-  "28": 112px,
-  "32": 128px,
-  "36": 144px,
+  "25": 100px,
+  "30": 120px,
+  "35": 140px,
   "40": 160px,
-  "44": 176px,
-  "48": 192px,
-  "52": 208px,
-  "56": 224px,
+  "45": 180px,
+  "50": 200px,
+  "55": 220px,
   "60": 240px,
-  "64": 256px,
-  "68": 272px,
-  "72": 288px,
-  "76": 304px,
+  "65": 260px,
+  "70": 280px,
+  "75": 300px,
   "80": 320px,
-  "84": 336px,
-  "88": 352px,
-  "92": 368px,
-  "96": 384px,
+  "85": 340px,
+  "90": 360px,
+  "95": 380px,
   "100": 400px,
 );
 
 // * Generates sizes in px, for ex:
-// .pt-10{margin-top:40px} 
+// .p-2{padding:8px}  .pt-10{padding-top:40px} 
+// @each written for every utility individually by intention. There is a reason for it 
 @each $name, $value in $padding_map {
-  .p-#{$name} { padding: #{$value};}
+  .p-#{$name} { padding: #{$value}; }
+}
+@each $name, $value in $padding_map {
   .py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
+}
+@each $name, $value in $padding_map {
   .px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
+}
+@each $name, $value in $padding_map {
   .pt-#{$name} { padding-top: #{$value}!important; }
+}
+@each $name, $value in $padding_map {
   .pb-#{$name} { padding-bottom: #{$value}!important; }
+}
+@each $name, $value in $padding_map {
   .pr-#{$name} { padding-right: #{$value}!important; }
+}
+@each $name, $value in $padding_map {
   .pl-#{$name} { padding-left: #{$value}!important; }
 }
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
-
-
 @each $breakpoint, $screen_size in $breakpoints {
   
   @media ($screen_size){
     // breakpoinst styles
     @each $name, $value in $padding_map {
-
       .#{$breakpoint}\:p-#{$name} { padding: #{$value}; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pt-#{$name} {  padding-top: #{$value}!important;  }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pb-#{$name} { padding-bottom: #{$value}!important; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pr-#{$name} { padding-right: #{$value}!important; }
+    }
+    @each $name, $value in $padding_map {
       .#{$breakpoint}\:pl-#{$name} { padding-left: #{$value}!important; }
-      
     }
    // end breakpoint
   }

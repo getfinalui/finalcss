@@ -8,11 +8,12 @@
 .list-postion-inside{ list-style-position: inside; }
 .list-postion-outside{ list-style-position: outside; }
 
-.list-number{
+.list-number, ol{
   list-style-type: decimal;
   list-style-position: outside;
   margin-left: 20px;
   > li { position:relative; margin-bottom:0.5rem;  }
+  li::marker{ color:var(--text-color-primary, #04b4a0); font-weight: 600; }
 }
 
 // Use any symbol from 

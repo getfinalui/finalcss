@@ -9,32 +9,33 @@ $container-width: 1440px;
 // Let's keep simple
 $breakpoints: (
   
-   // *** Standart breakpoint to override larger screens *** //
-  'sm': 'min-width: 641px',  // not mobile, - small tablet and up
-  'md': 'min-width: 921px', // medium and up - larger tablet and up
-  'lg': 'min-width: 1201px', // large and up - desktop and any widescreen
-  
-  // *** Additional for tablet and mobile only styles *** //
-  'tablet': 'max-width: 920px', // Tablet and any smaller device
-  'mobile': 'max-width: 640px',  // mobile only
+   // *** Breakpoints *** //
+  'desktop': 'min-width: 1200px', // Desktop and up 
+  'tablet': 'max-width: 1199px', // Tablet and smaller
+  'mobile': 'max-width: 600px',  // Mobile only
+
+  // *** Optional - classic breakpoints *** //
+  // 'sm': 'min-width: 641px',  // not mobile, - small tablet and up
+  // 'md': 'min-width: 921px', // medium and up - larger tablet and up
+  // 'lg': 'min-width: 1201px', // large and up - desktop and any widescreen
 
 );
 
 
 // Border-radius for utility classes
+// This will generate css variable on _variables-root.scss
 $border-radius-sm:   4px !default;
 $border-radius-md:   8px !default;
 $border-radius-lg:   12px !default;
 $border-radius-xl:   16px !default;
-
 // set base border radius for button, input, select, card, alert, nav,
 $border-radius-base: $border-radius-md; 
 
 // Typography
-$font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 $font-size-base:              15px !default; 
-$font-size-sm:                14px !default;
+$font-size-sm:                0.9rem !default;
 
 $line-height-base:            1.4 !default;
 $line-height-sm:              1.25 !default;

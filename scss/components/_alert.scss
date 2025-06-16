@@ -9,15 +9,12 @@
   color: var(--alert-text-color);
   background-color: var(--alert-bg-color);
   position: relative;
-  padding: 8px 12px;
+  padding:12px;
   margin-bottom: 1rem;
-  display:flex; 
-  align-items:center;
   border: transparent;
-  border-radius: $border-radius-base; // from: _base-settings.scss
-
-  p{ margin-bottom:0}
-
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+  margin-bottom: 8px;
+  border:1px solid rgba(#000, 0.1);
 }
 
 
@@ -37,7 +34,7 @@
 }
 
 .alert-info{
-  --alert-text-color: var(--text-color-teal);
-  --alert-bg-color: var(--teal-100);
+  --alert-text-color: var(--text-color-blue);
+  --alert-bg-color: var(--blue-100);
 }
 

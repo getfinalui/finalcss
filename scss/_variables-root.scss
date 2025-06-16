@@ -35,9 +35,7 @@
   --bg-color-secondary: var(--neutral-100);
   --bg-color-lower: var(--neutral-100);
   --bg-color-raised: #fff;
-  --border-color-weak: var(--neutral-100);
   --border-color-default: var(--neutral-200);
-  --border-color-strong: var(--neutral-400);
   --text-color-base: #000;
   --text-color-secondary: var(--neutral-500);
   --text-color-muted: var(--neutral-400);
@@ -79,9 +77,7 @@
   --bg-color-secondary: var(--neutral-100);
   --bg-color-lower: #000;
   --bg-color-raised: var(--neutral-200);
-  --border-color-weak: var(--neutral-100);
   --border-color-default: var(--neutral-200);
-  --border-color-strong: var(--neutral-400);
   --text-color-base: #fff;
   --text-color-secondary: var(--neutral-600);
   --text-color-muted: var(--neutral-400);
@@ -91,5 +87,33 @@
   // This will help if some part of layout has .theme-static or .theme-light classname
   color: var(--text-color-base);
   background-color: var(--bg-color-base);
+
+}
+
+
+
+// *********************************** //
+// *********************************** //
+////////// OTHER SETTINGS ///
+:root{
+  
+  // Border-radius css variables (can be changed in _base-settings.scss)
+  // Or you can change values directly here
+  --border-radius-sm:  #{$border-radius-sm};
+  --border-radius-md:  #{$border-radius-md};
+  --border-radius-lg:  #{$border-radius-lg};
+  --border-radius-xl:  #{$border-radius-xl};
+  --border-radius-base:  #{$border-radius-base};
+
+  // Typography (can be changed in _base-settings.scss)
+  // Or you can change values directly here
+  --font-family-base: #{$font-family-base};
+
+  --font-size-base:  #{$font-size-base};
+  --font-size-sm:    #{$font-size-sm};
+
+  --line-height-base:  #{$line-height-base};
+  --line-height-sm:  #{$line-height-sm};
+  --line-height-lg: #{$line-height-lg};
 
 }
