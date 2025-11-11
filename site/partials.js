@@ -42,7 +42,7 @@ class HeaderComponent extends HTMLElement {
 			<div class="ml-auto d-flex align-items-center">
 				<nav class="nav d-none desktop:d-flex align-items-center">
 					<a href="/index.html" class="nav-link">Home</a>
-					<a href="/docs/doc-start.html" class="nav-link"> Documentation </a>
+					<a href="/docs/index.html" class="nav-link"> Documentation </a>
           <a href="/templates.html" class="nav-link"> Templates </a>
 					<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr; </a>
 					<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr; </a>  
