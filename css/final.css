@@ -412,7 +412,7 @@ strong {
 }
 
 small {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
 }
 
 sub,
@@ -3182,7 +3182,7 @@ dialog {
   margin-top: 8%;
   background-color: var(--bg-color-base);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  font-size: 15px;
+  font-size: var(--font-size-default);
   color: var(--text-color-base);
   border: 1px solid var(--border-color-default);
   border-radius: var(--border-radius-base);
@@ -3293,7 +3293,7 @@ dialog::backdrop {
   color: var(--text-color-secondary);
   background-color: transparent;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--border-radius-base);
 }
 .btn-close-dialog svg, .btn-close-dialog .icon, .btn-close-dialog img {
   max-width: 20px;
