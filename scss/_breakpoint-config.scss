@@ -14,25 +14,5 @@ $breakpoints: (
 
 
 
-// Border-radius for utility classes
-// This will generate css variable on _variables-root.scss
-$border-radius-sm:   4px !default;
-$border-radius-md:   8px !default;
-$border-radius-lg:   12px !default;
-$border-radius-xl:   16px !default;
-// set base border radius for button, input, select, card, alert, nav,
-$border-radius-base: $border-radius-md; 
-
-// Typography
-$font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-
-$font-size-base:              15px !default; 
-$font-size-sm:                0.9rem !default;
-
-$line-height-base:            1.4 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              1.8 !default;
-
-
 
 

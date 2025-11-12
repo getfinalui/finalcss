@@ -129,7 +129,7 @@ strong {
 // Add the correct font size in all browsers
 
 small {
-  font-size:$font-size-sm;
+  font-size:var(--font-size-sm);
 }
 
 // Sub and Sup
