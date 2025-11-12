@@ -1,4 +1,7 @@
 
+// Maximum container size
+.container{ max-width:1280px; } 
+
 // All Containers have left right padding
 .container,
 .container-fluid {
@@ -9,15 +12,6 @@
   margin-left: auto;
 }
 
-
-.container{ max-width:$container-width; } // max large screen 1440
-
-// **** 
-// Optional: to keep extra space around the container
-@media (max-width: $container-width + 40px ){
-  .container{ max-width: ($container-width - 100px); } // max large screen 1440
-}
-// ***
 
 .row {
   --flex-gap-rows: 0px; // default gap // gap.scss file
@@ -42,13 +36,20 @@
 }
 
 //////////// ROW COLS
-.row-cols-auto > * {width: auto;}
-.row-cols-1 > * { width: 100%; }
-.row-cols-2 > * { width: 50%;}
-.row-cols-3 > * { width: 33.33333333%; }
-.row-cols-4 > * { width: 25%; }
-.row-cols-5 > * { width: 20%; }
-.row-cols-6 > * { width: 16.66666667%;}
+.row-cols-auto > * {width: auto; flex: 0 0 auto!important; }
+.row-cols-1 > * { width: 100%; flex: 0 0 auto!important; }
+.row-cols-2 > * { width: 50%; flex: 0 0 auto!important;}
+.row-cols-3 > * { width: 33.33333333%; flex: 0 0 auto!important; }
+.row-cols-4 > * { width: 25%; flex: 0 0 auto!important;}
+.row-cols-5 > * { width: 20%; flex: 0 0 auto!important;}
+.row-cols-6 > * { width: 16.66666667%; flex: 0 0 auto!important;}
+.row-cols-7 > * { width: 14.285714%; flex: 0 0 auto!important;}
+.row-cols-8 > * { width: 12.5%; flex: 0 0 auto!important;}
+.row-cols-9 > * { width: 11.111111%; flex: 0 0 auto!important;}
+.row-cols-10 > * { width: 10%; flex: 0 0 auto!important;}
+.row-cols-11 > * { width: 9.09090909%; flex: 0 0 auto!important;}
+.row-cols-12 > * { width: 8.33333333%; flex: 0 0 auto!important;}
+
 
 // Generate responsive utility classes
 // breakpoints can be changed from base-settings.scss
@@ -56,13 +57,19 @@
 
   @media ($size){
     // breakpoinst styles
-    .#{$breakpoint}\:row-cols-auto > * { width: auto;}
-    .#{$breakpoint}\:row-cols-1 > * {  width: 100%; }
-    .#{$breakpoint}\:row-cols-2 > * {  width: 50%;}
-    .#{$breakpoint}\:row-cols-3 > * {  width: 33.3333333333%; }
-    .#{$breakpoint}\:row-cols-4 > * {  width: 25%; }
-    .#{$breakpoint}\:row-cols-5 > * {  width: 20%; }
-    .#{$breakpoint}\:row-cols-6 > * {  width: 16.6666666667%;}
+    .#{$breakpoint}\:row-cols-auto > * { width: auto; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-1 > * {  width: 100%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-2 > * {  width: 50%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-3 > * {  width: 33.3333333333%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-4 > * {  width: 25%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-5 > * {  width: 20%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-6 > * {  width: 16.6666666667%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-7 > * {  width: 14.285714%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-8 > * {  width: 12.5%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-9 > * {  width: 11.111111%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-10 > * { width: 10%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-11 > * { width: 9.09090909%; flex: 0 0 auto!important;}
+    .#{$breakpoint}\:row-cols-12 > * { width: 8.33333333%; flex: 0 0 auto!important;}
     // end breakpoint
   }
 }

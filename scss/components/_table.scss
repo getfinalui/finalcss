@@ -8,8 +8,8 @@
   vertical-align: middle;
   border-color: var(--border-color-default);
 
-  > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
+  tr > td, tr > th {
+  padding: 0.8rem 0.5rem;
   border-bottom-width: 1px;
   }
   > tbody {

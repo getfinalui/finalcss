@@ -19,7 +19,7 @@ h1{ font-size: 3rem;}
 $font-sizes-list: (
   xs: 0.8rem,
   sm: 0.9rem,
-  base: 1rem,
+  default: 1rem,
   lg: 1.12rem,
   xl: 1.3rem,
   2xl: 1.5rem,
@@ -34,7 +34,7 @@ $font-sizes-list: (
 
 // Generate classlist Ex. fs-3xl, fs-sm, fs-base
 @each $name, $font-size in $font-sizes-list {
-  .fs-#{$name} {
+  .text-#{$name} {
     font-size: $font-size;
   }
 }
@@ -46,12 +46,11 @@ $font-sizes-list: (
   @media ($screen_size){
     // breakpoinst styles
     @each $name, $font-size in $font-sizes-list {
-      .#{$breakpoint}\:fs-#{$name} {
+      .#{$breakpoint}\:text-#{$name} {
         font-size: $font-size !important;
       }
     }
     // end breakpoint
   }
-  
 }
 

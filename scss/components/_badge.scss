@@ -1,5 +1,4 @@
 .badge {
-  
   --badge-text-color: inherit;
   --badge-bg: var(--neutral-300);
   --badge-border: transparent;
@@ -27,28 +26,15 @@
 
 .badge:empty { display: none; }
 
-.badge-green{
-  --badge-bg: var(--green-100);
-  --badge-text-color: var(--text-color-green);
-  --badge-border: var(--green-300);
-}
-.badge-orange{
-  --badge-bg: var(--orange-100);
-  --badge-text-color: var(--text-color-orange);
-  --badge-border: var(--orange-300);
-}
-.badge-red{
-  --badge-bg: var(--red-100);
-  --badge-text-color: var(--text-color-red);
-  --badge-border: var(--red-300);
-}
-.badge-blue{
-  --badge-bg: var(--blue-100);
-  --badge-text-color: var(--text-color-blue);
-  --badge-border: var(--blue-300);
-}
-.badge-neutral{
-  --badge-bg: var(--neutral-200);
-  --badge-text-color: var(--text-color-secondary);
-  --badge-border: var(--neutral-300);
+
+// Badge with each color name
+// For ex. .badge-green{ --badge-bg: var(--green-100); ...} 
+@each $color, $shades in $colors_list {
+
+  .badge-#{$color} { 
+    --badge-bg: var(--#{$color}-100);
+    --badge-text-color: var(--#{$color}-600);
+    --badge-border: var(--#{$color}-300);
+  }
+
 }

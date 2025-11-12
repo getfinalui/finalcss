@@ -96,24 +96,24 @@
 // *********************************** //
 ////////// OTHER SETTINGS ///
 :root{
-  
-  // Border-radius css variables (can be changed in _base-settings.scss)
-  // Or you can change values directly here
-  --border-radius-sm:  #{$border-radius-sm};
-  --border-radius-md:  #{$border-radius-md};
-  --border-radius-lg:  #{$border-radius-lg};
-  --border-radius-xl:  #{$border-radius-xl};
-  --border-radius-base:  #{$border-radius-base};
 
-  // Typography (can be changed in _base-settings.scss)
-  // Or you can change values directly here
-  --font-family-base: #{$font-family-base};
+  // Border-radius css variables 
+  // set base border radius for button, input, select, card, alert, nav,
+  --border-radius-sm:  4px;
+  --border-radius-md:  8px;
+  --border-radius-lg:  12px;
+  --border-radius-xl:  16px;
+  --border-radius-base:  8px;
 
-  --font-size-base:  #{$font-size-base};
-  --font-size-sm:    #{$font-size-sm};
+  // Typography
+  // applied to _reset.scss
+  --font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --line-height-base:  #{$line-height-base};
-  --line-height-sm:  #{$line-height-sm};
-  --line-height-lg: #{$line-height-lg};
+  --font-size-default:  15px;
+  --font-size-sm:       0.9rem;
+
+  --line-height-base:  1.4;
+  --line-height-sm:    1.25;
+  --line-height-lg:    1.8;
 
 }

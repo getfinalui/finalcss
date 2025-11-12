@@ -1,54 +1,43 @@
 
-//  Semantic names for colors: property
-/// To change colors of text go to _root-variables.scss 
-.text-base{ color: var(--text-color-base); }
-.text-secondary{ color: var(--text-color-secondary); }
-.text-muted{ color: var(--text-color-muted);  }
-.text-invert{ color: var(--text-color-invert); }
-.text-dark{ color:#000; }
-.text-black{ color:#000; }
-.text-white{ color:#fff; }
-.text-inherit{ color:inherit; }
-.text-initial{ color:initial; }
-
-.hover\:text-base:hover{ color: var(--text-color-base); }
-.hover\:text-secondary:hover{ color: var(--text-color-secondary); }
-.hover\:text-muted:hover{ color: var(--text-color-muted);  }
-.hover\:text-invert:hover{ color: var(--text-color-invert); }
-.hover\:text-dark:hover{ color:#000; }
-.hover\:text-black:hover{ color:#000; }
-.hover\:text-white:hover{ color:#fff; }
-.hover\:text-inherit{ color:inherit; }
-.hover\:text-initial{ color:initial; }
-
-.group:hover .group-hover\:text-base{ color: var(--text-color-base); }
-.group:hover .group-hover\:text-secondary{ color: var(--text-color-secondary); }
-.group:hover .group-hover\:text-muted{ color: var(--text-color-muted);  }
-.group:hover .group-hover\:text-invert{ color: var(--text-color-invert); }
-.group:hover .group-hover\:text-dark{ color:#000; }
-.group:hover .group-hover\:text-black{ color:#000; }
-.group:hover .group-hover\:text-white{ color:#fff; }
-.group:hover .group-hover\:text-inherit{ color:inherit; }
-.group:hover .group-hover\:text-initial{ color:initial; }
+// Define colors of text
+// default color chosen as 600, for example text-red classname = text-red-600
+$colors_text_main:(
+  "base": var(--text-color-base),
+  "secondary": var(--text-color-secondary),
+  "muted": var(--text-color-muted),
+  "inherit": inherit,
+  "initial": initial,
+  "white": #FFF,
+  "dark": #000,
+  "black": #000,
+  "primary": map-get(map-get($colors_list, "primary"), "600"),
+  "red": map-get(map-get($colors_list, "red"), "600"),
+  "green": map-get(map-get($colors_list, "green"), "600"),
+  "blue": map-get(map-get($colors_list, "blue"), "600"),
+  "orange": map-get(map-get($colors_list, "orange"), "600"),
+  "yellow": map-get(map-get($colors_list, "yellow"), "600"),
+  "purple": map-get(map-get($colors_list, "purple"), "600"),
+  "teal": map-get(map-get($colors_list, "teal"), "600")
+);
 
 
-// Generate classes for text colors based on color list in theme.scss 
+@each $classname, $value in $colors_text_main {
+  .links-color-#{$classname} a { color: #{$value}; } // all inner links
+  .text-#{$classname} { color: #{$value}; }
+  .hover\:text-#{$classname}:hover{ color: #{$value}; }
+  .group:hover .group-hover\:text-#{$classname}{ color: #{$value}; }
+}
+
+
+// Generate classes for text colors based on color list of theme.scss 
 @each $color, $shades in $colors_list {
-
-  // Genarate text colors with only single shade: 600 lightmode / 700 darkmode 
-  // For ex. .text-primary{ color:var(--text-color-primary) } .text-red{ color:var(--text-color-red) }
-  .text-#{$color} { color: var(--text-color-#{$color}) !important };
-  .hover\:text-#{$color}:hover { color:var(--text-color-#{$color}) !important; }
-  .group:hover .group-hover\:text-#{$color} { color:var(--text-color-#{$color}) !important; }
-
   // Generate for each shade (100,200,300,... 900)
-  // For ex. .text-primary-100{ style } text-primary-200{ style }
+  // For ex. .text-primary-100{ color:var(--primary-100) } text-red-200{ color:var(--red-200) }
   @each $shade, $value in $shades {
     .text-#{$color}-#{$shade} { color:var(--#{$color}-#{$shade}) !important;  }
     .hover\:text-#{$color}-#{$shade}:hover { color:var(--#{$color}-#{$shade}) !important; }
     .group:hover .group-hover\:text-#{$color}-#{$shade} { color:var(--#{$color}-#{$shade}) !important; }
   }
-
 }
 
 

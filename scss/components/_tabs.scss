@@ -40,3 +40,70 @@
     border-bottom: 2px solid transparent;
   }
 }
+
+
+
+// TAB STYLE BOXED //
+.tabs-boxed{
+  background-color:var(--bg-color-lower);
+  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+  display:inline-flex;
+  width:auto;
+  padding:1px;
+  height:38px;
+  overflow-x: auto;
+  align-items: stretch;
+  svg, .icon, img{  width:22px; height:22px; }
+
+  .tab-link{
+    color:var(--text-color-secondary);
+    border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+    justify-content:center;
+    padding: 0.4rem 1rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-size: inherit;
+    font-weight: 400;
+    text-decoration:none;
+    user-select: none;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border:1px solid transparent;
+    background: transparent;
+    &:hover,
+    &:focus {
+      text-decoration:none;
+      color:var(--text-color-base);
+      background-color: var(--alpha-1);
+    }
+
+    &.active, &.selected, &:has(input[type="radio"]:checked){
+      color:var(--text-color-base);
+      background-color: var(--bg-color-base); 
+      box-shadow:0 1px 2px rgba(#000, .1) ;
+      border:1px solid var(--neutral-300); 
+    }
+
+    // Disabled state lightens text
+    &.disabled {
+      color: var(--text-color-muted);
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+  .tab-link:has(svg, img, .icon){ 
+    // if tab link has only icon, make rectangle, by making same padding as top/bottom
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+   }
+}
+
+.tabs-boxed.w-full, .tabs-boxed.w-100\%{
+  .tab-link{
+    flex-grow: 1;
+  }
+}

@@ -3,6 +3,8 @@
   transition-duration: .2s;
 }
 
+[class*=scale]{ transition: transform 0.2s; }
+
 .scale-50{ transform: scale(0.5); }
 .scale-60{ transform: scale(0.6);}
 .scale-70{ transform: scale(0.7);}
