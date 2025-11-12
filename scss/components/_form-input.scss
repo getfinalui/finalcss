@@ -1,12 +1,11 @@
 
 .form-control {
   min-height: 38px;
-  color: var(--text-color-base);
   background-color: var(--neutral-50);
   border: 1px solid var(--neutral-300);
   border-radius:var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
   display: block;
-  min-width:100px;
+  min-width:80px;
   width: 100%;
   padding: .4rem .6rem;
   line-height: 1.4;
@@ -19,7 +18,6 @@
       cursor: pointer;
     }
   }
-
   // Customize the `:focus` state to imitate native WebKit styles.
   &:focus {
     outline-offset:1px;
@@ -50,4 +48,8 @@
     opacity: 0.9;
     cursor:not-allowed;
   }
+}
+
+textarea.form-control{
+  height:auto;
 }

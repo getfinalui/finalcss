@@ -1,13 +1,13 @@
 /// Font style utility classes
-.fw-light {  font-weight: 300!important;}
-.fw-normal {font-weight: 400!important;}
-.fw-medium { font-weight: 500!important; }
-.fw-semibold { font-weight: 600!important;}
-.fw-bold { font-weight: 700!important; }
-.fw-bolder { font-weight: bolder!important;}
+.font-light, .font-300 {  font-weight: 300!important;}
+.font-normal, .font-400 {font-weight: 400!important;}
+.font-medium, .font-500 { font-weight: 500!important; }
+.font-semibold, .font-600 { font-weight: 600!important;}
+.font-bold, .font-700 { font-weight: 700!important; }
+.font-bolder, .font-800 { font-weight: bolder!important;}
 
-.font-italic {font-style: italic;}
-.font-normal {font-style: normal;}
+.font-style-italic {font-style: italic;}
+.font-style-normal {font-style: normal;}
 
 .text-wrap { text-wrap: wrap!important; }
 .text-balance{ text-wrap: balance!important; }
@@ -25,9 +25,9 @@
 
 /// line height
 .lh-1{ line-height:1; }
-.lh-sm{ line-height: $line-height-sm; }
-.lh-base{ line-height: $line-height-base; }
-.lh-lg{ line-height: $line-height-lg; }
+.lh-base{ line-height: var(--line-height-base, 1.4); }
+.lh-sm{ line-height: var(--line-height-sm, 1.25); }
+.lh-lg{ line-height: var(--line-height-lg, 1.8); }
 
 /// text-position
 .text-left {text-align: left;}
@@ -50,3 +50,11 @@
 }
 
 
+// Effects on hover 
+.hover\:text-underline:hover{ text-decoration: underline!important; }
+.group:hover .group-hover\:text-underline{ text-decoration: underline!important; }
+.hover\:text-decoration-none:hover{ text-decoration: none!important; }
+.group:hover .group-hover\:text-decoration-none{ text-decoration: none!important;}
+
+// Text shadow
+.text-shadow{ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);}

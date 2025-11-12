@@ -1,25 +1,17 @@
-// These are global variables
-
-// WE USE VARIABLES DIRECTLY INTO COMPONENTS BY IMPLEMENTING CSS VARIABLE
-
-// largest container
-$container-width: 1440px;
 
 // Breakpoint sizes to generate utility classes
-// Let's keep simple
 $breakpoints: (
-  
-   // *** Breakpoints *** //
-  'desktop': 'min-width: 1200px', // Desktop and up 
-  'tablet': 'max-width: 1199px', // Tablet and smaller
-  'mobile': 'max-width: 600px',  // Mobile only
+  // *** Device only breakpoints *** //
+  'max-lg': 'max-width: 1200px', // Tablet and smaller
+  'max-md': 'max-width: 920px',  // Large Mobile only
+  'max-sm': 'max-width: 640px',  // Mobile only
 
-  // *** Optional - classic breakpoints *** //
-  // 'sm': 'min-width: 641px',  // not mobile, - small tablet and up
-  // 'md': 'min-width: 921px', // medium and up - larger tablet and up
-  // 'lg': 'min-width: 1201px', // large and up - desktop and any widescreen
-
+  // *** Classic breakpoints *** //
+  'sm': 'min-width: 641px',  // not mobile, - small tablet and up
+  'md': 'min-width: 921px', // medium and up - larger tablet and up
+  'lg': 'min-width: 1201px', // large and up - desktop and any widescreen
 );
+
 
 
 // Border-radius for utility classes

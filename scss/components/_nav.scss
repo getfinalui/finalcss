@@ -5,6 +5,9 @@
   list-style: none;
   flex-wrap: wrap;
   gap:2px;
+
+  li{ position: relative;}
+  a{ color:var(--neutral-700); }
 }
 
 /// Additional utility class Ex: class="nav nav-row"
@@ -17,7 +20,6 @@
 /// Additional utility class Ex: class="nav nav-col"
 .nav-col, .nav-vertical{
   flex-direction: column;
-  width: 100%;
   .nav-link{
     width: 100%;
     justify-content: flex-start;
@@ -71,8 +73,7 @@
   color:var(--neutral-700);
   border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
 
-  svg.icon{ width: 20px; height: 20px;}
-  svg{ min-width: 16px; min-height: 16px; }
+  svg, img, .icon{ width: 20px; height: 20px;  min-width: 16px; min-height: 16px;}
   
   &:hover{
     text-decoration:none;
@@ -83,7 +84,7 @@
     background-color: var(--neutral-300);
   }
   &.active{
-    color:var(--text-color-primary);
+    color:var(--primary-600);
     background-color: var(--primary-100);    
   }
   &.disabled {

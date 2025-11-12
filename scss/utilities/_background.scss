@@ -1,70 +1,60 @@
 
+// Define basic background colors
+// Why? each color has shades like blue-100, blue-200, 
+// So what shade to assign for classname like "bg-blue" or "bg-red"?
+// We assign shade 500, class name: "bg-blue" = "bg-blue-500"
 
-// Semantic names for background-colors
-.bg-base{ background-color:var(--bg-color-base); }
-.bg-none{ background: none; }
-.bg-initial{ background-color: initial; }
-.bg-inherit{ background-color: inherit; }
-.bg-transparent{ background-color: transparent; }
-.bg-secondary{ background-color:var(--bg-color-secondary); }
-.bg-lower{ background-color:var(--bg-color-lower); }
-.bg-raised{ background-color:var(--bg-color-raised);}
-.bg-alpha-1{ background-color:var(--alpha-1);}
-.bg-alpha-2{ background-color:var(--alpha-2);}
-.bg-alpha-3{ background-color:var(--alpha-3);}
-.bg-white{background-color:#fff;}
-.bg-black{ background-color:#000;}
-.bg-dark{background-color:#000;}
+$colors_bg_main:(
+  "base": var(--bg-color-base),
+  "secondary": var(--bg-color-secondary),
+  "transparent": transparent,
+  "inherit": inherit,
+  "initial": initial,
+  "white": #FFF,
+  "dark": #000,
+  "black": #000,
+  "alpha-1": var(--alpha-1),
+  "alpha-2": var(--alpha-2),
+  "alpha-3": var(--alpha-3),
+  "alpha-4": var(--alpha-4),
+  "alpha-5": var(--alpha-5),
+  "alpha-6": var(--alpha-6),
+  "alpha-7": var(--alpha-7),
+  "alpha-8": var(--alpha-8),
+  "alpha-9": var(--alpha-9),
+  "primary": map-get(map-get($colors_list, "primary"), "500"),
+  "red": map-get(map-get($colors_list, "red"), "500"),
+  "green": map-get(map-get($colors_list, "green"), "500"),
+  "blue": map-get(map-get($colors_list, "blue"), "500"),
+  "orange": map-get(map-get($colors_list, "orange"), "500"),
+  "yellow": map-get(map-get($colors_list, "yellow"), "500"),
+  "purple": map-get(map-get($colors_list, "purple"), "500"),
+  "teal": map-get(map-get($colors_list, "teal"), "500")
+);
 
-// Hover effect
-.hover\:bg-base:hover{ background-color:var(--bg-color-base); }
-.hover\:bg-none:hover{ background: none; }
-.hover\:bg-initial:hover{ background-color: initial; }
-.hover\:bg-inherit:hover{ background-color: inherit; }
-.hover\:bg-transparent:hover{ background-color: transparent; }
-.hover\:bg-secondary:hover{ background-color:var(--bg-color-secondary);}
-.hover\:bg-lower:hover{ background-color:var(--bg-color-lower); }
-.hover\:bg-raised:hover{ background-color:var(--bg-color-raised);}
-.hover\:bg-alpha-1:hover{ background-color:var(--alpha-1);}
-.hover\:bg-alpha-2:hover{ background-color:var(--alpha-2);}
-.hover\:bg-alpha-3:hover{ background-color:var(--alpha-3);}
-.hover\:bg-white:hover{background-color:#fff;}
-.hover\:bg-black:hover{ background-color:#000;}
-.hover\:bg-dark:hover{background-color:#000;}
 
-// Group-Hover effect 
-.group:hover .group-hover\:bg-base{ background-color:var(--bg-color-base); }
-.group:hover .group-hover\:bg-none{ background: none; }
-.group:hover .group-hover\:bg-initial{ background-color: initial; }
-.group:hover .group-hover\:bg-inherit{ background-color: inherit; }
-.group:hover .group-hover\:bg-transparent{ background-color: transparent; }
-.group:hover .group-hover\:bg-secondary{ background-color:var(--bg-color-secondary);}
-.group:hover .group-hover\:bg-lower{ background-color:var(--bg-color-lower); }
-.group:hover .group-hover\:bg-raised{ background-color:var(--bg-color-raised);}
-.group:hover .group-hover\:bg-alpha-1{ background-color:var(--bg-alpha-1);}
-.group:hover .group-hover\:bg-alpha-2{ background-color:var(--bg-alpha-2);}
-.group:hover .group-hover\:bg-alpha-3{ background-color:var(--bg-alpha-3);}
-.group:hover .group-hover\:bg-white{background-color:#fff;}
-.group:hover .group-hover\:bg-black{ background-color:#000;}
-.group:hover .group-hover\:bg-dark{background-color:#000;}
+@each $classname, $value in $colors_bg_main {
+  .bg-#{$classname} { background-color: #{$value}; }
+  .hover\:bg-#{$classname}:hover{ background-color: #{$value}; }
+  .group:hover .group-hover\:bg-#{$classname}{ background-color: #{$value}; }
+}
 
 
 // Generate classes for background based on color list in theme.scss 
-// For ex. .bg-primary-100{ style } bg-primary-200{ style }
-
+// Background for all color shades
 @each $color, $shades in $colors_list {
-
-  // Genarate bg colors with only single shade: 500 (Easy to define colors)
-  // For ex. .bg-primary{ background-color:var(--primary-500) } .bg-red{ background-color:var(--red-500) }
-  .bg-#{$color} { background-color: var(--#{$color}-500) };
-  .hover\:bg-#{$color}:hover { background-color:var(--#{$color}-500) !important; }
-  .group:hover .group-hover\:bg-#{$color} { background-color:var(--#{$color}-500) !important; }
-
+  // Generate for each shade (100,200,300,... 900)
+  // For ex. .bg-primary-100{ style } bg-primary-200{ style }
   @each $shade, $value in $shades {
-
     .bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade});  }
     .hover\:bg-#{$color}-#{$shade}:hover { background-color:var(--#{$color}-#{$shade}) !important; }
-    .group:hover .group-hover\:bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}) !important; }
-    
+    .group:hover .group-hover\:bg-#{$color}-#{$shade} { background-color:var(--#{$color}-#{$shade}) !important; }  
   }
 }
+
+
+
+// other helper utilities
+.bg-size-cover{background-size: cover}
+.bg-position-center{background-position: center;}
+.bg-none{ background: none; }

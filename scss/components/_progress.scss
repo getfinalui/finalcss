@@ -1,0 +1,20 @@
+.progress{
+    display: flex;
+    height: 12px;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: var(--neutral-300, #bbb);
+    border-radius: var(--border-radius-sm);
+    width: 100%;
+  }
+  
+  .progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--primary-500, blue);
+    transition: width 0.6s ease;
+  }

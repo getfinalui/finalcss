@@ -5,7 +5,7 @@
  * Licensed under MIT
  */
 
-@import "base-settings";
+@import "breakpoint-config";
 
 // Base
 @import "theme";
@@ -28,8 +28,8 @@
 @import "components/nav";
 @import "components/tabs"; 
 @import "components/dropdown";
-@import "components/segmented-control";
 @import "components/tag-chip"; 
+@import "components/progress"; 
 
 // Utility classes
 @import "utilities/display-layout";
@@ -41,7 +41,7 @@
 @import "utilities/text-style";
 @import "utilities/text-size";
 @import "utilities/text-color";
-@import "utilities/border-color"; 
+@import "utilities/border-style"; 
 @import "utilities/background"; 
 @import "utilities/border-radius";
 @import "utilities/gradient";
