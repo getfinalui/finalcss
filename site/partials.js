@@ -10,7 +10,7 @@ class HeaderComponent extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
 
-<dialog id="mobile_menu" class="desktop:d-none" style="margin-top:12px">
+<dialog id="mobile_menu" class="lg:d-none" style="margin-top:12px">
     <div class="dialog-body">
       <button type="button" class="btn btn-icon absolute top-0 right-0 m-2 float-right" onclick="document.getElementById('mobile_menu').close()">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
@@ -32,15 +32,15 @@ class HeaderComponent extends HTMLElement {
 	
 <header class="bg-neutral-0 py-2 border-bottom sticky top-0 z-10">
 	<div class="container">
-		<div class="d-flex flex-column desktop:flex-row align-items-center">
+		<div class="d-flex flex-column lg:flex-row align-items-center">
 			<div>
 				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 				<img src="/logo.png" alt="Finalcss logo" height="40">
-				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 font-medium ml-1">final<span class="text-secondary">css</span> </div>
 			  </a>
 			</div>
 			<div class="ml-auto d-flex align-items-center">
-				<nav class="nav d-none desktop:d-flex align-items-center">
+				<nav class="nav d-none lg:d-flex align-items-center">
 					<a href="/index.html" class="nav-link">Home</a>
 					<a href="/docs/index.html" class="nav-link"> Documentation </a>
           <a href="/templates.html" class="nav-link"> Templates </a>
@@ -59,7 +59,7 @@ class HeaderComponent extends HTMLElement {
 						</svg>
 					</span>
 				</button>
-				<button class="desktop:d-none ml-2 btn-icon btn btn-default" onclick="window.mobile_menu.showModal()">
+				<button class="lg:d-none ml-2 btn-icon btn btn-default" onclick="window.mobile_menu.showModal()">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 						<path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 						<path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -94,7 +94,7 @@ class SidebarComponent extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
 
-        <nav class="desktop:border-right pt-4 pb-4 pr-2 sticky h-full scrollbar-thin overflow-y-scroll" style="max-height:calc(100vh - 57px); top:57px">
+        <nav class="lg:border-right pt-4 pb-4 pr-2 sticky h-full scrollbar-thin overflow-y-scroll" style="max-height:calc(100vh - 57px); top:57px">
           <ul id="doc_sidebar" class="nav nav-col nav-compact">
             <li><a class="nav-link" href="/docs/doc-start.html">Getting started</a></li>
             <li><a class="nav-link" href="/docs/doc-customize.html">Customization</a></li>
@@ -206,7 +206,7 @@ class BottomComponent extends HTMLElement {
   }
 </style>
 
-<section class="py-10 bg-colorful border-top fs-lg">
+<section class="py-10 bg-colorful border-top text-lg">
     <div class="container article text-center" style="max-width: 920px">
       <h2 class="my-4">Your support matters!</h2>
       <p class="mb-5">
@@ -226,8 +226,8 @@ class BottomComponent extends HTMLElement {
 
 <footer class="bg-secondary border-top py-6">
   <div class="container">
-    <section class="d-flex align-items-center flex-col desktop:flex-row desktop:justify-content-between">
-        <p class="desktop:mb-0 mb-3 text-center desktop:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
+    <section class="d-flex align-items-center flex-col lg:flex-row lg:justify-content-between">
+        <p class="lg:mb-0 mb-3 text-center lg:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
         <nav class="nav">
             <a href="/docs/doc.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>
@@ -262,8 +262,8 @@ class FooterComponent extends HTMLElement {
     template.innerHTML = `
 <footer class="bg-secondary border-top py-6">
   <div class="container">
-    <section class="d-flex align-items-center flex-col desktop:flex-row desktop:justify-content-between">
-        <p class="desktop:mb-0 mb-3 text-center desktop:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
+    <section class="d-flex align-items-center flex-col lg:flex-row lg:justify-content-between">
+        <p class="lg:mb-0 mb-3 text-center lg:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
         <nav class="nav">
             <a href="docs.html" class="nav-link">Docs</a>
             <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit</a>

@@ -30,25 +30,25 @@
 <div class="container">
 
 <div class="d-flex flex-wrap">
-<aside class="w-full desktop:w-20%">
+<aside class="w-full lg:w-20%">
 	
 <!-- ======= SIDEBAR =======  -->
 <sidebar-component></sidebar-component>
 <!-- ======= SIDEBAR end// =======-->
 
 </aside>
-<main class="desktop:w-80% pl-0 desktop:pl-10 pt-10">
+<main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="fs-4xl my-20px">Grid system - rows & columns</h1>
+<h1 class="text-4xl my-20px">Grid system - rows & columns</h1>
 <hr>
 <article class="article-wrap  mb-16">
 
 <p>
-	Finalcss is inspired by <a href="https://getbootstrap.com/docs/5.3/layout/grid/" target="_blank"> Bootstrap's grid system  </a> and <a href="https://tailwindcss.com/docs/responsive-design" target="_blank"> Tailwind's breakpoint </a>  utility classes (classname, desktop:classname). <br> We've included both <b>Mobile-first</b> and <b>Desktop-first</b> approach. 
+	Finalcss is inspired by <a href="https://getbootstrap.com/docs/5.3/layout/grid/" target="_blank"> Bootstrap's grid system  </a> and <a href="https://tailwindcss.com/docs/responsive-design" target="_blank"> Tailwind's breakpoint </a>  utility classes (classname, lg:classname). <br> We've included both <b>Mobile-first</b> and <b>Desktop-first</b> approach. 
 </p>
 <p>
-	Here is how it works: <code>class="flex-col desktop:flex-row</code>. <br> This means, <u>{flex-direction:column}</u> by default for all breakpoints, then it overrides to  <u>{flex-direction:row}</u> on large and upper breakpoints.
+	Here is how it works: <code>class="flex-col lg:flex-row</code>. <br> This means, <u>{flex-direction:column}</u> by default for all breakpoints, then it overrides to  <u>{flex-direction:row}</u> on large and upper breakpoints.
 </p>	
 <p>
 	Another way of doing this,  <code>class="flex-row mobile:flex-col</code>. <br> This means, <u>{flex-direction:row}</u> by default for all breakpoints, but on mobile (max-width:640px) it will be <u>{flex-direction:column}</u>
@@ -98,8 +98,8 @@
 	<text fill="#BA1B1B" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="191" y="74.7095">mobile:</tspan></text>
 	<text fill="#E27C03" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="333" y="39.7095">tablet:</tspan></text>
 	<text fill="#0E9F14" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="468" y="210.709"></tspan></text>
-	<text fill="#165ADF" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="750" y="191.709">desktop:</tspan></text>
-	<text fill="#C60FF4" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="1029" y="174.709">desktop:</tspan></text>
+	<text fill="#165ADF" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="750" y="191.709">lg:</tspan></text>
+	<text fill="#C60FF4" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="1029" y="174.709">lg:</tspan></text>
 	<defs>
 	<linearGradient id="paint0_linear_3149_2" x1="1225" y1="137.5" x2="1318" y2="137.5" gradientUnits="userSpaceOnUse">
 	<stop stop-color="#BDC0C7"/>
@@ -115,7 +115,7 @@
 <h4>Option 1 - custom column width </h4>
 
 <div class="row">
-	<aside class="desktop:col-6/12">
+	<aside class="lg:col-6/12">
 <p> All breakpoints </p>
 <p><code>col, col-auto, col-1/12, col-2/12, col-3/12, ... col-1/122</code></p>
 <pre><code class="has-line-data" data-line-start="1" data-line-end="15" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
@@ -135,19 +135,19 @@
 
 
 	</aside>
-	<aside class="desktop:col-6/12">
+	<aside class="lg:col-6/12">
 
 <p>Only large (desktop)</p>
-<p><code>desktop:col, desktop:col-auto, desktop:col-1/12, desktop:col-2/12, ... desktop:col-1/122</code></p>
+<p><code>lg:col, lg:col-auto, lg:col-1/12, lg:col-2/12, ... lg:col-1/122</code></p>
 <pre><code class="has-line-data" data-line-start="1" data-line-end="15" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"desktop:col"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lg:col"</span>&gt;</span>
       Column
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"desktop:col"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lg:col"</span>&gt;</span>
       Column
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"desktop:col"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lg:col"</span>&gt;</span>
       Column
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
