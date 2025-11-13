@@ -9,7 +9,7 @@
   color: var(--alert-text-color);
   background-color: var(--alert-bg-color);
   position: relative;
-  padding:12px;
+  padding:8px 12px;
   margin-bottom: 1rem;
   border: transparent;
   border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss

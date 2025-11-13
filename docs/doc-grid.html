@@ -51,7 +51,7 @@
 	Here is how it works: <code>class="flex-col lg:flex-row</code>. <br> This means, <u>{flex-direction:column}</u> by default for all breakpoints, then it overrides to  <u>{flex-direction:row}</u> on large and upper breakpoints.
 </p>	
 <p>
-	Another way of doing this,  <code>class="flex-row mobile:flex-col</code>. <br> This means, <u>{flex-direction:row}</u> by default for all breakpoints, but on mobile (max-width:640px) it will be <u>{flex-direction:column}</u>
+	Another way of doing this,  <code>class="flex-row max-sm:flex-col</code>. <br> This means, <u>{flex-direction:row}</u> by default for all breakpoints, but on mobile (max-width:640px) it will be <u>{flex-direction:column}</u>
 </p>
 <p>To customize breakpoints open <b>📂 scss/_base-settings.scss</b>. <br> There you wil find following sass map: </p>
 
@@ -95,8 +95,8 @@
 	<path d="M425 157V210C425 214.418 428.582 218 433 218H1286.99H1318" stroke="#08F612" stroke-width="2"/>
 	<path d="M704 151V193C704 197.418 707.582 201 712 201H1295.72H1317" stroke="#8FB3F9" stroke-width="2"/>
 	<path d="M985 151V176C985 180.418 988.582 184 993 184H1305.47H1317" stroke="#DA8BEE" stroke-width="2"/>
-	<text fill="#BA1B1B" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="191" y="74.7095">mobile:</tspan></text>
-	<text fill="#E27C03" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="333" y="39.7095">tablet:</tspan></text>
+	<text fill="#BA1B1B" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="191" y="74.7095">max-sm:</tspan></text>
+	<text fill="#E27C03" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="333" y="39.7095">max-lg:</tspan></text>
 	<text fill="#0E9F14" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="468" y="210.709"></tspan></text>
 	<text fill="#165ADF" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="750" y="191.709">lg:</tspan></text>
 	<text fill="#C60FF4" xml:space="preserve" style="white-space: pre" font-family="Helvetica" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="1029" y="174.709">lg:</tspan></text>

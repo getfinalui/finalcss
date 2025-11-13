@@ -13,9 +13,9 @@
   list-style: none;
   background-color:var(--bg-color-raised);
   background-clip: padding-box;  
-  box-shadow: 0 4px 16px rgba(#000, 0.2);
+  box-shadow: 0 4px 16px rgba(#000, 0.1);
   border: 1px solid var(--neutral-300);
-  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+  border-radius: var(--border-radius-lg); // from: _base-settings.scss or _variables-root.scss
 
   hr{ margin:4px 0;}
   .divider{ margin:4px 0; border-top:1px solid var(--neutral-300); }
@@ -35,7 +35,7 @@
   padding: 4px 8px;
   min-height: 38px;
   clear: both;
-  color: var(--tetx-color-base);
+  color: var(--text-color-base);
   white-space: nowrap;
   background-color: transparent;
   border: 0;
