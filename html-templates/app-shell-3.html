@@ -43,13 +43,13 @@
 </head>
 <body>
 
-<header class="d-flex p-2 desktop:px-5 align-items-center border-bottom h-14 bg-base z-100 sticky top-0">
+<header class="d-flex p-2 lg:px-5 align-items-center border-bottom h-14 bg-base z-100 sticky top-0">
 	
 	<!-- header-left  -->
 	<div class="d-flex flex-grow align-items-center">
 		
 		<!-- mobile hamburger button  -->
-		<button class="btn btn-default btn-icon mr-3 desktop:d-none">
+		<button class="btn btn-default btn-icon mr-3 lg:d-none">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
 					<path d="M4 5L20 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 					<path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -57,9 +57,9 @@
 			</svg>
 		</button>
 		<!-- mobile hamburger button .//end -->
-		<a href="https://finalcss.com" class="mobile:hidden  hover:opacity-80 d-flex flex-shrink-0 text-decoration-none align-items-center m-0">
+		<a href="https://finalcss.com" class="max-sm:hidden  hover:opacity-80 d-flex flex-shrink-0 text-decoration-none align-items-center m-0">
 			<img src="logo.svg" alt="" height="40">
-			<div style="font-size:24px;" class="text-neutral-1000 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+			<div style="font-size:24px;" class="text-neutral-1000 font-medium ml-1">final<span class="text-secondary">css</span> </div>
 		</a>
 	</div>
 	<!-- header-left  .//end --> 
@@ -89,13 +89,13 @@
 		<button class="btn btn-icon btn-default">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use color="var(--neutral-700)" href="#icon-bell"/></svg>								
 		</button>
-		<button class="btn btn-icon btn-default mobile:hidden">
+		<button class="btn btn-icon btn-default max-sm:hidden">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use color="var(--neutral-700)" href="#icon-setting"/></svg>								
 		</button>
 
 		<a class="btn btn-primary" href="#">Create</a>
 
-		<a href="#" class="btn btn-primary-subtle rounded-circle btn-icon  mobile:hidden">
+		<a href="#" class="btn btn-primary-subtle rounded-circle btn-icon  max-sm:hidden">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><use href="#icon-user"/></svg>			
 		</a>
 	</div>
@@ -105,7 +105,7 @@
 
 <div class="min-h-100vh">
 	
-	<aside style="top:56px" class="fixed overflow-y-auto left-0 bottom-0 d-none desktop:d-flex flex-col bg-lower border-right w-20">
+	<aside style="top:56px" class="fixed overflow-y-auto left-0 bottom-0 d-none lg:d-flex flex-col bg-lower border-right w-20">
 		
 		<nav class="m-3">
 			<ul class="nav nav-col align-items-center gap-2">
@@ -171,32 +171,32 @@
 			</button>
 		</div>
 	</aside>
-	<main class="desktop:ml-20">
+	<main class="lg:ml-20">
 
-		<section class="p-3 desktop:p-5">
+		<section class="p-3 lg:p-5">
 
-			<div class="d-grid grid-template-cols-1 grid-template-cols-2 desktop:grid-template-cols-4 gap-5 w-100%">
+			<div class="d-grid grid-template-cols-1 grid-template-cols-2 lg:grid-template-cols-4 gap-5 w-100%">
 				
 				<article class="card bg-secondary border">
-					<div class="card-body desktop:h-20">
+					<div class="card-body lg:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
 
 				<article class="card bg-secondary border">
-					<div class="card-body desktop:h-20">
+					<div class="card-body lg:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
 
 				<article class="card bg-secondary border">
-					<div class="card-body desktop:h-20">
+					<div class="card-body lg:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
 
 				<article class="card bg-secondary border">
-					<div class="card-body desktop:h-20">
+					<div class="card-body lg:h-20">
 						<p class="text-muted">Place any widget</p>
 					</div>
 				</article>
@@ -205,7 +205,7 @@
 
 
 			<header class="mt-6 mb-4">
-				<h5 class="mb-4 fs-lg text-secondary">Another content</h5>
+				<h5 class="mb-4 text-lg text-secondary">Another content</h5>
 			</header>
 
 			<article class="card shadow-sm border">

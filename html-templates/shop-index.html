@@ -15,16 +15,16 @@
 </head>
 <body>
 
-<header class="py-2 desktop:py-3 border-bottom">
+<header class="py-2 lg:py-3 border-bottom">
   <div class="container px-3">
     <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
       
       <a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 				<img src="logo.svg" alt="" height="40">
-				<div style="font-size:24px;" class="text-neutral-1000 fw-medium ml-1">final<span class="text-secondary">css</span> </div>
+				<div style="font-size:24px;" class="text-neutral-1000 font-medium ml-1">final<span class="text-secondary">css</span> </div>
 			</a>
 
-      <div class="mobile:order-3 flex-grow desktop:max-w-50% mobile:w-full">
+      <div class="max-sm:order-3 flex-grow lg:max-w-50% max-sm:w-full">
         <form class="d-flex w-100%">
           <input type="search" class="form-control rounded-right-0" list="search_suggest" placeholder="Search country">
           <button class="rounded-left-0 btn btn-default" style="margin-left:-1px">
@@ -38,19 +38,19 @@
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
 					</span>
-					<span class="d-none desktop:d-inline-block"> Wishlist </span>
+					<span class="d-none lg:d-inline-block"> Wishlist </span>
 				</button>	
         <button class="btn btn-default"> 
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 					</span>
-					<span class="d-none desktop:d-inline-block"> Sign up </span>
+					<span class="d-none lg:d-inline-block"> Sign up </span>
 				</button>	
         <button class="btn btn-primary"> 
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
 					</span>
-					<span  class="d-none desktop:d-inline-block">My cart</span> (0) 	
+					<span  class="d-none lg:d-inline-block">My cart</span> (0) 	
 				</button>
       </div>
 
@@ -60,7 +60,7 @@
   
 <nav class="border-bottom py-1">
   <div  class="container px-3">
-    <ul class="nav mobile:justify-content-center">
+    <ul class="nav max-sm:justify-content-center">
       <li><a href="#main" class="nav-link">Hot offers</a></li>
       <li><a href="#about" class="nav-link">Recommends</a></li>
       <li><a href="#features" class="nav-link">Gift boxes</a></li>
@@ -74,14 +74,14 @@
 
 	
 <!-- ================ SECTION INTRO ================ -->
-<section class="bg-primary-700 theme-static py-8 desktop:py-20">
+<section class="bg-primary-700 theme-static py-8 lg:py-20">
 	<div class="container">
 
 		<div class="row gap-5 align-items-center" style="min-height:400px">
-			<div class="desktop:col-6/12">
+			<div class="lg:col-6/12">
 			 <article class="mb-10">
-			    <h1 class="text-white fs-4xl fs-6xl desktop:fs-7xl"> Best products & <br> brands in our store  </h1>
-			    <p class="text-white  fs-xl desktop:fs-3xl fw-light mb-8">Trendy Products, Factory Prices, Excellent Service</p>
+			    <h1 class="text-white text-4xl text-6xl lg:text-7xl"> Best products & <br> brands in our store  </h1>
+			    <p class="text-white  text-xl lg:text-3xl font-light mb-8">Trendy Products, Factory Prices, Excellent Service</p>
 			    <a href="#" class="btn btn-lg" style="--btn-bg:var(--yellow-500); --btn-bg-hover:var(--yellow-400)"> Purchase now</a> 
 			    <a href="#" class="btn btn-lg" style="--btn-bg:var(--primary-500); --btn-bg-hover:var(--primary-400); --btn-text-color:#fff"> Learn more </a>
 			  </article>
@@ -98,25 +98,25 @@
 <section class="pt-5">
 <div class="container">
 
-	<nav class="d-grid grid-template-cols-2 desktop:grid-template-cols-4 min-h-32 gap-4"> 
+	<nav class="d-grid grid-template-cols-2 lg:grid-template-cols-4 min-h-32 gap-4"> 
 		
 		<a href="#" class="rounded text-decoration-none p-5 bg-primary-100 hover:bg-primary-200">
-				<p class="fs-lg text-base fw-semibold"> Computer & PC </p>
+				<p class="text-lg text-base font-semibold"> Computer & PC </p>
 				<p>85 products</p>
 		</a> <!-- item-grid.// -->
 
 		<a href="#" class="rounded text-decoration-none p-5  bg-primary-100 hover:bg-primary-200">
-				<p class="fs-lg text-base fw-semibold"> Electro scooters </p>
+				<p class="text-lg text-base font-semibold"> Electro scooters </p>
 				<p>17 products</p>
 		</a> <!-- item-grid.// -->
 
 		<a href="#" class="rounded text-decoration-none p-5  bg-primary-100 hover:bg-primary-200">
-				<p class="fs-lg text-base fw-semibold"> Smart Gadgets </p>
+				<p class="text-lg text-base font-semibold"> Smart Gadgets </p>
 				<p>200+ products</p>
 		</a> <!-- item-grid.// -->
 
 		<a href="#" class="rounded d-block text-decoration-none p-5 bg-primary-100 hover:bg-primary-200">
-				<p class="fs-lg text-base fw-semibold"> Wearable Items </p>
+				<p class="text-lg text-base font-semibold"> Wearable Items </p>
 				<p>100+ products</p>
 		</a> <!-- item-grid.// -->
    </nav>
@@ -133,14 +133,14 @@
 		<h3>Recommended items </h3>
 	</header> 
 
-	<div class="row row-cols-2 gap-5 row-cols-3 desktop:row-cols-5">
+	<div class="row row-cols-2 gap-5 row-cols-3 lg:row-cols-5">
 		<div class="col">
 	        <figure>
-	          <a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+	          <a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 	          	<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 	          </a>
 	          <figcaption class="mt-2">
-	          	<p class="fw-bold fs-lg"> $995.99 </p> 
+	          	<p class="font-bold text-lg"> $995.99 </p> 
 	            <a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 							<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 	          </figcaption>
@@ -149,11 +149,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -162,11 +162,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -175,11 +175,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -188,11 +188,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -201,11 +201,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -214,11 +214,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -227,11 +227,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -240,11 +240,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -253,11 +253,11 @@
 
 		<div class="col">
 			<figure>
-				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 mobile:h-45 overflow-hidden"> 
+				<a href="#" class="rounded d-block text-center bg-neutral-200 h-55 max-sm:h-45 overflow-hidden"> 
 					<img src="placeholder.jpg" class="h-100% w-100% hover:opacity-80 object-fit-cover mix-blend-multiply"> 
 				</a>
 				<figcaption class="mt-2">
-					<p class="fw-bold fs-lg"> $995.99 </p> 
+					<p class="font-bold text-lg"> $995.99 </p> 
 					<a href="#" class="title"> Original Apple iPhone 12 Cellphone 512GB, Original </a>
 					<p class="text-secondary mt-2">⭐ 4.5 • 154 orders</p>
 				</figcaption>
@@ -276,10 +276,10 @@
 <section>
 <div class="container">
 
-	<article class="bg-primary-300 p-3 desktop:p-6 bg-gradient-1 rounded">
+	<article class="bg-primary-300 p-3 lg:p-6 bg-gradient-1 rounded">
 
 			<div class="p-5">
-				<h2 class="mb-2 mobile:fs-2xl">Live luxuriously in <br> every moment</h2>
+				<h2 class="mb-2 max-sm:text-2xl">Live luxuriously in <br> every moment</h2>
 				<p class="mb-5">Indulge in the finer things, from timepieces to handbags.</p>
 				<a href="#" class="btn btn-lg btn-primary"> Learn more </a>
 			</div>
@@ -300,7 +300,7 @@
 	</header> 
 
 	<div class="row">
-		<div class="desktop:col-4/12">
+		<div class="lg:col-4/12">
 		 <nav class="card bg-neutral-100 p-5 rounded mb-4">
 		 	<h5 class="mb-2"> Notebooks </h5>
 		 	<ul>
@@ -311,7 +311,7 @@
 		 	</ul>
 		 </nav>	
 		</div> <!-- col .// -->
-		<div class="desktop:col-4/12">
+		<div class="lg:col-4/12">
 			<nav class="card bg-neutral-100 p-5 rounded mb-4">
 		 	<h5 class="mb-2">Accessories </h5>
 		 	<ul>
@@ -322,7 +322,7 @@
 		 	</ul>
 		 </nav>	
 		</div> <!-- col .// -->
-		<div class="desktop:col-4/12">
+		<div class="lg:col-4/12">
 			<nav class="card bg-neutral-100 p-5 rounded mb-4">
 		 	<h5 class="mb-2">Office tech </h5>
 		 	<ul>
@@ -343,8 +343,8 @@
 
 <footer class="border-top bg-secondary py-12">
 	<div class="container">
-		<section class="d-flex align-items-center flex-col desktop:flex-row desktop:justify-content-between">
-				<p class="desktop:mb-0 mb-3 text-center desktop:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
+		<section class="d-flex align-items-center flex-col lg:flex-row lg:justify-content-between">
+				<p class="lg:mb-0 mb-3 text-center lg:text-left"> &copy; <b>Final CSS.</b> <br> Based on Final UI - Design System  </p>  
 				<nav class="nav">
 						<a href="#" class="nav-link">Menu item</a>
 						<a href="#" class="nav-link">Menu item</a>

@@ -32,7 +32,7 @@ $font-sizes-list: (
   9xl: 6rem,
 ) !default;
 
-// Generate classlist Ex. fs-3xl, fs-sm, fs-base
+// Generate classlist Ex. text-3xl, text-sm, text-base
 @each $name, $font-size in $font-sizes-list {
   .text-#{$name} {
     font-size: $font-size;
