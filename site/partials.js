@@ -36,7 +36,7 @@ class HeaderComponent extends HTMLElement {
 			<div>
 				<a href="https://finalcss.com" class="hover:opacity-80 d-flex text-decoration-none align-items-center m-0">
 				<img src="/logo.png" alt="Finalcss logo" height="40">
-				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 font-medium ml-1">final<span class="text-secondary">css</span> </div>
+				  <div style="font-size:24px;" class="text-neutral-1000 lh-1 font-semibold ml-1">final<span class="text-secondary">css</span> </div>
 			  </a>
 			</div>
 			<div class="ml-auto d-flex align-items-center">
@@ -96,7 +96,7 @@ class SidebarComponent extends HTMLElement {
 
         <nav class="lg:border-right pt-4 pb-4 pr-2 sticky h-full scrollbar-thin overflow-y-scroll" style="max-height:calc(100vh - 57px); top:57px">
           <ul id="doc_sidebar" class="nav nav-col nav-compact">
-            <li><a class="nav-link" href="/docs/doc-start.html">Getting started</a></li>
+            <li><a class="nav-link" href="/docs/index.html">Getting started</a></li>
             <li><a class="nav-link" href="/docs/doc-customize.html">Customization</a></li>
             <li><a class="nav-link" href="/docs/doc-theme.html">Theme & colors</a></li>
             <li><a class="nav-link" href="/docs/doc-grid.html">Grid system</a></li>
@@ -112,12 +112,13 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-component-card.html">Card</a></li>
             <li><a class="nav-link" href="/docs/doc-component-dialog.html">Dialog</a></li>
             <li><a class="nav-link" href="/docs/doc-component-dropdown.html">Dropdown</a></li>
-            <li><a class="nav-link" href="/docs/doc-component-forms.html">Form elements</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-form-check-radio.html">Check & Radio</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-form-input.html">Input field</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-form-select.html">Select</a></li>
             <li><a class="nav-link" href="/docs/doc-component-nav.html">Nav menu</a></li>
-            <li><a class="nav-link" href="/docs/doc-component-segment.html">Segmented control</a></li>
             <li><a class="nav-link" href="/docs/doc-component-table.html">Table</a></li>
             <li><a class="nav-link" href="/docs/doc-component-tabs.html">Tabs</a></li>
-            <li><a class="nav-link" href="/docs/doc-component-tag.html">Tag / chips</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-tag-chips.html">Tag / chips</a></li>
             <li class="px-2">
               <hr>
               <h6 class="mb-2"> Utiltiy classes </h6>
