@@ -43,32 +43,31 @@
 
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">COMPONENT_NAME</h1>
+<h1 class="text-4xl my-20px">Tabs</h1>
 <hr>
 
 <article class="article-wrap mb-16">
 
-<p> Short information about this component: REPLACE_THIS </p>
+<p> Short information about this component: {{ REPLACE_THIS }} </p>
 
 <ul class="list-bullet">
-	<li> When to use it: REPLACE_THIS</li>
-  <li> Don't use for: REPLACE_THIS </li>
+	<li> When to use it:  {{ REPLACE_THIS }} </li>
+  <li> Don't use for:  {{ REPLACE_THIS }} </li>
   <li> Dark mode: Automatic </li>
-	<li> SCSS file: <code>/scss/components/<b>_alert.scss</b></code> </li>
+	<li> SCSS file: <code>/scss/components/<b>_tabs.scss</b></code> </li>
 </ul>
 
 <hr>
-
 <h4> Examples </h4>
 <figure class="rounded bg-lower border">
   <div class="card-body">
     <!-- example -->
-    <button class="btn btn-primary">Example button</button>
+     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> &lt;tag&gt; CODE_WITH_HTML_ESCAPE &lt;tag&gt;</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
@@ -78,7 +77,9 @@
 
 <h4> How to customize?</h4>
 <p>
-	REWRITE_THIS_PARAGRAPH
+{{
+	REWRITE_BELOW_TEXT_BASED_ON_SCSS_STYLING
+  WRITE ABOUT CUSTOMIZATION
 	There are 2 ways of customization:
 	A) Change scss/components/_filename.scss
 	Write here about css variables can be overriten with inline style tag:
@@ -87,7 +88,9 @@
 
 	Provide example like this with full tag: 
 	style="--alert-bg-color:#FF6680" class="alert alert-danger"
-	</div> 
+	B) Open  scss/components folder and make changes directly in your_component.scss file and compile
+   How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
+  }}
 </p>
 
 
