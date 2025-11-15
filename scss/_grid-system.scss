@@ -77,40 +77,40 @@
 
 //////////// COLS ONLY
 // Generate utility classes (for ex: col-6/12)
-.col{ flex: 0 0 auto; }
-.col-auto{width: auto;}
-.col-1\/12{width: 8.33333333%;}
-.col-2\/12{width: 16.66666667%;}
-.col-3\/12{width: 25%;}
-.col-4\/12{width: 33.33333333%;}
-.col-5\/12{width: 41.66666667%;}
-.col-6\/12{width: 50%;}
-.col-7\/12{width: 58.33333333%;}
-.col-8\/12{width: 66.66666667%;}
-.col-9\/12{width: 75%;}
-.col-10\/12{width: 83.33333333%;}
-.col-11\/12{width: 91.66666667%;}
-.col-12\/12{width: 100%;}
+.col{ flex: 1 0 0; } // OR .col{ flex: 0 0 auto; }
+.col-auto{ flex: 0 0 auto; width: auto; } // OR .col-auto{width: auto;}
+.col-1{width: 8.33333333%;}
+.col-2{width: 16.66666667%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33333333%;}
+.col-5{width: 41.66666667%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33333333%;}
+.col-8{width: 66.66666667%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33333333%;}
+.col-11{width: 91.66666667%;}
+.col-12{width: 100%;}
 
 // Generate responsive utility classes (for ex: md:col-6/12)
 // breakpoints can be changed from base-settings.scss
 @each $breakpoint, $size in $breakpoints {
   @media ($size){
     // breakpoinst styles
-    .#{$breakpoint}\:col{ flex: 1 0 0%; }
-    .#{$breakpoint}\:col-auto{width: auto;}
-    .#{$breakpoint}\:col-1\/12{width: 8.33333333%;}
-    .#{$breakpoint}\:col-2\/12{width: 16.66666667%;}
-    .#{$breakpoint}\:col-3\/12{width: 25%;}
-    .#{$breakpoint}\:col-4\/12{width: 33.33333333%;}
-    .#{$breakpoint}\:col-5\/12{width: 41.66666667%;}
-    .#{$breakpoint}\:col-6\/12{width: 50%;}
-    .#{$breakpoint}\:col-7\/12{width: 58.33333333%;}
-    .#{$breakpoint}\:col-8\/12{width: 66.66666667%;}
-    .#{$breakpoint}\:col-9\/12{width: 75%;}
-    .#{$breakpoint}\:col-10\/12{width: 83.33333333%;}
-    .#{$breakpoint}\:col-11\/12{width: 91.66666667%;}
-    .#{$breakpoint}\:col-12\/12{width: 100%;}
+    .#{$breakpoint}\:col{ flex: 1 0 0; }  // OR .col{ flex: 0 0 auto; }
+    .#{$breakpoint}\:col-auto{ flex: 0 0 auto; width: auto; } // OR .col-auto{width: auto;}
+    .#{$breakpoint}\:col-1{width: 8.33333333%;}
+    .#{$breakpoint}\:col-2{width: 16.66666667%;}
+    .#{$breakpoint}\:col-3{width: 25%;}
+    .#{$breakpoint}\:col-4{width: 33.33333333%;}
+    .#{$breakpoint}\:col-5{width: 41.66666667%;}
+    .#{$breakpoint}\:col-6{width: 50%;}
+    .#{$breakpoint}\:col-7{width: 58.33333333%;}
+    .#{$breakpoint}\:col-8{width: 66.66666667%;}
+    .#{$breakpoint}\:col-9{width: 75%;}
+    .#{$breakpoint}\:col-10{width: 83.33333333%;}
+    .#{$breakpoint}\:col-11{width: 91.66666667%;}
+    .#{$breakpoint}\:col-12{width: 100%;}
     // end breakpoint
   }
 }
