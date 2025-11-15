@@ -3395,6 +3395,7 @@ dialog::backdrop {
   background-color: var(--neutral-50);
   border: 1px solid var(--neutral-300);
   border-radius: var(--border-radius-base);
+  color: var(--text-color-base);
   display: block;
   min-width: 80px;
   width: 100%;
@@ -3446,6 +3447,7 @@ textarea.form-control {
   padding-right: 32px;
   line-height: 1.4;
   appearance: none;
+  color: var(--text-color-base);
   background-color: var(--neutral-50);
   background-image: var(--icon-arrow);
   background-repeat: no-repeat;
@@ -9962,27 +9964,27 @@ h1 {
 }
 
 .border-strong {
-  border: 1px solid var(--neutral-400);
+  border: 1px solid var(--neutral-300);
 }
 
 .hover\:border-strong:hover {
-  border: 1px solid var(--neutral-400);
+  border: 1px solid var(--neutral-300);
 }
 
 .group:hover .group-hover\:border-strong {
-  border: 1px solid var(--neutral-400);
+  border: 1px solid var(--neutral-300);
 }
 
 .border-color-strong {
-  border-color: var(--neutral-400) !important;
+  border-color: var(--neutral-300) !important;
 }
 
 .hover\:border-color-strong:hover {
-  border-color: var(--neutral-400) !important;
+  border-color: var(--neutral-300) !important;
 }
 
 .group:hover .group-hover\:border-color-strong {
-  border-color: var(--neutral-400) !important;
+  border-color: var(--neutral-300) !important;
 }
 
 .border-transparent {

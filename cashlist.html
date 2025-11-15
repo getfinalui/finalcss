@@ -63,7 +63,7 @@
 </head>
 <body>
 
-<header class="py-2 lg:py-3 border-bottom">
+<header class="py-2 border-bottom">
 	<div class="container">
 		<div class="d-flex gap-2 align-items-center justify-content-between">
 			
@@ -73,7 +73,6 @@
 			</a>
 
 			<div>
-				<button class="btn btn-neutral max-sm:hidden"> London, Buffalo city, A block  </button>	
 				<button onclick="themeSwitcher()" class="btn btn-icon btn-default">
 					<span class="d-none dark:d-block">
 						<svg xmlns="http://www.w3.org/2000/svg" class="align-middle" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -84,8 +83,7 @@
 						</svg>
 					</span>
 				</button>
-				<button class="btn btn-default">  Sign up 	</button>	
-				<button class="btn btn-primary">  Sign in 	</button>
+				<button class="btn btn-default"> Alexander	</button>	
 			</div>
 
 		</div>
@@ -100,147 +98,72 @@
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore excepturi eveniet maxime est illum, voluptatibus sunt debitis. Dolor praesentium facere quisquam, nulla veniam iusto laboriosam dicta quod eos totam officia!
 	</aside>
 	<main class="col-8">
-		<div class="card bg-base">
-			<header class="p-3 bg-neutral-50">
-				<h5 class="mb-4 text-xl">Latest orders</h5>
+		<div class="card bg-base border-strong overflow-hidden shadow-sm">
+			<header class="p-5 pt-4 bg-neutral-100">
 				
-				<div class="d-flex flex-row max-sm:flex-col gap-3">
-						<nav class="segmented-control">
-							<label class="segmented-item active">
-								All orders
-							</label>
-							<label class="segmented-item">
-								Pending
-							</label>
-							<label class="segmented-item">
-								Confirmed
-							</label>
-						</nav>
+				<div class="d-flex align-items-center gap-1">
+					<h5 class="text-xl mr-auto"> Main book </h5>
+					<a href="#" class="btn btn-neutral">Share</a>
+					<button class="btn btn-neutral has-icon-dropdown"> Setting </button>
+				</div>
+			
+				<hr class="my-5">
 
-						<form class="lg:ml-auto d-flex  gap-2">
-							<input class="form-control min-w-20" type="search" placeholder="Search item" name="">
-							<button class="btn btn-default">Search</button>
-						</form>
+				<div class="d-grid grid-template-cols-4 w-full gap-2">
+					<button class="btn btn-green">Add income</button>
+					<button class="btn btn-red">Add expense</button>
+					<button class="btn btn-default">Transfer to </button>
+					<button class="btn btn-default">Bulk entry </button>
 				</div>
 			</header>
 
-			<!-- search+filter -->
-			<div class="d-flex flex-wrap flex-grow-0 flex-nowrap gap-3 mr-auto mb-3 mb-0">
-						
-					<input class="form-control flex-grow lg:min-w-100" type="search" placeholder="Search" name="">
+			<article class="p-5">
+				<!-- search+filter -->
+				<div class="d-flex flex-nowrap gap-2 mb-5">
+							
+						<input class="form-control flex-grow min-w-80" type="search" placeholder="Search" name="">
 
-					<select class="form-select w-40% lg:min-w-40">
-						<option>All category</option>
-						<option>Drinks</option>
-						<option>Food</option>
-						<option>Electronics</option>
-						<option>Others</option>
-					</select>
-					<select class="form-select w-40% lg:min-w-40">
-						<option>Any status</option>
-						<option>Confirmed</option>
-						<option>Pending</option>
-						<option>Declined</option>
-					</select>
-			</div>
-			<!-- search+filter end.// -->
+						<select class="form-select">
+							<option>All category</option>
+							<option>Drinks</option>
+							<option>Food</option>
+							<option>Electronics</option>
+							<option>Others</option>
+						</select>
+						<select class="form-select">
+							<option>Any status</option>
+							<option>Confirmed</option>
+							<option>Pending</option>
+							<option>Declined</option>
+						</select>
 
-			<div class="table-responsive">
-				<table class="table table-hover">
-						<thead>
-							<tr>
-								<th>Order ID</th>
-								<th>Date</th>
-								<th>Order by</th>
-								<th>Status</th>
-								<th class="text-right">Total sum</th>
-								<th class="text-right">Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-										<div class="d-flex text-primary align-items-center">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-											<a href="#" class="font-medium ml-2">192001</a>
-										</div>
-								</td>
-								<td>
-									<span>July 12, 2024</span>
-								</td>
-								<td>Alex John</td>
-								<td>  
-									<b role="status" class="badge badge-green"> 
-										<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-										Completed 
-									</b> 
-								</td>
-								<td class="text-right"> <b class="text-sm text-muted">USD</b> 312,231.00</td>
-								<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-							</tr>
-							<tr>
-								<td>
-										<div class="d-flex text-primary align-items-center">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-											<a href="#" class="font-medium ml-2">234232</a>
-										</div>
-								</td>
-								<td>
-									<span>July 12, 2024</span>
-								</td>
-								<td>Alex John</td>
-								<td>  
-									<b role="status" class="badge badge-orange">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none"> <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" /> <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>
-										Pending 
-									</b> 
-								</td>
-								<td class="text-right"> <b class="text-sm text-muted">USD</b> 1,912,902.99</td>
-								<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-							</tr>
-							<tr>
-								<td>
-										<div class="d-flex text-primary align-items-center">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-											<a href="#" class="font-medium ml-2">192001</a>
-										</div>
-								</td>
-								<td>
-									<span>July 12, 2024</span>
-								</td>
-								<td>Michael George</td>
-								<td>  
-									<b role="status" class="badge badge-orange"> 
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none"> <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-											<path d="M12 8V12L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
-										Pending
-									</b> 
-								</td>
-								<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-								<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-							</tr>
-							<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-red"> 
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
-												<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-												Rejected
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+						<button class="btn">Clear</button>
+				</div>
+				<!-- search+filter end.// -->
+
+				<!-- summary -->
+				<summary class="border rounded mb-5 p-3 shadow">
+					asdasd
+				</summary>
+				<!-- summary -->
+
+				<div class="mb-5">
+					<button class="btn btn-neutral w-full"> Show on calendar </button>
+				</div>
+
+				<div class="table-responsive">
+					<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Order ID</th>
+									<th>Date</th>
+									<th>Order by</th>
+									<th>Status</th>
+									<th class="text-right">Total sum</th>
+									<th class="text-right">Action</th>
 								</tr>
+							</thead>
+							<tbody>
 								<tr>
 									<td>
 											<div class="d-flex text-primary align-items-center">
@@ -255,10 +178,30 @@
 									<td>  
 										<b role="status" class="badge badge-green"> 
 											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
+											Completed 
 										</b> 
 									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+									<td class="text-right"> <b class="text-sm text-muted">USD</b> 312,231.00</td>
+									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+								</tr>
+								<tr>
+									<td>
+											<div class="d-flex text-primary align-items-center">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+												<a href="#" class="font-medium ml-2">234232</a>
+											</div>
+									</td>
+									<td>
+										<span>July 12, 2024</span>
+									</td>
+									<td>Alex John</td>
+									<td>  
+										<b role="status" class="badge badge-orange">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none"> <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" /> <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>
+											Pending 
+										</b> 
+									</td>
+									<td class="text-right"> <b class="text-sm text-muted">USD</b> 1,912,902.99</td>
 									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
 								</tr>
 								<tr>
@@ -271,163 +214,228 @@
 									<td>
 										<span>July 12, 2024</span>
 									</td>
-									<td>Alex John</td>
+									<td>Michael George</td>
 									<td>  
-										<b role="status" class="badge badge-neutral"> 
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
-												<path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-											Draft
+										<b role="status" class="badge badge-orange"> 
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none"> <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+												<path d="M12 8V12L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+											Pending
 										</b> 
 									</td>
 									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
 									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
 								</tr>
 								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-neutral"> 
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
-												<path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-											Draft
-										</b>
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-green"> 
-											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-green"> 
-											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-green"> 
-											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-green"> 
-											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-green"> 
-											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-								<tr>
-									<td>
-											<div class="d-flex text-primary align-items-center">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
-												<a href="#" class="font-medium ml-2">192001</a>
-											</div>
-									</td>
-									<td>
-										<span>July 12, 2024</span>
-									</td>
-									<td>Alex John</td>
-									<td>  
-										<b role="status" class="badge badge-green"> 
-											<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
-											Completed
-										</b> 
-									</td>
-									<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
-									<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
-								</tr>
-						</tbody>
-				</table>
-			</div>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-red"> 
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
+													<path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+													Rejected
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-neutral"> 
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
+													<path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+												Draft
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-neutral"> 
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none">
+													<path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+												Draft
+											</b>
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+									<tr>
+										<td>
+												<div class="d-flex text-primary align-items-center">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none"><use href="#icon-delivery-table"/></svg>
+													<a href="#" class="font-medium ml-2">192001</a>
+												</div>
+										</td>
+										<td>
+											<span>July 12, 2024</span>
+										</td>
+										<td>Alex John</td>
+										<td>  
+											<b role="status" class="badge badge-green"> 
+												<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  viewBox="0 -960 960 960" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> 
+												Completed
+											</b> 
+										</td>
+										<td class="text-right"> <b class="text-sm text-muted">USD</b> 12,450.00</td>
+										<td class="text-right"> <a href="#" class="btn btn-default btn-sm">View detail</a> </td>
+									</tr>
+							</tbody>
+					</table>
+				</div>
+
+			</article>
 		</div> 
 		<!-- card end.// -->
 	</main>
