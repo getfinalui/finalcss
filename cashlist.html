@@ -94,10 +94,38 @@
 <section class="p-5 bg-lower">
 <div class="container">
 <div class="row">
-	<aside class="col-4">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore excepturi eveniet maxime est illum, voluptatibus sunt debitis. Dolor praesentium facere quisquam, nulla veniam iusto laboriosam dicta quod eos totam officia!
+	<aside class="col-4 max-sm:col-12">
+
+		<div>
+			<a href="#" class="card selected bg-raised hover:border-color-neutral-400 d-flex flex-row align-items-center p-3 mb-4">
+				<div class="w-20 rounded overflow-hidden" style="max-height: 105px;">
+					<img src="book-open.png" width="80" alt="Book">
+				</div>
+				<div class="p-3">
+					<h5 class="mb-2">Main book</h5>
+					<small class="text-secondary">Balance: </small>
+					<p class="font-medium text-red">UZS -452,032.00</p>
+				</div>
+			</a>
+
+			<a href="#" class="card bg-raised hover:border-color-neutral-400 group d-flex flex-row align-items-center p-3  mb-4">
+				<div class="w-20 rounded overflow-hidden"  style="max-height: 105px;">
+					<img src="book-open.png" width="80" alt="Book" class="d-none group-hover:d-block">
+					<img src="book.png" width="80" alt="Book" class="d-block group-hover:d-none">
+				</div>
+				<div class="p-3">
+					<h5 class="mb-2">Main book</h5>
+					<small class="text-secondary">Balance: </small>
+					<p class="font-medium text-red">UZS -452,032.00</p>
+				</div>
+			</a>
+
+			<button class="btn btn-default w-full" onclick="open_dialog('dialog_create_book')"> Create book </button>
+		</div>
+
+		
 	</aside>
-	<main class="col-8">
+	<main class="col-8 max-sm:col-12">
 		<div class="card bg-base border-strong overflow-hidden shadow-sm">
 			<header class="p-5 pt-4 bg-neutral-100">
 				
@@ -109,7 +137,7 @@
 			
 				<hr class="my-5">
 
-				<div class="d-grid grid-template-cols-4 w-full gap-2">
+				<div class="d-grid grid-template-cols-4 max-sm:grid-template-cols-2 w-full gap-2">
 					<button class="btn btn-green">Add income</button>
 					<button class="btn btn-red">Add expense</button>
 					<button class="btn btn-default">Transfer to </button>
@@ -142,9 +170,9 @@
 				<!-- search+filter end.// -->
 
 				<!-- summary -->
-				<summary class="border rounded mb-5 p-3 shadow">
+				<article class="border rounded mb-5 p-3 shadow">
 					asdasd
-				</summary>
+				</article>
 				<!-- summary -->
 
 				<div class="mb-5">
@@ -444,6 +472,78 @@
 </div>
 </section>
 
+
+
+
+<!-- DIALOG BASIC start -->
+<dialog id="dialog_create_book"  class="dialog-md">
+  <div class="dialog-body">
+    <button class="btn-close-dialog" onclick="close_dialog(this)">
+      <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+        <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+      </svg> 
+    </button> 
+    <h4 class="mb-4">Create new book</h4>
+		<form action="">
+		<div class="row">
+			<div class="col-8">
+				<div class="mb-5">
+						<label class="form-label">Name of book</label>
+						<input type="text" class="form-control" required placeholder="Ex. My business">
+				</div>
+				<div class="mb-5">
+						<label class="form-label">Currency <small class="text-secondary"> • Can NOT be changed later</small>	 </label>
+						<select name="" class="form-select">
+							<option value="" selected>USD - Dollar ($)</option>
+							<option value="">EUR - Euro () </option>
+						</select>
+				</div>
+				<div class="mb-5">
+						<label class="form-label">Preferred format</label>
+						<select name="" class="form-select">
+							<option value="" selected>American. Ex: 1,123,900.00</option>
+							<option value="">European: 1 123 900.00 </option>
+							<option value="">Russian: 1.123.900,00 </option>
+						</select>
+				</div>
+			</div>
+			<aside class="col-4 text-center">
+				<img src="book-open.png" class="mt-3" width="140" alt="">
+			</aside>
+		</div> <!-- row end.// -->
+
+    <footer class="mt-4 d-flex gap-1">
+			<button type="submit" class="btn btn-primary"> Create book </button>
+      <button class="btn btn-default" onclick="close_dialog(this)"> Cancel </button>
+    </footer>
+
+		</form>
+
+  </div>
+</dialog>
+<!-- DIALOG BASIC end.// -->
+
+
+<script>
+  // detect scrollbar (if exists)
+  scrollbar_width = Math.abs(window.innerWidth - document.documentElement.clientWidth);
+
+  function open_dialog(dialog_id){
+    // document.body.classList.add('overflow-hidden', 'dialog-open');
+    document.getElementById(dialog_id).showModal();
+    // add padding same as size of scrollbar size
+    document.body.style.paddingRight = scrollbar_width + 'px';
+  }
+
+  function close_dialog(btn_close){
+    // document.body.classList.remove('overflow-hidden', 'dialog-open');
+    let this_dialog = btn_close.closest('dialog')
+    this_dialog.close();    
+    // remove padding (added for scrollbar size)
+    document.body.style.paddingRight = "";
+  }
+
+</script>
 
 </body>
 </html>
