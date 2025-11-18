@@ -4,7 +4,7 @@ $breakpoints: (
   // *** Device only breakpoints *** //
   'max-lg': 'max-width: 1200px', // Tablet and smaller
   'max-md': 'max-width: 920px',  // Large Mobile only
-  'max-sm': 'max-width: 640px',  // Mobile only
+  'mobile': 'max-width: 640px',  // Mobile only
 
   // *** Classic breakpoints *** //
   'sm': 'min-width: 641px',  // not mobile, - small tablet and up
