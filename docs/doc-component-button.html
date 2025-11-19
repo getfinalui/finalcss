@@ -42,33 +42,39 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
-<h6 class="mb-3 text-secondary">Documentation</h6>
+  <h6 class="mb-3 text-secondary">Documentation</h6>
 <h1 class="text-4xl my-20px">Button</h1>
 <hr>
-
 <article class="article-wrap mb-16">
 
-<p> Short information about this component:  {{ REPLACE_THIS }}  </p>
+<p>Buttons are interactive elements that trigger actions when clicked. They come in multiple sizes, color variants, and styles to accommodate different use cases and visual hierarchies in your interface.</p>
 
 <ul class="list-bullet">
-	<li> When to use it:  {{ REPLACE_THIS }} </li>
-  <li> Don't use for:  {{ REPLACE_THIS }}  </li>
-  <li> Dark mode: Automatic </li>
-	<li> SCSS file: <code>/scss/components/<b>_button.scss</b></code> </li>
+	<li>When to use it: For primary actions, form submissions, navigation triggers, confirmations, and any clickable action that changes application state or navigates users.</li>
+  <li>Don't use for: Simple navigation links between pages (use anchor tags), text that doesn't trigger actions, or decorative elements. Avoid overusing primary colored buttons - reserve them for the most important actions.</li>
+  <li>Dark mode: Automatic</li>
+	<li>SCSS file: <code>/scss/components/<b>_button.scss</b></code></li>
 </ul>
 
 <hr>
 
-<h4> Examples </h4>
+
+<h4>Basic example</h4>
 <figure class="rounded bg-lower border">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <button class="btn">Default Button</button>
+    <button class="btn btn-primary">Primary Button</button>
+    <button class="btn btn-default">Default Style</button>
+    <button class="btn" disabled>Disabled Button</button>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn"&gt;Default Button&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;Default Style&lt;/button&gt;
+&lt;button class="btn" disabled&gt;Disabled Button&lt;/button&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
@@ -76,27 +82,265 @@
 
 <hr>
 
-<h4> How to customize?</h4>
-<p>
-{{
-	REWRITE_BELOW_TEXT_BASED_ON_SCSS_STYLING
-  WRITE ABOUT CUSTOMIZATION
-	There are 2 ways of customization:
-	A) Change scss/components/_filename.scss
-	Write here about css variables can be overriten with inline style tag:
-	--alert-bg-color: transparent;
-  --alert-text-color: inherit;
 
-	Provide example like this with full tag: 
-	style="--alert-bg-color:#FF6680" class="alert alert-danger"
-	B) Open  scss/components folder and make changes directly in your_component.scss file and compile
-   How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
-  }}
-</p>
+<h4>Button sizes</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-sm btn-primary">Small (32px)</button>
+    <button class="btn btn-primary">Medium (38px)</button>
+    <button class="btn btn-lg btn-primary">Large (44px)</button>
+    <button class="btn btn-xl btn-primary">Extra Large (56px)</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-sm btn-primary"&gt;Small (32px)&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Medium (38px)&lt;/button&gt;
+&lt;button class="btn btn-lg btn-primary"&gt;Large (44px)&lt;/button&gt;
+&lt;button class="btn btn-xl btn-primary"&gt;Extra Large (56px)&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
 
+<hr>
+
+
+<h4>Color variants</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-blue">Blue</button>
+    <button class="btn btn-green">Green</button>
+    <button class="btn btn-red">Red</button>
+    <button class="btn btn-orange">Orange</button>
+    <button class="btn btn-yellow">Yellow</button>
+    <button class="btn btn-purple">Purple</button>
+    <button class="btn btn-teal">Teal</button>
+    <button class="btn btn-neutral">Neutral</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-blue"&gt;Blue&lt;/button&gt;
+&lt;button class="btn btn-green"&gt;Green&lt;/button&gt;
+&lt;button class="btn btn-red"&gt;Red&lt;/button&gt;
+&lt;button class="btn btn-orange"&gt;Orange&lt;/button&gt;
+&lt;button class="btn btn-yellow"&gt;Yellow&lt;/button&gt;
+&lt;button class="btn btn-purple"&gt;Purple&lt;/button&gt;
+&lt;button class="btn btn-teal"&gt;Teal&lt;/button&gt;
+&lt;button class="btn btn-neutral"&gt;Neutral&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+
+<h4>Subtle color variants</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-primary-subtle">Primary Subtle</button>
+    <button class="btn btn-blue-subtle">Blue Subtle</button>
+    <button class="btn btn-green-subtle">Green Subtle</button>
+    <button class="btn btn-red-subtle">Red Subtle</button>
+    <button class="btn btn-orange-subtle">Orange Subtle</button>
+    <button class="btn btn-neutral-subtle">Neutral Subtle</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-primary-subtle"&gt;Primary Subtle&lt;/button&gt;
+&lt;button class="btn btn-blue-subtle"&gt;Blue Subtle&lt;/button&gt;
+&lt;button class="btn btn-green-subtle"&gt;Green Subtle&lt;/button&gt;
+&lt;button class="btn btn-red-subtle"&gt;Red Subtle&lt;/button&gt;
+&lt;button class="btn btn-orange-subtle"&gt;Orange Subtle&lt;/button&gt;
+&lt;button class="btn btn-neutral-subtle"&gt;Neutral Subtle&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+
+<h4>Button styles</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-outline">Outline Button</button>
+    <button class="btn btn-invert">Inverted Button</button>
+    <button class="btn btn-default">Default Button</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-outline"&gt;Outline Button&lt;/button&gt;
+&lt;button class="btn btn-invert"&gt;Inverted Button&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;Default Button&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+
+<h4>Icon buttons</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-icon btn-primary">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5v10M5 10h10" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="btn btn-icon btn-sm btn-default">
+      <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5v10M5 10h10" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="btn btn-icon btn-lg btn-green">
+      <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5v10M5 10h10" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="btn btn-icon btn-xl btn-red">
+      <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5v10M5 10h10" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-icon btn-primary"&gt;
+  &lt;svg width="20" height="20"&gt;...&lt;/svg&gt;
+&lt;/button&gt;
+&lt;button class="btn btn-icon btn-sm btn-default"&gt;
+  &lt;svg width="18" height="18"&gt;...&lt;/svg&gt;
+&lt;/button&gt;
+&lt;button class="btn btn-icon btn-lg btn-green"&gt;
+  &lt;svg width="24" height="24"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+
+<h4>Buttons with icons and text</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-primary">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5v10M5 10h10" stroke="currentColor" stroke-width="2"/></svg>
+      Add Item
+    </button>
+    <button class="btn btn-green">
+      Save Changes
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M5 10l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="btn btn-outline">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="2"/></svg>
+      Menu
+    </button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-primary"&gt;
+  &lt;svg width="20" height="20"&gt;...&lt;/svg&gt;
+  Add Item
+&lt;/button&gt;
+&lt;button class="btn btn-green"&gt;
+  Save Changes
+  &lt;svg width="20" height="20"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+<h4>How to customize?</h4>
+<p>Buttons are highly customizable through CSS variables, allowing you to adjust colors, sizes, borders, and spacing without modifying the core SCSS files. This approach keeps your customizations maintainable and prevents conflicts with future updates.</p>
+
+<h6>Customize using inline CSS and variables</h6>
+<p>You can override button variables directly in the <code>style</code> attribute to create unique button variations:</p>
+
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn" style="--btn-bg: #8b5cf6; --btn-bg-hover: #7c3aed; --btn-text-color: white;">
+      Custom Purple
+    </button>
+    <button class="btn btn-primary" style="--btn-size-md: 48px; --btn-padding-x: 24px;">
+      Larger Button
+    </button>
+    <button class="btn" style="--btn-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --btn-text-color: white; border: none;">
+      Gradient Button
+    </button>
+    <button class="btn btn-default" style="--btn-border-color: #3b82f6; --btn-border-hover-color: #2563eb; border-width: 2px;">
+      Thick Border
+    </button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn" style="--btn-bg: #8b5cf6; --btn-bg-hover: #7c3aed; --btn-text-color: white;"&gt;
+  Custom Purple
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary" style="--btn-size-md: 48px; --btn-padding-x: 24px;"&gt;
+  Larger Button
+&lt;/button&gt;
+
+&lt;button class="btn" style="--btn-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --btn-text-color: white;"&gt;
+  Gradient Button
+&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h6>Advanced customization using SCSS file</h6>
+
+<p><strong>File to customize:</strong> <code>scss/components/_button.scss</code></p>
+
+<p>The button component uses a comprehensive set of CSS custom properties (variables) that control every aspect of its appearance. These variables are defined at the top of the <code>.btn</code> class and can be overridden globally or per variant.</p>
+
+<p><strong>Size customization:</strong> The button defines four size presets (sm, md, lg, xl) through variables like <code>--btn-size-sm: 32px</code> and <code>--btn-size-xl: 56px</code>. You can modify these values to adjust button heights across your entire application.</p>
+
+<p><strong>Creating new color variants:</strong> The SCSS file uses a loop (<code>@each $color, $shades in $colors_list</code>) to automatically generate button classes for each color in your color palette. To add a new color variant, simply add it to your <code>$colors_list</code> map in your variables file, and buttons like <code>.btn-yourcolor</code> will be generated automatically.</p>
+
+<p><strong>Modifying button states:</strong> Hover, active, and disabled states are controlled through the <code>--btn-bg-hover</code> variable and direct CSS rules. The active state includes a subtle <code>translateY(1px)</code> transform and inset box-shadow for a pressed effect.</p>
+
+<p><strong>Custom button styles:</strong> Beyond the auto-generated color variants, you can create semantic button styles like <code>.btn-default</code>, <code>.btn-outline</code>, or <code>.btn-invert</code> by defining new classes that override the CSS variables.</p>
+
+<h6>Key customization options</h6>
+<ul class="list-bullet">
+  <li><code>--btn-size-{sm|md|lg|xl}</code> - Control button heights for each size variant</li>
+  <li><code>--btn-padding-x</code> and <code>--btn-padding-y</code> - Adjust horizontal and vertical padding</li>
+  <li><code>--btn-font-size-{sm|md|lg|xl}</code> - Set font sizes for different button sizes</li>
+  <li><code>--btn-bg</code> and <code>--btn-bg-hover</code> - Control background colors for normal and hover states</li>
+  <li><code>--btn-text-color</code> - Set the button text color</li>
+  <li><code>--btn-border-color</code> and <code>--btn-border-hover-color</code> - Define border colors for different states</li>
+  <li><code>--btn-font-weight</code> - Adjust button text weight (default: 400)</li>
+  <li><code>gap</code> property - Controls spacing between icon and text (default: 8px)</li>
+  <li>Icon sizes - Controlled through nested <code>svg, .icon, img</code> selectors with size constraints</li>
+  <li>Disabled state opacity - Set through <code>opacity: 0.4</code> on <code>:disabled</code> state</li>
+</ul>
+
+<h6>How to compile _button.scss file?</h6>
+<ul class="list-bullet">
+  <li><strong>Option A:</strong> Use Node.js and npm tools if you're comfortable with the terminal and have Node.js installed. Install sass globally with <code>npm install -g sass</code>, then compile with <code>sass scss/components/_button.scss css/button.css</code></li>
+  <li><strong>Option B:</strong> Use visual applications like Prepros.io or CodeKit if you prefer a graphical user interface and want to avoid terminal commands. Simply drag your project folder into the app and it will automatically watch and compile your SCSS files</li>
+</ul>
 
 </article>
+
+
 </main>
 </div> <!-- row end -->
 </div> <!-- container end -->

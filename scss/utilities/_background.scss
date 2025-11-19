@@ -6,8 +6,8 @@
 
 $colors_bg_main:(
   "base": var(--bg-color-base),
-  "secondary": var(--bg-color-lower),
-  "lower": var(--bg-color-secondary),
+  "secondary": var(--bg-color-secondary),
+  "lower": var(--bg-color-lower),
   "transparent": transparent,
   "inherit": inherit,
   "initial": initial,

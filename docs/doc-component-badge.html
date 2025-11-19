@@ -41,18 +41,17 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
-<h6 class="mb-3 text-secondary">Documentation</h6>
+  <h6 class="mb-3 text-secondary">Documentation</h6>
 <h1 class="text-4xl my-20px">Badge</h1>
 <hr>
 
 <article class="article-wrap mb-16">
 
-<p> Short information about this component:  {{ REPLACE_THIS }}  </p>
+<p> Short information about this component: The badge component is a small, inline label used to highlight information, display status, show counts, or categorize content. It features multiple color variants with automatic theming through CSS custom properties and supports icons alongside text. </p>
 
 <ul class="list-bullet">
-	<li> When to use it:  {{ REPLACE_THIS }} </li>
-  <li> Don't use for:  {{ REPLACE_THIS }}  </li>
+	<li> When to use it: Use badges to display status indicators (active, pending, completed), notification counts, tags or categories, labels for new features, version numbers, or any small piece of metadata that needs visual emphasis. Perfect for highlighting important information in cards, lists, tables, or next to headings. </li>
+  <li> Don't use for: Don't use badges for interactive buttons or primary calls-to-action (use button components instead). Avoid using badges for long text content or as replacements for alerts and notifications that require more detail. Not suitable for form inputs or navigation elements. </li>
   <li> Dark mode: Automatic </li>
 	<li> SCSS file: <code>/scss/components/<b>_badge.scss</b></code> </li>
 </ul>
@@ -64,12 +63,77 @@
 <figure class="rounded bg-lower border">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+      <span class="badge">Default</span>
+      <span class="badge badge-neutral">Neutral</span>
+      <span class="badge badge-primary">Primary</span>
+      <span class="badge badge-blue">Blue</span>
+      <span class="badge badge-green">Success</span>
+      <span class="badge badge-red">Error</span>
+      <span class="badge badge-orange">Warning</span>
+      <span class="badge badge-yellow">Yellow</span>
+      <span class="badge badge-purple">Purple</span>
+      <span class="badge badge-teal">Teal</span>
+    </div>
+    
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+      <span class="badge badge-green">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Verified
+      </span>
+      <span class="badge badge-blue">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        Info
+      </span>
+      <span class="badge badge-orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        Warning
+      </span>
+      <span class="badge badge-red">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+        Error
+      </span>
+    </div>
+    
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <span class="badge badge-primary">New</span>
+      <span class="badge badge-green">Active</span>
+      <span class="badge badge-orange">Pending</span>
+      <span class="badge badge-neutral">Draft</span>
+      <span class="badge badge-purple">v2.0</span>
+      <span class="badge badge-blue">Beta</span>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- Basic badge colors --&gt;
+&lt;span class=&quot;badge&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;badge badge-neutral&quot;&gt;Neutral&lt;/span&gt;
+&lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;badge badge-blue&quot;&gt;Blue&lt;/span&gt;
+&lt;span class=&quot;badge badge-green&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;badge badge-red&quot;&gt;Error&lt;/span&gt;
+&lt;span class=&quot;badge badge-orange&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;badge badge-yellow&quot;&gt;Yellow&lt;/span&gt;
+&lt;span class=&quot;badge badge-purple&quot;&gt;Purple&lt;/span&gt;
+&lt;span class=&quot;badge badge-teal&quot;&gt;Teal&lt;/span&gt;
+
+&lt;!-- Badges with icons --&gt;
+&lt;span class=&quot;badge badge-green&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;...&lt;/svg&gt;
+  Verified
+&lt;/span&gt;
+&lt;span class=&quot;badge badge-blue&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;...&lt;/svg&gt;
+  Info
+&lt;/span&gt;
+
+&lt;!-- Status badges --&gt;
+&lt;span class=&quot;badge badge-primary&quot;&gt;New&lt;/span&gt;
+&lt;span class=&quot;badge badge-green&quot;&gt;Active&lt;/span&gt;
+&lt;span class=&quot;badge badge-orange&quot;&gt;Pending&lt;/span&gt;
+&lt;span class=&quot;badge badge-neutral&quot;&gt;Draft&lt;/span&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
@@ -79,24 +143,44 @@
 
 <h4> How to customize?</h4>
 <p>
-{{
-	REWRITE_BELOW_TEXT_BASED_ON_SCSS_STYLING
-  WRITE ABOUT CUSTOMIZATION
-	There are 2 ways of customization:
-	A) Change scss/components/_filename.scss
-	Write here about css variables can be overriten with inline style tag:
-	--alert-bg-color: transparent;
-  --alert-text-color: inherit;
-
-	Provide example like this with full tag: 
-	style="--alert-bg-color:#FF6680" class="alert alert-danger"
-	B) Open  scss/components folder and make changes directly in your_component.scss file and compile
-   How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
-  }}
+  The badge component uses CSS custom properties for flexible theming and color customization. To modify the component, edit the <code>scss/components/_badge.scss</code> file.
 </p>
 
+<p>
+  <strong>Key customization options:</strong>
+</p>
 
+<ul class="list-bullet">
+  <li><strong>Colors:</strong> The component uses a dynamic color system with CSS variables. Each color variant (neutral, primary, blue, red, green, orange, yellow, purple, teal) is generated automatically using the <code>@each</code> loop in SCSS. Customize colors by modifying the color variables in your main variables file or directly in <code>_badge.scss</code>.</li>
+  <li><strong>Background, text, and border:</strong> Each badge variant uses three CSS custom properties: <code>--badge-bg</code> (background using color-100 shade), <code>--badge-text-color</code> (text using color-600 shade), and <code>--badge-border</code> (border using color-300 shade). Adjust these values to create custom color schemes.</li>
+  <li><strong>Size and spacing:</strong> Modify <code>font-size</code> (default 0.9rem), <code>padding</code> (default 4px 8px), <code>min-height</code> (default 28px), and <code>gap</code> (default 4px for icon spacing) to change badge dimensions.</li>
+  <li><strong>Border radius:</strong> Change <code>border-radius</code> (default 16px) to adjust the pill shape. Use smaller values for more rectangular badges or larger values for more rounded appearance.</li>
+  <li><strong>Icon size:</strong> Icons, images, and elements with <code>.icon</code> class are automatically sized to 18x18 pixels. Modify the <code>svg, img, .icon</code> selector to change icon dimensions.</li>
+  <li><strong>Adding new color variants:</strong> To add new badge colors, simply add the color to the <code>$colors_list</code> map in your SCSS variables file. The <code>@each</code> loop will automatically generate the corresponding badge class.</li>
+  <li><strong>Empty state:</strong> Badges automatically hide when empty using the <code>.badge:empty { display: none; }</code> rule, preventing empty badges from taking up space in your layout.</li>
+</ul>
+
+<p>
+  <strong>Advanced customization:</strong>
+</p>
+
+<ul class="list-bullet">
+  <li>Create custom badge styles by overriding the CSS custom properties inline: <code>&lt;span class="badge" style="--badge-bg: #f0f0f0; --badge-text-color: #333;"&gt;Custom&lt;/span&gt;</code></li>
+  <li>Add new badge variants by creating additional classes following the pattern <code>.badge-[variant-name]</code> with custom property values</li>
+  <li>Adjust font-weight (default 500) to make badge text lighter or bolder</li>
+</ul>
+
+<p>
+  <strong>How to compile?</strong>
+</p>
+
+<ul class="list-bullet">
+  <li><strong>Option A:</strong> Node and npm tools (if you know terminal and Node.js)</li>
+  <li><strong>Option B:</strong> Prepros.io software or CodeKit (if you like visual apps UI and hate terminal)</li>
+</ul>
 </article>
+
+
 </main>
 </div> <!-- row end -->
 </div> <!-- container end -->
