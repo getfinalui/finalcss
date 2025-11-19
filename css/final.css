@@ -710,8 +710,8 @@ progress {
   column-gap: 0 !important;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc( -0.5 * var(--flex-gap-cols));
-  margin-right: calc( -0.5 * var(--flex-gap-cols));
+  margin-left: calc(-0.5 * var(--flex-gap-cols));
+  margin-right: calc(-0.5 * var(--flex-gap-cols));
   margin-top: calc(-1 * var(--flex-gap-rows));
 }
 
@@ -719,8 +719,8 @@ progress {
   flex: 0 0 auto;
   max-width: 100%;
   width: 100%;
-  padding-right: calc(var(--flex-gap-cols)* 0.5);
-  padding-left: calc(var(--flex-gap-cols)* 0.5);
+  padding-right: calc(var(--flex-gap-cols) * 0.5);
+  padding-left: calc(var(--flex-gap-cols) * 0.5);
   margin-top: var(--flex-gap-rows);
 }
 
@@ -2777,7 +2777,7 @@ progress {
   width: var(--size, 40px);
   height: var(--size, 40px);
   background-color: var(--primary-500, teal);
-  color: #ffffffaf;
+  color: rgba(255, 255, 255, 0.6862745098);
   object-fit: cover;
   display: flex;
   flex: none;
@@ -2934,7 +2934,7 @@ progress {
 }
 .btn:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(64, 64, 64, 0.2) inset;
+  box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
 }
 
 .btn-xl {
@@ -3007,63 +3007,63 @@ progress {
   --btn-bg: var(--neutral-500-static);
   --btn-bg-hover: var(--neutral-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-primary {
   --btn-bg: var(--primary-500-static);
   --btn-bg-hover: var(--primary-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-blue {
   --btn-bg: var(--blue-500-static);
   --btn-bg-hover: var(--blue-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-red {
   --btn-bg: var(--red-500-static);
   --btn-bg-hover: var(--red-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-green {
   --btn-bg: var(--green-500-static);
   --btn-bg-hover: var(--green-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-orange {
   --btn-bg: var(--orange-500-static);
   --btn-bg-hover: var(--orange-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-yellow {
   --btn-bg: var(--yellow-500-static);
   --btn-bg-hover: var(--yellow-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-purple {
   --btn-bg: var(--purple-500-static);
   --btn-bg-hover: var(--purple-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-teal {
   --btn-bg: var(--teal-500-static);
   --btn-bg-hover: var(--teal-600-static);
   --btn-text-color: #fff;
-  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -4px 4px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0deg, 0%, 50%, 0.1) inset;
 }
 
 .btn-neutral-subtle {
@@ -3126,7 +3126,7 @@ progress {
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--neutral-400);
-  box-shadow: 0 -2px 0 0 rgba(64, 64, 64, 0.1) inset;
+  box-shadow: 0 -2px 0 0 hsla(0deg, 0%, 25%, 0.1) inset;
 }
 
 .btn-outline {
@@ -3318,7 +3318,7 @@ dialog::backdrop {
 }
 .btn-close-dialog:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(64, 64, 64, 0.2) inset;
+  box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
 }
 
 .overlay, .backdrop {
@@ -4000,7 +4000,7 @@ textarea.form-control {
 }
 .tag[role=button]:active, .chip[role=button]:active, .pill[role=button]:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(64, 64, 64, 0.2) inset;
+  box-shadow: 0 3px 6px hsla(0deg, 0%, 25%, 0.2) inset;
 }
 .tag.active, .chip.active, .pill.active {
   background-color: var(--primary-500);
@@ -11578,27 +11578,27 @@ h1 {
 }
 
 .bg-secondary {
-  background-color: var(--bg-color-lower);
+  background-color: var(--bg-color-secondary);
 }
 
 .hover\:bg-secondary:hover {
-  background-color: var(--bg-color-lower);
+  background-color: var(--bg-color-secondary);
 }
 
 .group:hover .group-hover\:bg-secondary {
-  background-color: var(--bg-color-lower);
+  background-color: var(--bg-color-secondary);
 }
 
 .bg-lower {
-  background-color: var(--bg-color-secondary);
+  background-color: var(--bg-color-lower);
 }
 
 .hover\:bg-lower:hover {
-  background-color: var(--bg-color-secondary);
+  background-color: var(--bg-color-lower);
 }
 
 .group:hover .group-hover\:bg-lower {
-  background-color: var(--bg-color-secondary);
+  background-color: var(--bg-color-lower);
 }
 
 .bg-transparent {
@@ -12982,13 +12982,13 @@ h1 {
 }
 
 .bg-aurora {
-  background-color: red;
-  background-image: radial-gradient(at 40% 20%, #ffb87a 0px, transparent 50%), radial-gradient(at 80% 0%, #1fddff 0px, transparent 50%), radial-gradient(at 0% 50%, #ffdbde 0px, transparent 50%), radial-gradient(at 80% 50%, #ff85ad 0px, transparent 50%), radial-gradient(at 0% 100%, #ffb58a 0px, transparent 50%), radial-gradient(at 80% 100%, #6b66ff 0px, transparent 50%), radial-gradient(at 0% 0%, #ff85a7 0px, transparent 50%);
+  background-color: hsl(0deg, 100%, 50%);
+  background-image: radial-gradient(at 40% 20%, hsl(28deg, 100%, 74%) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(189deg, 100%, 56%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(355deg, 100%, 93%) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(340deg, 100%, 76%) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(22deg, 100%, 77%) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(242deg, 100%, 70%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(343deg, 100%, 76%) 0px, transparent 50%);
 }
 
 .bg-aurora-2 {
   background-color: #ffd899;
-  background-image: radial-gradient(at 98% 75%, #62c2fd 0px, transparent 50%), radial-gradient(at 47% 73%, #95eeee 0px, transparent 50%), radial-gradient(at 45% 16%, #84f43e 0px, transparent 50%), radial-gradient(at 31% 64%, #c1e95d 0px, transparent 50%), radial-gradient(at 63% 93%, #854cf0 0px, transparent 50%), radial-gradient(at 67% 78%, #da5a58 0px, transparent 50%), radial-gradient(at 81% 92%, #e6f2a1 0px, transparent 50%);
+  background-image: radial-gradient(at 98% 75%, hsl(203deg, 98%, 69%) 0px, transparent 50%), radial-gradient(at 47% 73%, hsl(180deg, 73%, 76%) 0px, transparent 50%), radial-gradient(at 45% 16%, hsl(97deg, 89%, 60%) 0px, transparent 50%), radial-gradient(at 31% 64%, hsl(77deg, 76%, 64%) 0px, transparent 50%), radial-gradient(at 63% 93%, hsl(261deg, 85%, 62%) 0px, transparent 50%), radial-gradient(at 67% 78%, hsl(1deg, 64%, 60%) 0px, transparent 50%), radial-gradient(at 81% 92%, hsl(69deg, 76%, 79%) 0px, transparent 50%);
 }
 
 .static {
