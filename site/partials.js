@@ -21,9 +21,8 @@ class HeaderComponent extends HTMLElement {
       <hr>
       <nav class="nav nav-col" style="margin:0 -8px;">
         <a href="/index.html" class="nav-link"> Home </a>
-        <a href="/docs/doc-start.html" class="nav-link"> Documentation </a>
+        <a href="/docs/index.html" class="nav-link"> Documentation </a>
         <a href="/templates.html" class="nav-link"> Templates </a>
-        <a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr;  </a>
         <a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr;  </a>  
         <a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
       </nav>
@@ -44,7 +43,6 @@ class HeaderComponent extends HTMLElement {
 					<a href="/index.html" class="nav-link">Home</a>
 					<a href="/docs/index.html" class="nav-link"> Documentation </a>
           <a href="/templates.html" class="nav-link"> Templates </a>
-					<a href="https://finalui.medium.com" target="_blank"  class="nav-link">Blog &nearr; </a>
 					<a href="https://finalui.com" target="_blank" class="nav-link">Figma UI Kit &nearr; </a>  
 					<a href="https://github.com/getfinalui/finalcss"  target="_blank" class="nav-link">Github &nearr; </a>
 					<a href="https://github.com/getfinalui/finalcss/archive/refs/heads/main.zip" class="btn btn-default">Download</a>
