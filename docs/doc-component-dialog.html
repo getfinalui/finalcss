@@ -42,34 +42,65 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
-<h6 class="mb-3 text-secondary">Documentation</h6>
+  <h6 class="mb-3 text-secondary">Documentation</h6>
 <h1 class="text-4xl my-20px">Dialog</h1>
 <hr>
-
 <article class="article-wrap mb-16">
 
-<p> Short information about this component:  {{ REPLACE_THIS }}   </p>
+<p>Dialog components are modal overlays that display content on top of the main page. They use the native HTML <code>&lt;dialog&gt;</code> element with custom styling for a consistent, accessible user experience across your application.</p>
 
 <ul class="list-bullet">
-	<li> When to use it:  {{ REPLACE_THIS }}  </li>
-  <li> Don't use for:  {{ REPLACE_THIS }}   </li>
-  <li> Dark mode: Automatic </li>
-	<li> SCSS file: <code>/scss/components/<b>_dialog.scss</b></code> </li>
+	<li>When to use it: For important messages, confirmations, forms, or content that requires user attention and interaction before continuing. Ideal for actions that need focus like confirming deletions, displaying alerts, collecting form data, or showing detailed information.</li>
+  <li>Don't use for: Passive notifications (use toasts instead), content that should be accessible while browsing (use sidebars), or simple tooltips. Avoid overusing dialogs as they interrupt the user experience.</li>
+  <li>Dark mode: Automatic</li>
+	<li>SCSS file: <code>/scss/components/<b>_dialog.scss</b></code></li>
 </ul>
 
 <hr>
 
 
-<h4> Examples </h4>
+<h4>Basic example</h4>
 <figure class="rounded bg-lower border">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <button class="btn btn-default" onclick="document.getElementById('dialog_basic').showModal()">Open basic dialog</button>
+
+    <dialog id="dialog_basic">
+      <div class="dialog-body">
+        <button class="btn-close-dialog" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button> 
+        <h5 class="mb-2">Basic dialog</h5>
+        <p>This is a simple dialog with just content and a close button.</p>
+        
+        <div class="mt-3 d-flex gap-1">
+          <button class="btn btn-default" onclick="this.closest('dialog').close()">Got it</button>
+        </div>
+      </div>
+    </dialog>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-default" onclick="document.getElementById('dialog_basic').showModal()"&gt;Open basic dialog&lt;/button&gt;
+
+&lt;dialog id="dialog_basic"&gt;
+  &lt;div class="dialog-body"&gt;
+    &lt;button class="btn-close-dialog" onclick="this.closest('dialog').close()"&gt;
+      &lt;svg viewBox="0 0 24 24" width="24" height="24"&gt;
+        &lt;path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"&gt;&lt;/path&gt;
+      &lt;/svg&gt; 
+    &lt;/button&gt; 
+    &lt;h5 class="mb-2"&gt;Basic dialog&lt;/h5&gt;
+    &lt;p&gt;This is a simple dialog with just content and a close button.&lt;/p&gt;
+    
+    &lt;div class="mt-3 d-flex gap-1"&gt;
+      &lt;button class="btn btn-default" onclick="this.closest('dialog').close()"&gt;Got it&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
@@ -77,20 +108,278 @@
 
 <hr>
 
-<h4> How to customize?</h4>
-<p>
-{{
-	ANALYZE _dialog.scss and final.css file and write customization tips.
-	File to customize:
-	scss/components/_dialog.scss 
-  How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
-  }}
-</p>
+
+<h4>Dialog with header and footer</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-default" onclick="document.getElementById('dialog_structured').showModal()">Open structured dialog</button>
+
+    <dialog id="dialog_structured">
+      <header class="dialog-header">
+        <h5>Dialog Title</h5>
+        <button class="btn btn-icon" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button> 
+      </header>
+      <div class="dialog-body">
+        <p>This dialog has a structured layout with header, body, and footer sections for better organization.</p>
+      </div>
+      <div class="dialog-bottom">
+        <button class="btn btn-default" onclick="this.closest('dialog').close()">Cancel</button>
+        <button class="btn btn-primary">Confirm</button>
+      </div>
+    </dialog>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;dialog id="dialog_structured"&gt;
+  &lt;header class="dialog-header"&gt;
+    &lt;h5&gt;Dialog Title&lt;/h5&gt;
+    &lt;button class="btn btn-icon" onclick="this.closest('dialog').close()"&gt;
+      &lt;svg viewBox="0 0 24 24" width="24" height="24"&gt;...&lt;/svg&gt; 
+    &lt;/button&gt; 
+  &lt;/header&gt;
+  &lt;div class="dialog-body"&gt;
+    &lt;p&gt;Dialog content goes here...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="dialog-bottom"&gt;
+    &lt;button class="btn btn-default"&gt;Cancel&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
 
+<hr>
 
+
+<h4>Dialog sizes</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-default" onclick="document.getElementById('dialog_sm').showModal()">Small dialog</button>
+    <button class="btn btn-default" onclick="document.getElementById('dialog_md').showModal()">Medium dialog</button>
+    <button class="btn btn-default" onclick="document.getElementById('dialog_lg').showModal()">Large dialog</button>
+    <button class="btn btn-default" onclick="document.getElementById('dialog_xl').showModal()">Extra large dialog</button>
+
+    <dialog id="dialog_sm" class="dialog-sm">
+      <div class="dialog-body">
+        <button class="btn-close-dialog" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button>
+        <h5 class="mb-2">Small Dialog</h5>
+        <p>Max-width: 360px</p>
+      </div>
+    </dialog>
+
+    <dialog id="dialog_md" class="dialog-md">
+      <div class="dialog-body">
+        <button class="btn-close-dialog" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button>
+        <h5 class="mb-2">Medium Dialog</h5>
+        <p>Max-width: 620px (default)</p>
+      </div>
+    </dialog>
+
+    <dialog id="dialog_lg" class="dialog-lg">
+      <div class="dialog-body">
+        <button class="btn-close-dialog" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button>
+        <h5 class="mb-2">Large Dialog</h5>
+        <p>Max-width: 760px</p>
+      </div>
+    </dialog>
+
+    <dialog id="dialog_xl" class="dialog-xl">
+      <div class="dialog-body">
+        <button class="btn-close-dialog" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button>
+        <h5 class="mb-2">Extra Large Dialog</h5>
+        <p>Max-width: 1024px</p>
+      </div>
+    </dialog>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;dialog class="dialog-sm"&gt;...&lt;/dialog&gt;  &lt;!-- 360px --&gt;
+&lt;dialog class="dialog-md"&gt;...&lt;/dialog&gt;  &lt;!-- 620px (default) --&gt;
+&lt;dialog class="dialog-lg"&gt;...&lt;/dialog&gt;  &lt;!-- 760px --&gt;
+&lt;dialog class="dialog-xl"&gt;...&lt;/dialog&gt;  &lt;!-- 1024px --&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+
+<h4>Aside dialogs (slide-in panels)</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-default" onclick="document.getElementById('dialog_left').showModal()">Slide from left</button>
+    <button class="btn btn-default" onclick="document.getElementById('dialog_right').showModal()">Slide from right</button>
+
+    <dialog id="dialog_left" class="dialog-aside-left">
+      <div class="d-flex flex-col h-100vh">
+        <header class="dialog-header">
+          <h5>Left Panel</h5>
+          <button class="btn btn-icon" onclick="this.closest('dialog').close()">
+            <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+              <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+            </svg> 
+          </button> 
+        </header>
+        <div class="dialog-body">
+          <p>This dialog slides in from the left side of the screen.</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="dialog_right" class="dialog-aside-right">
+      <div class="d-flex flex-col h-100vh">
+        <header class="dialog-header">
+          <h5>Right Panel</h5>
+          <button class="btn btn-icon" onclick="this.closest('dialog').close()">
+            <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+              <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+            </svg> 
+          </button> 
+        </header>
+        <div class="dialog-body">
+          <p>This dialog slides in from the right side of the screen.</p>
+        </div>
+      </div>
+    </dialog>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;dialog class="dialog-aside-left"&gt;
+  &lt;div class="d-flex flex-col h-100vh"&gt;
+    &lt;header class="dialog-header"&gt;...&lt;/header&gt;
+    &lt;div class="dialog-body"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;
+
+&lt;dialog class="dialog-aside-right"&gt;
+  &lt;div class="d-flex flex-col h-100vh"&gt;
+    &lt;header class="dialog-header"&gt;...&lt;/header&gt;
+    &lt;div class="dialog-body"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<hr>
+
+<h4>How to customize?</h4>
+<p>The dialog component can be customized using CSS variables for colors, sizing, and spacing. You can adjust the backdrop overlay, dialog dimensions, border radius, shadows, and spacing to match your design system. Customization allows you to create unique dialog styles while maintaining consistent behavior and accessibility.</p>
+
+<h5>Customize using inline css and variables</h5>
+<p>Use the <code>style</code> attribute to override default dialog styling with CSS variables or direct properties:</p>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <button class="btn btn-default" onclick="document.getElementById('dialog_custom').showModal()">Open custom dialog</button>
+
+    <dialog id="dialog_custom" style="max-width: 500px; border-radius: 16px; border: 2px solid var(--primary-500);">
+      <div class="dialog-body" style="padding: 32px; background: linear-gradient(135deg, var(--primary-100), var(--blue-100));">
+        <button class="btn-close-dialog" onclick="this.closest('dialog').close()">
+          <svg viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
+            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="2"></path>
+          </svg> 
+        </button>
+        <h5 class="mb-2">Custom Styled Dialog</h5>
+        <p>This dialog has custom width, border radius, border color, and gradient background.</p>
+        <button class="btn btn-primary mt-3" onclick="this.closest('dialog').close()">Close</button>
+      </div>
+    </dialog>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;dialog style="max-width: 500px; border-radius: 16px; border: 2px solid var(--primary-500);"&gt;
+  &lt;div class="dialog-body" style="padding: 32px; background: linear-gradient(135deg, var(--primary-100), var(--blue-100));"&gt;
+    &lt;h5&gt;Custom Styled Dialog&lt;/h5&gt;
+    &lt;p&gt;This dialog has custom styling.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5>Advanced customization using SCSS file</h5>
+
+<p><strong>File to customize:</strong> <code>scss/components/_dialog.scss</code></p>
+
+<p>The dialog component uses the native HTML <code>&lt;dialog&gt;</code> element with custom styling. By default, dialogs are hidden with <code>display: none</code> until opened. The dialog appears centered on screen with a semi-transparent backdrop overlay.</p>
+
+<p>The base dialog styles include positioning at the top center of the viewport with an 8% top margin, a maximum width of 620px (90% on mobile), and a high z-index (99999) to ensure it appears above other content. The dialog automatically adjusts its height based on content and includes responsive behavior.</p>
+
+<p>The <code>.dialog-body</code> section contains the main content and includes automatic scrolling when content exceeds 70vh height. The scrollbar is styled to be thin and uses custom colors. Images and SVGs within dialogs are automatically constrained to 100% width.</p>
+
+<p>Aside dialogs (<code>.dialog-aside-left</code> and <code>.dialog-aside-right</code>) slide in from the sides with smooth transitions. They start off-screen with <code>translateX(-100%)</code> or <code>translateX(100%)</code> and animate to their final position when opened. These full-height panels are ideal for navigation menus, filters, or detailed content views.</p>
+
+<p>The backdrop overlay uses <code>::backdrop</code> pseudo-element with a semi-transparent background. Alternative overlay elements (<code>.overlay</code>, <code>.backdrop</code>) are also available for custom implementations with fixed positioning and z-index layering.</p>
+
+<h5>Key customization options</h5>
+<ul class="list-bullet">
+  <li><strong>Dialog dimensions:</strong> Modify <code>max-width</code> values for size variants (.dialog-sm: 360px, .dialog-md: 620px, .dialog-lg: 760px, .dialog-xl: 1024px)</li>
+  <li><strong>Backdrop styling:</strong> Adjust <code>dialog::backdrop</code> background color and opacity, or add backdrop-filter for blur effects</li>
+  <li><strong>Positioning:</strong> Change <code>margin-top</code> percentage to adjust vertical positioning on screen</li>
+  <li><strong>Spacing:</strong> Customize padding in <code>.dialog-header</code>, <code>.dialog-body</code>, and <code>.dialog-bottom</code> sections</li>
+  <li><strong>Border and radius:</strong> Modify <code>border</code> and <code>border-radius</code> values using CSS variables like <code>var(--border-radius-base)</code></li>
+  <li><strong>Scrolling behavior:</strong> Adjust <code>max-height</code> in <code>.dialog-body</code> (default: 70vh) and customize scrollbar appearance</li>
+  <li><strong>Animations:</strong> Modify transition timing and transforms for aside dialogs in <code>.dialog-aside-left</code> and <code>.dialog-aside-right</code></li>
+  <li><strong>Close button:</strong> Customize <code>.btn-close-dialog</code> positioning, size, colors, and hover states</li>
+  <li><strong>Shadow effects:</strong> Adjust <code>box-shadow</code> values for depth and elevation</li>
+</ul>
+
+<h5>How to compile _dialog.scss file?</h5>
+<ul class="list-bullet">
+  <li><strong>Option A:</strong> Using Node.js and npm tools - Install sass package (<code>npm install sass</code>) and run the compiler from terminal with <code>sass scss/components/_dialog.scss css/dialog.css</code>. This method is ideal if you're comfortable with command-line tools and want automated build processes.</li>
+  <li><strong>Option B:</strong> Using visual GUI applications - Use software like <strong>Prepros</strong> (prepros.io) or <strong>CodeKit</strong> for Mac users. These apps provide a visual interface to drag-and-drop SCSS files for compilation without touching the terminal. Perfect for designers and developers who prefer visual tools.</li>
+  <li><strong>Option C:</strong> Using VS Code extensions - Install "Live Sass Compiler" extension in Visual Studio Code for automatic compilation on file save with visual indicators and output control.</li>
+</ul>
 
 </article>
+
+<script>
+// Helper functions for opening and closing dialogs
+function open_dialog(dialog_id){
+     document.getElementById(dialog_id).showModal();
+}
+
+function close_dialog(btn_close){
+  let this_dialog = btn_close.closest('dialog');
+  this_dialog.close();  
+}
+</script>
+
+
+
 </main>
 </div> <!-- row end -->
 </div> <!-- container end -->
