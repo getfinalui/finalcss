@@ -41,61 +41,144 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
+  <h6 class="mb-3 text-secondary">Documentation</h6>
+  <h1 class="text-4xl my-20px">Tags, Chips, and Pills Component</h1>
+  <hr>
+  <article class="article-wrap mb-16">
+  
+  <p> The Tag, Chip, and Pill components are highly versatile elements used for categorization, selection, filtering, or display of short, informational fragments. Unlike a static badge or indicator, these components are **interactive** and often serve as buttons or toggles to facilitate user actions like filtering, removing items, or selecting options. </p>
+  
+  <ul class="list-bullet">
+    <li> When to use it: For displaying filter selections, contact names, skill categorization, product attributes, or removable items in an input field. </li>
+    <li> Don't use for: Long-form text, static indicators (use <code>.badge</code> instead). </li>
+    <li> Interaction: Tags include hover effects, an active state (<code>.active</code>), and a subtle press-down animation (using <code>[role=button]:active</code>) to confirm click interaction. </li>
+    <li> SCSS file: <code>/scss/components/<b>_tag-chip.scss</b></code> </li>
+  </ul>
+  
+  <hr>
+  
+  
+  <h4> Basic Tags and Chips </h4>
+  <p>The core classes <code>.tag</code>, <code>.chip</code>, and <code>.pill</code> all share the same base style, offering flexibility in semantic naming depending on their context. They are typically used with a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element, or a <code>&lt;div&gt;</code> with <code>role="button"</code>.</p>
+  <figure class="rounded bg-lower border">
+    <div class="card-body flex flex-wrap items-center gap-2">
+      <!-- example -->
+       <div class="tag" role="button">Tag Default</div>
+       <a href="#" class="chip">Chip Link</a>
+       <button class="pill">Pill Button</button>
+       <div class="tag active" role="button">Active Tag</div>
+       <div class="tag active" role="button" style="background-color: var(--warning-500);">Custom Active</div>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html"> &lt;div class="tag" role="button"&gt;Tag Default&lt;/div&gt;
+   &lt;a href="#" class="chip"&gt;Chip Link&lt;/a&gt;
+   &lt;button class="pill"&gt;Pill Button&lt;/button&gt;
+   &lt;div class="tag active" role="button"&gt;Active Tag&lt;/div&gt;
+   &lt;div class="tag active" role="button" style="background-color: var(--warning-500);"&gt;Custom Active&lt;/div&gt;</code></pre>
+      <!-- code -->
+    </figcaption>
+  </figure>
+  
+  
+  <hr>
+  
+  
+  <h4> Interactive Tags (With Icon or Close Button) </h4>
+  <p>Tags and Chips are often used with an icon or a small close button (e.g., an 'X' symbol) to indicate that they can be dismissed or that they represent a filter that can be removed. The component uses <code>display: inline-flex</code> and <code>gap: 4px</code> to automatically space the inner elements.</p>
+  <figure class="rounded bg-lower border">
+    <div class="card-body flex flex-wrap items-center gap-2">
+      <!-- example -->
+       <div class="chip" role="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6a3 3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/></svg>
+          John Doe
+       </div>
+       <div class="tag active" role="button">
+          Filter Applied
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+       </div>
+       <button class="pill" style="background:var(--primary-200); color:var(--text-color-primary);">
+          Frontend
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+       </button>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html"> &lt;div class="chip" role="button"&gt;
+      &lt;svg...&gt;&lt;/svg&gt;
+      John Doe
+   &lt;/div&gt;
+   &lt;div class="tag active" role="button"&gt;
+      Filter Applied
+      &lt;svg...&gt;&lt;/svg&gt; &lt;!-- Close Icon --&gt;
+   &lt;/div&gt;
+   &lt;button class="pill" style="background:var(--primary-200); color:var(--text-color-primary);"&gt;
+      Frontend
+      &lt;svg...&gt;&lt;/svg&gt; &lt;!-- Close Icon --&gt;
+   &lt;/button&gt;</code></pre>
+      <!-- code -->
+    </figcaption>
+  </figure>
+  
+  
+  <hr>
+  
+  
+  <h4> Customization and Styling </h4>
+  <p>The Tag component is highly customizable using CSS variables. Since all three classes (<code>.tag</code>, <code>.chip</code>, <code>.pill</code>) share the same underlying CSS, customizing one customizes all.</p>
+  
+  <p>The default appearance uses a light, neutral background (<code>var(--alpha-2)</code>), and the active state uses the primary color (<code>var(--primary-500)</code>).</p>
+  
+  <h5> Key Customization Options </h5>
+  <p>These variables can be overridden globally or inline using the <code>style</code> attribute.</p>
+  <ul>
+    <li><code>padding</code>: Controls the internal padding (default: <code>3px 8px</code>). Increasing this will make the tag larger.</li>
+    <li><code>min-height</code>: Sets the minimum vertical size (default: <code>32px</code>).</li>
+    <li><code>background</code>: The background color of the default (inactive) state (default: <code>var(--alpha-2)</code>).</li>
+    <li><code>border-radius</code>: Controls the corner roundness (default: <code>16px</code> for a pill shape).</li>
+    <li><code>--primary-500</code>: Controls the background color of the <code>.active</code> state.</li>
+  </ul>
+  
+  <h5> Example: Customizing Active Color and Border </h5>
+  <p>Here, we change the active state to a custom blue color and add a slight border for separation.</p>
+  <figure class="rounded bg-lower border">
+    <div class="card-body flex flex-wrap items-center gap-2">
+      <!-- example -->
+       <div class="tag" role="button" style="border: 1px solid var(--neutral-300);">Unselected</div>
+       <div class="tag active" role="button" style="
+          background-color: #2563eb;
+          color: white;
+          border: 1px solid #2563eb;
+       ">Selected</div>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html"> &lt;div class="tag" role="button" style="border: 1px solid var(--neutral-300);"&gt;Unselected&lt;/div&gt;
+   &lt;div class="tag active" role="button" style="
+      background-color: #2563eb; /* Custom blue active background */
+      color: white;
+      border: 1px solid #2563eb;
+   "&gt;Selected&lt;/div&gt;</code></pre>
+      <!-- code -->
+    </figcaption>
+  </figure>
+  
+  <hr>
+    
+    <h5> How to compile _tag-chip.scss file? </h5>
+    <p>To apply your SCSS customizations, you will need an SCSS compiler. The steps are similar to compiling other component files:</p>
+    <ul>
+      <li>Option A) node and npm tools: Use command-line tools like <code>node-sass</code> or <code>dart-sass</code> via npm scripts if you are comfortable with the terminal and NodeJS environment.</li>
+      <li>Option B) Prepros.io software or Codekit: Utilize visual applications like Prepros.io or Codekit. These tools provide a graphical user interface (UI) for compiling SCSS files automatically upon save, offering an easier workflow for those who prefer visual configuration over the terminal.</li>
+  </ul>
+    
+  </article>
 
-<h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Tag & Chips</h1>
-<hr>
 
-<article class="article-wrap mb-16">
-
-<p> Short information about this component: {{ REPLACE_THIS }} </p>
-
-<ul class="list-bullet">
-	<li> When to use it:  {{ REPLACE_THIS }} </li>
-  <li> Don't use for:  {{ REPLACE_THIS }} </li>
-  <li> Dark mode: Automatic </li>
-	<li> SCSS file: <code>/scss/components/<b>_tag-chip.scss</b></code> </li>
-</ul>
-
-<hr>
-
-<h4> Examples </h4>
-<figure class="rounded bg-lower border">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-
-
-<hr>
-
-<h4> How to customize?</h4>
-<p>
-{{
-	REWRITE_BELOW_TEXT_BASED_ON_SCSS_STYLING
-  WRITE ABOUT CUSTOMIZATION
-	There are 2 ways of customization:
-	A) Change scss/components/_filename.scss
-	Write here about css variables can be overriten with inline style tag:
-	--alert-bg-color: transparent;
-  --alert-text-color: inherit;
-
-	Provide example like this with full tag: 
-	style="--alert-bg-color:#FF6680" class="alert alert-danger"
-	B) Open  scss/components folder and make changes directly in your_component.scss file and compile
-   How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
-  }}
-</p>
-
-
-</article>
+  
 </main>
 </div> <!-- row end -->
 </div> <!-- container end -->
