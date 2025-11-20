@@ -41,61 +41,130 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
-<h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Forms - Input</h1>
-<hr>
-
-<article class="article-wrap mb-16">
-
-<p> Short information about this component:  {{ REPLACE_THIS }}  </p>
-
-<ul class="list-bullet">
-	<li> When to use it:  {{ REPLACE_THIS }}  </li>
-  <li> Don't use for:  {{ REPLACE_THIS }}  </li>
-  <li> Dark mode: Automatic </li>
-	<li> SCSS file: <code>/scss/components/<b>_form-input.scss</b></code> </li>
-</ul>
-
-<hr>
-
-<h4> Examples </h4>
-<figure class="rounded bg-lower border">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+  <h6 class="mb-3 text-secondary">Documentation</h6>
+  <h1 class="text-4xl my-20px">Form Control and Label</h1>
+  <hr>
+  <article class="article-wrap mb-16">
+  
+  <p> The `form-control` class provides a consistent, responsive, and cross-browser base style for all native text-based form inputs, including  input , textarea. It ensures inputs are full-width, visually clear, and adhere to the design system's color and border conventions. The `form-label` class ensures proper spacing and association with the control. </p>
+  
+  <ul class="list-bullet">
+<li> When to use it: Use for any standard user input element such as text fields, email, password, number, or multi-line text areas (textarea). </li>
+ <li> Don't use for: Custom, non-textual controls like color pickers, range sliders, or complex drop-downs where default browser styling is heavily modified or inappropriate. </li>
+ <li> Dark mode: Automatic </li>
+<li> SCSS file: <code>/scss/components/<b>_form-input.scss</b></code> (and <code>_form-label.scss</code>) </li>
+  </ul>
+  
+  <hr>
+  
+  
+  <h4> Basic example </h4>
+  <figure class="rounded bg-lower border">
+ <div class="card-body">
+<!-- example -->
+<label for="basicEmail" class="form-label">Email Address</label>
+  <input type="email" id="basicEmail" class="form-control" placeholder="you@example.com">
+  <div class="mt-4">
+      <label for="basicPassword" class="form-label">Password</label>
+      <input type="password" id="basicPassword" class="form-control" placeholder="Enter your secret">
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
+<!-- example .//end -->
+ </div>
+ <figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html"> &lt;label for="basicEmail" class="form-label"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" id="basicEmail" class="form-control" placeholder="you@example.com"&gt;
+  &lt;div class="mt-4"&gt;
+      &lt;label for="basicPassword" class="form-label"&gt;Password&lt;/label&gt;
+      &lt;input type="password" id="basicPassword" class="form-control" placeholder="Enter your secret"&gt;
+  &lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+  </figure>
+  
+  
+  <hr>
+  
+  
+  <h4> Another example variant </h4>
+  <figure class="rounded bg-lower border">
+ <div class="card-body">
+<!-- example -->
+<label for="messageInput" class="form-label">Message (Textarea)</label>
+  <textarea id="messageInput" class="form-control" rows="3" placeholder="Write your feedback here..."></textarea>
+  <div class="mt-4">
+      <label for="disabledInput" class="form-label">Disabled Input</label>
+      <input type="text" id="disabledInput" class="form-control" placeholder="Cannot be edited" disabled>
+  </div>
+<!-- example .//end -->
+ </div>
+ <figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html"> &lt;label for="messageInput" class="form-label"&gt;Message (Textarea)&lt;/label&gt;
+  &lt;textarea id="messageInput" class="form-control" rows="3" placeholder="Write your feedback here..."&gt;&lt;/textarea&gt;
+  &lt;div class="mt-4"&gt;
+      &lt;label for="disabledInput" class="form-label"&gt;Disabled Input&lt;/label&gt;
+      &lt;input type="text" id="disabledInput" class="form-control" placeholder="Cannot be edited" disabled&gt;
+  &lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+  </figure>
+  
+  
+  <hr>
+  
+  <h4> How to customize? </h4>
+  The `form-control` component relies heavily on CSS variables for its colors, borders, and rounded corners. This allows for quick, contextual changes to the appearance without modifying the underlying SCSS source code, which is ideal for theming or specific application needs.
+  
+  <h5> Customize using inline css and variables</h5>
+  You can override any of the component's CSS variables directly using the `style` attribute on the element. For example, you can change the background color, focus ring color, and border radius to create a distinct look.
+  <figure class="rounded bg-lower border">
+ <div class="card-body">
+<!-- example --> <label for="customInput" class="form-label">Custom Themed Input</label>
+  <input type="text" id="customInput" class="form-control" placeholder="Styled with custom variables" style="--neutral-50: #fff; --primary-500: #6d28d9; --border-radius-base: 0.75rem; border-width: 2px;">
+<!-- example .//end -->
+ </div>
+ <figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html"> &lt;label for="customInput" class="form-label"&gt;Custom Themed Input&lt;/label&gt;
+  &lt;input type="text" id="customInput" class="form-control" placeholder="Styled with custom variables" style="--neutral-50: #fff; --primary-500: #6d28d9; --border-radius-base: 0.75rem; border-width: 2px;"&gt;</code></pre>
+<!-- code -->
+</figcaption>
+  </figure>
+  
+  
+<h5> Advanced customization using SCSS file </h5>
+ File to customize: `scss/components/_form-input.scss` and `scss/components/_form-label.scss`
+  
+  To make global changes to all form controls across your project, modify the CSS variables in your main variable file, or directly edit the component SCSS files.
+  
+  The base styles for `form-control` define the default appearance, including `min-height: 38px`, `padding: .4rem .6rem`, and a full-width block display (`width: 100%`). Changing these values in `_form-input.scss` will affect all inputs.
+  
+  The component leverages `:hover` and `:focus` pseudo-classes to provide clear visual feedback to the user. The `:focus` state specifically uses `outline-color: var(--primary-500)` to ensure the input stands out with the brand's primary color when selected. To change the focus color globally, update the `--primary-500` variable.
+  
+  Disabled inputs are styled using `:disabled` to set a muted color palette (`--neutral-200` background/border) and a clear `cursor: not-allowed` indicator. You can adjust the opacity and colors here if the default muted appearance is not suitable.
+  
+  The `textarea.form-control` specifically uses `height: auto;` to allow multi-line controls to size according to their content or the `rows` attribute, which prevents the default `min-height` from imposing a fixed size.
+  
+ <h5>Key customization options</h5>
+ <ul>
+      <li>`--neutral-50`: Controls the default background color of the input field.</li>
+      <li>`--neutral-300`: Controls the default border color.</li>
+      <li>`--neutral-400`: Controls the border color on the `:hover` state.</li>
+      <li>`--primary-500`: Controls the color of the outline/focus ring on the `:focus` state.</li>
+      <li>`--border-radius-base`: Defines the corner radius for all input fields.</li>
+      <li>`--text-color-muted`: Sets the color for placeholder text (`::placeholder`) and disabled text.</li>
+      <li>`--neutral-200`: Defines the background and border color for the `:disabled` state.</li>
+  </ul>
+  
+ <h5>How to compile _component.scss file? </h5>
+ <ul>
+      <li>Option A) node and npm tools: Use command-line tools like `node-sass` or `dart-sass` via npm scripts if you are comfortable with the terminal and NodeJS environment.</li>
+      <li>Option B) Prepros.io software or Codekit: Utilize visual applications like Prepros.io or Codekit. These tools provide a graphical user interface (UI) for compiling SCSS files automatically upon save, offering an easier workflow for those who prefer visual configuration over the terminal.</li>
+ </ul>
+  </article>
 
 
-<hr>
-
-<h4> How to customize?</h4>
-<p>
-{{
-	REWRITE_BELOW_TEXT_BASED_ON_SCSS_STYLING
-  WRITE ABOUT CUSTOMIZATION
-	There are 2 ways of customization:
-	A) Change scss/components/_filename.scss
-	Write here about css variables can be overriten with inline style tag:
-	--alert-bg-color: transparent;
-  --alert-text-color: inherit;
-
-	Provide example like this with full tag: 
-	style="--alert-bg-color:#FF6680" class="alert alert-danger"
-	B) Open  scss/components folder and make changes directly in your_component.scss file and compile
-   How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
-  }}
-</p>
-
-
-</article>
 </main>
 </div> <!-- row end -->
 </div> <!-- container end -->

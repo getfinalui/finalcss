@@ -33,6 +33,7 @@
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
+  height: auto;
 }
 .form-select:disabled {
   background-color: var(--neutral-200);

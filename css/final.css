@@ -3472,6 +3472,7 @@ textarea.form-control {
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
+  height: auto;
 }
 
 .form-select:disabled {
@@ -6327,13 +6328,16 @@ textarea.form-control {
   line-height: 1.6;
 }
 .article-wrap > p:not(:first-child) {
-  margin-top: 12px;
+  margin-top: 1rem;
 }
 .article-wrap > p {
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
 }
 .article-wrap > h1, .article-wrap h2, .article-wrap h3, .article-wrap h4, .article-wrap h5, .article-wrap h6 {
   margin-bottom: 1rem;
+}
+.article-wrap p ~ h1, .article-wrap p ~ h2, .article-wrap p ~ h3, .article-wrap p ~ h4, .article-wrap p ~ h5, .article-wrap p ~ h6 {
+  margin-top: 1.5rem;
 }
 
 .visibility-visible {
