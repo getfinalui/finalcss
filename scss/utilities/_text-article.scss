@@ -1,14 +1,10 @@
 // Article or long texts
 .article-wrap{
   line-height: 1.6;
-  p:not(:first-child){ margin-top: 12px; }
-  p{ margin-bottom: 12px;  }
+  > p:not(:first-child){ margin-top: 12px; }
+  > p{ margin-bottom: 12px;  }
 
-  h1, h2, h3, h4, h5, h6{
+  > h1, h2, h3, h4, h5, h6{
     margin-bottom:1rem;
-  }
-
-  p ~ h1, p ~ h2, p ~ h3, p ~ h4, p ~ h5, p ~ h6{
-    margin-top:1.5rem;
   }
 }

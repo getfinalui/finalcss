@@ -42,61 +42,239 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
-<h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Checkbox & Radio </h1>
-<hr>
+  <h6 class="mb-3 text-secondary">Documentation</h6>
+  <h1 class="text-4xl my-20px">Checkbox & Radio</h1>
+  <hr>
+  <article class="article-wrap mb-16">
+  <p>Custom styled checkbox and radio input components that provide consistent appearance across browsers. These form controls support various states including checked, disabled, and focused, with built-in accessibility features.</p>
+  <ul class="list-bullet">
+    <li>When to use it: For single or multiple selection options in forms, surveys, settings panels, or any interface requiring user choice confirmation. The card-check variant works well for presenting mutually exclusive options with additional context.</li>
+    <li>Don't use for: Toggle switches (use a dedicated toggle component), dropdown selections with many options (use select instead), or simple yes/no actions (use buttons).</li>
+    <li>Dark mode: Automatic</li>
+    <li>SCSS file: <code>/scss/components/<b>_form-check-radio.scss</b></code></li>
+  </ul>
+  <hr>
+  <h4>Basic checkbox example</h4>
+  <figure class="rounded bg-lower border">
+    <div class="card-body">
+      <!-- example -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="check1">
+        <label class="form-check-label" for="check1">Default checkbox</label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+        <label class="form-check-label" for="check2">Checked checkbox</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="check3" disabled>
+        <label class="form-check-label" for="check3">Disabled checkbox</label>
+      </div>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="checkbox" value="" id="check1"&gt;
+    &lt;label class="form-check-label" for="check1"&gt;Default checkbox&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="checkbox" value="" id="check2" checked&gt;
+    &lt;label class="form-check-label" for="check2"&gt;Checked checkbox&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input class="form-check-input" type="checkbox" value="" id="check3" disabled&gt;
+    &lt;label class="form-check-label" for="check3"&gt;Disabled checkbox&lt;/label&gt;
+  &lt;/div&gt;</code></pre>
+  <!-- code -->
+  </figcaption>
+  </figure>
+  <hr>
+  <h4>Basic radio buttons</h4>
+  <figure class="rounded bg-lower border">
+    <div class="card-body">
+      <!-- example -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" name="radioGroup1" id="radio1" checked>
+        <label class="form-check-label" for="radio1">Selected option</label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" name="radioGroup1" id="radio2">
+        <label class="form-check-label" for="radio2">Another option</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radioGroup1" id="radio3" disabled>
+        <label class="form-check-label" for="radio3">Disabled option</label>
+      </div>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="radio" name="radioGroup1" id="radio1" checked&gt;
+    &lt;label class="form-check-label" for="radio1"&gt;Selected option&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="radio" name="radioGroup1" id="radio2"&gt;
+    &lt;label class="form-check-label" for="radio2"&gt;Another option&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input class="form-check-input" type="radio" name="radioGroup1" id="radio3" disabled&gt;
+    &lt;label class="form-check-label" for="radio3"&gt;Disabled option&lt;/label&gt;
+  &lt;/div&gt;</code></pre>
+  <!-- code -->
+  </figcaption>
+  </figure>
+  <hr>
+  <h4>Card-style selection (radio buttons)</h4>
+  
+  <figure class="rounded bg-lower border">
+    <div class="card-body">
+      <!-- example -->
+      <fieldset class="d-flex flex-col lg:flex-row gap-2">
+        <label class="card-check d-flex p-3 rounded">
+          <input class="form-check-input" name="delivery-type" type="radio" value="">
+          <div class="ml-1">
+            <span>Self pick-up</span>
+            <p class="d-block mb-0 text-secondary">From nearest location</p>
+          </div>
+        </label>
+        <label class="card-check d-flex p-3 rounded">
+          <input class="form-check-input" name="delivery-type" type="radio" value="" checked>
+          <div class="ml-1">
+            <span>Standard delivery</span>
+            <p class="d-block mb-0 text-secondary">7-10 days after order</p>
+          </div>
+        </label>
+      
+        <label class="card-check d-flex p-3 rounded">
+          <input class="form-check-input" name="delivery-type" type="radio" value="">
+          <div class="ml-1">
+            <span>Express Delivery</span>
+            <p class="d-block mb-0 text-secondary">1-2 days after order</p>
+          </div>
+        </label>
+      </fieldset>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html">&lt;fieldset class="d-flex flex-col lg:flex-row gap-2"&gt;
+      &lt;label class="card-check d-flex p-3 rounded"&gt;
+        &lt;input class="form-check-input" name="delivery-type" type="radio" value=""&gt;
+        &lt;div class="ml-1"&gt;
+          &lt;span&gt;Self pick-up&lt;/span&gt;
+          &lt;p class="d-block mb-0 text-secondary"&gt;From nearest location&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+      &lt;label class="card-check d-flex p-3 rounded"&gt;
+        &lt;input class="form-check-input" name="delivery-type" type="radio" value="" checked&gt;
+        &lt;div class="ml-1"&gt;
+          &lt;span&gt;Standard delivery&lt;/span&gt;
+          &lt;p class="d-block mb-0 text-secondary"&gt;7-10 days after order&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    
+      &lt;label class="card-check d-flex p-3 rounded"&gt;
+        &lt;input class="form-check-input" name="delivery-type" type="radio" value=""&gt;
+        &lt;div class="ml-1"&gt;
+          &lt;span&gt;Express Delivery&lt;/span&gt;
+          &lt;p class="d-block mb-0 text-secondary"&gt;1-2 days after order&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+  &lt;/fieldset&gt;</code></pre>
+  <!-- code -->
+  </figcaption>
+  </figure>
+  <hr>
+  <h4>Reverse layout</h4>
+  <figure class="rounded bg-lower border">
+    <div class="card-body">
+      <!-- example -->
+      <div class="form-check form-check-reverse mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="reverseCheck1" checked>
+        <label class="form-check-label" for="reverseCheck1">Checkbox on the right</label>
+      </div>
+      <div class="form-check form-check-reverse">
+        <input class="form-check-input" type="radio" name="reverseRadio" id="reverseRadio1" checked>
+        <label class="form-check-label" for="reverseRadio1">Radio button on the right</label>
+      </div>
+      <!-- example .//end -->
+    </div>
+    <figcaption>
+      <!-- code -->
+      <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="form-check form-check-reverse mb-3"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="reverseCheck1" checked&gt;
+        &lt;label class="form-check-label" for="reverseCheck1"&gt;Checkbox on the right&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="form-check form-check-reverse"&gt;
+        &lt;input class="form-check-input" type="radio" name="reverseRadio" id="reverseRadio1" checked&gt;
+        &lt;label class="form-check-label" for="reverseRadio1"&gt;Radio button on the right&lt;/label&gt;
+      &lt;/div&gt;</code></pre>
+  <!-- code -->
+  </figcaption>
+  </figure>
 
-<article class="article-wrap mb-16">
-
-<p> Short information about this component:  {{ REPLACE_THIS }}  </p>
-
-<ul class="list-bullet">
-	<li> When to use it:  {{ REPLACE_THIS }}  </li>
-  <li> Don't use for:  {{ REPLACE_THIS }}   </li>
-  <li> Dark mode: Automatic </li>
-	<li> SCSS file: <code>/scss/components/<b>_form-check-radio.scss</b></code> </li>
-</ul>
-
-<hr>
-
-<h4> Examples </h4>
+  <hr>
+<h4>How to customize?</h4>
+<p>The checkbox and radio components use CSS custom properties (variables) for theming, making them easy to customize without modifying the source files. You can adjust colors, sizes, and spacing to match your brand or design system. The card-check variant is particularly useful when you need to present options with additional context or visual hierarchy.</p>
+<h5>Customize using inline CSS and variables</h5>
+<p>You can override the default styling by using inline styles with CSS custom properties. This is useful for one-off customizations or prototyping.</p>
 <figure class="rounded bg-lower border">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" value="" id="customCheck1" checked 
+             style="--primary-100: #e8f5e9; --primary-400: #4caf50; --primary-500: #2e7d32;">
+      <label class="form-check-label" for="customCheck1">Custom green checkbox</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="customRadio" id="customRadio1" checked
+             style="--primary-100: #fff3e0; --primary-400: #ff9800; --primary-500: #f57c00; width: 22px; height: 22px;">
+      <label class="form-check-label" for="customRadio1">Larger orange radio button</label>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="form-check mb-3"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="customCheck1" checked 
+          style="--primary-100: #e8f5e9; --primary-400: #4caf50; --primary-500: #2e7d32;"&gt;
+  &lt;label class="form-check-label" for="customCheck1"&gt;Custom green checkbox&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="customRadio" id="customRadio1" checked
+          style="--primary-100: #fff3e0; --primary-400: #ff9800; --primary-500: #f57c00; width: 22px; height: 22px;"&gt;
+  &lt;label class="form-check-label" for="customRadio1"&gt;Larger orange radio button&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
-
-<hr>
-
-<h4> How to customize?</h4>
-<p>
-{{
-	REWRITE_BELOW_TEXT_BASED_ON_SCSS_STYLING
-  WRITE ABOUT CUSTOMIZATION
-	There are 2 ways of customization:
-	A) Change scss/components/_filename.scss
-	Write here about css variables can be overriten with inline style tag:
-	--alert-bg-color: transparent;
-  --alert-text-color: inherit;
-
-	Provide example like this with full tag: 
-	style="--alert-bg-color:#FF6680" class="alert alert-danger"
-	B) Open  scss/components folder and make changes directly in your_component.scss file and compile
-   How to compile? Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal)
-  }}
-</p>
-
-
-
+<h5>Advanced customization using SCSS file</h5>
+<p><strong>File to customize:</strong> <code>scss/components/_form-check-radio.scss</code></p>
+<p>For global styling changes across your entire application, modify the SCSS source file. This approach is recommended when you need consistent styling throughout your project.</p>
+<p>The component uses CSS custom properties for colors that reference your primary color palette. To change the default appearance, you can override these variables in your main variables file or customize the component directly.</p>
+<p>The checkbox and radio inputs use SVG data URIs for the checked state indicators. These are defined at the top of the SCSS file and can be modified to use different icons or colors. The checkbox uses a checkmark path, while the radio uses a filled circle.</p>
+<p>The card-check variant uses the <code>:has()</code> pseudo-class to style the parent label when its child input is checked. This creates an interactive card effect that highlights the selected option with background color and border changes.</p>
+<h5>Key customization options</h5>
+<ul class="list-bullet">
+  <li><strong>Size adjustment:</strong> Modify <code>width</code> and <code>height</code> properties of <code>.form-check-input</code> to change the input size (default is 18px)</li>
+  <li><strong>Spacing:</strong> Adjust <code>margin-right</code> on <code>.form-check-input</code> to control space between input and label (default is 8px)</li>
+  <li><strong>Colors:</strong> Override <code>--primary-100</code>, <code>--primary-400</code>, and <code>--primary-500</code> variables to change unchecked background, border, and checked state colors</li>
+  <li><strong>Border radius:</strong> Change <code>border-radius</code> on <code>.form-check-input[type=checkbox]</code> to adjust checkbox corner rounding (default is 0.25em)</li>
+  <li><strong>Focus outline:</strong> Customize <code>outline-offset</code> and <code>outline-style</code> properties for keyboard focus states</li>
+  <li><strong>Disabled opacity:</strong> Modify the <code>opacity</code> value in the <code>:disabled</code> state (default is 0.5)</li>
+  <li><strong>Card-check styling:</strong> Customize <code>.card-check</code> borders, hover states, and checked background colors for the card-style variant</li>
+  <li><strong>Check indicator icons:</strong> Replace the SVG data URIs in <code>--form-check-bg-image</code> variables to use custom checkmark or radio dot designs</li>
+</ul>
+<h5>How to compile _form-check-radio.scss file?</h5>
+<ul class="list-bullet">
+  <li><strong>Option A - Node.js & npm tools:</strong> If you're comfortable with the terminal and have Node.js installed, use tools like <code>sass</code>, <code>node-sass</code>, or task runners like Gulp or Webpack to compile SCSS to CSS. Run commands like <code>sass scss/components/_form-check-radio.scss css/components/form-check-radio.css</code> from your project directory.</li>
+  <li><strong>Option B - Visual GUI applications:</strong> If you prefer visual interfaces and want to avoid the terminal, use desktop applications like Prepros.io (cross-platform) or CodeKit (macOS only). These apps provide drag-and-drop SCSS compilation with live preview and automatic browser refresh.</li>
+</ul>
 </article>
+
+
 </main>
 </div> <!-- row end -->
 </div> <!-- container end -->
