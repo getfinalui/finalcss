@@ -95,10 +95,10 @@ class SidebarComponent extends HTMLElement {
         <nav class="lg:border-right pt-4 pb-4 pr-2 sticky h-full scrollbar-thin overflow-y-scroll" style="max-height:calc(100vh - 57px); top:57px">
           <ul id="doc_sidebar" class="nav nav-col nav-compact">
             <li><a class="nav-link" href="/docs/index.html">Getting started</a></li>
-            <li><a class="nav-link" href="/docs/doc-customize.html">Customization</a></li>
-            <li><a class="nav-link" href="/docs/doc-theme.html">Theme & colors</a></li>
-            <li><a class="nav-link" href="/docs/doc-grid.html">Grid system</a></li>
-            <li class="d-none"><a class="nav-link" href="/docs/doc-howto.html">How to (tutorials) </a></li>
+            <li><a class="nav-link" href="/docs/doc-base-customize.html">Customization</a></li>
+            <li><a class="nav-link" href="/docs/doc-base-theme.html">Theme & colors</a></li>
+            <li><a class="nav-link" href="/docs/doc-base-breakpoints.html">Breakpoints</a></li>
+            <li><a class="nav-link" href="/docs/doc-base-grid.html">Grid system</a></li>
             <li class="px-2">
               <hr>
               <h6 class="mb-2"> Components </h6>
@@ -121,39 +121,37 @@ class SidebarComponent extends HTMLElement {
               <hr>
               <h6 class="mb-2"> Utiltiy classes </h6>
             </li>
-            <li><a class="nav-link" href="/docs/doc-display-layout.html"> Display (block, flex) </a></li>
-            <li><a class="nav-link" href="/docs/doc-size.html"> Size (width, height) </a></li>
-            <li><a class="nav-link" href="/docs/doc-margin.html">Margin</a></li>
-            <li><a class="nav-link" href="/docs/doc-padding.html"> Padding </a></li>
-            <li><a class="nav-link" href="/docs/doc-float.html"> Float </a></li>
-            <li><a class="nav-link" href="/docs/doc-gap.html">Gap</a></li>
-            <li><a class="nav-link" href="/docs/doc-positions.html"> Positions </a></li>
-            <li><a class="nav-link" href="/docs/doc-columns.html">Columns</a></li>
-            <li><a class="nav-link" href="/docs/doc-overflow.html"> Overflow </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-display-layout.html"> Display (block, flex) </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-size.html"> Size (width, height) </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-margin.html">Margin</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-padding.html"> Padding </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-float.html"> Float </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-gap.html">Gap</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-position.html"> Positions </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-columns.html">Columns</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-overflow.html"> Overflow </a></li>
             <li> <hr class="my-1"> </li>
-            <li><a class="nav-link" href="/docs/doc-text-color.html"> Text color </a></li>
-            <li><a class="nav-link" href="/docs/doc-text-size.html"> Text size </a></li>
-            <li><a class="nav-link" href="/docs/doc-text-style.html"> Text style </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-text-color.html"> Text color </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-text-size.html"> Text size </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-text-style.html"> Text style </a></li>
             <li> <hr class="my-1"> </li>
-            <li><a class="nav-link" href="/docs/doc-bacckground.html">Background</a></li>
-            <li><a class="nav-link" href="/docs/doc-border-color.html">Border color</a></li>
-            <li><a class="nav-link" href="/docs/doc-border-radius.html">Border radius</a></li>
-            <li><a class="nav-link" href="/docs/doc-shadow.html"> Shadow </a></li>
-            <li><a class="nav-link" href="/docs/doc-opacity.html">Opacity</a></li>
-            <li><a class="nav-link" href="/docs/doc-gradient.html">Gradient</a></li>
-            <li><a class="nav-link" href="/docs/doc-object-fit.html">Object fit</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-background.html">Background</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-border-style.html">Border style / color</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-border-radius.html">Border radius</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-shadow.html"> Shadow </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-opacity.html">Opacity</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-gradient.html">Gradient</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-object-fit.html">Object fit</a></li>
             <li> <hr class="my-1"> </li>
-            <li><a class="nav-link" href="/docs/doc-list.html">List</a></li>
-            <li><a class="nav-link" href="/docs/doc-order.html"> Order </a></li>
-            <li><a class="nav-link" href="/docs/doc-ratio.html"> Ratio </a></li>
-            <li><a class="nav-link" href="/docs/doc-scale.html"> Scale </a></li>
-            <li><a class="nav-link" href="/docs/doc-vertical-align.html"> Vertical align </a></li>
-            <li><a class="nav-link" href="/docs/doc-visibility.html"> Visibility </a></li>
-            <li><a class="nav-link" href="/docs/doc-whitespace.html"> White-space </a></li>
-            <li><a class="nav-link" href="/docs/doc-cursor.html"> Cursor </a></li>
-            <li><a class="nav-link" href="/docs/doc-z-index.html"> Z-index </a></li>
-            <li><hr class="my-1"></li>
-            <li><a class="nav-link" href="/docs/doc-links.html">Useful resources</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-list.html">List</a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-order.html"> Order </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-ratio.html"> Ratio </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-scale.html"> Scale </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-vertical-align.html"> Vertical align </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-visibility.html"> Visibility </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-whitespace.html"> White-space </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-cursor.html"> Cursor </a></li>
+            <li><a class="nav-link" href="/docs/doc-utility-z-index.html"> Z-index </a></li>
             <li><br></li>
           </ul>
 

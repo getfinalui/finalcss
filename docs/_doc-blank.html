@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Website layout sample </title>
+
+	<!-- Site script (only for documentation site) -->
+	<script src="/site/script.js"></script>
+	
+	<!-- FinalCSS -->
+	<link href="/css/final.css" rel="stylesheet" type="text/css" />
+
+	<!-- Template parts (only for documentation site) -->
+	<script src="/site/partials.js"></script>
+
+	<!-- Syntax highlight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+	
+</head>
+<body class="bg-base">
+
+<!-- ======= HEADER =======  -->
+<header-component></header-component>
+<!-- ======= HEADER end// =======-->
+
+<div class="container">
+
+<div class="d-flex flex-wrap">
+<aside class="w-full lg:w-20%">
+	
+<!-- ======= SIDEBAR =======  -->
+<sidebar-component></sidebar-component>
+<!-- ======= SIDEBAR end// =======-->
+
+</aside>
+<main class="lg:w-80% pl-0 lg:pl-10 pt-10">
+
+<!-- === start of documentation === -->
+
+<h6 class="mb-3 text-secondary">Documentation</h6>
+<h1 class="text-4xl my-20px">Component name</h1>
+<hr>
+<article class="article-wrap mb-16">
+<p> {{ REPLACE THIS WITH SHORT INFO ABOUT IT, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<ul class="list-bullet">
+	<li> When to use it:  {{ REPLACE_THIS }} </li>
+  <li> Don't use for:  {{ REPLACE_THIS }}  </li>
+  <li> Dark mode: Automatic </li>
+	<li> SCSS file: <code>/scss/components/<b>_filename.scss</b></code> </li>
+  <li> Responsive: ✅ Yes <br> 
+    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
+    max-lg:classname, max-md:classname, max-sm:classname</span>
+    </li>
+</ul>
+
+<hr>
+
+<h5> What it does? </h5>
+<p class="text-secondary"> Here are representative examples of these classes: </p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
+  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
+  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+</table>
+
+
+<h5> Basic example </h5>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5>Examples</h5>
+<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5> How to customize? </h5>
+<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<figure class="rounded">
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+</article>
+
+<!-- === end of documentation === -->
+
+
+
+</main>
+</div> <!-- row end -->
+</div> <!-- container end -->
+
+
+
+<footer-component></footer-component>
+
+
+</body>
+</html>
