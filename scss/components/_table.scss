@@ -24,6 +24,12 @@
   }
 }
 
+.table-compact{
+  tr > td, tr > th {
+    padding: 0.4rem 0.4rem;
+  }
+}
+
 .table  > tbody > tr:has(input[type="checkbox"]:checked) > *{
   background-color:var(--primary-100)!important;
 }
