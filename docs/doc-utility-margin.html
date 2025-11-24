@@ -41,70 +41,229 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Margin</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Margin utilities provide precise control over element spacing by applying margin on all sides or specific sides (top, bottom, left, right). These classes are essential for creating consistent layouts and maintaining proper visual hierarchy throughout your design. Use them to add space around elements, center content, or reset default margins.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are representative examples of these classes:</p>
+
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">m-unset</td> <td class="text-purple">margin: unset</td> </tr>
+  <tr> <td class="text-blue">m-initial</td> <td class="text-purple">margin: initial</td> </tr>
+  <tr> <td class="text-blue">m-auto</td> <td class="text-purple">margin: auto</td> </tr>
+  <tr> <td class="text-blue">m-0</td> <td class="text-purple">margin: 0</td> </tr>
+  <tr> <td class="text-blue">m-1</td> <td class="text-purple">margin: 4px</td> </tr>
+  <tr> <td class="text-blue">m-2</td> <td class="text-purple">margin: 8px</td> </tr>
+  <tr> <td class="text-blue">m-3</td> <td class="text-purple">margin: 12px</td> </tr>
+  <tr> <td class="text-blue">m-4</td> <td class="text-purple">margin: 16px</td> </tr>
+  <tr> <td class="text-blue">m-5</td> <td class="text-purple">margin: 20px</td> </tr>
+  <tr> <td class="text-blue">m-6</td> <td class="text-purple">margin: 24px</td> </tr>
+  <tr> <td class="text-blue">m-7</td> <td class="text-purple">margin: 28px</td> </tr>
+  <tr> <td class="text-blue">m-8</td> <td class="text-purple">margin: 32px</td> </tr>
+  <tr> <td class="text-blue">m-9</td> <td class="text-purple">margin: 36px</td> </tr>
+  <tr> <td class="text-blue">m-10</td> <td class="text-purple">margin: 40px</td> </tr>
+  <tr> <td class="text-blue">m-11</td> <td class="text-purple">margin: 44px</td> </tr>
+  <tr> <td class="text-blue">m-12</td> <td class="text-purple">margin: 48px</td> </tr>
+  <tr> <td class="text-blue">m-14</td> <td class="text-purple">margin: 56px</td> </tr>
+  <tr> <td class="text-blue">m-16</td> <td class="text-purple">margin: 64px</td> </tr>
+  <tr> <td class="text-blue">m-18</td> <td class="text-purple">margin: 72px</td> </tr>
+  <tr> <td class="text-blue">m-20</td> <td class="text-purple">margin: 80px</td> </tr>
+  <tr> <td class="text-blue">m-25</td> <td class="text-purple">margin: 100px</td> </tr>
+  <tr> <td class="text-blue">m-30</td> <td class="text-purple">margin: 120px</td> </tr>
+  <tr> <td class="text-blue">m-35</td> <td class="text-purple">margin: 140px</td> </tr>
+  <tr> <td class="text-blue">m-40</td> <td class="text-purple">margin: 160px</td> </tr>
+  <tr> <td class="text-blue">m-45</td> <td class="text-purple">margin: 180px</td> </tr>
+  <tr> <td class="text-blue">m-50</td> <td class="text-purple">margin: 200px</td> </tr>
+  <tr> <td class="text-blue">m-55</td> <td class="text-purple">margin: 220px</td> </tr>
+  <tr> <td class="text-blue">m-60</td> <td class="text-purple">margin: 240px</td> </tr>
+  <tr> <td class="text-blue">m-65</td> <td class="text-purple">margin: 260px</td> </tr>
+  <tr> <td class="text-blue">m-70</td> <td class="text-purple">margin: 280px</td> </tr>
+  <tr> <td class="text-blue">m-75</td> <td class="text-purple">margin: 300px</td> </tr>
+  <tr> <td class="text-blue">m-80</td> <td class="text-purple">margin: 320px</td> </tr>
+  <tr> <td class="text-blue">m-85</td> <td class="text-purple">margin: 340px</td> </tr>
+  <tr> <td class="text-blue">m-90</td> <td class="text-purple">margin: 360px</td> </tr>
+  <tr> <td class="text-blue">m-95</td> <td class="text-purple">margin: 380px</td> </tr>
+  <tr> <td class="text-blue">m-100</td> <td class="text-purple">margin: 400px</td> </tr>
 </table>
 
+<br><br>
 
-<h5> Basic example </h5>
+<div class="row gap-8 row-cols-2">
+  <aside> 
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">my-unset</td> <td class="text-purple">margin-top: unset; margin-bottom: unset</td> </tr>
+      <tr> <td class="text-blue">my-initial</td> <td class="text-purple">margin-top: initial; margin-bottom: initial</td> </tr>
+      <tr> <td class="text-blue">my-auto</td> <td class="text-purple">margin-top: auto; margin-bottom: auto</td> </tr>
+      <tr> <td class="text-blue">my-0</td> <td class="text-purple">margin-top: 0; margin-bottom: 0</td> </tr>
+      <tr> <td class="text-blue">my-1</td> <td class="text-purple">margin-top: 4px; margin-bottom: 4px</td> </tr>
+      <tr> <td class="text-blue">my-2</td> <td class="text-purple">margin-top: 8px; margin-bottom: 8px</td> </tr>
+      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
+      <tr> <td class="text-blue">my-100</td> <td class="text-purple">margin-top: 400px; margin-bottom: 400px</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">mx-unset</td> <td class="text-purple">margin-left: unset; margin-right: unset</td> </tr>
+      <tr> <td class="text-blue">mx-initial</td> <td class="text-purple">margin-left: initial; margin-right: initial</td> </tr>
+      <tr> <td class="text-blue">mx-auto</td> <td class="text-purple">margin-left: auto; margin-right: auto</td> </tr>
+      <tr> <td class="text-blue">mx-0</td> <td class="text-purple">margin-left: 0; margin-right: 0</td> </tr>
+      <tr> <td class="text-blue">mx-1</td> <td class="text-purple">margin-left: 4px; margin-right: 4px</td> </tr>
+      <tr> <td class="text-blue">mx-2</td> <td class="text-purple">margin-left: 8px; margin-right: 8px</td> </tr>
+      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
+      <tr> <td class="text-blue">mx-100</td> <td class="text-purple">margin-left: 400px; margin-right: 400px</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">mt-unset</td> <td class="text-purple">margin-top: unset</td> </tr>
+      <tr> <td class="text-blue">mt-initial</td> <td class="text-purple">margin-top: initial</td> </tr>
+      <tr> <td class="text-blue">mt-auto</td> <td class="text-purple">margin-top: auto</td> </tr>
+      <tr> <td class="text-blue">mt-0</td> <td class="text-purple">margin-top: 0</td> </tr>
+      <tr> <td class="text-blue">mt-1</td> <td class="text-purple">margin-top: 4px</td> </tr>
+      <tr> <td class="text-blue">mt-2</td> <td class="text-purple">margin-top: 8px</td> </tr>
+      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
+      <tr> <td class="text-blue">mt-100</td> <td class="text-purple">margin-top: 400px</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">mb-unset</td> <td class="text-purple">margin-bottom: unset</td> </tr>
+      <tr> <td class="text-blue">mb-initial</td> <td class="text-purple">margin-bottom: initial</td> </tr>
+      <tr> <td class="text-blue">mb-auto</td> <td class="text-purple">margin-bottom: auto</td> </tr>
+      <tr> <td class="text-blue">mb-0</td> <td class="text-purple">margin-bottom: 0</td> </tr>
+      <tr> <td class="text-blue">mb-1</td> <td class="text-purple">margin-bottom: 4px</td> </tr>
+      <tr> <td class="text-blue">mb-2</td> <td class="text-purple">margin-bottom: 8px</td> </tr>
+      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
+      <tr> <td class="text-blue">mb-100</td> <td class="text-purple">margin-bottom: 400px</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">mr-unset</td> <td class="text-purple">margin-right: unset</td> </tr>
+      <tr> <td class="text-blue">mr-initial</td> <td class="text-purple">margin-right: initial</td> </tr>
+      <tr> <td class="text-blue">mr-auto</td> <td class="text-purple">margin-right: auto</td> </tr>
+      <tr> <td class="text-blue">mr-0</td> <td class="text-purple">margin-right: 0</td> </tr>
+      <tr> <td class="text-blue">mr-1</td> <td class="text-purple">margin-right: 4px</td> </tr>
+      <tr> <td class="text-blue">mr-2</td> <td class="text-purple">margin-right: 8px</td> </tr>
+      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
+      <tr> <td class="text-blue">mr-100</td> <td class="text-purple">margin-right: 400px</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">ml-unset</td> <td class="text-purple">margin-left: unset</td> </tr>
+      <tr> <td class="text-blue">ml-initial</td> <td class="text-purple">margin-left: initial</td> </tr>
+      <tr> <td class="text-blue">ml-auto</td> <td class="text-purple">margin-left: auto</td> </tr>
+      <tr> <td class="text-blue">ml-0</td> <td class="text-purple">margin-left: 0</td> </tr>
+      <tr> <td class="text-blue">ml-1</td> <td class="text-purple">margin-left: 4px</td> </tr>
+      <tr> <td class="text-blue">ml-2</td> <td class="text-purple">margin-left: 8px</td> </tr>
+      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
+      <tr> <td class="text-blue">ml-100</td> <td class="text-purple">margin-left: 400px</td> </tr>
+    </table>
+  </aside>
+</div>
+
+
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+      <div class="bg-primary-100 p-2 m-5">Margin all sides: m-5</div>
+      <div class="bg-primary-100 p-2 mt-8 mb-1">Margin top and bottom only: mt-8 mb-1</div>
+      <div class="bg-primary-100 p-2 mx-auto" style="width: 200px;">Centered with mx-auto</div>
+    </div>
     <!-- example .//end -->
-  </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="m-5"&gt;Margin all sides: m-5&lt;/div&gt;
+&lt;div class="mt-8"&gt;Margin top only: mt-8&lt;/div&gt;
+&lt;div class="mx-auto" style="width: 200px;"&gt;Centered with mx-auto&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Margin utilities work seamlessly with responsive breakpoint prefixes. Use classes like <code>lg:m-5</code> to apply margin only on large screens, or <code>max-sm:mt-10</code> to apply top margin only on small screens and below. This enables you to create adaptive spacing that adjusts based on viewport size.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+      <div class="bg-green-100 p-3 m-2 lg:m-10">
+        Responsive margin: m-2 on mobile, m-10 on large screens
+      </div>
+      <div class="bg-blue-100 p-3 my-4 max-md:my-8">
+        Vertical margin: my-4 normally, my-8 on medium screens and below
+      </div>
+      <div class="bg-orange-100 p-3 ml-0 md:ml-12">
+        Left margin: ml-0 on mobile, ml-12 on medium screens and up
+      </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="m-2 lg:m-10"&gt;
+  Responsive margin: m-2 on mobile, m-10 on large screens
+&lt;/div&gt;
+
+&lt;div class="my-4 max-md:my-8"&gt;
+  Vertical margin: my-4 normally, my-8 on medium screens and below
+&lt;/div&gt;
+
+&lt;div class="ml-0 md:ml-12"&gt;
+  Left margin: ml-0 on mobile, ml-12 on medium screens and up
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize the margin scale by editing the <code>$margin_map</code> variable in <code>scss/utilities/_margin.scss</code>. Add, remove, or modify spacing values to match your design system. After making changes, compile the SCSS to generate updated CSS.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">$margin_map: (
+  "unset": unset,
+  "initial": initial,
+  "auto": auto,
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  "4": 16px,
+  "5": 20px,
+  "6": 24px,
+  // Add custom values
+  "custom": 42px,
+  // Modify existing values
+  "10": 50px,  // Changed from 40px
+);
+
+// Generates margin classes for all sides
+@each $name, $value in $margin_map {
+  .m-#{$name} { margin: #{$value}!important; }
+}</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>To compile your SCSS into CSS, you have two main options: <strong>Option A:</strong> Use Node.js with npm tools like <code>sass</code> or <code>dart-sass</code> if you're comfortable with terminal commands and have Node.js installed. <strong>Option B:</strong> Use visual applications like Prepros.io or CodeKit which provide a user-friendly interface for compiling SCSS without requiring terminal knowledge.</p>  
 </article>
 
 <!-- === end of documentation === -->
