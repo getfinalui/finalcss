@@ -41,70 +41,294 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Width & Height Utilities</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Width and height utilities provide a comprehensive system for controlling element dimensions using predefined size values. These utilities cover width, height, min-width, max-width, min-height, and max-height properties, allowing you to size elements consistently throughout your project. The spacing scale is based on a 4-pixel increment system, making it easy to maintain visual rhythm and alignment. Use these classes when you need to set fixed dimensions, create responsive layouts, or constrain element sizes within specific boundaries.</p>
+
 <p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
+<span class="text-blue"><b>lg:</b>classname, <b>md:</b>classname, <b>sm:</b>classname, <br>
+    <b>max-lg:</b>classname, <b>max-md:</b>classname, <b>max-sm:</b>classname</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
-<table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
-</table>
+<div class="row row-cols-2">
+  <aside class="border-right border-color-neutral-400">
+    <h6 class="my-3">Width sizes</h6>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
+      <!-- Width Classes -->
+      <tr> <td class="text-blue"> w-unset </td> <td class="text-purple"> width: unset; </td> </tr>
+      <tr> <td class="text-blue"> w-initial </td> <td class="text-purple"> width: initial; </td> </tr>
+      <tr> <td class="text-blue"> w-auto </td> <td class="text-purple"> width: auto; </td> </tr>
+      <tr> <td class="text-blue"> w-0 </td> <td class="text-purple"> width: 0; </td> </tr>
+      <tr> <td class="text-blue"> w-1 </td> <td class="text-purple"> width: 4px; </td> </tr>
+      <tr> <td class="text-blue"> w-2 </td> <td class="text-purple"> width: 8px; </td> </tr>
+      <tr> <td class="text-blue"> w-3 </td> <td class="text-purple"> width: 12px; </td> </tr>
+      <tr> <td class="text-blue"> w-4 </td> <td class="text-purple"> width: 16px; </td> </tr>
+      <tr> <td class="text-blue"> w-5 </td> <td class="text-purple"> width: 20px; </td> </tr>
+      <tr> <td class="text-blue"> w-6 </td> <td class="text-purple"> width: 24px; </td> </tr>
+      <tr> <td class="text-blue"> w-7 </td> <td class="text-purple"> width: 28px; </td> </tr>
+      <tr> <td class="text-blue"> w-8 </td> <td class="text-purple"> width: 32px; </td> </tr>
+      <tr> <td class="text-blue"> w-9 </td> <td class="text-purple"> width: 36px; </td> </tr>
+      <tr> <td class="text-blue"> w-10 </td> <td class="text-purple"> width: 40px; </td> </tr>
+      <tr> <td class="text-blue"> w-11 </td> <td class="text-purple"> width: 44px; </td> </tr>
+      <tr> <td class="text-blue"> w-12 </td> <td class="text-purple"> width: 48px; </td> </tr>
+      <tr> <td class="text-blue"> w-14 </td> <td class="text-purple"> width: 56px; </td> </tr>
+      <tr> <td class="text-blue"> w-16 </td> <td class="text-purple"> width: 64px; </td> </tr>
+      <tr> <td class="text-blue"> w-18 </td> <td class="text-purple"> width: 72px; </td> </tr>
+      <tr> <td class="text-blue"> w-20 </td> <td class="text-purple"> width: 80px; </td> </tr>
+      <tr> <td class="text-blue"> w-25 </td> <td class="text-purple"> width: 100px; </td> </tr>
+      <tr> <td class="text-blue"> w-30 </td> <td class="text-purple"> width: 120px; </td> </tr>
+      <tr> <td class="text-blue"> w-35 </td> <td class="text-purple"> width: 140px; </td> </tr>
+      <tr> <td class="text-blue"> w-40 </td> <td class="text-purple"> width: 160px; </td> </tr>
+      <tr> <td class="text-blue"> w-45 </td> <td class="text-purple"> width: 180px; </td> </tr>
+      <tr> <td class="text-blue"> w-50 </td> <td class="text-purple"> width: 200px; </td> </tr>
+      <tr> <td class="text-blue"> w-55 </td> <td class="text-purple"> width: 220px; </td> </tr>
+      <tr> <td class="text-blue"> w-60 </td> <td class="text-purple"> width: 240px; </td> </tr>
+      <tr> <td class="text-blue"> w-65 </td> <td class="text-purple"> width: 260px; </td> </tr>
+      <tr> <td class="text-blue"> w-70 </td> <td class="text-purple"> width: 280px; </td> </tr>
+      <tr> <td class="text-blue"> w-75 </td> <td class="text-purple"> width: 300px; </td> </tr>
+      <tr> <td class="text-blue"> w-80 </td> <td class="text-purple"> width: 320px; </td> </tr>
+      <tr> <td class="text-blue"> w-85 </td> <td class="text-purple"> width: 340px; </td> </tr>
+      <tr> <td class="text-blue"> w-90 </td> <td class="text-purple"> width: 360px; </td> </tr>
+      <tr> <td class="text-blue"> w-95 </td> <td class="text-purple"> width: 380px; </td> </tr>
+      <tr> <td class="text-blue"> w-100 </td> <td class="text-purple"> width: 400px; </td> </tr>
+      <tr> <td class="text-blue"> w-full </td> <td class="text-purple"> width: 100%; </td> </tr>
+    </table>
+    
+    <br>
+    <p class="text-secondary mb-2">Min width and Max width </p>
+
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
+      <!-- Min-Width Classes -->
+      <tr> <td class="text-blue"> min-w-unset </td> <td class="text-purple"> min-width: unset; </td> </tr>
+      <tr> <td class="text-blue"> min-w-initial </td> <td class="text-purple"> min-width: initial; </td> </tr>
+      <tr> <td class="text-blue"> min-w-auto </td> <td class="text-purple"> min-width: auto; </td> </tr>
+      <tr> <td class="text-blue"> min-w-0 </td> <td class="text-purple"> min-width: 0; </td> </tr>
+      <tr> <td class="text-blue"> min-w-1 </td> <td class="text-purple"> min-width: 4px; </td> </tr>
+      <tr> <td class="text-blue"> min-w-2 </td> <td class="text-purple"> min-width: 8px; </td> </tr>
+      <tr> <td class="text-blue"> min-w-3 </td> <td class="text-purple"> min-width: 12px; </td> </tr>
+      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
+      <tr> <td class="text-blue"> min-w-full </td> <td class="text-purple"> min-width: 100%; </td> </tr>
+      
+      <!-- Max-Width Classes -->
+      <tr> <td class="text-blue"> max-w-unset </td> <td class="text-purple"> max-width: unset; </td> </tr>
+      <tr> <td class="text-blue"> max-w-initial </td> <td class="text-purple"> max-width: initial; </td> </tr>
+      <tr> <td class="text-blue"> max-w-auto </td> <td class="text-purple"> max-width: auto; </td> </tr>
+      <tr> <td class="text-blue"> max-w-0 </td> <td class="text-purple"> max-width: 0; </td> </tr>
+      <tr> <td class="text-blue"> max-w-1 </td> <td class="text-purple"> max-width: 4px; </td> </tr>
+      <tr> <td class="text-blue"> max-w-2 </td> <td class="text-purple"> max-width: 8px; </td> </tr>
+      <tr> <td class="text-blue"> max-w-3 </td> <td class="text-purple"> max-width: 12px; </td> </tr>
+      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
+      <tr> <td class="text-blue"> max-w-full </td> <td class="text-purple"> max-width: 100%; </td> </tr>
+    </table>
+
+  </aside>
+  <aside>
+    <h6 class="my-3">Height sizes</h6>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
+      <!-- Height Classes -->
+      <tr> <td class="text-blue"> h-unset </td> <td class="text-purple"> height: unset; </td> </tr>
+      <tr> <td class="text-blue"> h-initial </td> <td class="text-purple"> height: initial; </td> </tr>
+      <tr> <td class="text-blue"> h-auto </td> <td class="text-purple"> height: auto; </td> </tr>
+      <tr> <td class="text-blue"> h-0 </td> <td class="text-purple"> height: 0; </td> </tr>
+      <tr> <td class="text-blue"> h-1 </td> <td class="text-purple"> height: 4px; </td> </tr>
+      <tr> <td class="text-blue"> h-2 </td> <td class="text-purple"> height: 8px; </td> </tr>
+      <tr> <td class="text-blue"> h-3 </td> <td class="text-purple"> height: 12px; </td> </tr>
+      <tr> <td class="text-blue"> h-4 </td> <td class="text-purple"> height: 16px; </td> </tr>
+      <tr> <td class="text-blue"> h-5 </td> <td class="text-purple"> height: 20px; </td> </tr>
+      <tr> <td class="text-blue"> h-6 </td> <td class="text-purple"> height: 24px; </td> </tr>
+      <tr> <td class="text-blue"> h-7 </td> <td class="text-purple"> height: 28px; </td> </tr>
+      <tr> <td class="text-blue"> h-8 </td> <td class="text-purple"> height: 32px; </td> </tr>
+      <tr> <td class="text-blue"> h-9 </td> <td class="text-purple"> height: 36px; </td> </tr>
+      <tr> <td class="text-blue"> h-10 </td> <td class="text-purple"> height: 40px; </td> </tr>
+      <tr> <td class="text-blue"> h-11 </td> <td class="text-purple"> height: 44px; </td> </tr>
+      <tr> <td class="text-blue"> h-12 </td> <td class="text-purple"> height: 48px; </td> </tr>
+      <tr> <td class="text-blue"> h-14 </td> <td class="text-purple"> height: 56px; </td> </tr>
+      <tr> <td class="text-blue"> h-16 </td> <td class="text-purple"> height: 64px; </td> </tr>
+      <tr> <td class="text-blue"> h-18 </td> <td class="text-purple"> height: 72px; </td> </tr>
+      <tr> <td class="text-blue"> h-20 </td> <td class="text-purple"> height: 80px; </td> </tr>
+      <tr> <td class="text-blue"> h-25 </td> <td class="text-purple"> height: 100px; </td> </tr>
+      <tr> <td class="text-blue"> h-30 </td> <td class="text-purple"> height: 120px; </td> </tr>
+      <tr> <td class="text-blue"> h-35 </td> <td class="text-purple"> height: 140px; </td> </tr>
+      <tr> <td class="text-blue"> h-40 </td> <td class="text-purple"> height: 160px; </td> </tr>
+      <tr> <td class="text-blue"> h-45 </td> <td class="text-purple"> height: 180px; </td> </tr>
+      <tr> <td class="text-blue"> h-50 </td> <td class="text-purple"> height: 200px; </td> </tr>
+      <tr> <td class="text-blue"> h-55 </td> <td class="text-purple"> height: 220px; </td> </tr>
+      <tr> <td class="text-blue"> h-60 </td> <td class="text-purple"> height: 240px; </td> </tr>
+      <tr> <td class="text-blue"> h-65 </td> <td class="text-purple"> height: 260px; </td> </tr>
+      <tr> <td class="text-blue"> h-70 </td> <td class="text-purple"> height: 280px; </td> </tr>
+      <tr> <td class="text-blue"> h-75 </td> <td class="text-purple"> height: 300px; </td> </tr>
+      <tr> <td class="text-blue"> h-80 </td> <td class="text-purple"> height: 320px; </td> </tr>
+      <tr> <td class="text-blue"> h-85 </td> <td class="text-purple"> height: 340px; </td> </tr>
+      <tr> <td class="text-blue"> h-90 </td> <td class="text-purple"> height: 360px; </td> </tr>
+      <tr> <td class="text-blue"> h-95 </td> <td class="text-purple"> height: 380px; </td> </tr>
+      <tr> <td class="text-blue"> h-100 </td> <td class="text-purple"> height: 400px; </td> </tr>
+      <tr> <td class="text-blue"> h-full </td> <td class="text-purple"> height: 100%; </td> </tr>
+    </table>
+    
+    <br>
+    <p class="text-secondary mb-2">Min height and Max height </p>
+
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
+      <!-- Min-Height Classes -->
+      <tr> <td class="text-blue"> min-h-unset </td> <td class="text-purple"> min-height: unset; </td> </tr>
+      <tr> <td class="text-blue"> min-h-initial </td> <td class="text-purple"> min-height: initial; </td> </tr>
+      <tr> <td class="text-blue"> min-h-auto </td> <td class="text-purple"> min-height: auto; </td> </tr>
+      <tr> <td class="text-blue"> min-h-0 </td> <td class="text-purple"> min-height: 0; </td> </tr>
+      <tr> <td class="text-blue"> min-h-1 </td> <td class="text-purple"> min-height: 4px; </td> </tr>
+      <tr> <td class="text-blue"> min-h-2 </td> <td class="text-purple"> min-height: 8px; </td> </tr>
+      <tr> <td class="text-blue"> min-h-3 </td> <td class="text-purple"> min-height: 12px; </td> </tr>
+      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
+      <tr> <td class="text-blue"> min-h-full </td> <td class="text-purple"> min-height: 100%; </td> </tr>
+      
+      <!-- Max-Height Classes -->
+      <tr> <td class="text-blue"> max-h-unset </td> <td class="text-purple"> max-height: unset; </td> </tr>
+      <tr> <td class="text-blue"> max-h-initial </td> <td class="text-purple"> max-height: initial; </td> </tr>
+      <tr> <td class="text-blue"> max-h-auto </td> <td class="text-purple"> max-height: auto; </td> </tr>
+      <tr> <td class="text-blue"> max-h-0 </td> <td class="text-purple"> max-height: 0; </td> </tr>
+      <tr> <td class="text-blue"> max-h-1 </td> <td class="text-purple"> max-height: 4px; </td> </tr>
+      <tr> <td class="text-blue"> max-h-2 </td> <td class="text-purple"> max-height: 8px; </td> </tr>
+      <tr> <td class="text-blue"> max-h-3 </td> <td class="text-purple"> max-height: 12px; </td> </tr>
+      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
+      <tr> <td class="text-blue"> max-h-full </td> <td class="text-purple"> max-height: 100%; </td> </tr>
+    </table>
+    
+   
+    
+    
+  </aside>
+</div>
 
 
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div style="display: flex; gap: 16px; align-items: flex-end;">
+      <div class="w-20 h-20" style="background: #3b82f6;"></div>
+      <div class="w-30 h-30" style="background: #8b5cf6;"></div>
+      <div class="w-40 h-40" style="background: #ec4899;"></div>
+      <div class="w-50 h-50" style="background: #f59e0b;"></div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-20 h-20"&gt;&lt;/div&gt;
+&lt;div class="w-30 h-30"&gt;&lt;/div&gt;
+&lt;div class="w-40 h-40"&gt;&lt;/div&gt;
+&lt;div class="w-50 h-50"&gt;&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
-
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Creating a full-width container with responsive height adjustments demonstrates how these utilities adapt to different screen sizes.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="w-full h-40 md:h-60 lg:h-80" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500;">
+      Responsive Height Container
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-full h-40 md:h-60 lg:h-80"&gt;
+  Responsive Height Container
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<p class="text-secondary">Using minimum and maximum width constraints helps create flexible layouts that maintain readability across devices.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <div class="min-w-50 max-w-75" style="background: #dbeafe; padding: 16px; border: 2px solid #3b82f6; border-radius: 6px;">
+        Min 200px, Max 300px
+      </div>
+      <div class="min-w-40 max-w-60" style="background: #fef3c7; padding: 16px; border: 2px solid #f59e0b; border-radius: 6px;">
+        Min 160px, Max 240px
+      </div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="min-w-50 max-w-75"&gt;
+  Min 200px, Max 300px
+&lt;/div&gt;
+&lt;div class="min-w-40 max-w-60"&gt;
+  Min 160px, Max 240px
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<p class="text-secondary">Combining height utilities with responsive breakpoints allows you to create cards that adapt their proportions based on screen size.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+      <div class="w-full h-50 max-md:h-40" style="background: #dcfce7; border: 2px solid #22c55e; border-radius: 8px; padding: 16px; display: flex; align-items: center; justify-content: center;">
+        Card 1
+      </div>
+      <div class="w-full h-50 max-md:h-40" style="background: #fce7f3; border: 2px solid #ec4899; border-radius: 8px; padding: 16px; display: flex; align-items: center; justify-content: center;">
+        Card 2
+      </div>
+      <div class="w-full h-50 max-md:h-40" style="background: #e0e7ff; border: 2px solid #6366f1; border-radius: 8px; padding: 16px; display: flex; align-items: center; justify-content: center;">
+        Card 3
+      </div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-full h-50 max-md:h-40"&gt;Card 1&lt;/div&gt;
+&lt;div class="w-full h-50 max-md:h-40"&gt;Card 2&lt;/div&gt;
+&lt;div class="w-full h-50 max-md:h-40"&gt;Card 3&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize the size scale by modifying the <code>$size_map</code> in the <code>scss/utilities/_sizes.scss</code> file. This map defines all available size values that get generated into utility classes. After making your changes, recompile the SCSS to generate your customized utility classes with your preferred spacing scale.</p>
 <figure class="rounded">
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded language-css">// Customize the size map with your own values
+$size_map: (
+  "auto": auto,
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  // Add your custom sizes
+  "xs": 6px,
+  "sm": 14px,
+  "custom": 125px,
+  "full": 100%,
+);
+
+// The generator will create classes like:
+// .w-xs, .h-xs, .min-w-xs, etc.
+// .w-custom, .h-custom, etc.</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>To compile your SCSS modifications into production-ready CSS, you have two primary approaches. The first option involves using Node.js and npm tools, which is ideal if you are comfortable working in the terminal and already have Node.js installed on your system. You would install a Sass compiler package such as dart-sass or node-sass through npm, then execute the compilation command from your project directory. The second option caters to developers who prefer visual interfaces and want to avoid command-line work. Applications like Prepros or CodeKit provide intuitive graphical user interfaces where you can simply drag and drop your SCSS files to watch and compile them automatically. Both approaches produce identical CSS output, so choose whichever workflow fits your development style and comfort level.</p>  
 </article>
 
 <!-- === end of documentation === -->

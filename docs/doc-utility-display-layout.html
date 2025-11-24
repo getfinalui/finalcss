@@ -41,14 +41,13 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Display & Layout Utilities</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Display and layout utilities provide quick control over element display types and flexbox/grid properties. Use these classes to control how elements are rendered, manage flexbox layouts, and align content without writing custom CSS. These utilities are essential for responsive design and building flexible layouts.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
@@ -58,9 +57,116 @@
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
+  
+  <!-- Display Utilities -->
+  <tr> <td class="text-blue"> d-initial </td> <td class="text-purple"> display: initial; </td> </tr>
+  <tr> <td class="text-blue"> d-block </td> <td class="text-purple"> display: block; </td> </tr>
+  <tr> <td class="text-blue"> d-inline-block </td> <td class="text-purple"> display: inline-block; </td> </tr>
+  <tr> <td class="text-blue"> d-inline </td> <td class="text-purple"> display: inline; </td> </tr>
+  <tr> <td class="text-blue"> d-table </td> <td class="text-purple"> display: table; </td> </tr>
+  <tr> <td class="text-blue"> d-table-row </td> <td class="text-purple"> display: table-row; </td> </tr>
+  <tr> <td class="text-blue"> d-table-cell </td> <td class="text-purple"> display: table-cell; </td> </tr>
+  <tr> <td class="text-blue"> d-inline-table </td> <td class="text-purple"> display: inline-table; </td> </tr>
+  <tr> <td class="text-blue"> d-table-caption </td> <td class="text-purple"> display: table-caption; </td> </tr>
+  <tr> <td class="text-blue"> d-grid </td> <td class="text-purple"> display: grid; </td> </tr>
+  <tr> <td class="text-blue"> d-inline-grid </td> <td class="text-purple"> display: inline-grid; </td> </tr>
+  <tr> <td class="text-blue"> d-flex </td> <td class="text-purple"> display: flex; </td> </tr>
+  <tr> <td class="text-blue"> d-inline-flex </td> <td class="text-purple"> display: inline-flex; </td> </tr>
+  <tr> <td class="text-blue"> d-none </td> <td class="text-purple"> display: none; </td> </tr>
+  <tr> <td class="text-blue"> hidden </td> <td class="text-purple"> display: none; </td> </tr>
+  
+  <!-- Flex Basis -->
+  <tr> <td class="text-blue"> flex-basis-auto </td> <td class="text-purple"> flex-basis: auto; </td> </tr>
+  <tr> <td class="text-blue"> flex-basis-0 </td> <td class="text-purple"> flex-basis: 0; </td> </tr>
+  <tr> <td class="text-blue"> flex-basis-full </td> <td class="text-purple"> flex-basis: 100%; </td> </tr>
+  
+  <!-- Flex Shorthand -->
+  <tr> <td class="text-blue"> flex-1 </td> <td class="text-purple"> flex: 1 1 0%; </td> </tr>
+  <tr> <td class="text-blue"> flex-auto </td> <td class="text-purple"> flex: 1 1 auto; </td> </tr>
+  <tr> <td class="text-blue"> flex-none </td> <td class="text-purple"> flex: none; </td> </tr>
+  
+  <!-- Flex Shrink -->
+  <tr> <td class="text-blue"> flex-shrink-0 </td> <td class="text-purple"> flex-shrink: 0; </td> </tr>
+  <tr> <td class="text-blue"> flex-shrink </td> <td class="text-purple"> flex-shrink: 1; </td> </tr>
+  <tr> <td class="text-blue"> flex-shrink-initial </td> <td class="text-purple"> flex-shrink: initial; </td> </tr>
+  
+  <!-- Flex Grow -->
+  <tr> <td class="text-blue"> flex-grow-0 </td> <td class="text-purple"> flex-grow: 0; </td> </tr>
+  <tr> <td class="text-blue"> flex-grow </td> <td class="text-purple"> flex-grow: 1; </td> </tr>
+  <tr> <td class="text-blue"> flex-grow-initial </td> <td class="text-purple"> flex-grow: initial; </td> </tr>
+  
+  <!-- Flex Direction -->
+  <tr> <td class="text-blue"> flex-row </td> <td class="text-purple"> flex-direction: row; </td> </tr>
+  <tr> <td class="text-blue"> flex-row-reverse </td> <td class="text-purple"> flex-direction: row-reverse; </td> </tr>
+  <tr> <td class="text-blue"> flex-col </td> <td class="text-purple"> flex-direction: column; </td> </tr>
+  <tr> <td class="text-blue"> flex-col-reverse </td> <td class="text-purple"> flex-direction: column-reverse; </td> </tr>
+  
+  <!-- Flex Wrap -->
+  <tr> <td class="text-blue"> flex-wrap </td> <td class="text-purple"> flex-wrap: wrap; </td> </tr>
+  <tr> <td class="text-blue"> flex-wrap-reverse </td> <td class="text-purple"> flex-wrap: wrap-reverse; </td> </tr>
+  <tr> <td class="text-blue"> flex-nowrap </td> <td class="text-purple"> flex-wrap: nowrap; </td> </tr>
+  
+  <!-- Align Content -->
+  <tr> <td class="text-blue"> align-content-normal </td> <td class="text-purple"> align-content: normal; </td> </tr>
+  <tr> <td class="text-blue"> align-content-center </td> <td class="text-purple"> align-content: center; </td> </tr>
+  <tr> <td class="text-blue"> align-content-start </td> <td class="text-purple"> align-content: flex-start; </td> </tr>
+  <tr> <td class="text-blue"> align-content-end </td> <td class="text-purple"> align-content: flex-end; </td> </tr>
+  <tr> <td class="text-blue"> align-content-between </td> <td class="text-purple"> align-content: space-between; </td> </tr>
+  <tr> <td class="text-blue"> align-content-around </td> <td class="text-purple"> align-content: space-around; </td> </tr>
+  <tr> <td class="text-blue"> align-content-evenly </td> <td class="text-purple"> align-content: space-evenly; </td> </tr>
+  <tr> <td class="text-blue"> align-content-stretch </td> <td class="text-purple"> align-content: stretch; </td> </tr>
+  
+  <!-- Align Self -->
+  <tr> <td class="text-blue"> align-self-auto </td> <td class="text-purple"> align-self: auto; </td> </tr>
+  <tr> <td class="text-blue"> align-self-start </td> <td class="text-purple"> align-self: flex-start; </td> </tr>
+  <tr> <td class="text-blue"> align-self-end </td> <td class="text-purple"> align-self: flex-end; </td> </tr>
+  <tr> <td class="text-blue"> align-self-center </td> <td class="text-purple"> align-self: center; </td> </tr>
+  <tr> <td class="text-blue"> align-self-stretch </td> <td class="text-purple"> align-self: stretch; </td> </tr>
+  <tr> <td class="text-blue"> align-self-baseline </td> <td class="text-purple"> align-self: baseline; </td> </tr>
+  
+  <!-- Align Items -->
+  <tr> <td class="text-blue"> align-items-start </td> <td class="text-purple"> align-items: flex-start; </td> </tr>
+  <tr> <td class="text-blue"> align-items-end </td> <td class="text-purple"> align-items: flex-end; </td> </tr>
+  <tr> <td class="text-blue"> align-items-center </td> <td class="text-purple"> align-items: center; </td> </tr>
+  <tr> <td class="text-blue"> align-items-baseline </td> <td class="text-purple"> align-items: baseline; </td> </tr>
+  <tr> <td class="text-blue"> align-items-stretch </td> <td class="text-purple"> align-items: stretch; </td> </tr>
+  
+  <!-- Justify Content -->
+  <tr> <td class="text-blue"> justify-content-normal </td> <td class="text-purple"> justify-content: normal; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-start </td> <td class="text-purple"> justify-content: flex-start; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-end </td> <td class="text-purple"> justify-content: flex-end; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-center </td> <td class="text-purple"> justify-content: center; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-between </td> <td class="text-purple"> justify-content: space-between; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-around </td> <td class="text-purple"> justify-content: space-around; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-evenly </td> <td class="text-purple"> justify-content: space-evenly; </td> </tr>
+  <tr> <td class="text-blue"> justify-content-stretch </td> <td class="text-purple"> justify-content: stretch; </td> </tr>
+  
+  <!-- Justify Items -->
+  <tr> <td class="text-blue"> justify-items-start </td> <td class="text-purple"> justify-items: start; </td> </tr>
+  <tr> <td class="text-blue"> justify-items-end </td> <td class="text-purple"> justify-items: end; </td> </tr>
+  <tr> <td class="text-blue"> justify-items-center </td> <td class="text-purple"> justify-items: center; </td> </tr>
+  <tr> <td class="text-blue"> justify-items-stretch </td> <td class="text-purple"> justify-items: stretch; </td> </tr>
+  
+  <!-- Place Items -->
+  <tr> <td class="text-blue"> place-items-start </td> <td class="text-purple"> place-items: start; </td> </tr>
+  <tr> <td class="text-blue"> place-items-end </td> <td class="text-purple"> place-items: end; </td> </tr>
+  <tr> <td class="text-blue"> place-items-center </td> <td class="text-purple"> place-items: center; </td> </tr>
+  <tr> <td class="text-blue"> place-items-baseline </td> <td class="text-purple"> place-items: baseline; </td> </tr>
+  <tr> <td class="text-blue"> place-items-stretch </td> <td class="text-purple"> place-items: stretch; </td> </tr>
+  
+  <!-- Place Content -->
+  <tr> <td class="text-blue"> place-content-center </td> <td class="text-purple"> place-content: center; </td> </tr>
+  <tr> <td class="text-blue"> place-content-start </td> <td class="text-purple"> place-content: start; </td> </tr>
+  <tr> <td class="text-blue"> place-content-end </td> <td class="text-purple"> place-content: end; </td> </tr>
+  <tr> <td class="text-blue"> place-content-between </td> <td class="text-purple"> place-content: space-between; </td> </tr>
+  <tr> <td class="text-blue"> place-content-around </td> <td class="text-purple"> place-content: space-around; </td> </tr>
+  <tr> <td class="text-blue"> place-content-evenly </td> <td class="text-purple"> place-content: space-evenly; </td> </tr>
+  <tr> <td class="text-blue"> place-content-baseline </td> <td class="text-purple"> place-content: baseline; </td> </tr>
+  <tr> <td class="text-blue"> place-content-stretch </td> <td class="text-purple"> place-content: stretch; </td> </tr>
+  
+  <!-- Helper Classes -->
+  <tr> <td class="text-blue"> flex-center </td> <td class="text-purple"> justify-content: center; align-items: center; </td> </tr>
 </table>
 
 
@@ -68,43 +174,153 @@
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-flex align-items-center justify-content-between" style="padding: 20px; background: #f0f0f0;">
+      <div style="padding: 10px; background: #007bff; color: white;">Item 1</div>
+      <div style="padding: 10px; background: #28a745; color: white;">Item 2</div>
+      <div style="padding: 10px; background: #dc3545; color: white;">Item 3</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex align-items-center justify-content-between"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
+<h5>How to make responsive</h5>
+
+<p>This utility class supports responsive breakpoints, which means you can control when specific styles are applied based on the screen size. </p>
+
+<p>The responsive system works by prefixing any utility class with a breakpoint name followed by a colon. For example, if you want an element to display as a block only on large screens, you would use <code>class="lg:d-block"</code>. This applies <code>display: block</code> exclusively when the viewport width is 1201 pixels or wider, which typically covers desktop screens and widescreen displays.</p>
+
+<p>The framework provides two types of breakpoint approaches to give you complete control. The first type uses minimum width breakpoints like <code>sm:</code>, <code>md:</code>, and <code>lg:</code>, which apply styles from that screen size and up. The second type uses maximum width breakpoints like <code>max-sm:</code>, <code>max-md:</code>, and <code>max-lg:</code>, which apply styles from zero width up to that specific breakpoint. This "max" approach is particularly useful when you want to target smaller devices specifically.</p>
+
+<p>Consider a practical example: <code>class="max-lg:d-block"</code> will apply <code>display: block</code> to all screens from zero pixels up to 1200 pixels wide, which includes tablets and mobile devices. Similarly, <code>class="max-sm:d-none"</code> hides an element completely on small mobile devices by applying <code>display: none</code> to screens up to 640 pixels wide. </p>
+
+<p>You can even combine multiple breakpoint classes on a single element. For instance, <code>class="d-none md:d-block lg:d-flex"</code> would hide the element by default on mobile, show it as a block on medium screens like tablets, and change it to flex display on large desktop screens.</p>
+
+<p>The breakpoint values themselves are fully customizable from the configuration file located at <code>scss/_breakpoint-config.scss</code>. 
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Responsive display control - show/hide elements on different screen sizes</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-block max-md:d-none" style="padding: 15px; background: #e3f2fd; border: 2px solid #2196f3; margin-bottom: 10px;">
+      Visible on desktop (hidden on mobile and tablets)
+    </div>
+    <div class="d-none max-md:d-block" style="padding: 15px; background: #fff3e0; border: 2px solid #ff9800;">
+      Visible on mobile and tablets only
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-block max-md:d-none"&gt;
+  Visible on desktop (hidden on mobile and tablets)
+&lt;/div&gt;
+&lt;div class="d-none max-md:d-block"&gt;
+  Visible on mobile and tablets only
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<p class="text-secondary">Flexbox layout with direction and alignment control</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="d-flex flex-col md:flex-row align-items-center justify-content-center" style="gap: 15px; padding: 20px; background: #f5f5f5; min-height: 150px;">
+      <div style="padding: 15px; background: #9c27b0; color: white; border-radius: 8px;">Box 1</div>
+      <div style="padding: 15px; background: #673ab7; color: white; border-radius: 8px;">Box 2</div>
+      <div style="padding: 15px; background: #3f51b5; color: white; border-radius: 8px;">Box 3</div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex flex-col md:flex-row align-items-center justify-content-center"&gt;
+  &lt;div&gt;Box 1&lt;/div&gt;
+  &lt;div&gt;Box 2&lt;/div&gt;
+  &lt;div&gt;Box 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<p class="text-secondary">Using the flex-center helper class for quick centering</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="d-flex flex-center" style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px;">
+      <div style="padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        Perfectly Centered Content
+      </div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex flex-center" style="height: 200px;"&gt;
+  &lt;div&gt;Perfectly Centered Content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<p class="text-secondary">Flex grow and shrink utilities for dynamic sizing</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="d-flex" style="gap: 10px; padding: 20px; background: #fafafa;">
+      <div class="flex-none" style="padding: 15px; background: #f44336; color: white;">Fixed Width</div>
+      <div class="flex-1" style="padding: 15px; background: #4caf50; color: white;">Grows to Fill Space</div>
+      <div class="flex-none" style="padding: 15px; background: #2196f3; color: white;">Fixed Width</div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex"&gt;
+  &lt;div class="flex-none"&gt;Fixed Width&lt;/div&gt;
+  &lt;div class="flex-1"&gt;Grows to Fill Space&lt;/div&gt;
+  &lt;div class="flex-none"&gt;Fixed Width&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize or extend these utilities by modifying the <code>scss/utilities/_display-layout.scss</code> file. Add your own display utilities to the <code>$layout-utils</code> map and recompile the SCSS to generate new utility classes.</p>
 <figure class="rounded">
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded language-css">// Add custom utilities to the $layout-utils map
+$layout-utils: (
+  'd-block': (display: block),
+  'd-flex': (display: flex),
+  // Add your custom utilities here
+  'flex-2': (flex: 2 1 0%),
+  'flex-3': (flex: 3 1 0%),
+);
+
+// Or create custom helper classes
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>To compile your SCSS changes into CSS, you have two main options: <strong>Option A:</strong> Use Node.js and npm tools if you're comfortable with the terminal and have Node.js installed. Install a Sass compiler like <code>dart-sass</code> or <code>node-sass</code> and run the compiler from your command line. <strong>Option B:</strong> Use visual GUI applications like <a href="https://prepros.io" target="_blank">Prepros</a> or CodeKit if you prefer a visual interface and want to avoid working in the terminal. These tools provide a simple drag-and-drop interface for compiling Sass files.</p>  
 </article>
 
 <!-- === end of documentation === -->
