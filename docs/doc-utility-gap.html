@@ -41,70 +41,210 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Gap</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Gap utilities control the spacing between child elements in flexbox and grid layouts. These classes provide a clean way to add consistent spacing without using margins on individual items. Use <code>gap-*</code> for uniform spacing in both directions, <code>gap-rows-*</code> for vertical spacing only, or <code>gap-cols-*</code> for horizontal spacing only. These utilities are essential for creating evenly spaced card grids, navigation menus, form layouts, and any flex or grid container.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are representative examples of these classes:</p>
+
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">gap-0</td> <td class="text-purple">gap: 0</td> </tr>
+  <tr> <td class="text-blue">gap-1</td> <td class="text-purple">gap: 4px</td> </tr>
+  <tr> <td class="text-blue">gap-2</td> <td class="text-purple">gap: 8px</td> </tr>
+  <tr> <td class="text-blue">gap-3</td> <td class="text-purple">gap: 12px</td> </tr>
+  <tr> <td class="text-blue">gap-4</td> <td class="text-purple">gap: 16px</td> </tr>
+  <tr> <td class="text-blue">gap-5</td> <td class="text-purple">gap: 20px</td> </tr>
+  <tr> <td class="text-blue">gap-6</td> <td class="text-purple">gap: 24px</td> </tr>
+  <tr> <td class="text-blue">gap-7</td> <td class="text-purple">gap: 28px</td> </tr>
+  <tr> <td class="text-blue">gap-8</td> <td class="text-purple">gap: 32px</td> </tr>
+  <tr> <td class="text-blue">gap-9</td> <td class="text-purple">gap: 36px</td> </tr>
+  <tr> <td class="text-blue">gap-10</td> <td class="text-purple">gap: 40px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-0</td> <td class="text-purple">row-gap: 0</td> </tr>
+  <tr> <td class="text-blue">gap-rows-1</td> <td class="text-purple">row-gap: 4px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-2</td> <td class="text-purple">row-gap: 8px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-3</td> <td class="text-purple">row-gap: 12px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-4</td> <td class="text-purple">row-gap: 16px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-5</td> <td class="text-purple">row-gap: 20px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-6</td> <td class="text-purple">row-gap: 24px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-7</td> <td class="text-purple">row-gap: 28px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-8</td> <td class="text-purple">row-gap: 32px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-9</td> <td class="text-purple">row-gap: 36px</td> </tr>
+  <tr> <td class="text-blue">gap-rows-10</td> <td class="text-purple">row-gap: 40px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-0</td> <td class="text-purple">column-gap: 0</td> </tr>
+  <tr> <td class="text-blue">gap-cols-1</td> <td class="text-purple">column-gap: 4px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-2</td> <td class="text-purple">column-gap: 8px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-3</td> <td class="text-purple">column-gap: 12px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-4</td> <td class="text-purple">column-gap: 16px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-5</td> <td class="text-purple">column-gap: 20px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-6</td> <td class="text-purple">column-gap: 24px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-7</td> <td class="text-purple">column-gap: 28px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-8</td> <td class="text-purple">column-gap: 32px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-9</td> <td class="text-purple">column-gap: 36px</td> </tr>
+  <tr> <td class="text-blue">gap-cols-10</td> <td class="text-purple">column-gap: 40px</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+      <p class="mb-2"><strong>Uniform gap (gap-4):</strong></p>
+      <div class="d-flex flex-wrap gap-4 mb-4">
+        <div class="bg-primary-200 p-3">Item 1</div>
+        <div class="bg-primary-200 p-3">Item 2</div>
+        <div class="bg-primary-200 p-3">Item 3</div>
+        <div class="bg-primary-200 p-3">Item 4</div>
+      </div>
+
+      <p class="mb-2"><strong>Row gap only (gap-rows-6):</strong></p>
+      <div class="d-flex flex-wrap gap-rows-6 mb-4">
+        <div class="border-green w-30% p-3">Item 1</div>
+        <div class="border-green w-30% p-3">Item 2</div>
+        <div class="border-green w-30% p-3">Item 3</div>
+        <div class="border-green w-30% p-3">Item 4</div>
+        <div class="border-green w-30% p-3">Item 5</div>
+      </div>
+
+      <p class="mb-2"><strong>Column gap only (gap-cols-5):</strong></p>
+      <div class="d-flex flex-wrap gap-cols-5">
+        <div class="border-orange w-30%  p-3">Item 1</div>
+        <div class="border-orange w-30%  p-3">Item 2</div>
+        <div class="border-orange w-30%  p-3">Item 3</div>
+        <div class="border-orange w-30%  p-3">Item 4</div>
+        <div class="border-orange w-30%  p-3">Item 5</div>
+      </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- Uniform gap in both directions --&gt;
+&lt;div class="d-flex flex-wrap gap-4"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+  &lt;div&gt;Item 4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Row gap only (vertical spacing) --&gt;
+&lt;div class="d-flex flex-wrap gap-rows-6"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+  &lt;div&gt;Item 4&lt;/div&gt;
+  &lt;div&gt;Item 5&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Column gap only (horizontal spacing) --&gt;
+&lt;div class="d-flex flex-wrap gap-cols-5"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+  &lt;div&gt;Item 4&lt;/div&gt;
+  &lt;div&gt;Item 5&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Examples with responsive classes</h5>
+<p class="text-secondary">Gap utilities support responsive breakpoint prefixes, allowing you to adjust spacing between elements based on screen size. Use classes like <code>lg:gap-8</code> to apply larger gaps on desktop screens, or <code>max-sm:gap-2</code> to use tighter spacing on mobile devices. This is particularly useful for responsive card grids, navigation menus, and layouts that need different spacing across viewport sizes.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+      <p class="mb-2"><strong>Responsive gap (gap-2 md:gap-6):</strong></p>
+      <div class="d-flex flex-wrap gap-2 md:gap-6 mb-4">
+        <div class="bg-blue-500 text-white p-3">Card 1</div>
+        <div class="bg-blue-500 text-white p-3">Card 2</div>
+        <div class="bg-blue-500 text-white p-3">Card 3</div>
+        <div class="bg-blue-500 text-white p-3">Card 4</div>
+        <div class="bg-blue-500 text-white p-3">Card 5</div>
+        <div class="bg-blue-500 text-white p-3">Card 6</div>
+      </div>
+
+      <p class="mb-2"><strong>Responsive row gap (gap-rows-3 lg:gap-rows-8):</strong></p>
+      <div class="d-flex flex-wrap gap-cols-4 gap-rows-3 lg:gap-rows-8 mb-4">
+        <div class="bg-green-500 text-white p-3" style="width: 120px;">Item 1</div>
+        <div class="bg-green-500 text-white p-3" style="width: 120px;">Item 2</div>
+        <div class="bg-green-500 text-white p-3" style="width: 120px;">Item 3</div>
+        <div class="bg-green-500 text-white p-3" style="width: 120px;">Item 4</div>
+        <div class="bg-green-500 text-white p-3" style="width: 120px;">Item 5</div>
+        <div class="bg-green-500 text-white p-3" style="width: 120px;">Item 6</div>
+      </div>
+
+      <p class="mb-2"><strong>Mobile-first approach (gap-4 max-sm:gap-1):</strong></p>
+      <div class="d-flex flex-wrap gap-4 max-sm:gap-1">
+        <div class="bg-orange-500 text-white p-3">Box 1</div>
+        <div class="bg-orange-500 text-white p-3">Box 2</div>
+        <div class="bg-orange-500 text-white p-3">Box 3</div>
+        <div class="bg-orange-500 text-white p-3">Box 4</div>
+      </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- Smaller gap on mobile, larger on medium screens+ --&gt;
+&lt;div class="d-flex flex-wrap gap-2 md:gap-6"&gt;
+  &lt;div&gt;Card 1&lt;/div&gt;
+  &lt;div&gt;Card 2&lt;/div&gt;
+  &lt;div&gt;Card 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive row gap only --&gt;
+&lt;div class="d-flex flex-wrap gap-cols-4 gap-rows-3 lg:gap-rows-8"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Larger gap by default, smaller on mobile --&gt;
+&lt;div class="d-flex flex-wrap gap-4 max-sm:gap-1"&gt;
+  &lt;div&gt;Box 1&lt;/div&gt;
+  &lt;div&gt;Box 2&lt;/div&gt;
+  &lt;div&gt;Box 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
-
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize the gap scale by editing the <code>$gap_map</code> variable in <code>scss/utilities/_gap.scss</code>. Add, remove, or modify spacing values to match your design system requirements. After making changes, compile the SCSS to generate updated CSS with your custom gap values.</p>
 <figure class="rounded">
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded language-css">$gap_map: (
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  "4": 16px,
+  "5": 20px,
+  // Add custom values
+  "custom": 18px,
+  // Modify existing values
+  "10": 50px,  // Changed from 40px
+);
+
+// Generates gap classes
+@each $name, $value in $gap_map {
+  .gap-#{$name} { gap: #{$value}; }
+  .gap-rows-#{$name} { row-gap: #{$value}; }
+  .gap-cols-#{$name} { column-gap: #{$value}; }
+}</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>To compile your SCSS into CSS, you have two main options: <strong>Option A:</strong> Use Node.js with npm tools like <code>sass</code> or <code>dart-sass</code> if you're comfortable working in the terminal and have Node.js installed on your system. <strong>Option B:</strong> Use visual applications like Prepros.io or CodeKit which provide an intuitive graphical interface for compiling SCSS without requiring any terminal or command-line knowledge.</p>
+
 </article>
 
 <!-- === end of documentation === -->

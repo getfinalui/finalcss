@@ -41,70 +41,120 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Float</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Float utilities control the positioning of elements by allowing them to float to the left, right, or inline start/end of their container. These classes are useful for wrapping text around images, creating magazine-style layouts, or positioning elements within their parent container. Use <code>float-none</code> to remove float behavior and return elements to normal document flow.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are representative examples of these classes:</p>
+
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">float-start</td> <td class="text-purple">float: inline-start</td> </tr>
+  <tr> <td class="text-blue">float-end</td> <td class="text-purple">float: inline-end</td> </tr>
+  <tr> <td class="text-blue">float-right</td> <td class="text-purple">float: right</td> </tr>
+  <tr> <td class="text-blue">float-left</td> <td class="text-purple">float: left</td> </tr>
+  <tr> <td class="text-blue">float-none</td> <td class="text-purple">float: none</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="bg-neutral-100 p-4">
+      <div class="float-left bg-primary text-white p-3 mr-3 mb-2" style="width: 120px;">
+        float-left
+      </div>
+      <p>This text wraps around the floated element on the left side. Float utilities allow elements to be positioned to the side of their container while other content flows around them naturally.</p>
+    </div>
+    <div class="bg-neutral-100 p-4 mt-3">
+      <div class="float-right bg-green text-white p-3 ml-3 mb-2" style="width: 120px;">
+        float-right
+      </div>
+      <p>This text wraps around the floated element on the right side. This is commonly used for images in articles or sidebar content in layouts.</p>
+    </div>
+    <div class="bg-neutral-100 p-4 mt-3">
+      <div class="float-none bg-orange p-3 mb-2" style="width: 120px;">
+        float-none
+      </div>
+      <p>This element has no float applied, so it stays in the normal document flow and takes up the full width available.</p>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="float-left bg-primary text-white p-3 mr-3"&gt;
+  float-left
+&lt;/div&gt;
+&lt;p&gt;This text wraps around the floated element...&lt;/p&gt;
+
+&lt;div class="float-right bg-green text-white p-3 ml-3"&gt;
+  float-right
+&lt;/div&gt;
+&lt;p&gt;This text wraps around the floated element...&lt;/p&gt;
+
+&lt;div class="float-none bg-orange p-3"&gt;
+  float-none
+&lt;/div&gt;
+&lt;p&gt;This element has no float applied...&lt;/p&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Examples with responsive classes</h5>
+<p>Float utilities support responsive breakpoint prefixes, enabling you to control element positioning based on screen size. Use classes like <code>lg:float-right</code> to float elements only on large screens, or <code>max-sm:float-none</code> to remove floating on small devices. This is particularly useful for responsive layouts where images should float on desktop but stack normally on mobile devices.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="bg-neutral-100 p-4">
+      <div class="float-none md:float-left bg-blue-500 text-white p-3 mr-0 md:mr-3 mb-3" style="width: 150px;">
+        float-none md:float-left
+      </div>
+      <p>On mobile, this element doesn't float and appears as a block. On medium screens and above, it floats to the left with text wrapping around it. Resize your browser to see the effect.</p>
+    </div>
+    <div class="bg-neutral-100 p-4 mt-3">
+      <div class="float-right max-md:float-none bg-green-500 text-white p-3 ml-3 max-md:ml-0 mb-3" style="width: 150px;">
+        float-right max-md:float-none
+      </div>
+      <p>This element floats to the right on larger screens but becomes a normal block element on medium screens and below, creating a better mobile experience.</p>
+    </div>
+    <div class="bg-neutral-100 p-4 mt-3">
+      <div class="float-left lg:float-right bg-orange-500 text-white p-3 mr-3 lg:mr-0 lg:ml-3 mb-3" style="width: 150px;">
+        float-left lg:float-right
+      </div>
+      <p>This demonstrates changing float direction based on screen size. It floats left by default but switches to float right on large screens, useful for responsive design adjustments.</p>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="float-none md:float-left"&gt;
+  Floats left only on medium screens and above
+&lt;/div&gt;
+&lt;p&gt;Text content wraps around...&lt;/p&gt;
+
+&lt;div class="float-right max-md:float-none"&gt;
+  Floats right, but not on small/medium screens
+&lt;/div&gt;
+&lt;p&gt;Text content wraps around...&lt;/p&gt;
+
+&lt;div class="float-left lg:float-right"&gt;
+  Changes float direction on large screens
+&lt;/div&gt;
+&lt;p&gt;Text content wraps around...&lt;/p&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
-
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
-<figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
 
 <!-- === end of documentation === -->

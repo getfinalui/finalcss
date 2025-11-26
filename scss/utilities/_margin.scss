@@ -64,7 +64,7 @@ $margin_map: (
 }
 
 // Generate responsive utility classes
-// breakpoints can be changed from base-settings.scss
+// breakpoints can be changed from breakpoint-config.scss
 
 
 @each $breakpoint, $screen_size in $breakpoints {

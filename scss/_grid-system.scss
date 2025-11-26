@@ -52,7 +52,7 @@
 
 
 // Generate responsive utility classes
-// breakpoints can be changed from base-settings.scss
+// breakpoints can be changed from breakpoint-config.scss
 @each $breakpoint, $size in $breakpoints {
 
   @media ($size){
@@ -93,7 +93,7 @@
 .col-12{width: 100%;}
 
 // Generate responsive utility classes (for ex: md:col-6/12)
-// breakpoints can be changed from base-settings.scss
+// breakpoints can be changed from breakpoint-config.scss
 @each $breakpoint, $size in $breakpoints {
   @media ($size){
     // breakpoinst styles
@@ -165,7 +165,7 @@
 .grid-row-span-full{grid-row: 1 / -1;}
 
 // Generate responsive utility classes
-// breakpoints can be changed from base-settings.scss
+// breakpoints can be changed from breakpoint-config.scss
 @each $breakpoint, $size in $breakpoints {
   @media ($size){
     
