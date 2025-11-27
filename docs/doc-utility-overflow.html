@@ -42,72 +42,47 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
-<!-- === start of documentation === -->
-
+  <!-- === start of documentation === -->
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Overflow</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Overflow utilities control how content behaves when it exceeds the boundaries of its container. Use these classes to show scrollbars, hide overflowing content, or allow content to be visible outside the container. Essential for creating scrollable containers, preventing layout breaks, and managing content that exceeds fixed dimensions.</p>
+<p>Responsive: ❌ No</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are all available overflow utility classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue"> overflow-auto</td> <td class="text-purple">overflow: auto !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-hidden</td> <td class="text-purple">overflow: hidden !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-visible</td> <td class="text-purple">overflow: visible !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-scroll</td> <td class="text-purple">overflow: scroll !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-x-auto</td> <td class="text-purple">overflow-x: auto !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-x-hidden</td> <td class="text-purple">overflow-x: hidden !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-x-visible</td> <td class="text-purple">overflow-x: visible !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-x-scroll</td> <td class="text-purple">overflow-x: scroll !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-y-auto</td> <td class="text-purple">overflow-y: auto !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-y-hidden</td> <td class="text-purple">overflow-y: hidden !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-y-visible</td> <td class="text-purple">overflow-y: visible !important;</td> </tr>
+  <tr> <td class="text-blue"> overflow-y-scroll</td> <td class="text-purple">overflow-y: scroll !important;</td> </tr>
 </table>
 
 
-<h5> Basic example </h5>
-<figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
+<h5>Common Use Cases</h5>
+<ul class="list-bullet">
+  <li><strong>overflow-auto:</strong> Scrollable content areas, chat windows, code blocks</li>
+  <li><strong>overflow-hidden:</strong> Image containers, card components, preventing layout breaks</li>
+  <li><strong>overflow-x-scroll:</strong> Horizontal tables, image carousels, wide data grids</li>
+  <li><strong>overflow-y-auto:</strong> Sidebar navigation, dropdown menus, modal content</li>
+  <li><strong>overflow-visible:</strong> Tooltips, dropdowns that extend beyond parent boundaries</li>
+</ul>
 
 
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
-<figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-
-
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
-<figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
-
 <!-- === end of documentation === -->
+
 
 
 

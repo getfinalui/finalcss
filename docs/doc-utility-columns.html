@@ -45,69 +45,319 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Columns</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>The Columns utility creates multi-column layouts using CSS multi-column properties, perfect for newspaper-style text layouts, masonry-style image galleries, and flowing content across multiple columns. These classes automatically distribute content across the specified number of columns, creating balanced, readable layouts without complex grid systems.</p>
 <p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
+    <span class="text-secondary">lg:columns-3, md:columns-2, sm:columns-1, <br>
+    max-lg:columns-2, max-md:columns-1, max-sm:columns-1</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>Column classes</h5>
+<p class="text-secondary">Set the number of columns for multi-column layouts. Content flows automatically from one column to the next.</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">.columns-1</td> <td class="text-purple">columns: 1;</td> </tr>
+  <tr> <td class="text-blue">.columns-2</td> <td class="text-purple">columns: 2;</td> </tr>
+  <tr> <td class="text-blue">.columns-3</td> <td class="text-purple">columns: 3;</td> </tr>
+  <tr> <td class="text-blue">.columns-4</td> <td class="text-purple">columns: 4;</td> </tr>
+  <tr> <td class="text-blue">.columns-5</td> <td class="text-purple">columns: 5;</td> </tr>
+  <tr> <td class="text-blue">.columns-6</td> <td class="text-purple">columns: 6;</td> </tr>
+  <tr> <td class="text-blue">.columns-7</td> <td class="text-purple">columns: 7;</td> </tr>
+  <tr> <td class="text-blue">.columns-8</td> <td class="text-purple">columns: 8;</td> </tr>
+  <tr> <td class="text-blue">.columns-9</td> <td class="text-purple">columns: 9;</td> </tr>
+  <tr> <td class="text-blue">.columns-10</td> <td class="text-purple">columns: 10;</td> </tr>
 </table>
 
+<h5>Break inside controls</h5>
+<p class="text-secondary">Control how content breaks across columns. Use these classes on child elements to prevent awkward breaks.</p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">.break-inside-avoid</td> <td class="text-purple">break-inside: avoid;</td> </tr>
+  <tr> <td class="text-blue">.break-inside-auto</td> <td class="text-purple">break-inside: auto;</td> </tr>
+</table>
 
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="columns-2" style="column-gap: 20px;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="columns-2"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+  &lt;p&gt;Duis aute irure dolor...&lt;/p&gt;
+  &lt;p&gt;Sed ut perspiciatis unde...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Card grid with columns</h5>
+<p class="text-secondary">Create masonry-style layouts for cards, images, or mixed content. The break-inside-avoid class prevents cards from splitting across columns.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="columns-3" style="column-gap: 16px;">
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body">
+          <h6 style="margin: 0 0 8px 0;">Feature One</h6>
+          <p style="font-size: 0.85rem; margin: 0; color: var(--text-color-secondary);">This card won't break across columns thanks to break-inside-avoid.</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px; background-color: var(--blue-50);">
+        <div class="card-body">
+          <h6 style="margin: 0 0 8px 0;">Feature Two</h6>
+          <p style="font-size: 0.85rem; margin: 0;">Content flows naturally into the next available column space.</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body">
+          <h6 style="margin: 0 0 8px 0;">Feature Three</h6>
+          <p style="font-size: 0.85rem; margin: 0; color: var(--text-color-secondary);">Perfect for Pinterest-style layouts and galleries.</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px; background-color: var(--green-50);">
+        <div class="card-body">
+          <h6 style="margin: 0 0 8px 0;">Feature Four</h6>
+          <p style="font-size: 0.85rem; margin: 0;">Columns adjust automatically based on content height.</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body">
+          <h6 style="margin: 0 0 8px 0;">Feature Five</h6>
+          <p style="font-size: 0.85rem; margin: 0; color: var(--text-color-secondary);">No JavaScript required for this layout!</p>
+        </div>
+      </div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="columns-3" style="column-gap: 16px;"&gt;
+  &lt;div class="card break-inside-avoid"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h6&gt;Feature One&lt;/h6&gt;
+      &lt;p&gt;This card won't break across columns.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card break-inside-avoid"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h6&gt;Feature Two&lt;/h6&gt;
+      &lt;p&gt;Content flows naturally.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- More cards... --&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
-<figure class="rounded">
+<h5>List with multiple columns</h5>
+<p class="text-secondary">Display long lists in multiple columns to save vertical space and improve scannability.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="columns-4" style="column-gap: 20px;">
+      <ul style="margin: 0; padding-left: 20px;">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+        <li>Elderberry</li>
+        <li>Fig</li>
+        <li>Grape</li>
+        <li>Honeydew</li>
+        <li>Kiwi</li>
+        <li>Lemon</li>
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>Papaya</li>
+        <li>Quince</li>
+        <li>Raspberry</li>
+        <li>Strawberry</li>
+      </ul>
+    </div>
+    <!-- example .//end -->
+  </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="columns-4"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Cherry&lt;/li&gt;
+    &lt;!-- More items... --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+
+<h5>Using with breakpoints for responsiveness</h5>
+<p>Adjust the number of columns based on screen size for optimal readability. Use more columns on larger screens and fewer on mobile devices. Combine breakpoint prefixes to create fully responsive layouts that adapt to any device.</p>
+<p>
+<code>lg:columns-4 md:columns-3 sm:columns-2 columns-1</code> → 4 columns on large screens, 3 on medium, 2 on small, 1 on mobile<br>
+<code>md:columns-3 max-md:columns-1</code> → 3 columns on medium screens and up, single column on mobile<br>
+<code>columns-2 max-sm:columns-1</code> → 2 columns by default, 1 column on small screens
+</p>
+
+<figure class="rounded border shadow" style="margin-top: 20px;">
+  <div class="card-body">
+    <!-- example -->
+    <div class="md:columns-3 columns-1" style="column-gap: 20px; text-align: justify;">
+      <p>This text layout uses 3 columns on medium screens and larger, but switches to a single column on mobile devices for better readability. This ensures your content is always easy to read, regardless of device.</p>
+      <p>The column layout automatically adjusts when you resize your browser window. Try it! Make your browser narrower to see the text switch to a single column layout, or wider to see it expand into three columns.</p>
+      <p>This approach is perfect for blog posts, articles, documentation, and any text-heavy content where you want to optimize reading experience across all devices without writing any JavaScript.</p>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="md:columns-3 columns-1"&gt;
+  &lt;h6&gt;Responsive Typography&lt;/h6&gt;
+  &lt;p&gt;This text layout uses 3 columns on medium screens...&lt;/p&gt;
+  &lt;p&gt;The column layout automatically adjusts...&lt;/p&gt;
+  &lt;p&gt;This approach is perfect for blog posts...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5>Column gap utilities</h5>
+<p class="text-secondary">Control the spacing between columns using gap utility classes. These classes set the <code>column-gap</code> property to create consistent spacing in your multi-column layouts.</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-0</td> <td class="text-purple">column-gap: 0;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-1</td> <td class="text-purple">column-gap: 4px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-2</td> <td class="text-purple">column-gap: 8px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-3</td> <td class="text-purple">column-gap: 12px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-4</td> <td class="text-purple">column-gap: 16px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-5</td> <td class="text-purple">column-gap: 20px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-6</td> <td class="text-purple">column-gap: 24px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-7</td> <td class="text-purple">column-gap: 28px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-8</td> <td class="text-purple">column-gap: 32px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-9</td> <td class="text-purple">column-gap: 36px;</td> </tr>
+  <tr> <td class="text-blue">.gap-cols-10</td> <td class="text-purple">column-gap: 40px;</td> </tr>
+</table>
+
+<h5>Examples with column gaps</h5>
+<p class="text-secondary">Combine column classes with gap utilities to control spacing between columns without writing inline CSS.</p>
+
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div style="display: grid; gap: 20px;">
+      
+      <div>
+        <p class="text-secondary"><strong>No gap (gap-cols-0):</strong></p>
+        <div class="columns-3 gap-cols-0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-secondary"><strong>Small gap (gap-cols-3):</strong></p>
+        <div class="columns-3 gap-cols-3">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- No gap --&gt;
+&lt;div class="columns-3 gap-cols-0"&gt;
+  &lt;p&gt;Content with no spacing between columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Small gap --&gt;
+&lt;div class="columns-3 gap-cols-3"&gt;
+  &lt;p&gt;Content with 12px spacing&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5>Responsive column gaps</h5>
+<p>Gap utilities also support responsive breakpoints, allowing you to adjust spacing at different screen sizes. Use larger gaps on desktop and smaller gaps on mobile for optimal visual balance.</p>
+
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="md:columns-3 columns-2 lg:gap-cols-8 md:gap-cols-5 gap-cols-2">
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body p-4">
+          <div class="badge badge-blue">Responsive</div>
+          <p>Gap adjusts by screen size</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body p-4">
+          <div class="badge badge-green">Adaptive</div>
+          <p>32px on large screens</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body p-4">
+          <div class="badge badge-orange">Flexible</div>
+          <p>20px on medium screens</p>
+        </div>
+      </div>
+      <div class="card break-inside-avoid" style="margin-bottom: 16px;">
+        <div class="card-body p-4">
+          <div class="badge badge-purple">Mobile</div>
+          <p>8px on small screens</p>
+        </div>
+      </div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="md:columns-3 columns-2 lg:gap-cols-8 md:gap-cols-5 gap-cols-2"&gt;
+  &lt;div class="card break-inside-avoid"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;div class="badge"&gt;Responsive&lt;/div&gt;
+      &lt;p&gt;Gap adjusts by screen size&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- More cards... --&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+
+<h5>💡 Best Practices</h5>
+<ul class="list-bullet">
+  <li>Always use <code>break-inside-avoid</code> on cards and block elements to prevent awkward splits</li>
+  <li>Add <code>column-gap</code> CSS property to control spacing between columns (default varies by browser)</li>
+  <li>Start with fewer columns on mobile (<code>columns-1</code> or <code>columns-2</code>) for better readability</li>
+  <li>Test with various content lengths - columns work best when content can flow naturally</li>
+  <li>For images, consider using <code>width: 100%</code> and <code>display: block</code> to prevent layout issues</li>
+  <li>Combine with <code>column-rule</code> CSS property to add vertical lines between columns</li>
+</ul>
+
+
 </article>
 
 <!-- === end of documentation === -->
+
 
 
 

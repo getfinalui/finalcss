@@ -42,69 +42,478 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
-<!-- === start of documentation === -->
+  <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Position</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Position utilities control how elements are positioned in the document flow and allow precise placement using offset values. Use these classes to set positioning context (static, relative, absolute, fixed, sticky) and position elements using top, bottom, left, and right properties. Perfect for creating overlays, tooltips, dropdown menus, sticky navigation, and any layout requiring precise element placement.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>Position classes</h5>
+<p class="text-secondary">Here are representative examples of these classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">.static</td> <td class="text-purple">position: static;</td> </tr>
+  <tr> <td class="text-blue">.relative</td> <td class="text-purple">position: relative;</td> </tr>
+  <tr> <td class="text-blue">.absolute</td> <td class="text-purple">position: absolute;</td> </tr>
+  <tr> <td class="text-blue">.fixed</td> <td class="text-purple">position: fixed;</td> </tr>
+  <tr> <td class="text-blue">.sticky</td> <td class="text-purple">position: sticky;</td> </tr>
+  <tr> <td class="text-blue">.fixed-top</td> <td class="text-purple">position: fixed; top: 0; left: 0; right: 0; z-index: 1020;</td> </tr>
+  <tr> <td class="text-blue">.sticky-top</td> <td class="text-purple">position: sticky; top: 0; z-index: 1000;</td> </tr>
+  <tr> <td class="text-blue">.fixed-bottom</td> <td class="text-purple">position: fixed; bottom: 0; left: 0; right: 0; z-index: 1020;</td> </tr>
+  <tr> <td class="text-blue">.sticky-bottom</td> <td class="text-purple">position: sticky; bottom: 0; z-index: 1000;</td> </tr>
 </table>
 
+<p>You can create responsive position variants by adding breakpoint prefixes. For example, use <code>lg:relative</code> to make an element relative only on large screens, or <code>max-sm:fixed</code> to fix an element on small screens and below. Combine multiple breakpoints like <code>lg:absolute md:relative max-sm:static</code> for complete responsive control.</p>
 
-<h5> Basic example </h5>
+<h5>Basic example of position</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="relative" style="height: 180px; background-color: var(--neutral-100); padding: 20px;">
+      <div class="badge badge-blue">I'm in normal flow (relative)</div>
+      <div class="absolute top-0 right-0 badge badge-green">Absolute positioned</div>
+      <div class="absolute bottom-0 left-0 badge badge-orange">Bottom left corner</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative"&gt;
+  &lt;div class="badge"&gt;I'm in normal flow&lt;/div&gt;
+  &lt;div class="absolute top-0 right-0 badge"&gt;Absolute positioned&lt;/div&gt;
+  &lt;div class="absolute bottom-0 left-0 badge"&gt;Bottom left corner&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Arrange elements (px)</h5>
+<p class="text-secondary">Position elements with pixel-based offset values. These classes provide precise control for small adjustments and fixed spacing.</p>
+<div class="row row-cols-4">
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.top-auto</td> <td class="text-purple">top: auto;</td> </tr>
+      <tr> <td class="text-blue">.top-initial</td> <td class="text-purple">top: initial;</td> </tr>
+      <tr> <td class="text-blue">.top-unset</td> <td class="text-purple">top: unset;</td> </tr>
+      <tr> <td class="text-blue">.top-0</td> <td class="text-purple">top: 0;</td> </tr>
+      <tr> <td class="text-blue">.top-1</td> <td class="text-purple">top: 4px;</td> </tr>
+      <tr> <td class="text-blue">.top-2</td> <td class="text-purple">top: 8px;</td> </tr>
+      <tr> <td class="text-blue">.top-3</td> <td class="text-purple">top: 12px;</td> </tr>
+      <tr> <td class="text-blue">.top-4</td> <td class="text-purple">top: 16px;</td> </tr>
+      <tr> <td class="text-blue">.top-5</td> <td class="text-purple">top: 20px;</td> </tr>
+      <tr> <td class="text-blue">.top-6</td> <td class="text-purple">top: 24px;</td> </tr>
+      <tr> <td class="text-blue">.top-7</td> <td class="text-purple">top: 28px;</td> </tr>
+      <tr> <td class="text-blue">.top-8</td> <td class="text-purple">top: 32px;</td> </tr>
+      <tr> <td class="text-blue">.top-9</td> <td class="text-purple">top: 36px;</td> </tr>
+      <tr> <td class="text-blue">.top-10</td> <td class="text-purple">top: 40px;</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.bottom-auto</td> <td class="text-purple">bottom: auto;</td> </tr>
+      <tr> <td class="text-blue">.bottom-initial</td> <td class="text-purple">bottom: initial;</td> </tr>
+      <tr> <td class="text-blue">.bottom-unset</td> <td class="text-purple">bottom: unset;</td> </tr>
+      <tr> <td class="text-blue">.bottom-0</td> <td class="text-purple">bottom: 0;</td> </tr>
+      <tr> <td class="text-blue">.bottom-1</td> <td class="text-purple">bottom: 4px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-2</td> <td class="text-purple">bottom: 8px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-3</td> <td class="text-purple">bottom: 12px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-4</td> <td class="text-purple">bottom: 16px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-5</td> <td class="text-purple">bottom: 20px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-6</td> <td class="text-purple">bottom: 24px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-7</td> <td class="text-purple">bottom: 28px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-8</td> <td class="text-purple">bottom: 32px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-9</td> <td class="text-purple">bottom: 36px;</td> </tr>
+      <tr> <td class="text-blue">.bottom-10</td> <td class="text-purple">bottom: 40px;</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.left-auto</td> <td class="text-purple">left: auto;</td> </tr>
+      <tr> <td class="text-blue">.left-initial</td> <td class="text-purple">left: initial;</td> </tr>
+      <tr> <td class="text-blue">.left-unset</td> <td class="text-purple">left: unset;</td> </tr>
+      <tr> <td class="text-blue">.left-0</td> <td class="text-purple">left: 0;</td> </tr>
+      <tr> <td class="text-blue">.left-1</td> <td class="text-purple">left: 4px;</td> </tr>
+      <tr> <td class="text-blue">.left-2</td> <td class="text-purple">left: 8px;</td> </tr>
+      <tr> <td class="text-blue">.left-3</td> <td class="text-purple">left: 12px;</td> </tr>
+      <tr> <td class="text-blue">.left-4</td> <td class="text-purple">left: 16px;</td> </tr>
+      <tr> <td class="text-blue">.left-5</td> <td class="text-purple">left: 20px;</td> </tr>
+      <tr> <td class="text-blue">.left-6</td> <td class="text-purple">left: 24px;</td> </tr>
+      <tr> <td class="text-blue">.left-7</td> <td class="text-purple">left: 28px;</td> </tr>
+      <tr> <td class="text-blue">.left-8</td> <td class="text-purple">left: 32px;</td> </tr>
+      <tr> <td class="text-blue">.left-9</td> <td class="text-purple">left: 36px;</td> </tr>
+      <tr> <td class="text-blue">.left-10</td> <td class="text-purple">left: 40px;</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.right-auto</td> <td class="text-purple">right: auto;</td> </tr>
+      <tr> <td class="text-blue">.right-initial</td> <td class="text-purple">right: initial;</td> </tr>
+      <tr> <td class="text-blue">.right-unset</td> <td class="text-purple">right: unset;</td> </tr>
+      <tr> <td class="text-blue">.right-0</td> <td class="text-purple">right: 0;</td> </tr>
+      <tr> <td class="text-blue">.right-1</td> <td class="text-purple">right: 4px;</td> </tr>
+      <tr> <td class="text-blue">.right-2</td> <td class="text-purple">right: 8px;</td> </tr>
+      <tr> <td class="text-blue">.right-3</td> <td class="text-purple">right: 12px;</td> </tr>
+      <tr> <td class="text-blue">.right-4</td> <td class="text-purple">right: 16px;</td> </tr>
+      <tr> <td class="text-blue">.right-5</td> <td class="text-purple">right: 20px;</td> </tr>
+      <tr> <td class="text-blue">.right-6</td> <td class="text-purple">right: 24px;</td> </tr>
+      <tr> <td class="text-blue">.right-7</td> <td class="text-purple">right: 28px;</td> </tr>
+      <tr> <td class="text-blue">.right-8</td> <td class="text-purple">right: 32px;</td> </tr>
+      <tr> <td class="text-blue">.right-9</td> <td class="text-purple">right: 36px;</td> </tr>
+      <tr> <td class="text-blue">.right-10</td> <td class="text-purple">right: 40px;</td> </tr>
+    </table>
+  </aside>
+</div>
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Position badges and notification indicators with precise pixel offsets</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="relative" style="height: 200px; background-color: var(--neutral-100); padding: 20px;">
+      <div class="absolute top-2 right-2 badge badge-red">New</div>
+      <div class="absolute top-5 left-5 badge badge-blue">8px from edges</div>
+      <div class="absolute bottom-3 right-3 badge badge-green">12px offset</div>
+      <button class="btn btn-blue absolute bottom-5 left-5">Button</button>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative"&gt;
+  &lt;div class="absolute top-2 right-2 badge badge-red"&gt;New&lt;/div&gt;
+  &lt;div class="absolute top-5 left-5 badge badge-blue"&gt;8px from edges&lt;/div&gt;
+  &lt;div class="absolute bottom-3 right-3 badge badge-green"&gt;12px offset&lt;/div&gt;
+  &lt;button class="btn absolute bottom-5 left-5"&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<h5>Arrange elements (%)</h5>
+<p class="text-secondary">Position elements with percentage-based offsets for responsive, fluid layouts that scale with container size.</p>
+<div class="row row-cols-4">
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.top-5%</td> <td class="text-purple">top: 5%;</td> </tr>
+      <tr> <td class="text-blue">.top-10%</td> <td class="text-purple">top: 10%;</td> </tr>
+      <tr> <td class="text-blue">.top-15%</td> <td class="text-purple">top: 15%;</td> </tr>
+      <tr> <td class="text-blue">.top-20%</td> <td class="text-purple">top: 20%;</td> </tr>
+      <tr> <td class="text-blue">.top-25%</td> <td class="text-purple">top: 25%;</td> </tr>
+      <tr> <td class="text-blue">.top-30%</td> <td class="text-purple">top: 30%;</td> </tr>
+      <tr> <td class="text-blue">.top-35%</td> <td class="text-purple">top: 35%;</td> </tr>
+      <tr> <td class="text-blue">.top-40%</td> <td class="text-purple">top: 40%;</td> </tr>
+      <tr> <td class="text-blue">.top-45%</td> <td class="text-purple">top: 45%;</td> </tr>
+      <tr> <td class="text-blue">.top-50%</td> <td class="text-purple">top: 50%;</td> </tr>
+      <tr> <td class="text-blue">.top-55%</td> <td class="text-purple">top: 55%;</td> </tr>
+      <tr> <td class="text-blue">.top-60%</td> <td class="text-purple">top: 60%;</td> </tr>
+      <tr> <td class="text-blue">.top-65%</td> <td class="text-purple">top: 65%;</td> </tr>
+      <tr> <td class="text-blue">.top-70%</td> <td class="text-purple">top: 70%;</td> </tr>
+      <tr> <td class="text-blue">.top-75%</td> <td class="text-purple">top: 75%;</td> </tr>
+      <tr> <td class="text-blue">.top-80%</td> <td class="text-purple">top: 80%;</td> </tr>
+      <tr> <td class="text-blue">.top-85%</td> <td class="text-purple">top: 85%;</td> </tr>
+      <tr> <td class="text-blue">.top-90%</td> <td class="text-purple">top: 90%;</td> </tr>
+      <tr> <td class="text-blue">.top-95%</td> <td class="text-purple">top: 95%;</td> </tr>
+      <tr> <td class="text-blue">.top-100%</td> <td class="text-purple">top: 100%;</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.bottom-5%</td> <td class="text-purple">bottom: 5%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-10%</td> <td class="text-purple">bottom: 10%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-15%</td> <td class="text-purple">bottom: 15%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-20%</td> <td class="text-purple">bottom: 20%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-25%</td> <td class="text-purple">bottom: 25%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-30%</td> <td class="text-purple">bottom: 30%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-35%</td> <td class="text-purple">bottom: 35%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-40%</td> <td class="text-purple">bottom: 40%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-45%</td> <td class="text-purple">bottom: 45%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-50%</td> <td class="text-purple">bottom: 50%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-55%</td> <td class="text-purple">bottom: 55%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-60%</td> <td class="text-purple">bottom: 60%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-65%</td> <td class="text-purple">bottom: 65%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-70%</td> <td class="text-purple">bottom: 70%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-75%</td> <td class="text-purple">bottom: 75%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-80%</td> <td class="text-purple">bottom: 80%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-85%</td> <td class="text-purple">bottom: 85%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-90%</td> <td class="text-purple">bottom: 90%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-95%</td> <td class="text-purple">bottom: 95%;</td> </tr>
+      <tr> <td class="text-blue">.bottom-100%</td> <td class="text-purple">bottom: 100%;</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.left-5%</td> <td class="text-purple">left: 5%;</td> </tr>
+      <tr> <td class="text-blue">.left-10%</td> <td class="text-purple">left: 10%;</td> </tr>
+      <tr> <td class="text-blue">.left-15%</td> <td class="text-purple">left: 15%;</td> </tr>
+      <tr> <td class="text-blue">.left-20%</td> <td class="text-purple">left: 20%;</td> </tr>
+      <tr> <td class="text-blue">.left-25%</td> <td class="text-purple">left: 25%;</td> </tr>
+      <tr> <td class="text-blue">.left-30%</td> <td class="text-purple">left: 30%;</td> </tr>
+      <tr> <td class="text-blue">.left-35%</td> <td class="text-purple">left: 35%;</td> </tr>
+      <tr> <td class="text-blue">.left-40%</td> <td class="text-purple">left: 40%;</td> </tr>
+      <tr> <td class="text-blue">.left-45%</td> <td class="text-purple">left: 45%;</td> </tr>
+      <tr> <td class="text-blue">.left-50%</td> <td class="text-purple">left: 50%;</td> </tr>
+      <tr> <td class="text-blue">.left-55%</td> <td class="text-purple">left: 55%;</td> </tr>
+      <tr> <td class="text-blue">.left-60%</td> <td class="text-purple">left: 60%;</td> </tr>
+      <tr> <td class="text-blue">.left-65%</td> <td class="text-purple">left: 65%;</td> </tr>
+      <tr> <td class="text-blue">.left-70%</td> <td class="text-purple">left: 70%;</td> </tr>
+      <tr> <td class="text-blue">.left-75%</td> <td class="text-purple">left: 75%;</td> </tr>
+      <tr> <td class="text-blue">.left-80%</td> <td class="text-purple">left: 80%;</td> </tr>
+      <tr> <td class="text-blue">.left-85%</td> <td class="text-purple">left: 85%;</td> </tr>
+      <tr> <td class="text-blue">.left-90%</td> <td class="text-purple">left: 90%;</td> </tr>
+      <tr> <td class="text-blue">.left-95%</td> <td class="text-purple">left: 95%;</td> </tr>
+      <tr> <td class="text-blue">.left-100%</td> <td class="text-purple">left: 100%;</td> </tr>
+    </table>
+  </aside>
+  <aside>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+      <tr> <td class="text-blue">.right-5%</td> <td class="text-purple">right: 5%;</td> </tr>
+      <tr> <td class="text-blue">.right-10%</td> <td class="text-purple">right: 10%;</td> </tr>
+      <tr> <td class="text-blue">.right-15%</td> <td class="text-purple">right: 15%;</td> </tr>
+      <tr> <td class="text-blue">.right-20%</td> <td class="text-purple">right: 20%;</td> </tr>
+      <tr> <td class="text-blue">.right-25%</td> <td class="text-purple">right: 25%;</td> </tr>
+      <tr> <td class="text-blue">.right-30%</td> <td class="text-purple">right: 30%;</td> </tr>
+      <tr> <td class="text-blue">.right-35%</td> <td class="text-purple">right: 35%;</td> </tr>
+      <tr> <td class="text-blue">.right-40%</td> <td class="text-purple">right: 40%;</td> </tr>
+      <tr> <td class="text-blue">.right-45%</td> <td class="text-purple">right: 45%;</td> </tr>
+      <tr> <td class="text-blue">.right-50%</td> <td class="text-purple">right: 50%;</td> </tr>
+      <tr> <td class="text-blue">.right-55%</td> <td class="text-purple">right: 55%;</td> </tr>
+      <tr> <td class="text-blue">.right-60%</td> <td class="text-purple">right: 60%;</td> </tr>
+      <tr> <td class="text-blue">.right-65%</td> <td class="text-purple">right: 65%;</td> </tr>
+      <tr> <td class="text-blue">.right-70%</td> <td class="text-purple">right: 70%;</td> </tr>
+      <tr> <td class="text-blue">.right-75%</td> <td class="text-purple">right: 75%;</td> </tr>
+      <tr> <td class="text-blue">.right-80%</td> <td class="text-purple">right: 80%;</td> </tr>
+      <tr> <td class="text-blue">.right-85%</td> <td class="text-purple">right: 85%;</td> </tr>
+      <tr> <td class="text-blue">.right-90%</td> <td class="text-purple">right: 90%;</td> </tr>
+      <tr> <td class="text-blue">.right-95%</td> <td class="text-purple">right: 95%;</td> </tr>
+      <tr> <td class="text-blue">.right-100%</td> <td class="text-purple">right: 100%;</td> </tr>
+    </table>
+  </aside>
+</div>
+
+<h5>Examples</h5>
+<p class="text-secondary">Create fluid, responsive layouts where elements maintain their relative position regardless of container size</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="relative" style="height: 250px; background-color: var(--neutral-100); padding: 20px;">
+      <div class="absolute top-10% left-10% badge badge-blue">10% from edges</div>
+      <div class="absolute top-25% right-25% badge badge-green">25% positioned</div>
+      <div class="absolute top-50% left-50% badge badge-orange">50% (center start)</div>
+      <div class="absolute bottom-20% right-15% badge badge-purple">Bottom 20%, Right 15%</div>
+      <div class="absolute top-75% left-30% badge badge-red">75% from top</div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative"&gt;
+  &lt;div class="absolute top-10% left-10% badge"&gt;10% from edges&lt;/div&gt;
+  &lt;div class="absolute top-25% right-25% badge"&gt;25% positioned&lt;/div&gt;
+  &lt;div class="absolute top-50% left-50% badge"&gt;50% (center start)&lt;/div&gt;
+  &lt;div class="absolute bottom-20% right-15% badge"&gt;Bottom 20%, Right 15%&lt;/div&gt;
+  &lt;div class="absolute top-75% left-30% badge"&gt;75% from top&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>Using with breakpoints for responsiveness</h5> 
+<p>All position offset classes support responsive breakpoints, allowing you to adjust element positioning at different screen sizes. Prefix any position class with a breakpoint to apply it conditionally. 
+  Use <code>lg:</code>, <code>md:</code>, <code>sm:</code> for minimum widths, or <code>max-lg:</code>, <code>max-md:</code>, <code>max-sm:</code> for maximum widths. 
+  This is essential for creating adaptive layouts where elements need different positioning on mobile vs desktop.</p> 
+
+
+<p><strong>Breakpoint prefixes:</strong> <br> <code>lg:top-10</code> → applies <code>top: 40px</code> on large screens and up<br> <code>md:right-5%</code> → applies <code>right: 5%</code> on medium screens and up<br> <code>max-sm:left-0</code> → applies <code>left: 0</code> on small screens and below (mobile only)<br> <code>max-md:bottom-10%</code> → applies <code>bottom: 10%</code> on medium screens and below </p>
+
+<br>
+
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="relative border-strong" style="height: 200px;">
+      <div class="card p-3 bg-blue-200 absolute bottom-10% lg:bottom-20% max-md:bottom-5%">
+        Default: 10% offset  
+        Mobile: 5% offset 
+        Large: 20% offset 
+      </div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class=&quot;relative border-strong&quot; style=&quot;height: 200px;&quot;&gt;
+      &lt;div class=&quot;card p-3 bg-blue-200 absolute bottom-10% lg:bottom-20% max-md:bottom-5%&quot;&gt;
+        Default: 10% offset  
+        Mobile: 5% offset 
+        Large: 20% offset 
+      &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5>Centering (helpers)</h5>
+<p class="text-secondary">Utility classes for perfectly centering absolutely positioned elements using CSS transforms.</p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">center-y</td> <td class="text-purple">top: 50%; transform: translateY(-50%);</td> </tr>
+  <tr> <td class="text-blue">center-x</td> <td class="text-purple">left: 50%; transform: translateX(-50%);</td> </tr>
+  <tr> <td class="text-blue">center-xy</td> <td class="text-purple">top: 50%; left: 50%; transform: translate(-50%, -50%);</td> </tr>
+</table>
+<p class="text-secondary" style="font-size: 0.9rem; margin-top: 8px;">* Note: The actual implementation uses separate translateY and translateX, but the combined effect centers the element both horizontally and vertically.</p>
+
+<h5>Examples</h5>
+<p class="text-secondary">Perfect for centering modals, overlays, and UI elements without needing to know their dimensions</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="relative border-strong" style="height:360px;">
+      <div class="absolute  center-xy card bg-secondary p-4">
+        <h6>Perfectly Centered Modal</h6>
+        <p class="mb-3">This element is centered both horizontally and vertically using .center-xy</p>
+        <button class="btn btn-blue btn-sm">Got it</button>
+      </div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative" style="height:360px;"&gt;
+  &lt;div class="absolute center-xy card"&gt;
+    &lt;h6&gt;Perfectly Centered Modal&lt;/h6&gt;
+    &lt;p&gt;This element is centered both ways&lt;/p&gt;
+    &lt;button class="btn"&gt;Got it&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<figure class="rounded border shadow" style="margin-top: 20px;">
+  <div class="card-body">
+    <!-- example -->
+    <div class="relative" style="height: 200px; background-color: var(--neutral-100);">
+      <div class="absolute center-x badge badge-blue" style="top: 20px;">Centered horizontally only</div>
+      <div class="absolute center-y badge badge-green" style="left: 20px;">Centered vertically only</div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative" &gt;
+  &lt;div class="absolute center-x badge" style="top: 20px;"&gt;
+    Centered horizontally only
+  &lt;/div&gt;
+  &lt;div class="absolute center-y badge" style="left: 20px;"&gt;
+    Centered vertically only
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+
+<h5>💡 Common Use Cases</h5>
+<ul class="list-bullet">
+  <li> Floating action buttons:  <code>fixed bottom-5 right-5 max-sm:bottom-3 max-sm:right-3</code></li>
+  <li> Mobile-only badges:  <code>absolute top-0 right-0 max-md:top-2 max-md:right-2</code></li>
+  <li> Adaptive overlays:  <code>absolute lg:top-10% lg:right-10% max-lg:center-xy</code></li>
+  <li> Responsive tooltips:  <code>absolute bottom-100% left-50% max-sm:left-0 max-sm:right-0</code></li>
+</ul>
+
+
+
+<hr style="margin: 32px 0;">
+
+<h5>How to customize?</h5>
+<p>You can customize the position offset values by modifying the SCSS maps in your <code>scss/utilities/_position.scss</code> file. Add, remove, or adjust values to match your project's spacing system, then compile the SCSS to generate your custom CSS.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">// Customize pixel-based position offsets
+$position_map:(
+  "auto": auto,
+  "initial": initial,
+  "unset": unset,
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  "4": 16px,
+  "5": 20px,
+  "6": 24px,
+  "7": 28px,
+  "8": 32px,
+  "9": 36px,
+  "10": 40px
+);
+
+// Customize percentage-based position offsets
+$position_map_percent:(
+  "5": 5%,
+  "10": 10%,
+  "15": 15%,
+  "20": 20%,
+  "25": 25%,
+  "30": 30%,
+  "35": 35%,
+  "40": 40%,
+  "45": 45%,
+  "50": 50%,
+  "55": 55%,
+  "60": 60%,
+  "65": 65%,
+  "70": 70%,
+  "75": 75%,
+  "80": 80%,
+  "85": 85%,
+  "90": 90%,
+  "95": 95%,
+  "100": 100%
+);
+
+// Generate position utilities for pixels
+@each $name, $value in $position_map {
+  .top-#{$name} { top: #{$value}; }
+  .bottom-#{$name} { bottom: #{$value}; }
+  .right-#{$name} { right: #{$value}; }
+  .left-#{$name} { left: #{$value}; }
+}
+
+// Generate position utilities for percentages
+@each $name, $value in $position_map_percent {
+  .top-#{$name}\% { top: #{$value}; }
+  .bottom-#{$name}\% { bottom: #{$value}; }
+  .right-#{$name}\% { right: #{$value}; }
+  .left-#{$name}\% { left: #{$value}; }
+}
+
+// Helper classes for centering
+.center-y { top: 50%; transform: translateY(-50%); }
+.center-x { left: 50%; transform: translateX(-50%); }
+.center-xy { top: 50%; left: 50%; transform: translate(-50%, -50%); }</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>After customizing your SCSS variables and maps, you'll need to compile the SCSS into CSS. You have two main options: <strong>Option A:</strong> Use command-line tools like Node.js with npm packages (node-sass, sass, or gulp-sass) if you're comfortable with terminal commands and have Node.js installed on your system. <strong>Option B:</strong> Use visual GUI applications like Prepros.io or CodeKit if you prefer a graphical interface and want to avoid the terminal—these apps automatically watch your SCSS files and compile them to CSS whenever you save changes, making the development process seamless.</p>
+
 </article>
 
 <!-- === end of documentation === -->
