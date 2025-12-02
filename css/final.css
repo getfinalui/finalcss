@@ -6334,7 +6334,7 @@ textarea.form-control {
 .article-wrap > p {
   margin-bottom: 1rem;
 }
-.article-wrap > h1, .article-wrap h2, .article-wrap h3, .article-wrap h4, .article-wrap h5, .article-wrap h6 {
+.article-wrap > h1, .article-wrap > h2, .article-wrap > h3, .article-wrap > h4, .article-wrap > h5, .article-wrap > h6 {
   margin-bottom: 1rem;
 }
 .article-wrap p ~ h1, .article-wrap p ~ h2, .article-wrap p ~ h3, .article-wrap p ~ h4, .article-wrap p ~ h5, .article-wrap p ~ h6 {
