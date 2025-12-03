@@ -43,73 +43,232 @@
 
 
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Text styles</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
+<p>Text style utilities provide comprehensive control over typography styling including font weights, text decoration, text transformation, line height, text alignment, and text wrapping behavior. Use these classes to style text elements, create visual emphasis, control text flow, and improve readability. These utilities work on any text-containing element and can be combined with other utility classes for complete typography control.</p>
+<p>Responsive: Only for text alignment (text-left text-right, text-center) <br> 
+<span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
+<tr> <td class="text-blue"> font-light <em class="text-muted">or</em> font-300 </td> <td class="text-purple"> font-weight: 300!important; </td>  </tr>
+<tr> <td class="text-blue"> font-normal <em class="text-muted">or</em>  font-400 </td> <td class="text-purple"> font-weight: 400!important; </td>  </tr>
+<tr> <td class="text-blue"> font-medium <em class="text-muted">or</em>  font-500 </td> <td class="text-purple"> font-weight: 500!important; </td>  </tr>
+<tr> <td class="text-blue"> font-semibold <em class="text-muted">or</em>  font-600 </td> <td class="text-purple"> font-weight: 600!important; </td>  </tr>
+<tr> <td class="text-blue"> font-bold <em class="text-muted">or</em>  font-700 </td> <td class="text-purple"> font-weight: 700!important; </td>  </tr>
+<tr> <td class="text-blue"> font-bolder <em class="text-muted">or</em>  font-800 </td> <td class="text-purple"> font-weight: bolder!important; </td>  </tr>
+<tr> <td class="text-blue"> font-style-italic </td> <td class="text-purple"> font-style: italic; </td>  </tr>
+<tr> <td class="text-blue"> font-style-normal </td> <td class="text-purple"> font-style: normal; </td>  </tr>
+<tr> <td class="text-blue"> text-decoration-none </td> <td class="text-purple"> text-decoration: none!important; </td>  </tr>
+<tr> <td class="text-blue"> text-underline </td> <td class="text-purple"> text-decoration: underline!important; </td>  </tr>
+<tr> <td class="text-blue"> text-line-through </td> <td class="text-purple"> text-decoration: line-through!important; </td>  </tr>
+<tr> <td class="text-blue"> text-lowercase </td> <td class="text-purple"> text-transform: lowercase!important; </td>  </tr>
+<tr> <td class="text-blue"> text-uppercase </td> <td class="text-purple"> text-transform: uppercase!important; </td>  </tr>
+<tr> <td class="text-blue"> text-capitalize </td> <td class="text-purple"> text-transform: capitalize!important; </td>  </tr>
+<tr> <td class="text-blue"> text-nowrap </td> <td class="text-purple"> white-space: nowrap!important; text-wrap: nowrap!important; </td>  </tr>
+<tr> <td class="text-blue"> text-truncate </td> <td class="text-purple"> text-overflow: ellipsis; white-space: nowrap; overflow: hidden; </td>  </tr>
+<tr> <td class="text-blue"> text-wrap </td> <td class="text-purple"> text-wrap: wrap!important; </td>  </tr>
+<tr> <td class="text-blue"> text-balance </td> <td class="text-purple"> text-wrap: balance!important; </td>  </tr>
+<tr> <td class="text-blue"> text-pretty </td> <td class="text-purple"> text-wrap: pretty!important; </td>  </tr>
+<tr> <td class="text-blue"> lh-1 </td> <td class="text-purple"> line-height: 1; </td>  </tr>
+<tr> <td class="text-blue"> lh-sm </td> <td class="text-purple"> line-height: var(--line-height-sm, 1.25); </td>  </tr>
+<tr> <td class="text-blue"> lh-base </td> <td class="text-purple"> line-height: var(--line-height-base, 1.4); </td>  </tr>
+<tr> <td class="text-blue"> lh-lg </td> <td class="text-purple"> line-height: var(--line-height-lg, 1.8); </td>  </tr>
+<tr> <td class="text-blue"> text-left </td> <td class="text-purple"> text-align: left; </td>  </tr>
+<tr> <td class="text-blue"> text-center </td> <td class="text-purple"> text-align: center; </td>  </tr>
+<tr> <td class="text-blue"> text-right </td> <td class="text-purple"> text-align: right; </td>  </tr>
+<tr> <td class="text-blue"> text-shadow </td> <td class="text-purple"> text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); </td>  </tr>
 </table>
-
-
-<h5> Basic example </h5>
+<h5> Font weights </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+     <p class="font-light">This text uses light font weight (300)</p>
+     <p class="font-normal">This text uses normal font weight (400)</p>
+     <p class="font-medium">This text uses medium font weight (500)</p>
+     <p class="font-semibold">This text uses semibold font weight (600)</p>
+     <p class="font-bold">This text uses bold font weight (700)</p>
+     <p class="font-bolder">This text uses bolder font weight (800)</p>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;p class=&quot;font-light&quot;&gt;This text uses light font weight (300)&lt;/p&gt;
+&lt;p class=&quot;font-normal&quot;&gt;This text uses normal font weight (400)&lt;/p&gt;
+&lt;p class=&quot;font-medium&quot;&gt;This text uses medium font weight (500)&lt;/p&gt;
+&lt;p class=&quot;font-semibold&quot;&gt;This text uses semibold font weight (600)&lt;/p&gt;
+&lt;p class=&quot;font-bold&quot;&gt;This text uses bold font weight (700)&lt;/p&gt;
+&lt;p class=&quot;font-bolder&quot;&gt;This text uses bolder font weight (800)&lt;/p&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+<h5> Line heights </h5>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+     <div class="mb-3">
+       <p class="lh-1">Line height 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     </div>
+     <div class="mb-3">
+       <p class="lh-sm">Line height small (1.25): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     </div>
+     <div class="mb-3">
+       <p class="lh-base">Line height base (1.4): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     </div>
+     <div class="mb-3">
+       <p class="lh-lg">Line height large (1.8): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     </div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;p class=&quot;lh-1&quot;&gt;Line height 1: Lorem ipsum...&lt;/p&gt;
+&lt;p class=&quot;lh-sm&quot;&gt;Line height small (1.25): Lorem ipsum...&lt;/p&gt;
+&lt;p class=&quot;lh-base&quot;&gt;Line height base (1.4): Lorem ipsum...&lt;/p&gt;
+&lt;p class=&quot;lh-lg&quot;&gt;Line height large (1.8): Lorem ipsum...&lt;/p&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+<h5> Other examples  </h5>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+     <p class="text-uppercase">Uppercase text transformation</p>
+     <p class="text-lowercase">LOWERCASE TEXT TRANSFORMATION</p>
+     <p class="text-capitalize">capitalize each word</p>
+     <p class="font-style-italic">This text is italic</p>
+     <p class="text-line-through">This text has line through decoration</p>
+     <p class="text-center">Center aligned text</p>
+     <p class="text-right">Right aligned text</p>
+     <div class="text-truncate" style="max-width: 200px;">This is a very long text that will be truncated with ellipsis when it exceeds the container width</div>
+     <p class="text-nowrap">This text will not wrap to the next line no matter how long it is</p>
+     <p class="text-shadow">This text has a subtle shadow effect</p>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;p class=&quot;text-uppercase&quot;&gt;Uppercase text transformation&lt;/p&gt;
+&lt;p class=&quot;text-lowercase&quot;&gt;LOWERCASE TEXT TRANSFORMATION&lt;/p&gt;
+&lt;p class=&quot;text-capitalize&quot;&gt;capitalize each word&lt;/p&gt;
+&lt;p class=&quot;font-style-italic&quot;&gt;This text is italic&lt;/p&gt;
+&lt;p class=&quot;text-line-through&quot;&gt;This text has line through&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;Center aligned text&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;Right aligned text&lt;/p&gt;
+&lt;div class=&quot;text-truncate&quot; style=&quot;max-width: 200px;&quot;&gt;Long text truncated...&lt;/div&gt;
+&lt;p class=&quot;text-nowrap&quot;&gt;Text will not wrap&lt;/p&gt;
+&lt;p class=&quot;text-shadow&quot;&gt;Text with shadow effect&lt;/p&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+<h5>Text underline with hover </h5>
+<p>Hover utilities for text decoration allow you to add interactive effects to links and text elements. The hover:text-underline class adds an underline when hovering, perfect for links. The group and group-hover variant allows child elements to respond to hover on a parent container. Use hover:text-decoration-none to remove underlines on hover, useful for styled links that have underlines by default.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+     <a href="#" class="text-decoration-none hover:text-underline">Hover over this link to see underline</a>
+     <br><br>
+     <a href="#" class="text-underline hover:text-decoration-none">This link removes underline on hover</a>
+     <br><br>
+     <div class="group p-3 card max-w-100 hover:bg-secondary">
+       <p>Hover over this container</p>
+       <a href="#" class="text-decoration-none group-hover:text-underline">This link gets underlined when hovering parent</a>
+     </div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;a href=&quot;#&quot; class=&quot;text-decoration-none hover:text-underline&quot;&gt;
+  Hover over this link to see underline
+&lt;/a&gt;
+
+&lt;a href=&quot;#&quot; class=&quot;text-underline hover:text-decoration-none&quot;&gt;
+  This link removes underline on hover
+&lt;/a&gt;
+
+&lt;div class=&quot;group card p-3 hover:bg-secondary&quot;&gt;
+  &lt;p&gt;Hover over this container&lt;/p&gt;
+  &lt;a href=&quot;#&quot; class=&quot;text-decoration-none group-hover:text-underline&quot;&gt;
+    This link gets underlined when hovering parent
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Text align for different screen sizes</h5>
+<p class="text-secondary">Text alignment utilities support responsive breakpoint classes, allowing you to change text alignment based on screen size. This is useful for creating layouts that adapt to different devices - for example, centering text on mobile for better readability while left-aligning on desktop for a more traditional layout. Only text-left, text-right, and text-center support responsive variants.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+    <div class="text-center sm:text-left">
+      <h6>Responsive Heading</h6>
+      <p>Center-aligned on mobile, left-aligned on small screens and up</p>
+    </div>
+    <hr>
+     <p class="text-center md:text-left lg:text-right">
+       This text is centered on mobile, left-aligned on tablet (md), and right-aligned on desktop (lg)
+     </p>
+     <hr>
+     <p class="text-left max-md:text-center">
+       Left-aligned on tablet and desktop, but centered on mobile devices only
+     </p>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class=&quot;text-center sm:text-left&quot;&gt;
+  &lt;h6&gt;Responsive Heading&lt;/h6&gt;
+  &lt;p&gt;Center-aligned on mobile, left-aligned on small screens and up&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;text-center md:text-left lg:text-right&quot;&gt;
+  This text is centered on mobile, left-aligned on tablet (md), 
+  and right-aligned on desktop (lg)
+&lt;/p&gt;
+
+&lt;p class=&quot;text-left max-md:text-center&quot;&gt;
+  Left-aligned on tablet and desktop, but centered on mobile only
+&lt;/p&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize text style utilities by editing scss/utilities/_text-style.scss file. Modify existing classes, add new font weights, change line height CSS variables, or create additional text decoration styles. After making changes, recompile your SCSS to generate the updated CSS file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* Edit in scss/utilities/_text-style.scss */
+
+/* Add custom font weights */
+.font-extra-light { font-weight: 200!important; }
+.font-black { font-weight: 900!important; }
+
+/* Customize line height variables in _variables-root.scss */ 
+:root {
+  --line-height-sm: 1.25;
+  --line-height-base: 1.4;
+  --line-height-lg: 1.8;
+}
+</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>
+  To compile SCSS to CSS, you have two main options: <br>
+<b>Option A:</b> Use Node.js and npm tools if you're comfortable with the terminal and command-line interface.
+<br>
+<b>Option B:</b> Use visual applications like Prepros.io or CodeKit if you prefer graphical user interfaces and want to avoid terminal commands. 
+</p>
 </article>
-
 <!-- === end of documentation === -->
-
-
 
 </main>
 </div> <!-- row end -->

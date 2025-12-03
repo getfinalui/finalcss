@@ -41,72 +41,137 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Text size</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Text size utilities control the font-size of text elements. Use these classes to adjust typography scale across your design. Choose from predefined sizes ranging from extra small (text-xs) to extra large (text-9xl). These utilities are perfect for creating visual hierarchy, emphasizing content, or adapting text sizes for different screen sizes using responsive variants.</p>
 <p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
+<span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
+<tr> <td class="text-blue"> text-xs </td> <td class="text-purple"> font-size: 0.8rem; </td>  </tr>
+<tr> <td class="text-blue"> text-sm </td> <td class="text-purple"> font-size: 0.9rem; </td>  </tr>
+<tr> <td class="text-blue"> text-default </td> <td class="text-purple"> font-size: 1rem; </td>  </tr>
+<tr> <td class="text-blue"> text-lg </td> <td class="text-purple"> font-size: 1.12rem; </td>  </tr>
+<tr> <td class="text-blue"> text-xl </td> <td class="text-purple"> font-size: 1.3rem; </td>  </tr>
+<tr> <td class="text-blue"> text-2xl </td> <td class="text-purple"> font-size: 1.5rem; </td>  </tr>
+<tr> <td class="text-blue"> text-3xl </td> <td class="text-purple"> font-size: 1.8rem; </td>  </tr>
+<tr> <td class="text-blue"> text-4xl </td> <td class="text-purple"> font-size: 2.2rem; </td>  </tr>
+<tr> <td class="text-blue"> text-5xl </td> <td class="text-purple"> font-size: 2.8rem; </td>  </tr>
+<tr> <td class="text-blue"> text-6xl </td> <td class="text-purple"> font-size: 3.4rem; </td>  </tr>
+<tr> <td class="text-blue"> text-7xl </td> <td class="text-purple"> font-size: 4rem; </td>  </tr>
+<tr> <td class="text-blue"> text-8xl </td> <td class="text-purple"> font-size: 5rem; </td>  </tr>
+<tr> <td class="text-blue"> text-9xl </td> <td class="text-purple"> font-size: 6rem; </td>  </tr>
 </table>
-
-
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+     <p class="text-xs">Extra small text (0.8rem)</p>
+     <p class="text-sm">Small text (0.9rem)</p>
+     <p class="text-default">Default text (1rem)</p>
+     <p class="text-lg">Large text (1.12rem)</p>
+     <p class="text-xl">Extra large text (1.3rem)</p>
+     <p class="text-3xl">3XL text (1.8rem)</p>
+     <p class="text-5xl">5XL text (2.8rem)</p>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;p class=&quot;text-xs&quot;&gt;Extra small text (0.8rem)&lt;/p&gt;
+&lt;p class=&quot;text-sm&quot;&gt;Small text (0.9rem)&lt;/p&gt;
+&lt;p class=&quot;text-default&quot;&gt;Default text (1rem)&lt;/p&gt;
+&lt;p class=&quot;text-lg&quot;&gt;Large text (1.12rem)&lt;/p&gt;
+&lt;p class=&quot;text-xl&quot;&gt;Extra large text (1.3rem)&lt;/p&gt;
+&lt;p class=&quot;text-3xl&quot;&gt;3XL text (1.8rem)&lt;/p&gt;
+&lt;p class=&quot;text-5xl&quot;&gt;5XL text (2.8rem)&lt;/p&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Examples with responsive class names</h5>
+<p class="text-secondary">Responsive text size utilities allow you to adapt typography for different screen sizes. For example, you can display large headings on desktop that scale down to smaller sizes on mobile devices for better readability and layout. The example below shows text that is 5xl on desktop (lg), 3xl on tablets (md), and xl on mobile devices.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+     <h2 class="text-xl md:text-3xl lg:text-5xl">Responsive Heading</h2>
+     <p class="text-sm md:text-default lg:text-lg">This paragraph adjusts size based on screen width. Small on mobile, default on tablet, large on desktop.</p>
+     <p class="text-lg max-md:text-sm">Large text on desktop and tablet, but small on mobile devices only.</p>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;h2 class=&quot;text-xl md:text-3xl lg:text-5xl&quot;&gt;Responsive Heading&lt;/h2&gt;
+&lt;p class=&quot;text-sm md:text-default lg:text-lg&quot;&gt;This paragraph adjusts size based on screen width.&lt;/p&gt;
+&lt;p class=&quot;text-lg max-md:text-sm&quot;&gt;Large text on desktop, small on mobile only.&lt;/p&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
-
+<h5> Default heading tags (h1, h2, ..., h6) </h5>
+<p>All heading tags (h1 through h6) come with predefined font sizes that create a clear typographic hierarchy. These headings have a font-weight of 600, line-height of 1.25, and zero margin by default. H1 is the largest at 3rem, scaling down to h6 at 1rem. You can override these defaults using text size utility classes if needed.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+     <h1>Heading 1 </h1>
+     <h2>Heading 2  </h2>
+     <h3>Heading 3 </h3>
+     <h4>Heading 4  </h4>
+     <h5>Heading 5  </h5>
+     <h6>Heading 6  </h6>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;h1&gt;Heading 1 (3rem)&lt;/h1&gt;
+&lt;h2&gt;Heading 2 (2.2rem)&lt;/h2&gt;
+&lt;h3&gt;Heading 3 (1.8rem)&lt;/h3&gt;
+&lt;h4&gt;Heading 4 (1.5rem)&lt;/h4&gt;
+&lt;h5&gt;Heading 5 (1.12rem)&lt;/h5&gt;
+&lt;h6&gt;Heading 6 (1rem)&lt;/h6&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize text sizes by editing the $font-sizes-list map in scss/utilities/_text-size.scss. Add, remove, or modify size values, then recompile your SCSS to CSS. The utility classes and responsive variants will be automatically generated based on your custom configuration and the breakpoints defined in scss/_breakpoint-config.scss.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* Edit this map in scss/utilities/_text-size.scss */
+$font-sizes-list: (
+  xs: 0.8rem,
+  sm: 0.9rem,
+  default: 1rem,
+  lg: 1.12rem,
+  xl: 1.3rem,
+  2xl: 1.5rem,
+  3xl: 1.8rem,
+  4xl: 2.2rem,
+  5xl: 2.8rem,
+  6xl: 3.4rem,
+  7xl: 4rem,
+  8xl: 5rem,
+  9xl: 6rem,
+  // Add your custom sizes here
+  custom: 2.5rem,
+) !default;
+</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
 
+<p>
+  To compile SCSS to CSS, you have two main options: <br>
+  <b>Option A:</b> Use Node.js and npm tools if you're comfortable with the terminal and command-line interface.
+  <br>
+  <b>Option B:</b> Use visual applications like Prepros.io or CodeKit if you prefer graphical user interfaces and want to avoid terminal commands. 
+</p>
+</article>
 <!-- === end of documentation === -->
 
 
