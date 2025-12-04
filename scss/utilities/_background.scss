@@ -17,12 +17,6 @@ $colors_bg_main:(
   "alpha-1": var(--alpha-1),
   "alpha-2": var(--alpha-2),
   "alpha-3": var(--alpha-3),
-  "alpha-4": var(--alpha-4),
-  "alpha-5": var(--alpha-5),
-  "alpha-6": var(--alpha-6),
-  "alpha-7": var(--alpha-7),
-  "alpha-8": var(--alpha-8),
-  "alpha-9": var(--alpha-9),
   "primary": map-get(map-get($colors_list, "primary"), "500"),
   "red": map-get(map-get($colors_list, "red"), "500"),
   "green": map-get(map-get($colors_list, "green"), "500"),
@@ -41,7 +35,7 @@ $colors_bg_main:(
 }
 
 
-// Generate classes for background based on color list in theme.scss 
+// Generate classes for background based on color list of theme.scss 
 // Background for all color shades
 @each $color, $shades in $colors_list {
   // Generate for each shade (100,200,300,... 900)

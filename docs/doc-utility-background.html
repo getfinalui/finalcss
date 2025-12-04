@@ -43,70 +43,276 @@
 
 
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Background Color</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
+<p>Background color utility classes provide a comprehensive system for applying background colors to elements. Use these classes to quickly style containers, cards, buttons, and other UI components. The system includes semantic colors (base, secondary, lower), theme colors (primary, red, green, etc.), and multiple shades (100-900) for each color. All classes support hover states and work seamlessly with dark mode.</p>
+
+<p>Hover support: ✅ Yes <br> 
+<span class="text-secondary">hover:classname, group-hover:classname</span>
 </p>
+
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>Base colors</h5>
+<p>Here are representative examples of semantic and utility background classes defines in <code>scss/_variables-root.scss</code> :</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+<tr> <td class="text-blue"> bg-base</td> <td class="text-purple">background-color: var(--bg-color-base); <span class="text-secondary"> #ffffff</span> </td> </tr>
+<tr> <td class="text-blue"> bg-secondary</td> <td class="text-purple">background-color: var(--bg-color-secondary);  <span class="text-secondary">from var(--neutral-100) </span> </td> </tr>
+<tr> <td class="text-blue"> bg-lower</td> <td class="text-purple">background-color: var(--bg-color-lower); <span class="text-secondary"> from var(--neutral-100); </span> </td> </tr>
+<tr> <td class="text-blue"> bg-transparent</td> <td class="text-purple">background-color: transparent;</td> </tr>
+<tr> <td class="text-blue"> bg-white</td> <td class="text-purple">background-color: #FFF;</td> </tr>
+<tr> <td class="text-blue"> bg-black</td> <td class="text-purple">background-color: #000;</td> </tr>
+<tr> <td class="text-blue"> bg-alpha-1</td> <td class="text-purple">background-color: var(--alpha-1);</td> </tr>
+<tr> <td class="text-blue"> bg-alpha-2</td> <td class="text-purple">background-color: var(--alpha-2);</td> </tr>
+<tr> <td class="text-blue"> bg-alpha-3</td> <td class="text-purple">background-color: var(--alpha-3);</td> </tr>
+</table>
+
+<p><strong>Note:</strong> There is a subtle but important difference between <code>bg-secondary</code> and <code>bg-lower</code>. The <code>bg-lower</code> class is designed for backgrounds behind card elements and switches to the darkest black in dark mode. Meanwhile, <code>bg-secondary</code> flips to a lighter dark shade (neutral-100) in dark mode, making it ideal for card surfaces themselves.</p>
+
+<h5>Main theme colors (500 shades)</h5>
+<p class="text-secondary">These classes use the 500 shade of each color from _theme.scss, providing the primary color value for each theme color:</p>
+<table class="table table-compact table-hover">
+<tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+<tr> <td class="text-blue"> bg-primary</td> <td class="text-purple">background-color: #6163fe;</td> </tr>
+<tr> <td class="text-blue"> bg-red</td> <td class="text-purple">background-color: #ef3232;</td> </tr>
+<tr> <td class="text-blue"> bg-green</td> <td class="text-purple">background-color: #0dab47;</td> </tr>
+<tr> <td class="text-blue"> bg-blue</td> <td class="text-purple">background-color: #3780f6;</td> </tr>
+<tr> <td class="text-blue"> bg-orange</td> <td class="text-purple">background-color: #f97316;</td> </tr>
+<tr> <td class="text-blue"> bg-yellow</td> <td class="text-purple">background-color: #E5B800;</td> </tr>
+<tr> <td class="text-blue"> bg-purple</td> <td class="text-purple">background-color: #a855f7;</td> </tr>
+<tr> <td class="text-blue"> bg-teal</td> <td class="text-purple">background-color: #14b8a6;</td> </tr>
+</table>
+
+<h5>All color shades</h5>
+<p class="text-secondary">Every theme color has 9 shades (100-900) defined in <code>scss/_theme.scss</code>. These shades provide fine-grained control over color intensity. Lower numbers (100-300) are lighter, middle numbers (400-600) are medium intensity, and higher numbers (700-900) are darker. All shades automatically adapt to dark mode.</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  
+  <!-- Primary shades -->
+  <tr> <td class="text-blue"> bg-primary-100</td> <td class="text-purple">background-color: var(--primary-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-200</td> <td class="text-purple">background-color: var(--primary-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-300</td> <td class="text-purple">background-color: var(--primary-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-400</td> <td class="text-purple">background-color: var(--primary-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-500</td> <td class="text-purple">background-color: var(--primary-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-600</td> <td class="text-purple">background-color: var(--primary-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-700</td> <td class="text-purple">background-color: var(--primary-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-800</td> <td class="text-purple">background-color: var(--primary-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-primary-900</td> <td class="text-purple">background-color: var(--primary-900);</td> </tr>
+  
+  <!-- Neutral shades -->
+  <tr> <td class="text-blue"> bg-neutral-0</td> <td class="text-purple">background-color: var(--neutral-0);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-50</td> <td class="text-purple">background-color: var(--neutral-50);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-100</td> <td class="text-purple">background-color: var(--neutral-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-200</td> <td class="text-purple">background-color: var(--neutral-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-300</td> <td class="text-purple">background-color: var(--neutral-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-400</td> <td class="text-purple">background-color: var(--neutral-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-500</td> <td class="text-purple">background-color: var(--neutral-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-600</td> <td class="text-purple">background-color: var(--neutral-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-700</td> <td class="text-purple">background-color: var(--neutral-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-800</td> <td class="text-purple">background-color: var(--neutral-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-900</td> <td class="text-purple">background-color: var(--neutral-900);</td> </tr>
+  <tr> <td class="text-blue"> bg-neutral-1000</td> <td class="text-purple">background-color: var(--neutral-1000);</td> </tr>
+  
+  <!-- Blue shades -->
+  <tr> <td class="text-blue"> bg-blue-100</td> <td class="text-purple">background-color: var(--blue-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-200</td> <td class="text-purple">background-color: var(--blue-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-300</td> <td class="text-purple">background-color: var(--blue-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-400</td> <td class="text-purple">background-color: var(--blue-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-500</td> <td class="text-purple">background-color: var(--blue-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-600</td> <td class="text-purple">background-color: var(--blue-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-700</td> <td class="text-purple">background-color: var(--blue-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-800</td> <td class="text-purple">background-color: var(--blue-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-blue-900</td> <td class="text-purple">background-color: var(--blue-900);</td> </tr>
+  
+  <!-- Red shades -->
+  <tr> <td class="text-blue"> bg-red-100</td> <td class="text-purple">background-color: var(--red-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-200</td> <td class="text-purple">background-color: var(--red-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-300</td> <td class="text-purple">background-color: var(--red-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-400</td> <td class="text-purple">background-color: var(--red-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-500</td> <td class="text-purple">background-color: var(--red-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-600</td> <td class="text-purple">background-color: var(--red-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-700</td> <td class="text-purple">background-color: var(--red-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-800</td> <td class="text-purple">background-color: var(--red-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-red-900</td> <td class="text-purple">background-color: var(--red-900);</td> </tr>
+  
+  <!-- Green shades -->
+  <tr> <td class="text-blue"> bg-green-100</td> <td class="text-purple">background-color: var(--green-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-200</td> <td class="text-purple">background-color: var(--green-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-300</td> <td class="text-purple">background-color: var(--green-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-400</td> <td class="text-purple">background-color: var(--green-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-500</td> <td class="text-purple">background-color: var(--green-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-600</td> <td class="text-purple">background-color: var(--green-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-700</td> <td class="text-purple">background-color: var(--green-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-800</td> <td class="text-purple">background-color: var(--green-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-green-900</td> <td class="text-purple">background-color: var(--green-900);</td> </tr>
+  
+  <!-- Orange shades -->
+  <tr> <td class="text-blue"> bg-orange-100</td> <td class="text-purple">background-color: var(--orange-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-200</td> <td class="text-purple">background-color: var(--orange-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-300</td> <td class="text-purple">background-color: var(--orange-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-400</td> <td class="text-purple">background-color: var(--orange-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-500</td> <td class="text-purple">background-color: var(--orange-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-600</td> <td class="text-purple">background-color: var(--orange-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-700</td> <td class="text-purple">background-color: var(--orange-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-800</td> <td class="text-purple">background-color: var(--orange-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-orange-900</td> <td class="text-purple">background-color: var(--orange-900);</td> </tr>
+  
+  <!-- Yellow shades -->
+  <tr> <td class="text-blue"> bg-yellow-100</td> <td class="text-purple">background-color: var(--yellow-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-200</td> <td class="text-purple">background-color: var(--yellow-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-300</td> <td class="text-purple">background-color: var(--yellow-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-400</td> <td class="text-purple">background-color: var(--yellow-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-500</td> <td class="text-purple">background-color: var(--yellow-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-600</td> <td class="text-purple">background-color: var(--yellow-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-700</td> <td class="text-purple">background-color: var(--yellow-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-800</td> <td class="text-purple">background-color: var(--yellow-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-yellow-900</td> <td class="text-purple">background-color: var(--yellow-900);</td> </tr>
+  
+  <!-- Purple shades -->
+  <tr> <td class="text-blue"> bg-purple-100</td> <td class="text-purple">background-color: var(--purple-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-200</td> <td class="text-purple">background-color: var(--purple-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-300</td> <td class="text-purple">background-color: var(--purple-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-400</td> <td class="text-purple">background-color: var(--purple-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-500</td> <td class="text-purple">background-color: var(--purple-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-600</td> <td class="text-purple">background-color: var(--purple-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-700</td> <td class="text-purple">background-color: var(--purple-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-800</td> <td class="text-purple">background-color: var(--purple-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-purple-900</td> <td class="text-purple">background-color: var(--purple-900);</td> </tr>
+  
+  <!-- Teal shades -->
+  <tr> <td class="text-blue"> bg-teal-100</td> <td class="text-purple">background-color: var(--teal-100);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-200</td> <td class="text-purple">background-color: var(--teal-200);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-300</td> <td class="text-purple">background-color: var(--teal-300);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-400</td> <td class="text-purple">background-color: var(--teal-400);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-500</td> <td class="text-purple">background-color: var(--teal-500);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-600</td> <td class="text-purple">background-color: var(--teal-600);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-700</td> <td class="text-purple">background-color: var(--teal-700);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-800</td> <td class="text-purple">background-color: var(--teal-800);</td> </tr>
+  <tr> <td class="text-blue"> bg-teal-900</td> <td class="text-purple">background-color: var(--teal-900);</td> </tr>
 </table>
 
 
-<h5> Basic example </h5>
+<h5>Dark mode</h5>
+<p>All color variables defined in <code>scss/_theme.scss</code> have both light and dark mode versions. The system automatically switches to dark mode colors when you add the <code>theme-dark</code> class to the HTML tag or set the <code>data-theme="dark"</code> attribute. No additional classes are needed—your background colors will automatically adapt to the theme.</p>
+
+<h5>Hover state</h5>
+<p>All background color classes support hover interactions using the <code>hover:</code> prefix. Additionally, you can create group hover effects where child elements respond to parent hover using the <code>group-hover:</code> prefix. The parent element must have the <code>group</code> class applied for group hover to work.</p>
+
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+<div class="bg-primary text-white p-4 rounded mb-3">Primary Background</div>
+<div class="bg-secondary p-4 rounded mb-3">Secondary Background</div>
+<div class="bg-green-200 p-4 rounded">Green 200 Shade</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="bg-primary text-white p-4 rounded mb-3"&gt;Primary Background&lt;/div&gt;
+&lt;div class="bg-secondary p-4 rounded mb-3"&gt;Secondary Background&lt;/div&gt;
+&lt;div class="bg-green-200 p-4 rounded"&gt;Green 200 Shade&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Examples with hover</h5>
+<p class="text-secondary">Hover states provide visual feedback when users interact with elements. Use simple hover classes for individual elements, or group-hover for coordinated effects across related elements.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div class="bg-blue hover:bg-blue-700 text-white p-4 rounded mb-3 transition">
+  Hover over me to see darker blue
+</div>
+<div class="bg-transparent hover:bg-red-100 p-4 rounded border mb-3 transition">
+  Transparent to light red on hover
+</div>
+<div class="group border rounded p-3">
+  <p class="mb-2">Hover over this card</p>
+  <div class="bg-neutral-200 group-hover:bg-green-500 p-3 rounded transition text-white">
+    This changes to green when parent is hovered
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="bg-blue hover:bg-blue-700 text-white p-4 rounded transition"&gt;
+  Hover over me to see darker blue
+&lt;/div&gt;
+
+&lt;div class="bg-transparent hover:bg-red-100 p-4 rounded border transition"&gt;
+  Transparent to light red on hover
+&lt;/div&gt;
+
+&lt;div class="group border rounded p-3"&gt;
+  &lt;p&gt;Hover over this card&lt;/p&gt;
+  &lt;div class="bg-neutral-200 group-hover:bg-green-500 p-3 rounded transition"&gt;
+    This changes to green when parent is hovered
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
+<h5>How to customize?</h5>
+<p>To customize background colors, edit the <code>scss/utilities/_background.scss</code> file. You can modify the <code>$colors_bg_main</code> map to change which shade is used for base color classes (e.g., changing bg-blue from shade 500 to 600), or edit <code>scss/_theme.scss</code> to adjust the actual color values. After making changes, recompile your SCSS to CSS.</p>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* Define basic background colors in scss/utilities/_background.scss */
+$colors_bg_main:(
+  "primary": map-get(map-get($colors_list, "primary"), "500"),
+  "red": map-get(map-get($colors_list, "red"), "500"),
+  "green": map-get(map-get($colors_list, "green"), "500"),
+  /* Add your custom colors here */
+  "custom": #FF5733
+);
 
+/* Generate classes for all background colors */
+@each $classname, $value in $colors_bg_main {
+  .bg-#{$classname} { 
+    background-color: #{$value}; 
+  }
+  .hover\:bg-#{$classname}:hover { 
+    background-color: #{$value}; 
+  }
+  .group:hover .group-hover\:bg-#{$classname} { 
+    background-color: #{$value}; 
+  }
+}
+
+/* Generate classes for all color shades from _theme.scss */
+@each $color, $shades in $colors_list {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} { 
+      background-color: var(--#{$color}-#{$shade}); 
+    }
+    .hover\:bg-#{$color}-#{$shade}:hover { 
+      background-color: var(--#{$color}-#{$shade}) !important; 
+    }
+    .group:hover .group-hover\:bg-#{$color}-#{$shade} { 
+      background-color: var(--#{$color}-#{$shade}) !important; 
+    }  
+  }
+}</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p>
+  To compile SCSS to CSS, you have two main options: <br>
+  <b>Option A:</b> Use Node.js and npm tools if you're comfortable with the terminal and command-line interface.
+  <br>
+  <b>Option B:</b> Use visual applications like Prepros.io or CodeKit if you prefer graphical user interfaces and want to avoid terminal commands. 
+</p>
+
+</article>
 <!-- === end of documentation === -->
 
 
