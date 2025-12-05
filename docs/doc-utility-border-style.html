@@ -42,72 +42,363 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
+
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Border color and style</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
+<p>Border utility classes provide a flexible way to add borders to elements with various styles, colors, widths, and side-specific applications. Use these classes to create visual boundaries, highlight interactive elements, or separate content sections. Classes can be combined to create custom border styles and are fully responsive with breakpoint support.</p>
+<p>Hover support: ✅ Yes <br> 
+  <span class="text-secondary">hover:classname, group-hover:classname</span>
 </p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>Default border color</h5>
+<p>There is default border color set on file <code>scss/_variables-root.scss</code><br>
+<code>--border-color-default: var(--neutral-200);</code>. It adapts on dark and light theme</p>
+
+<h5>Border on all sides</h5>
+<p>Here are representative examples of these classes:</p>
+
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">border</td> <td class="text-purple">border: 1px solid var(--border-color-default);</td> </tr>
+  <tr> <td class="text-blue">border-0</td> <td class="text-purple">border: 0 !important;</td> </tr>
+  <tr> <td class="text-blue">border-none</td> <td class="text-purple">border: none !important;</td> </tr>
+  <tr> <td class="text-blue">border-default</td> <td class="text-purple">border: 1px solid var(--border-color-default);</td> </tr>
+  <tr> <td class="text-blue">border-strong</td> <td class="text-purple">border: 1px solid var(--neutral-300);</td> </tr>
+  <tr> <td class="text-blue">border-transparent</td> <td class="text-purple">border: 1px solid transparent;</td> </tr>
+  <tr> <td class="text-blue">border-white</td> <td class="text-purple">border: 1px solid white;</td> </tr>
+  <tr> <td class="text-blue">border-black</td> <td class="text-purple">border: 1px solid black;</td> </tr>
+  <tr> <td class="text-blue">border-primary</td> <td class="text-purple">border: 1px solid #6163fe;</td> </tr>
+  <tr> <td class="text-blue">border-red</td> <td class="text-purple">border: 1px solid #ef3232;</td> </tr>
+  <tr> <td class="text-blue">border-green</td> <td class="text-purple">border: 1px solid #0dab47;</td> </tr>
+  <tr> <td class="text-blue">border-blue</td> <td class="text-purple">border: 1px solid #3780f6;</td> </tr>
+  <tr> <td class="text-blue">border-orange</td> <td class="text-purple">border: 1px solid #f97316;</td> </tr>
+  <tr> <td class="text-blue">border-yellow</td> <td class="text-purple">border: 1px solid #E5B800;</td> </tr>
+  <tr> <td class="text-blue">border-purple</td> <td class="text-purple">border: 1px solid #a855f7;</td> </tr>
+  <tr> <td class="text-blue">border-teal</td> <td class="text-purple">border: 1px solid #14b8a6;</td> </tr>
 </table>
 
 
-<h5> Basic example </h5>
+<h5>Examples</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="border p-3 mb-3">Default border with adaptive color</div>
+    <div class="border-primary p-3 mb-3">Primary brand color border</div>
+    <div class="border-red p-3 mb-3">Red border for errors or alerts</div>
+    <div class="border-green p-3 mb-3">Green border for success states</div>
+    <div class="border-blue p-3 mb-3">Blue border for informational elements</div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border p-3"&gt;Default border with adaptive color&lt;/div&gt;
+&lt;div class="border-primary p-3"&gt;Primary brand color border&lt;/div&gt;
+&lt;div class="border-red p-3"&gt;Red border for errors or alerts&lt;/div&gt;
+&lt;div class="border-green p-3"&gt;Green border for success states&lt;/div&gt;
+&lt;div class="border-blue p-3"&gt;Blue border for informational elements&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
+
+<h5>Border with hover state</h5>
+<p>Add interactive visual feedback by changing border colors on hover. Use <code>hover:</code> prefix for element hover, or <code>group-hover:</code> for parent-triggered hover effects. This is useful for cards, buttons, and interactive elements.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="border-default hover:border-primary p-3 mb-3" style="cursor: pointer;">Hover me - border changes to primary</div>
+    <div class="border hover:border-red p-3 mb-3" style="cursor: pointer;">Hover me - border changes to red</div>
+    <div class="group border-default p-3">
+      <div class="border-transparent group-hover:border-green p-2">Child element - border appears when parent is hovered</div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border-default hover:border-primary p-3"&gt;
+  Hover me - border changes to primary
+&lt;/div&gt;
+
+&lt;div class="border hover:border-red p-3"&gt;
+  Hover me - border changes to red
+&lt;/div&gt;
+
+&lt;div class="group border-default p-3"&gt;
+  &lt;div class="border-transparent group-hover:border-green p-2"&gt;
+    Child element - border appears when parent is hovered
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+
+<h5>More color shades for border-color</h5>
+<p>Use these classes to apply specific color intensities. These classes only set border-color, so combine them with border-width and border-style classes. Available for: primary, red, green, blue, orange, yellow, purple, teal, and neutral colors.</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">border-color-primary-100</td> <td class="text-purple">border-color: var(--primary-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-200</td> <td class="text-purple">border-color: var(--primary-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-300</td> <td class="text-purple">border-color: var(--primary-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-400</td> <td class="text-purple">border-color: var(--primary-400);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-500</td> <td class="text-purple">border-color: var(--primary-500);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-600</td> <td class="text-purple">border-color: var(--primary-600);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-700</td> <td class="text-purple">border-color: var(--primary-700);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-800</td> <td class="text-purple">border-color: var(--primary-800);</td> </tr>
+  <tr> <td class="text-blue">border-color-primary-900</td> <td class="text-purple">border-color: var(--primary-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-red-100</td> <td class="text-purple">border-color: var(--red-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-red-200</td> <td class="text-purple">border-color: var(--red-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-red-300</td> <td class="text-purple">border-color: var(--red-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-red-...</td> <td class="text-purple">border-color: var(--red-...);</td> </tr>
+  <tr> <td class="text-blue">border-color-red-900</td> <td class="text-purple">border-color: var(--red-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-green-100</td> <td class="text-purple">border-color: var(--green-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-green-200</td> <td class="text-purple">border-color: var(--green-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-green-300</td> <td class="text-purple">border-color: var(--green-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-green-...</td> <td class="text-purple">border-color: var(--green-...); </td> </tr>
+  <tr> <td class="text-blue">border-color-green-900</td> <td class="text-purple">border-color: var(--green-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-blue-100</td> <td class="text-purple">border-color: var(--blue-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-blue-200</td> <td class="text-purple">border-color: var(--blue-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-blue-300</td> <td class="text-purple">border-color: var(--blue-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-blue-...</td> <td class="text-purple">border-color: var(--blue-...); </td> </tr>
+  <tr> <td class="text-blue">border-color-blue-900</td> <td class="text-purple">border-color: var(--blue-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-orange-100</td> <td class="text-purple">border-color: var(--orange-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-orange-200</td> <td class="text-purple">border-color: var(--orange-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-orange-300</td> <td class="text-purple">border-color: var(--orange-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-orange-...</td> <td class="text-purple">border-color: var(--orange-...); </td> </tr>
+  <tr> <td class="text-blue">border-color-orange-900</td> <td class="text-purple">border-color: var(--orange-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-yellow-100</td> <td class="text-purple">border-color: var(--yellow-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-yellow-200</td> <td class="text-purple">border-color: var(--yellow-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-yellow-300</td> <td class="text-purple">border-color: var(--yellow-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-yellow-...</td> <td class="text-purple">border-color: var(--yellow-...); </td> </tr>
+  <tr> <td class="text-blue">border-color-yellow-900</td> <td class="text-purple">border-color: var(--yellow-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-purple-100</td> <td class="text-purple">border-color: var(--purple-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-purple-200</td> <td class="text-purple">border-color: var(--purple-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-purple-300</td> <td class="text-purple">border-color: var(--purple-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-purple-...</td> <td class="text-purple">border-color: var(--purple-...); </td> </tr>
+  <tr> <td class="text-blue">border-color-purple-900</td> <td class="text-purple">border-color: var(--purple-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-teal-100</td> <td class="text-purple">border-color: var(--teal-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-teal-200</td> <td class="text-purple">border-color: var(--teal-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-teal-300</td> <td class="text-purple">border-color: var(--teal-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-teal-...</td> <td class="text-purple">border-color: var(--teal-...); </td> </tr>
+  <tr> <td class="text-blue">border-color-teal-900</td> <td class="text-purple">border-color: var(--teal-900);</td> </tr>
+
+  <tr> <td class="text-blue">border-color-neutral-100</td> <td class="text-purple">border-color: var(--neutral-100);</td> </tr>
+  <tr> <td class="text-blue">border-color-neutral-200</td> <td class="text-purple">border-color: var(--neutral-200);</td> </tr>
+  <tr> <td class="text-blue">border-color-neutral-300</td> <td class="text-purple">border-color: var(--neutral-300);</td> </tr>
+  <tr> <td class="text-blue">border-color-neutral-...</td> <td class="text-purple">border-color: var(--neutral-...);</td> </tr>
+  <tr> <td class="text-blue">border-color-neutral-900</td> <td class="text-purple">border-color: var(--neutral-900);</td> </tr>
+  <tr> <td class="text-blue">border-color-neutral-1000</td> <td class="text-purple">border-color: var(--neutral-1000);</td> </tr>
+  <tr> <td class="text-secondary" colspan="2">...and more for blue, orange, yellow, purple, teal (100-900)</td> </tr>
+</table>
+
+
+<h5>Examples with border color</h5>
+<p>Use color shades to create subtle variations and visual hierarchy. Lighter shades (100-300) work well for backgrounds, while darker shades (700-900) provide strong emphasis.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="border border-color-primary-200 p-3 mb-3 hover:border-color-red-400">Light primary border with hover red-400</div>
+    <div class="border border-color-primary-500 p-3 mb-3">Medium primary border (shade 500)</div>
+    <div class="border-style-dotted border-width-2 border-color-blue-800 p-3 mb-3">Dark blue dotted border</div>
+    <div class="border-style-solid border-width-3 border-color-orange-700 p-3 mb-3">3px solid orange-700 border</div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border border-color-primary-200  hover:border-color-red-300 p-3"&gt;
+    Light primary border, with hover red-400
+&lt;/div&gt;
+&lt;div class="border border-color-primary-500 p-3"&gt;
+  Medium primary border
+&lt;/div&gt;
+&lt;div class="border-style-dotted border-width-2 border-color-primary-800 p-3"&gt;
+  Dark blue dotted border
+&lt;/div&gt;
+&lt;div class="border-style-solid border-width-3 border-color-orange-700 p-3"&gt;
+  3px solid orange-700 border
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+
+<h5>Border line style</h5>
+<p class="text-secondary">Control the visual appearance of border lines. Combine with border-width for more prominent effects.</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">border-style-solid</td> <td class="text-purple">border-style: solid !important;</td> </tr>
+  <tr> <td class="text-blue">border-style-dashed</td> <td class="text-purple">border-style: dashed !important;</td> </tr>
+  <tr> <td class="text-blue">border-style-dotted</td> <td class="text-purple">border-style: dotted !important;</td> </tr>
+  <tr> <td class="text-blue">border-style-initial</td> <td class="text-purple">border-style: initial !important;</td> </tr>
+</table>
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="border border-style-solid p-3 mb-3">Solid border line (default)</div>
+    <div class="border border-style-dashed p-3 mb-3">Dashed border line</div>
+    <div class="border border-style-dotted p-3 mb-3">Dotted border line</div>
+    <div class="border border-style-dashed border-width-3 border-color-blue-500 p-3">3px dashed blue border</div>
     <!-- example .//end -->
   </div>
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border border-style-solid p-3"&gt;Solid border line&lt;/div&gt;
+&lt;div class="border border-style-dashed p-3"&gt;Dashed border line&lt;/div&gt;
+&lt;div class="border border-style-dotted p-3"&gt;Dotted border line&lt;/div&gt;
+&lt;div class="border border-style-dashed border-width-3 border-color-blue-500 p-3"&gt;
+  3px dashed blue border
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
 
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>Border width (thickness)</h5>
+<p class="text-secondary">Control border thickness from 1px to 5px. Useful for creating emphasis or visual hierarchy.</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">border-width-1</td> <td class="text-purple">border-width: 1px !important;</td> </tr>
+  <tr> <td class="text-blue">border-width-2</td> <td class="text-purple">border-width: 2px !important;</td> </tr>
+  <tr> <td class="text-blue">border-width-3</td> <td class="text-purple">border-width: 3px !important;</td> </tr>
+  <tr> <td class="text-blue">border-width-4</td> <td class="text-purple">border-width: 4px !important;</td> </tr>
+  <tr> <td class="text-blue">border-width-5</td> <td class="text-purple">border-width: 5px !important;</td> </tr>
+</table>
+
+<h5>Examples</h5>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="border border-width-1 p-3 mb-3">1px border (default)</div>
+    <div class="border border-width-2 p-3 mb-3">2px border</div>
+    <div class="border border-width-3 p-3 mb-3">3px border</div>
+    <div class="border border-width-4 p-3 mb-3">4px border</div>
+    <div class="border border-width-5 p-3">5px border</div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border border-width-1 p-3"&gt;1px border&lt;/div&gt;
+&lt;div class="border border-width-2 p-3"&gt;2px border&lt;/div&gt;
+&lt;div class="border border-width-3 p-3"&gt;3px border&lt;/div&gt;
+&lt;div class="border border-width-4 p-3"&gt;4px border&lt;/div&gt;
+&lt;div class="border border-width-5 p-3"&gt;5px border&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+
+<h5>Border for specific sides</h5>
+<p class="text-secondary">Apply borders to individual sides. These classes support responsive breakpoints (e.g., max-sm:border-right-0, lg:border-left).</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">border-top</td> <td class="text-purple">border-top: 1px solid var(--border-color-default);</td> </tr>
+  <tr> <td class="text-blue">border-right</td> <td class="text-purple">border-right: 1px solid var(--border-color-default);</td> </tr>
+  <tr> <td class="text-blue">border-bottom</td> <td class="text-purple">border-bottom: 1px solid var(--border-color-default);</td> </tr>
+  <tr> <td class="text-blue">border-left</td> <td class="text-purple">border-left: 1px solid var(--border-color-default);</td> </tr>
+  <tr> <td class="text-blue">border-top-0</td> <td class="text-purple">border-top: 0 !important;</td> </tr>
+  <tr> <td class="text-blue">border-right-0</td> <td class="text-purple">border-right: 0 !important;</td> </tr>
+  <tr> <td class="text-blue">border-bottom-0</td> <td class="text-purple">border-bottom: 0 !important;</td> </tr>
+  <tr> <td class="text-blue">border-left-0</td> <td class="text-purple">border-left: 0 !important;</td> </tr>
+</table>
+
+<h5>Examples</h5>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="border-top p-3 mb-3">Top border only</div>
+    <div class="border-bottom p-3 mb-3">Bottom border only (great for dividers)</div>
+    <div class="border-left p-3 mb-3">Left border only (sidebar accent)</div>
+    <div class="border border-right-0 p-3 mb-3">Border on all sides except right</div>
+    <div class="border-top border-bottom p-3">Top and bottom borders</div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border-top p-3"&gt;Top border only&lt;/div&gt;
+&lt;div class="border-bottom p-3"&gt;Bottom border only&lt;/div&gt;
+&lt;div class="border-left p-3"&gt;Left border only&lt;/div&gt;
+&lt;div class="border border-right-0 p-3"&gt;Border except right&lt;/div&gt;
+&lt;div class="border-top border-bottom p-3"&gt;Top and bottom borders&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+
+<h5>Responsive borders</h5>
+<p class="text-secondary">Side-specific borders support breakpoint prefixes: max-sm:, max-md:, max-lg:, sm:, md:, lg:</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="border-right max-sm:border-right-0 p-3 mb-3">Right border removed on mobile</div>
+    <div class="lg:border-left p-3 mb-3">Left border appears on desktop (≥1201px)</div>
+    <div class="border-bottom md:border-bottom-0 md:border-right p-3">Bottom border on mobile, right border on tablet+</div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border-right max-sm:border-right-0 p-3"&gt;
+  Right border removed on mobile
+&lt;/div&gt;
+
+&lt;div class="lg:border-left p-3"&gt;
+  Left border appears on desktop
+&lt;/div&gt;
+
+&lt;div class="border-bottom md:border-bottom-0 md:border-right p-3"&gt;
+  Bottom border on mobile, right border on tablet+
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+
+<h5>How to customize?</h5>
+<p>You can customize border utilities by editing the SCSS source files. Border colors are generated from the color maps in <code>scss/_theme.scss</code>. To add new border colors or modify existing ones, edit the <code>$colors_border_main</code> map in <code>scss/utilities/_border-style.scss</code> and recompile your CSS.</p>
 <figure class="rounded">
   <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded language-css">/* File: scss/utilities/_border-style.scss */
+$colors_border_main: (
+  "default": var(--border-color-default),
+  "strong": var(--neutral-300),
+  "custom": #ff00ff, // Add your custom color
+  "primary": map-get(map-get($colors_list, "primary"), "500"),
+  /* ... more colors */
+);</code></pre>
+    <!-- code -->
+  </figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+
+<p>
+  To compile SCSS to CSS, you have two main options: <br>
+  <b>Option A:</b> Use Node.js and npm tools if you're comfortable with the terminal and command-line interface.
+  <br>
+  <b>Option B:</b> Use visual applications like Prepros.io or CodeKit if you prefer graphical user interfaces and want to avoid terminal commands. 
+</p>
+
+
 </article>
 
 <!-- === end of documentation === -->
+
 
 
 

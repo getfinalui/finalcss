@@ -52,7 +52,7 @@
 <p>Hover support: ✅ Yes <br> 
 <span class="text-secondary">hover:classname, group-hover:classname</span>
 </p>
-
+<p>Alse read more on topic <a href="doc-base-theme.html">Themes and Colors</a>  in this documentation</p>
 <hr>
 
 <h5>Base colors</h5>
@@ -87,7 +87,9 @@
 </table>
 
 <h5>All color shades</h5>
-<p class="text-secondary">Every theme color has 9 shades (100-900) defined in <code>scss/_theme.scss</code>. These shades provide fine-grained control over color intensity. Lower numbers (100-300) are lighter, middle numbers (400-600) are medium intensity, and higher numbers (700-900) are darker. All shades automatically adapt to dark mode.</p>
+<p>Every theme color has 9 shades (100-900) defined in <code>scss/_theme.scss</code>. These shades provide fine-grained control over color intensity. Lower numbers (100-300) are lighter, middle numbers (400-600) are medium intensity, and higher numbers (700-900) are darker. All shades automatically adapt to dark mode.
+<br> Learn more about color shades in the <a class="link" href="doc-base-theme.html">Colors &amp; Themes</a> section of this documentation.
+</p>
 
 <table class="table table-compact table-hover">
   <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
@@ -195,10 +197,6 @@
   <tr> <td class="text-blue"> bg-teal-900</td> <td class="text-purple">background-color: var(--teal-900);</td> </tr>
 </table>
 
-
-<h5>Dark mode</h5>
-<p>All color variables defined in <code>scss/_theme.scss</code> have both light and dark mode versions. The system automatically switches to dark mode colors when you add the <code>theme-dark</code> class to the HTML tag or set the <code>data-theme="dark"</code> attribute. No additional classes are needed—your background colors will automatically adapt to the theme.</p>
-
 <h5>Hover state</h5>
 <p>All background color classes support hover interactions using the <code>hover:</code> prefix. Additionally, you can create group hover effects where child elements respond to parent hover using the <code>group-hover:</code> prefix. The parent element must have the <code>group</code> class applied for group hover to work.</p>
 
@@ -258,6 +256,59 @@
 <!-- code -->
 </figcaption>
 </figure>
+
+
+<h5>Dark mode</h5>
+<p>All color variables defined in <code>scss/_theme.scss</code> have both light and dark mode versions. The system automatically switches to dark mode colors when you add the <code>theme-dark</code> class to the HTML tag or set the <code>data-theme="dark"</code> attribute. No additional classes are needed—your background colors will automatically adapt to the theme.</p>
+
+ <h5>Static colors (no change on dark mode)</h5> 
+ <p>By default, all CSS variable-based background colors automatically adapt when switching to dark mode. However, there are situations where you need colors to remain consistent regardless of the theme—such as brand logos, fixed UI elements, or specific design requirements where a particular color must stay the same in both light and dark modes.</p> 
+ 
+  <p><strong>Method 1: Direct hex color codes</strong><br> 
+    Use hex color codes directly in your CSS or inline styles. This bypasses the CSS variable system entirely, ensuring the color never changes.</p> 
+ <figure class="rounded border shadow"> 
+    <div class="card-body"> 
+      <!-- example --> 
+       <div style="background-color: #bed2ff;" class="p-4 rounded mb-3"> This stays #bed2ff in both themes </div> 
+       <div style="background-color: #0dab47;" class="p-4 rounded"> This stays #0dab47 in both themes </div> 
+       <!-- example .//end --> 
+    </div> 
+    <figcaption> <!-- code --> <pre class="m-0">
+      <code class="rounded-bottom language-html">&lt;div style="background-color: #6163fe;" class="p-4"&gt; This stays #6163fe in both themes &lt;/div&gt; 
+&lt;div style="background-color: #0dab47;" class="p-4"&gt; This stays #0dab47 in both themes &lt;/div&gt;</code></pre> 
+      <!-- code --> 
+    </figcaption> 
+  </figure> 
+      
+  <p><strong>Method 2: Using theme-static class or data attribute</strong><br> 
+    Add the <code>theme-static</code> class or <code>data-theme="static"</code> attribute to any element to prevent its CSS variable-based colors from changing in dark mode. 
+    This preserves the light mode color values even when dark mode is active. 
+    You can apply this to the element itself or to a parent container to affect all child elements. You can apply <code>theme-static</code> to <code>body</code> or root html tag to prevent changing style based on color mode.</p> 
+  <figure class="rounded border shadow"> 
+    <div class="card-body"> 
+      <!-- example --> 
+       <div class="bg-green-200 theme-static p-4 rounded mb-3"> Green 200 stays light green even in dark mode </div> 
+       <div class="bg-primary-100 p-4 rounded mb-3" data-theme="static"> Primary 100 remains static using data attribute </div> 
+       <article class="theme-static border p-2"> 
+        <div class="bg-yellow-300 p-2 rounded mb-2">Static Yellow 300</div> 
+        <div class="bg-purple-400 p-2 rounded">Static Purple 400</div> 
+       </article> 
+      <!-- example .//end --> 
+      </div> 
+      <figcaption> 
+        <!-- code --> 
+        <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class=&quot;bg-green-200 theme-static p-4&quot;&gt; Green 200 stays light green even in dark mode &lt;/div&gt; 
+&lt;div class=&quot;bg-primary-100 p-4&quot; data-theme=&quot;static&quot;&gt; Primary 100 remains static using data attribute &lt;/div&gt; 
+&lt;article class=&quot;theme-static border p-2&quot;&gt; 
+    &lt;div class=&quot;bg-yellow-300 p-2&quot;&gt;Static Yellow 300&lt;/div&gt; 
+    &lt;div class=&quot;bg-purple-400 p-2&quot;&gt;Static Purple 400&lt;/div&gt; 
+&lt;/article&gt; </code></pre>
+           <!-- code --> 
+      </figcaption> 
+  </figure> 
+  
+  <p class="text-secondary"><strong>When to use static colors:</strong> Use static colors for brand elements that must maintain consistent appearance (logos, badges), data visualizations where color meaning is semantic, or UI elements where color consistency is part of the user experience design.</p>
+
 
 <h5>How to customize?</h5>
 <p>To customize background colors, edit the <code>scss/utilities/_background.scss</code> file. You can modify the <code>$colors_bg_main</code> map to change which shade is used for base color classes (e.g., changing bg-blue from shade 500 to 600), or edit <code>scss/_theme.scss</code> to adjust the actual color values. After making changes, recompile your SCSS to CSS.</p>
