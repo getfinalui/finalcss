@@ -42,71 +42,169 @@
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
 
-<!-- === start of documentation === -->
-
+  <!-- === start of documentation === -->
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Border radius</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Border radius utilities control the rounded corners of elements. Use these classes to quickly apply consistent border radius values across your application. These utilities are perfect for creating cards, buttons, images, and other UI components with rounded corners. The values are customizable through CSS variables defined in <code>_base-settings.scss</code>.</p>
+<p>Responsive: No </p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+<tr> <td class="text-blue"> .rounded-0 </td> <td class="text-purple"> border-radius: 0; </td>  </tr>
+<tr> <td class="text-blue"> .rounded </td> <td class="text-purple"> border-radius: var(--border-radius-base); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-sm </td> <td class="text-purple"> border-radius: var(--border-radius-sm); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-md </td> <td class="text-purple"> border-radius: var(--border-radius-md); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-lg </td> <td class="text-purple"> border-radius: var(--border-radius-lg); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-xl </td> <td class="text-purple"> border-radius: var(--border-radius-xl); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-full </td> <td class="text-purple"> border-radius: 400px; flex-shrink: 0; </td>  </tr>
+<tr> <td class="text-blue"> .rounded-circle </td> <td class="text-purple"> border-radius: 50%; flex-shrink: 0; </td>  </tr>
+<tr> <td class="text-blue"> .rounded-top </td> <td class="text-purple"> border-top-left-radius: var(--border-radius-base); border-top-right-radius: var(--border-radius-base); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-bottom </td> <td class="text-purple"> border-bottom-left-radius: var(--border-radius-base); border-bottom-right-radius: var(--border-radius-base); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-left </td> <td class="text-purple"> border-top-left-radius: var(--border-radius-base); border-bottom-left-radius: var(--border-radius-base); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-right </td> <td class="text-purple"> border-top-right-radius: var(--border-radius-base); border-bottom-right-radius: var(--border-radius-base); </td>  </tr>
+<tr> <td class="text-blue"> .rounded-top-0 </td> <td class="text-purple"> border-top-left-radius: 0; border-top-right-radius: 0; </td>  </tr>
+<tr> <td class="text-blue"> .rounded-bottom-0 </td> <td class="text-purple"> border-bottom-left-radius: 0; border-bottom-right-radius: 0; </td>  </tr>
+<tr> <td class="text-blue"> .rounded-left-0 </td> <td class="text-purple"> border-top-left-radius: 0; border-bottom-left-radius: 0; </td>  </tr>
+<tr> <td class="text-blue"> .rounded-right-0 </td> <td class="text-purple"> border-top-right-radius: 0; border-bottom-right-radius: 0; </td>  </tr>
 </table>
-
 
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-3 flex-wrap">
+  <div class="rounded-0 bg-primary p-4 text-white">rounded-0</div>
+  <div class="rounded-sm bg-blue p-4 text-white">rounded-sm</div>
+  <div class="rounded bg-green p-4 text-white">rounded</div>
+  <div class="rounded-md bg-orange p-4 text-white">rounded-md</div>
+  <div class="rounded-lg bg-purple p-4 text-white">rounded-lg</div>
+  <div class="rounded-xl bg-teal p-4 text-white">rounded-xl</div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex gap-3 flex-wrap"&gt;
+  &lt;div class="rounded-0 bg-primary p-4 text-white"&gt;rounded-0&lt;/div&gt;
+  &lt;div class="rounded-sm bg-blue p-4 text-white"&gt;rounded-sm&lt;/div&gt;
+  &lt;div class="rounded bg-green p-4 text-white"&gt;rounded&lt;/div&gt;
+  &lt;div class="rounded-md bg-orange p-4 text-white"&gt;rounded-md&lt;/div&gt;
+  &lt;div class="rounded-lg bg-purple p-4 text-white"&gt;rounded-lg&lt;/div&gt;
+  &lt;div class="rounded-xl bg-teal p-4 text-white"&gt;rounded-xl&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Circular and pill-shaped elements are commonly used for avatars, badges, and buttons. Use <code>.rounded-circle</code> for perfect circles and <code>.rounded-full</code> for pill-shaped elements.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-4 align-items-center flex-wrap">
+  <div class="rounded-circle bg-primary" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; color: white;">
+    Avatar
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+  <button class="rounded-full bg-blue text-white px-6 py-2">Pill Button</button>
+  <span class="rounded-full bg-red text-white px-3 py-1 text-sm">Badge</span>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex gap-4 align-items-center"&gt;
+  &lt;div class="rounded-circle bg-primary" style="width: 80px; height: 80px;"&gt;
+    Avatar
+  &lt;/div&gt;
+  &lt;button class="rounded-full bg-blue text-white px-6 py-2"&gt;Pill Button&lt;/button&gt;
+  &lt;span class="rounded-full bg-red text-white px-3 py-1"&gt;Badge&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
+<p class="text-secondary">Directional border radius classes allow you to round specific corners. This is useful for creating connected elements, dropdown menus, tabs, and stacked cards.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-3 flex-wrap">
+  <div class="rounded-top bg-primary p-4 text-white" style="width: 120px;">rounded-top</div>
+  <div class="rounded-bottom bg-blue p-4 text-white" style="width: 120px;">rounded-bottom</div>
+  <div class="rounded-left bg-green p-4 text-white" style="width: 120px;">rounded-left</div>
+  <div class="rounded-right bg-orange p-4 text-white" style="width: 120px;">rounded-right</div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex gap-3"&gt;
+  &lt;div class="rounded-top bg-primary p-4 text-white"&gt;rounded-top&lt;/div&gt;
+  &lt;div class="rounded-bottom bg-blue p-4 text-white"&gt;rounded-bottom&lt;/div&gt;
+  &lt;div class="rounded-left bg-green p-4 text-white"&gt;rounded-left&lt;/div&gt;
+  &lt;div class="rounded-right bg-orange p-4 text-white"&gt;rounded-right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p class="text-secondary">Use zero radius classes to remove rounding from specific sides. Perfect for creating seamless connections between stacked elements or card layouts.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="bg-white" style="max-width: 300px;">
+  <div class="rounded-md rounded-bottom-0 bg-primary text-white p-4">
+    Card Header
+  </div>
+  <div class="bg-neutral-100 p-4">
+    Card Body Content
+  </div>
+  <div class="rounded-md rounded-top-0 bg-neutral-200 p-4">
+    Card Footer
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="bg-white"&gt;
+  &lt;div class="rounded-md rounded-bottom-0 bg-primary text-white p-4"&gt;
+    Card Header
+  &lt;/div&gt;
+  &lt;div class="bg-neutral-100 p-4"&gt;
+    Card Body Content
+  &lt;/div&gt;
+  &lt;div class="rounded-md rounded-top-0 bg-neutral-200 p-4"&gt;
+    Card Footer
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize border radius values by modifying the CSS custom properties in <code>scss/_base-settings.scss</code> or <code>scss/_variables-root.scss</code>. After making changes, recompile your SCSS to generate the updated <code>css/final.css</code> file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* In _base-settings.scss or _variables-root.scss */
+:root {
+  --border-radius-base: 8px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+}
 
+// Compile SCSS to CSS
+// Run: sass scss/main.scss css/final.css</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+</article>
 <!-- === end of documentation === -->
 
 </main>

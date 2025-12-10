@@ -45,22 +45,22 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Object Fit</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Object fit utilities control how images and videos are resized to fit their container. Use these classes to specify whether content should be stretched, scaled proportionally, cropped, or displayed at its original size. This is particularly useful when working with responsive images, thumbnails, avatars, and media galleries where you need consistent sizing while maintaining aspect ratios or filling containers completely.</p>
+<p>Responsive: No </p>
 <hr>
 
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+  <tr> <td class="text-blue"> object-fit-contain </td> <td class="text-purple"> object-fit: contain; </td>  </tr>
+  <tr> <td class="text-blue"> object-fit-cover </td> <td class="text-purple"> object-fit: cover; </td>  </tr>
+  <tr> <td class="text-blue"> object-fit-fill </td> <td class="text-purple"> object-fit: fill; </td>  </tr>
+  <tr> <td class="text-blue"> object-fit-scale </td> <td class="text-purple"> object-fit: scale-down; </td>  </tr>
+  <tr> <td class="text-blue"> object-fit-none </td> <td class="text-purple"> object-fit: none; </td>  </tr>
 </table>
 
 
@@ -68,47 +68,103 @@
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-grid grid-template-cols-2 gap-4 flex-wrap">
+      <div>
+        <p class="text-sm">object-fit-contain</p>
+        <p class="text-xs mb-2 text-secondary">Scales to fit, maintains aspect ratio</p>
+        <div class="bg-neutral-100 rounded">
+          <img src="https://placehold.co/800x600.png" class="object-fit-contain" style="width: 100%; height:200px" alt="Contain">
+        </div>
+      </div>
+      
+      <div>
+        <p class="text-sm ">object-fit-cover</p>
+        <p class="text-xs text-secondary mb-2">Fills container, crops if needed</p>
+        <div class="bg-neutral-100 rounded">
+          <img src="https://placehold.co/800x600.png" class="object-fit-cover" style="width: 100%; height:200px;" alt="Cover">
+        </div>
+      </div>
+      
+      <div>
+        <p class="text-sm">object-fit-fill</p>
+        <p class="text-xs  mb-2 text-secondary">Stretches to fill, may distort</p>
+        <div class="bg-neutral-100 rounded">
+          <img src="https://placehold.co/800x600.png" class="object-fit-fill" style="width: 100%; height: 200px" alt="Fill">
+        </div>
+      </div>
+      
+      <div>
+        <p class="text-sm">object-fit-scale</p>
+        <p class="text-xs text-secondary  mb-2">Contain or original, whichever is smaller</p>
+        <div class="bg-neutral-100 rounded">
+          <img src="https://placehold.co/800x600.png" class="object-fit-scale" style="width: 100%; height:200px" alt="Scale">
+        </div>
+      </div>
+      
+      <div>
+        <p class="text-sm"><strong>object-fit-none</strong></p>
+        <p class="text-xs text-secondary mb-2">Original size, crops overflow</p>
+        <div class="bg-neutral-100 rounded">
+          <img src="https://placehold.co/800x600.png" class="object-fit-none" style="width: 100%; height:200px" alt="None">
+        </div>
+        
+      </div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- object-fit-contain: Scales to fit while maintaining aspect ratio --&gt;
+&lt;div class=&quot;bg-neutral-100 rounded&quot;&gt;
+  &lt;img src=&quot;https://placehold.co/800x600.png&quot; class=&quot;object-fit-contain&quot; style=&quot;width: 100%; height:200px&quot; alt=&quot;Contain&quot;&gt;
+&lt;/div&gt;
 
+&lt;!-- object-fit-cover: Fills container, crops excess --&gt;
+&lt;div class=&quot;bg-neutral-100 rounded&quot;&gt;
+  &lt;img src=&quot;https://placehold.co/800x600.png&quot; class=&quot;object-fit-cover&quot; style=&quot;width: 100%; height:200px;&quot; alt=&quot;Cover&quot;&gt;
+&lt;/div&gt;
 
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
-<figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+&lt;!-- object-fit-fill: Stretches to fill container --&gt;
+&lt;div class=&quot;bg-neutral-100 rounded&quot;&gt;
+  &lt;img src=&quot;https://placehold.co/800x600.png&quot; class=&quot;object-fit-fill&quot; style=&quot;width: 100%; height: 200px&quot; alt=&quot;Fill&quot;&gt;
+&lt;/div&gt;
+
+&lt;!-- object-fit-scale: Like contain but won't upscale --&gt;
+&lt;div class=&quot;bg-neutral-100 rounded&quot;&gt;
+  &lt;img src=&quot;https://placehold.co/800x600.png&quot; class=&quot;object-fit-scale&quot; style=&quot;width: 100%; height:200px&quot; alt=&quot;Scale&quot;&gt;
+&lt;/div&gt;
+
+&lt;!-- object-fit-none: Uses original size --&gt;
+&lt;div class=&quot;bg-neutral-100 rounded&quot;&gt;
+  &lt;img src=&quot;https://placehold.co/800x600.png&quot; class=&quot;object-fit-none&quot; style=&quot;width: 100%; height:200px&quot; alt=&quot;None&quot;&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can add more object-fit utilities by editing <code>scss/utilities/_object-fit.scss</code>. After making changes, recompile your SCSS to generate the updated <code>css/final.css</code> file.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">// In scss/utilities/_object-fit.scss
+
+.object-fit-contain { object-fit: contain; }
+.object-fit-cover { object-fit: cover; }
+.object-fit-fill { object-fit: fill; }
+.object-fit-scale { object-fit: scale-down; }
+.object-fit-none { object-fit: none; }
+
+// Compile SCSS to CSS
+// Run: sass scss/main.scss css/final.css</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+
 </article>
 
 <!-- === end of documentation === -->
-
 
 
 </main>

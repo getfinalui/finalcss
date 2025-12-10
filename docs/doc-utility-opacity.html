@@ -41,72 +41,247 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Opacity</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Opacity utilities control the transparency level of elements. Use these classes to create fade effects, overlay elements, disabled states, or to subtly de-emphasize content. The utility includes hover states and group-hover variants for interactive opacity changes. Values range from 0 (fully transparent) to 100 (fully opaque) in increments of 10.</p>
+<p>
+  Responsive: No  <br>
+   Hover support: ✅ Yes <br>
+  <span class="text-secondary">hover:classname, group-hover:classname </span></p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+<tr> <td class="text-blue"> opacity-0 </td> <td class="text-purple"> opacity: 0; </td>  </tr>
+<tr> <td class="text-blue"> opacity-10 </td> <td class="text-purple"> opacity: 0.1; </td>  </tr>
+<tr> <td class="text-blue"> opacity-20 </td> <td class="text-purple"> opacity: 0.2; </td>  </tr>
+<tr> <td class="text-blue"> opacity-30 </td> <td class="text-purple"> opacity: 0.3; </td>  </tr>
+<tr> <td class="text-blue"> opacity-40 </td> <td class="text-purple"> opacity: 0.4; </td>  </tr>
+<tr> <td class="text-blue"> opacity-50 </td> <td class="text-purple"> opacity: 0.5; </td>  </tr>
+<tr> <td class="text-blue"> opacity-60 </td> <td class="text-purple"> opacity: 0.6; </td>  </tr>
+<tr> <td class="text-blue"> opacity-70 </td> <td class="text-purple"> opacity: 0.7; </td>  </tr>
+<tr> <td class="text-blue"> opacity-80 </td> <td class="text-purple"> opacity: 0.8; </td>  </tr>
+<tr> <td class="text-blue"> opacity-90 </td> <td class="text-purple"> opacity: 0.9; </td>  </tr>
+<tr> <td class="text-blue"> opacity-100 </td> <td class="text-purple"> opacity: 1; </td>  </tr>
+<tr> <td class="text-blue"> hover:opacity-{value}:hover </td> <td class="text-purple"> opacity: {value} !important; (on hover) </td>  </tr>
+<tr> <td class="text-blue"> group-hover:opacity-{value} </td> <td class="text-purple"> opacity: {value} !important; (when parent .group is hovered) </td>  </tr>
 </table>
-
 
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-3 flex-wrap align-items-end">
+  <div class="opacity-0 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">0</div>
+  <div class="opacity-10 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">10</div>
+  <div class="opacity-20 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">20</div>
+  <div class="opacity-30 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">30</div>
+  <div class="opacity-40 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">40</div>
+  <div class="opacity-50 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">50</div>
+  <div class="opacity-60 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">60</div>
+  <div class="opacity-70 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">70</div>
+  <div class="opacity-80 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">80</div>
+  <div class="opacity-90 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">90</div>
+  <div class="opacity-100 bg-primary p-4 rounded text-white" style="width: 80px; height: 80px;">100</div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="opacity-0 bg-primary p-4 rounded"&gt;0&lt;/div&gt;
+&lt;div class="opacity-10 bg-primary p-4 rounded"&gt;10&lt;/div&gt;
+&lt;div class="opacity-20 bg-primary p-4 rounded"&gt;20&lt;/div&gt;
+&lt;div class="opacity-30 bg-primary p-4 rounded"&gt;30&lt;/div&gt;
+&lt;div class="opacity-40 bg-primary p-4 rounded"&gt;40&lt;/div&gt;
+&lt;div class="opacity-50 bg-primary p-4 rounded"&gt;50&lt;/div&gt;
+&lt;div class="opacity-60 bg-primary p-4 rounded"&gt;60&lt;/div&gt;
+&lt;div class="opacity-70 bg-primary p-4 rounded"&gt;70&lt;/div&gt;
+&lt;div class="opacity-80 bg-primary p-4 rounded"&gt;80&lt;/div&gt;
+&lt;div class="opacity-90 bg-primary p-4 rounded"&gt;90&lt;/div&gt;
+&lt;div class="opacity-100 bg-primary p-4 rounded"&gt;100&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Example with hover </h5>
+<p>Hover opacity effects create smooth interactive feedback. Use <code>.hover:opacity-{value}</code> to change element opacity on hover.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-4 flex-wrap">
+  <button class="bg-primary text-white px-6 py-3 rounded hover:opacity-80">
+    Hover me (opacity-80)
+  </button>
+  <button class="bg-blue text-white px-6 py-3 rounded hover:opacity-60">
+    Hover me (opacity-60)
+  </button>
+  <button class="bg-green text-white px-6 py-3 rounded hover:opacity-50">
+    Hover me (opacity-50)
+  </button>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="bg-primary text-white px-6 py-3 rounded hover:opacity-80"&gt;
+  Hover me (opacity-80)
+&lt;/button&gt;
+
+&lt;button class="bg-blue text-white px-6 py-3 rounded hover:opacity-60"&gt;
+  Hover me (opacity-60)
+&lt;/button&gt;
+
+&lt;button class="bg-green text-white px-6 py-3 rounded hover:opacity-50"&gt;
+  Hover me (opacity-50)
+&lt;/button&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
+<p>Group-hover allows child elements to change opacity when hovering over a parent element with the <code>.group</code> class. This creates coordinated hover effects across multiple elements.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-4 flex-wrap">
+  <div class="group bg-white p-5 rounded-md shadow-sm border" style="width: 200px; cursor: pointer;">
+    <img src="data:image/svg+xml,%3Csvg width='160' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='160' height='100' fill='%236163fe'/%3E%3C/svg%3E" class="rounded mb-3 group-hover:opacity-80" alt="Image">
+    <h6 class="mb-2">Product Card</h6>
+    <p class="text-secondary text-sm group-hover:opacity-70">Hover over this card to see opacity changes</p>
+  </div>
+  
+  <div class="group bg-white p-5 rounded-md shadow-sm border" style="width: 200px; cursor: pointer;">
+    <div class="bg-blue rounded p-4 mb-3 group-hover:opacity-60">
+      <span class="text-white">Icon Area</span>
+    </div>
+    <h6 class="mb-2 group-hover:opacity-80">Feature Card</h6>
+    <p class="text-secondary text-sm group-hover:opacity-50">Multiple elements fade on hover</p>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="group bg-white p-5 rounded-md shadow-sm"&gt;
+  &lt;img src="image.jpg" class="rounded mb-3 group-hover:opacity-80" alt="Image"&gt;
+  &lt;h6&gt;Product Card&lt;/h6&gt;
+  &lt;p class="text-secondary group-hover:opacity-70"&gt;
+    Hover over this card to see opacity changes
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="group bg-white p-5 rounded-md shadow-sm"&gt;
+  &lt;div class="bg-blue rounded p-4 mb-3 group-hover:opacity-60"&gt;
+    Icon Area
+  &lt;/div&gt;
+  &lt;h6 class="group-hover:opacity-80"&gt;Feature Card&lt;/h6&gt;
+  &lt;p class="text-secondary group-hover:opacity-50"&gt;
+    Multiple elements fade on hover
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p>Opacity is commonly used for disabled states, placeholder content, secondary information, and creating visual hierarchy. Lower opacity values de-emphasize content without hiding it completely.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="bg-neutral-100 p-4 mb-3 rounded">
+  <h6>Main Content</h6>
+  <p class="m-0">This is the primary text with full opacity.</p>
+  <p class="opacity-70 m-0 mt-2">This is secondary text with opacity-70.</p>
+  <p class="opacity-40 m-0 mt-2">This is tertiary text with opacity-40.</p>
+</div>
+
+<div class="d-flex gap-3">
+  <button class="bg-primary text-white px-6 py-3 rounded">
+    Active Button
+  </button>
+  <button class="bg-primary text-white px-6 py-3 rounded opacity-50" disabled>
+    Disabled Button (opacity-50)
+  </button>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="bg-neutral-100 p-4 rounded"&gt;
+    &lt;h6&gt;Main Content&lt;/h6&gt;
+    &lt;p&gt;This is the primary text with full opacity.&lt;/p&gt;
+    &lt;p class="opacity-70"&gt;This is secondary text with opacity-70.&lt;/p&gt;
+    &lt;p class="opacity-40"&gt;This is tertiary text with opacity-40.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;button class="bg-primary text-white px-6 py-3 rounded"&gt;
+  Active Button
+&lt;/button&gt;
+
+&lt;button class="bg-primary text-white px-6 py-3 rounded opacity-50" disabled&gt;
+  Disabled Button (opacity-50)
+&lt;/button&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p class="text-secondary">Create overlay effects by combining opacity with positioning. This is useful for image overlays, modal backdrops, and loading states.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="relative rounded overflow-hidden" style="height: 200px;">
+  <div class="absolute top-0 left-0 w-full h-full bg-dark opacity-30 hover:opacity-60"> </div>
+  <img src="https://placehold.net/1-800x600.png"class="w-full h-full object-fit-cover" alt="Background">
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class=&quot;relative rounded overflow-hidden&quot; style=&quot;height: 200px;&quot;&gt;
+  &lt;div class=&quot;absolute top-0 left-0 w-full h-full bg-dark opacity-30 hover:opacity-60&quot;&gt;&lt;/div&gt;
+  &lt;img src=&quot;https://placehold.net/1-800x600.png&quot;class=&quot;w-full h-full object-fit-cover&quot;&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize opacity values by modifying the <code>$opacity_map</code> variable in <code>scss/utilities/_opacity.scss</code>. Add, remove, or adjust opacity levels to match your design requirements. The SCSS loop automatically generates all base classes, hover variants, and group-hover variants. After making changes, recompile your SCSS to generate the updated <code>css/final.css</code> file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* In scss/utilities/_opacity.scss */
 
+$opacity_map:(
+  "0": 0,
+  "10": 0.1,
+  "20": 0.2,
+  "30": 0.3,
+  "40": 0.4,
+  "50": 0.5,
+  "60": 0.6,
+  "70": 0.7,
+  "80": 0.8,
+  "90": 0.9,
+  "100": 1
+);
+
+/* Generate utility classes based on opacity_map */
+/* Example: .opacity-10 { opacity: 0.1; } */
+@each $name, $value in $opacity_map {
+  .opacity-#{$name} { opacity: #{$value}; }
+  .hover\:opacity-#{$name}:hover { opacity: #{$value}!important; }
+  .group:hover .group-hover\:opacity-#{$name} { opacity: #{$value}!important;}
+}
+
+// Compile SCSS to CSS
+// Run: sass scss/main.scss css/final.css</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+</article>
 <!-- === end of documentation === -->
 
 

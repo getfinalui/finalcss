@@ -43,70 +43,149 @@
 
 
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Background gradient</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Gradient background utilities provide pre-designed gradient effects for elements. Use these classes to create visually stunning backgrounds for hero sections, cards, buttons, and promotional banners. The utility includes linear gradients and aurora effects with radial gradients for modern, eye-catching designs. These gradients add depth and visual interest without needing custom CSS.</p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+<tr> 
+  <td class="text-blue"> .bg-gradient </td> 
+  <td class="text-purple"> 
+    <div class="w-50 h-20 rounded" style="background-color: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);"></div> 
+  </td>  
+</tr>
+<tr> 
+  <td class="text-blue"> .bg-gradient-2 </td> 
+  <td class="text-purple"> 
+    <div class="w-50 h-20 rounded" style="background-color: #4158D0; background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);"></div> 
+  </td>  
+</tr>
+<tr> 
+  <td class="text-blue"> .bg-aurora </td> 
+  <td class="text-purple"> 
+    <div class="w-50 h-20 rounded" style="background-color:hsla(0,100%,50%,1); background-image: radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);"></div> 
+  </td>  
+</tr>
+<tr> 
+  <td class="text-blue"> .bg-aurora-2 </td> 
+  <td class="text-purple"> 
+    <div class="w-50 h-20 rounded" style="background-color:#ffd899; background-image: radial-gradient(at 98% 75%, hsla(203,98%,69%,1) 0px, transparent 50%), radial-gradient(at 47% 73%, hsla(180,73%,76%,1) 0px, transparent 50%), radial-gradient(at 45% 16%, hsla(97,89%,60%,1) 0px, transparent 50%), radial-gradient(at 31% 64%, hsla(77,76%,64%,1) 0px, transparent 50%), radial-gradient(at 63% 93%, hsla(261,85%,62%,1) 0px, transparent 50%), radial-gradient(at 67% 78%, hsla(1,64%,60%,1) 0px, transparent 50%), radial-gradient(at 81% 92%, hsla(69,76%,79%,1) 0px, transparent 50%);"></div> 
+  </td>  
+</tr>
 </table>
-
 
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div class="row row-cols-2 gap-4">
+  <div>
+    <div class="bg-gradient p-6 rounded-lg text-white">
+      <h4 class="mb-2">Linear Gradient</h4>
+      <p class="mb-5 opacity-90">Blue to teal gradient (bg-gradient)</p>
+    </div>
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
-<figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+  <div>
+    <div class="bg-gradient-2 p-6 rounded-lg text-white">
+      <h4 class="mb-2">Multi-Color Gradient</h4>
+      <p class="mb-5 opacity-90">Purple to pink to yellow gradient (bg-gradient-2)</p>
+    </div>
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
+  <div>
+    <div class="bg-aurora p-6 rounded-lg text-white">
+      <h4 class="mb-2">Aurora Effect</h4>
+      <p class="mb-5 opacity-90">Warm aurora with radial gradients (bg-aurora)</p>
+    </div>
+  </div>
+  <div>
+    <div class="bg-aurora-2 p-6 rounded-lg text-dark">
+      <h4 class="mb-2">Aurora Effect 2</h4>
+      <p class="mb-5 opacity-80">Cool aurora with radial gradients (bg-aurora-2)</p>
+    </div>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="bg-gradient p-6 rounded-lg text-white"&gt;
+  &lt;h4&gt;Linear Gradient&lt;/h4&gt;
+  &lt;p&gt;Blue to teal gradient (bg-gradient)&lt;/p&gt;
+&lt;/div&gt;
 
+&lt;div class="bg-gradient-2 p-6 rounded-lg text-white"&gt;
+  &lt;h4&gt;Multi-Color Gradient&lt;/h4&gt;
+  &lt;p&gt;Purple to pink to yellow gradient (bg-gradient-2)&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="bg-aurora p-6 rounded-lg text-white"&gt;
+  &lt;h4&gt;Aurora Effect&lt;/h4&gt;
+  &lt;p&gt;Warm aurora with radial gradients (bg-aurora)&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="bg-aurora-2 p-6 rounded-lg text-dark"&gt;
+  &lt;h4&gt;Aurora Effect 2&lt;/h4&gt;
+  &lt;p&gt;Cool aurora with radial gradients (bg-aurora-2)&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize gradient styles or add new gradient classes by editing <code>scss/utilities/_gradient.scss</code>. Modify existing gradient colors, angles, or positions, or create entirely new gradient effects. After making changes, recompile your SCSS to generate the updated <code>css/final.css</code> file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">// In scss/utilities/_gradient.scss
 
+.bg-gradient{
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.bg-gradient-2{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.bg-aurora{
+  background-color:hsla(0,100%,50%,1);
+  background-image:
+  radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+}
+
+.bg-aurora-2{
+  background-color:#ffd899;
+  background-image:
+  radial-gradient(at 98% 75%, hsla(203,98%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 47% 73%, hsla(180,73%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 16%, hsla(97,89%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 31% 64%, hsla(77,76%,64%,1) 0px, transparent 50%),
+  radial-gradient(at 63% 93%, hsla(261,85%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 67% 78%, hsla(1,64%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 81% 92%, hsla(69,76%,79%,1) 0px, transparent 50%);
+}</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p><strong>Compiling SCSS to CSS:</strong> You have two main options to compile your SCSS files into CSS.  </p>
+<p>
+  <strong>Option A:</strong> If you're comfortable with terminal and have Node.js installed, you can use command-line tools like <code>sass</code> or <code>node-sass</code>.  <br>
+  <strong>Option B:</strong> If you prefer visual applications and want to avoid the terminal, use GUI tools like <strong>Prepros.io</strong> or <strong>CodeKit</strong>. <br>
+  These apps provide a user-friendly interface where you can drag-and-drop your project folder and automatically compile SCSS with live reload and other features.</p>
+</article>
 <!-- === end of documentation === -->
 
 

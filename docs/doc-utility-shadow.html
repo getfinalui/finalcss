@@ -43,72 +43,206 @@
 
 
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Box Shadow</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Box shadow utilities add depth and elevation to elements by applying shadow effects. Use these classes to create visual hierarchy and make elements appear raised above the page. Shadows are commonly used on cards, modals, dropdowns, and buttons to improve the visual design and user experience.</p>
+<p>Responsive: No </p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+<tr> <td class="text-blue"> .shadow </td> <td class="text-purple"> box-shadow: 0 4px 8px rgba(64, 64, 64, 0.1); </td>  </tr>
+<tr> <td class="text-blue"> .shadow-top </td> <td class="text-purple"> box-shadow: 0 -4px 8px rgba(64, 64, 64, 0.1); </td>  </tr>
+<tr> <td class="text-blue"> .shadow-sm </td> <td class="text-purple"> box-shadow: 0 1px 3px rgba(64, 64, 64, 0.08); </td>  </tr>
+<tr> <td class="text-blue"> .shadow-lg </td> <td class="text-purple"> box-shadow: 0 6px 12px rgba(64, 64, 64, 0.1); </td>  </tr>
+<tr> <td class="text-blue"> .shadow-inner </td> <td class="text-purple"> box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); </td>  </tr>
+<tr> <td class="text-blue"> .shadow-inset </td> <td class="text-purple"> box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); </td>  </tr>
+<tr> <td class="text-blue"> .shadow-none </td> <td class="text-purple"> box-shadow: none !important; </td>  </tr>
+<tr> <td class="text-blue"> .shadow-0 </td> <td class="text-purple"> box-shadow: none !important; </td>  </tr>
 </table>
-
 
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-4 flex-wrap">
+  <div class="shadow-sm bg-white p-4 rounded">
+    <strong>shadow-sm</strong>
+    <p class="text-secondary m-0">Small shadow</p>
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+  <div class="shadow bg-white p-4 rounded">
+    <strong>shadow</strong>
+    <p class="text-secondary m-0">Default shadow</p>
+  </div>
+  <div class="shadow-lg bg-white p-4 rounded">
+    <strong>shadow-lg</strong>
+    <p class="text-secondary m-0">Large shadow</p>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex gap-4"&gt;
+  &lt;div class="shadow-sm bg-white p-4 rounded"&gt;
+    &lt;strong&gt;shadow-sm&lt;/strong&gt;
+    &lt;p&gt;Small shadow&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="shadow bg-white p-4 rounded"&gt;
+    &lt;strong&gt;shadow&lt;/strong&gt;
+    &lt;p&gt;Default shadow&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="shadow-lg bg-white p-4 rounded"&gt;
+    &lt;strong&gt;shadow-lg&lt;/strong&gt;
+    &lt;p&gt;Large shadow&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Shadow effects on cards create visual depth and hierarchy. Different shadow sizes indicate different levels of elevation and importance.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-4 flex-wrap">
+  <div class="shadow-sm bg-white p-5 rounded-md" style="width: 200px;">
+    <h6 class="mb-2">Product Card</h6>
+    <p class="text-secondary text-sm m-0">Subtle shadow for list items</p>
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+  <div class="shadow bg-white p-5 rounded-md" style="width: 200px;">
+    <h6 class="mb-2">Featured Card</h6>
+    <p class="text-secondary text-sm m-0">Standard shadow for main content</p>
+  </div>
+  <div class="shadow-lg bg-white p-5 rounded-md" style="width: 200px;">
+    <h6 class="mb-2">Modal Dialog</h6>
+    <p class="text-secondary text-sm m-0">Large shadow for elevated elements</p>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="shadow-sm bg-white p-5 rounded-md"&gt;
+  &lt;h6&gt;Product Card&lt;/h6&gt;
+  &lt;p&gt;Subtle shadow for list items&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="shadow bg-white p-5 rounded-md"&gt;
+  &lt;h6&gt;Featured Card&lt;/h6&gt;
+  &lt;p&gt;Standard shadow for main content&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="shadow-lg bg-white p-5 rounded-md"&gt;
+  &lt;h6&gt;Modal Dialog&lt;/h6&gt;
+  &lt;p&gt;Large shadow for elevated elements&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
+<p class="text-secondary">Top shadow is useful for sticky headers, navigation bars, or elements that need shadow above them. Inner shadow creates a recessed or pressed effect.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="d-flex flex-column gap-4">
+  <div class="shadow-top bg-white p-4 rounded">
+    <strong>shadow-top</strong>
+    <p class="text-secondary m-0">Shadow appears above the element</p>
+  </div>
+  <div class="shadow-inner bg-neutral-100 p-4 rounded">
+    <strong>shadow-inner / shadow-inset</strong>
+    <p class="text-secondary m-0">Creates a recessed appearance</p>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="shadow-top bg-white p-4 rounded"&gt;
+  &lt;strong&gt;shadow-top&lt;/strong&gt;
+  &lt;p&gt;Shadow appears above the element&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="shadow-inner bg-neutral-100 p-4 rounded"&gt;
+  &lt;strong&gt;shadow-inner / shadow-inset&lt;/strong&gt;
+  &lt;p&gt;Creates a recessed appearance&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p class="text-secondary">Remove shadows when needed using <code>.shadow-none</code> or <code>.shadow-0</code>. This is useful for overriding default shadows or creating flat designs.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="d-flex gap-4 flex-wrap align-items-center">
+  <div class="shadow bg-white p-4 rounded">
+    <strong>With shadow</strong>
+  </div>
+  <div class="shadow-none bg-white p-4 rounded border">
+    <strong>shadow-none</strong>
+  </div>
+  <div class="shadow-0 bg-white p-4 rounded border">
+    <strong>shadow-0</strong>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="shadow bg-white p-4 rounded"&gt;
+  &lt;strong&gt;With shadow&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class="shadow-none bg-white p-4 rounded border"&gt;
+  &lt;strong&gt;shadow-none&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class="shadow-0 bg-white p-4 rounded border"&gt;
+  &lt;strong&gt;shadow-0&lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize shadow values by modifying the classes in <code>scss/utilities/_shadow.scss</code>. Adjust the blur radius, spread, offset, and color opacity to match your design system. After making changes, recompile your SCSS to generate the updated <code>css/final.css</code> file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* In scss/utilities/_shadow.scss */
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(#404040, .1);
+}
+.shadow-top {
+  box-shadow: 0 -4px 8px rgba(#404040, .1);
+}
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(#404040, .08);
+}
+.shadow-lg {
+  box-shadow: 0 6px 12px rgba(#404040, 0.1);
+}
+.shadow-inner, .shadow-inset{
+  box-shadow: inset 0 1px 2px rgba(#000, .1);
+}
+.shadow-none, .shadow-0 {
+  box-shadow: none !important;
+}
+
+// Compile SCSS to CSS
+// Run: sass scss/main.scss css/final.css</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
-
 <!-- === end of documentation === -->
-
 
 
 </main>
