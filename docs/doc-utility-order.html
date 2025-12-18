@@ -41,72 +41,139 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Order</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
+<p>Order utility classes control the visual order of flex and grid items without changing the HTML structure. Use these classes to rearrange elements for different screen sizes, prioritize content visibility, or create responsive layouts where element order changes based on viewport width. Works with flexbox and CSS grid containers.</p>
 <p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
+<span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+<tr> <td class="text-blue"> order-0 </td> <td class="text-purple"> order: 0 </td>  </tr>
+<tr> <td class="text-blue"> order-1 </td> <td class="text-purple"> order: 1 </td>  </tr>
+<tr> <td class="text-blue"> order-2 </td> <td class="text-purple"> order: 2 </td>  </tr>
+<tr> <td class="text-blue"> order-3 </td> <td class="text-purple"> order: 3 </td>  </tr>
+<tr> <td class="text-blue"> order-4 </td> <td class="text-purple"> order: 4 </td>  </tr>
+<tr> <td class="text-blue"> order-5 </td> <td class="text-purple"> order: 5 </td>  </tr>
+<tr> <td class="text-blue"> md:order-2 </td> <td class="text-purple"> order: 2 (at 921px and above) </td>  </tr>
+<tr> <td class="text-blue"> max-sm:order-3 </td> <td class="text-purple"> order: 3 (at 640px and below) </td>  </tr>
 </table>
-
-
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+<div style="display: flex; gap: 10px;">
+  <div class="order-3" style="padding: 20px; background: #e0e7ff; border-radius: 4px;">First in HTML (order-3)</div>
+  <div class="order-1" style="padding: 20px; background: #dbeafe; border-radius: 4px;">Second in HTML (order-1)</div>
+  <div class="order-2" style="padding: 20px; background: #fee2e2; border-radius: 4px;">Third in HTML (order-2)</div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div style="display: flex; gap: 10px;"&gt;
+  &lt;div class="order-3"&gt;First in HTML (order-3)&lt;/div&gt;
+  &lt;div class="order-1"&gt;Second in HTML (order-1)&lt;/div&gt;
+  &lt;div class="order-2"&gt;Third in HTML (order-2)&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
-
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Responsive ordering is perfect for mobile-first layouts. On mobile, show important content first, then reorder for desktop viewing. Resize your browser to see the order change.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div style="display: flex; flex-direction: column; gap: 10px;">
+  <div class="order-2 md:order-1" style="padding: 20px; background: #e0e7ff; border-radius: 4px;">
+    <strong>Header</strong> - Shows second on mobile, first on desktop
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+  <div class="order-1 md:order-2" style="padding: 20px; background: #dbeafe; border-radius: 4px;">
+    <strong>Main Content</strong> - Shows first on mobile, second on desktop
+  </div>
+  <div class="order-3 md:order-3" style="padding: 20px; background: #fee2e2; border-radius: 4px;">
+    <strong>Sidebar</strong> - Shows third on both mobile and desktop
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div style="display: flex; flex-direction: column;"&gt;
+  &lt;div class="order-2 md:order-1"&gt;
+    Header - Shows second on mobile, first on desktop
+  &lt;/div&gt;
+  &lt;div class="order-1 md:order-2"&gt;
+    Main Content - Shows first on mobile, second on desktop
+  &lt;/div&gt;
+  &lt;div class="order-3 md:order-3"&gt;
+    Sidebar - Shows third on both mobile and desktop
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
-
+<p class="text-secondary">Use max-width breakpoints to reverse order on smaller screens. This example shows a typical desktop layout that rearranges for mobile devices.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div style="display: flex; gap: 15px;">
+  <div class="order-1 max-sm:order-3" style="padding: 20px; background: #f3e8ff; border-radius: 4px; flex: 1;">
+    <strong>Image</strong><br>order-1 max-sm:order-3
+  </div>
+  <div class="order-2 max-sm:order-1" style="padding: 20px; background: #ccfbf1; border-radius: 4px; flex: 1;">
+    <strong>Title</strong><br>order-2 max-sm:order-1
+  </div>
+  <div class="order-3 max-sm:order-2" style="padding: 20px; background: #ffedd5; border-radius: 4px; flex: 1;">
+    <strong>Description</strong><br>order-3 max-sm:order-2
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div style="display: flex; gap: 15px;"&gt;
+  &lt;div class="order-1 max-sm:order-3"&gt;Image&lt;/div&gt;
+  &lt;div class="order-2 max-sm:order-1"&gt;Title&lt;/div&gt;
+  &lt;div class="order-3 max-sm:order-2"&gt;Description&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize order values by editing <code>scss/utilities/_order.scss</code> file. Add additional order values beyond 0-5 if needed, or modify breakpoint behavior. After making changes, compile the SCSS to generate the updated CSS file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* Add more order values */
+.order-6 { order: 6; }
+.order-7 { order: 7; }
+.order-8 { order: 8; }
 
+/* Add negative order values */
+.order-first { order: -1; }
+.order-last { order: 999; }
+
+/* Generate responsive classes for new values */
+@each $breakpoint, $screen_size in $breakpoints {
+  @media ($screen_size) {
+    .#{$breakpoint}\:order-6 { order: 6; }
+    .#{$breakpoint}\:order-first { order: -1; }
+    .#{$breakpoint}\:order-last { order: 999; }
+  }
+}</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+</article>
 <!-- === end of documentation === -->
 
 

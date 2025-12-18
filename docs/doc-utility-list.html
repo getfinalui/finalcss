@@ -41,73 +41,149 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Lists</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>List utility classes provide pre-styled list variations with custom markers, positioning, and spacing. Use these classes to create visually appealing ordered and unordered lists with bullets, checkmarks, numbers, or custom symbols. Perfect for feature lists, checklists, and content hierarchies.</p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+  <tr> <td class="text-blue"> .list-bullet </td> <td class="text-purple"> Custom bullet list with colored circle markers </td>  </tr>
+  <tr> <td class="text-blue"> .list-check </td> <td class="text-purple"> Checklist with checkmark symbols before items </td>  </tr>
+  <tr> <td class="text-blue"> .list-number </td> <td class="text-purple"> Numbered list with colored decimal markers </td>  </tr>
+  <tr> <td class="text-blue"> .list-style-disc </td> <td class="text-purple"> list-style-type: disc </td>  </tr>
+  <tr> <td class="text-blue"> .list-style-number </td> <td class="text-purple"> list-style-type: decimal </td>  </tr>
+  <tr> <td class="text-blue"> .list-style-like </td> <td class="text-purple"> list-style-type: "👍" </td>  </tr>
+  <tr> <td class="text-blue"> .list-postion-inside </td> <td class="text-purple"> list-style-position: inside </td>  </tr>
+  <tr> <td class="text-blue"> .list-postion-outside </td> <td class="text-purple"> list-style-position: outside </td>  </tr>
 </table>
-
-
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <ul class="list-bullet">
+      <li>First item with custom bullet</li>
+      <li>Second item with custom bullet</li>
+      <li>Third item with custom bullet</li>
+    </ul>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;ul class="list-bullet"&gt;
+  &lt;li&gt;First item with custom bullet&lt;/li&gt;
+  &lt;li&gt;Second item with custom bullet&lt;/li&gt;
+  &lt;li&gt;Third item with custom bullet&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-
-
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Checklist style is ideal for feature lists, requirements, or completed tasks. The checkmark symbol provides a visual confirmation.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <ul class="list-check">
+      <li>Responsive design included</li>
+      <li>Cross-browser compatible</li>
+      <li>Accessible markup</li>
+      <li>Custom color support</li>
+    </ul>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;ul class="list-check"&gt;
+  &lt;li&gt;Responsive design included&lt;/li&gt;
+  &lt;li&gt;Cross-browser compatible&lt;/li&gt;
+  &lt;li&gt;Accessible markup&lt;/li&gt;
+  &lt;li&gt;Custom color support&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-
-
+<p class="text-secondary">Numbered lists with styled markers are perfect for step-by-step instructions or ordered content.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <ol class="list-number">
+      <li>Install the dependencies</li>
+      <li>Configure your settings</li>
+      <li>Build the project</li>
+      <li>Deploy to production</li>
+    </ol>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;ol class="list-number"&gt;
+  &lt;li&gt;Install the dependencies&lt;/li&gt;
+  &lt;li&gt;Configure your settings&lt;/li&gt;
+  &lt;li&gt;Build the project&lt;/li&gt;
+  &lt;li&gt;Deploy to production&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+<p class="text-secondary">Use fun custom symbols like thumbs up for positive lists or feedback.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <ul class="list-style-like">
+      <li>Great performance</li>
+      <li>Easy to customize</li>
+      <li>Well documented</li>
+    </ul>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;ul class="list-style-like"&gt;
+  &lt;li&gt;Great performance&lt;/li&gt;
+  &lt;li&gt;Easy to customize&lt;/li&gt;
+  &lt;li&gt;Well documented&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize list styles by editing scss/utilities/_list.scss file. Change colors by modifying CSS variables, adjust spacing with margin/padding values, or add new custom symbols using Unicode characters or emojis. After making changes, compile the SCSS to generate the final CSS file.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
-
-<!-- === end of documentation === -->
+    <pre class="m-0"><code class="rounded language-css">/* Example */
+.list-star {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0.6rem;
+li {
+  padding-left: 1.6em;
+  position: relative;
+  margin-bottom: 0.6rem;
+  }
+  li::before {
+  content: "\2605"; // Unicode star symbol
+  color: var(--orange-500, #f97316);
+  font-size: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  }
+}
+/* Change bullet color */
+.list-bullet > li::before {
+color: var(--primary-500, #6163fe);
+}</code></pre>
+    <!-- code -->
+    </figcaption>
+    </figure>
+    </article>
+    <!-- === end of documentation === -->
 
 
 

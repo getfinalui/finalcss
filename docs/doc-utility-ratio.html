@@ -41,72 +41,183 @@
 </aside>
 <main class="lg:w-80% pl-0 lg:pl-10 pt-10">
 
-
 <!-- === start of documentation === -->
-
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Aspect Ratio</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Aspect ratio utility classes maintain consistent width-to-height proportions for elements. Use these classes to create responsive images, video containers, thumbnails, and grid items that preserve their shape regardless of screen size. Perfect for maintaining visual consistency across media elements, cards, and placeholders.</p>
 <hr>
-
 <h5> What it does? </h5>
 <p class="text-secondary"> Here are representative examples of these classes: </p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+<tr class="bg-secondary"> <th> Class </th> <th> Styles </th>   </tr>
+<tr> <td class="text-blue"> ratio-1x1  <span class="text-muted">or</span> square </td> <td class="text-purple"> aspect-ratio: 1/1 </td>  </tr>
+<tr> <td class="text-blue"> ratio-16x9 </td> <td class="text-purple"> aspect-ratio: 16/9 </td>  </tr>
+<tr> <td class="text-blue"> ratio-9x16 </td> <td class="text-purple"> aspect-ratio: 9/16 </td>  </tr>
+<tr> <td class="text-blue"> ratio-4x3 </td> <td class="text-purple"> aspect-ratio: 4/3 </td>  </tr>
+<tr> <td class="text-blue"> ratio-3x4 </td> <td class="text-purple"> aspect-ratio: 3/4 </td>  </tr>
+<tr> <td class="text-blue"> ratio-3x2 </td> <td class="text-purple"> aspect-ratio: 3/2 </td>  </tr>
+<tr> <td class="text-blue"> ratio-2x3 </td> <td class="text-purple"> aspect-ratio: 2/3 </td>  </tr>
+<tr> <td class="text-blue"> ratio-2x1 </td> <td class="text-purple"> aspect-ratio: 2/1 </td>  </tr>
+<tr> <td class="text-blue"> ratio-1x2 </td> <td class="text-purple"> aspect-ratio: 1/2 </td>  </tr>
+<tr> <td class="text-blue"> ratio-3x1 </td> <td class="text-purple"> aspect-ratio: 3/1 </td>  </tr>
+<tr> <td class="text-blue"> ratio-1x3 </td> <td class="text-purple"> aspect-ratio: 1/3 </td>  </tr>
 </table>
-
-
 <h5> Basic example </h5>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
-  </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+<div class="card-body">
+<!-- example -->
+<div class="ratio-1x1" style="width: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+  1:1 Square
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="ratio-1x1" style="width: 200px;"&gt;
+  1:1 Square
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
-
-
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Common video aspect ratios like 16:9 (widescreen) and 4:3 (standard) are ideal for embedding videos, creating video placeholders, or designing media containers.</p>
 <figure class="rounded border shadow">
-  <div class="card-body">
-    <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
-    <!-- example .//end -->
+<div class="card-body">
+<!-- example -->
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px;">
+    <div class="ratio-16x9" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+      16:9 Widescreen
+    </div>
   </div>
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
-		<!-- code -->
-	</figcaption>
+  <div style="flex: 1; min-width: 250px;">
+    <div class="ratio-4x3" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+      4:3 Standard
+    </div>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="ratio-16x9"&gt;
+  16:9 Widescreen
+&lt;/div&gt;
+
+&lt;div class="ratio-4x3"&gt;
+  4:3 Standard
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
 </figure>
 
+<p class="text-secondary">Portrait orientations like 9:16 (mobile video) and 3:4 (portrait photo) are perfect for social media content, mobile-first designs, and vertical layouts.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div style="display: flex; gap: 20px; justify-content: center;">
+  <div style="width: 150px;">
+    <div class="ratio-9x16" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; text-align: center;">
+      9:16<br>Mobile Story
+    </div>
+  </div>
+  <div style="width: 150px;">
+    <div class="ratio-3x4" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; text-align: center;">
+      3:4<br>Portrait
+    </div>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="ratio-9x16"&gt;
+  9:16 Mobile Story
+&lt;/div&gt;
 
+&lt;div class="ratio-3x4"&gt;
+  3:4 Portrait
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p class="text-secondary">Wide panoramic ratios like 3:1 and 2:1 are excellent for banners, hero sections, and horizontal layouts that need dramatic width.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div style="display: flex; flex-direction: column; gap: 15px;">
+  <div class="ratio-3x1" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333; font-weight: bold;">
+    3:1 Panoramic Banner
+  </div>
+  <div class="ratio-2x1" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333; font-weight: bold;">
+    2:1 Wide Banner
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="ratio-3x1"&gt;
+  3:1 Panoramic Banner
+&lt;/div&gt;
+
+&lt;div class="ratio-2x1"&gt;
+  2:1 Wide Banner
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<p class="text-secondary">Image grids with consistent aspect ratios create professional-looking galleries and product showcases. The square ratio is perfect for thumbnails and profile images.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px;">
+  <div class="square" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px;"></div>
+  <div class="square" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 8px;"></div>
+  <div class="square" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 8px;"></div>
+  <div class="square" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 8px;"></div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px;"&gt;
+  &lt;div class="square"&gt;&lt;/div&gt;
+  &lt;div class="square"&gt;&lt;/div&gt;
+  &lt;div class="square"&gt;&lt;/div&gt;
+  &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 <h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<p>You can customize aspect ratios by editing scss/utilities/_ratio.scss file. Add custom ratios for specific use cases like social media dimensions (1.91:1 for Facebook, 1:1.25 for Pinterest), or create branded aspect ratios. After making changes, compile the SCSS to generate the updated CSS file.</p>
 <figure class="rounded">
-  <figcaption>
-		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
-		<!-- code -->
-	</figcaption>
-</figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
-</article>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded language-css">/* Add custom social media aspect ratios */
+.ratio-facebook { aspect-ratio: 1.91/1; } // Facebook link preview
+.ratio-twitter { aspect-ratio: 2/1; } // Twitter card
+.ratio-pinterest { aspect-ratio: 2/3; } // Pinterest pin
+.ratio-instagram { aspect-ratio: 4/5; } // Instagram portrait
 
+/* Add ultra-wide ratios */
+.ratio-21x9 { aspect-ratio: 21/9; } // Cinematic
+.ratio-32x9 { aspect-ratio: 32/9; } // Super ultrawide
+
+/* Add golden ratio */
+.ratio-golden { aspect-ratio: 1.618/1; } // Golden ratio
+
+/* Custom business card */
+.ratio-business-card { aspect-ratio: 3.5/2; } // Standard business card</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+</article>
 <!-- === end of documentation === -->
 
 
