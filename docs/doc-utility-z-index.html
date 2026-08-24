@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Z-index utility documentation for Final CSS">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Z-index utilities - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -45,66 +45,110 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Z-index</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Z-index utilities control stacking order. Use them for overlays, dropdowns, sticky headers, menus, tooltips, modals, and layered decorative elements. Z-index only works on positioned elements, so combine these utilities with position classes such as <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>.</p>
+<p>Responsive: No</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are the available z-index classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">-z-1</td> <td class="text-purple">z-index: -1;</td> </tr>
+  <tr> <td class="text-blue">z-0</td> <td class="text-purple">z-index: 0;</td> </tr>
+  <tr> <td class="text-blue">z-10</td> <td class="text-purple">z-index: 10;</td> </tr>
+  <tr> <td class="text-blue">z-20</td> <td class="text-purple">z-index: 20;</td> </tr>
+  <tr> <td class="text-blue">z-30</td> <td class="text-purple">z-index: 30;</td> </tr>
+  <tr> <td class="text-blue">z-40</td> <td class="text-purple">z-index: 40;</td> </tr>
+  <tr> <td class="text-blue">z-50</td> <td class="text-purple">z-index: 50;</td> </tr>
+  <tr> <td class="text-blue">z-100</td> <td class="text-purple">z-index: 100;</td> </tr>
+  <tr> <td class="text-blue">z-1000</td> <td class="text-purple">z-index: 1000;</td> </tr>
+  <tr> <td class="text-blue">z-max</td> <td class="text-purple">z-index: 9999;</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="relative h-40">
+      <div class="absolute left-0 top-0 w-30 h-20 rounded bg-blue-100 z-10 p-3">z-10</div>
+      <div class="absolute left-10 top-5 w-30 h-20 rounded bg-primary text-white z-20 p-3">z-20</div>
+      <div class="absolute left-9 top-10 w-30 h-20 rounded bg-orange-100 z-30 p-3">z-30</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative h-40"&gt;
+  &lt;div class="absolute left-0 top-0 z-10"&gt;z-10&lt;/div&gt;
+  &lt;div class="absolute left-10 top-5 z-20"&gt;z-20&lt;/div&gt;
+  &lt;div class="absolute left-9 top-10 z-30"&gt;z-30&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Overlay example</h5>
+<p class="text-secondary">Use higher z-index values for UI that must sit above normal page content, such as floating menus and overlays.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="relative h-40 rounded bg-neutral-100 overflow-hidden">
+      <div class="absolute left-0 top-0 w-full h-full bg-blue-100 z-0 p-4">Page content</div>
+      <div class="absolute right-5 top-5 z-50 card card-body shadow" style="width: 220px;">
+        Floating panel with z-50
+      </div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative h-40"&gt;
+  &lt;div class="absolute left-0 top-0 w-full h-full z-0"&gt;Page content&lt;/div&gt;
+  &lt;div class="absolute right-5 top-5 z-50 card card-body shadow"&gt;
+    Floating panel
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Behind content</h5>
+<p class="text-secondary">Use <code>-z-1</code> carefully for background layers. The parent usually needs a stacking context such as <code>relative z-0</code>.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="relative z-0 p-6">
+      <div class="absolute left-2 top-2 w-40 h-20 rounded bg-purple-100 -z-1"></div>
+      <h6>Content above a background shape</h6>
+      <p class="text-secondary">The purple shape uses <code>-z-1</code>.</p>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="relative z-0 p-6"&gt;
+  &lt;div class="absolute left-2 top-2 w-40 h-20 rounded bg-purple-100 -z-1"&gt;&lt;/div&gt;
+  &lt;h6&gt;Content above a background shape&lt;/h6&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize z-index utilities in <code>scss/utilities/_z-index.scss</code>. Keep the scale small and intentional so components do not compete with arbitrary stacking values. After editing, compile the SCSS into the files in <code>css/</code>.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">/* Add project-specific layers */
+.z-dropdown { z-index: 1000; }
+.z-modal { z-index: 2000; }
+.z-toast { z-index: 3000; }</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
 
 <!-- === end of documentation === -->

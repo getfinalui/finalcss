@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Vertical align utility documentation for Final CSS">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Vertical align utilities - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -45,66 +45,109 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Vertical align</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Vertical align utilities set the CSS <code>vertical-align</code> property. They are useful for inline, inline-block, table-cell, icon, badge, image, and text alignment cases. For flexbox layouts, prefer flex alignment utilities such as <code>align-items-center</code>.</p>
+<p>Responsive: No</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are the available vertical align classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">vertical-align-baseline</td> <td class="text-purple">vertical-align: baseline;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-top</td> <td class="text-purple">vertical-align: top;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-middle</td> <td class="text-purple">vertical-align: middle;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-bottom</td> <td class="text-purple">vertical-align: bottom;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-text-bottom</td> <td class="text-purple">vertical-align: text-bottom;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-text-top</td> <td class="text-purple">vertical-align: text-top;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-sub</td> <td class="text-purple">vertical-align: sub;</td> </tr>
+  <tr> <td class="text-blue">vertical-align-super</td> <td class="text-purple">vertical-align: super;</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <p>
+      Text
+      <span class="d-inline-block w-6 h-6 bg-primary rounded vertical-align-middle"></span>
+      aligned with a middle icon.
+    </p>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;p&gt;
+  Text
+  &lt;span class="d-inline-block w-6 h-6 bg-primary rounded vertical-align-middle"&gt;&lt;/span&gt;
+  aligned with a middle icon.
+&lt;/p&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-
 
 <h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<p class="text-secondary">Compare top, middle, and bottom alignment with inline-block elements placed beside text.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <p class="mb-3">
+      Top
+      <span class="d-inline-block w-8 h-8 bg-blue-100 rounded vertical-align-top"></span>
+      alignment
+    </p>
+    <p class="mb-3">
+      Middle
+      <span class="d-inline-block w-8 h-8 bg-green-100 rounded vertical-align-middle"></span>
+      alignment
+    </p>
+    <p>
+      Bottom
+      <span class="d-inline-block w-8 h-8 bg-orange-100 rounded vertical-align-bottom"></span>
+      alignment
+    </p>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;p&gt;Top &lt;span class="d-inline-block w-8 h-8 vertical-align-top"&gt;&lt;/span&gt; alignment&lt;/p&gt;
+&lt;p&gt;Middle &lt;span class="d-inline-block w-8 h-8 vertical-align-middle"&gt;&lt;/span&gt; alignment&lt;/p&gt;
+&lt;p&gt;Bottom &lt;span class="d-inline-block w-8 h-8 vertical-align-bottom"&gt;&lt;/span&gt; alignment&lt;/p&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Sub and super alignment</h5>
+<p class="text-secondary">Use <code>vertical-align-sub</code> and <code>vertical-align-super</code> for inline labels, math-like notation, and small helper marks.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <p>H<span class="vertical-align-sub text-sm">2</span>O</p>
+    <p>Price<span class="vertical-align-super text-sm">new</span></p>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;p&gt;H&lt;span class="vertical-align-sub text-sm"&gt;2&lt;/span&gt;O&lt;/p&gt;
+&lt;p&gt;Price&lt;span class="vertical-align-super text-sm"&gt;new&lt;/span&gt;&lt;/p&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize these utilities in <code>scss/utilities/_vertical-align.scss</code>. Add new classes only when you need a named value that CSS supports. After editing, compile the SCSS into the files in <code>css/</code>.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">/* Add a custom vertical-align utility */
+.vertical-align-middle-plus {
+  vertical-align: -0.125em;
+}</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
 
 <!-- === end of documentation === -->

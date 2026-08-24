@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Cursor utility documentation for Final CSS">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Cursor utilities - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -45,66 +45,113 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Cursor</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Cursor utilities set the mouse cursor for interactive, disabled, draggable, text, loading, and zoomable elements. Use them when an element's behavior is not obvious from native HTML semantics or when you are building custom controls.</p>
+<p>Responsive: No</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are the available cursor classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">cursor-pointer</td> <td class="text-purple">cursor: pointer;</td> </tr>
+  <tr> <td class="text-blue">cursor-not-allowed</td> <td class="text-purple">cursor: not-allowed;</td> </tr>
+  <tr> <td class="text-blue">cursor-default</td> <td class="text-purple">cursor: default;</td> </tr>
+  <tr> <td class="text-blue">cursor-help</td> <td class="text-purple">cursor: help;</td> </tr>
+  <tr> <td class="text-blue">cursor-move</td> <td class="text-purple">cursor: move;</td> </tr>
+  <tr> <td class="text-blue">cursor-col-resize</td> <td class="text-purple">cursor: col-resize;</td> </tr>
+  <tr> <td class="text-blue">cursor-row-resize</td> <td class="text-purple">cursor: row-resize;</td> </tr>
+  <tr> <td class="text-blue">cursor-no-drop</td> <td class="text-purple">cursor: no-drop;</td> </tr>
+  <tr> <td class="text-blue">cursor-wait</td> <td class="text-purple">cursor: wait;</td> </tr>
+  <tr> <td class="text-blue">cursor-zoom-in</td> <td class="text-purple">cursor: zoom-in;</td> </tr>
+  <tr> <td class="text-blue">cursor-zoom-out</td> <td class="text-purple">cursor: zoom-out;</td> </tr>
+  <tr> <td class="text-blue">cursor-text</td> <td class="text-purple">cursor: text;</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-flex gap-3 flex-wrap">
+      <button type="button" class="btn btn-primary cursor-pointer">Pointer</button>
+      <button type="button" class="btn btn-default cursor-not-allowed opacity-50">Not allowed</button>
+      <span class="d-inline-block p-3 rounded bg-neutral-100 cursor-help">Help cursor</span>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-primary cursor-pointer"&gt;Pointer&lt;/button&gt;
+&lt;button class="btn btn-default cursor-not-allowed opacity-50"&gt;Not allowed&lt;/button&gt;
+&lt;span class="cursor-help"&gt;Help cursor&lt;/span&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Interactive examples</h5>
+<p class="text-secondary">Hover over each item to see the cursor style. These classes are useful for custom UI where the browser does not infer the correct cursor automatically.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-grid grid-template-cols-3 max-sm:grid-template-cols-1 gap-3">
+      <div class="p-4 rounded border cursor-move">cursor-move</div>
+      <div class="p-4 rounded border cursor-text">cursor-text</div>
+      <div class="p-4 rounded border cursor-wait">cursor-wait</div>
+      <div class="p-4 rounded border cursor-col-resize">cursor-col-resize</div>
+      <div class="p-4 rounded border cursor-row-resize">cursor-row-resize</div>
+      <div class="p-4 rounded border cursor-zoom-in">cursor-zoom-in</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="cursor-move"&gt;cursor-move&lt;/div&gt;
+&lt;div class="cursor-text"&gt;cursor-text&lt;/div&gt;
+&lt;div class="cursor-wait"&gt;cursor-wait&lt;/div&gt;
+&lt;div class="cursor-col-resize"&gt;cursor-col-resize&lt;/div&gt;
+&lt;div class="cursor-row-resize"&gt;cursor-row-resize&lt;/div&gt;
+&lt;div class="cursor-zoom-in"&gt;cursor-zoom-in&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Image preview links</h5>
+<p class="text-secondary">Use zoom cursors on thumbnails or previews to communicate that the item can be opened or enlarged.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <a href="#" class="d-inline-block cursor-zoom-in rounded overflow-hidden border">
+      <img src="/placeholder.jpg" width="180" height="120" alt="Preview placeholder">
+    </a>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;a href="#" class="d-inline-block cursor-zoom-in rounded overflow-hidden border"&gt;
+  &lt;img src="/placeholder.jpg" width="180" height="120" alt="Preview placeholder"&gt;
+&lt;/a&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize cursor utilities in <code>scss/utilities/_cursor.scss</code>. Add only cursors that are meaningful for your project's UI patterns. After editing, compile the SCSS into the files in <code>css/</code>.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">/* Add a custom cursor utility */
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
 
 <!-- === end of documentation === -->

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Scale utility documentation for Final CSS">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Scale utilities - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -45,66 +45,105 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Scale</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Scale utilities apply CSS transform scaling to an element. Use them for small interactive effects, zoom previews, selected states, and hover feedback. Scale classes include a built-in 0.2s transform transition, so hover and group-hover changes feel smooth by default.</p>
+<p>Responsive: No</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are representative examples of these classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">transition-all</td> <td class="text-purple">transition-property: all; transition-duration: .2s;</td> </tr>
+  <tr> <td class="text-blue">scale-50</td> <td class="text-purple">transform: scale(0.5);</td> </tr>
+  <tr> <td class="text-blue">scale-80</td> <td class="text-purple">transform: scale(0.8);</td> </tr>
+  <tr> <td class="text-blue">scale-100</td> <td class="text-purple">transform: scale(1);</td> </tr>
+  <tr> <td class="text-blue">scale-120</td> <td class="text-purple">transform: scale(1.2);</td> </tr>
+  <tr> <td class="text-blue">scale-150</td> <td class="text-purple">transform: scale(1.5);</td> </tr>
+  <tr> <td class="text-blue">hover:scale-110</td> <td class="text-purple">transform: scale(1.1) on hover;</td> </tr>
+  <tr> <td class="text-blue">group-hover:scale-110</td> <td class="text-purple">transform: scale(1.1) when parent .group is hovered;</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-flex align-items-center gap-5 flex-wrap">
+      <div class="scale-80 p-4 rounded bg-blue-100">scale-80</div>
+      <div class="scale-100 p-4 rounded bg-green-100">scale-100</div>
+      <div class="scale-120 p-4 rounded bg-orange-100">scale-120</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="scale-80"&gt;scale-80&lt;/div&gt;
+&lt;div class="scale-100"&gt;scale-100&lt;/div&gt;
+&lt;div class="scale-120"&gt;scale-120&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Hover scale</h5>
+<p class="text-secondary">Use <code>hover:scale-*</code> for simple zoom effects on cards, buttons, thumbnails, and icons.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <button type="button" class="btn btn-primary hover:scale-110">Hover me</button>
+    <a href="#" class="d-inline-block ml-3 p-4 rounded bg-purple-100 hover:scale-120">Hover card</a>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button class="btn btn-primary hover:scale-110"&gt;Hover me&lt;/button&gt;
+&lt;a href="#" class="d-inline-block p-4 rounded bg-purple-100 hover:scale-120"&gt;
+  Hover card
+&lt;/a&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Group hover scale</h5>
+<p class="text-secondary">Use <code>group-hover:scale-*</code> when a child element should scale after hovering the parent.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <article class="group card card-body" style="max-width: 320px;">
+      <div class="w-12 h-12 rounded bg-primary group-hover:scale-120 mb-3"></div>
+      <h6>Hover over the card</h6>
+      <p class="text-secondary">The square scales because the parent has class <code>group</code>.</p>
+    </article>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;article class="group card card-body"&gt;
+  &lt;div class="w-12 h-12 rounded bg-primary group-hover:scale-120"&gt;&lt;/div&gt;
+  &lt;h6&gt;Hover over the card&lt;/h6&gt;
+&lt;/article&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize scale utilities in <code>scss/utilities/_scale.scss</code>. Add new scale values, change the transition duration, or remove the default transition if you want scaling to happen instantly. After editing, compile the SCSS into the files in <code>css/</code>.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">/* Add a new scale value */
+.scale-105 { transform: scale(1.05); }
+.hover\:scale-105:hover { transform: scale(1.05); }
+.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+
+/* Change the default transition */
+[class*=scale] {
+  transition: transform 0.15s;
+}</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
 
 <!-- === end of documentation === -->

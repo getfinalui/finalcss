@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Whitespace utility documentation for Final CSS">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Whitespace utilities - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -45,66 +45,95 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Whitespace</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Whitespace utilities control how spaces, tabs, and line breaks are handled inside an element. Use them for single-line labels, preformatted text, code-like content, messages, and places where text wrapping needs to be explicit.</p>
+<p>Responsive: No</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>What it does?</h5>
+<p class="text-secondary">Here are the available whitespace classes:</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
+  <tr> <td class="text-blue">whitespace-normal</td> <td class="text-purple">white-space: normal;</td> </tr>
+  <tr> <td class="text-blue">whitespace-nowrap</td> <td class="text-purple">white-space: nowrap;</td> </tr>
+  <tr> <td class="text-blue">whitespace-pre</td> <td class="text-purple">white-space: pre;</td> </tr>
+  <tr> <td class="text-blue">whitespace-pre-line</td> <td class="text-purple">white-space: pre-line;</td> </tr>
+  <tr> <td class="text-blue">whitespace-pre-wrap</td> <td class="text-purple">white-space: pre-wrap;</td> </tr>
+  <tr> <td class="text-blue">whitespace-break-spaces</td> <td class="text-purple">white-space: break-spaces;</td> </tr>
 </table>
 
-
-<h5> Basic example </h5>
+<h5>Basic example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="border rounded p-3 w-50%">
+      <span class="whitespace-nowrap">This label stays on one line even when the container is narrow.</span>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border rounded p-3 w-50%"&gt;
+  &lt;span class="whitespace-nowrap"&gt;
+    This label stays on one line even when the container is narrow.
+  &lt;/span&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Preserve line breaks</h5>
+<p class="text-secondary">Use <code>whitespace-pre-line</code> when you want line breaks from the source text to render while normal spacing still collapses.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <p class="whitespace-pre-line border rounded p-3">First line
+Second line
+Third line</p>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;p class="whitespace-pre-line"&gt;First line
+Second line
+Third line&lt;/p&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Preserve spaces and wrapping</h5>
+<p class="text-secondary">Use <code>whitespace-pre-wrap</code> or <code>whitespace-break-spaces</code> when spaces and line breaks are meaningful, such as formatted notes or generated text.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <p class="whitespace-pre-wrap border rounded p-3">Name:     Final CSS
+Status:   Active project
+Mode:     Utility and component library</p>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;p class="whitespace-pre-wrap"&gt;Name:     Final CSS
+Status:   Active project
+Mode:     Utility and component library&lt;/p&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>How to customize?</h5>
+<p>You can customize whitespace utilities in <code>scss/utilities/_whitespace.scss</code>. Add another class when your project needs a CSS <code>white-space</code> value that is not already included. After editing, compile the SCSS into the files in <code>css/</code>.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">/* Add a shorthand alias */
+.ws-nowrap {
+  white-space: nowrap;
+}</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
 </article>
 
 <!-- === end of documentation === -->
