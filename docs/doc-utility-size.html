@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Size utility documentation for Final CSS width, height, min/max sizes, percentages, viewport units, and custom CSS variables">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Size utilities - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -44,291 +44,519 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Width & Height Utilities</h1>
+<h1 class="text-4xl my-20px">Size utilities</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p>Width and height utilities provide a comprehensive system for controlling element dimensions using predefined size values. These utilities cover width, height, min-width, max-width, min-height, and max-height properties, allowing you to size elements consistently throughout your project. The spacing scale is based on a 4-pixel increment system, making it easy to maintain visual rhythm and alignment. Use these classes when you need to set fixed dimensions, create responsive layouts, or constrain element sizes within specific boundaries.</p>
-
-<p>Responsive: ✅ Yes <br> 
-<span class="text-blue"><b>lg:</b>classname, <b>md:</b>classname, <b>sm:</b>classname, <br>
-    <b>max-lg:</b>classname, <b>max-md:</b>classname, <b>max-sm:</b>classname</span>
+<p>Size utilities control element dimensions with classes for <code>width</code>, <code>height</code>, <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, and <code>max-height</code>. Final CSS includes fixed pixel sizes, percentage sizes, viewport width and height sizes, custom CSS-variable sizes, and responsive variants generated from the breakpoint config.</p>
+<p>Responsive: Yes <br>
+  <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
+  max-lg:classname, max-md:classname, max-sm:classname</span>
 </p>
 <hr>
 
-<p class="text-secondary"> Here are representative examples of these classes: </p>
-<div class="row row-cols-2">
-  <aside class="border-right border-color-neutral-400">
+<h4>Class reference</h4>
+<p class="text-secondary">Size utilities are generated from the maps in <code>scss/utilities/_size.scss</code>.</p>
+
+<h5>Fixed size scale</h5>
+<p>The fixed scale is based on a 4px step for small values, then larger steps for common layout sizes. The same values are generated for <code>w-*</code>, <code>h-*</code>, <code>min-w-*</code>, <code>max-w-*</code>, <code>min-h-*</code>, and <code>max-h-*</code>.</p>
+<div class="row row-cols-2 max-md:row-cols-1 gap-5">
+  <aside class="lg:border-right lg:pr-5">
     <h6 class="my-3">Width sizes</h6>
     <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
-      <!-- Width Classes -->
-      <tr> <td class="text-blue"> w-unset </td> <td class="text-purple"> width: unset; </td> </tr>
-      <tr> <td class="text-blue"> w-initial </td> <td class="text-purple"> width: initial; </td> </tr>
-      <tr> <td class="text-blue"> w-auto </td> <td class="text-purple"> width: auto; </td> </tr>
-      <tr> <td class="text-blue"> w-0 </td> <td class="text-purple"> width: 0; </td> </tr>
-      <tr> <td class="text-blue"> w-1 </td> <td class="text-purple"> width: 4px; </td> </tr>
-      <tr> <td class="text-blue"> w-2 </td> <td class="text-purple"> width: 8px; </td> </tr>
-      <tr> <td class="text-blue"> w-3 </td> <td class="text-purple"> width: 12px; </td> </tr>
-      <tr> <td class="text-blue"> w-4 </td> <td class="text-purple"> width: 16px; </td> </tr>
-      <tr> <td class="text-blue"> w-5 </td> <td class="text-purple"> width: 20px; </td> </tr>
-      <tr> <td class="text-blue"> w-6 </td> <td class="text-purple"> width: 24px; </td> </tr>
-      <tr> <td class="text-blue"> w-7 </td> <td class="text-purple"> width: 28px; </td> </tr>
-      <tr> <td class="text-blue"> w-8 </td> <td class="text-purple"> width: 32px; </td> </tr>
-      <tr> <td class="text-blue"> w-9 </td> <td class="text-purple"> width: 36px; </td> </tr>
-      <tr> <td class="text-blue"> w-10 </td> <td class="text-purple"> width: 40px; </td> </tr>
-      <tr> <td class="text-blue"> w-11 </td> <td class="text-purple"> width: 44px; </td> </tr>
-      <tr> <td class="text-blue"> w-12 </td> <td class="text-purple"> width: 48px; </td> </tr>
-      <tr> <td class="text-blue"> w-14 </td> <td class="text-purple"> width: 56px; </td> </tr>
-      <tr> <td class="text-blue"> w-16 </td> <td class="text-purple"> width: 64px; </td> </tr>
-      <tr> <td class="text-blue"> w-18 </td> <td class="text-purple"> width: 72px; </td> </tr>
-      <tr> <td class="text-blue"> w-20 </td> <td class="text-purple"> width: 80px; </td> </tr>
-      <tr> <td class="text-blue"> w-25 </td> <td class="text-purple"> width: 100px; </td> </tr>
-      <tr> <td class="text-blue"> w-30 </td> <td class="text-purple"> width: 120px; </td> </tr>
-      <tr> <td class="text-blue"> w-35 </td> <td class="text-purple"> width: 140px; </td> </tr>
-      <tr> <td class="text-blue"> w-40 </td> <td class="text-purple"> width: 160px; </td> </tr>
-      <tr> <td class="text-blue"> w-45 </td> <td class="text-purple"> width: 180px; </td> </tr>
-      <tr> <td class="text-blue"> w-50 </td> <td class="text-purple"> width: 200px; </td> </tr>
-      <tr> <td class="text-blue"> w-55 </td> <td class="text-purple"> width: 220px; </td> </tr>
-      <tr> <td class="text-blue"> w-60 </td> <td class="text-purple"> width: 240px; </td> </tr>
-      <tr> <td class="text-blue"> w-65 </td> <td class="text-purple"> width: 260px; </td> </tr>
-      <tr> <td class="text-blue"> w-70 </td> <td class="text-purple"> width: 280px; </td> </tr>
-      <tr> <td class="text-blue"> w-75 </td> <td class="text-purple"> width: 300px; </td> </tr>
-      <tr> <td class="text-blue"> w-80 </td> <td class="text-purple"> width: 320px; </td> </tr>
-      <tr> <td class="text-blue"> w-85 </td> <td class="text-purple"> width: 340px; </td> </tr>
-      <tr> <td class="text-blue"> w-90 </td> <td class="text-purple"> width: 360px; </td> </tr>
-      <tr> <td class="text-blue"> w-95 </td> <td class="text-purple"> width: 380px; </td> </tr>
-      <tr> <td class="text-blue"> w-100 </td> <td class="text-purple"> width: 400px; </td> </tr>
-      <tr> <td class="text-blue"> w-full </td> <td class="text-purple"> width: 100%; </td> </tr>
+      <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+      <tr> <td class="text-blue">w-unset</td> <td class="text-purple">width: unset;</td> </tr>
+      <tr> <td class="text-blue">w-initial</td> <td class="text-purple">width: initial;</td> </tr>
+      <tr> <td class="text-blue">w-auto</td> <td class="text-purple">width: auto;</td> </tr>
+      <tr> <td class="text-blue">w-0</td> <td class="text-purple">width: 0;</td> </tr>
+      <tr> <td class="text-blue">w-1</td> <td class="text-purple">width: 4px;</td> </tr>
+      <tr> <td class="text-blue">w-2</td> <td class="text-purple">width: 8px;</td> </tr>
+      <tr> <td class="text-blue">w-3</td> <td class="text-purple">width: 12px;</td> </tr>
+      <tr> <td class="text-blue">w-4</td> <td class="text-purple">width: 16px;</td> </tr>
+      <tr> <td class="text-blue">w-5</td> <td class="text-purple">width: 20px;</td> </tr>
+      <tr> <td class="text-blue">w-6</td> <td class="text-purple">width: 24px;</td> </tr>
+      <tr> <td class="text-blue">w-7</td> <td class="text-purple">width: 28px;</td> </tr>
+      <tr> <td class="text-blue">w-8</td> <td class="text-purple">width: 32px;</td> </tr>
+      <tr> <td class="text-blue">w-9</td> <td class="text-purple">width: 36px;</td> </tr>
+      <tr> <td class="text-blue">w-10</td> <td class="text-purple">width: 40px;</td> </tr>
+      <tr> <td class="text-blue">w-11</td> <td class="text-purple">width: 44px;</td> </tr>
+      <tr> <td class="text-blue">w-12</td> <td class="text-purple">width: 48px;</td> </tr>
+      <tr> <td class="text-blue">w-14</td> <td class="text-purple">width: 56px;</td> </tr>
+      <tr> <td class="text-blue">w-16</td> <td class="text-purple">width: 64px;</td> </tr>
+      <tr> <td class="text-blue">w-18</td> <td class="text-purple">width: 72px;</td> </tr>
+      <tr> <td class="text-blue">w-20</td> <td class="text-purple">width: 80px;</td> </tr>
+      <tr> <td class="text-blue">w-25</td> <td class="text-purple">width: 100px;</td> </tr>
+      <tr> <td class="text-blue">w-30</td> <td class="text-purple">width: 120px;</td> </tr>
+      <tr> <td class="text-blue">w-35</td> <td class="text-purple">width: 140px;</td> </tr>
+      <tr> <td class="text-blue">w-40</td> <td class="text-purple">width: 160px;</td> </tr>
+      <tr> <td class="text-blue">w-45</td> <td class="text-purple">width: 180px;</td> </tr>
+      <tr> <td class="text-blue">w-50</td> <td class="text-purple">width: 200px;</td> </tr>
+      <tr> <td class="text-blue">w-55</td> <td class="text-purple">width: 220px;</td> </tr>
+      <tr> <td class="text-blue">w-60</td> <td class="text-purple">width: 240px;</td> </tr>
+      <tr> <td class="text-blue">w-65</td> <td class="text-purple">width: 260px;</td> </tr>
+      <tr> <td class="text-blue">w-70</td> <td class="text-purple">width: 280px;</td> </tr>
+      <tr> <td class="text-blue">w-75</td> <td class="text-purple">width: 300px;</td> </tr>
+      <tr> <td class="text-blue">w-80</td> <td class="text-purple">width: 320px;</td> </tr>
+      <tr> <td class="text-blue">w-85</td> <td class="text-purple">width: 340px;</td> </tr>
+      <tr> <td class="text-blue">w-90</td> <td class="text-purple">width: 360px;</td> </tr>
+      <tr> <td class="text-blue">w-95</td> <td class="text-purple">width: 380px;</td> </tr>
+      <tr> <td class="text-blue">w-100</td> <td class="text-purple">width: 400px;</td> </tr>
+      <tr> <td class="text-blue">w-full</td> <td class="text-purple">width: 100%;</td> </tr>
     </table>
-    
+
     <br>
-    <p class="text-secondary mb-2">Min width and Max width </p>
-
+    <h6 class="my-3">Min width and max width</h6>
     <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
-      <!-- Min-Width Classes -->
-      <tr> <td class="text-blue"> min-w-unset </td> <td class="text-purple"> min-width: unset; </td> </tr>
-      <tr> <td class="text-blue"> min-w-initial </td> <td class="text-purple"> min-width: initial; </td> </tr>
-      <tr> <td class="text-blue"> min-w-auto </td> <td class="text-purple"> min-width: auto; </td> </tr>
-      <tr> <td class="text-blue"> min-w-0 </td> <td class="text-purple"> min-width: 0; </td> </tr>
-      <tr> <td class="text-blue"> min-w-1 </td> <td class="text-purple"> min-width: 4px; </td> </tr>
-      <tr> <td class="text-blue"> min-w-2 </td> <td class="text-purple"> min-width: 8px; </td> </tr>
-      <tr> <td class="text-blue"> min-w-3 </td> <td class="text-purple"> min-width: 12px; </td> </tr>
-      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
-      <tr> <td class="text-blue"> min-w-full </td> <td class="text-purple"> min-width: 100%; </td> </tr>
-      
-      <!-- Max-Width Classes -->
-      <tr> <td class="text-blue"> max-w-unset </td> <td class="text-purple"> max-width: unset; </td> </tr>
-      <tr> <td class="text-blue"> max-w-initial </td> <td class="text-purple"> max-width: initial; </td> </tr>
-      <tr> <td class="text-blue"> max-w-auto </td> <td class="text-purple"> max-width: auto; </td> </tr>
-      <tr> <td class="text-blue"> max-w-0 </td> <td class="text-purple"> max-width: 0; </td> </tr>
-      <tr> <td class="text-blue"> max-w-1 </td> <td class="text-purple"> max-width: 4px; </td> </tr>
-      <tr> <td class="text-blue"> max-w-2 </td> <td class="text-purple"> max-width: 8px; </td> </tr>
-      <tr> <td class="text-blue"> max-w-3 </td> <td class="text-purple"> max-width: 12px; </td> </tr>
-      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
-      <tr> <td class="text-blue"> max-w-full </td> <td class="text-purple"> max-width: 100%; </td> </tr>
+      <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+      <tr> <td class="text-blue">min-w-unset</td> <td class="text-purple">min-width: unset;</td> </tr>
+      <tr> <td class="text-blue">min-w-initial</td> <td class="text-purple">min-width: initial;</td> </tr>
+      <tr> <td class="text-blue">min-w-auto</td> <td class="text-purple">min-width: auto;</td> </tr>
+      <tr> <td class="text-blue">min-w-0</td> <td class="text-purple">min-width: 0;</td> </tr>
+      <tr> <td class="text-blue">min-w-1</td> <td class="text-purple">min-width: 4px;</td> </tr>
+      <tr> <td class="text-blue">min-w-2</td> <td class="text-purple">min-width: 8px;</td> </tr>
+      <tr> <td class="text-blue">min-w-3</td> <td class="text-purple">min-width: 12px;</td> </tr>
+      <tr> <td class="text-blue">min-w-4</td> <td class="text-purple">min-width: 16px;</td> </tr>
+      <tr> <td class="text-blue">min-w-5</td> <td class="text-purple">min-width: 20px;</td> </tr>
+      <tr> <td class="text-blue">min-w-6</td> <td class="text-purple">min-width: 24px;</td> </tr>
+      <tr> <td class="text-blue">min-w-7</td> <td class="text-purple">min-width: 28px;</td> </tr>
+      <tr> <td class="text-blue">min-w-8</td> <td class="text-purple">min-width: 32px;</td> </tr>
+      <tr> <td class="text-blue">min-w-9</td> <td class="text-purple">min-width: 36px;</td> </tr>
+      <tr> <td class="text-blue">min-w-10</td> <td class="text-purple">min-width: 40px;</td> </tr>
+      <tr> <td class="text-blue">min-w-11</td> <td class="text-purple">min-width: 44px;</td> </tr>
+      <tr> <td class="text-blue">min-w-12</td> <td class="text-purple">min-width: 48px;</td> </tr>
+      <tr> <td class="text-blue">min-w-14</td> <td class="text-purple">min-width: 56px;</td> </tr>
+      <tr> <td class="text-blue">min-w-16</td> <td class="text-purple">min-width: 64px;</td> </tr>
+      <tr> <td class="text-blue">min-w-18</td> <td class="text-purple">min-width: 72px;</td> </tr>
+      <tr> <td class="text-blue">min-w-20</td> <td class="text-purple">min-width: 80px;</td> </tr>
+      <tr> <td class="text-blue">min-w-25</td> <td class="text-purple">min-width: 100px;</td> </tr>
+      <tr> <td class="text-blue">min-w-30</td> <td class="text-purple">min-width: 120px;</td> </tr>
+      <tr> <td class="text-blue">min-w-35</td> <td class="text-purple">min-width: 140px;</td> </tr>
+      <tr> <td class="text-blue">min-w-40</td> <td class="text-purple">min-width: 160px;</td> </tr>
+      <tr> <td class="text-blue">min-w-45</td> <td class="text-purple">min-width: 180px;</td> </tr>
+      <tr> <td class="text-blue">min-w-50</td> <td class="text-purple">min-width: 200px;</td> </tr>
+      <tr> <td class="text-blue">min-w-55</td> <td class="text-purple">min-width: 220px;</td> </tr>
+      <tr> <td class="text-blue">min-w-60</td> <td class="text-purple">min-width: 240px;</td> </tr>
+      <tr> <td class="text-blue">min-w-65</td> <td class="text-purple">min-width: 260px;</td> </tr>
+      <tr> <td class="text-blue">min-w-70</td> <td class="text-purple">min-width: 280px;</td> </tr>
+      <tr> <td class="text-blue">min-w-75</td> <td class="text-purple">min-width: 300px;</td> </tr>
+      <tr> <td class="text-blue">min-w-80</td> <td class="text-purple">min-width: 320px;</td> </tr>
+      <tr> <td class="text-blue">min-w-85</td> <td class="text-purple">min-width: 340px;</td> </tr>
+      <tr> <td class="text-blue">min-w-90</td> <td class="text-purple">min-width: 360px;</td> </tr>
+      <tr> <td class="text-blue">min-w-95</td> <td class="text-purple">min-width: 380px;</td> </tr>
+      <tr> <td class="text-blue">min-w-100</td> <td class="text-purple">min-width: 400px;</td> </tr>
+      <tr> <td class="text-blue">min-w-full</td> <td class="text-purple">min-width: 100%;</td> </tr>
+      <tr> <td class="text-blue">max-w-unset</td> <td class="text-purple">max-width: unset;</td> </tr>
+      <tr> <td class="text-blue">max-w-initial</td> <td class="text-purple">max-width: initial;</td> </tr>
+      <tr> <td class="text-blue">max-w-auto</td> <td class="text-purple">max-width: auto;</td> </tr>
+      <tr> <td class="text-blue">max-w-0</td> <td class="text-purple">max-width: 0;</td> </tr>
+      <tr> <td class="text-blue">max-w-1</td> <td class="text-purple">max-width: 4px;</td> </tr>
+      <tr> <td class="text-blue">max-w-2</td> <td class="text-purple">max-width: 8px;</td> </tr>
+      <tr> <td class="text-blue">max-w-3</td> <td class="text-purple">max-width: 12px;</td> </tr>
+      <tr> <td class="text-blue">max-w-4</td> <td class="text-purple">max-width: 16px;</td> </tr>
+      <tr> <td class="text-blue">max-w-5</td> <td class="text-purple">max-width: 20px;</td> </tr>
+      <tr> <td class="text-blue">max-w-6</td> <td class="text-purple">max-width: 24px;</td> </tr>
+      <tr> <td class="text-blue">max-w-7</td> <td class="text-purple">max-width: 28px;</td> </tr>
+      <tr> <td class="text-blue">max-w-8</td> <td class="text-purple">max-width: 32px;</td> </tr>
+      <tr> <td class="text-blue">max-w-9</td> <td class="text-purple">max-width: 36px;</td> </tr>
+      <tr> <td class="text-blue">max-w-10</td> <td class="text-purple">max-width: 40px;</td> </tr>
+      <tr> <td class="text-blue">max-w-11</td> <td class="text-purple">max-width: 44px;</td> </tr>
+      <tr> <td class="text-blue">max-w-12</td> <td class="text-purple">max-width: 48px;</td> </tr>
+      <tr> <td class="text-blue">max-w-14</td> <td class="text-purple">max-width: 56px;</td> </tr>
+      <tr> <td class="text-blue">max-w-16</td> <td class="text-purple">max-width: 64px;</td> </tr>
+      <tr> <td class="text-blue">max-w-18</td> <td class="text-purple">max-width: 72px;</td> </tr>
+      <tr> <td class="text-blue">max-w-20</td> <td class="text-purple">max-width: 80px;</td> </tr>
+      <tr> <td class="text-blue">max-w-25</td> <td class="text-purple">max-width: 100px;</td> </tr>
+      <tr> <td class="text-blue">max-w-30</td> <td class="text-purple">max-width: 120px;</td> </tr>
+      <tr> <td class="text-blue">max-w-35</td> <td class="text-purple">max-width: 140px;</td> </tr>
+      <tr> <td class="text-blue">max-w-40</td> <td class="text-purple">max-width: 160px;</td> </tr>
+      <tr> <td class="text-blue">max-w-45</td> <td class="text-purple">max-width: 180px;</td> </tr>
+      <tr> <td class="text-blue">max-w-50</td> <td class="text-purple">max-width: 200px;</td> </tr>
+      <tr> <td class="text-blue">max-w-55</td> <td class="text-purple">max-width: 220px;</td> </tr>
+      <tr> <td class="text-blue">max-w-60</td> <td class="text-purple">max-width: 240px;</td> </tr>
+      <tr> <td class="text-blue">max-w-65</td> <td class="text-purple">max-width: 260px;</td> </tr>
+      <tr> <td class="text-blue">max-w-70</td> <td class="text-purple">max-width: 280px;</td> </tr>
+      <tr> <td class="text-blue">max-w-75</td> <td class="text-purple">max-width: 300px;</td> </tr>
+      <tr> <td class="text-blue">max-w-80</td> <td class="text-purple">max-width: 320px;</td> </tr>
+      <tr> <td class="text-blue">max-w-85</td> <td class="text-purple">max-width: 340px;</td> </tr>
+      <tr> <td class="text-blue">max-w-90</td> <td class="text-purple">max-width: 360px;</td> </tr>
+      <tr> <td class="text-blue">max-w-95</td> <td class="text-purple">max-width: 380px;</td> </tr>
+      <tr> <td class="text-blue">max-w-100</td> <td class="text-purple">max-width: 400px;</td> </tr>
+      <tr> <td class="text-blue">max-w-full</td> <td class="text-purple">max-width: 100%;</td> </tr>
     </table>
-
   </aside>
   <aside>
     <h6 class="my-3">Height sizes</h6>
     <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
-      <!-- Height Classes -->
-      <tr> <td class="text-blue"> h-unset </td> <td class="text-purple"> height: unset; </td> </tr>
-      <tr> <td class="text-blue"> h-initial </td> <td class="text-purple"> height: initial; </td> </tr>
-      <tr> <td class="text-blue"> h-auto </td> <td class="text-purple"> height: auto; </td> </tr>
-      <tr> <td class="text-blue"> h-0 </td> <td class="text-purple"> height: 0; </td> </tr>
-      <tr> <td class="text-blue"> h-1 </td> <td class="text-purple"> height: 4px; </td> </tr>
-      <tr> <td class="text-blue"> h-2 </td> <td class="text-purple"> height: 8px; </td> </tr>
-      <tr> <td class="text-blue"> h-3 </td> <td class="text-purple"> height: 12px; </td> </tr>
-      <tr> <td class="text-blue"> h-4 </td> <td class="text-purple"> height: 16px; </td> </tr>
-      <tr> <td class="text-blue"> h-5 </td> <td class="text-purple"> height: 20px; </td> </tr>
-      <tr> <td class="text-blue"> h-6 </td> <td class="text-purple"> height: 24px; </td> </tr>
-      <tr> <td class="text-blue"> h-7 </td> <td class="text-purple"> height: 28px; </td> </tr>
-      <tr> <td class="text-blue"> h-8 </td> <td class="text-purple"> height: 32px; </td> </tr>
-      <tr> <td class="text-blue"> h-9 </td> <td class="text-purple"> height: 36px; </td> </tr>
-      <tr> <td class="text-blue"> h-10 </td> <td class="text-purple"> height: 40px; </td> </tr>
-      <tr> <td class="text-blue"> h-11 </td> <td class="text-purple"> height: 44px; </td> </tr>
-      <tr> <td class="text-blue"> h-12 </td> <td class="text-purple"> height: 48px; </td> </tr>
-      <tr> <td class="text-blue"> h-14 </td> <td class="text-purple"> height: 56px; </td> </tr>
-      <tr> <td class="text-blue"> h-16 </td> <td class="text-purple"> height: 64px; </td> </tr>
-      <tr> <td class="text-blue"> h-18 </td> <td class="text-purple"> height: 72px; </td> </tr>
-      <tr> <td class="text-blue"> h-20 </td> <td class="text-purple"> height: 80px; </td> </tr>
-      <tr> <td class="text-blue"> h-25 </td> <td class="text-purple"> height: 100px; </td> </tr>
-      <tr> <td class="text-blue"> h-30 </td> <td class="text-purple"> height: 120px; </td> </tr>
-      <tr> <td class="text-blue"> h-35 </td> <td class="text-purple"> height: 140px; </td> </tr>
-      <tr> <td class="text-blue"> h-40 </td> <td class="text-purple"> height: 160px; </td> </tr>
-      <tr> <td class="text-blue"> h-45 </td> <td class="text-purple"> height: 180px; </td> </tr>
-      <tr> <td class="text-blue"> h-50 </td> <td class="text-purple"> height: 200px; </td> </tr>
-      <tr> <td class="text-blue"> h-55 </td> <td class="text-purple"> height: 220px; </td> </tr>
-      <tr> <td class="text-blue"> h-60 </td> <td class="text-purple"> height: 240px; </td> </tr>
-      <tr> <td class="text-blue"> h-65 </td> <td class="text-purple"> height: 260px; </td> </tr>
-      <tr> <td class="text-blue"> h-70 </td> <td class="text-purple"> height: 280px; </td> </tr>
-      <tr> <td class="text-blue"> h-75 </td> <td class="text-purple"> height: 300px; </td> </tr>
-      <tr> <td class="text-blue"> h-80 </td> <td class="text-purple"> height: 320px; </td> </tr>
-      <tr> <td class="text-blue"> h-85 </td> <td class="text-purple"> height: 340px; </td> </tr>
-      <tr> <td class="text-blue"> h-90 </td> <td class="text-purple"> height: 360px; </td> </tr>
-      <tr> <td class="text-blue"> h-95 </td> <td class="text-purple"> height: 380px; </td> </tr>
-      <tr> <td class="text-blue"> h-100 </td> <td class="text-purple"> height: 400px; </td> </tr>
-      <tr> <td class="text-blue"> h-full </td> <td class="text-purple"> height: 100%; </td> </tr>
+      <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+      <tr> <td class="text-blue">h-unset</td> <td class="text-purple">height: unset;</td> </tr>
+      <tr> <td class="text-blue">h-initial</td> <td class="text-purple">height: initial;</td> </tr>
+      <tr> <td class="text-blue">h-auto</td> <td class="text-purple">height: auto;</td> </tr>
+      <tr> <td class="text-blue">h-0</td> <td class="text-purple">height: 0;</td> </tr>
+      <tr> <td class="text-blue">h-1</td> <td class="text-purple">height: 4px;</td> </tr>
+      <tr> <td class="text-blue">h-2</td> <td class="text-purple">height: 8px;</td> </tr>
+      <tr> <td class="text-blue">h-3</td> <td class="text-purple">height: 12px;</td> </tr>
+      <tr> <td class="text-blue">h-4</td> <td class="text-purple">height: 16px;</td> </tr>
+      <tr> <td class="text-blue">h-5</td> <td class="text-purple">height: 20px;</td> </tr>
+      <tr> <td class="text-blue">h-6</td> <td class="text-purple">height: 24px;</td> </tr>
+      <tr> <td class="text-blue">h-7</td> <td class="text-purple">height: 28px;</td> </tr>
+      <tr> <td class="text-blue">h-8</td> <td class="text-purple">height: 32px;</td> </tr>
+      <tr> <td class="text-blue">h-9</td> <td class="text-purple">height: 36px;</td> </tr>
+      <tr> <td class="text-blue">h-10</td> <td class="text-purple">height: 40px;</td> </tr>
+      <tr> <td class="text-blue">h-11</td> <td class="text-purple">height: 44px;</td> </tr>
+      <tr> <td class="text-blue">h-12</td> <td class="text-purple">height: 48px;</td> </tr>
+      <tr> <td class="text-blue">h-14</td> <td class="text-purple">height: 56px;</td> </tr>
+      <tr> <td class="text-blue">h-16</td> <td class="text-purple">height: 64px;</td> </tr>
+      <tr> <td class="text-blue">h-18</td> <td class="text-purple">height: 72px;</td> </tr>
+      <tr> <td class="text-blue">h-20</td> <td class="text-purple">height: 80px;</td> </tr>
+      <tr> <td class="text-blue">h-25</td> <td class="text-purple">height: 100px;</td> </tr>
+      <tr> <td class="text-blue">h-30</td> <td class="text-purple">height: 120px;</td> </tr>
+      <tr> <td class="text-blue">h-35</td> <td class="text-purple">height: 140px;</td> </tr>
+      <tr> <td class="text-blue">h-40</td> <td class="text-purple">height: 160px;</td> </tr>
+      <tr> <td class="text-blue">h-45</td> <td class="text-purple">height: 180px;</td> </tr>
+      <tr> <td class="text-blue">h-50</td> <td class="text-purple">height: 200px;</td> </tr>
+      <tr> <td class="text-blue">h-55</td> <td class="text-purple">height: 220px;</td> </tr>
+      <tr> <td class="text-blue">h-60</td> <td class="text-purple">height: 240px;</td> </tr>
+      <tr> <td class="text-blue">h-65</td> <td class="text-purple">height: 260px;</td> </tr>
+      <tr> <td class="text-blue">h-70</td> <td class="text-purple">height: 280px;</td> </tr>
+      <tr> <td class="text-blue">h-75</td> <td class="text-purple">height: 300px;</td> </tr>
+      <tr> <td class="text-blue">h-80</td> <td class="text-purple">height: 320px;</td> </tr>
+      <tr> <td class="text-blue">h-85</td> <td class="text-purple">height: 340px;</td> </tr>
+      <tr> <td class="text-blue">h-90</td> <td class="text-purple">height: 360px;</td> </tr>
+      <tr> <td class="text-blue">h-95</td> <td class="text-purple">height: 380px;</td> </tr>
+      <tr> <td class="text-blue">h-100</td> <td class="text-purple">height: 400px;</td> </tr>
+      <tr> <td class="text-blue">h-full</td> <td class="text-purple">height: 100%;</td> </tr>
     </table>
-    
-    <br>
-    <p class="text-secondary mb-2">Min height and Max height </p>
 
+    <br>
+    <h6 class="my-3">Min height and max height</h6>
     <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th> Class </th> <th> Styles </th> </tr>
-      <!-- Min-Height Classes -->
-      <tr> <td class="text-blue"> min-h-unset </td> <td class="text-purple"> min-height: unset; </td> </tr>
-      <tr> <td class="text-blue"> min-h-initial </td> <td class="text-purple"> min-height: initial; </td> </tr>
-      <tr> <td class="text-blue"> min-h-auto </td> <td class="text-purple"> min-height: auto; </td> </tr>
-      <tr> <td class="text-blue"> min-h-0 </td> <td class="text-purple"> min-height: 0; </td> </tr>
-      <tr> <td class="text-blue"> min-h-1 </td> <td class="text-purple"> min-height: 4px; </td> </tr>
-      <tr> <td class="text-blue"> min-h-2 </td> <td class="text-purple"> min-height: 8px; </td> </tr>
-      <tr> <td class="text-blue"> min-h-3 </td> <td class="text-purple"> min-height: 12px; </td> </tr>
-      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
-      <tr> <td class="text-blue"> min-h-full </td> <td class="text-purple"> min-height: 100%; </td> </tr>
-      
-      <!-- Max-Height Classes -->
-      <tr> <td class="text-blue"> max-h-unset </td> <td class="text-purple"> max-height: unset; </td> </tr>
-      <tr> <td class="text-blue"> max-h-initial </td> <td class="text-purple"> max-height: initial; </td> </tr>
-      <tr> <td class="text-blue"> max-h-auto </td> <td class="text-purple"> max-height: auto; </td> </tr>
-      <tr> <td class="text-blue"> max-h-0 </td> <td class="text-purple"> max-height: 0; </td> </tr>
-      <tr> <td class="text-blue"> max-h-1 </td> <td class="text-purple"> max-height: 4px; </td> </tr>
-      <tr> <td class="text-blue"> max-h-2 </td> <td class="text-purple"> max-height: 8px; </td> </tr>
-      <tr> <td class="text-blue"> max-h-3 </td> <td class="text-purple"> max-height: 12px; </td> </tr>
-      <tr> <td class="text-blue"> ... </td> <td class="text-purple"> ... </td> </tr>
-      <tr> <td class="text-blue"> max-h-full </td> <td class="text-purple"> max-height: 100%; </td> </tr>
+      <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+      <tr> <td class="text-blue">min-h-unset</td> <td class="text-purple">min-height: unset;</td> </tr>
+      <tr> <td class="text-blue">min-h-initial</td> <td class="text-purple">min-height: initial;</td> </tr>
+      <tr> <td class="text-blue">min-h-auto</td> <td class="text-purple">min-height: auto;</td> </tr>
+      <tr> <td class="text-blue">min-h-0</td> <td class="text-purple">min-height: 0;</td> </tr>
+      <tr> <td class="text-blue">min-h-1</td> <td class="text-purple">min-height: 4px;</td> </tr>
+      <tr> <td class="text-blue">min-h-2</td> <td class="text-purple">min-height: 8px;</td> </tr>
+      <tr> <td class="text-blue">min-h-3</td> <td class="text-purple">min-height: 12px;</td> </tr>
+      <tr> <td class="text-blue">min-h-4</td> <td class="text-purple">min-height: 16px;</td> </tr>
+      <tr> <td class="text-blue">min-h-5</td> <td class="text-purple">min-height: 20px;</td> </tr>
+      <tr> <td class="text-blue">min-h-6</td> <td class="text-purple">min-height: 24px;</td> </tr>
+      <tr> <td class="text-blue">min-h-7</td> <td class="text-purple">min-height: 28px;</td> </tr>
+      <tr> <td class="text-blue">min-h-8</td> <td class="text-purple">min-height: 32px;</td> </tr>
+      <tr> <td class="text-blue">min-h-9</td> <td class="text-purple">min-height: 36px;</td> </tr>
+      <tr> <td class="text-blue">min-h-10</td> <td class="text-purple">min-height: 40px;</td> </tr>
+      <tr> <td class="text-blue">min-h-11</td> <td class="text-purple">min-height: 44px;</td> </tr>
+      <tr> <td class="text-blue">min-h-12</td> <td class="text-purple">min-height: 48px;</td> </tr>
+      <tr> <td class="text-blue">min-h-14</td> <td class="text-purple">min-height: 56px;</td> </tr>
+      <tr> <td class="text-blue">min-h-16</td> <td class="text-purple">min-height: 64px;</td> </tr>
+      <tr> <td class="text-blue">min-h-18</td> <td class="text-purple">min-height: 72px;</td> </tr>
+      <tr> <td class="text-blue">min-h-20</td> <td class="text-purple">min-height: 80px;</td> </tr>
+      <tr> <td class="text-blue">min-h-25</td> <td class="text-purple">min-height: 100px;</td> </tr>
+      <tr> <td class="text-blue">min-h-30</td> <td class="text-purple">min-height: 120px;</td> </tr>
+      <tr> <td class="text-blue">min-h-35</td> <td class="text-purple">min-height: 140px;</td> </tr>
+      <tr> <td class="text-blue">min-h-40</td> <td class="text-purple">min-height: 160px;</td> </tr>
+      <tr> <td class="text-blue">min-h-45</td> <td class="text-purple">min-height: 180px;</td> </tr>
+      <tr> <td class="text-blue">min-h-50</td> <td class="text-purple">min-height: 200px;</td> </tr>
+      <tr> <td class="text-blue">min-h-55</td> <td class="text-purple">min-height: 220px;</td> </tr>
+      <tr> <td class="text-blue">min-h-60</td> <td class="text-purple">min-height: 240px;</td> </tr>
+      <tr> <td class="text-blue">min-h-65</td> <td class="text-purple">min-height: 260px;</td> </tr>
+      <tr> <td class="text-blue">min-h-70</td> <td class="text-purple">min-height: 280px;</td> </tr>
+      <tr> <td class="text-blue">min-h-75</td> <td class="text-purple">min-height: 300px;</td> </tr>
+      <tr> <td class="text-blue">min-h-80</td> <td class="text-purple">min-height: 320px;</td> </tr>
+      <tr> <td class="text-blue">min-h-85</td> <td class="text-purple">min-height: 340px;</td> </tr>
+      <tr> <td class="text-blue">min-h-90</td> <td class="text-purple">min-height: 360px;</td> </tr>
+      <tr> <td class="text-blue">min-h-95</td> <td class="text-purple">min-height: 380px;</td> </tr>
+      <tr> <td class="text-blue">min-h-100</td> <td class="text-purple">min-height: 400px;</td> </tr>
+      <tr> <td class="text-blue">min-h-full</td> <td class="text-purple">min-height: 100%;</td> </tr>
+      <tr> <td class="text-blue">max-h-unset</td> <td class="text-purple">max-height: unset;</td> </tr>
+      <tr> <td class="text-blue">max-h-initial</td> <td class="text-purple">max-height: initial;</td> </tr>
+      <tr> <td class="text-blue">max-h-auto</td> <td class="text-purple">max-height: auto;</td> </tr>
+      <tr> <td class="text-blue">max-h-0</td> <td class="text-purple">max-height: 0;</td> </tr>
+      <tr> <td class="text-blue">max-h-1</td> <td class="text-purple">max-height: 4px;</td> </tr>
+      <tr> <td class="text-blue">max-h-2</td> <td class="text-purple">max-height: 8px;</td> </tr>
+      <tr> <td class="text-blue">max-h-3</td> <td class="text-purple">max-height: 12px;</td> </tr>
+      <tr> <td class="text-blue">max-h-4</td> <td class="text-purple">max-height: 16px;</td> </tr>
+      <tr> <td class="text-blue">max-h-5</td> <td class="text-purple">max-height: 20px;</td> </tr>
+      <tr> <td class="text-blue">max-h-6</td> <td class="text-purple">max-height: 24px;</td> </tr>
+      <tr> <td class="text-blue">max-h-7</td> <td class="text-purple">max-height: 28px;</td> </tr>
+      <tr> <td class="text-blue">max-h-8</td> <td class="text-purple">max-height: 32px;</td> </tr>
+      <tr> <td class="text-blue">max-h-9</td> <td class="text-purple">max-height: 36px;</td> </tr>
+      <tr> <td class="text-blue">max-h-10</td> <td class="text-purple">max-height: 40px;</td> </tr>
+      <tr> <td class="text-blue">max-h-11</td> <td class="text-purple">max-height: 44px;</td> </tr>
+      <tr> <td class="text-blue">max-h-12</td> <td class="text-purple">max-height: 48px;</td> </tr>
+      <tr> <td class="text-blue">max-h-14</td> <td class="text-purple">max-height: 56px;</td> </tr>
+      <tr> <td class="text-blue">max-h-16</td> <td class="text-purple">max-height: 64px;</td> </tr>
+      <tr> <td class="text-blue">max-h-18</td> <td class="text-purple">max-height: 72px;</td> </tr>
+      <tr> <td class="text-blue">max-h-20</td> <td class="text-purple">max-height: 80px;</td> </tr>
+      <tr> <td class="text-blue">max-h-25</td> <td class="text-purple">max-height: 100px;</td> </tr>
+      <tr> <td class="text-blue">max-h-30</td> <td class="text-purple">max-height: 120px;</td> </tr>
+      <tr> <td class="text-blue">max-h-35</td> <td class="text-purple">max-height: 140px;</td> </tr>
+      <tr> <td class="text-blue">max-h-40</td> <td class="text-purple">max-height: 160px;</td> </tr>
+      <tr> <td class="text-blue">max-h-45</td> <td class="text-purple">max-height: 180px;</td> </tr>
+      <tr> <td class="text-blue">max-h-50</td> <td class="text-purple">max-height: 200px;</td> </tr>
+      <tr> <td class="text-blue">max-h-55</td> <td class="text-purple">max-height: 220px;</td> </tr>
+      <tr> <td class="text-blue">max-h-60</td> <td class="text-purple">max-height: 240px;</td> </tr>
+      <tr> <td class="text-blue">max-h-65</td> <td class="text-purple">max-height: 260px;</td> </tr>
+      <tr> <td class="text-blue">max-h-70</td> <td class="text-purple">max-height: 280px;</td> </tr>
+      <tr> <td class="text-blue">max-h-75</td> <td class="text-purple">max-height: 300px;</td> </tr>
+      <tr> <td class="text-blue">max-h-80</td> <td class="text-purple">max-height: 320px;</td> </tr>
+      <tr> <td class="text-blue">max-h-85</td> <td class="text-purple">max-height: 340px;</td> </tr>
+      <tr> <td class="text-blue">max-h-90</td> <td class="text-purple">max-height: 360px;</td> </tr>
+      <tr> <td class="text-blue">max-h-95</td> <td class="text-purple">max-height: 380px;</td> </tr>
+      <tr> <td class="text-blue">max-h-100</td> <td class="text-purple">max-height: 400px;</td> </tr>
+      <tr> <td class="text-blue">max-h-full</td> <td class="text-purple">max-height: 100%;</td> </tr>
     </table>
-    
-   
-    
-    
   </aside>
 </div>
 
+<h5>Percentage sizes</h5>
+<p>Percentage classes include values from <code>10%</code> to <code>100%</code> in 5% steps after 10%. Escape the percent sign in CSS, but write it normally in HTML class names.</p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class examples</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">w-10%, h-10%</td> <td class="text-purple">width / height: 10%;</td> </tr>
+  <tr> <td class="text-blue">w-25%, h-25%</td> <td class="text-purple">width / height: 25%;</td> </tr>
+  <tr> <td class="text-blue">w-50%, h-50%</td> <td class="text-purple">width / height: 50%;</td> </tr>
+  <tr> <td class="text-blue">w-75%, h-75%</td> <td class="text-purple">width / height: 75%;</td> </tr>
+  <tr> <td class="text-blue">w-100%, h-100%</td> <td class="text-purple">width / height: 100%;</td> </tr>
+  <tr> <td class="text-blue">min-w-50%, max-w-90%</td> <td class="text-purple">min-width: 50%; max-width: 90%;</td> </tr>
+  <tr> <td class="text-blue">min-h-50%, max-h-100%</td> <td class="text-purple">min-height: 50%; max-height: 100%;</td> </tr>
+</table>
 
-<h5> Basic example </h5>
+<h5>Viewport sizes</h5>
+<p>Viewport width classes use <code>vw</code> and viewport height classes use <code>vh</code>. Width viewport classes are generated for width, min-width, and max-width. Height viewport classes are generated for height, min-height, and max-height.</p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class examples</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">w-10vw, max-w-10vw</td> <td class="text-purple">width / max-width: 10vw;</td> </tr>
+  <tr> <td class="text-blue">w-50vw, min-w-50vw</td> <td class="text-purple">width / min-width: 50vw;</td> </tr>
+  <tr> <td class="text-blue">w-100vw, max-w-100vw</td> <td class="text-purple">width / max-width: 100vw;</td> </tr>
+  <tr> <td class="text-blue">h-10vh, max-h-10vh</td> <td class="text-purple">height / max-height: 10vh;</td> </tr>
+  <tr> <td class="text-blue">h-50vh, min-h-50vh</td> <td class="text-purple">height / min-height: 50vh;</td> </tr>
+  <tr> <td class="text-blue">h-100vh, max-h-100vh</td> <td class="text-purple">height / max-height: 100vh;</td> </tr>
+</table>
+
+<h5>Custom CSS-variable sizes</h5>
+<p>Custom size utilities read values from inline or inherited CSS variables. Use them when a size is too specific for the shared scale but you still want to keep utility-style markup.</p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">w-custom</td> <td class="text-purple">width: var(--w, initial);</td> </tr>
+  <tr> <td class="text-blue">h-custom</td> <td class="text-purple">height: var(--h, initial);</td> </tr>
+  <tr> <td class="text-blue">min-w-custom</td> <td class="text-purple">min-width: var(--min-w, initial);</td> </tr>
+  <tr> <td class="text-blue">max-w-custom</td> <td class="text-purple">max-width: var(--max-w, initial);</td> </tr>
+</table>
+
+<hr>
+<h4>Fixed width and height</h4>
+<p class="text-secondary">Use fixed size utilities for icons, avatars, placeholders, thumbnails, and other elements that should stay on the same pixel scale.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div style="display: flex; gap: 16px; align-items: flex-end;">
-      <div class="w-20 h-20" style="background: #3b82f6;"></div>
-      <div class="w-30 h-30" style="background: #8b5cf6;"></div>
-      <div class="w-40 h-40" style="background: #ec4899;"></div>
-      <div class="w-50 h-50" style="background: #f59e0b;"></div>
+    <div class="d-flex gap-4 align-items-end flex-wrap">
+      <div class="w-10 h-10 rounded bg-blue-100"></div>
+      <div class="w-16 h-16 rounded bg-green-100"></div>
+      <div class="w-25 h-25 rounded bg-orange-100"></div>
+      <div class="w-40 h-40 rounded bg-purple-100"></div>
     </div>
     <!-- example .//end -->
   </div>
   <figcaption>
     <!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-20 h-20"&gt;&lt;/div&gt;
-&lt;div class="w-30 h-30"&gt;&lt;/div&gt;
-&lt;div class="w-40 h-40"&gt;&lt;/div&gt;
-&lt;div class="w-50 h-50"&gt;&lt;/div&gt;</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-10 h-10 rounded bg-blue-100"&gt;&lt;/div&gt;
+&lt;div class="w-16 h-16 rounded bg-green-100"&gt;&lt;/div&gt;
+&lt;div class="w-25 h-25 rounded bg-orange-100"&gt;&lt;/div&gt;
+&lt;div class="w-40 h-40 rounded bg-purple-100"&gt;&lt;/div&gt;</code></pre>
     <!-- code -->
   </figcaption>
 </figure>
 
-<h5>Examples</h5>
-<p class="text-secondary">Creating a full-width container with responsive height adjustments demonstrates how these utilities adapt to different screen sizes.</p>
+<hr>
+<h4>Percentage width</h4>
+<p class="text-secondary">Use percentage width classes when an element should size itself relative to its parent. These are useful for split layouts, progress-like blocks, and simple proportional sections.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div class="w-full h-40 md:h-60 lg:h-80" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500;">
-      Responsive Height Container
+    <div class="border rounded p-3">
+      <div class="w-25% bg-blue-100 rounded p-2 mb-2">w-25%</div>
+      <div class="w-50% bg-green-100 rounded p-2 mb-2">w-50%</div>
+      <div class="w-75% bg-orange-100 rounded p-2 mb-2">w-75%</div>
+      <div class="w-100% bg-purple-100 rounded p-2">w-100%</div>
     </div>
     <!-- example .//end -->
   </div>
   <figcaption>
     <!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-full h-40 md:h-60 lg:h-80"&gt;
-  Responsive Height Container
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="border rounded p-3"&gt;
+  &lt;div class="w-25%"&gt;w-25%&lt;/div&gt;
+  &lt;div class="w-50%"&gt;w-50%&lt;/div&gt;
+  &lt;div class="w-75%"&gt;w-75%&lt;/div&gt;
+  &lt;div class="w-100%"&gt;w-100%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
     <!-- code -->
   </figcaption>
 </figure>
 
-<p class="text-secondary">Using minimum and maximum width constraints helps create flexible layouts that maintain readability across devices.</p>
+<h5>Responsive percentage widths</h5>
+<p class="text-secondary">Combine percentage width classes with responsive prefixes to stack on mobile and split into columns on larger screens.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-      <div class="min-w-50 max-w-75" style="background: #dbeafe; padding: 16px; border: 2px solid #3b82f6; border-radius: 6px;">
-        Min 200px, Max 300px
-      </div>
-      <div class="min-w-40 max-w-60" style="background: #fef3c7; padding: 16px; border: 2px solid #f59e0b; border-radius: 6px;">
-        Min 160px, Max 240px
-      </div>
+    <div class="d-flex flex-wrap gap-3">
+      <div class="w-100% md:w-50% lg:w-25% bg-blue-100 rounded p-4">Responsive item</div>
+      <div class="w-100% md:w-50% lg:w-25% bg-green-100 rounded p-4">Responsive item</div>
+      <div class="w-100% md:w-50% lg:w-25% bg-orange-100 rounded p-4">Responsive item</div>
     </div>
     <!-- example .//end -->
   </div>
   <figcaption>
     <!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="min-w-50 max-w-75"&gt;
-  Min 200px, Max 300px
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-flex flex-wrap gap-3"&gt;
+  &lt;div class="w-100% md:w-50% lg:w-25%"&gt;Responsive item&lt;/div&gt;
+  &lt;div class="w-100% md:w-50% lg:w-25%"&gt;Responsive item&lt;/div&gt;
+  &lt;div class="w-100% md:w-50% lg:w-25%"&gt;Responsive item&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<hr>
+<h4>Percentage height</h4>
+<p class="text-secondary">Percentage height depends on the parent having an explicit height. In this example, the parent uses <code>h-60</code>, so children can use <code>h-25%</code>, <code>h-50%</code>, and <code>h-100%</code>.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="h-60 border rounded p-3 d-flex align-items-end gap-3">
+      <div class="w-20 h-25% bg-blue-100 rounded"></div>
+      <div class="w-20 h-50% bg-green-100 rounded"></div>
+      <div class="w-20 h-75% bg-orange-100 rounded"></div>
+      <div class="w-20 h-100% bg-purple-100 rounded"></div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="h-60 d-flex align-items-end gap-3"&gt;
+  &lt;div class="w-20 h-25%"&gt;&lt;/div&gt;
+  &lt;div class="w-20 h-50%"&gt;&lt;/div&gt;
+  &lt;div class="w-20 h-75%"&gt;&lt;/div&gt;
+  &lt;div class="w-20 h-100%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<hr>
+<h4>Viewport width and height</h4>
+<p class="text-secondary">Use viewport units for sections that relate to the browser window instead of the parent element. Common patterns include hero sections, full-screen app shells, drawers, and scrollable panels.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <section class="w-full min-h-50vh rounded bg-blue-100 p-5 d-flex align-items-center justify-content-center">
+      min-h-50vh section
+    </section>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;section class="w-full min-h-50vh rounded bg-blue-100 p-5 d-flex align-items-center justify-content-center"&gt;
+  min-h-50vh section
+&lt;/section&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<h5>Viewport width sidebar</h5>
+<p class="text-secondary">Viewport width classes are useful for panels whose size should be based on the browser width.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="w-40vw max-w-80 min-w-50 bg-green-100 rounded p-4">
+      w-40vw with min and max width constraints
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-40vw max-w-80 min-w-50"&gt;
+  w-40vw with min and max width constraints
+&lt;/div&gt;</code></pre>
+    <!-- code -->
+  </figcaption>
+</figure>
+
+<hr>
+<h4>Min and max constraints</h4>
+<p class="text-secondary">Use min and max utilities to keep flexible content readable. They work with fixed sizes, percentage sizes, and viewport-unit sizes.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="max-w-80 min-w-50 bg-orange-100 rounded p-4 mb-3">
+      Fixed min/max width: min-w-50 max-w-80
+    </div>
+    <div class="max-w-75% min-h-20 bg-purple-100 rounded p-4">
+      Percentage max width: max-w-75%
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+    <!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="max-w-80 min-w-50"&gt;
+  Fixed min/max width
 &lt;/div&gt;
-&lt;div class="min-w-40 max-w-60"&gt;
-  Min 160px, Max 240px
+&lt;div class="max-w-75% min-h-20"&gt;
+  Percentage max width
 &lt;/div&gt;</code></pre>
     <!-- code -->
   </figcaption>
 </figure>
 
-<p class="text-secondary">Combining height utilities with responsive breakpoints allows you to create cards that adapt their proportions based on screen size.</p>
+<hr>
+<h4>Custom sizes with CSS variables</h4>
+<p class="text-secondary">Use custom utilities for one-off sizes while keeping the class name stable. The size value comes from CSS variables such as <code>--w</code>, <code>--h</code>, <code>--min-w</code>, and <code>--max-w</code>.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-      <div class="w-full h-50 max-md:h-40" style="background: #dcfce7; border: 2px solid #22c55e; border-radius: 8px; padding: 16px; display: flex; align-items: center; justify-content: center;">
-        Card 1
-      </div>
-      <div class="w-full h-50 max-md:h-40" style="background: #fce7f3; border: 2px solid #ec4899; border-radius: 8px; padding: 16px; display: flex; align-items: center; justify-content: center;">
-        Card 2
-      </div>
-      <div class="w-full h-50 max-md:h-40" style="background: #e0e7ff; border: 2px solid #6366f1; border-radius: 8px; padding: 16px; display: flex; align-items: center; justify-content: center;">
-        Card 3
-      </div>
+    <div class="w-custom h-custom rounded bg-teal-100 p-4" style="--w: 280px; --h: 96px;">
+      Custom width and height
     </div>
     <!-- example .//end -->
   </div>
   <figcaption>
     <!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-full h-50 max-md:h-40"&gt;Card 1&lt;/div&gt;
-&lt;div class="w-full h-50 max-md:h-40"&gt;Card 2&lt;/div&gt;
-&lt;div class="w-full h-50 max-md:h-40"&gt;Card 3&lt;/div&gt;</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="w-custom h-custom" style="--w: 280px; --h: 96px;"&gt;
+  Custom width and height
+&lt;/div&gt;</code></pre>
     <!-- code -->
   </figcaption>
 </figure>
 
-
-<h5> How to customize? </h5>
-<p>You can customize the size scale by modifying the <code>$size_map</code> in the <code>scss/utilities/_sizes.scss</code> file. This map defines all available size values that get generated into utility classes. After making your changes, recompile the SCSS to generate your customized utility classes with your preferred spacing scale.</p>
+<hr>
+<h4>How to customize?</h4>
+<p>You can customize the size system in <code>scss/utilities/_size.scss</code>. Edit <code>$size_map</code> for fixed pixel sizes, <code>$size_map_percent</code> for percentage sizes, <code>$size_map_vw</code> for viewport width sizes, and <code>$size_map_vh</code> for viewport height sizes. Responsive variants are generated from <code>scss/_breakpoint-config.scss</code>. After editing, compile <code>scss/final.scss</code> into the CSS files.</p>
 <figure class="rounded">
   <figcaption>
     <!-- code -->
-    <pre class="m-0"><code class="rounded language-css">// Customize the size map with your own values
+    <pre class="m-0"><code class="rounded language-css">/* scss/utilities/_size.scss */
 $size_map: (
-  "auto": auto,
   "0": 0,
   "1": 4px,
   "2": 8px,
-  "3": 12px,
-  // Add your custom sizes
-  "xs": 6px,
-  "sm": 14px,
-  "custom": 125px,
+  "20": 80px,
+  "card": 360px,
   "full": 100%,
 );
 
-// The generator will create classes like:
-// .w-xs, .h-xs, .min-w-xs, etc.
-// .w-custom, .h-custom, etc.</code></pre>
+$size_map_percent: (
+  "25": 25%,
+  "50": 50%,
+  "75": 75%,
+  "100": 100%,
+);
+
+$size_map_vh: (
+  "50": 50vh,
+  "100": 100vh,
+);</code></pre>
     <!-- code -->
   </figcaption>
 </figure>
-<p>To compile your SCSS modifications into production-ready CSS, you have two primary approaches. The first option involves using Node.js and npm tools, which is ideal if you are comfortable working in the terminal and already have Node.js installed on your system. You would install a Sass compiler package such as dart-sass or node-sass through npm, then execute the compilation command from your project directory. The second option caters to developers who prefer visual interfaces and want to avoid command-line work. Applications like Prepros or CodeKit provide intuitive graphical user interfaces where you can simply drag and drop your SCSS files to watch and compile them automatically. Both approaches produce identical CSS output, so choose whichever workflow fits your development style and comfort level.</p>  
 </article>
 
 <!-- === end of documentation === -->
