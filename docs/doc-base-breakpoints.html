@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Type some info">
+  <meta name="description" content="Breakpoint system documentation for Final CSS">
   <meta name="author" content="Vosidiy M">
 
-  <title>Website layout sample </title>
+  <title>Breakpoints - Final CSS documentation</title>
 
 	<!-- Site script (only for documentation site) -->
 	<script src="/site/script.js"></script>
@@ -45,66 +45,145 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Utility name</h1>
+<h1 class="text-4xl my-20px">Breakpoints</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p> {{ REPLACE THIS WITH SHORT INFO ABOUT UTILITY, HOW TO USE IT, WHEN TO USE IT }}  </p>
-<p>Responsive: ✅ Yes <br> 
-    <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
-    max-lg:classname, max-md:classname, max-sm:classname</span>
-</p>
+<p>Breakpoints are responsive prefixes added before utility and grid class names. Final CSS uses Tailwind-like prefix syntax such as <code>lg:d-flex</code>, <code>md:w-50%</code>, and <code>max-sm:d-none</code>. The same base utility can be applied at different viewport sizes without writing custom media queries.</p>
+<p>Responsive classes are generated from <code>scss/_breakpoint-config.scss</code> and compiled into <code>css/final.css</code>.</p>
 <hr>
 
-<h5> What it does? </h5>
-<p class="text-secondary"> Here are representative examples of these classes: </p>
+<h5>Breakpoint list</h5>
+<p class="text-secondary">Final CSS includes both min-width and max-width breakpoints.</p>
 <table class="table table-compact table-hover">
-  <tr class="bg-secondary"> <th> Class </th> <td> Styles </th>   </tr>
-  <tr> <td class="text-blue"> {{ CLASSNAME }} </td> <td class="text-purple"> {{ ITS CSS STYLE }} </td>  </tr>
-  <!-- {{ ADD ROWS IF AVAILABLE <tr> <td> {{ CLASSNAME }} </td> <td> {{ ITS CSS STYLE }} </td>  </tr> }}  -->
+  <tr class="bg-secondary"> <th>Prefix</th> <th>Media query</th> <th>Common use</th> </tr>
+  <tr> <td class="text-blue">max-lg:</td> <td class="text-purple">@media (max-width: 1200px)</td> <td>Tablet and smaller</td> </tr>
+  <tr> <td class="text-blue">max-md:</td> <td class="text-purple">@media (max-width: 920px)</td> <td>Large mobile and smaller</td> </tr>
+  <tr> <td class="text-blue">max-sm:</td> <td class="text-purple">@media (max-width: 640px)</td> <td>Mobile only</td> </tr>
+  <tr> <td class="text-blue">sm:</td> <td class="text-purple">@media (min-width: 641px)</td> <td>Small tablet and up</td> </tr>
+  <tr> <td class="text-blue">md:</td> <td class="text-purple">@media (min-width: 921px)</td> <td>Larger tablet and up</td> </tr>
+  <tr> <td class="text-blue">lg:</td> <td class="text-purple">@media (min-width: 1201px)</td> <td>Desktop and widescreen</td> </tr>
 </table>
 
+<h5>How prefix syntax works</h5>
+<p>Write the breakpoint prefix, a colon, then the normal class name. The compiled CSS escapes the colon internally, but in HTML you write it naturally.</p>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class</th> <th>Meaning</th> </tr>
+  <tr> <td class="text-blue">lg:d-flex</td> <td class="text-purple">display: flex at 1201px and wider</td> </tr>
+  <tr> <td class="text-blue">md:w-50%</td> <td class="text-purple">width: 50% at 921px and wider</td> </tr>
+  <tr> <td class="text-blue">max-sm:d-none</td> <td class="text-purple">display: none at 640px and smaller</td> </tr>
+  <tr> <td class="text-blue">max-lg:col-12</td> <td class="text-purple">width: 100% at 1200px and smaller</td> </tr>
+  <tr> <td class="text-blue">lg:grid-template-cols-4</td> <td class="text-purple">grid-template-columns: repeat(4, minmax(0, 1fr)) at 1201px and wider</td> </tr>
+</table>
 
-<h5> Basic example </h5>
+<h5>Mobile-first approach</h5>
+<p class="text-secondary">Start with mobile/default styles, then add larger breakpoint overrides.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH SIMPLE EXAMPLE BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-flex flex-col lg:flex-row gap-3">
+      <div class="p-4 rounded bg-blue-100">First</div>
+      <div class="p-4 rounded bg-green-100">Second</div>
+      <div class="p-4 rounded bg-orange-100">Third</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- Column by default, row on desktop --&gt;
+&lt;div class="d-flex flex-col lg:flex-row gap-3"&gt;
+  &lt;div&gt;First&lt;/div&gt;
+  &lt;div&gt;Second&lt;/div&gt;
+  &lt;div&gt;Third&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
-
-<h5>Examples</h5>
-<p class="text-secondary"> {{ Some text about this example and reason to use }} </p>
+<h5>Desktop-first approach</h5>
+<p class="text-secondary">Start with desktop/default styles, then use max-width prefixes to adjust smaller screens.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-     {{ REPLECE_THIS WITH EXAMPLES BASED ON GIVEN SASS STYLING, TO REPRESENT DEMO }}
+    <div class="d-flex flex-row max-sm:flex-col gap-3">
+      <div class="p-4 rounded bg-purple-100">Navigation</div>
+      <div class="p-4 rounded bg-teal-100 flex-grow">Content area</div>
+    </div>
     <!-- example .//end -->
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html"> {{ &lt;tag&gt; CODE_OF_ABOVE_EXAMPLE_WITH_HTML_ESCAPE &lt;tag&gt; }}</code></pre>
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;!-- Row by default, column on mobile --&gt;
+&lt;div class="d-flex flex-row max-sm:flex-col gap-3"&gt;
+  &lt;div&gt;Navigation&lt;/div&gt;
+  &lt;div&gt;Content area&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
+<h5>Common responsive patterns</h5>
+<p class="text-secondary">Use responsive prefixes with display, width, spacing, column, order, grid, and many utility classes.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="d-grid grid-template-cols-1 md:grid-template-cols-2 lg:grid-template-cols-4 gap-3 md:gap-6">
+      <article class="card card-body">Card 1</article>
+      <article class="card card-body">Card 2</article>
+      <article class="card card-body">Card 3</article>
+      <article class="card card-body">Card 4</article>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-1 md:grid-template-cols-2 lg:grid-template-cols-4 gap-3 md:gap-6"&gt;
+  &lt;article class="card card-body"&gt;Card 1&lt;/article&gt;
+  &lt;article class="card card-body"&gt;Card 2&lt;/article&gt;
+  &lt;article class="card card-body"&gt;Card 3&lt;/article&gt;
+  &lt;article class="card card-body"&gt;Card 4&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
 
-<h5> How to customize? </h5>
-<p> {{ SHORT TEXT ABOUT CUSTOMIZATION USING scss/utilities/_filename.scss AND COMPILE }} </p>
+<h5>Show and hide by breakpoint</h5>
+<p class="text-secondary">Combine default display classes with breakpoint display classes to control what users see at each screen size.</p>
+<figure class="rounded border shadow">
+  <div class="card-body">
+    <!-- example -->
+    <div class="p-4 rounded bg-green-100 d-none md:d-block">Visible on medium screens and wider</div>
+    <div class="p-4 rounded bg-orange-100 d-block md:d-none mt-3">Visible below medium screens</div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-none md:d-block"&gt;Visible on medium screens and wider&lt;/div&gt;
+&lt;div class="d-block md:d-none"&gt;Visible below medium screens&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<h5>How to customize?</h5>
+<p>Open <code>scss/_breakpoint-config.scss</code> and edit the <code>$breakpoints</code> map. Utility partials read this map and generate prefixed classes during SCSS compilation.</p>
 <figure class="rounded">
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded language-css"> {{ PUT HERE SCSS CODE }}</code></pre>
+    <pre class="m-0"><code class="rounded language-css">// Breakpoint sizes to generate utility classes
+$breakpoints: (
+  // Device-only breakpoints
+  'max-lg': 'max-width: 1200px',
+  'max-md': 'max-width: 920px',
+  'max-sm': 'max-width: 640px',
+
+  // Classic min-width breakpoints
+  'sm': 'min-width: 641px',
+  'md': 'min-width: 921px',
+  'lg': 'min-width: 1201px',
+);</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
-<p> {{  REWRITE FOLLWING ABOUT COMPILING SCSS / SASS INTO CSS: Option A) node and npm tools (if you know terminal and nodejs) B) Prepros.io software or codekit (if you like visual apps UI and hate terminal) }} </p>  
+<p>After changing breakpoint names or values, compile <code>scss/final.scss</code> again so <code>css/final.css</code> and <code>css/final.min.css</code> include the updated responsive classes.</p>
 </article>
 
 <!-- === end of documentation === -->
