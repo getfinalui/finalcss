@@ -25,6 +25,11 @@
 	<!-- Template parts (only for documentation site) -->
 	<script src="site/partials.js"></script>
 
+	<!-- Syntax highlight (only for documentation site) -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+	<script>window.hljs && hljs.highlightAll();</script>
+
 	<!-- https://getfinalui.github.io/finalcss -->
 </head>
 <body class="bg-base">
@@ -45,6 +50,7 @@
 
 		<div class="text-center mb-3">
 			<a class="btn btn-primary" href="docs/doc-start.html">Documentation</a>
+			<a class="btn btn-default" href="#basics">How classes work</a>
 			<a class="btn btn-default" href="#demo">View example UI</a>
 		</div>
 
@@ -82,32 +88,241 @@
 			</aside>
 		</div>
 
-		<article class="card h-full p-4 lg:p-6 shadow-sm">
-			<div class="row">
-				
-				<aside class="lg:col-6">
-					<h4 class="mb-4">Built for modern web apps</h4>
-					<p>
-						As a UI designer and web developer, I understand the everyday friction of writing CSS. During the last 10 years, I have built hundreds of complex layouts for different web apps and tried many CSS frameworks, including Bootstrap and Tailwind. Final CSS is my attempt to keep what works and simplify what gets in the way. <br><b>Here are some reasons why you should try it:</b>
-					</p>
-					<ul class="list-check">
-						<li> Carefully curated UI design, colors, and typography </li>
-						<li> Light / Dark mode without writing extra code</li>
-						<li> Tailwind-like utility classes and Bootstrap-like components </li>
-						<li> You're not locked into a framework </li>
-						<li> Extend it by adding your own utility classes and components</li>
-					</ul>
-				</aside>
-				<aside class="lg:col-6">
-					<figure class="bg-primary h-full rounded"> </figure>
-				</aside>
-			</div> <!-- row .//end -->
-		</article>
 
-		
-
-		
 	</div> <!-- container .//end -->
+</section>
+<!-- ============== SECTION BASICS  ============== -->
+<section class="pb-10" id="basics">
+<div class="container">
+
+	<header class="mb-10 text-center">
+		<h2 class="mb-2">Simple classes, real interfaces</h2>
+		<p class="text-secondary text-lg mb-0">Rendered examples with the exact HTML below each preview. Use components for the base UI, then adjust details with utilities.</p>
+	</header>
+
+	<div class="d-grid grid-template-cols-2 max-lg:grid-template-cols-1 gap-6">
+
+		<figure class="rounded bg-lower border">
+			<div class="card-body">
+				<h4 class="mb-2">Theme-ready UI</h4>
+				<p class="text-secondary mb-5">Semantic colors adapt when a parent uses dark mode.</p>
+				<!-- example -->
+				<div class="d-grid grid-template-cols-2 max-sm:grid-template-cols-1 gap-4">
+					<article class="card card-body bg-base">
+						<div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+							<div>
+								<h5 class="mb-1">Light theme</h5>
+								<p class="text-secondary mb-0">Default color tokens.</p>
+							</div>
+							<span class="badge badge-green">Live</span>
+						</div>
+						<button type="button" class="btn btn-primary">Open project</button>
+					</article>
+					<article class="theme-dark card card-body">
+						<div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+							<div>
+								<h5 class="mb-1">Dark theme</h5>
+								<p class="text-secondary mb-0">Same component classes.</p>
+							</div>
+							<span class="badge badge-blue">Dark</span>
+						</div>
+						<button type="button" class="btn btn-default">Open project</button>
+					</article>
+				</div>
+				<!-- example .//end -->
+			</div>
+			<figcaption>
+				<!-- code -->
+				<pre class="m-0 max-h-80 overflow-y-auto overflow-x-auto"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-2 max-sm:grid-template-cols-1 gap-4"&gt;
+  &lt;article class="card card-body bg-base"&gt;
+    &lt;div class="d-flex justify-content-between align-items-start gap-3 mb-4"&gt;
+      &lt;div&gt;
+        &lt;h5 class="mb-1"&gt;Light theme&lt;/h5&gt;
+        &lt;p class="text-secondary mb-0"&gt;Default color tokens.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;span class="badge badge-green"&gt;Live&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Open project&lt;/button&gt;
+  &lt;/article&gt;
+
+  &lt;article class="theme-dark card card-body"&gt;
+    &lt;div class="d-flex justify-content-between align-items-start gap-3 mb-4"&gt;
+      &lt;div&gt;
+        &lt;h5 class="mb-1"&gt;Dark theme&lt;/h5&gt;
+        &lt;p class="text-secondary mb-0"&gt;Same component classes.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;span class="badge badge-blue"&gt;Dark&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="btn btn-default"&gt;Open project&lt;/button&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+				<!-- code -->
+			</figcaption>
+		</figure>
+
+		<figure class="rounded bg-lower border">
+			<div class="card-body">
+				<h4 class="mb-2">Responsive grid</h4>
+				<p class="text-secondary mb-5">Use breakpoint prefixes to change layout without extra CSS.</p>
+				<!-- example -->
+				<div class="d-grid grid-template-cols-3 max-lg:grid-template-cols-2 max-sm:grid-template-cols-1 gap-4">
+					<div class="p-4 rounded bg-blue-100">
+						<h6 class="mb-1">Analytics</h6>
+						<p class="mb-0 opacity-70">grid item</p>
+					</div>
+					<div class="p-4 rounded bg-green-100">
+						<h6 class="mb-1">Billing</h6>
+						<p class="mb-0 opacity-70">grid item</p>
+					</div>
+					<div class="p-4 rounded bg-purple-100">
+						<h6 class="mb-1">Support</h6>
+						<p class="mb-0 opacity-70">grid item</p>
+					</div>
+				</div>
+				<!-- example .//end -->
+			</div>
+			<figcaption>
+				<!-- code -->
+				<pre class="m-0 max-h-80 overflow-y-auto overflow-x-auto"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-3 max-lg:grid-template-cols-2 max-sm:grid-template-cols-1 gap-4"&gt;
+  &lt;div class="p-4 rounded bg-blue-100"&gt;
+    &lt;h6 class="mb-1"&gt;Analytics&lt;/h6&gt;
+    &lt;p class="mb-0 opacity-70"&gt;grid item&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="p-4 rounded bg-green-100"&gt;
+    &lt;h6 class="mb-1"&gt;Billing&lt;/h6&gt;
+    &lt;p class="mb-0 opacity-70"&gt;grid item&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="p-4 rounded bg-purple-100"&gt;
+    &lt;h6 class="mb-1"&gt;Support&lt;/h6&gt;
+    &lt;p class="mb-0 opacity-70"&gt;grid item&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				<!-- code -->
+			</figcaption>
+		</figure>
+
+		<figure class="rounded bg-lower border">
+			<div class="card-body">
+				<h4 class="mb-2">Button variants</h4>
+				<p class="text-secondary mb-5">Use component classes for consistent size, color, and states.</p>
+				<!-- example -->
+				<div class="d-flex flex-wrap gap-2">
+					<button type="button" class="btn btn-primary">Primary</button>
+					<button type="button" class="btn btn-blue">Blue</button>
+					<button type="button" class="btn btn-green">Green</button>
+					<button type="button" class="btn btn-red">Red</button>
+					<button type="button" class="btn btn-orange">Orange</button>
+					<button type="button" class="btn btn-purple">Purple</button>
+					<button type="button" class="btn btn-teal">Teal</button>
+					<button type="button" class="btn btn-primary-subtle">Subtle</button>
+					<button type="button" class="btn btn-outline">Outline</button>
+					<button type="button" class="btn btn-default">Default</button>
+				</div>
+				<!-- example .//end -->
+			</div>
+			<figcaption>
+				<!-- code -->
+				<pre class="m-0 max-h-80 overflow-y-auto overflow-x-auto"><code class="rounded-bottom language-html">&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-blue"&gt;Blue&lt;/button&gt;
+&lt;button type="button" class="btn btn-green"&gt;Green&lt;/button&gt;
+&lt;button type="button" class="btn btn-red"&gt;Red&lt;/button&gt;
+&lt;button type="button" class="btn btn-orange"&gt;Orange&lt;/button&gt;
+&lt;button type="button" class="btn btn-purple"&gt;Purple&lt;/button&gt;
+&lt;button type="button" class="btn btn-teal"&gt;Teal&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary-subtle"&gt;Subtle&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline"&gt;Outline&lt;/button&gt;
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;</code></pre>
+				<!-- code -->
+			</figcaption>
+		</figure>
+
+		<figure class="rounded bg-lower border">
+			<div class="card-body">
+				<h4 class="mb-2">Newsletter form</h4>
+				<p class="text-secondary mb-5">Build common marketing and app forms with cards, inputs, buttons, and spacing utilities.</p>
+				<!-- example -->
+				<article class="card card-body mx-auto" style="max-width: 440px;">
+					<span class="badge badge-orange mb-3">Weekly update</span>
+					<h5 class="mb-2">Design notes in your inbox</h5>
+					<p class="text-secondary">Short CSS and UI tips for building cleaner interfaces.</p>
+					<label class="form-label" for="landingNewsletterEmail">Email address</label>
+					<div class="d-flex max-sm:flex-col gap-2">
+						<input class="form-control" id="landingNewsletterEmail" type="email" placeholder="you@example.com">
+						<button type="button" class="btn btn-primary">Subscribe</button>
+					</div>
+				</article>
+				<!-- example .//end -->
+			</div>
+			<figcaption>
+				<!-- code -->
+				<pre class="m-0 max-h-80 overflow-y-auto overflow-x-auto"><code class="rounded-bottom language-html">&lt;article class="card card-body mx-auto" style="max-width: 440px;"&gt;
+  &lt;span class="badge badge-orange mb-3"&gt;Weekly update&lt;/span&gt;
+  &lt;h5 class="mb-2"&gt;Design notes in your inbox&lt;/h5&gt;
+  &lt;p class="text-secondary"&gt;Short CSS and UI tips for building cleaner interfaces.&lt;/p&gt;
+
+  &lt;label class="form-label" for="newsletterEmail"&gt;Email address&lt;/label&gt;
+  &lt;div class="d-flex max-sm:flex-col gap-2"&gt;
+    &lt;input class="form-control" id="newsletterEmail" type="email" placeholder="you@example.com"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Subscribe&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+				<!-- code -->
+			</figcaption>
+		</figure>
+
+		<figure class="rounded bg-lower border">
+			<div class="card-body">
+				<h4 class="mb-2">Product card</h4>
+				<p class="text-secondary mb-5">Compose product UI with layout, color, size, text, and button utilities.</p>
+				<!-- example -->
+				<article class="card overflow-hidden mx-auto" style="max-width: 360px;">
+					<div class="h-45 bg-neutral-200 d-flex align-items-center justify-content-center">
+						<div class="w-20 h-20 rounded bg-primary"></div>
+					</div>
+					<div class="card-body">
+						<div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+							<div>
+								<h5 class="mb-1">Workspace kit</h5>
+								<p class="text-secondary mb-0">Starter components and utilities.</p>
+							</div>
+							<span class="badge badge-green">$29</span>
+						</div>
+						<div class="d-flex gap-2">
+							<button type="button" class="btn btn-primary flex-grow">Buy now</button>
+							<button type="button" class="btn btn-default">Details</button>
+						</div>
+					</div>
+				</article>
+				<!-- example .//end -->
+			</div>
+			<figcaption>
+				<!-- code -->
+				<pre class="m-0 max-h-80 overflow-y-auto overflow-x-auto"><code class="rounded-bottom language-html">&lt;article class="card overflow-hidden mx-auto" style="max-width: 360px;"&gt;
+  &lt;div class="h-45 bg-neutral-200 d-flex align-items-center justify-content-center"&gt;
+    &lt;div class="w-20 h-20 rounded bg-primary"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;div class="d-flex justify-content-between align-items-start gap-3 mb-3"&gt;
+      &lt;div&gt;
+        &lt;h5 class="mb-1"&gt;Workspace kit&lt;/h5&gt;
+        &lt;p class="text-secondary mb-0"&gt;Starter components and utilities.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;span class="badge badge-green"&gt;$29&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="d-flex gap-2"&gt;
+      &lt;button type="button" class="btn btn-primary flex-grow"&gt;Buy now&lt;/button&gt;
+      &lt;button type="button" class="btn btn-default"&gt;Details&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+				<!-- code -->
+			</figcaption>
+		</figure>
+
+	</div>
+
+</div>
 </section>
 <!-- ============== SECTION CONTENT  ============== -->
 <section class="py-14 bg-lower" id="demo">
@@ -198,11 +413,11 @@
 						<button type="button" class="rounded-left-0 btn btn-primary">Search</button>
 					</div>
 					<datalist id="countries">
-						<option value="Uzbekistan">
-						<option value="Pakistan">
-						<option value="India">
-						<option value="United States">
-						<option value="China">
+						<option value="Uzbekistan"></option>
+						<option value="Pakistan"></option>
+						<option value="India"></option>
+						<option value="United States"></option>
+						<option value="China"></option>
 					</datalist>
 					<!-- input search .// -->
 
@@ -577,6 +792,7 @@
 			</aside>
 		</div> 
 		<!-- row.// -->
+	</article>
 
 </div> <!-- container .//  -->
 </section>
