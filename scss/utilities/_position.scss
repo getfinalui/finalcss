@@ -11,6 +11,8 @@
 .fixed-bottom {position: fixed;  bottom:0; left:0; right:0;  z-index: 1020;}
 .sticky-bottom {position: sticky;  bottom:0; z-index: 1000;}
 
+.transform-none{ transform: none !important; }
+
 // Generate responsive utility classes
 // breakpoints can be changed from breakpoint-config.scss
 @each $breakpoint, $screen_size in $breakpoints {

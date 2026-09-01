@@ -1,0 +1,29 @@
+
+[data-tooltip]{
+    position: relative; 
+    cursor: pointer; 
+}
+[data-tooltip]::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    max-width: 250px;
+    min-width: 120px;
+    top: 112%; /* Places it above the element */
+    left: 50%;
+    font-size: 12px;
+    transform: translateX(-50%);
+    background-color: #222; 
+    color: #fff;
+    padding: 5px; 
+    border-radius: 5px; 
+
+    /* Hide by default  */
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1; 
+    visibility: visible; 
+}

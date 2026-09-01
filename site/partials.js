@@ -114,8 +114,11 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-component-form-input.html">Input field</a></li>
             <li><a class="nav-link" href="/docs/doc-component-form-select.html">Select</a></li>
             <li><a class="nav-link" href="/docs/doc-component-nav.html">Nav menu</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-pulse.html">Pulse</a></li>
             <li><a class="nav-link" href="/docs/doc-component-table.html">Table</a></li>
             <li><a class="nav-link" href="/docs/doc-component-tabs.html">Tabs</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-toast.html">Toast</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-tooltip.html">Tooltip</a></li>
             <li><a class="nav-link" href="/docs/doc-component-tag-chips.html">Tag / chips</a></li>
             <li class="px-2">
               <hr>

@@ -5,7 +5,13 @@
  * Licensed under MIT
  */
 
-@import "breakpoint-config";
+// ===== Simpler Break point config =====
+// Breakpoint sizes to generate utility classes
+$breakpoints: (
+  'max-sm': 'max-width: 640px',  // Mobile only
+  'sm': 'min-width: 641px',  // not mobile, - small tablet and up
+);
+
 
 // Base
 @import "theme";

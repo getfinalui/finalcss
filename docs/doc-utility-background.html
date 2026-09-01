@@ -44,7 +44,7 @@
 
 <!-- === start of documentation === -->
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Background Color</h1>
+<h1 class="text-4xl my-5">Background Color</h1>
 <hr>
 <article class="article-wrap mb-16">
 <p>Background color utility classes provide a comprehensive system for applying background colors to elements. Use these classes to quickly style containers, cards, buttons, and other UI components. The system includes semantic colors (base, secondary, lower), theme colors (primary, red, green, etc.), and multiple shades (100-900) for each color. All classes support hover states and work seamlessly with dark mode.</p>
@@ -52,7 +52,7 @@
 <p>Hover support: ✅ Yes <br> 
 <span class="text-secondary">hover:classname, group-hover:classname</span>
 </p>
-<p>Alse read more on topic <a href="doc-base-theme.html">Themes and Colors</a>  in this documentation</p>
+<p>Also read more about <a href="doc-base-theme.html">Themes and Colors</a> in this documentation.</p>
 <hr>
 
 <h5>Base colors</h5>
@@ -196,6 +196,90 @@
   <tr> <td class="text-blue"> bg-teal-800</td> <td class="text-purple">background-color: var(--teal-800);</td> </tr>
   <tr> <td class="text-blue"> bg-teal-900</td> <td class="text-purple">background-color: var(--teal-900);</td> </tr>
 </table>
+
+<hr>
+
+<h5>Transparent black and white</h5>
+<p>Use transparent black and white background utilities for overlays, glass-like panels, hover surfaces, and text blocks placed over images or colorful backgrounds. These classes use fixed RGBA values, so they do not change with light or dark mode.</p>
+
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Class pattern</th> <th>Styles</th> </tr>
+  <tr> <td class="text-blue">bg-white-10% to bg-white-90%</td> <td class="text-purple">background-color: rgba(255, 255, 255, 0.1 to 0.9);</td> </tr>
+  <tr> <td class="text-blue">bg-black-10% to bg-black-90%</td> <td class="text-purple">background-color: rgba(0, 0, 0, 0.1 to 0.9);</td> </tr>
+  <tr> <td class="text-blue">hover:bg-white-10% to hover:bg-white-90%</td> <td class="text-purple">apply transparent white on hover</td> </tr>
+  <tr> <td class="text-blue">hover:bg-black-10% to hover:bg-black-90%</td> <td class="text-purple">apply transparent black on hover</td> </tr>
+  <tr> <td class="text-blue">group-hover:bg-white-10% to group-hover:bg-white-90%</td> <td class="text-purple">apply transparent white when a parent with <code>group</code> is hovered</td> </tr>
+  <tr> <td class="text-blue">group-hover:bg-black-10% to group-hover:bg-black-90%</td> <td class="text-purple">apply transparent black when a parent with <code>group</code> is hovered</td> </tr>
+</table>
+
+<h5>Transparent overlay examples</h5>
+<p class="text-secondary">Combine these utilities with text, spacing, border radius, and hover utilities to create readable overlays without writing custom CSS.</p>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="d-grid grid-template-cols-2 max-sm:grid-template-cols-1 gap-4">
+  <div class="bg-blue rounded p-5 text-white">
+    <div class="bg-white-20% p-4 rounded">
+      White 20% over blue
+    </div>
+  </div>
+  <div class="bg-yellow-300 rounded p-5">
+    <div class="bg-black-20% p-4 rounded text-white">
+      Black 20% over yellow
+    </div>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="bg-blue rounded p-5 text-white"&gt;
+  &lt;div class="bg-white-20% p-4 rounded"&gt;
+    White 20% over blue
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="bg-yellow-300 rounded p-5"&gt;
+  &lt;div class="bg-black-20% p-4 rounded text-white"&gt;
+    Black 20% over yellow
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
+
+<h5>Transparent hover examples</h5>
+<figure class="rounded border shadow">
+<div class="card-body">
+<!-- example -->
+<div class="d-grid grid-template-cols-2 max-sm:grid-template-cols-1 gap-4">
+  <button type="button" class="btn bg-black-10% hover:bg-black-20%">
+    Hover for darker overlay
+  </button>
+  <div class="group bg-purple rounded p-4 text-white">
+    <p class="mb-3">Hover this parent</p>
+    <div class="bg-white-10% group-hover:bg-white-30% p-3 rounded">
+      Child overlay changes
+    </div>
+  </div>
+</div>
+<!-- example .//end -->
+</div>
+<figcaption>
+<!-- code -->
+<pre class="m-0"><code class="rounded-bottom language-html">&lt;button type="button" class="btn bg-black-10% hover:bg-black-20%"&gt;
+  Hover for darker overlay
+&lt;/button&gt;
+
+&lt;div class="group bg-purple rounded p-4 text-white"&gt;
+  &lt;p class="mb-3"&gt;Hover this parent&lt;/p&gt;
+  &lt;div class="bg-white-10% group-hover:bg-white-30% p-3 rounded"&gt;
+    Child overlay changes
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- code -->
+</figcaption>
+</figure>
 
 <h5>Hover state</h5>
 <p>All background color classes support hover interactions using the <code>hover:</code> prefix. Additionally, you can create group hover effects where child elements respond to parent hover using the <code>group-hover:</code> prefix. The parent element must have the <code>group</code> class applied for group hover to work.</p>

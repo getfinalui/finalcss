@@ -1,0 +1,18 @@
+.toast{
+  position: fixed;
+  left:50%; transform: translateX(-50%);
+  bottom: 40px;
+  display: flex;
+  max-height: 40px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 160px;
+  max-width: 240px;
+  color:#fff;
+  background:#1f1f1f;
+  border-top:1px solid rgba(#fff, .2);
+  padding:6px 10px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(#000, 0.7);
+} 
