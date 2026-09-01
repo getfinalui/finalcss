@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * Final CSS ( https://finalcss.com )
- * Copyright 2025 The Finalcss by Author Vosidiy M. 
+ * Copyright 2026 The Finalcss by Author Vosidiy M. 
  * Licensed under MIT
  */
 :root, [data-theme=light], .theme-light, [data-theme=static], .theme-static {
@@ -3336,7 +3336,7 @@ dialog::backdrop {
   border-color: var(--border-color-default);
 }
 .table tr > td, .table tr > th {
-  padding: 0.8rem 0.5rem;
+  padding: 0.6rem 0.4rem;
   border-bottom-width: 1px;
 }
 .table > tbody {
@@ -3347,11 +3347,19 @@ dialog::backdrop {
   background-color: var(--neutral-100);
 }
 .table td:not(:first-child) {
-  min-width: 110px;
+  min-width: 72px;
+}
+.table td:last-child {
+  min-width: auto;
 }
 
 .table-compact tr > td, .table-compact tr > th {
-  padding: 0.4rem 0.4rem;
+  padding: 6px 4px;
+}
+.table-compact .form-control, .table-compact .form-select {
+  min-height: 32px;
+  height: 32px;
+  padding: 2px 8px;
 }
 
 .table > tbody > tr:has(input[type=checkbox]:checked) > * {
@@ -3865,6 +3873,89 @@ textarea.form-control {
 
 .tabs-boxed.w-full .tab-link, .tabs-boxed.w-100\% .tab-link {
   flex-grow: 1;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  display: flex;
+  max-height: 40px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 160px;
+  max-width: 240px;
+  color: #fff;
+  background: #1f1f1f;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.pulse {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  background: red;
+}
+
+.pulse::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 20px;
+  background: rgba(255, 0, 0, 0.4);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  max-width: 250px;
+  min-width: 120px;
+  top: 112%;
+  /* Places it above the element */
+  left: 50%;
+  font-size: 12px;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  /* Hide by default  */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown {
@@ -6361,6 +6452,7 @@ textarea.form-control {
   clip: rect(0, 0, 0, 0) !important;
   border: 0 !important;
   opacity: 0 !important;
+  position: absolute;
 }
 
 @media (max-width: 1200px) {
@@ -12827,6 +12919,222 @@ h1 {
   background: none;
 }
 
+.bg-white-10\% {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-black-10\% {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hover\:bg-white-10\%:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hover\:bg-black-10\%:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.group:hover .group-hover\:bg-white-10\% {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.group:hover .group-hover\:bg-black-10\% {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-white-20\% {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-black-20\% {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hover\:bg-white-20\%:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hover\:bg-black-20\%:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.group:hover .group-hover\:bg-white-20\% {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.group:hover .group-hover\:bg-black-20\% {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-white-30\% {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-black-30\% {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hover\:bg-white-30\%:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hover\:bg-black-30\%:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.group:hover .group-hover\:bg-white-30\% {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.group:hover .group-hover\:bg-black-30\% {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg-white-40\% {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.bg-black-40\% {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hover\:bg-white-40\%:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hover\:bg-black-40\%:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.group:hover .group-hover\:bg-white-40\% {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.group:hover .group-hover\:bg-black-40\% {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bg-white-50\% {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-black-50\% {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hover\:bg-white-50\%:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hover\:bg-black-50\%:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.group:hover .group-hover\:bg-white-50\% {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.group:hover .group-hover\:bg-black-50\% {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-white-60\% {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.bg-black-60\% {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hover\:bg-white-60\%:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hover\:bg-black-60\%:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.group:hover .group-hover\:bg-white-60\% {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.group:hover .group-hover\:bg-black-60\% {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-white-70\% {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-black-70\% {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hover\:bg-white-70\%:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hover\:bg-black-70\%:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.group:hover .group-hover\:bg-white-70\% {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.group:hover .group-hover\:bg-black-70\% {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bg-white-80\% {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-black-80\% {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hover\:bg-white-80\%:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hover\:bg-black-80\%:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.group:hover .group-hover\:bg-white-80\% {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.group:hover .group-hover\:bg-black-80\% {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bg-white-90\% {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-black-90\% {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.hover\:bg-white-90\%:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hover\:bg-black-90\%:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.group:hover .group-hover\:bg-white-90\% {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.group:hover .group-hover\:bg-black-90\% {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 .rounded-0 {
   border-radius: 0;
 }
@@ -12967,6 +13275,10 @@ h1 {
   position: sticky;
   bottom: 0;
   z-index: 1000;
+}
+
+.transform-none {
+  transform: none !important;
 }
 
 @media (max-width: 1200px) {

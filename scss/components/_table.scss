@@ -9,7 +9,7 @@
   border-color: var(--border-color-default);
 
   tr > td, tr > th {
-  padding: 0.8rem 0.5rem;
+  padding: 0.6rem 0.4rem;
   border-bottom-width: 1px;
   }
   > tbody {
@@ -20,14 +20,21 @@
     background-color:var(--neutral-100);
   }
   td:not(:first-child){
-    min-width: 110px;
+    min-width: 72px;
+  }
+  td:last-child {
+     min-width:auto;
   }
 }
 
 .table-compact{
   tr > td, tr > th {
-    padding: 0.4rem 0.4rem;
+     padding: 6px 4px;
   }
+
+  .form-control, .form-select{
+    min-height:32px; height:32px; padding:2px 8px;
+  } 
 }
 
 .table  > tbody > tr:has(input[type="checkbox"]:checked) > *{

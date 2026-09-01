@@ -1,0 +1,18 @@
+
+.skeleton {
+background-size: 400% 100%;
+border-radius: 4px;
+}
+
+.skeleton > * {
+    display:block; 
+    width:90%;
+    color:#999;
+    font-weight:300;
+    border-radius: 6px;
+    min-height: 12px;
+    font-size:14px;
+    padding:3px 8px;
+    margin: 8px 0;
+    background: linear-gradient(90deg, #c8c9cb 0%, #ffffff 100%);
+}

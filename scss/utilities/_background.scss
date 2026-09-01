@@ -53,3 +53,28 @@ $colors_bg_main:(
 .bg-size-cover{background-size: cover}
 .bg-position-center{background-position: center;}
 .bg-none{ background: none; }
+
+// Opacity transparet black / white
+
+$opacity_map:(
+  "10": 0.1,
+  "20": 0.2,
+  "30": 0.3,
+  "40": 0.4,
+  "50": 0.5,
+  "60": 0.6,
+  "70": 0.7,
+  "80": 0.8,
+  "90": 0.9,
+);
+
+@each $name, $value in $opacity_map {
+  .bg-white-#{$name}\%{ background-color:rgba( #fff, $value ); }
+  .bg-black-#{$name}\%{ background-color:rgba( #000, $value ); }
+
+  .hover\:bg-white-#{$name}\%:hover{ background-color:rgba( #fff, $value ); }
+  .hover\:bg-black-#{$name}\%:hover{ background-color:rgba( #000, $value ); }
+
+  .group:hover .group-hover\:bg-white-#{$name}\%{ background-color:rgba( #fff, $value ); }
+  .group:hover .group-hover\:bg-black-#{$name}\%{ background-color:rgba( #000, $value ); }
+}
