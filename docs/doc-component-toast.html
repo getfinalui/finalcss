@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Toast component documentation for Final CSS">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Toast - Final CSS documentation</title>
+
+	<!-- Site script (only for documentation site) -->
+	<script src="/site/script.js"></script>
+	
+	<!-- FinalCSS -->
+	<link href="/css/final.css" rel="stylesheet" type="text/css" />
+
+	<!-- Template parts (only for documentation site) -->
+	<script src="/site/partials.js"></script>
+
+	<!-- Syntax highlight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+	
+</head>
+<body class="bg-base">
+
+<!-- ======= HEADER =======  -->
+<header-component></header-component>
+<!-- ======= HEADER end// =======-->
+
+<div class="container">
+
+<div class="d-flex flex-wrap">
+<aside class="w-full lg:w-20%">
+	
+<!-- ======= SIDEBAR =======  -->
+<sidebar-component></sidebar-component>
+<!-- ======= SIDEBAR end// =======-->
+
+</aside>
+<main class="lg:w-80% pl-0 lg:pl-10 pt-10">
+
+<!-- === start of documentation === -->
+
+<h6 class="mb-3 text-secondary">Documentation</h6>
+<h1 class="text-4xl my-5">Toast</h1>
+<hr>
+<article class="article-wrap mb-16">
+
+<p>The toast component is a compact fixed message for short feedback such as saved states, copied links, and completed actions. It appears at the bottom center of the viewport and uses a high-contrast black background with white text.</p>
+
+<ul class="list-bullet">
+	<li>When to use it: Use toast messages for temporary, low-interruption feedback after a user action.</li>
+  <li>Don't use for: Critical errors, confirmations that need user input, or long messages. Use alerts or dialogs for those cases.</li>
+  <li>Dark mode: Uses fixed high-contrast colors.</li>
+	<li>SCSS file: <code>/scss/components/<b>_toast.scss</b></code></li>
+  <li>Responsive: No generated responsive variants.</li>
+</ul>
+
+<hr>
+<h4>Class reference</h4>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Selector</th> <th>Styles / behavior</th> </tr>
+  <tr> <td class="text-blue">toast</td> <td class="text-purple">position: fixed; bottom: 40px; centered with left: 50% and translateX(-50%)</td> </tr>
+  <tr> <td class="text-blue">toast</td> <td class="text-purple">min-width: 160px; max-width: 240px; padding: 8px 12px; border-radius: 12px</td> </tr>
+  <tr> <td class="text-blue">toast</td> <td class="text-purple">color: #fff; background: #000</td> </tr>
+</table>
+
+<hr>
+<h4>Basic example</h4>
+<p class="text-secondary">The live preview adds <code>static</code> so the toast stays inside this documentation example. In real use, <code>toast</code> is fixed to the bottom center of the viewport.</p>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <div class="toast transform-none static"> 
+      ✅ Saved changes <button class="btn btn-sm bg-white-10%">OK</button></div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="toast"&gt;Saved changes&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<hr>
+
+<h4>With action feedback</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <div class="d-flex flex-wrap gap-3 align-items-center">
+      <button type="button" class="btn btn-primary">Save profile</button>
+      <div class="toast theme-static static transform-none bg-green-800"> ✅ Profile updated</div>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button type="button" class="btn btn-primary"&gt;Save profile&lt;/button&gt;
+&lt;div class="toast theme-static static transform-none bg-green-800"&gt;Profile updated&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<hr>
+
+<h4>How to customize?</h4>
+<p>Customize toast size, position, color, padding, and border radius in <code>scss/components/_toast.scss</code>, then compile the SCSS into CSS. You can also override simple values inline for a single toast.</p>
+
+<figure class="rounded border">
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded language-html">&lt;div class="toast" style="background: var(--green-600); max-width: 320px;"&gt;
+  Project published
+&lt;/div&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<p>Compile with a Sass command-line tool if you use Node and terminal workflows, or use a visual compiler such as Prepros or CodeKit if you prefer a GUI.</p>
+
+</article>
+
+<!-- === end of documentation === -->
+
+</main>
+</div> <!-- row end -->
+</div> <!-- container end -->
+
+<footer-component></footer-component>
+
+</body>
+</html>

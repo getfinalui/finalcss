@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Pulse component documentation for Final CSS">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Pulse - Final CSS documentation</title>
+
+	<!-- Site script (only for documentation site) -->
+	<script src="/site/script.js"></script>
+	
+	<!-- FinalCSS -->
+	<link href="/css/final.css" rel="stylesheet" type="text/css" />
+
+	<!-- Template parts (only for documentation site) -->
+	<script src="/site/partials.js"></script>
+
+	<!-- Syntax highlight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+	
+</head>
+<body class="bg-base">
+
+<!-- ======= HEADER =======  -->
+<header-component></header-component>
+<!-- ======= HEADER end// =======-->
+
+<div class="container">
+
+<div class="d-flex flex-wrap">
+<aside class="w-full lg:w-20%">
+	
+<!-- ======= SIDEBAR =======  -->
+<sidebar-component></sidebar-component>
+<!-- ======= SIDEBAR end// =======-->
+
+</aside>
+<main class="lg:w-80% pl-0 lg:pl-10 pt-10">
+
+<!-- === start of documentation === -->
+
+<h6 class="mb-3 text-secondary">Documentation</h6>
+<h1 class="text-4xl my-5">Pulse</h1>
+<hr>
+<article class="article-wrap mb-16">
+
+<p>The pulse component is a small animated status indicator. It creates a 16px inline marker with a repeating animated ring using the <code>::after</code> pseudo-element.</p>
+
+<ul class="list-bullet">
+	<li>When to use it: Use pulse indicators for live status, notifications, online presence, recording states, or recently updated items.</li>
+  <li>Don't use for: Long-running progress, loading states that need labels, or critical alerts. Use progress bars, spinners, badges, or alerts instead.</li>
+  <li>Dark mode: Uses a fixed red pulse color.</li>
+	<li>SCSS file: <code>/scss/components/<b>_pulse.scss</b></code></li>
+  <li>Responsive: No generated responsive variants.</li>
+</ul>
+
+<hr>
+
+<h4>Class reference </h4>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Selector</th> <th>Styles / behavior</th> </tr>
+  <tr> <td class="text-blue">pulse</td> <td class="text-purple">position: relative; display: inline-block; width and height: 16px</td> </tr>
+  <tr> <td class="text-blue">pulse::after</td> <td class="text-purple">absolute ring with inset: -8px; border-radius: 20px; rgba red background</td> </tr>
+  <tr> <td class="text-blue">@keyframes pulse</td> <td class="text-purple">scales and fades the ring in a 1s infinite animation</td></tr>
+</table>
+ 
+<hr>
+
+
+<h4>Basic example</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <span class="pulse"></span>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;span class="pulse"&gt;&lt;/span&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<hr>
+
+<h4>Status list</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body">
+    <!-- example -->
+    <ul class="d-flex flex-col gap-3">
+      <li>
+        <span class="pulse"></span>
+        <span>Live deployment</span>
+      </li>
+      <li>
+        <span class="pulse"></span>
+        <span>Recording session</span>
+      </li>
+      <li>
+        <span class="pulse"></span>
+        <span>New activity</span>
+      </li>
+    </ul>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;ul class="d-flex flex-col gap-3"&gt;
+  &lt;li&gt;
+    &lt;span class="pulse"&gt;&lt;/span&gt;
+    &lt;span&gt;Live deployment&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span class="pulse"&gt;&lt;/span&gt;
+    &lt;span&gt;Recording session&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<hr>
+
+<h4>How to customize?</h4>
+<p>Customize the marker size, ring inset, pulse color, border radius, and animation timing in <code>scss/components/_pulse.scss</code>, then compile the SCSS into CSS.</p>
+
+<figure class="rounded border">
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded language-css">.pulse {
+  width: 16px;
+  height: 16px;
+}
+
+.pulse::after {
+  inset: -8px;
+  background: rgba(255, 82, 82, 0.4);
+  animation: pulse 1s infinite;
+}</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<p>Compile with a Sass command-line tool if you use Node and terminal workflows, or use a visual compiler such as Prepros or CodeKit if you prefer a GUI.</p>
+
+</article>
+
+<!-- === end of documentation === -->
+
+</main>
+
+</div> <!-- row end -->
+</div> <!-- container end -->
+
+<footer-component></footer-component>
+
+</body>
+</html>

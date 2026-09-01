@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Tooltip component documentation for Final CSS">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Tooltip - Final CSS documentation</title>
+
+	<!-- Site script (only for documentation site) -->
+	<script src="/site/script.js"></script>
+	
+	<!-- FinalCSS -->
+	<link href="/css/final.css" rel="stylesheet" type="text/css" />
+
+	<!-- Template parts (only for documentation site) -->
+	<script src="/site/partials.js"></script>
+
+	<!-- Syntax highlight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+	
+</head>
+<body class="bg-base">
+
+<!-- ======= HEADER =======  -->
+<header-component></header-component>
+<!-- ======= HEADER end// =======-->
+
+<div class="container">
+
+<div class="d-flex flex-wrap">
+<aside class="w-full lg:w-20%">
+	
+<!-- ======= SIDEBAR =======  -->
+<sidebar-component></sidebar-component>
+<!-- ======= SIDEBAR end// =======-->
+
+</aside>
+<main class="lg:w-80% pl-0 lg:pl-10 pt-10">
+
+<!-- === start of documentation === -->
+
+<h6 class="mb-3 text-secondary">Documentation</h6>
+<h1 class="text-4xl my-5">Tooltip</h1>
+<hr>
+<article class="article-wrap mb-16">
+
+<p>The tooltip component displays short helper text from a <code>data-tooltip</code> attribute. It uses CSS only: no JavaScript is required.</p>
+
+<ul class="list-bullet">
+	<li>When to use it: Use tooltips for short hints, labels for icon buttons, and small contextual notes.</li>
+  <li>Don't use for: Essential instructions, long content, form validation, or information that must work on touch-only devices without another visible label.</li>
+  <li>Dark mode: Uses fixed high-contrast colors.</li>
+	<li>SCSS file: <code>/scss/components/<b>_tooltip.scss</b></code></li>
+  <li>Responsive: No generated responsive variants.</li>
+</ul>
+
+<hr>
+<h4>Selector reference</h4>
+<table class="table table-compact table-hover">
+  <tr class="bg-secondary"> <th>Selector</th> <th>Styles / behavior</th> </tr>
+  <tr> <td class="text-blue">[data-tooltip]</td> <td class="text-purple">position: relative; cursor: pointer</td> </tr>
+  <tr> <td class="text-blue">[data-tooltip]::after</td> <td class="text-purple">content from attr(data-tooltip); absolute position; max-width: 250px</td> </tr>
+  <tr> <td class="text-blue">[data-tooltip]:hover::after</td> <td class="text-purple">sets opacity: 1 and visibility: visible</td> </tr>
+</table>
+
+<hr>
+<h4>Basic example</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body pb-12">
+    <!-- example -->
+    <button type="button" class="btn btn-primary" data-tooltip="Save your current changes">Hover me</button>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button type="button" class="btn btn-primary" data-tooltip="Save your current changes"&gt;
+  Hover me
+&lt;/button&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<hr>
+
+<h4>With common UI elements</h4>
+<figure class="rounded bg-lower border">
+  <div class="card-body pb-12">
+    <!-- example -->
+    <div class="d-flex flex-wrap gap-3 align-items-center">
+      <button type="button" class="btn btn-default" data-tooltip="Copy the public link">Copy link</button>
+      <span class="badge badge-green" data-tooltip="This project is currently active">Active</span>
+      <a href="#" data-tooltip="Open the full documentation">Documentation link</a>
+    </div>
+    <!-- example .//end -->
+  </div>
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;button type="button" class="btn btn-default" data-tooltip="Copy the public link"&gt;
+  Copy link
+&lt;/button&gt;
+
+&lt;span class="badge badge-green" data-tooltip="This project is currently active"&gt;
+  Active
+&lt;/span&gt;
+
+&lt;a href="#" data-tooltip="Open the full documentation"&gt;
+  Documentation link
+&lt;/a&gt;</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<hr>
+
+<h4>How to customize?</h4>
+<p>Customize tooltip placement, colors, padding, max width, border radius, and visibility transitions in <code>scss/components/_tooltip.scss</code>, then compile the SCSS into CSS.</p>
+
+<figure class="rounded border">
+  <figcaption>
+		<!-- code -->
+    <pre class="m-0"><code class="rounded language-css">[data-tooltip]::after {
+  right: -30%;
+  top: 90%;
+  max-width: 250px;
+  background-color: #222;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}</code></pre>
+		<!-- code -->
+	</figcaption>
+</figure>
+
+<p>Compile with a Sass command-line tool if you use Node and terminal workflows, or use a visual compiler such as Prepros or CodeKit if you prefer a GUI.</p>
+
+</article>
+
+<!-- === end of documentation === -->
+
+</main>
+</div> <!-- row end -->
+</div> <!-- container end -->
+
+<footer-component></footer-component>
+
+</body>
+</html>
