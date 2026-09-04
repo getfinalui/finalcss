@@ -48,7 +48,7 @@ Responsive variants are useful when an item should stay in the layout but be hid
       Still keeps grid space
 
 ```html
-<div class="d-grid grid-template-cols-3 max-sm:grid-template-cols-1 gap-3">
+<div class="d-grid grid-cols-3 max-sm:grid-cols-1 gap-3">
   <div>Always visible</div>
   <div class="max-sm:visibility-hidden">Hidden on small screens</div>
   <div>Still keeps grid space</div>

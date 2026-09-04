@@ -32,7 +32,7 @@ Here are the main layout classes used to build grids.
 | col-1 ... col-12 | 12-column percentage widths from 8.33333333% to 100% |
 | row-cols-1 ... row-cols-12 | sets equal widths on direct children of a row |
 | d-grid | display: grid |
-| grid-template-cols-1 ... 12 | grid-template-columns: repeat(n, minmax(0, 1fr)) |
+| grid-cols-1 ... 12 | grid-template-columns: repeat(n, minmax(0, 1fr)) |
 | grid-col-span-1 ... 12 | grid-column: auto / span n |
 | grid-col-span-full | grid-column: 1 / -1 |
 

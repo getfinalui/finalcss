@@ -33,7 +33,7 @@ Write the breakpoint prefix, a colon, then the normal class name. The compiled C
 | md:w-50% | width: 50% at 921px and wider |
 | max-sm:d-none | display: none at 640px and smaller |
 | max-lg:col-12 | width: 100% at 1200px and smaller |
-| lg:grid-template-cols-4 | grid-template-columns: repeat(4, minmax(0, 1fr)) at 1201px and wider |
+| lg:grid-cols-4 | grid-template-columns: repeat(4, minmax(0, 1fr)) at 1201px and wider |
 
 ### Mobile-first approach
 
@@ -77,7 +77,7 @@ Use responsive prefixes with display, width, spacing, column, order, grid, and m
       Card 4
 
 ```html
-<div class="d-grid grid-template-cols-1 md:grid-template-cols-2 lg:grid-template-cols-4 gap-3 md:gap-6">
+<div class="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
   <article class="card card-body">Card 1</article>
   <article class="card card-body">Card 2</article>
   <article class="card card-body">Card 3</article>

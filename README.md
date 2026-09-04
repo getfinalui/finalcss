@@ -171,7 +171,7 @@ Examples:
 ```html
 <section class="py-10">
   <div class="container">
-    <div class="d-grid grid-template-cols-3 gap-5">
+    <div class="d-grid grid-cols-3 gap-5">
       <article class="card card-body mb-4">...</article>
     </div>
   </div>
@@ -183,7 +183,7 @@ Examples:
 Responsive utilities use a prefix before the class name:
 
 ```html
-<div class="d-grid grid-template-cols-3 max-lg:grid-template-cols-2 max-sm:grid-template-cols-1">
+<div class="d-grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
   ...
 </div>
 ```
@@ -217,7 +217,7 @@ Flexbox grid:
 CSS Grid utilities:
 
 ```html
-<div class="d-grid grid-template-cols-12 gap-5">
+<div class="d-grid grid-cols-12 gap-5">
   <aside class="grid-col-span-4">...</aside>
   <main class="grid-col-span-8">...</main>
 </div>

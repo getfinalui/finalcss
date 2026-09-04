@@ -58,7 +58,7 @@ This is useful for simpler websites and apps where you do not need separate tabl
 ```html
 <link href="css/final-lite.min.css" rel="stylesheet">
 
-<div class="d-grid grid-template-cols-2 max-sm:grid-template-cols-1 gap-4">
+<div class="d-grid grid-cols-2 max-sm:grid-cols-1 gap-4">
   <div class="p-4 rounded bg-blue-100">Desktop: two columns</div>
   <div class="p-4 rounded bg-green-100">Mobile: one column</div>
 </div>

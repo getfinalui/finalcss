@@ -1094,59 +1094,59 @@ progress {
     width: 100%;
   }
 }
-.grid-template-cols-1 {
+.grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-template-cols-2 {
+.grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-template-cols-3 {
+.grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-template-cols-4 {
+.grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-template-cols-5 {
+.grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.grid-template-cols-6 {
+.grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
-.grid-template-cols-7 {
+.grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
-.grid-template-cols-8 {
+.grid-cols-8 {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
-.grid-template-cols-9 {
+.grid-cols-9 {
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
-.grid-template-cols-10 {
+.grid-cols-10 {
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
-.grid-template-cols-11 {
+.grid-cols-11 {
   grid-template-columns: repeat(11, minmax(0, 1fr));
 }
 
-.grid-template-cols-12 {
+.grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.grid-template-cols-none {
+.grid-cols-none {
   grid-template-columns: none;
 }
 
-.grid-template-cols-subgrid {
+.grid-cols-subgrid {
   grid-template-columns: subgrid;
 }
 
@@ -1263,59 +1263,59 @@ progress {
 }
 
 @media (max-width: 640px) {
-  .max-sm\:grid-template-cols-1 {
+  .max-sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-2 {
+  .max-sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-3 {
+  .max-sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-4 {
+  .max-sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-5 {
+  .max-sm\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-6 {
+  .max-sm\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-7 {
+  .max-sm\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-8 {
+  .max-sm\:grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-9 {
+  .max-sm\:grid-cols-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-10 {
+  .max-sm\:grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-11 {
+  .max-sm\:grid-cols-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-12 {
+  .max-sm\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .max-sm\:grid-template-cols-none {
+  .max-sm\:grid-cols-none {
     grid-template-columns: none;
   }
 
-  .max-sm\:grid-template-cols-subgrid {
+  .max-sm\:grid-cols-subgrid {
     grid-template-columns: subgrid;
   }
 
@@ -1432,59 +1432,59 @@ progress {
   }
 }
 @media (min-width: 641px) {
-  .sm\:grid-template-cols-1 {
+  .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-2 {
+  .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-3 {
+  .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-4 {
+  .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-5 {
+  .sm\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-6 {
+  .sm\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-7 {
+  .sm\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-8 {
+  .sm\:grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-9 {
+  .sm\:grid-cols-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-10 {
+  .sm\:grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-11 {
+  .sm\:grid-cols-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-12 {
+  .sm\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .sm\:grid-template-cols-none {
+  .sm\:grid-cols-none {
     grid-template-columns: none;
   }
 
-  .sm\:grid-template-cols-subgrid {
+  .sm\:grid-cols-subgrid {
     grid-template-columns: subgrid;
   }
 
