@@ -200,20 +200,20 @@
     .#{$breakpoint}\:grid-col-span-12{grid-column:auto/span 12;}
     .#{$breakpoint}\:grid-col-span-full{grid-column: 1 / -1;}
 
-    .#{$breakpoint}\grid-row-auto{grid-row: auto;}
-    .#{$breakpoint}\grid-row-span-1{grid-row:auto/span 1;}
-    .#{$breakpoint}\grid-row-span-2{grid-row:auto/span 2;}
-    .#{$breakpoint}\grid-row-span-3{grid-row:auto/span 3;}
-    .#{$breakpoint}\grid-row-span-4{grid-row:auto/span 4;}
-    .#{$breakpoint}\grid-row-span-5{grid-row:auto/span 5;}
-    .#{$breakpoint}\grid-row-span-6{grid-row:auto/span 6;}
-    .#{$breakpoint}\grid-row-span-7{grid-row:auto/span 7;}
-    .#{$breakpoint}\grid-row-span-8{grid-row:auto/span 8;}
-    .#{$breakpoint}\grid-row-span-9{grid-row:auto/span 9;}
-    .#{$breakpoint}\grid-row-span-10{grid-row:auto/span 10;}
-    .#{$breakpoint}\grid-row-span-11{grid-row:auto/span 11;}
-    .#{$breakpoint}\grid-row-span-12{grid-row:auto/span 12;}
-    .#{$breakpoint}\grid-row-span-full{grid-row: 1 / -1;}
+    .#{$breakpoint}\:grid-row-auto{grid-row: auto;}
+    .#{$breakpoint}\:grid-row-span-1{grid-row:auto/span 1;}
+    .#{$breakpoint}\:grid-row-span-2{grid-row:auto/span 2;}
+    .#{$breakpoint}\:grid-row-span-3{grid-row:auto/span 3;}
+    .#{$breakpoint}\:grid-row-span-4{grid-row:auto/span 4;}
+    .#{$breakpoint}\:grid-row-span-5{grid-row:auto/span 5;}
+    .#{$breakpoint}\:grid-row-span-6{grid-row:auto/span 6;}
+    .#{$breakpoint}\:grid-row-span-7{grid-row:auto/span 7;}
+    .#{$breakpoint}\:grid-row-span-8{grid-row:auto/span 8;}
+    .#{$breakpoint}\:grid-row-span-9{grid-row:auto/span 9;}
+    .#{$breakpoint}\:grid-row-span-10{grid-row:auto/span 10;}
+    .#{$breakpoint}\:grid-row-span-11{grid-row:auto/span 11;}
+    .#{$breakpoint}\:grid-row-span-12{grid-row:auto/span 12;}
+    .#{$breakpoint}\:grid-row-span-full{grid-row: 1 / -1;}
 
     // end breakpoint
   }
