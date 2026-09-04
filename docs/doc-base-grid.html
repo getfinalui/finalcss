@@ -70,7 +70,7 @@
   <tr> <td class="text-blue">col-1 ... col-12</td> <td class="text-purple">12-column percentage widths from 8.33333333% to 100%</td> </tr>
   <tr> <td class="text-blue">row-cols-1 ... row-cols-12</td> <td class="text-purple">sets equal widths on direct children of a row</td> </tr>
   <tr> <td class="text-blue">d-grid</td> <td class="text-purple">display: grid</td> </tr>
-  <tr> <td class="text-blue">grid-template-cols-1 ... 12</td> <td class="text-purple">grid-template-columns: repeat(n, minmax(0, 1fr))</td> </tr>
+  <tr> <td class="text-blue">grid-cols-1 ... 12</td> <td class="text-purple">grid-template-columns: repeat(n, minmax(0, 1fr))</td> </tr>
   <tr> <td class="text-blue">grid-col-span-1 ... 12</td> <td class="text-purple">grid-column: auto / span n</td> </tr>
   <tr> <td class="text-blue">grid-col-span-full</td> <td class="text-purple">grid-column: 1 / -1</td> </tr>
 </table>
@@ -328,13 +328,13 @@
 
 <hr>
 <h4>CSS Grid</h4>
-<p>Use CSS Grid utilities when you need explicit grid tracks and column spans. Add <code>d-grid</code>, choose a template with <code>grid-template-cols-*</code>, then span children with <code>grid-col-span-*</code>. This is useful for dashboards, app shells, footers, galleries, and card layouts that need specific spans.</p>
+<p>Use CSS Grid utilities when you need explicit grid tracks and column spans. Add <code>d-grid</code>, choose a template with <code>grid-cols-*</code>, then span children with <code>grid-col-span-*</code>. This is useful for dashboards, app shells, footers, galleries, and card layouts that need specific spans.</p>
 
 <h5>Basic CSS Grid example</h5>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div class="d-grid grid-template-cols-1 lg:grid-template-cols-12 gap-5">
+    <div class="d-grid grid-cols-1 lg:grid-cols-12 gap-5">
       <aside class="lg:grid-col-span-4">
         <div class="p-4 rounded bg-orange-100">lg:grid-col-span-4</div>
       </aside>
@@ -349,7 +349,7 @@
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-1 lg:grid-template-cols-12 gap-5"&gt;
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-cols-1 lg:grid-cols-12 gap-5"&gt;
   &lt;aside class="lg:grid-col-span-4"&gt;Sidebar&lt;/aside&gt;
   &lt;main class="lg:grid-col-span-8"&gt;Main content&lt;/main&gt;
   &lt;footer class="grid-col-span-full"&gt;Footer&lt;/footer&gt;
@@ -363,7 +363,7 @@
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div class="d-grid grid-template-cols-1 md:grid-template-cols-2 lg:grid-template-cols-4 gap-5">
+    <div class="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       <article class="card card-body bg-blue-100 border-0">
         <h6>Revenue</h6>
         <p class="text-2xl">$24,200</p>
@@ -385,7 +385,7 @@
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-1 md:grid-template-cols-2 lg:grid-template-cols-4 gap-5"&gt;
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"&gt;
   &lt;article class="card card-body"&gt;Revenue&lt;/article&gt;
   &lt;article class="card card-body"&gt;Orders&lt;/article&gt;
   &lt;article class="card card-body"&gt;Pending&lt;/article&gt;
@@ -400,7 +400,7 @@
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div class="d-grid grid-template-cols-1 lg:grid-template-cols-6 gap-5">
+    <div class="d-grid grid-cols-1 lg:grid-cols-6 gap-5">
       <article class="card card-body lg:grid-col-span-4 bg-blue-100">Featured content</article>
       <article class="card card-body lg:grid-col-span-2 bg-green-100">Side card</article>
       <article class="card card-body lg:grid-col-span-2">Small card</article>
@@ -411,7 +411,7 @@
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-1 lg:grid-template-cols-6 gap-5"&gt;
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-cols-1 lg:grid-cols-6 gap-5"&gt;
   &lt;article class="lg:grid-col-span-4"&gt;Featured content&lt;/article&gt;
   &lt;article class="lg:grid-col-span-2"&gt;Side card&lt;/article&gt;
   &lt;article class="lg:grid-col-span-2"&gt;Small card&lt;/article&gt;
@@ -427,7 +427,7 @@
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
-    <div class="d-grid grid-template-cols-2 md:grid-template-cols-4 lg:grid-template-cols-6 gap-4">
+    <div class="d-grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
       <div class="grid-col-span-full lg:grid-col-auto">
         <h6>Final CSS</h6>
         <p class="text-secondary">Simple UI library.</p>
@@ -452,7 +452,7 @@
   </div>
   <figcaption>
 		<!-- code -->
-    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-template-cols-2 md:grid-template-cols-4 lg:grid-template-cols-6 gap-4"&gt;
+    <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="d-grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"&gt;
   &lt;div class="grid-col-span-full lg:grid-col-auto"&gt;Brand block&lt;/div&gt;
   &lt;nav class="d-flex flex-col gap-2"&gt;Product links&lt;/nav&gt;
   &lt;nav class="d-flex flex-col gap-2"&gt;Docs links&lt;/nav&gt;
