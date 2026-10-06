@@ -49,7 +49,7 @@ Or use the local compiled file:
 Basic example:
 
 ```html
-<main class="bg-base text-base py-10">
+<main class="bg-base text-base pt-10 pb-10">
   <div class="container">
     <div class="card card-body">
       <h1 class="text-4xl mb-3">Final CSS</h1>
@@ -162,14 +162,14 @@ Margins, paddings, sizes, and gaps use a simple 4px-based scale:
 
 Spacing utilities:
 
-- Margin: `m-*`, `mx-*`, `my-*`, `mt-*`, `mr-*`, `mb-*`, `ml-*`
-- Padding: `p-*`, `px-*`, `py-*`, `pt-*`, `pr-*`, `pb-*`, `pl-*`
+- Margin: `m-*`, `mt-*`, `mr-*`, `mb-*`, `ml-*`, plus `mx-auto`
+- Padding: `p-*`, `pt-*`, `pr-*`, `pb-*`, `pl-*`
 - Gap: `gap-*`, `gap-rows-*`, `gap-cols-*`
 
 Examples:
 
 ```html
-<section class="py-10">
+<section class="pt-10 pb-10">
   <div class="container">
     <div class="d-grid grid-cols-3 gap-5">
       <article class="card card-body mb-4">...</article>
@@ -286,7 +286,7 @@ Common component classes:
 
 - Buttons: `btn`, `btn-primary`, `btn-default`, `btn-outline`, `btn-invert`, `btn-neutral`, `btn-sm`, `btn-lg`, `btn-xl`, `btn-icon`
 - Cards: `card`, `card-body`, `card active`, `card selected`
-- Forms: `form-label`, `form-control`, `form-select`, `form-check`, `form-check-input`, `form-check-label`
+- Forms: `form-label`, `form-control`, `form-select`, `form-check`, `input-check`, `label-check`, `form-switch`, `input-switch`, `slider`, `label-switch`
 - Navigation: `nav`, `nav-row`, `nav-col`, `nav-underline`, `nav-link`, `item-nav`, `nav-compact`
 - Tables: `table`, `table-compact`, `table-bordered`, `table-borderless`, `table-striped`, `table-hover`, `table-responsive`
 - Feedback and UI: `alert`, `badge`, `avatar`, `dialog`, `tabs`, `dropdown`, `tag`, `chip`, `progress`

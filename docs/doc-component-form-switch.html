@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Final CSS switch toggle component documentation">
+  <meta name="author" content="Vosidiy M">
+
+  <title>Switch Toggle - Final CSS</title>
+
+  <!-- Site script (only for documentation site) -->
+  <script src="/site/script.js"></script>
+
+  <!-- FinalCSS -->
+  <link href="/css/final.css" rel="stylesheet" type="text/css" />
+
+  <!-- Template parts (only for documentation site) -->
+  <script src="/site/partials.js"></script>
+
+  <!-- Syntax highlight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<body class="bg-base">
+
+<header-component></header-component>
+
+<div class="container">
+<div class="d-flex flex-wrap">
+<aside class="w-full lg:w-20%">
+  <sidebar-component></sidebar-component>
+</aside>
+<main class="lg:w-80% pl-0 lg:pl-10 pt-10">
+
+  <h6 class="mb-3 text-secondary">Documentation</h6>
+  <h1 class="text-4xl mt-5 mb-5">Switch Toggle</h1>
+  <hr>
+  <article class="article-wrap mb-16">
+    <p>The <code>form-switch</code> component turns a native checkbox into a compact on/off control. It is CSS-only and supports unchecked, checked, and disabled states. The text label can appear before or after the switch.</p>
+    <ul class="list-bullet">
+      <li>When to use it: For settings that take effect as an on/off choice, such as enabling notifications, publishing a feature, or changing a preference.</li>
+      <li>Don't use for: Selecting one item from several choices (use radio buttons), accepting terms (use a checkbox), or actions that should happen only after a separate submit step.</li>
+      <li>Dark mode: Uses theme color variables in the full <code>final.css</code> build</li>
+      <li>SCSS file: <code>/scss/components/<b>_form-switch.scss</b></code></li>
+      <li>JavaScript: Not required</li>
+    </ul>
+
+    <hr>
+    <h4>Component classes</h4>
+    <table class="table table-compact table-hover">
+      <tr class="bg-secondary"><th>Class</th><th>Purpose</th></tr>
+      <tr><td class="text-blue">form-switch</td><td>Label wrapper and clickable switch container</td></tr>
+      <tr><td class="text-blue">input-switch</td><td>Native checkbox that stores the on/off state</td></tr>
+      <tr><td class="text-blue">slider</td><td>Visible track and thumb</td></tr>
+      <tr><td class="text-blue">label-switch</td><td>Optional text shown before or after the switch</td></tr>
+    </table>
+    <p class="text-secondary">The <code>.slider</code> element must immediately follow the <code>.input-switch</code> checkbox. Checked and focus styles use the adjacent-sibling selector <code>input + .slider</code>. The <code>.label-switch</code> may be placed before the input or after the slider.</p>
+
+    <hr>
+    <h4>Basic examples</h4>
+    <figure class="rounded bg-lower border">
+      <div class="card-body">
+        <label class="form-switch mr-6">
+          <span class="label-switch">Toggle me</span>
+          <input class="input-switch" type="checkbox">
+          <span class="slider"></span>
+        </label>
+
+        <label class="form-switch mt-5 mb-5">
+          <input class="input-switch" type="checkbox">
+          <span class="slider"></span>
+          <span class="label-switch">Turn on / off</span>
+        </label>
+      </div>
+      <figcaption>
+        <pre class="m-0"><code class="rounded-bottom language-html">&lt;label class="form-switch"&gt;
+  &lt;span class="label-switch"&gt;Toggle me&lt;/span&gt;
+  &lt;input class="input-switch" type="checkbox"&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="form-switch mt-5 mb-5"&gt;
+  &lt;input class="input-switch" type="checkbox"&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+  &lt;span class="label-switch"&gt;Turn on / off&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+      </figcaption>
+    </figure>
+
+    <hr>
+    <h4>Checked and disabled states</h4>
+    <figure class="rounded bg-lower border">
+      <div class="card-body d-flex flex-wrap gap-6">
+        <label class="form-switch">
+          <input class="input-switch" type="checkbox">
+          <span class="slider"></span>
+          <span class="label-switch">Unchecked</span>
+        </label>
+
+        <label class="form-switch">
+          <input class="input-switch" type="checkbox" checked>
+          <span class="slider"></span>
+          <span class="label-switch">Checked</span>
+        </label>
+
+        <label class="form-switch">
+          <input class="input-switch" type="checkbox" disabled>
+          <span class="slider"></span>
+          <span class="label-switch">Disabled</span>
+        </label>
+      </div>
+      <figcaption>
+        <pre class="m-0"><code class="rounded-bottom language-html">&lt;label class="form-switch"&gt;
+  &lt;input class="input-switch" type="checkbox"&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+  &lt;span class="label-switch"&gt;Unchecked&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="form-switch"&gt;
+  &lt;input class="input-switch" type="checkbox" checked&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+  &lt;span class="label-switch"&gt;Checked&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="form-switch"&gt;
+  &lt;input class="input-switch" type="checkbox" disabled&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+  &lt;span class="label-switch"&gt;Disabled&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+      </figcaption>
+    </figure>
+    <p class="text-secondary">For a disabled switch, place <code>.label-switch</code> after <code>.input-switch</code> so the current sibling selector can apply the disabled label opacity.</p>
+
+    <hr>
+    <h4>Customize the active color</h4>
+    <p>The checked track and focus outline use <code>--primary-500</code>. Override that variable on an individual switch when you need a one-off color.</p>
+    <figure class="rounded bg-lower border">
+      <div class="card-body">
+        <label class="form-switch" style="--primary-500: #0d923e;">
+          <input class="input-switch" type="checkbox" checked>
+          <span class="slider"></span>
+          <span class="label-switch">Green switch</span>
+        </label>
+      </div>
+      <figcaption>
+        <pre class="m-0"><code class="rounded-bottom language-html">&lt;label class="form-switch" style="--primary-500: #0d923e;"&gt;
+  &lt;input class="input-switch" type="checkbox" checked&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+  &lt;span class="label-switch"&gt;Green switch&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+      </figcaption>
+    </figure>
+
+    <h4>SCSS customization</h4>
+    <p>Edit <code>scss/components/_form-switch.scss</code> to change the component globally.</p>
+    <ul class="list-bullet">
+      <li>Track: <code>50px × 28px</code>, with a <code>28px</code> radius and <code>0.3s</code> transition.</li>
+      <li>Thumb: <code>22px × 22px</code>, positioned <code>3px</code> from the left and bottom.</li>
+      <li>Checked movement: <code>translateX(22px)</code>.</li>
+      <li>Unchecked track: <code>rgba(150, 150, 150, .4)</code>.</li>
+      <li>Checked track and focus outline: <code>var(--primary-500)</code>.</li>
+      <li>Thumb: white with a subtle shadow and <code>0.2s</code> transition.</li>
+    </ul>
+    <p class="text-secondary">The current <code>.input-switch</code> rule uses <code>visibility: hidden</code> together with zero dimensions. This documentation describes that behavior as implemented; projects that require direct keyboard focus should use a focusable visually-hidden technique before relying on the focus-visible rule.</p>
+    <p>After changing the SCSS, compile <code>scss/final.scss</code> and <code>scss/final-lite.scss</code> with Dart Sass, Prepros, or CodeKit to update the distributed CSS files.</p>
+  </article>
+</main>
+</div>
+</div>
+
+<footer-component></footer-component>
+
+</body>
+</html>

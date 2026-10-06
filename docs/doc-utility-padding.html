@@ -44,10 +44,10 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Padding</h1>
+<h1 class="text-4xl mt-5 mb-5">Padding</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p>Padding utilities provide precise control over element inner spacing by applying padding on all sides or specific sides (top, bottom, left, right). These classes are essential for creating breathing room within elements, improving readability, and maintaining consistent internal spacing throughout your design. Use them to add space inside buttons, cards, containers, or any element that needs internal spacing.</p>
+<p>Padding utilities provide precise control over element inner spacing by applying padding on all sides or one side at a time (top, bottom, left, or right). These classes are essential for creating breathing room within elements, improving readability, and maintaining consistent internal spacing throughout your design. Use them to add space inside buttons, cards, containers, or any element that needs internal spacing.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
@@ -99,30 +99,6 @@
 <br><br>
 
 <div class="row gap-8 row-cols-2">
-  <aside> 
-    <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
-      <tr> <td class="text-blue">py-unset</td> <td class="text-purple">padding-top: unset; padding-bottom: unset</td> </tr>
-      <tr> <td class="text-blue">py-initial</td> <td class="text-purple">padding-top: initial; padding-bottom: initial</td> </tr>
-      <tr> <td class="text-blue">py-0</td> <td class="text-purple">padding-top: 0; padding-bottom: 0</td> </tr>
-      <tr> <td class="text-blue">py-1</td> <td class="text-purple">padding-top: 4px; padding-bottom: 4px</td> </tr>
-      <tr> <td class="text-blue">py-2</td> <td class="text-purple">padding-top: 8px; padding-bottom: 8px</td> </tr>
-      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
-      <tr> <td class="text-blue">py-100</td> <td class="text-purple">padding-top: 400px; padding-bottom: 400px</td> </tr>
-    </table>
-  </aside>
-  <aside>
-    <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
-      <tr> <td class="text-blue">px-unset</td> <td class="text-purple">padding-left: unset; padding-right: unset</td> </tr>
-      <tr> <td class="text-blue">px-initial</td> <td class="text-purple">padding-left: initial; padding-right: initial</td> </tr>
-      <tr> <td class="text-blue">px-0</td> <td class="text-purple">padding-left: 0; padding-right: 0</td> </tr>
-      <tr> <td class="text-blue">px-1</td> <td class="text-purple">padding-left: 4px; padding-right: 4px</td> </tr>
-      <tr> <td class="text-blue">px-2</td> <td class="text-purple">padding-left: 8px; padding-right: 8px</td> </tr>
-      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
-      <tr> <td class="text-blue">px-100</td> <td class="text-purple">padding-left: 400px; padding-right: 400px</td> </tr>
-    </table>
-  </aside>
   <aside>
     <table class="table table-compact table-hover">
       <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
@@ -181,7 +157,7 @@
     <div class="bg-neutral-200 p-4">
       <div class="bg-primary-100 border border-primary p-5">Padding all sides: p-5</div>
       <div class="bg-primary-100 border border-primary pt-8 mt-3">Padding top only: pt-8</div>
-      <div class="bg-primary-100 border border-primary px-10 mt-3">Horizontal padding: px-10</div>
+      <div class="bg-primary-100 border border-primary pl-10 pr-10 mt-3">Left and right padding: pl-10 pr-10</div>
     </div>
     <!-- example .//end -->
   </div>
@@ -189,14 +165,14 @@
 		<!-- code -->
     <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="p-5"&gt;Padding all sides: p-5&lt;/div&gt;
 &lt;div class="pt-8"&gt;Padding top only: pt-8&lt;/div&gt;
-&lt;div class="px-10"&gt;Horizontal padding: px-10&lt;/div&gt;</code></pre>
+&lt;div class="pl-10 pr-10"&gt;Left and right padding: pl-10 pr-10&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
 </figure>
 
 
 <h5>Examples</h5>
-<p class="text-secondary">Padding utilities work seamlessly with responsive breakpoint prefixes, allowing you to create adaptive internal spacing that adjusts based on viewport size. Use classes like <code>lg:p-8</code> to apply padding only on large screens, or <code>max-sm:py-4</code> to apply vertical padding only on small screens and below. This is particularly useful for buttons, cards, and containers that need different spacing across devices.</p>
+<p class="text-secondary">Padding utilities work seamlessly with responsive breakpoint prefixes, allowing you to create adaptive internal spacing that adjusts based on viewport size. Use classes like <code>lg:p-8</code> to apply padding only on large screens, or combine <code>max-sm:pt-4</code> and <code>max-sm:pb-4</code> to apply vertical padding only on small screens and below. This is particularly useful for buttons, cards, and containers that need different spacing across devices.</p>
 <figure class="rounded border shadow">
   <div class="card-body">
     <!-- example -->
@@ -204,8 +180,8 @@
       <button class="bg-blue-500 text-white rounded p-2 lg:p-6">
         Button with responsive padding: p-2 on mobile, p-6 on large screens
       </button>
-      <div class="bg-green-100 border border-green-500 mt-3 py-3 max-md:py-6">
-        Card with vertical padding: py-3 normally, py-6 on medium screens and below
+      <div class="bg-green-100 border border-green-500 mt-3 pt-3 pb-3 max-md:pt-6 max-md:pb-6">
+        Card with top and bottom padding: pt-3 pb-3 normally, pt-6 pb-6 on medium screens and below
       </div>
       <div class="bg-orange-100 border border-orange-500 mt-3 pl-2 md:pl-10">
         Content with left padding: pl-2 on mobile, pl-10 on medium screens and up
@@ -219,8 +195,8 @@
   Button with responsive padding
 &lt;/button&gt;
 
-&lt;div class="py-3 max-md:py-6"&gt;
-  Card with vertical padding
+&lt;div class="pt-3 pb-3 max-md:pt-6 max-md:pb-6"&gt;
+  Card with top and bottom padding
 &lt;/div&gt;
 
 &lt;div class="pl-2 md:pl-10"&gt;

@@ -67,8 +67,8 @@ Circular and pill-shaped elements are commonly used for avatars, badges, and but
   <div class="rounded-circle bg-primary" style="width: 80px; height: 80px;">
     Avatar
   </div>
-  <button class="rounded-full bg-blue text-white px-6 py-2">Pill Button</button>
-  <span class="rounded-full bg-red text-white px-3 py-1">Badge</span>
+  <button class="rounded-full bg-blue text-white pl-6 pr-6 pt-2 pb-2">Pill Button</button>
+  <span class="rounded-full bg-red text-white pl-3 pr-3 pt-1 pb-1">Badge</span>
 </div>
 ```
 

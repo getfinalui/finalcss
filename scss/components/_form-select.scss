@@ -15,7 +15,7 @@
   background-position: right 0.6rem center;
   background-size: 16px 12px;
   border: 1px solid var(--neutral-300);
-  border-radius: var(--border-radius-base); // from: _base-settings.scss or _variables-root.scss
+  border-radius: var(--border-radius-md); // from: _variables-root.scss
 
   &:focus {
       border-color: var(--primary-500);

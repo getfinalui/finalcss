@@ -29,7 +29,7 @@ class HeaderComponent extends HTMLElement {
     </div>
 </dialog>
 	
-<header class="bg-neutral-0 py-2 border-bottom sticky top-0 z-10">
+<header class="bg-neutral-0 pt-2 pb-2 border-bottom sticky top-0 z-10">
 	<div class="container">
 		<div class="d-flex flex-column lg:flex-row align-items-center">
 			<div>
@@ -99,7 +99,7 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-base-theme.html">Theme & colors</a></li>
             <li><a class="nav-link" href="/docs/doc-base-breakpoints.html">Breakpoints</a></li>
             <li><a class="nav-link" href="/docs/doc-base-grid.html">Grid system</a></li>
-            <li class="px-2">
+            <li class="pl-2 pr-2">
               <hr>
               <h6 class="mb-2"> Components </h6>
             </li>
@@ -111,6 +111,7 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-component-dialog.html">Dialog</a></li>
             <li><a class="nav-link" href="/docs/doc-component-dropdown.html">Dropdown</a></li>
             <li><a class="nav-link" href="/docs/doc-component-form-check-radio.html">Check & Radio</a></li>
+            <li><a class="nav-link" href="/docs/doc-component-form-switch.html">Switch toggle</a></li>
             <li><a class="nav-link" href="/docs/doc-component-form-input.html">Input field</a></li>
             <li><a class="nav-link" href="/docs/doc-component-form-select.html">Select</a></li>
             <li><a class="nav-link" href="/docs/doc-component-nav.html">Nav menu</a></li>
@@ -120,7 +121,7 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-component-toast.html">Toast</a></li>
             <li><a class="nav-link" href="/docs/doc-component-tooltip.html">Tooltip</a></li>
             <li><a class="nav-link" href="/docs/doc-component-tag-chips.html">Tag / chips</a></li>
-            <li class="px-2">
+            <li class="pl-2 pr-2">
               <hr>
               <h6 class="mb-2"> Utiltiy classes </h6>
             </li>
@@ -133,11 +134,11 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-utility-position.html"> Positions </a></li>
             <li><a class="nav-link" href="/docs/doc-utility-columns.html">Columns</a></li>
             <li><a class="nav-link" href="/docs/doc-utility-overflow.html"> Overflow </a></li>
-            <li> <hr class="my-1"> </li>
+            <li> <hr class="mt-1 mb-1"> </li>
             <li><a class="nav-link" href="/docs/doc-utility-text-color.html"> Text color </a></li>
             <li><a class="nav-link" href="/docs/doc-utility-text-size.html"> Text size </a></li>
             <li><a class="nav-link" href="/docs/doc-utility-text-style.html"> Text style </a></li>
-            <li> <hr class="my-1"> </li>
+            <li> <hr class="mt-1 mb-1"> </li>
             <li><a class="nav-link" href="/docs/doc-utility-background.html">Background</a></li>
             <li><a class="nav-link" href="/docs/doc-utility-border-style.html">Border style / color</a></li>
             <li><a class="nav-link" href="/docs/doc-utility-border-radius.html">Border radius</a></li>
@@ -145,7 +146,7 @@ class SidebarComponent extends HTMLElement {
             <li><a class="nav-link" href="/docs/doc-utility-opacity.html">Opacity</a></li>
             <li><a class="nav-link" href="/docs/doc-utility-gradient.html">Gradient</a></li>
             <li><a class="nav-link" href="/docs/doc-utility-object-fit.html">Object fit</a></li>
-            <li> <hr class="my-1"> </li>
+            <li> <hr class="mt-1 mb-1"> </li>
             <li><a class="nav-link" href="/docs/doc-utility-list.html">List</a></li>
             <li><a class="nav-link" href="/docs/doc-utility-order.html"> Order </a></li>
             <li><a class="nav-link" href="/docs/doc-utility-ratio.html"> Ratio </a></li>
@@ -206,9 +207,9 @@ class BottomComponent extends HTMLElement {
   }
 </style>
 
-<section class="py-10 bg-colorful border-top text-lg">
+<section class="pt-10 pb-10 bg-colorful border-top text-lg">
     <div class="container article text-center" style="max-width: 920px">
-      <h2 class="my-4">Your support matters!</h2>
+      <h2 class="mt-4 mb-4">Your support matters!</h2>
       <p class="mb-5">
         This is new project requires regular updates like adding new utility classes and components. <br> Your support motivates to improve this project continiously. 
       </p> 
@@ -224,7 +225,7 @@ class BottomComponent extends HTMLElement {
     </div> <!-- container end -->
 </section>
 
-<footer class="bg-secondary border-top py-6">
+<footer class="bg-secondary border-top pt-6 pb-6">
   <div class="container">
     <section class="d-flex align-items-center flex-col lg:flex-row lg:justify-content-between">
         <p class="lg:mb-0 mb-3 text-center lg:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  
@@ -260,7 +261,7 @@ class FooterComponent extends HTMLElement {
   connectedCallback() {
     const template = document.createElement('template');
     template.innerHTML = `
-<footer class="bg-secondary border-top py-6">
+<footer class="bg-secondary border-top pt-6 pb-6">
   <div class="container">
     <section class="d-flex align-items-center flex-col lg:flex-row lg:justify-content-between">
         <p class="lg:mb-0 mb-3 text-center lg:text-left"> © <b>Final CSS</b> - a library based on Final UI - Design System  </p>  

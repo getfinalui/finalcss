@@ -4,7 +4,7 @@
 
 ---
 
-Margin utilities provide precise control over element spacing by applying margin on all sides or specific sides (top, bottom, left, right). These classes are essential for creating consistent layouts and maintaining proper visual hierarchy throughout your design. Use them to add space around elements, center content, or reset default margins.
+Margin utilities provide precise control over element spacing by applying margin on all sides or one side at a time (top, bottom, left, or right). These classes are essential for creating consistent layouts and maintaining proper visual hierarchy throughout your design. Use them to add space around elements, center fixed-width content with `mx-auto`, or reset default margins.
 
 Responsive: ✅ Yes
 
@@ -59,25 +59,7 @@ Here are representative examples of these classes:
 
 | Class | Styles |
 | --- | --- |
-| my-unset | margin-top: unset; margin-bottom: unset |
-| my-initial | margin-top: initial; margin-bottom: initial |
-| my-auto | margin-top: auto; margin-bottom: auto |
-| my-0 | margin-top: 0; margin-bottom: 0 |
-| my-1 | margin-top: 4px; margin-bottom: 4px |
-| my-2 | margin-top: 8px; margin-bottom: 8px |
-| ... | ... |
-| my-100 | margin-top: 400px; margin-bottom: 400px |
-
-| Class | Styles |
-| --- | --- |
-| mx-unset | margin-left: unset; margin-right: unset |
-| mx-initial | margin-left: initial; margin-right: initial |
 | mx-auto | margin-left: auto; margin-right: auto |
-| mx-0 | margin-left: 0; margin-right: 0 |
-| mx-1 | margin-left: 4px; margin-right: 4px |
-| mx-2 | margin-left: 8px; margin-right: 8px |
-| ... | ... |
-| mx-100 | margin-left: 400px; margin-right: 400px |
 
 | Class | Styles |
 | --- | --- |
@@ -131,7 +113,7 @@ Here are representative examples of these classes:
 
 ```html
 <div class="m-5">Margin all sides: m-5</div>
-<div class="mt-8">Margin top only: mt-8</div>
+<div class="mt-8 mb-1">Margin top and bottom: mt-8 mb-1</div>
 <div class="mx-auto" style="width: 200px;">Centered with mx-auto</div>
 ```
 
@@ -141,7 +123,7 @@ Margin utilities work seamlessly with responsive breakpoint prefixes. Use classe
 
         Responsive margin: m-2 on mobile, m-10 on large screens
 
-        Vertical margin: my-4 normally, my-8 on medium screens and below
+        Top and bottom margin: mt-4 mb-4 normally, mt-8 mb-8 on medium screens and below
 
         Left margin: ml-0 on mobile, ml-12 on medium screens and up
 
@@ -150,8 +132,8 @@ Margin utilities work seamlessly with responsive breakpoint prefixes. Use classe
   Responsive margin: m-2 on mobile, m-10 on large screens
 </div>
 
-<div class="my-4 max-md:my-8">
-  Vertical margin: my-4 normally, my-8 on medium screens and below
+<div class="mt-4 mb-4 max-md:mt-8 max-md:mb-8">
+  Top and bottom margin: mt-4 mb-4 normally, mt-8 mb-8 on medium screens and below
 </div>
 
 <div class="ml-0 md:ml-12">

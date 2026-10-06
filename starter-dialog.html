@@ -40,7 +40,7 @@
 <body class="bg-base">
 
 
-<header class="bg-base py-2 border-b">
+<header class="bg-base pt-2 pb-2 border-b">
 	<div class="container"  style="max-width: 920px;">
 		<div class="d-flex flex-column flex-md-row align-items-center">
 			<div class="mb-3 lg:mb-0">
@@ -62,7 +62,7 @@
 	</div>
 </header>
 
-<section class="py-10 bg-lower min-h-100vh">
+<section class="pt-10 pb-10 bg-lower min-h-100vh">
   <div class="container" style="max-width: 920px;">
     <h3 class="mb-2">Dialog examples</h3>
     <p class="text-secondary">Example HTML native dialog windows</p>
@@ -95,7 +95,7 @@
 
     <h6>How to trigger via JS</h6>
 
-    <pre class="border p-2 bg-orange-100 my-2"><code class="bg-transparent">&lt;button class="btn btn-default" <b>onclick="open_dialog('dialog_basic')"></b>Open dialog &lt;/button &gt;
+    <pre class="border p-2 bg-orange-100 mt-2 mb-2"><code class="bg-transparent">&lt;button class="btn btn-default" <b>onclick="open_dialog('dialog_basic')"></b>Open dialog &lt;/button &gt;
 
 function open_dialog(dialog_id){
   document.getElementById(dialog_id).showModal();
@@ -196,26 +196,26 @@ document.getElementById('dialog_long').close()
         
         <div class="d-flex flex-wrap gap-2">
           <label class="form-check mb-2 bg-neutral-200 p-2 flex-1 rounded  border hover:border-primary ">
-            <input type="radio" name="option_plan" class="form-check-input">
-            <span class="form-check-label">Free plan</span>
+            <input type="radio" name="option_plan" class="input-check">
+            <span class="label-check">Free plan</span>
           </label>
   
           <label class="form-check mb-2 bg-neutral-200 p-2 flex-1  rounded border  hover:border-primary ">
-            <input type="radio" name="option_plan" class="form-check-input">
-            <span class="form-check-label">Premium plan</span>
+            <input type="radio" name="option_plan" class="input-check">
+            <span class="label-check">Premium plan</span>
           </label>
   
           <label class="form-check mb-2 bg-neutral-200 p-2 flex-1 rounded border  hover:border-primary ">
-            <input type="radio" name="option_plan" class="form-check-input">
-            <span class="form-check-label">Best plan</span>
+            <input type="radio" name="option_plan" class="input-check">
+            <span class="label-check">Best plan</span>
           </label>
         </div>
       </div>
       <hr>
 
       <label class="form-check mb-4">
-        <input type="checkbox" class="form-check-input">
-        <span class="form-check-label">I agree with all terms and condition</span>
+        <input type="checkbox" class="input-check">
+        <span class="label-check">I agree with all terms and condition</span>
       </label>
       <div class="pt-3 d-flex align-items-center gap-2">
         <button class="btn btn-primary"> Submit form </button>
@@ -254,7 +254,7 @@ document.getElementById('dialog_long').close()
   </button>
    <div class="dialog-body text-center">
 
-      <span class="d-inline-block my-2">
+      <span class="d-inline-block mt-2 mb-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
       </span>
 
@@ -277,7 +277,7 @@ document.getElementById('dialog_long').close()
   </button>
    <div class="dialog-body text-center">
 
-    <span class="my-2 w-16 h-16 text-green bg-green-200 rounded-circle d-inline-flex flex-center flex-shrink-0">
+    <span class="mt-2 mb-2 w-16 h-16 text-green bg-green-200 rounded-circle d-inline-flex flex-center flex-shrink-0">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-1"><path d="M20 6 9 17l-5-5"/></svg>
       </svg>
     </span>

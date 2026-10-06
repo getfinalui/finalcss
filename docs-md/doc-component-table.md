@@ -31,7 +31,7 @@ The default table includes basic row dividers and highlights the table header (`
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th> <input class="form-check-input" type="checkbox" value=""> </th>
+					<th> <input class="input-check" type="checkbox" value=""> </th>
 					<th>Transaction ID</th>
 					<th>Status</th>
 					<th class="text-right">Amount</th>
@@ -40,21 +40,21 @@ The default table includes basic row dividers and highlights the table header (`
 			</thead>
 			<tbody>
 				<tr>
-					<td> <input class="form-check-input" type="checkbox" value=""> </td>
+					<td> <input class="input-check" type="checkbox" value=""> </td>
 					<td> 8362-123 </td>
 					<td> <b role="status" class="badge badge-green"> ✓ Completed</b> </td>
 					<td class="text-right"> $980.00 </td>
 					<td class="text-right"> ... </td> <!-- Action button omitted for brevity -->
 				</tr>
 				<tr>
-					<td> <input class="form-check-input" type="checkbox" checked value=""> </td> <!-- This row will be highlighted -->
+					<td> <input class="input-check" type="checkbox" checked value=""> </td> <!-- This row will be highlighted -->
 					<td> 1982-123 </td>
 					<td> <b role="status" class="badge badge-green"> ✓ Completed</b> </td>
 					<td class="text-right"> $980.00 </td>
 					<td class="text-right"> ... </td> <!-- Action button omitted for brevity -->
 				</tr>
 				<tr>
-					<td> <input class="form-check-input" type="checkbox" value=""> </td>
+					<td> <input class="input-check" type="checkbox" value=""> </td>
 					<td> 8362-988 </td>
 					<td> <b role="status" class="badge badge-red"> ✖ Cancelled</b> </td>
 					<td class="text-right"> $1,980.00 </td>

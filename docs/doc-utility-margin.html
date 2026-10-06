@@ -44,10 +44,10 @@
 <!-- === start of documentation === -->
 
 <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Margin</h1>
+<h1 class="text-4xl mt-5 mb-5">Margin</h1>
 <hr>
 <article class="article-wrap mb-16">
-<p>Margin utilities provide precise control over element spacing by applying margin on all sides or specific sides (top, bottom, left, right). These classes are essential for creating consistent layouts and maintaining proper visual hierarchy throughout your design. Use them to add space around elements, center content, or reset default margins.</p>
+<p>Margin utilities provide precise control over element spacing by applying margin on all sides or one side at a time (top, bottom, left, or right). These classes are essential for creating consistent layouts and maintaining proper visual hierarchy throughout your design. Use them to add space around elements, center fixed-width content with <code>mx-auto</code>, or reset default margins.</p>
 <p>Responsive: ✅ Yes <br> 
     <span class="text-secondary">lg:classname, md:classname, sm:classname, <br>
     max-lg:classname, max-md:classname, max-sm:classname</span>
@@ -100,30 +100,10 @@
 <br><br>
 
 <div class="row gap-8 row-cols-2">
-  <aside> 
-    <table class="table table-compact table-hover">
-      <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
-      <tr> <td class="text-blue">my-unset</td> <td class="text-purple">margin-top: unset; margin-bottom: unset</td> </tr>
-      <tr> <td class="text-blue">my-initial</td> <td class="text-purple">margin-top: initial; margin-bottom: initial</td> </tr>
-      <tr> <td class="text-blue">my-auto</td> <td class="text-purple">margin-top: auto; margin-bottom: auto</td> </tr>
-      <tr> <td class="text-blue">my-0</td> <td class="text-purple">margin-top: 0; margin-bottom: 0</td> </tr>
-      <tr> <td class="text-blue">my-1</td> <td class="text-purple">margin-top: 4px; margin-bottom: 4px</td> </tr>
-      <tr> <td class="text-blue">my-2</td> <td class="text-purple">margin-top: 8px; margin-bottom: 8px</td> </tr>
-      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
-      <tr> <td class="text-blue">my-100</td> <td class="text-purple">margin-top: 400px; margin-bottom: 400px</td> </tr>
-    </table>
-  </aside>
   <aside>
     <table class="table table-compact table-hover">
       <tr class="bg-secondary"> <th>Class</th> <td>Styles</td> </tr>
-      <tr> <td class="text-blue">mx-unset</td> <td class="text-purple">margin-left: unset; margin-right: unset</td> </tr>
-      <tr> <td class="text-blue">mx-initial</td> <td class="text-purple">margin-left: initial; margin-right: initial</td> </tr>
       <tr> <td class="text-blue">mx-auto</td> <td class="text-purple">margin-left: auto; margin-right: auto</td> </tr>
-      <tr> <td class="text-blue">mx-0</td> <td class="text-purple">margin-left: 0; margin-right: 0</td> </tr>
-      <tr> <td class="text-blue">mx-1</td> <td class="text-purple">margin-left: 4px; margin-right: 4px</td> </tr>
-      <tr> <td class="text-blue">mx-2</td> <td class="text-purple">margin-left: 8px; margin-right: 8px</td> </tr>
-      <tr> <td class="text-blue">...</td> <td class="text-purple">...</td> </tr>
-      <tr> <td class="text-blue">mx-100</td> <td class="text-purple">margin-left: 400px; margin-right: 400px</td> </tr>
     </table>
   </aside>
   <aside>
@@ -193,7 +173,7 @@
   <figcaption>
 		<!-- code -->
     <pre class="m-0"><code class="rounded-bottom language-html">&lt;div class="m-5"&gt;Margin all sides: m-5&lt;/div&gt;
-&lt;div class="mt-8"&gt;Margin top only: mt-8&lt;/div&gt;
+&lt;div class="mt-8 mb-1"&gt;Margin top and bottom: mt-8 mb-1&lt;/div&gt;
 &lt;div class="mx-auto" style="width: 200px;"&gt;Centered with mx-auto&lt;/div&gt;</code></pre>
 		<!-- code -->
 	</figcaption>
@@ -208,8 +188,8 @@
       <div class="bg-green-100 p-3 m-2 lg:m-10">
         Responsive margin: m-2 on mobile, m-10 on large screens
       </div>
-      <div class="bg-blue-100 p-3 my-4 max-md:my-8">
-        Vertical margin: my-4 normally, my-8 on medium screens and below
+      <div class="bg-blue-100 p-3 mt-4 mb-4 max-md:mt-8 max-md:mb-8">
+        Top and bottom margin: mt-4 mb-4 normally, mt-8 mb-8 on medium screens and below
       </div>
       <div class="bg-orange-100 p-3 ml-0 md:ml-12">
         Left margin: ml-0 on mobile, ml-12 on medium screens and up
@@ -222,8 +202,8 @@
   Responsive margin: m-2 on mobile, m-10 on large screens
 &lt;/div&gt;
 
-&lt;div class="my-4 max-md:my-8"&gt;
-  Vertical margin: my-4 normally, my-8 on medium screens and below
+&lt;div class="mt-4 mb-4 max-md:mt-8 max-md:mb-8"&gt;
+  Top and bottom margin: mt-4 mb-4 normally, mt-8 mb-8 on medium screens and below
 &lt;/div&gt;
 
 &lt;div class="ml-0 md:ml-12"&gt;

@@ -15,14 +15,61 @@ $breakpoints: (
 
 // Base
 @import "theme";
-@import "variables-root";
+
+
+// Final-lite  does not import _variables_root.scss
+// Here are its own variables generator lite version
+
+:root{
+
+  @each $color, $shades in $colors_list {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $color, $shades in $colors_list {
+    --text-color-#{$color}: var(--#{$color}-600);
+  }
+
+  --alpha-1: rgba(0,20,60,.06);
+  --alpha-2: rgba(0,20,60,.10);
+  --alpha-3: rgba(0,20,60,.15);
+  --bg-color-base: #fff;
+  --bg-color-secondary: var(--neutral-100);
+  --border-color-default: var(--neutral-200);
+  --text-color-base: #000;
+  --text-color-secondary: var(--neutral-500);
+  --text-color-muted: var(--neutral-400);
+
+  // Border radius
+  --border-radius-sm:  6px;
+  --border-radius-md:  10px;
+  --border-radius-lg:  20px;
+  --border-radius-xl:  30px;
+  --border-radius-base:  20px;
+
+  // Typography
+  // applied to _reset.scss
+  --font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif;
+
+  --font-size-default:  15px;
+  --font-size-sm:       0.9rem;
+
+  --line-height-base:  1.4;
+  --line-height-sm:    1.25;
+  --line-height-lg:    1.8;
+
+}
+
+
 @import "reset";
 @import "grid-system";
 
 // Components
 @import "components/avatar"; 
 @import "components/alert";
-@import "components/button";
+@import "components/button-lite";
 @import "components/card";
 @import "components/dialog";
 @import "components/table";
@@ -30,6 +77,7 @@ $breakpoints: (
 @import "components/form-input";
 @import "components/form-select";
 @import "components/form-check-radio";
+@import "components/form-switch";
 @import "components/badge";
 @import "components/nav";
 @import "components/tabs"; 

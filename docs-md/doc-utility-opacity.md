@@ -73,15 +73,15 @@ Hover opacity effects create smooth interactive feedback. Use `.hover:opacity-{v
     Hover me (opacity-50)
 
 ```html
-<button class="bg-primary text-white px-6 py-3 rounded hover:opacity-80">
+<button class="bg-primary text-white pl-6 pr-6 pt-3 pb-3 rounded hover:opacity-80">
   Hover me (opacity-80)
 </button>
 
-<button class="bg-blue text-white px-6 py-3 rounded hover:opacity-60">
+<button class="bg-blue text-white pl-6 pr-6 pt-3 pb-3 rounded hover:opacity-60">
   Hover me (opacity-60)
 </button>
 
-<button class="bg-green text-white px-6 py-3 rounded hover:opacity-50">
+<button class="bg-green text-white pl-6 pr-6 pt-3 pb-3 rounded hover:opacity-50">
   Hover me (opacity-50)
 </button>
 ```
@@ -140,11 +140,11 @@ This is tertiary text with opacity-40.
     <p class="opacity-40">This is tertiary text with opacity-40.</p>
 </div>
 
-<button class="bg-primary text-white px-6 py-3 rounded">
+<button class="bg-primary text-white pl-6 pr-6 pt-3 pb-3 rounded">
   Active Button
 </button>
 
-<button class="bg-primary text-white px-6 py-3 rounded opacity-50" disabled>
+<button class="bg-primary text-white pl-6 pr-6 pt-3 pb-3 rounded opacity-50" disabled>
   Disabled Button (opacity-50)
 </button>
 ```

@@ -43,7 +43,7 @@
 
 
   <h6 class="mb-3 text-secondary">Documentation</h6>
-<h1 class="text-4xl my-20px">Button</h1>
+<h1 class="text-4xl mt-5 mb-5">Button</h1>
 <hr>
 <article class="article-wrap mb-16">
 
@@ -52,9 +52,11 @@
 <ul class="list-bullet">
 	<li>When to use it: For primary actions, form submissions, navigation triggers, confirmations, and any clickable action that changes application state or navigates users.</li>
   <li>Don't use for: Simple navigation links between pages (use anchor tags), text that doesn't trigger actions, or decorative elements. Avoid overusing primary colored buttons - reserve them for the most important actions.</li>
-  <li>Dark mode: Automatic</li>
+  <li>Dark mode: Automatic in the full <code>final.css</code> build</li>
 	<li>SCSS file: <code>/scss/components/<b>_button.scss</b></code></li>
 </ul>
+
+<p class="text-secondary">The examples on this page document the full <code>final.css</code> build. <code>final-lite.css</code> uses <code>scss/components/_button-lite.scss</code>, supports the default light theme only, and omits <code>.btn-sm</code>, <code>.btn-xl</code>, and <code>.btn-invert</code>; its available button sizes are the default size and <code>.btn-lg</code>.</p>
 
 <hr>
 

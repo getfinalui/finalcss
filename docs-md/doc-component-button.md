@@ -10,9 +10,11 @@ Buttons are interactive elements that trigger actions when clicked. They come in
 
 - Don't use for: Simple navigation links between pages (use anchor tags), text that doesn't trigger actions, or decorative elements. Avoid overusing primary colored buttons - reserve them for the most important actions.
 
-- Dark mode: Automatic
+- Dark mode: Automatic in the full `final.css` build
 
 - SCSS file: `/scss/components/_button.scss`
+
+The examples on this page document the full `final.css` build. `final-lite.css` uses `scss/components/_button-lite.scss`, supports the default light theme only, and omits `.btn-sm`, `.btn-xl`, and `.btn-invert`; its available button sizes are the default size and `.btn-lg`.
 
 ---
 
