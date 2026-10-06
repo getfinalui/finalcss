@@ -1,17 +1,17 @@
-.form-check-input:checked[type=checkbox] {
+.input-check:checked[type=checkbox] {
   --form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
-.form-check-input:checked[type=radio] {
+.input-check:checked[type=radio] {
   --form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
-.form-check-input[type=checkbox]:indeterminate {
+.input-check[type=checkbox]:indeterminate {
   background-color: #0d6efd;
   border-color: #0d6efd;
   --form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
 
-.form-check-input {
+.input-check {
   flex-shrink: 0;
   width: 18px;
   height: 18px;
@@ -30,27 +30,27 @@
   color-adjust: exact;
   print-color-adjust: exact;
 }
-.form-check-input[type=checkbox] {
+.input-check[type=checkbox] {
   border-radius: 0.25em;
 }
-.form-check-input[type=radio] {
+.input-check[type=radio] {
   border-radius: 50%;
 }
 
-.form-check-input:focus, .form-check-input:focus-visible {
+.input-check:focus, .input-check:focus-visible {
   outline-offset: 3px;
   outline-style: #0d6efd;
 }
-.form-check-input:checked {
+.input-check:checked {
   background-color: var(--primary-500);;
   border-color: var(--primary-500);
 }
 
-.form-check-input:disabled {
+.input-check:disabled {
   pointer-events: none;
   opacity: 0.5;
 }
-.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+.input-check[disabled] ~ .label-check, .input-check:disabled ~ .label-check {
   cursor: default;
   opacity: 0.5;
 }
@@ -60,7 +60,7 @@
   display: flex;
   align-items: center;
   min-height: 1.5rem; 
-  .form-check-input {
+  .input-check {
     float: left;
   }
 }
@@ -69,7 +69,7 @@
   padding-right: 1.5em;
   padding-left: 0;
   text-align: right;
-  .form-check-input {
+  .input-check {
     float: right;
     margin-right: -1.5em;
     margin-left: 0;

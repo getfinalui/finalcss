@@ -99,15 +99,15 @@
 
   // Border-radius css variables 
   // set base border radius for button, input, select, card, alert, nav,
-  --border-radius-sm:  4px;
-  --border-radius-md:  8px;
-  --border-radius-lg:  12px;
-  --border-radius-xl:  16px;
-  --border-radius-base:  8px;
+  --border-radius-sm:  6px;
+  --border-radius-md:  10px;
+  --border-radius-lg:  20px;
+  --border-radius-xl:  30px;
+  --border-radius-base:  20px;
 
   // Typography
   // applied to _reset.scss
-  --font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-base: system-ui, -apple-system, "Helvetica Neue", "Segoe UI", Roboto,  "Noto Sans", Arial, sans-serif;
 
   --font-size-default:  15px;
   --font-size-sm:       0.9rem;

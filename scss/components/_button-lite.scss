@@ -1,21 +1,16 @@
 
 
 //
-// Base styles
+// Base styles for final-lite.css
 //
 
 .btn{ 
-  // scss-docs-start btn-css-vars
-  --btn-size-sm: 32px;
   --btn-size-md: 38px;
   --btn-size-lg: 44px;
-  --btn-size-xl: 56px;
   --btn-padding-x: 12px;
   --btn-padding-y: 6px;
   --btn-font-size-md: 1rem;
-  --btn-font-size-sm: 0.96rem;
   --btn-font-size-lg: 1.1rem;
-  --btn-font-size-xl: 1.14rem;
   --btn-font-weight:400;
   --btn-bg: transparent;
   --btn-bg-hover: var(--alpha-1);
@@ -29,13 +24,12 @@
   align-items: center;
   justify-content: center;
   height: var(--btn-size-md);
-  min-width: var(--btn-size-sm);
   padding: var(--btn-padding-y) var(--btn-padding-x);
   font-size: var(--btn-font-size-md);
   font-weight: var(--btn-font-weight);  
   background-color: var(--btn-bg);
   border:1px solid var(--btn-border-color);
-  border-radius: var(--border-radius-md); // _variables-root.scss;
+  border-radius: var(--border-radius-md); 
   color: var(--btn-text-color);
   line-height: 1.2;
   white-space: nowrap;
@@ -48,8 +42,8 @@
   gap:8px;
 
   svg, .icon, img{
-    max-width: 20px; max-height: 20px;
-    min-width: 16px; min-height: 16px;
+    max-width: 22px; max-height: 22px;
+    min-width: 18px; min-height: 18px;
   }
   &:disabled,
   &.disabled {
@@ -71,29 +65,12 @@
 }
 
 // Sizes of button
-.btn-xl {
-  padding-left: 20px; 
-  padding-right: 20px;
-  height: var(--btn-size-xl);
-  font-size: var(--btn-font-size-xl);
-  border-radius: 10px;
-  svg, .icon, img{  width:24px; height:24px; }
-}
-
 .btn-lg {
   padding-left: 12px; 
   padding-right: 12px;
   height: var(--btn-size-lg);
   font-size: var(--btn-font-size-lg);
   svg, .icon, img{  width:24px; height:24px; }
-}
-
-.btn-sm {
-  padding-left: 8px; 
-  padding-right: 8px;
-  height: var(--btn-size-sm);
-  font-size: var(--btn-font-size-sm);
-  svg, .icon, img{ width: 18px; height: 18px;}
 }
 
 // Button with only icon 
@@ -107,15 +84,6 @@
   padding-left:0; padding-right:0;
   svg, .icon, img{  width:24px; height:24px; }
 }
-.btn-xl.btn-icon{
-  width: var(--btn-size-xl);
-  padding-left:0; padding-right:0;
-  svg, .icon, img{  width:24px; height:24px; }
-}
-.btn-sm.btn-icon{
-  width: var(--btn-size-sm);
-  padding-left:0; padding-right:0;
-}
 
 // Buttons with each color name (Shade 500 only)
 @each $color, $shades in $colors_list {
@@ -124,10 +92,9 @@
   // For ex. .btn-green{ --btn-bg: var(--green-500); ...} 
   // We use static variant, which will not be overridden in dark mode. (Generated in _variables-root.scss)
   .btn-#{$color} { 
-    --btn-bg: var(--#{$color}-500-static);
-    --btn-bg-hover: var(--#{$color}-600-static);
+    --btn-bg: var(--#{$color}-500);
+    --btn-bg-hover: var(--#{$color}-600);
     --btn-text-color: #fff;
-    box-shadow:0 -2px 0 0 hsla(0, 0%, 0%, 0.1) inset, 0 -4px 4px hsla(0, 0%, 50%, 0.1) inset;
   }
 
 }
@@ -150,32 +117,24 @@
 // Other styles of button 
 // Semantic names for buttons
 .btn-default{
-  --btn-bg: var(--bg-color-base);
-  --btn-bg-hover: var(--bg-color-base);
+  --btn-bg: var(--bg-color-raised);
+  --btn-bg-hover: var(--bg-color-raised);
   --btn-text-color: var(--text-color-base);
   --btn-border-color: var(--neutral-300);
   --btn-border-hover-color: var(--neutral-400);
-  box-shadow:0 -2px 0 0 hsla(0, 0%, 25%, 0.1) inset;
 }
 
 .btn-outline{
   --btn-bg: transparent;
   --btn-bg-hover: var(--alpha-1);
   --btn-text-color: var(--text-color-primary);
-  --btn-border-color: var(--primary-500);
-  --btn-border-hover-color: var(--primary-500);
-}
-
-.btn-invert{
-  --btn-bg: var(--neutral-1000);
-  --btn-bg-hover: var(--neutral-700);
-  --btn-text-color: var(--neutral-0);
+  --btn-border-color: var(--primary-400);
+  --btn-border-hover-color: var(--primary-600);
 }
 
 // We will override btn-neutral variant, because of better UI
-.btn-neutral, .btn-neutral-subtle{
+.btn-neutral{
   --btn-bg: var(--alpha-2);
   --btn-bg-hover: var(--alpha-3);
   --btn-text-color: var(--text-color-base);
-  box-shadow: none!important;
 }

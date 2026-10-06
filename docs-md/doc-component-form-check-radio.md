@@ -26,16 +26,16 @@ Custom styled checkbox and radio input components that provide consistent appear
 
 ```html
 <div class="form-check mb-3">
-    <input class="form-check-input" type="checkbox" value="" id="check1">
-    <label class="form-check-label" for="check1">Default checkbox</label>
+    <input class="input-check" type="checkbox" value="" id="check1">
+    <label class="label-check" for="check1">Default checkbox</label>
   </div>
   <div class="form-check mb-3">
-    <input class="form-check-input" type="checkbox" value="" id="check2" checked>
-    <label class="form-check-label" for="check2">Checked checkbox</label>
+    <input class="input-check" type="checkbox" value="" id="check2" checked>
+    <label class="label-check" for="check2">Checked checkbox</label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="check3" disabled>
-    <label class="form-check-label" for="check3">Disabled checkbox</label>
+    <input class="input-check" type="checkbox" value="" id="check3" disabled>
+    <label class="label-check" for="check3">Disabled checkbox</label>
   </div>
 ```
 
@@ -51,16 +51,16 @@ Custom styled checkbox and radio input components that provide consistent appear
 
 ```html
 <div class="form-check mb-3">
-    <input class="form-check-input" type="radio" name="radioGroup1" id="radio1" checked>
-    <label class="form-check-label" for="radio1">Selected option</label>
+    <input class="input-check" type="radio" name="radioGroup1" id="radio1" checked>
+    <label class="label-check" for="radio1">Selected option</label>
   </div>
   <div class="form-check mb-3">
-    <input class="form-check-input" type="radio" name="radioGroup1" id="radio2">
-    <label class="form-check-label" for="radio2">Another option</label>
+    <input class="input-check" type="radio" name="radioGroup1" id="radio2">
+    <label class="label-check" for="radio2">Another option</label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="radioGroup1" id="radio3" disabled>
-    <label class="form-check-label" for="radio3">Disabled option</label>
+    <input class="input-check" type="radio" name="radioGroup1" id="radio3" disabled>
+    <label class="label-check" for="radio3">Disabled option</label>
   </div>
 ```
 
@@ -83,14 +83,14 @@ From nearest location
 ```html
 <fieldset class="d-flex flex-col lg:flex-row gap-2">
       <label class="card-check d-flex p-3 rounded">
-        <input class="form-check-input" name="delivery-type" type="radio" value="">
+        <input class="input-check" name="delivery-type" type="radio" value="">
         <div class="ml-1">
           <span>Self pick-up</span>
           <p class="d-block mb-0 text-secondary">From nearest location</p>
         </div>
       </label>
       <label class="card-check d-flex p-3 rounded">
-        <input class="form-check-input" name="delivery-type" type="radio" value="" checked>
+        <input class="input-check" name="delivery-type" type="radio" value="" checked>
         <div class="ml-1">
           <span>Standard delivery</span>
           <p class="d-block mb-0 text-secondary">7-10 days after order</p>
@@ -98,7 +98,7 @@ From nearest location
       </label>
 
       <label class="card-check d-flex p-3 rounded">
-        <input class="form-check-input" name="delivery-type" type="radio" value="">
+        <input class="input-check" name="delivery-type" type="radio" value="">
         <div class="ml-1">
           <span>Express Delivery</span>
           <p class="d-block mb-0 text-secondary">1-2 days after order</p>
@@ -117,12 +117,12 @@ From nearest location
 
 ```html
 <div class="form-check form-check-reverse mb-3">
-        <input class="form-check-input" type="checkbox" value="" id="reverseCheck1" checked>
-        <label class="form-check-label" for="reverseCheck1">Checkbox on the right</label>
+        <input class="input-check" type="checkbox" value="" id="reverseCheck1" checked>
+        <label class="label-check" for="reverseCheck1">Checkbox on the right</label>
       </div>
       <div class="form-check form-check-reverse">
-        <input class="form-check-input" type="radio" name="reverseRadio" id="reverseRadio1" checked>
-        <label class="form-check-label" for="reverseRadio1">Radio button on the right</label>
+        <input class="input-check" type="radio" name="reverseRadio" id="reverseRadio1" checked>
+        <label class="label-check" for="reverseRadio1">Radio button on the right</label>
       </div>
 ```
 
@@ -142,14 +142,14 @@ You can override the default styling by using inline styles with CSS custom prop
 
 ```html
 <div class="form-check mb-3">
-  <input class="form-check-input" type="checkbox" value="" id="customCheck1" checked
+  <input class="input-check" type="checkbox" value="" id="customCheck1" checked
           style="--primary-100: #e8f5e9; --primary-400: #4caf50; --primary-500: #2e7d32;">
-  <label class="form-check-label" for="customCheck1">Custom green checkbox</label>
+  <label class="label-check" for="customCheck1">Custom green checkbox</label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="customRadio" id="customRadio1" checked
+  <input class="input-check" type="radio" name="customRadio" id="customRadio1" checked
           style="--primary-100: #fff3e0; --primary-400: #ff9800; --primary-500: #f57c00; width: 22px; height: 22px;">
-  <label class="form-check-label" for="customRadio1">Larger orange radio button</label>
+  <label class="label-check" for="customRadio1">Larger orange radio button</label>
 </div>
 ```
 
@@ -167,13 +167,13 @@ The card-check variant uses the `:has()` pseudo-class to style the parent label 
 
 ### Key customization options
 
-- Size adjustment: Modify `width` and `height` properties of `.form-check-input` to change the input size (default is 18px)
+- Size adjustment: Modify `width` and `height` properties of `.input-check` to change the input size (default is 18px)
 
-- Spacing: Adjust `margin-right` on `.form-check-input` to control space between input and label (default is 8px)
+- Spacing: Adjust `margin-right` on `.input-check` to control space between input and label (default is 8px)
 
 - Colors: Override `--primary-100`, `--primary-400`, and `--primary-500` variables to change unchecked background, border, and checked state colors
 
-- Border radius: Change `border-radius` on `.form-check-input[type=checkbox]` to adjust checkbox corner rounding (default is 0.25em)
+- Border radius: Change `border-radius` on `.input-check[type=checkbox]` to adjust checkbox corner rounding (default is 0.25em)
 
 - Focus outline: Customize `outline-offset` and `outline-style` properties for keyboard focus states
 

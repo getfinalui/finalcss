@@ -1,12 +1,12 @@
 // Border-radius varibales are defined on file: _base-settings.scss
 
-// Border values can be changed from _base-settings.scss 
+// Border values can be changed from _variables-root.scss
 .rounded-0 { border-radius: 0;}
-.rounded{ border-radius:var(--border-radius-base); } // from: _base-settings.scss or _variables-root.scss }
-.rounded-sm{border-radius: var(--border-radius-sm); } // from: _base-settings.scss or _variables-root.scss }
-.rounded-md {border-radius: var(--border-radius-md);} // from: _base-settings.scss or _variables-root.scss}
-.rounded-lg {border-radius: var(--border-radius-lg);} // from: _base-settings.scss or _variables-root.scss}
-.rounded-xl {border-radius: var(--border-radius-xl); } // from: _base-settings.scss or _variables-root.scss}
+.rounded{ border-radius:var(--border-radius-base); }
+.rounded-sm{border-radius: var(--border-radius-sm); } 
+.rounded-md {border-radius: var(--border-radius-md);} 
+.rounded-lg {border-radius: var(--border-radius-lg);} 
+.rounded-xl {border-radius: var(--border-radius-xl); } 
 .rounded-full { border-radius: 400px; flex-shrink:0; }
 .rounded-circle { border-radius: 50%; flex-shrink:0; }
 

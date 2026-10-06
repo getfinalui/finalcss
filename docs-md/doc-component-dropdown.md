@@ -58,7 +58,7 @@ Dropdowns are toggleable, contextual overlays that display a list of links, acti
 
 ```html
 <div class="item-nav">
-    <a class="nav-link px-2 p-1" href="#" data-toggle="menu_profile_1">
+    <a class="nav-link pl-2 pr-2 p-1" href="#" data-toggle="menu_profile_1">
       <span class="avatar avatar-sm">A</span>
       <span>Profile</span>
       <i class="icon-dropdown"></i>

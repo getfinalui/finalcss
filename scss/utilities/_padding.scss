@@ -43,12 +43,6 @@ $padding_map:(
   .p-#{$name} { padding: #{$value}; }
 }
 @each $name, $value in $padding_map {
-  .py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
-}
-@each $name, $value in $padding_map {
-  .px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
-}
-@each $name, $value in $padding_map {
   .pt-#{$name} { padding-top: #{$value}!important; }
 }
 @each $name, $value in $padding_map {
@@ -69,12 +63,6 @@ $padding_map:(
     // breakpoinst styles
     @each $name, $value in $padding_map {
       .#{$breakpoint}\:p-#{$name} { padding: #{$value}; }
-    }
-    @each $name, $value in $padding_map {
-      .#{$breakpoint}\:px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; }
-    }
-    @each $name, $value in $padding_map {
-      .#{$breakpoint}\:py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; }
     }
     @each $name, $value in $padding_map {
       .#{$breakpoint}\:pt-#{$name} {  padding-top: #{$value}!important;  }

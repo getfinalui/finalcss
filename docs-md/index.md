@@ -46,14 +46,14 @@ Create a new index.html file in your project root. To include final.css, place t
 
 ### Using final-lite.css
 
-If your project only needs desktop and mobile responsive behavior, you can use `final-lite.css` or `final-lite.min.css`. It includes the same core Final CSS components and utilities, but generates only two responsive breakpoint prefixes.
+Use `final-lite.css` or `final-lite.min.css` for simpler sites, such as landing pages or small websites that only need desktop and mobile responsive behavior. The lite build supports the default light theme only, uses the `components/button-lite` component, and does not include the `.btn-sm` button size or dark-mode theme switching. It generates only two responsive breakpoint prefixes.
 
 | Prefix | Media query | Use case |
 | --- | --- | --- |
 | `max-sm:` | `max-width: 640px` | Mobile-only overrides |
 | `sm:` | `min-width: 641px` | Small tablet, desktop, and larger screens |
 
-This is useful for simpler websites and apps where you do not need separate tablet, laptop, and desktop breakpoints. The full `final.css` build still supports all breakpoints from `scss/_breakpoint-config.scss`.
+Use the full `final.css` build when you need dark mode, `.btn-sm`, or the complete breakpoint set from `scss/_breakpoint-config.scss`.
 
 ```html
 <link href="css/final-lite.min.css" rel="stylesheet">

@@ -1,0 +1,69 @@
+
+.form-switch {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.input-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  margin:0;
+ 
+}
+
+
+/* The track (background) */
+.slider {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 28px;
+  background-color: rgba(150, 150, 150, .4);
+  border-radius: 28px;
+  transition: 0.3s;
+}
+
+/* The thumb (circle) */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 16px;
+  transition: 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Checked state */
+.form-switch input:checked + .slider, .input-switch:checked + .slider {
+  background-color: var(--primary-500);
+}
+
+.form-switch input:checked + .slider::before, .input-switch:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+/* Optional: focus outline for accessibility */
+.form-switch input:focus-visible + .slider,  .input-switch:focus-visible + .slider {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.label-switch{
+  vertical-align: middle;
+  padding:0 4px;
+}
+
+.input-switch[disabled] ~ .label-switch, 
+.input-switch:disabled ~ .label-switch {
+  cursor: default;
+  opacity: 0.5;
+}
