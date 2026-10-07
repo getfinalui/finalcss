@@ -71,11 +71,6 @@ Start with desktop/default styles, then use max-width prefixes to adjust smaller
 
 Use responsive prefixes with display, width, spacing, column, order, grid, and many utility classes.
 
-      Card 1
-      Card 2
-      Card 3
-      Card 4
-
 ```html
 <div class="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
   <article class="card card-body">Card 1</article>

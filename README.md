@@ -83,8 +83,8 @@ You can also apply theme classes to a section:
 +-- css/
 |   +-- final.css
 |   +-- final.min.css
-|   +-- final-simple.css
-|   +-- final-simple.min.css
+|   +-- final-lite.css
+|   +-- final-lite.min.css
 +-- scss/
 |   +-- final.scss
 |   +-- _breakpoint-config.scss

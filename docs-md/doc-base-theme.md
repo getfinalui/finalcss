@@ -104,49 +104,6 @@ Dark mode (override):
 
 ---
 
-#### Example component
-
-Here is a component example. On the left side it is in default mode.
-On the right there is `class="... theme-dark"` class name given to parent div
-
-      Edit
-
-### Alexandra Heilium
-
-         Digital Designer UX/UI
-
-          259
-          Posts
-
-          129K
-          Followers
-
-          34
-          Following
-
-         Follow
-         Message
-
-      Edit
-
-### Alexandra Heilium
-
-         Digital Designer UX/UI
-
-          259
-          Posts
-
-          129K
-          Followers
-
-          34
-          Following
-
-         Follow
-         Message
-
----
-
 ## Color palette:
 
 Each of following color has its dark variant.
